@@ -1,0 +1,913 @@
+#!/usr/bin/env python3
+"""
+Avatour User Guide — Build Script
+==================================
+Converts guide-source/web-console.md into three outputs:
+  1. standalone HTML  → dist/avatour-guide.html
+  2. embed HTML       → dist/avatour-guide-embed.html
+  3. PDF-ready HTML   → dist/avatour-guide-print.html  (open in browser → Print → Save as PDF)
+
+Usage:
+  python build.py
+
+Requirements:
+  pip install markdown pymdown-extensions python-frontmatter --break-system-packages
+"""
+
+import os, re, json
+import frontmatter
+import markdown
+from markdown.extensions.toc import TocExtension
+
+# ── CONFIG ────────────────────────────────────────────────────────────────
+SOURCE_FILE = "guide-source/web-console.md"
+DIST_DIR    = "dist"
+
+BRAND = {
+    "blue":   "#132A39",
+    "orange": "#FF4E00",
+    "slate":  "#5A6875",
+    "light":  "#E8EEF2",
+    "border": "#DDE5EA",
+    "text":   "#1A2A34",
+    "muted":  "#7A8A95",
+}
+
+# ── CSS ───────────────────────────────────────────────────────────────────
+CSS = """
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&family=Roboto:wght@300;400;500&display=swap');
+
+:root {
+  --blue:   #132A39;
+  --orange: #FF4E00;
+  --slate:  #5A6875;
+  --light:  #E8EEF2;
+  --border: #DDE5EA;
+  --text:   #1A2A34;
+  --muted:  #7A8A95;
+  --sidebar-w: 240px;
+  --toc-w:     220px;
+  --header-h:  60px;
+  --content-max: 680px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px; line-height: 1.8;
+  color: var(--text); background: #fff;
+}
+
+/* HEADER */
+.guide-header {
+  position: fixed; top: 0; left: 0; right: 0;
+  height: var(--header-h);
+  background: var(--blue);
+  display: flex; align-items: center;
+  padding: 0 24px; z-index: 200; gap: 16px;
+}
+.guide-logo {
+  display: flex; align-items: center; gap: 10px;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 17px; font-weight: 700;
+  color: #fff; text-decoration: none; flex-shrink: 0;
+}
+.guide-logo svg { width: 26px; height: 26px; }
+.hd { width:1px; height:20px; background:rgba(255,255,255,.2); flex-shrink:0; }
+.hlabel {
+  font-family:'Titillium Web',sans-serif; font-size:12px; font-weight:600;
+  color:rgba(255,255,255,.5); letter-spacing:.09em; text-transform:uppercase;
+}
+.hright { margin-left:auto; display:flex; gap:12px; align-items:center; }
+.hbtn {
+  font-family:'Titillium Web',sans-serif; font-size:12px; font-weight:700;
+  color:var(--blue); background:var(--orange);
+  padding:6px 16px; border-radius:4px; text-decoration:none; flex-shrink:0;
+}
+.hversion {
+  font-size:11px; color:rgba(255,255,255,.4);
+  font-family:'Titillium Web',sans-serif; letter-spacing:.05em;
+}
+
+/* LAYOUT */
+.guide-layout {
+  display: flex; padding-top: var(--header-h); min-height: 100vh;
+}
+
+/* LEFT NAV */
+.guide-sidenav {
+  width: var(--sidebar-w); flex-shrink: 0;
+  position: fixed; top: var(--header-h); left: 0; bottom: 0;
+  background: #fafbfc; border-right: 1px solid var(--border);
+  overflow-y: auto; padding: 20px 0 40px;
+}
+.sidenav-section {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 10px; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--muted);
+  padding: 0 16px; margin: 20px 0 5px;
+}
+.sidenav-section:first-child { margin-top: 0; }
+.guide-sidenav a {
+  display: block; padding: 6px 16px;
+  font-size: 13px; color: var(--slate);
+  text-decoration: none; border-left: 3px solid transparent;
+  transition: all .1s; line-height: 1.4;
+}
+.guide-sidenav a.sub { padding-left: 28px; font-size: 12.5px; }
+.guide-sidenav a:hover,
+.guide-sidenav a.active {
+  color: var(--blue); background: var(--light);
+  border-left-color: var(--orange);
+}
+.guide-sidenav a.active { font-weight: 500; }
+
+/* MAIN WRAPPER */
+.guide-main {
+  margin-left: var(--sidebar-w); flex: 1;
+  display: flex; justify-content: center;
+  padding-right: var(--toc-w);
+}
+
+/* ARTICLE */
+.guide-article {
+  width: 100%; max-width: var(--content-max);
+  padding: 44px 40px 80px;
+}
+
+/* BREADCRUMB */
+.guide-bc {
+  font-size: 12px; color: var(--muted);
+  margin-bottom: 10px;
+  display: flex; align-items: center; gap: 6px;
+}
+.guide-bc a { color: var(--muted); text-decoration: none; }
+.guide-bc a:hover { color: var(--orange); }
+.guide-bc span { opacity: .5; }
+
+/* TITLE */
+.guide-article h1 {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 28px; font-weight: 700; color: var(--blue);
+  margin-bottom: 6px; line-height: 1.2;
+}
+.guide-meta {
+  font-size: 12px; color: var(--muted);
+  margin-bottom: 28px; padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+.guide-meta a { color: var(--orange); text-decoration: none; }
+
+/* HEADINGS */
+.guide-article h2 {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 20px; font-weight: 700; color: var(--blue);
+  margin: 40px 0 12px;
+  padding-top: 8px;
+  border-top: 2px solid var(--border);
+  scroll-margin-top: calc(var(--header-h) + 16px);
+}
+.guide-article h3 {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 16px; font-weight: 700; color: var(--blue);
+  margin: 28px 0 10px;
+  scroll-margin-top: calc(var(--header-h) + 16px);
+}
+.guide-article h4 {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 13px; font-weight: 700; color: var(--slate);
+  text-transform: uppercase; letter-spacing: .07em;
+  margin: 20px 0 8px;
+}
+
+/* BODY */
+.guide-article p { margin-bottom: 14px; }
+.guide-article a { color: var(--orange); text-decoration: none; }
+.guide-article a:hover { text-decoration: underline; }
+.guide-article ul, .guide-article ol {
+  padding-left: 22px; margin-bottom: 16px;
+}
+.guide-article li { margin-bottom: 6px; }
+.guide-article li strong { color: var(--blue); }
+.guide-article strong { color: var(--blue); }
+
+/* TABLES */
+.guide-article table {
+  width: 100%; border-collapse: collapse;
+  margin: 16px 0 20px; font-size: 13.5px;
+  border: 1px solid var(--border); border-radius: 6px;
+  overflow: hidden;
+}
+.guide-article th {
+  background: var(--blue); color: #fff;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 12px; font-weight: 700;
+  letter-spacing: .07em; text-transform: uppercase;
+  padding: 9px 14px; text-align: left;
+}
+.guide-article td {
+  padding: 9px 14px; border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+.guide-article tr:last-child td { border-bottom: none; }
+.guide-article tr:nth-child(even) td { background: #f9fbfc; }
+
+/* BLOCKQUOTES (used for notes and tips) */
+.guide-article blockquote {
+  border-left: 3px solid var(--orange);
+  background: #fff8f5;
+  margin: 16px 0; padding: 11px 16px;
+  border-radius: 0 6px 6px 0;
+  font-size: 13.5px;
+}
+.guide-article blockquote p { margin-bottom: 0; color: #2a3a44; }
+.guide-article blockquote strong { color: var(--orange); }
+
+/* INLINE SCREENSHOTS */
+.guide-article img {
+  width: 100%; display: block;
+  border: 1px solid var(--border);
+  border-radius: 6px; margin: 20px 0 4px;
+}
+.guide-article img + em {
+  display: block; font-size: 12px;
+  color: var(--muted); text-align: center;
+  margin-bottom: 20px; font-style: italic;
+}
+
+/* ADMIN BADGE (inline in headings) */
+.admin-badge {
+  display: inline-block;
+  font-size: 10px; font-weight: 700;
+  font-family: 'Titillium Web', sans-serif;
+  letter-spacing: .06em; text-transform: uppercase;
+  padding: 2px 7px; border-radius: 3px;
+  background: #fff0e8; color: #b83a00;
+  vertical-align: middle; margin-left: 6px;
+}
+
+/* GLOSSARY TOOLTIPS */
+.gloss-term {
+  border-bottom: 1px dashed var(--orange);
+  cursor: help; position: relative;
+  color: inherit;
+}
+.gloss-term .gloss-tip {
+  display: none;
+  position: absolute; bottom: calc(100% + 6px); left: 50%;
+  transform: translateX(-50%);
+  background: var(--blue); color: #fff;
+  font-size: 12px; line-height: 1.5;
+  padding: 8px 12px; border-radius: 5px;
+  width: 260px; z-index: 300;
+  box-shadow: 0 4px 16px rgba(0,0,0,.2);
+  pointer-events: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+}
+.gloss-term .gloss-tip::after {
+  content: '';
+  position: absolute; top: 100%; left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: var(--blue);
+}
+.gloss-term:hover .gloss-tip { display: block; }
+.gloss-link {
+  display: block; font-size: 11px; margin-top: 4px;
+  color: var(--orange); text-decoration: none;
+}
+
+/* GLOSSARY SECTION */
+.glossary-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 1px; background: var(--border);
+  border: 1px solid var(--border); border-radius: 6px;
+  overflow: hidden; margin: 16px 0;
+}
+.glossary-item {
+  background: #fff; padding: 14px 16px;
+}
+.glossary-item:hover { background: #fafbfc; }
+.glossary-term {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 13px; font-weight: 700; color: var(--blue);
+  margin-bottom: 4px;
+}
+.glossary-def { font-size: 13px; color: var(--slate); line-height: 1.55; }
+
+/* FAQS */
+.faq-item {
+  border-bottom: 1px solid var(--border);
+}
+.faq-item:last-child { border-bottom: none; }
+.faq-q {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 14px; font-weight: 700; color: var(--blue);
+  padding: 14px 0 14px 0;
+  cursor: pointer;
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 12px;
+  list-style: none;
+}
+.faq-q::-webkit-details-marker { display: none; }
+.faq-q::after {
+  content: '+'; color: var(--orange); font-size: 20px;
+  font-weight: 300; flex-shrink: 0; transition: transform .15s;
+}
+details[open] .faq-q::after { transform: rotate(45deg); }
+.faq-a {
+  padding: 0 0 14px 0;
+  font-size: 13.5px; color: #2a3a44; line-height: 1.7;
+}
+.faq-section-title {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 11px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .1em;
+  color: var(--muted); margin: 24px 0 8px;
+}
+
+/* DIVIDER */
+.guide-article hr {
+  border: none; border-top: 1px solid var(--border); margin: 40px 0;
+}
+
+/* RIGHT TOC */
+.guide-toc {
+  width: var(--toc-w); flex-shrink: 0;
+  position: fixed; top: calc(var(--header-h) + 44px); right: 0;
+  padding: 0 20px;
+  max-height: calc(100vh - var(--header-h) - 44px);
+  overflow-y: auto;
+}
+.toc-label {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 10px; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--muted); margin-bottom: 10px;
+}
+.guide-toc ul { list-style: none; padding: 0; border-left: 2px solid var(--border); }
+.guide-toc li a {
+  display: block; padding: 4px 0 4px 12px;
+  font-size: 12.5px; color: var(--slate); text-decoration: none;
+  line-height: 1.4; border-left: 2px solid transparent; margin-left: -2px;
+  transition: all .1s;
+}
+.guide-toc li a:hover { color: var(--blue); }
+.guide-toc li a.active { color: var(--orange); border-left-color: var(--orange); font-weight: 500; }
+.guide-toc li.toc2 a { padding-left: 22px; font-size: 12px; }
+
+/* FEEDBACK */
+.guide-feedback {
+  margin-top: 48px; padding-top: 24px;
+  border-top: 1px solid var(--border);
+  display: flex; align-items: center; gap: 12px;
+}
+.guide-feedback span { font-size: 13.5px; color: var(--slate); }
+.fb-btn {
+  font-family: 'Titillium Web', sans-serif; font-size: 12px; font-weight: 700;
+  border: 1px solid var(--border); border-radius: 4px;
+  padding: 5px 16px; cursor: pointer; background: #fff; color: var(--slate);
+}
+.fb-btn:hover { border-color: var(--orange); color: var(--orange); }
+
+/* RELATED */
+.guide-related { margin-top: 28px; }
+.related-label {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 11px; font-weight: 700; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--muted); margin-bottom: 8px;
+}
+.guide-related a {
+  display: block; font-size: 13.5px; color: var(--orange);
+  text-decoration: none; padding: 5px 0;
+  border-bottom: 1px solid var(--border);
+}
+.guide-related a:last-child { border-bottom: none; }
+.guide-related a:hover { text-decoration: underline; }
+
+/* PRINT STYLES */
+@media print {
+  .guide-header, .guide-sidenav, .guide-toc,
+  .guide-feedback, .guide-related { display: none !important; }
+  .guide-main { margin-left: 0; padding-right: 0; }
+  .guide-article { padding: 0; max-width: 100%; }
+  .guide-article h2 { page-break-before: always; }
+  .guide-article img { max-width: 80%; margin: 12px auto; }
+  .gloss-term { border-bottom: none; }
+  .gloss-term .gloss-tip { display: none !important; }
+}
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+  .guide-toc { display: none; }
+  .guide-main { padding-right: 0; }
+}
+@media (max-width: 780px) {
+  .guide-sidenav { display: none; }
+  .guide-main { margin-left: 0; }
+  .guide-article { padding: 28px 20px 60px; }
+  .glossary-grid { grid-template-columns: 1fr; }
+}
+
+/* PDF / PRINT MODE */
+body.print-mode .guide-header,
+body.print-mode .guide-sidenav,
+body.print-mode .guide-toc,
+body.print-mode .guide-feedback,
+body.print-mode .guide-related { display: none; }
+body.print-mode { background: white; }
+body.print-mode .guide-main { margin-left: 0; padding-right: 0; }
+body.print-mode .guide-article { max-width: 100%; padding: 40px 60px; }
+body.print-mode .guide-article h2 { page-break-before: always; }
+"""
+
+# ── JAVASCRIPT ────────────────────────────────────────────────────────────
+JS = """
+// Active TOC highlighting
+const headings = document.querySelectorAll('.guide-article h2, .guide-article h3');
+const tocLinks = document.querySelectorAll('.guide-toc a');
+if (headings.length && tocLinks.length) {
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('active'));
+        const a = document.querySelector(`.guide-toc a[href="#${e.target.id}"]`);
+        if (a) a.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-10% 0px -80% 0px' });
+  headings.forEach(h => { if (h.id) obs.observe(h); });
+}
+
+// Active sidenav highlighting
+const sideLinks = document.querySelectorAll('.guide-sidenav a');
+const allH = document.querySelectorAll('.guide-article h2, .guide-article h3');
+if (allH.length && sideLinks.length) {
+  const obs2 = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        sideLinks.forEach(l => l.classList.remove('active'));
+        const a = document.querySelector(`.guide-sidenav a[href="#${e.target.id}"]`);
+        if (a) a.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-10% 0px -80% 0px' });
+  allH.forEach(h => { if (h.id) obs2.observe(h); });
+}
+
+// FAQ feedback buttons
+document.querySelectorAll('.fb-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const feedback = btn.closest('.guide-feedback');
+    feedback.innerHTML = '<span style="color:var(--orange);font-weight:500">Thank you for your feedback!</span>';
+  });
+});
+"""
+
+# ── GLOSSARY DATA ─────────────────────────────────────────────────────────
+def extract_glossary(md_text):
+    """Extract glossary terms and definitions from the Markdown source."""
+    glossary = {}
+    in_glossary = False
+    current_term = None
+    current_def = []
+
+    for line in md_text.splitlines():
+        if "GLOSSARY_START" in line:
+            in_glossary = True
+            continue
+        if "GLOSSARY_END" in line:
+            if current_term:
+                glossary[current_term] = " ".join(current_def).strip()
+            in_glossary = False
+            continue
+        if not in_glossary:
+            continue
+
+        # Bold term on its own line
+        term_match = re.match(r'^\*\*(.+?)\*\*\s*$', line.strip())
+        if term_match:
+            if current_term:
+                glossary[current_term] = " ".join(current_def).strip()
+            current_term = term_match.group(1)
+            current_def = []
+        elif current_term and line.strip():
+            current_def.append(line.strip())
+
+    return glossary
+
+
+def extract_faqs(md_text):
+    """Extract FAQ sections and Q&A pairs from the Markdown source."""
+    faqs = []
+    in_faqs = False
+    current_section = None
+    current_q = None
+    current_a = []
+
+    for line in md_text.splitlines():
+        if "FAQS_START" in line:
+            in_faqs = True
+            continue
+        if "FAQS_END" in line:
+            if current_q:
+                faqs.append((current_section, current_q, " ".join(current_a).strip()))
+            in_faqs = False
+            continue
+        if not in_faqs:
+            continue
+
+        # Section heading (###)
+        sec_match = re.match(r'^### (.+)$', line)
+        if sec_match:
+            if current_q:
+                faqs.append((current_section, current_q, " ".join(current_a).strip()))
+                current_q = None
+                current_a = []
+            current_section = sec_match.group(1)
+            continue
+
+        # Question (bold, starts with **)
+        q_match = re.match(r'^\*\*(.+?)\*\*\s*$', line.strip())
+        if q_match:
+            if current_q:
+                faqs.append((current_section, current_q, " ".join(current_a).strip()))
+            current_q = q_match.group(1)
+            current_a = []
+        elif current_q and line.strip():
+            current_a.append(line.strip())
+
+    return faqs
+
+
+def build_glossary_html(glossary):
+    """Build the two-column glossary grid HTML."""
+    items = ""
+    for term, defn in sorted(glossary.items()):
+        term_id = "gloss-" + re.sub(r'[^a-z0-9]', '-', term.lower())
+        items += f"""
+        <div class="glossary-item" id="{term_id}">
+          <div class="glossary-term">{term}</div>
+          <div class="glossary-def">{defn}</div>
+        </div>"""
+    return f'<div class="glossary-grid">{items}</div>'
+
+
+def build_faq_html(faqs):
+    """Build the FAQ accordion HTML."""
+    html = ""
+    current_section = None
+    for section, question, answer in faqs:
+        if section != current_section:
+            current_section = section
+            html += f'<div class="faq-section-title">{section}</div>\n'
+        # Convert inline markdown links in answer
+        answer = re.sub(r'\[([^\]]+)\]\(([^)]+)\)', r'<a href="\2">\1</a>', answer)
+        html += f"""
+        <details class="faq-item">
+          <summary class="faq-q">{question}</summary>
+          <div class="faq-a">{answer}</div>
+        </details>"""
+    return html
+
+
+def auto_tag_glossary(html_content, glossary):
+    """
+    Scan body text and wrap glossary terms with tooltip spans.
+    Skips headings, existing tags, image alt text, and the glossary section itself.
+    Each term is tagged only on its FIRST occurrence to avoid clutter.
+    """
+    tagged = set()
+
+    def replace_term(match, term, defn, term_id):
+        word = match.group(0)
+        if term in tagged:
+            return word
+        tagged.add(term)
+        short_def = defn[:120] + "…" if len(defn) > 120 else defn
+        return (
+            f'<span class="gloss-term">{word}'
+            f'<span class="gloss-tip">{short_def}'
+            f'<a class="gloss-link" href="#{term_id}">See full definition →</a>'
+            f'</span></span>'
+        )
+
+    # Sort longest terms first to avoid partial matches
+    sorted_terms = sorted(glossary.keys(), key=len, reverse=True)
+
+    # Process only paragraph and list content — skip headings and the glossary/FAQ sections
+    # Split into segments: taggable vs non-taggable
+    def process_segment(seg):
+        for term in sorted_terms:
+            if term in tagged:
+                continue
+            term_id = "gloss-" + re.sub(r'[^a-z0-9]', '-', term.lower())
+            defn = glossary[term]
+            pattern = r'(?<![a-zA-Z])' + re.escape(term) + r'(?![a-zA-Z])'
+            seg = re.sub(
+                pattern,
+                lambda m, t=term, d=defn, tid=term_id: replace_term(m, t, d, tid),
+                seg,
+                count=1
+            )
+        return seg
+
+    # Split HTML into taggable (<p>, <li>) and non-taggable (headings, code, glossary section)
+    # Simple approach: process text between tags, skip heading tags and the glossary/faq divs
+    result = []
+    pos = 0
+    # Find the glossary section start to avoid tagging there
+    gloss_start = html_content.find('id="glossary"')
+    tag_pattern = re.compile(r'<[^>]+>|[^<]+')
+
+    in_skip = False
+    skip_depth = 0
+    in_heading = False
+
+    for m in tag_pattern.finditer(html_content):
+        chunk = m.group(0)
+        if chunk.startswith('<'):
+            tag_lower = chunk.lower()
+            # Detect start of glossary/FAQ section — stop tagging after this
+            if m.start() >= gloss_start and gloss_start > 0:
+                result.append(chunk)
+                continue
+            # Skip headings
+            if re.match(r'<h[1-6][\s>]', tag_lower):
+                in_heading = True
+            elif re.match(r'</h[1-6]>', tag_lower):
+                in_heading = False
+            result.append(chunk)
+        else:
+            if in_heading or (m.start() >= gloss_start > 0):
+                result.append(chunk)
+            else:
+                result.append(process_segment(chunk))
+
+    return ''.join(result)
+
+
+def build_toc_html(glossary, faqs):
+    """Build the right-side TOC for the Web Console section."""
+    # In a full multi-section build this would be generated from headings.
+    # For now, hardcoded to match the source structure.
+    return """
+    <div class="toc-label">On this page</div>
+    <ul>
+      <li><a href="#for-all-users">For All Users</a></li>
+      <li><a href="#for-remote-participants">Remote Participants</a></li>
+      <li class="toc2"><a href="#how-to-join">How to Join</a></li>
+      <li class="toc2"><a href="#meeting-tools">Meeting Tools</a></li>
+      <li><a href="#web-console">Web Console</a></li>
+      <li class="toc2"><a href="#navigation-menu">Navigation Menu</a></li>
+      <li class="toc2"><a href="#workspaces">Workspaces</a></li>
+      <li class="toc2"><a href="#assets">Assets</a></li>
+      <li class="toc2"><a href="#profile">Profile</a></li>
+      <li class="toc2"><a href="#settings">Settings</a></li>
+      <li class="toc2"><a href="#account">Account</a></li>
+      <li class="toc2"><a href="#analytics">Analytics</a></li>
+      <li class="toc2"><a href="#device-login">Device Login</a></li>
+      <li><a href="#onsite-team">Onsite Operator</a></li>
+      <li class="toc2"><a href="#best-practices-start">Getting Started</a></li>
+      <li class="toc2"><a href="#best-practices-before">Before a Meeting</a></li>
+      <li class="toc2"><a href="#best-practices-during">During a Meeting</a></li>
+      <li><a href="#training-calls">Training Calls</a></li>
+      <li><a href="#glossary">Glossary</a></li>
+      <li><a href="#faqs">FAQs</a></li>
+    </ul>
+    """
+
+
+def build_sidenav_html():
+    return """
+    <div class="sidenav-section">Guide sections</div>
+    <a href="#for-all-users">For All Users</a>
+    <a href="#for-remote-participants">Remote Participants</a>
+    <a href="#how-to-join" class="sub">How to Join</a>
+    <a href="#meeting-tools" class="sub">Meeting Tools</a>
+    <a href="#web-console" class="active">Web Console</a>
+    <a href="#navigation-menu" class="sub">Navigation Menu</a>
+    <a href="#workspaces" class="sub">Workspaces</a>
+    <a href="#assets" class="sub">Assets</a>
+    <a href="#settings" class="sub">Settings</a>
+    <a href="#account" class="sub">Account</a>
+    <a href="#device-login" class="sub">Device Login</a>
+    <a href="#onsite-team">Onsite Operator</a>
+    <a href="#best-practices-start" class="sub">Getting Started</a>
+    <a href="#best-practices-before" class="sub">Before a Meeting</a>
+    <a href="#best-practices-during" class="sub">During a Meeting</a>
+    <a href="#training-calls">Training Calls</a>
+    <div class="sidenav-section">Reference</div>
+    <a href="#glossary">Glossary</a>
+    <a href="#faqs">FAQs</a>
+    <a href="https://avatour.live/test">Network Test ↗</a>
+    <a href="mailto:support@avatour.live">Open Support Ticket ↗</a>
+    """
+
+
+def md_to_html(md_text):
+    """Convert Markdown to HTML using Python-Markdown with extensions."""
+    md = markdown.Markdown(extensions=[
+        TocExtension(slugify=lambda value, separator: re.sub(r'[^\w-]', '', value.lower().replace(' ', separator))),
+        'tables',
+        'fenced_code',
+        'attr_list',
+        'md_in_html',
+    ])
+    return md.convert(md_text)
+
+
+def replace_glossary_section(html, glossary_html):
+    """Replace the auto-generated glossary section with the styled grid."""
+    # The markdown renders ** terms as bold paragraphs — replace the whole section
+    # with the pre-built grid between the h2#glossary and the next h2
+    pattern = r'(<h2[^>]*id="glossary"[^>]*>.*?</h2>)(.*?)(<h2|$)'
+    replacement = r'\1' + '\n' + glossary_html + '\n' + r'\3'
+    result = re.sub(pattern, replacement, html, flags=re.DOTALL)
+    return result
+
+
+def replace_faq_section(html, faq_html):
+    """Replace the auto-generated FAQ section with the accordion."""
+    pattern = r'(<h2[^>]*id="faqs"[^>]*>.*?</h2>)(.*?)$'
+    replacement = r'\1' + '\n' + faq_html + '\n'
+    result = re.sub(pattern, replacement, html, flags=re.DOTALL)
+    return result
+
+
+LOGO_SVG = """<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="50" cy="50" r="45" fill="#FF4E00"/>
+  <ellipse cx="50" cy="50" rx="30" ry="20" stroke="white" stroke-width="5" fill="none"/>
+  <circle cx="50" cy="50" r="8" fill="white"/>
+</svg>"""
+
+
+def build_full_html(article_html, toc_html, sidenav_html, meta, body_class=""):
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{meta['title']} — Avatour</title>
+<style>{CSS}</style>
+</head>
+<body{' class="' + body_class + '"' if body_class else ''}>
+
+<header class="guide-header">
+  <a class="guide-logo" href="#">
+    {LOGO_SVG}
+    AVATOUR
+  </a>
+  <div class="hd"></div>
+  <span class="hlabel">User Guide</span>
+  <div class="hright">
+    <span class="hversion">v{meta.get('version','2.0')} · Updated {meta.get('updated','2026')}</span>
+    <a class="hbtn" href="https://avatour.live">Log in to Avatour</a>
+  </div>
+</header>
+
+<div class="guide-layout">
+
+  <nav class="guide-sidenav">
+    {sidenav_html}
+  </nav>
+
+  <div class="guide-main">
+    <article class="guide-article">
+
+      <div class="guide-bc">
+        <a href="#">User Guide</a>
+        <span>›</span>
+        {meta['title']}
+      </div>
+
+      {article_html}
+
+      <div class="guide-feedback">
+        <span>Was this article helpful?</span>
+        <button class="fb-btn">Yes</button>
+        <button class="fb-btn">No</button>
+      </div>
+
+      <div class="guide-related">
+        <div class="related-label">Related articles</div>
+        <a href="#">How do I add my company branding to the Avatour experience?</a>
+        <a href="#">Managing access to Avatour meetings</a>
+        <a href="#">What are the network requirements for Avatour?</a>
+        <a href="#">Are my Avatour sessions secure?</a>
+      </div>
+
+    </article>
+
+    <aside class="guide-toc">
+      {toc_html}
+    </aside>
+  </div>
+
+</div>
+
+<script>{JS}</script>
+</body>
+</html>"""
+
+
+def build_embed_html(article_html, toc_html, meta):
+    """Stripped version for embedding — no fixed header/sidenav, scrolls naturally."""
+    embed_css = CSS.replace("position: fixed;", "position: relative;")
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{meta['title']} — Avatour</title>
+<style>
+{embed_css}
+.guide-header {{ display: none; }}
+.guide-sidenav {{ display: none; }}
+.guide-layout {{ padding-top: 0; }}
+.guide-main {{ margin-left: 0; }}
+.guide-toc {{ position: sticky; top: 20px; }}
+</style>
+</head>
+<body>
+<div class="guide-layout">
+  <div class="guide-main">
+    <article class="guide-article" style="padding-top: 24px;">
+      {article_html}
+    </article>
+    <aside class="guide-toc">
+      {toc_html}
+    </aside>
+  </div>
+</div>
+<script>{JS}</script>
+</body>
+</html>"""
+
+
+# ── MAIN ──────────────────────────────────────────────────────────────────
+def main():
+    os.makedirs(DIST_DIR, exist_ok=True)
+
+    # 1. Load source
+    post = frontmatter.load(SOURCE_FILE)
+    md_text = post.content
+    meta = {
+        'title':    post.get('title', 'Avatour User Guide'),
+        'version':  post.get('version', '2.0'),
+        'updated':  post.get('updated', '2026'),
+    }
+
+    # 2. Extract glossary and FAQs before converting
+    glossary = extract_glossary(md_text)
+    faqs = extract_faqs(md_text)
+    print(f"  Found {len(glossary)} glossary terms, {len(faqs)} FAQ entries")
+
+    # 3. Convert Markdown → HTML
+    article_html = md_to_html(md_text)
+
+    # 4. Replace raw glossary/FAQ sections with styled components
+    glossary_html = build_glossary_html(glossary)
+    faq_html = build_faq_html(faqs)
+    article_html = replace_glossary_section(article_html, glossary_html)
+    article_html = replace_faq_section(article_html, faq_html)
+
+    # 5. Auto-tag glossary terms in body text
+    article_html = auto_tag_glossary(article_html, glossary)
+
+    # 6. Build navigation components
+    toc_html      = build_toc_html(glossary, faqs)
+    sidenav_html  = build_sidenav_html()
+
+    # 7. Output 1: Standalone HTML
+    standalone = build_full_html(article_html, toc_html, sidenav_html, meta)
+    out1 = os.path.join(DIST_DIR, "avatour-guide.html")
+    with open(out1, 'w', encoding='utf-8') as f:
+        f.write(standalone)
+    print(f"  ✓ Standalone HTML  → {out1}")
+
+    # 8. Output 2: Embed HTML
+    embed = build_embed_html(article_html, toc_html, meta)
+    out2 = os.path.join(DIST_DIR, "avatour-guide-embed.html")
+    with open(out2, 'w', encoding='utf-8') as f:
+        f.write(embed)
+    print(f"  ✓ Embed HTML       → {out2}")
+
+    # 9. Output 3: Print/PDF HTML (open in browser, Cmd+P, Save as PDF)
+    print_html = build_full_html(article_html, toc_html, sidenav_html, meta, body_class="print-mode")
+    out3 = os.path.join(DIST_DIR, "avatour-guide-print.html")
+    with open(out3, 'w', encoding='utf-8') as f:
+        f.write(print_html)
+    print(f"  ✓ Print/PDF HTML   → {out3}")
+    print(f"\n  To generate PDF: open {out3} in Chrome → Cmd+P → Save as PDF")
+    print(f"  (For automated PDF: install puppeteer and run: node pdf.js)")
+
+
+if __name__ == "__main__":
+    print("\nAvatour Guide Builder")
+    print("─" * 40)
+    main()
+    print("─" * 40)
+    print("Done.\n")
