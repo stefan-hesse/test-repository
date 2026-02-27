@@ -893,7 +893,7 @@ def build_full_html(article_html, toc_html, sidenav_html, meta, body_class=""):
     </article>
 
     <aside class="guide-toc">
-      {toc_html}
+      {embed_toc}
     </aside>
   </div>
 
@@ -918,20 +918,45 @@ def build_embed_html(article_html, toc_html, sidenav_html, meta):
     EMBED_EXTRA_CSS = """
 /* WEBFLOW EMBED OVERRIDES */
 .guide-header { display: none; }
-.guide-layout { padding-top: 0; display: flex; align-items: flex-start; }
+
+/* Reset the standalone layout (which assumes fixed sidebars) */
+.guide-layout {
+  padding-top: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+}
+.guide-main {
+  margin-left: 0 !important;
+  padding-right: 0 !important;
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+}
+.guide-article {
+  width: 100%;
+  max-width: 720px;
+}
+
+/* Sidebars: sticky, not fixed */
 .guide-sidenav {
   position: sticky;
   top: 20px;
   max-height: calc(100vh - 40px);
   overflow-y: auto;
   flex-shrink: 0;
+  width: 220px;
 }
-.guide-main { flex: 1; min-width: 0; }
 .guide-toc {
   position: sticky;
   top: 20px;
   max-height: calc(100vh - 40px);
   overflow-y: auto;
+  flex-shrink: 0;
+  width: 200px;
+  padding: 0 16px;
+  right: auto;
 }
 
 /* Fix 2: JS-powered FAQ accordion (replaces <details>/<summary>) */
@@ -965,7 +990,7 @@ def build_embed_html(article_html, toc_html, sidenav_html, meta):
 /* Fix 3: JS-powered glossary tooltips */
 .gloss-tip {
   display: none;
-  position: fixed;
+  position: absolute;
   background: var(--blue); color: #fff;
   font-size: 12px; line-height: 1.5;
   padding: 8px 12px; border-radius: 5px;
@@ -1043,20 +1068,22 @@ document.querySelectorAll('.gloss-term').forEach(term => {
   const href = term.getAttribute('data-href') || '#glossary';
 
   term.addEventListener('mouseenter', e => {
-    tip.innerHTML = defn + '<br><a style="color:#FF4E00;font-size:11px;display:block;margin-top:4px;" href="' + href + '">See full definition →</a>';
-    tip.classList.add('visible');
+    tip.innerHTML = defn + '<a style="color:#FF4E00;font-size:11px;display:block;margin-top:6px;" href="' + href + '">See full definition →</a>';
+    tip.style.display = 'block';
     positionTip(e);
   });
   term.addEventListener('mousemove', positionTip);
-  term.addEventListener('mouseleave', () => tip.classList.remove('visible'));
+  term.addEventListener('mouseleave', () => { tip.style.display = 'none'; });
 });
 
 function positionTip(e) {
-  const pad = 12;
-  let x = e.clientX + pad;
-  let y = e.clientY - tip.offsetHeight - pad;
-  if (x + 260 > window.innerWidth) x = e.clientX - 260 - pad;
-  if (y < 0) y = e.clientY + pad;
+  const pad = 14;
+  const w = tip.offsetWidth || 260;
+  const h = tip.offsetHeight || 80;
+  let x = e.pageX + pad;
+  let y = e.pageY - h - pad;
+  if (x + w > document.documentElement.clientWidth) x = e.pageX - w - pad;
+  if (y < window.pageYOffset) y = e.pageY + pad;
   tip.style.left = x + 'px';
   tip.style.top  = y + 'px';
 }
@@ -1087,9 +1114,18 @@ document.querySelectorAll('.fb-btn').forEach(btn => {
 });
 """
 
+    # Strip Glossary and FAQ sections entirely from the embed
+    # (both live in the website footer as separate pages)
+    import re as _re2
+    faq_html_fixed = _re2.sub(
+        r'<h2[^>]*id="glossary"[^>]*>.*',
+        '',
+        faq_html_fixed,
+        flags=_re2.DOTALL
+    )
+
     # Fix 3: rewrite gloss-term spans to use data attributes instead of nested HTML
     # (Webflow can mangle nested spans; data attributes are safer)
-    import re as _re2
     def replace_gloss_span(m):
         # Extract the visible term text and the tooltip content
         full = m.group(0)
@@ -1111,6 +1147,21 @@ document.querySelectorAll('.fb-btn').forEach(btn => {
         flags=_re2.DOTALL
     )
 
+    # Strip glossary/FAQ/reference links from sidenav for embed version
+    embed_sidenav = _re2.sub(
+        r'<div class="sidenav-section">Reference</div>.*',
+        '',
+        sidenav_html,
+        flags=_re2.DOTALL
+    )
+    # Strip glossary/FAQ from TOC for embed version
+    embed_toc = _re2.sub(
+        r'<li><a href="#glossary">.*',
+        '',
+        toc_html,
+        flags=_re2.DOTALL
+    )
+
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1125,14 +1176,14 @@ document.querySelectorAll('.fb-btn').forEach(btn => {
 <body>
 <div class="guide-layout">
   <nav class="guide-sidenav">
-    {sidenav_html}
+    {embed_sidenav}
   </nav>
   <div class="guide-main">
     <article class="guide-article" style="padding-top: 24px;">
       {faq_html_fixed}
     </article>
     <aside class="guide-toc">
-      {toc_html}
+      {embed_toc}
     </aside>
   </div>
 </div>
