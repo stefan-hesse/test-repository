@@ -419,11 +419,28 @@ body.print-mode .guide-related { display: none; }
 body.print-mode { background: white; }
 body.print-mode .guide-layout { padding-top: 0; }
 body.print-mode .guide-main { margin-left: 0; padding-right: 0; }
+body.print-mode body {
+  font-size: 10.5pt;
+  line-height: 1.5;
+}
 body.print-mode .guide-article {
   max-width: 100%;
   padding: 0;
   margin: 0;
+  font-size: 10.5pt;
+  line-height: 1.5;
 }
+body.print-mode .guide-article p { margin-bottom: 8px; }
+body.print-mode .guide-article h1 { font-size: 20pt; margin-bottom: 6px; }
+body.print-mode .guide-article h2 { font-size: 14pt; margin: 20px 0 8px; }
+body.print-mode .guide-article h3 { font-size: 12pt; margin: 14px 0 6px; }
+body.print-mode .guide-article h4 { font-size: 10pt; margin: 10px 0 4px; }
+body.print-mode .guide-article li { margin-bottom: 3px; }
+body.print-mode .guide-article table { font-size: 9.5pt; }
+body.print-mode .guide-article blockquote { font-size: 10pt; padding: 8px 12px; margin: 10px 0; }
+body.print-mode .glossary-def { font-size: 9.5pt; line-height: 1.45; }
+body.print-mode .faq-q { font-size: 10.5pt; padding: 8px 0; }
+body.print-mode .faq-a { font-size: 10pt; line-height: 1.5; }
 
 /* Page setup: margins, running header/footer with page numbers */
 @page {
