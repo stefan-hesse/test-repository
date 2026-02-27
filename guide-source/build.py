@@ -893,7 +893,7 @@ def build_full_html(article_html, toc_html, sidenav_html, meta, body_class=""):
     </article>
 
     <aside class="guide-toc">
-      {embed_toc}
+      {toc_html}
     </aside>
   </div>
 
