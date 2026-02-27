@@ -1,8 +1,17 @@
 # Avatour User and Best Practices Guide
 
-## For All Avatour Users - edits Typora - further edits {#for-all-avatour-users}
+## For All Avatour Users {#for-all-avatour-users}
 
-Please watch our [Avatour How it Works video](https://avatour.com/how-it-works) which will gives a good overview of the main features and is especially useful if you are new to Avatour.
+Here are some good starting points to understand Avatour:
+
+1. [Avatour How it Works video](https://avatour.com/how-it-works) 
+   This video will give a good overview of the main features.
+2. [FAQs](https://avatour.com/faqs) 
+   Read our Frequently Asked Questions
+3. [Glossary](https://avatour.com/glossary) 
+   Here you find the major Avatour Terms
+4. Website
+   Have a look at the Avatour Features and at Use Cases and Industries especially relevent to you.
 
 ## For Remote Meeting Participants and Workspace Visitors {#for-remote-meeting-participants-and-workspace-visitors}
 
