@@ -1,10 +1,10 @@
 #Avatour User and Best Practices Guide
 
-##For All Avatour Users {#for-all-avatour-users}
+##For All Avatour Users - edits Typora {#for-all-avatour-users}
 
 Please watch our [Avatour How it Works video](https://avatour.com/how-it-works) which will gives a good overview of the main features and is especially useful if you are new to Avatour.
 
-##For Remote Meeting Participants and Workspace Visitors {#for-remote-eeting-participants-and-workspace-visitors
+##For Remote Meeting Participants and Workspace Visitors {#for-remote-meeting-participants-and-workspace-visitors
 
 ###How to Join an Avatour meeting and Visit an Avatour Workspace {#how-to-join-an-avatour-meeting-and-visit-an-avatour-workspace}
 ####Any "Flat Screen" Device with a Web Browser {#any-flat-screen}
@@ -33,7 +33,6 @@ You can join a meeting and visit a workspace from a range of compatible Meta and
 Below are from left to right short explanations of the above meeting menu items. For more details see also [What meeting tools are available to remote guests on the web?](https://avatour.com/support/what-meeting-tools-are-available-to-remote-guests-on-the-web)
 
 While in a meeting you can also start the meeting Tutorial from the Info section. 
-		
 ```markdown
 Assets: Files in the workspace that can be reviewed with all participants in the meeting. This includes recorded videos, images/snapshots, and PDFs. Hosts and Collaborator Editors can up- and download assets.
 
@@ -62,7 +61,7 @@ Participants - Open/close the participants pane.
 Meeting Info - E.g. for copying the meeting code or invite link and access to the Online Tutorials.
 
 Settings - Adjust your language, audio, and video settings
-``` 
+```
 
 Present menu
 
@@ -73,7 +72,7 @@ Desktop - Allows you to share your desktop’s screen
 
 Assets - Show one of the assets from the asset section - see above. While presenting an asset the Asset menu will appear - see below.
 
-``` 
+```
 
 Present Asset menu
 
@@ -92,10 +91,9 @@ Core collaborators (Host, Avatour Collaborator Viewers and Editors) can update a
 You can also print a report with all notes, topics etc. even a full transciption for an asset and select what to include:
 
 Share links to notes and specific scenes (=viewangles) in a video / snapshot either by email or directly copy the link and use/embed wherever you want.
-``` 
+```
 
 The above Asset menu items are also available when watching assets in a Workspace or in the Assets section  (not only when accessing / presenting in a meeting).
-
 
 ##For Registered Users {#for-registered-users}
 
