@@ -2,13 +2,13 @@
 """
 Avatour User Guide — Build Script
 ==================================
-Converts guide-source/web-console.md into three outputs:
+Converts guide-source/Avatour User and Best Practices Guide.md into three outputs:
   1. standalone HTML  → dist/avatour-guide.html
   2. embed HTML       → dist/avatour-guide-embed.html
   3. PDF-ready HTML   → dist/avatour-guide-print.html  (open in browser → Print → Save as PDF)
 
 Usage:
-  python build.py
+  python guide-source/build.py
 
 Requirements:
   pip install markdown pymdown-extensions python-frontmatter --break-system-packages
@@ -20,7 +20,7 @@ import markdown
 from markdown.extensions.toc import TocExtension
 
 # ── CONFIG ────────────────────────────────────────────────────────────────
-SOURCE_FILE = "guide-source/web-console.md"
+SOURCE_FILE = "guide-source/Avatour User and Best Practices Guide.md"
 DIST_DIR    = "dist"
 
 BRAND = {
