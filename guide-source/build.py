@@ -904,9 +904,213 @@ def build_full_html(article_html, toc_html, sidenav_html, meta, body_class=""):
 </html>"""
 
 
-def build_embed_html(article_html, toc_html, meta):
-    """Stripped version for embedding — no fixed header/sidenav, scrolls naturally."""
-    embed_css = CSS.replace("position: fixed;", "position: relative;")
+def build_embed_html(article_html, toc_html, sidenav_html, meta):
+    """
+    Webflow-compatible embed version.
+    Fixes three Webflow-specific issues:
+      1. Sidebar: shown but non-fixed (scrolls with page)
+      2. FAQs: <details>/<summary> replaced with JS accordion (Webflow strips these)
+      3. Glossary tooltips: CSS :hover replaced with JS mouseenter (more reliable in iframes)
+    """
+    # Fix 1: make all fixed/sticky positions work inside an iframe/embed
+    embed_css = CSS.replace("position: fixed;", "position: sticky;")
+
+    EMBED_EXTRA_CSS = """
+/* WEBFLOW EMBED OVERRIDES */
+.guide-header { display: none; }
+.guide-layout { padding-top: 0; display: flex; align-items: flex-start; }
+.guide-sidenav {
+  position: sticky;
+  top: 20px;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  flex-shrink: 0;
+}
+.guide-main { flex: 1; min-width: 0; }
+.guide-toc {
+  position: sticky;
+  top: 20px;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+}
+
+/* Fix 2: JS-powered FAQ accordion (replaces <details>/<summary>) */
+.faq-item { border-bottom: 1px solid var(--border); }
+.faq-item:last-child { border-bottom: none; }
+.faq-q {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 14px; font-weight: 700; color: var(--blue);
+  padding: 14px 0; cursor: pointer;
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 12px; list-style: none; border: none; background: none;
+  width: 100%; text-align: left;
+}
+.faq-q .faq-icon {
+  color: var(--orange); font-size: 20px; font-weight: 300;
+  flex-shrink: 0; transition: transform .15s; line-height: 1;
+}
+.faq-q.open .faq-icon { transform: rotate(45deg); }
+.faq-a {
+  display: none; padding: 0 0 14px 0;
+  font-size: 13.5px; color: #2a3a44; line-height: 1.7;
+}
+.faq-a.open { display: block; }
+.faq-section-title {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 11px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .1em;
+  color: var(--muted); margin: 24px 0 8px;
+}
+
+/* Fix 3: JS-powered glossary tooltips */
+.gloss-tip {
+  display: none;
+  position: fixed;
+  background: var(--blue); color: #fff;
+  font-size: 12px; line-height: 1.5;
+  padding: 8px 12px; border-radius: 5px;
+  width: 260px; z-index: 9999;
+  box-shadow: 0 4px 16px rgba(0,0,0,.2);
+  pointer-events: none;
+  font-family: 'Roboto', sans-serif;
+}
+.gloss-tip::after {
+  content: '';
+  position: absolute; top: 100%; left: 20px;
+  border: 5px solid transparent;
+  border-top-color: var(--blue);
+}
+.gloss-tip.visible { display: block; }
+.gloss-term {
+  border-bottom: 1px dashed var(--orange);
+  cursor: help;
+}
+"""
+
+    # Fix 2: replace <details>/<summary> FAQ markup with plain div/button markup
+    faq_html_fixed = article_html
+    import re as _re
+    # Replace <details class="faq-item"> ... </details> blocks with div+button pattern
+    def replace_faq_block(m):
+        inner = m.group(1)
+        # Extract question from <summary class="faq-q">...</summary>
+        q_match = _re.search(r'<summary[^>]*>(.*?)</summary>', inner, _re.DOTALL)
+        # Extract answer from <div class="faq-a">...</div>
+        a_match = _re.search(r'<div class="faq-a">(.*?)</div>', inner, _re.DOTALL)
+        if not q_match or not a_match:
+            return m.group(0)
+        question = q_match.group(1).strip()
+        answer = a_match.group(1).strip()
+        return (
+            f'<div class="faq-item">'
+            f'<button class="faq-q"><span>{question}</span><span class="faq-icon">+</span></button>'
+            f'<div class="faq-a">{answer}</div>'
+            f'</div>'
+        )
+    faq_html_fixed = _re.sub(
+        r'<details class="faq-item">(.*?)</details>',
+        replace_faq_block,
+        faq_html_fixed,
+        flags=_re.DOTALL
+    )
+
+    EMBED_JS = """
+// ── FAQ ACCORDION ──────────────────────────────────────────────────────
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const answer = btn.nextElementSibling;
+    const isOpen = btn.classList.contains('open');
+    // Close all
+    document.querySelectorAll('.faq-q').forEach(b => {
+      b.classList.remove('open');
+      b.nextElementSibling.classList.remove('open');
+    });
+    // Open this one if it was closed
+    if (!isOpen) {
+      btn.classList.add('open');
+      answer.classList.add('open');
+    }
+  });
+});
+
+// ── GLOSSARY TOOLTIPS ──────────────────────────────────────────────────
+const tip = document.createElement('div');
+tip.className = 'gloss-tip';
+document.body.appendChild(tip);
+
+document.querySelectorAll('.gloss-term').forEach(term => {
+  const defn = term.getAttribute('data-def') || '';
+  const href = term.getAttribute('data-href') || '#glossary';
+
+  term.addEventListener('mouseenter', e => {
+    tip.innerHTML = defn + '<br><a style="color:#FF4E00;font-size:11px;display:block;margin-top:4px;" href="' + href + '">See full definition →</a>';
+    tip.classList.add('visible');
+    positionTip(e);
+  });
+  term.addEventListener('mousemove', positionTip);
+  term.addEventListener('mouseleave', () => tip.classList.remove('visible'));
+});
+
+function positionTip(e) {
+  const pad = 12;
+  let x = e.clientX + pad;
+  let y = e.clientY - tip.offsetHeight - pad;
+  if (x + 260 > window.innerWidth) x = e.clientX - 260 - pad;
+  if (y < 0) y = e.clientY + pad;
+  tip.style.left = x + 'px';
+  tip.style.top  = y + 'px';
+}
+
+// ── ACTIVE TOC + SIDENAV ───────────────────────────────────────────────
+const headings = document.querySelectorAll('.guide-article h2, .guide-article h3');
+const tocLinks = document.querySelectorAll('.guide-toc a');
+const sideLinks = document.querySelectorAll('.guide-sidenav a');
+if (headings.length) {
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const id = e.target.id;
+        tocLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + id));
+        sideLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + id));
+      }
+    });
+  }, { rootMargin: '-10% 0px -80% 0px' });
+  headings.forEach(h => { if (h.id) obs.observe(h); });
+}
+
+// ── FEEDBACK BUTTONS ───────────────────────────────────────────────────
+document.querySelectorAll('.fb-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const feedback = btn.closest('.guide-feedback');
+    if (feedback) feedback.innerHTML = '<span style="color:var(--orange);font-weight:500">Thank you for your feedback!</span>';
+  });
+});
+"""
+
+    # Fix 3: rewrite gloss-term spans to use data attributes instead of nested HTML
+    # (Webflow can mangle nested spans; data attributes are safer)
+    import re as _re2
+    def replace_gloss_span(m):
+        # Extract the visible term text and the tooltip content
+        full = m.group(0)
+        term_text_m = _re2.search(r'^<span class="gloss-term">(.+?)<span class="gloss-tip">', full, _re2.DOTALL)
+        tip_m = _re2.search(r'<span class="gloss-tip">(.*?)<a class="gloss-link"[^>]*href="([^"]+)"', full, _re2.DOTALL)
+        if not term_text_m or not tip_m:
+            return full
+        term_text = term_text_m.group(1).strip()
+        defn = tip_m.group(1).strip()
+        href = tip_m.group(2)
+        # Escape for data attribute
+        defn_safe = defn.replace('"', '&quot;').replace("'", '&#39;')
+        return f'<span class="gloss-term" data-def="{defn_safe}" data-href="{href}">{term_text}</span>'
+
+    faq_html_fixed = _re2.sub(
+        r'<span class="gloss-term">.*?</span></span>',
+        replace_gloss_span,
+        faq_html_fixed,
+        flags=_re2.DOTALL
+    )
+
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -915,25 +1119,24 @@ def build_embed_html(article_html, toc_html, meta):
 <title>{meta['title']} — Avatour</title>
 <style>
 {embed_css}
-.guide-header {{ display: none; }}
-.guide-sidenav {{ display: none; }}
-.guide-layout {{ padding-top: 0; }}
-.guide-main {{ margin-left: 0; }}
-.guide-toc {{ position: sticky; top: 20px; }}
+{EMBED_EXTRA_CSS}
 </style>
 </head>
 <body>
 <div class="guide-layout">
+  <nav class="guide-sidenav">
+    {sidenav_html}
+  </nav>
   <div class="guide-main">
     <article class="guide-article" style="padding-top: 24px;">
-      {article_html}
+      {faq_html_fixed}
     </article>
     <aside class="guide-toc">
       {toc_html}
     </aside>
   </div>
 </div>
-<script>{JS}</script>
+<script>{EMBED_JS}</script>
 </body>
 </html>"""
 
@@ -980,7 +1183,7 @@ def main():
     print(f"  ✓ Standalone HTML  → {out1}")
 
     # 8. Output 2: Embed HTML
-    embed = build_embed_html(article_html, toc_html, meta)
+    embed = build_embed_html(article_html, toc_html, sidenav_html, meta)
     out2 = os.path.join(DIST_DIR, "avatour-guide-embed.html")
     with open(out2, 'w', encoding='utf-8') as f:
         f.write(embed)
