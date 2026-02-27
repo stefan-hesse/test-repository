@@ -1,6 +1,6 @@
 #Avatour User and Best Practices Guide
 
-##For All Avatour Users - edits Typora {#for-all-avatour-users}
+##For All Avatour Users - edits Typora - further edits {#for-all-avatour-users}
 
 Please watch our [Avatour How it Works video](https://avatour.com/how-it-works) which will gives a good overview of the main features and is especially useful if you are new to Avatour.
 
