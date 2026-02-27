@@ -393,7 +393,6 @@ details[open] .faq-q::after { transform: rotate(45deg); }
   .guide-feedback, .guide-related { display: none !important; }
   .guide-main { margin-left: 0; padding-right: 0; }
   .guide-article { padding: 0; max-width: 100%; }
-  .guide-article h2 { page-break-before: always; }
   .guide-article img { max-width: 80%; margin: 12px auto; }
   .gloss-term { border-bottom: none; }
   .gloss-term .gloss-tip { display: none !important; }
@@ -418,9 +417,74 @@ body.print-mode .guide-toc,
 body.print-mode .guide-feedback,
 body.print-mode .guide-related { display: none; }
 body.print-mode { background: white; }
+body.print-mode .guide-layout { padding-top: 0; }
 body.print-mode .guide-main { margin-left: 0; padding-right: 0; }
-body.print-mode .guide-article { max-width: 100%; padding: 40px 60px; }
-body.print-mode .guide-article h2 { page-break-before: always; }
+body.print-mode .guide-article {
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* Page setup: margins, running header/footer with page numbers */
+@page {
+  size: A4;
+  margin: 20mm 18mm 22mm 18mm;
+  @top-center {
+    content: "Avatour User and Best Practices Guide";
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 9pt;
+    color: #7A8A95;
+  }
+  @bottom-left {
+    content: "avatour.com";
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 9pt;
+    color: #7A8A95;
+  }
+  @bottom-right {
+    content: "Page " counter(page) " of " counter(pages);
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 9pt;
+    color: #7A8A95;
+  }
+}
+
+/* Avoid page breaks inside key elements */
+body.print-mode .guide-article li,
+body.print-mode .guide-article p,
+body.print-mode .guide-article blockquote,
+body.print-mode .guide-article tr { page-break-inside: avoid; }
+
+/* Keep headings with the content that follows */
+body.print-mode .guide-article h2,
+body.print-mode .guide-article h3,
+body.print-mode .guide-article h4 { page-break-after: avoid; }
+
+/* Start each H2 section on a new page — but not the very first one */
+body.print-mode .guide-article h2 ~ h2 { page-break-before: always; }
+
+/* Images: never break, centered, max 90% width */
+body.print-mode .guide-article img {
+  max-width: 90%;
+  display: block;
+  margin: 12px auto;
+  page-break-inside: avoid;
+}
+
+/* Tables: keep together where possible */
+body.print-mode .guide-article table { page-break-inside: avoid; }
+
+/* Glossary grid: single column for print */
+body.print-mode .glossary-grid { grid-template-columns: 1fr 1fr; }
+
+/* Remove orange dashed underlines from glossary terms in print */
+body.print-mode .gloss-term { border-bottom: none; }
+body.print-mode .gloss-term .gloss-tip { display: none !important; }
+
+/* FAQ accordions: show all answers open in print */
+body.print-mode details { display: block; }
+body.print-mode details summary::after { display: none; }
+body.print-mode .faq-a { display: block !important; padding-bottom: 10px; }
 """
 
 # ── JAVASCRIPT ────────────────────────────────────────────────────────────
