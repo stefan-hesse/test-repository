@@ -649,62 +649,72 @@ def auto_tag_glossary(html_content, glossary):
     return ''.join(result)
 
 
-def build_toc_html(glossary, faqs):
-    """Build the right-side TOC for the Web Console section."""
-    # In a full multi-section build this would be generated from headings.
-    # For now, hardcoded to match the source structure.
-    return """
-    <div class="toc-label">On this page</div>
-    <ul>
-      <li><a href="#for-all-users">For All Users</a></li>
-      <li><a href="#for-remote-participants">Remote Participants</a></li>
-      <li class="toc2"><a href="#how-to-join">How to Join</a></li>
-      <li class="toc2"><a href="#meeting-tools">Meeting Tools</a></li>
-      <li><a href="#web-console">Web Console</a></li>
-      <li class="toc2"><a href="#navigation-menu">Navigation Menu</a></li>
-      <li class="toc2"><a href="#workspaces">Workspaces</a></li>
-      <li class="toc2"><a href="#assets">Assets</a></li>
-      <li class="toc2"><a href="#profile">Profile</a></li>
-      <li class="toc2"><a href="#settings">Settings</a></li>
-      <li class="toc2"><a href="#account">Account</a></li>
-      <li class="toc2"><a href="#analytics">Analytics</a></li>
-      <li class="toc2"><a href="#device-login">Device Login</a></li>
-      <li><a href="#onsite-team">Onsite Operator</a></li>
-      <li class="toc2"><a href="#best-practices-start">Getting Started</a></li>
-      <li class="toc2"><a href="#best-practices-before">Before a Meeting</a></li>
-      <li class="toc2"><a href="#best-practices-during">During a Meeting</a></li>
-      <li><a href="#training-calls">Training Calls</a></li>
-      <li><a href="#glossary">Glossary</a></li>
-      <li><a href="#faqs">FAQs</a></li>
-    </ul>
+def extract_headings(md_text):
     """
+    Extract all H2/H3 headings from the Markdown source.
+    Handles both explicit anchors {#anchor} and auto-generated slugs.
+    Returns list of (level, title, anchor_id) tuples.
+    Stops before Glossary/FAQs (always appended as fixed reference links).
+    """
+    headings = []
+    stop_ids = {"glossary", "faqs"}
+
+    for line in md_text.splitlines():
+        m = re.match(r"^(#{2,3})\s+(.+)", line)
+        if not m:
+            continue
+        level = len(m.group(1))
+        raw = m.group(2).strip()
+
+        # Extract explicit anchor {#anchor-id}
+        anchor_match = re.search(r"\{#([\w-]+)\}", raw)
+        if anchor_match:
+            anchor_id = anchor_match.group(1)
+            title = re.sub(r"\s*\{#[\w-]+\}", "", raw).strip()
+        else:
+            title = raw
+            anchor_id = re.sub(r"[^\w\s-]", "", raw.lower())
+            anchor_id = re.sub(r"\s+", "-", anchor_id.strip())
+            anchor_id = re.sub(r"-+", "-", anchor_id)
+
+        if anchor_id in stop_ids:
+            break
+
+        headings.append((level, title, anchor_id))
+
+    return headings
 
 
-def build_sidenav_html():
-    return """
-    <div class="sidenav-section">Guide sections</div>
-    <a href="#for-all-users">For All Users</a>
-    <a href="#for-remote-participants">Remote Participants</a>
-    <a href="#how-to-join" class="sub">How to Join</a>
-    <a href="#meeting-tools" class="sub">Meeting Tools</a>
-    <a href="#web-console" class="active">Web Console</a>
-    <a href="#navigation-menu" class="sub">Navigation Menu</a>
-    <a href="#workspaces" class="sub">Workspaces</a>
-    <a href="#assets" class="sub">Assets</a>
-    <a href="#settings" class="sub">Settings</a>
-    <a href="#account" class="sub">Account</a>
-    <a href="#device-login" class="sub">Device Login</a>
-    <a href="#onsite-team">Onsite Operator</a>
-    <a href="#best-practices-start" class="sub">Getting Started</a>
-    <a href="#best-practices-before" class="sub">Before a Meeting</a>
-    <a href="#best-practices-during" class="sub">During a Meeting</a>
-    <a href="#training-calls">Training Calls</a>
-    <div class="sidenav-section">Reference</div>
-    <a href="#glossary">Glossary</a>
-    <a href="#faqs">FAQs</a>
-    <a href="https://avatour.live/test">Network Test ↗</a>
-    <a href="mailto:support@avatour.live">Open Support Ticket ↗</a>
-    """
+def build_toc_html(md_text):
+    """Build the right-side TOC automatically from MD headings."""
+    headings = extract_headings(md_text)
+    items = ""
+    for level, title, anchor_id in headings:
+        css = ' class="toc2"' if level == 3 else ""
+        items += f'  <li{css}><a href="#{anchor_id}">{title}</a></li>\n'
+
+    items += '  <li><a href="#glossary">Glossary</a></li>\n'
+    items += '  <li><a href="#faqs">FAQs</a></li>\n'
+
+    return f'<div class="toc-label">On this page</div>\n<ul>\n{items}</ul>'
+
+
+def build_sidenav_html(md_text):
+    """Build the left sidebar navigation automatically from MD headings."""
+    headings = extract_headings(md_text)
+    html = '<div class="sidenav-section">Guide sections</div>\n'
+
+    for level, title, anchor_id in headings:
+        css = ' class="sub"' if level == 3 else ""
+        html += f'<a href="#{anchor_id}"{css}>{title}</a>\n'
+
+    html += '<div class="sidenav-section">Reference</div>\n'
+    html += '<a href="#glossary">Glossary</a>\n'
+    html += '<a href="#faqs">FAQs</a>\n'
+    html += '<a href="https://avatour.live/test">Network Test ↗</a>\n'
+    html += '<a href="mailto:support@avatour.live">Open Support Ticket ↗</a>\n'
+
+    return html
 
 
 def md_to_html(md_text):
@@ -878,8 +888,8 @@ def main():
     article_html = auto_tag_glossary(article_html, glossary)
 
     # 6. Build navigation components
-    toc_html      = build_toc_html(glossary, faqs)
-    sidenav_html  = build_sidenav_html()
+    toc_html      = build_toc_html(md_text)
+    sidenav_html  = build_sidenav_html(md_text)
 
     # 7. Output 1: Standalone HTML
     standalone = build_full_html(article_html, toc_html, sidenav_html, meta)
