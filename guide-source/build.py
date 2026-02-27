@@ -942,16 +942,21 @@ def build_embed_html(article_html, toc_html, sidenav_html, meta):
   flex: 1;
 }
 
-/* TOC only: sticky, not fixed */
+/* TOC: JS-driven fixed position (CSS sticky breaks in Webflow embeds) */
 .guide-toc {
-  position: sticky;
+  position: fixed;
   top: 20px;
   max-height: calc(100vh - 40px);
   overflow-y: auto;
   flex-shrink: 0;
   width: 190px;
   padding: 0 0 0 8px;
-  right: auto;
+  right: 16px;
+  z-index: 100;
+}
+/* Spacer so article column doesn't go under the fixed TOC */
+.guide-main {
+  padding-right: 220px !important;
 }
 
 /* Fix 2: JS-powered FAQ accordion (replaces <details>/<summary>) */
@@ -1085,6 +1090,21 @@ function positionTip(e) {
   if (y - window.scrollY < 0) y = e.clientY - rect.top + window.scrollY + pad;
   tip.style.left = x + 'px';
   tip.style.top  = y + 'px';
+}
+
+// ── TOC: JS-DRIVEN POSITIONING (CSS sticky breaks in Webflow embeds) ──
+const tocEl = document.querySelector('.guide-toc');
+if (tocEl) {
+  function positionTOC() {
+    const rect = guideContainer.getBoundingClientRect();
+    const rightGap = 16;
+    // Position TOC fixed relative to viewport, aligned to right of guide container
+    tocEl.style.right = Math.max(rightGap, window.innerWidth - rect.right + rightGap) + 'px';
+    tocEl.style.top = Math.max(20, rect.top + 20) + 'px';
+  }
+  positionTOC();
+  window.addEventListener('scroll', positionTOC, { passive: true });
+  window.addEventListener('resize', positionTOC, { passive: true });
 }
 
 // ── ACTIVE TOC + SIDENAV ───────────────────────────────────────────────
