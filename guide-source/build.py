@@ -926,36 +926,31 @@ def build_embed_html(article_html, toc_html, sidenav_html, meta):
   align-items: flex-start;
   gap: 0;
 }
+.guide-sidenav { display: none !important; }
 .guide-main {
   margin-left: 0 !important;
   padding-right: 0 !important;
   flex: 1;
   min-width: 0;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  gap: 32px;
 }
 .guide-article {
   width: 100%;
-  max-width: 720px;
+  max-width: 780px;
+  flex: 1;
 }
 
-/* Sidebars: sticky, not fixed */
-.guide-sidenav {
-  position: sticky;
-  top: 20px;
-  max-height: calc(100vh - 40px);
-  overflow-y: auto;
-  flex-shrink: 0;
-  width: 220px;
-}
+/* TOC only: sticky, not fixed */
 .guide-toc {
   position: sticky;
   top: 20px;
   max-height: calc(100vh - 40px);
   overflow-y: auto;
   flex-shrink: 0;
-  width: 200px;
-  padding: 0 16px;
+  width: 190px;
+  padding: 0 0 0 8px;
   right: auto;
 }
 
@@ -998,6 +993,7 @@ def build_embed_html(article_html, toc_html, sidenav_html, meta):
   box-shadow: 0 4px 16px rgba(0,0,0,.2);
   pointer-events: none;
   font-family: 'Roboto', sans-serif;
+  top: 0; left: 0;
 }
 .gloss-tip::after {
   content: '';
@@ -1059,9 +1055,11 @@ document.querySelectorAll('.faq-q').forEach(btn => {
 });
 
 // ── GLOSSARY TOOLTIPS ──────────────────────────────────────────────────
+const guideContainer = document.querySelector('.guide-layout') || document.body;
+guideContainer.style.position = 'relative';
 const tip = document.createElement('div');
 tip.className = 'gloss-tip';
-document.body.appendChild(tip);
+guideContainer.appendChild(tip);
 
 document.querySelectorAll('.gloss-term').forEach(term => {
   const defn = term.getAttribute('data-def') || '';
@@ -1080,10 +1078,11 @@ function positionTip(e) {
   const pad = 14;
   const w = tip.offsetWidth || 260;
   const h = tip.offsetHeight || 80;
-  let x = e.pageX + pad;
-  let y = e.pageY - h - pad;
-  if (x + w > document.documentElement.clientWidth) x = e.pageX - w - pad;
-  if (y < window.pageYOffset) y = e.pageY + pad;
+  const rect = guideContainer.getBoundingClientRect();
+  let x = e.clientX - rect.left + pad;
+  let y = e.clientY - rect.top + window.scrollY - h - pad;
+  if (x + w > guideContainer.offsetWidth) x = e.clientX - rect.left - w - pad;
+  if (y - window.scrollY < 0) y = e.clientY - rect.top + window.scrollY + pad;
   tip.style.left = x + 'px';
   tip.style.top  = y + 'px';
 }
@@ -1175,9 +1174,6 @@ document.querySelectorAll('.fb-btn').forEach(btn => {
 </head>
 <body>
 <div class="guide-layout">
-  <nav class="guide-sidenav">
-    {embed_sidenav}
-  </nav>
   <div class="guide-main">
     <article class="guide-article" style="padding-top: 24px;">
       {faq_html_fixed}
