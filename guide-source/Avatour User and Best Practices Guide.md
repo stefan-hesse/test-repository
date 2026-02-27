@@ -1,26 +1,22 @@
-#Avatour User and Best Practices Guide
+# Avatour User and Best Practices Guide
 
-##For All Avatour Users - edits Typora - further edits {#for-all-avatour-users}
+## For All Avatour Users - edits Typora - further edits {#for-all-avatour-users}
 
 Please watch our [Avatour How it Works video](https://avatour.com/how-it-works) which will gives a good overview of the main features and is especially useful if you are new to Avatour.
 
-##For Remote Meeting Participants and Workspace Visitors {#for-remote-meeting-participants-and-workspace-visitors
+## For Remote Meeting Participants and Workspace Visitors {#for-remote-meeting-participants-and-workspace-visitors}
 
-###How to Join an Avatour meeting and Visit an Avatour Workspace {#how-to-join-an-avatour-meeting-and-visit-an-avatour-workspace}
-####Any "Flat Screen" Device with a Web Browser {#any-flat-screen}
+### How to Join an Avatour meeting and Visit an Avatour Workspace {#how-to-join-an-avatour-meeting-and-visit-an-avatour-workspace}
+#### Any "Flat Screen" Device with a Web Browser {#any-flat-screen}
 You can join from any desktop/laptop computer, smartphone, or tablet. Simply open your preferred browser, navigate to [https://avatour.live/join](https://avatour.live/join), and type in your name and the meeting code. If the owner of the meeting has sent an invitation that includes an Avatour meeting join link (ex: https://avatour.live/join?s=xxxxx), the meeting code will be auto-populated once you open the link. 
 
-```markdown
 > **Tip 1:** Sometimes the camera in Avatour is blocked when you have been in a Teams call before. Best solution in that case is to stop Teams running in the background and to exit and re-join the Avatour meeting.
-```
 
-```markdown
 > **Tip 2:** Do NOT use the Avatour iOS / Android apps. These are only needed if you want to stream Avatour live meetings with an Insta360 cam as those cams can not directly run our live 360° software and need the “help” of a smartphone!
-```
 
 For visiting a workspace (without incurring a meeting) you will need to have the link to the workspace and depending on the workspace settings you need to login as a registered Avtour User.  
 
-####VR Headset {#vr-headset}
+#### VR Headset {#vr-headset}
 You can join a meeting and visit a workspace from a range of compatible Meta and Pico headsets. To do this: 
 
 ```markdown
@@ -28,7 +24,7 @@ You can join a meeting and visit a workspace from a range of compatible Meta and
 2. Load our app and input the meeting code or select a Workspace to join a meeting. For more information on how to use our VR app, see our Knowledge Base article [here](https://avatour.com/support/what-features-are-available-to-vr-guests).
 ```
 
-###Meeting Tools {#meeting-tools}
+### Meeting Tools {#meeting-tools}
 
 Below are from left to right short explanations of the above meeting menu items. For more details see also [What meeting tools are available to remote guests on the web?](https://avatour.com/support/what-meeting-tools-are-available-to-remote-guests-on-the-web)
 
@@ -95,7 +91,6 @@ Share links to notes and specific scenes (=viewangles) in a video / snapshot eit
 
 The above Asset menu items are also available when watching assets in a Workspace or in the Assets section  (not only when accessing / presenting in a meeting).
 
-##For Registered Users {#for-registered-users}
+## For Registered Users {#for-registered-users}
 
-
-##For Camera Operators {#for-camera-operators}
+## For Camera Operators {#for-camera-operators}
