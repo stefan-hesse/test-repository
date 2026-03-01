@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Avatour User Guide — Avatour</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&family=Roboto:wght@300;400;500&display=swap');
+
+:root {
+  --blue:   #132A39;
+  --orange: #FF4E00;
+  --slate:  #5A6875;
+  --light:  #E8EEF2;
+  --border: #DDE5EA;
+  --text:   #1A2A34;
+  --muted:  #7A8A95;
+  --sidebar-w: 240px;
+  --toc-w:     220px;
+  --header-h:  60px;
+  --content-max: 680px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px; line-height: 1.8;
+  color: var(--text); background: #fff;
+}
+
+/* HEADER */
+.guide-header {
+  position: fixed; top: 0; left: 0; right: 0;
+  height: var(--header-h);
+  background: var(--blue);
+  display: flex; align-items: center;
+  padding: 0 24px; z-index: 200; gap: 16px;
+}
+.guide-logo {
+  display: flex; align-items: center; gap: 10px;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 17px; font-weight: 700;
+  color: #fff; text-decoration: none; flex-shrink: 0;
+}
+.guide-logo svg { width: 26px; height: 26px; }
+.hd { width:1px; height:20px; background:rgba(255,255,255,.2); flex-shrink:0; }
+.hlabel {
+  font-family:'Titillium Web',sans-serif; font-size:12px; font-weight:600;
+  color:rgba(255,255,255,.5); letter-spacing:.09em; text-transform:uppercase;
+}
+.hright { margin-left:auto; display:flex; gap:12px; align-items:center; }
+.hbtn {
+  font-family:'Titillium Web',sans-serif; font-size:12px; font-weight:700;
+  color:var(--blue); background:var(--orange);
+  padding:6px 16px; border-radius:4px; text-decoration:none; flex-shrink:0;
+}
+.hversion {
+  font-size:11px; color:rgba(255,255,255,.4);
+  font-family:'Titillium Web',sans-serif; letter-spacing:.05em;
+}
+
+/* LAYOUT */
+.guide-layout {
+  display: flex; padding-top: var(--header-h); min-height: 100vh;
+}
+
+/* LEFT NAV */
+.guide-sidenav {
+  width: var(--sidebar-w); flex-shrink: 0;
+  position: fixed; top: var(--header-h); left: 0; bottom: 0;
+  background: #fafbfc; border-right: 1px solid var(--border);
+  overflow-y: auto; padding: 20px 0 40px;
+}
+.sidenav-section {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 10px; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--muted);
+  padding: 0 16px; margin: 20px 0 5px;
+}
+.sidenav-section:first-child { margin-top: 0; }
+.guide-sidenav a {
+  display: block; padding: 6px 16px;
+  font-size: 13px; color: var(--slate);
+  text-decoration: none; border-left: 3px solid transparent;
+  transition: all .1s; line-height: 1.4;
+}
+.guide-sidenav a.sub { padding-left: 28px; font-size: 12.5px; }
+.guide-sidenav a:hover,
+.guide-sidenav a.active {
+  color: var(--blue); background: var(--light);
+  border-left-color: var(--orange);
+}
+.guide-sidenav a.active { font-weight: 500; }
+
+/* MAIN WRAPPER */
+.guide-main {
+  margin-left: var(--sidebar-w); flex: 1;
+  display: flex; justify-content: center;
+  padding-right: var(--toc-w);
+}
+
+/* ARTICLE */
+.guide-article {
+  width: 100%; max-width: var(--content-max);
+  padding: 44px 40px 80px;
+}
+
+/* BREADCRUMB */
+.guide-bc {
+  font-size: 12px; color: var(--muted);
+  margin-bottom: 10px;
+  display: flex; align-items: center; gap: 6px;
+}
+.guide-bc a { color: var(--muted); text-decoration: none; }
+.guide-bc a:hover { color: var(--orange); }
+.guide-bc span { opacity: .5; }
+
+/* TITLE */
+.guide-article h1 {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 28px; font-weight: 700; color: var(--blue);
+  margin-bottom: 6px; line-height: 1.2;
+}
+.guide-meta {
+  font-size: 12px; color: var(--muted);
+  margin-bottom: 28px; padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+.guide-meta a { color: var(--orange); text-decoration: none; }
+
+/* HEADINGS */
+.guide-article h2 {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 20px; font-weight: 700; color: var(--blue);
+  margin: 40px 0 12px;
+  padding-top: 8px;
+  border-top: 2px solid var(--border);
+  scroll-margin-top: calc(var(--header-h) + 16px);
+}
+.guide-article h3 {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 16px; font-weight: 700; color: var(--blue);
+  margin: 28px 0 10px;
+  scroll-margin-top: calc(var(--header-h) + 16px);
+}
+.guide-article h4 {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 13px; font-weight: 700; color: var(--slate);
+  text-transform: uppercase; letter-spacing: .07em;
+  margin: 20px 0 8px;
+}
+
+/* BODY */
+.guide-article p { margin-bottom: 14px; }
+.guide-article a { color: var(--orange); text-decoration: none; }
+.guide-article a:hover { text-decoration: underline; }
+.guide-article ul, .guide-article ol {
+  padding-left: 22px; margin-bottom: 16px;
+}
+.guide-article li { margin-bottom: 6px; }
+.guide-article li strong { color: var(--blue); }
+.guide-article strong { color: var(--blue); }
+
+/* TABLES */
+.guide-article table {
+  width: 100%; border-collapse: collapse;
+  margin: 16px 0 20px; font-size: 13.5px;
+  border: 1px solid var(--border); border-radius: 6px;
+  overflow: hidden;
+}
+.guide-article th {
+  background: var(--blue); color: #fff;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 12px; font-weight: 700;
+  letter-spacing: .07em; text-transform: uppercase;
+  padding: 9px 14px; text-align: left;
+}
+.guide-article td {
+  padding: 9px 14px; border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+.guide-article tr:last-child td { border-bottom: none; }
+.guide-article tr:nth-child(even) td { background: #f9fbfc; }
+
+/* BLOCKQUOTES (used for notes and tips) */
+.guide-article blockquote {
+  border-left: 3px solid var(--orange);
+  background: #fff8f5;
+  margin: 16px 0; padding: 11px 16px;
+  border-radius: 0 6px 6px 0;
+  font-size: 13.5px;
+}
+.guide-article blockquote p { margin-bottom: 0; color: #2a3a44; }
+.guide-article blockquote strong { color: var(--orange); }
+
+/* INLINE SCREENSHOTS */
+.guide-article img {
+  width: 100%; display: block;
+  border: 1px solid var(--border);
+  border-radius: 6px; margin: 20px 0 4px;
+}
+.guide-article img + em {
+  display: block; font-size: 12px;
+  color: var(--muted); text-align: center;
+  margin-bottom: 20px; font-style: italic;
+}
+
+/* ADMIN BADGE (inline in headings) */
+.admin-badge {
+  display: inline-block;
+  font-size: 10px; font-weight: 700;
+  font-family: 'Titillium Web', sans-serif;
+  letter-spacing: .06em; text-transform: uppercase;
+  padding: 2px 7px; border-radius: 3px;
+  background: #fff0e8; color: #b83a00;
+  vertical-align: middle; margin-left: 6px;
+}
+
+/* GLOSSARY TOOLTIPS */
+.gloss-term {
+  border-bottom: 1px dashed var(--orange);
+  cursor: help; position: relative;
+  color: inherit;
+}
+.gloss-term .gloss-tip {
+  display: none;
+  position: absolute; bottom: calc(100% + 6px); left: 50%;
+  transform: translateX(-50%);
+  background: var(--blue); color: #fff;
+  font-size: 12px; line-height: 1.5;
+  padding: 8px 12px; border-radius: 5px;
+  width: 260px; z-index: 300;
+  box-shadow: 0 4px 16px rgba(0,0,0,.2);
+  pointer-events: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+}
+.gloss-term .gloss-tip::after {
+  content: '';
+  position: absolute; top: 100%; left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: var(--blue);
+}
+.gloss-term:hover .gloss-tip { display: block; }
+.gloss-link {
+  display: block; font-size: 11px; margin-top: 4px;
+  color: var(--orange); text-decoration: none;
+}
+
+/* GLOSSARY SECTION */
+.glossary-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 1px; background: var(--border);
+  border: 1px solid var(--border); border-radius: 6px;
+  overflow: hidden; margin: 16px 0;
+}
+.glossary-item {
+  background: #fff; padding: 14px 16px;
+}
+.glossary-item:hover { background: #fafbfc; }
+.glossary-term {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 13px; font-weight: 700; color: var(--blue);
+  margin-bottom: 4px;
+}
+.glossary-def { font-size: 13px; color: var(--slate); line-height: 1.55; }
+
+/* FAQS */
+.faq-item {
+  border-bottom: 1px solid var(--border);
+}
+.faq-item:last-child { border-bottom: none; }
+.faq-q {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 14px; font-weight: 700; color: var(--blue);
+  padding: 14px 0 14px 0;
+  cursor: pointer;
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 12px;
+  list-style: none;
+}
+.faq-q::-webkit-details-marker { display: none; }
+.faq-q::after {
+  content: '+'; color: var(--orange); font-size: 20px;
+  font-weight: 300; flex-shrink: 0; transition: transform .15s;
+}
+details[open] .faq-q::after { transform: rotate(45deg); }
+.faq-a {
+  padding: 0 0 14px 0;
+  font-size: 13.5px; color: #2a3a44; line-height: 1.7;
+}
+.faq-section-title {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 11px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .1em;
+  color: var(--muted); margin: 24px 0 8px;
+}
+
+/* DIVIDER */
+.guide-article hr {
+  border: none; border-top: 1px solid var(--border); margin: 40px 0;
+}
+
+/* RIGHT TOC */
+.guide-toc {
+  width: var(--toc-w); flex-shrink: 0;
+  position: fixed; top: calc(var(--header-h) + 44px); right: 0;
+  padding: 0 20px;
+  max-height: calc(100vh - var(--header-h) - 44px);
+  overflow-y: auto;
+}
+.toc-label {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 10px; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--muted); margin-bottom: 10px;
+}
+.guide-toc ul { list-style: none; padding: 0; border-left: 2px solid var(--border); }
+.guide-toc li a {
+  display: block; padding: 4px 0 4px 12px;
+  font-size: 12.5px; color: var(--slate); text-decoration: none;
+  line-height: 1.4; border-left: 2px solid transparent; margin-left: -2px;
+  transition: all .1s;
+}
+.guide-toc li a:hover { color: var(--blue); }
+.guide-toc li a.active { color: var(--orange); border-left-color: var(--orange); font-weight: 500; }
+.guide-toc li.toc2 a { padding-left: 22px; font-size: 12px; }
+
+/* FEEDBACK */
+.guide-feedback {
+  margin-top: 48px; padding-top: 24px;
+  border-top: 1px solid var(--border);
+  display: flex; align-items: center; gap: 12px;
+}
+.guide-feedback span { font-size: 13.5px; color: var(--slate); }
+.fb-btn {
+  font-family: 'Titillium Web', sans-serif; font-size: 12px; font-weight: 700;
+  border: 1px solid var(--border); border-radius: 4px;
+  padding: 5px 16px; cursor: pointer; background: #fff; color: var(--slate);
+}
+.fb-btn:hover { border-color: var(--orange); color: var(--orange); }
+
+/* RELATED */
+.guide-related { margin-top: 28px; }
+.related-label {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 11px; font-weight: 700; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--muted); margin-bottom: 8px;
+}
+.guide-related a {
+  display: block; font-size: 13.5px; color: var(--orange);
+  text-decoration: none; padding: 5px 0;
+  border-bottom: 1px solid var(--border);
+}
+.guide-related a:last-child { border-bottom: none; }
+.guide-related a:hover { text-decoration: underline; }
+
+/* PRINT STYLES */
+@media print {
+  .guide-header, .guide-sidenav, .guide-toc,
+  .guide-feedback, .guide-related { display: none !important; }
+  .guide-main { margin-left: 0; padding-right: 0; }
+  .guide-article { padding: 0; max-width: 100%; }
+  .guide-article img { max-width: 80%; margin: 12px auto; }
+  .gloss-term { border-bottom: none; }
+  .gloss-term .gloss-tip { display: none !important; }
+}
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+  .guide-toc { display: none; }
+  .guide-main { padding-right: 0; }
+}
+@media (max-width: 780px) {
+  .guide-sidenav { display: none; }
+  .guide-main { margin-left: 0; }
+  .guide-article { padding: 28px 20px 60px; }
+  .glossary-grid { grid-template-columns: 1fr; }
+}
+
+/* PDF / PRINT MODE */
+body.print-mode .guide-header,
+body.print-mode .guide-sidenav,
+body.print-mode .guide-toc,
+body.print-mode .guide-feedback,
+body.print-mode .guide-related { display: none; }
+body.print-mode { background: white; }
+body.print-mode .guide-layout { padding-top: 0; }
+body.print-mode .guide-main { margin-left: 0; padding-right: 0; }
+body.print-mode body {
+  font-size: 10.5pt;
+  line-height: 1.5;
+}
+body.print-mode .guide-article {
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+  font-size: 10.5pt;
+  line-height: 1.5;
+}
+body.print-mode .guide-article p { margin-bottom: 8px; }
+body.print-mode .guide-article h1 { font-size: 20pt; margin-bottom: 6px; }
+body.print-mode .guide-article h2 { font-size: 14pt; margin: 20px 0 8px; }
+body.print-mode .guide-article h3 { font-size: 12pt; margin: 14px 0 6px; }
+body.print-mode .guide-article h4 { font-size: 10pt; margin: 10px 0 4px; }
+body.print-mode .guide-article li { margin-bottom: 3px; }
+body.print-mode .guide-article table { font-size: 9.5pt; }
+body.print-mode .guide-article blockquote { font-size: 10pt; padding: 8px 12px; margin: 10px 0; }
+body.print-mode .glossary-def { font-size: 9.5pt; line-height: 1.45; }
+body.print-mode .faq-q { font-size: 10.5pt; padding: 8px 0; }
+body.print-mode .faq-a { font-size: 10pt; line-height: 1.5; }
+
+/* Page setup: margins, running header/footer with page numbers */
+@page {
+  size: A4;
+  margin: 20mm 18mm 22mm 18mm;
+  @top-center {
+    content: "Avatour User and Best Practices Guide";
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 9pt;
+    color: #7A8A95;
+  }
+  @bottom-left {
+    content: "avatour.com";
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 9pt;
+    color: #7A8A95;
+  }
+  @bottom-right {
+    content: "Page " counter(page) " of " counter(pages);
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 9pt;
+    color: #7A8A95;
+  }
+}
+
+/* Avoid page breaks inside key elements */
+body.print-mode .guide-article li,
+body.print-mode .guide-article p,
+body.print-mode .guide-article blockquote,
+body.print-mode .guide-article tr { page-break-inside: avoid; }
+
+/* Keep headings with the content that follows */
+body.print-mode .guide-article h2,
+body.print-mode .guide-article h3,
+body.print-mode .guide-article h4 { page-break-after: avoid; }
+
+/* Start each H2 section on a new page — but not the very first one */
+body.print-mode .guide-article h2 ~ h2 { page-break-before: always; }
+
+/* Images: never break, centered, max 90% width */
+body.print-mode .guide-article img {
+  max-width: 90%;
+  display: block;
+  margin: 12px auto;
+  page-break-inside: avoid;
+}
+
+/* Tables: keep together where possible */
+body.print-mode .guide-article table { page-break-inside: avoid; }
+
+/* Glossary grid: single column for print */
+body.print-mode .glossary-grid { grid-template-columns: 1fr 1fr; }
+
+/* Remove orange dashed underlines from glossary terms in print */
+body.print-mode .gloss-term { border-bottom: none; }
+body.print-mode .gloss-term .gloss-tip { display: none !important; }
+
+/* FAQ accordions: show all answers open in print */
+body.print-mode details { display: block; }
+body.print-mode details summary::after { display: none; }
+body.print-mode .faq-a { display: block !important; padding-bottom: 10px; }
+</style>
+</head>
+<body class="print-mode">
+
+<header class="guide-header">
+  <a class="guide-logo" href="#">
+    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="50" cy="50" r="45" fill="#FF4E00"/>
+  <ellipse cx="50" cy="50" rx="30" ry="20" stroke="white" stroke-width="5" fill="none"/>
+  <circle cx="50" cy="50" r="8" fill="white"/>
+</svg>
+    AVATOUR
+  </a>
+  <div class="hd"></div>
+  <span class="hlabel">User Guide</span>
+  <div class="hright">
+    <span class="hversion">v2.0 · Updated 2026</span>
+    <a class="hbtn" href="https://avatour.live">Log in to Avatour</a>
+  </div>
+</header>
+
+<div class="guide-layout">
+
+  <nav class="guide-sidenav">
+    <div class="sidenav-section">Guide sections</div>
+<a href="#for-all-avatour-users">1. For All Avatour Users</a>
+<a href="#2-avatour-user-types">2. Avatour User Types</a>
+<a href="#21-users-not-needing-to-be-a-registered-user" class="sub">2.1 Users not needing to be a Registered User</a>
+<a href="#22-registered-users" class="sub">2.2 Registered Users</a>
+<a href="#for-remote-meeting-participants-and-workspace-visitors">3. For Remote Meeting Participants and Workspace Visitors</a>
+<a href="#how-to-join-an-avatour-meeting-and-visit-an-avatour-workspace" class="sub">3.1 How to Join an Avatour meeting and Visit an Avatour Workspace</a>
+<a href="#meeting-tools" class="sub">3.2 Meeting and Workspace Collaboration Tools</a>
+<a href="#for-registered-users">4. For Host and Admin Users - Avatour Web Console</a>
+<a href="#41-web-console-overview-main-menu" class="sub">4.1 Web Console - Overview Main Menu</a>
+<a href="#42-web-console-details-by-menu-item" class="sub">4.2 Web Console - Details by Menu Item</a>
+<a href="#workspaces" class="sub">Workspaces</a>
+<a href="#assets" class="sub">Assets</a>
+<a href="#profile" class="sub">Profile</a>
+<a href="#settings" class="sub">Settings</a>
+<a href="#account" class="sub">Account</a>
+<a href="#analytics" class="sub">Analytics</a>
+<a href="#device-login" class="sub">Device Login</a>
+<a href="#tutorials" class="sub">Tutorials</a>
+<a href="#for-camera-operators">5. For Camera Operators</a>
+<a href="#6-best-practice-advice">6. Best Practice Advice</a>
+<a href="#61-first-informal-uses-and-getting-familiar" class="sub">6.1 First (informal) Uses and Getting Familiar</a>
+<a href="#62-before-a-360-video-live-meeting" class="sub">6.2 Before a 360° Video Live Meeting</a>
+<a href="#when-operating-the-cam-onsite-for-a-360-video-live-meeting" class="sub">When Operating the Cam Onsite for a 360° Video Live Meeting</a>
+<div class="sidenav-section">Reference</div>
+<a href="#glossary">Glossary</a>
+<a href="#faqs">FAQs</a>
+<a href="https://avatour.live/test">Network Test ↗</a>
+<a href="mailto:support@avatour.live">Open Support Ticket ↗</a>
+
+  </nav>
+
+  <div class="guide-main">
+    <article class="guide-article">
+
+      <div class="guide-bc">
+        <a href="#">User Guide</a>
+        <span>›</span>
+        Avatour User Guide
+      </div>
+
+      <h1 id="avatour-user-and-best-practices-guide">Avatour User and Best Practices Guide</h1>
+<h2 id="for-all-avatour-users">1. For All Avatour Users</h2>
+<p>Here are some good starting points to understand Avatour:</p>
+<ol>
+<li><a href="https://avatour.com/how-it-works">Avatour How it Works video</a> 
+   This video will give a good overview of the main features.</li>
+<li><a href="https://avatour.com/faqs">FAQs</a> 
+   Read our Frequently Asked Questions</li>
+<li><a href="https://avatour.com/glossary">Glossary</a> 
+   Here you find the major Avatour Terms</li>
+<li>Website
+   Have a look at the <a href="https://avatour.com/features">Avatour Features</a> and also at the dedicated pages on Use Cases and Industries especially relevent to you.</li>
+</ol>
+<h2 id="2-avatour-user-types">2. Avatour User Types</h2>
+<h3 id="21-users-not-needing-to-be-a-registered-user">2.1 Users not needing to be a Registered User</h3>
+<h4 id="211-meeting-participant">2.1.1 Meeting Participant</h4>
+<p>Anyone who joins an Avatour meeting. There is currently a limitation of 20 participants in any meeting.</p>
+<h4 id="212-spectator">2.1.2 Spectator</h4>
+<p>Meeting participants who have limited feature access. In a meeting, Spectators are unable to display their webcam feed, use their device's microphone, or use the Present functionality. Spectators are also prevented from playing/pausing Assets and capturing Snapshots. There is currently a limitation of 10 spectators in any meeting bringing the total number in a meeting to a maximum of 30.</p>
+<h3 id="22-registered-users">2.2 Registered Users</h3>
+<p>Registered Users have registered with their email address and have established a password.</p>
+<h4 id="221-guest-user-free">2.2.1 Guest User (free)</h4>
+<p>This user only has access to view Assets within a Workspace they have been added to as Viewer Collaborator. When Single-Sign-On (SSO) is activated for an Avatour customer (domain) Guest accounts are automatically created when logging in to Avatour with the customer domain email account. </p>
+<h4 id="222-licensed-users-with-access-to-the-web-console">2.2.2 Licensed Users (with access to the Web Console)</h4>
+<p><strong>Host User</strong> - This is the main licensed user type and enables hosting Live Capture video, uploading Quick Captures, and creating Workspaces. Host users have a login to access the Host Dashboard and the Operator App on the 360° cam. You must be a Host or Admin to be added as an Editor Collaborator in a Workspace.</p>
+<p><strong>Admin User</strong> - These users have host feature access and can manage all aspects of the Avatour account. Additional Admin privileges include:</p>
+<ul>
+<li>Account Assets: View all assets that have been uploaded by all Host users in your account. This tab is seen within the "Assets" section of the Host Dashboard</li>
+<li>Settings: Decide if all meetings by default do not require a Host to be present, or if the Igloo projection feature is enabled. If you have requested a custom domain, Admins may also edit the Host Dashboard and meeting room branding images.</li>
+<li>User Management: Create new Host users, and upgrade Guest users to Host. Deleting users (Admin users have to be changed to Host User before they can be deleted / removed. When deleting a user one can transfer the assets of that Host User to another Host / Admin user.</li>
+<li>View all Host Analytics: View all account host's meeting analytics</li>
+</ul>
+<h2 id="for-remote-meeting-participants-and-workspace-visitors">3. For Remote Meeting Participants and Workspace Visitors</h2>
+<h3 id="how-to-join-an-avatour-meeting-and-visit-an-avatour-workspace">3.1 How to Join an Avatour meeting and Visit an Avatour Workspace</h3>
+<h4 id="any-flat-screen">Any "Flat Screen" Device with a Web Browser</h4>
+<p>You can join from any desktop/laptop computer, smartphone, or tablet. Simply open your preferred browser, navigate to <a href="https://avatour.live/join">https://avatour.live/join</a>, and type in your name and the meeting code. If the owner of the meeting has sent an invitation that includes an Avatour meeting join link (ex: https://avatour.live/join?s=xxxxx), the meeting code will be auto-populated once you open the link. </p>
+<blockquote>
+<p><strong>Tip 1:</strong> Sometimes the camera in Avatour is blocked when you have been in a Teams call before. Best solution in that case is to stop Teams running in the background and to exit and re-join the Avatour meeting.</p>
+<p><strong>Tip 2:</strong> Do NOT use the Avatour iOS / Android apps. These are only needed if you want to stream Avatour live meetings with an Insta360 cam as those cams can not directly run our live 360° software and need the “help” of a smartphone!</p>
+</blockquote>
+<p>For visiting a workspace (without incurring a meeting) you will need to have the link to the workspace and depending on the workspace settings you need to login as a registered Avtour User.  </p>
+<h4 id="vr-headset">VR Headset</h4>
+<p>You can join a meeting and visit a workspace from a range of compatible Meta and Pico headsets. To do this: </p>
+<ol>
+<li>Install our Avatour app from your respective VR store app: <a href="https://avatour.com/support/which-vr-headsets-can-i-use-with-avatour">How to install Avatour VR app</a></li>
+<li>Load our app and input the meeting code or select a Workspace to join a meeting. For more information on how to use our VR app, see our Knowledge Base article <a href="https://avatour.com/support/what-features-are-available-to-vr-guests">here</a>.</li>
+</ol>
+<h3 id="meeting-tools">3.2 Meeting and Workspace Collaboration Tools</h3>
+<p>You can access Assets and collaborate in Meetings (synchronously = together with other meeting participants, is like in any other Video Conference) and in Workspaces (asynchronously, 24/7). The collaboration tools are very similar in both but there are some differences due to the difference collaboration context (sync versus async).</p>
+<p>Below are from left to right short explanations of the above meeting menu items. For more details see also <a href="https://avatour.com/support/what-meeting-tools-are-available-to-remote-guests-on-the-web">What meeting tools are available to remote guests on the web?</a></p>
+<p>Here is an example of a view in an Avatour Meeting showing in the left side pane the Assets in the Workspace in which the Meeting happens, the Canvas in the middle (blank - here Assets can be shown), and in the right side pane the Meeting Participants.</p>
+<p><img alt="Avatour Meeting UI with Assets Panel, blank Canvas and Participants Panel" src="https://res.cloudinary.com/avatour/image/upload/v1772362400/avatour-screenshot-meeting-assets-blank-participants_pugprq.png" /> <em>Avatour Meeting with Assets Panel (left), blank Canvas (center) and Participants Panel (right)</em></p>
+<p>Here is an example of a view in a Workspace showing in the left side pane the again the Assets in that Workspace in which the Meeting happens, the Canvas in the middle (blank - here Assets can be shown), and in the right side pane the Meetings schedule.</p>
+<p><img alt="Avatour Workspace with Assets Panel, blank Canvas and Meetings Panel" src="https://res.cloudinary.com/avatour/image/upload/v1772198701/avatour-screenshot-workspace-assets-blank-meetings_qeumpl.png" /> <em>Avatour Workspace with Assets Panel (left), blank Canvas (center) and Meetings Panel (right)</em></p>
+<p>We will explain the workspace structure and bottom menu items further below.</p>
+<p>Coming back to Meetings: Here is the bottom menu and in the following are explanations of each menu item from left to right starting with Assets.</p>
+<p><img alt="Avatour Meeting Bottom Menu" src="https://res.cloudinary.com/avatour/image/upload/v1772300383/avatour-screenshot-meeting-bottom-menu_bflaor.png" /> <em>Avatour Meeting Bottom Menu</em></p>
+<p><strong>Assets</strong> - Files in the workspace that can be reviewed with all participants in the meeting. This includes recorded videos, images/snapshots, and PDFs. Hosts and Collaborator Editors can up- and download assets.</p>
+<p><strong>Chat</strong> - By clicking the chat bubble, you can send messages to all meeting participants.</p>
+<p><strong>Camera</strong> - Turn off/on </p>
+<p><strong>Microphone</strong> - Mute/unmute</p>
+<p><strong>Present</strong> - see the separate section on the Present menu below</p>
+<p><strong>Host Tools</strong> - (for the meeting host only): </p>
+<ul>
+<li><strong>Lock Focus</strong> - lock the view for all participants to the host view - see also Meeting Tools.</li>
+<li><strong>Mute All</strong> - mute all participants</li>
+</ul>
+<p><strong>Enable Full Screen</strong> - Puts the meeting tab in full screen</p>
+<p><strong>Exit the Meeting</strong> - leave the meeting.</p>
+<p><strong>Start Recording</strong> - When enabled in the workspace settings you can record an Avatour meeting. The recording will be available in your assets and also automatically allocated to the workspace in which the meeting happened.</p>
+<p><strong>Geo Location</strong> - For assets and live streaming with GPS open/close the map pane. In the map you will see the route of the video and you can click on a point in that route which will take you exactls to the moment in the video.</p>
+<p><strong>Participants</strong> - Open/close the participants pane.</p>
+<p><strong>Meeting Info</strong> - This section gives you information about your meeting (e.g. the meeting code and invite link to the meeting). From here you can also access the related Online Tutorial.</p>
+<blockquote>
+<p>Tip: Send the meeting link or add it to any calendar item to invite meeting participants.</p>
+</blockquote>
+<p><strong><em>Add picture meeting tutorial</em></strong></p>
+<p>While in a meeting you can also start the meeting Tutorial from the Info section.</p>
+<p><strong>Settings</strong> - Adjust your language, audio, and video settings. For live 360° video meetings you can use "<u>Show Bitrate</u>" wich will show you in the upper left corner of the canvas the connectivity stats for the live 360° video stream (1. Upload Bandwidth Onsite, 2. Your Download Capacity, 3. Your Download Speed). This can be very helpful to analyze any potential connectivity issues (is it onsite or with the remote participant?)</p>
+<p><strong>Present Menu</strong></p>
+<p><strong>Camera</strong> - Allows you to share your webcam or smartphone/tablet camera. Can also be used as Video-in-Video while presenting an asset or in a live 360° video meeting, e.g. to show a detail on site (although going close with the 360° cam also gives a good detailed view, e.g. of a barcode, small print on a lable).</p>
+<p><strong>Desktop</strong> - Allows you to share your desktop’s screen</p>
+<p><strong>Asset</strong> - Show one of the assets from the asset section - see above. While presenting an asset the Asset menu will appear - see next point.</p>
+<p><strong>Present Asset Menu</strong> </p>
+<p>There are slight differences in the Menu Items when presenting an Asset in a <u>Meeting</u> and when presenting in a <u>Workspace</u> (async).</p>
+<p>Here are the tools and menu items available when <u>presenting an Asset in a Meeting</u> - explained from left to right.</p>
+<p><img alt="Avatour Menu while Presenting an Asset in a Meeting" src="https://res.cloudinary.com/avatour/image/upload/v1772303706/avatour-screenshot-present-asset-menu-meeting_oflsr5.png" /> <em>Avatour Menu when presenting an Asset in a Meeting</em></p>
+<p><strong>Snapshot</strong> - Take a 360° or 2D picture within a Live Capture or a presented Asset. All snapshots can be saved to the Assets in the meeting/workspace - see also Meeting Tools. A SuperFreeze 360° snapshot has a higher resolution (ca. 6k) and will pause the live stream for some seconds.</p>
+<p><strong>Spotlight</strong> - Available during a live 360 capture or if an Asset is being presented. This creates a pointer visible by all meeting participants and the camera operator, enabling you to draw the group’s attention to a specific object or area on screen.</p>
+<p><strong>Show/Hide Point-of-View (POV)</strong> - This option displays each participants focus - Point of View - in the 360° video - recorded or live (circles with the participant’s name underneath)</p>
+<p><strong>Recorded video only!?</strong></p>
+<p><strong>Notes</strong> - create notes (= dialog boxes) at certain positions in snapshots and videos. Any meeting participant can create a note. Only the note creator can edit and delete a note. When creating a note, you can set a Type: Observation, Issue, Action or Recommendation (the latter three can only be done by Hosts, Avatour Collaborator Viewers and Editors). </p>
+<p><img alt="Avatour Note and Notes Filter" src="https://res.cloudinary.com/avatour/image/upload/v1772374822/avatour-screenshot-present-asset-menu-meeting-showing-note-and-filters_g181oc.png" /> <em>Avatour Note and Note Filters</em></p>
+<p>This makes it clear whether a note is informational or requires follow-up. In the timeline of a video notes are anchored to the precise moment in the capture.</p>
+<ul>
+<li>Core collaborators (Host, Avatour Collaborator Viewers and Editors) can update a note’s Status as work moves forward: Open → In Progress → Resolved. Topics are also highlighted under the timeline of the video. Topics are AI generated based on the audio of an asset and can be initiated during Upload from the Avatour cam app or in the Assets section in the Web Console.</li>
+<li>Share links to notes and specific scenes (=viewangles) in a video / snapshot either by email or directly copy the link and use/embed wherever you want.</li>
+</ul>
+<p><strong>Side Panel with Notes, Executive Summary, Topics etc. and Reports</strong> - show all notes and topics of an asset in a side panel (click on the list icon next to the note icon in the above menu). Click in the side panel in the notes / topics to get to the note / topic in the video. In the Notes panel you can apply Note filters</p>
+<p><img alt="Avatour Asset Executive Summary" src="https://res.cloudinary.com/avatour/image/upload/v1772377209/avatour-screenshot-present-asset-menu-meeting-showing-exec-summary_cqpqbs.png" /> <em>Avatour Executive Summary while presenting an Asset in a Meeting</em></p>
+<p><img alt="Avatour Topics" src="https://res.cloudinary.com/avatour/image/upload/v1772377209/avatour-screenshot-present-asset-menu-meeting-showing-topics_duuq1a.png" /> <em>Avatour Topics while presenting an Asset in a Meeting</em></p>
+<p>You can also print a report with all notes, topics etc. even a full transciption for an asset and select what to include:</p>
+<p><img alt="Avatour Print Asset Report Element Selection" src="https://res.cloudinary.com/avatour/image/upload/v1772376570/avatour-screenshot-asset-report-element-selection_ud8c5k.png" /></p>
+<p><strong>Share Link</strong> - Share links to notes and specific scenes (=viewangles) in a video / snapshot either by email or directly copy the link and use/embed wherever you want.</p>
+<p><strong><em>Add Closed Caption</em></strong></p>
+<p>And Here are the collaboration tools and menu items available when presenting an Asset in a <u>Workspace</u>. Most tools are like in a meeting but some are missing as these do only make sense when others are present (POV and Spotlight) and some are only available in workspaces - mainly video opertions related, which are explained below.</p>
+<p><img alt="Avatour Menu while Presenting an Asset outside a meeting, e.g. when visiting a workspace" src="https://res.cloudinary.com/avatour/image/upload/v1772303705/avatour-screenshot-present-asset-menu-workspace_iri8gc.png" /> <em>Avatour Menu when presenting an Asset in a Workspace</em></p>
+<p><strong>10 seconds back and forth</strong> - ...</p>
+<p><strong>faster playback seconds back and forth</strong> - ...</p>
+<p><strong>Trimming a video (scissors)</strong> - ...</p>
+<h2 id="4-for-host-and-admin-users---avatour-web-consolefor-registered-users">4. For Host and Admin Users - Avatour Web Console{#for-registered-users}</h2>
+<p>When you log in to the Avatour Web Console you will see on the left hand side the below menu pane.</p>
+<h3 id="41-web-console---overview-main-menu">4.1 Web Console - Overview Main Menu</h3>
+<p><img alt="Avatour Web Console - Main Menu" src="https://res.cloudinary.com/avatour/image/upload/w_0.5/v1772366766/avatour-screenshot-main-menu_qwpthq.png" /></p>
+<p><em>Avatour Web Console - Main Menu</em></p>
+<p><strong>Workspaces</strong> - Workspaces can be set up for many purposes (e.g. sites, projects, customer, supplier) and are organisational units helping you to work efficiently in a controlled environment comprising of the following elements.</p>
+<p>Please watch this video to see how to keep assets, meetings and collaborators organized (e.g. by project, site, customer, supplier) and the various workspace settings. And here is more information on Managing access to Avatour meetings</p>
+<p><strong>Assets</strong> - All your assets (360° videos / pictures, pdfs…) in one place under My Assets. Admin users can see all Account Assets across all host users. Shared Assets are those which hosts share with all other users on the Avatour platform. Here you can rename assets, activate face blur and generate topics.</p>
+<p><strong>Profile</strong> - Manage your language and reset your password.</p>
+<p><strong>Analytics</strong> - Get insight about sessions and usage</p>
+<p><strong>Settings</strong> - For Admin Users only. Manage some general settings and customize your branding.</p>
+<p><strong>Account</strong> - For Admin Users only. Manage users and devices (= 360° cams).</p>
+<p><strong>Device Login</strong> - Enter here the number shown on the Avatour app on your 360° cam to log in as user on the 360° cam. You can also log in on your 360° cam with your Avatour host account email and password but simply entering the device code on the Avatour Web Console might be easier.</p>
+<p><strong>Sign out</strong> of your account.</p>
+<h3 id="42-web-console---details-by-menu-item">4.2 Web Console - Details by Menu Item</h3>
+<h3 id="workspaces">Workspaces</h3>
+<p>Workspaces can be set up for many purposes (e.g. sites, projects, customer, supplier) and are organisational units helping you to work efficiently in a controlled environment. </p>
+<p><img alt="Avatour Web Console - Main Menu Item Workspaces" src="https://res.cloudinary.com/avatour/image/upload/v1772360323/avatour-screenshot-main-menu-workspaces_hnhkjj.png" /> <em>Avatour Web Console - Main Menu Item Workspaces</em></p>
+<p>?? Please watch this video to see how to keep assets, meetings and collaborators organized (e.g. by project, site, customer, supplier) and the various workspace settings. </p>
+<p>Here is a view of the structure in a workspace.</p>
+<p><img alt="Avatour Workspace with Assets Panel, blank Canvas and Meetings Panel" src="https://res.cloudinary.com/avatour/image/upload/v1772198701/avatour-screenshot-workspace-assets-blank-meetings_qeumpl.png" /> <em>Avatour Workspace with Assets Panel (left), blank Canvas (center) and Meetings Panel (right)</em></p>
+<p>Each workspace comprises of the following elements:</p>
+<p><strong>Assets</strong> - Manage assets allocated to that workspace </p>
+<p><strong>Collaborators</strong> - Manage Access to the Workspace</p>
+<ul>
+<li><strong>Viewer</strong> - can view assets in the workspace. Adding a Collaborator Viewer will send an invitation to become a registered Avatour Guest user.</li>
+<li><strong>Editor</strong> - have the same right as the Host (owner of the workspace) and with this full workspace control. Adding a Collaborator Viewer will send an invitation to become a registered Avatour Host user.</li>
+</ul>
+<p>N.B.: Several users can access a workspace at the same time without “meeting” each other. This makes a “workspace” different from a “meeting”. In addition to using the Collaborator roles you can also make the Workspace Public and give access through the various Meeting Access settings - for both see below under “Settings”.</p>
+<p><strong>Report</strong> - Create a report against the checklist selected in the workspace settings based on the workspace assets that you choose:</p>
+<p><img alt="Avatour Workspace Report Asset Selection" src="https://res.cloudinary.com/avatour/image/upload/w_0.5/v1772378496/avatour-screenshot-workspace-report-asset-selection_jmojyu.png" /> </p>
+<p><em>Avatour Workspace Report Asset Selection</em></p>
+<p><strong>Map</strong> - For assets with GPS meta data show the location on the map / satellite image.</p>
+<p><strong>Meetings</strong> - Hosts and Collaborator Editors can organise meetings in the workspace</p>
+<p><strong>Settings</strong> for Workspace</p>
+<p>image-20260213-105313.png</p>
+<ul>
+<li>
+<p>Report Template - select a checklist template against which our AI will report based on the chosen workspace assets.</p>
+</li>
+<li>
+<p>Enable Notifications - Get daily digest emails to notify collaborators when Issues and Actions of Notes change status (for example, In Progress → Resolved).</p>
+</li>
+<li>
+<p>image-20260125-104127.png</p>
+</li>
+<li>
+<p>Public Workspace - The workspace is like a website - everybody with the workspace link can view all assets and has direct access to assets via asset links. Direct asset links only work with the Public Workspace setting (Note: Non-collaborators will not see meeting info / join button).</p>
+</li>
+<li>
+<p>Meeting Settings</p>
+</li>
+<li>
+<p>Authentication required - When enabled, participants need to sign in with their Avatour registered user account (Guest, Host or Admin) to join the meeting.</p>
+</li>
+<li>Allow guest access to workspace assets</li>
+<li>Auto-Start Recording and Require consent for recorded meetings</li>
+<li>Require host - When enabled, the host must admit each participant to the meeting, and the meeting ends when the host leaves. When disabled, meeting participants can start / join a meeting without a host any time. </li>
+<li>Allow spectator access - When enabled, participants can use the spectator code to join a meeting without a microphone or webcam. Spectators use chat to communicate with others in the meeting.</li>
+<li>Password protected meetings - When enabled, participants must enter a password to join the meeting which is defined by the host in the meeting settings.</li>
+<li>Show Travel-Savings QuestionTravel-</li>
+</ul>
+<p>N.B.: It is of course possible to use the above settings in combination (e.g. do not require a host but a password).</p>
+<h3 id="assets">Assets</h3>
+<p>Here you manage all your assets (360° / 2D videos / pictures and pdf files). You can up- and download assets, allocate assets to workspaces, share assets with other users on the Avatour platform. You can also rename assets, acivate face blur and AI summarization when editing an asset.</p>
+<p><img alt="Avatour Web Console - Main Menu Item Assets" src="https://res.cloudinary.com/avatour/image/upload/v1772360326/avatour-screenshot-main-menu-assets_ky5emz.png" /> <em>Avatour Web Console - Main Menu Item Assets</em></p>
+<h3 id="profile">Profile</h3>
+<p>Here you can manage your profile details like your password.</p>
+<p><img alt="Avatour Web Console - Main Menu Item Profile" src="https://res.cloudinary.com/avatour/image/upload/v1772360324/avatour-screenshot-main-menu-profile_j934va.png" /> <em>Avatour Web Console - Main Menu Item Profile</em></p>
+<h3 id="settings">Settings</h3>
+<p>This menu item is only available to Admin Users. Here you can (1) manage default settings for your account and even look those settings so that other users can not change those settings and (2) adjust some customise some branding elements (e.g. your logo. For more info see How do I add my company branding to the Avatour experience?).</p>
+<p><img alt="Avatour Web Console - Main Menu Item Settings (1 of 2)" src="https://res.cloudinary.com/avatour/image/upload/v1772360321/avatour-screenshot-main-menu-settings-1-of-2_fsaatf.png" /> <em>Avatour Web Console - Main Menu Item Settings (1 of 2)</em></p>
+<p><img alt="Avatour Web Console - Main Menu Item Settings (2 of 2)" src="https://res.cloudinary.com/avatour/image/upload/v1772360320/avatour-screenshot-main-menu-settings-2-of-2_qimc09.png" /> <em>Avatour Web Console - Main Menu Item Settings (2 of 2)</em></p>
+<h3 id="account">Account</h3>
+<p>Here Admin Users can manage your users and devices (360° cams allocted to your Avatour platform instance).</p>
+<p><img alt="Avatour Web Console - Main Menu Item Account (1 of 2)" src="https://res.cloudinary.com/avatour/image/upload/v1772360318/avatour-screenshot-main-menu-account-1-of-2_oq5amr.png" /> <em>Avatour Web Console - Main Menu Item Account (1 of 2)</em></p>
+<p><img alt="Avatour Web Console - Main Menu Item Account (2 of 2)" src="https://res.cloudinary.com/avatour/image/upload/v1772360316/avatour-screenshot-main-menu-account-2-of-2_udgyjz.png" /> <em>Avatour Web Console - Main Menu Item Account (2 of 2)</em></p>
+<h3 id="analytics">Analytics</h3>
+<p>This section gives you information about your meetings and savings.</p>
+<p><img alt="Avatour Web Console - Main Menu Item Analytics (1 of 3)" src="https://res.cloudinary.com/avatour/image/upload/v1772360315/avatour-screenshot-main-menu-analytics-1-of-3_ds3epe.png" /> <em>Avatour Web Console - Main Menu Item Analytics (1 of 3)</em></p>
+<p><img alt="Avatour Web Console - Main Menu Item Analytics (2 of 3)" src="https://res.cloudinary.com/avatour/image/upload/v1772360313/avatour-screenshot-main-menu-analytics-2-of-3_vpcsme.png" /> <em>Avatour Web Console - Main Menu Item Analytics (2 of 3)</em></p>
+<p><img alt="Avatour Web Console - Main Menu Item Analytics (3 of 3)" src="https://res.cloudinary.com/avatour/image/upload/v1772360312/avatour-screenshot-main-menu-analytics-3-of-3_hn2pmr.png" /> <em>Avatour Web Console - Main Menu Item Analytics (3 of 3)</em></p>
+<h3 id="device-login">Device Login</h3>
+<p>Use this section to enter the 6-digit code which is shown on your 360° cam (e.g. when you need to log in again or sometimes it needs refreshing). This is a more convenient way that entering your login credentials through the small keyboard in the 360° cam screen.</p>
+<p><img alt="Avatour Web Console - Main Menu Item Device Login" src="https://res.cloudinary.com/avatour/image/upload/v1772360310/avatour-screenshot-main-menu-device-login_vlymhj.png" /> <em>Avatour Web Console - Main Menu Item Device Login</em></p>
+<h3 id="tutorials">Tutorials</h3>
+<p>Here you can start tutorials on certain topics.</p>
+<p><img alt="Avatour Web Console - Main Menu Item Tutorials" src="https://res.cloudinary.com/avatour/image/upload/v1772360310/avatour-screenshot-main-menu-tutorials_nr9hme.png" /> <em>Avatour Web Console - Main Menu Item Tutorials</em></p>
+<h2 id="for-camera-operators">5. For Camera Operators</h2>
+<h2 id="6-best-practice-advice">6. Best Practice Advice</h2>
+<h3 id="61-first-informal-uses-and-getting-familiar">6.1 First (informal) Uses and Getting Familiar</h3>
+<p>For your first uses and getting familiar with the Avatour Web Console and the Avatour Turnkey Kit we recommend the following steps:</p>
+<ol>
+<li>Take the kit home and play with it with family and friends using your home internet connection.</li>
+<li>Take the kit to the office and connect to a corporate network (corporate issues might evolve, e.g. corporate firewalls - but you know from step one that Avatour is working and this is a topic to sort out by your IT team with the help of Avatour).</li>
+<li>Start to use Avatour onsite (outside your office) at the meeting location to which remote participants would usually need to travel to. More connectivity topics might evolve. Avatour to help in cooperation with your IT team.</li>
+<li>Start using with internal and external remote participants.</li>
+</ol>
+<h3 id="62-before-a-360-video-live-meeting">6.2 Before a 360° Video Live Meeting</h3>
+<ul>
+<li>We recommend to do a recorded 360° video tour before any live tour if time allows for three reasons: (1) Have a fallback solution for the live tour, (2) have something for documentation and later review (on top of the recorded live tour) and (3) start to create a library of 360° videos of all your sites which can be helpful for many use cases. </li>
+<li>All kit components charged for at least 90 minutes before the live meeting. We anyway recommend to have all devices on continuous charge when not in use. Like that all devices will always be ready, also for unplanned ad hoc meetings.</li>
+<li>
+<p>Have the kit fully assembled (1. tripod base + 2. Ulanzi battery + 3. extendable stick + 4. 360° cam).</p>
+</li>
+<li>
+<p>Confirm a Workspace is created for hosting a live meeting and include all relevant Assets.</p>
+</li>
+<li>
+<p>Invite all participants to the meeting through your Workspace. This creates an invite on all participants calendars, and includes the meeting invite link.</p>
+</li>
+<li>
+<p>Pair and connect your bluetooth headphones or speaker you plan to use for your tour to the camera.</p>
+</li>
+<li>
+<p>All onsite smartphone users should connect from a different network than the camera’s network. This will reduce the load on the camera’s network bandwidth.</p>
+</li>
+<li>
+<p>If you are alone as a camera operator, take a smartphone with you in the case you want to smartphone camera-share and show fine details.</p>
+</li>
+<li>
+<p>Confirm the 360 camera can connect to your local WiFi.</p>
+</li>
+<li>
+<p>Prior to an Avatour meeting, plan out the route you will take through the facility. Do a test Avatour meeting with the camera, and check that all areas have bitrates above 1 Mbps bandwidth. This can be seen on the camera screen itself, or as a remote participant by going to Settings and activating Show Bitrate.</p>
+</li>
+<li>
+<p>If you notice some areas have little to no bandwidth, it is best to take images or a recording. These can then be presented during the meeting for remote participants to review. You can follow the guide here that explains our Quick Capture for recording and uploading videos/images: How do you record and upload 360 videos with the Avatour App?</p>
+</li>
+<li>
+<p>If you have remote participants joining the meeting who have not used Avatour before, provide them with a short summary of the platform, its functionality (360 live video, assets, snapshots, annotations, spotlight) and the meeting tools.</p>
+</li>
+<li>
+<p>You can start in another video conferencing solution (e.g. Teams, Zoom, Google Meet) but before moving over to Avatour, completely close the other video conference application. In some cases, these other applications will prioritize your device’s microphone/speakers/webcam, causing them to be disabled for Avatour. Additionally, do NOT run Avatour AND another video conference at the same time as this will reduce available bandwidth.</p>
+</li>
+<li>
+<p>If you are planning to use the 360 camera in a high temperature environment, it’s recommended to use the cooling module (Pilot Pano only). This will help reduce the chances of the camera overheating and shutting down automatically.</p>
+</li>
+</ul>
+<h3 id="when-operating-the-cam-onsite-for-a-360-video-live-meeting">When Operating the Cam Onsite for a 360° Video Live Meeting</h3>
+<ul>
+<li>
+<p>When operating the camera, make sure that you are walking slowly. This helps with the video quality and reduces any potential video downtime when the camera’s network connection switches between WiFi access points.</p>
+</li>
+<li>
+<p>Hold the camera out in front of you, and above eye level. This allows all remote participants to see the majority of your surrounding area.</p>
+</li>
+<li>
+<p>For instances where the camera needs to remain stable, use the tripod stand and extend the camera to the correct height, best to eye-level.</p>
+</li>
+<li>
+<p>Always connect the camera to your local WiFi network where possible. For areas without WiFi access, use the provided hotspot. The hotspot has a SIM card that will connect to a reliable cell network near you. Always keep the hotspot switched off when not in use indoors as otherwise the 360° cam could connect to the hotspot which we do not want indoors. When outdoors, keep the hotspot near the 360° camera.</p>
+</li>
+<li>
+<p>When the on camera bitrate starts to drop below 2 Mbps, walk slower or stop completely until the signal stabilizes again. This usually happens when you change from one WiFi Access Point to another. </p>
+</li>
+<li>
+<p>If you know the connectivity and video will drop when moving to a specific location (Example: moving from an indoor production area to an outdoor area), let the remote participants know in advance.</p>
+</li>
+<li>
+<p>If needing to show something in high detail or small writing, use your own or an onsite participant's smartphone to join the meeting and present your / their phone’s (back-facing) camera.</p>
+</li>
+<li>
+<p>If possible we recommend that one additional person is onsite to help with the above described smartphone camera share as this often proves to be helpful / needed.</p>
+</li>
+<li>
+<p>Ideally onsite smartphone users should join the meeting (1) in onsite mode and (2) on a different network from that the camera is using to not take away crucial upload bandwidth from the 360° cam.</p>
+</li>
+<li>
+<p>All onsite participants joining from their smartphone should be muted, unless actively speaking.</p>
+</li>
+</ul>
+
+      <div class="guide-feedback">
+        <span>Was this article helpful?</span>
+        <button class="fb-btn">Yes</button>
+        <button class="fb-btn">No</button>
+      </div>
+
+      <div class="guide-related">
+        <div class="related-label">Related articles</div>
+        <a href="#">How do I add my company branding to the Avatour experience?</a>
+        <a href="#">Managing access to Avatour meetings</a>
+        <a href="#">What are the network requirements for Avatour?</a>
+        <a href="#">Are my Avatour sessions secure?</a>
+      </div>
+
+    </article>
+
+    <aside class="guide-toc">
+      <div class="toc-label">On this page</div>
+<ul>
+  <li><a href="#for-all-avatour-users">1. For All Avatour Users</a></li>
+  <li><a href="#2-avatour-user-types">2. Avatour User Types</a></li>
+  <li class="toc2"><a href="#21-users-not-needing-to-be-a-registered-user">2.1 Users not needing to be a Registered User</a></li>
+  <li class="toc2"><a href="#22-registered-users">2.2 Registered Users</a></li>
+  <li><a href="#for-remote-meeting-participants-and-workspace-visitors">3. For Remote Meeting Participants and Workspace Visitors</a></li>
+  <li class="toc2"><a href="#how-to-join-an-avatour-meeting-and-visit-an-avatour-workspace">3.1 How to Join an Avatour meeting and Visit an Avatour Workspace</a></li>
+  <li class="toc2"><a href="#meeting-tools">3.2 Meeting and Workspace Collaboration Tools</a></li>
+  <li><a href="#for-registered-users">4. For Host and Admin Users - Avatour Web Console</a></li>
+  <li class="toc2"><a href="#41-web-console-overview-main-menu">4.1 Web Console - Overview Main Menu</a></li>
+  <li class="toc2"><a href="#42-web-console-details-by-menu-item">4.2 Web Console - Details by Menu Item</a></li>
+  <li class="toc2"><a href="#workspaces">Workspaces</a></li>
+  <li class="toc2"><a href="#assets">Assets</a></li>
+  <li class="toc2"><a href="#profile">Profile</a></li>
+  <li class="toc2"><a href="#settings">Settings</a></li>
+  <li class="toc2"><a href="#account">Account</a></li>
+  <li class="toc2"><a href="#analytics">Analytics</a></li>
+  <li class="toc2"><a href="#device-login">Device Login</a></li>
+  <li class="toc2"><a href="#tutorials">Tutorials</a></li>
+  <li><a href="#for-camera-operators">5. For Camera Operators</a></li>
+  <li><a href="#6-best-practice-advice">6. Best Practice Advice</a></li>
+  <li class="toc2"><a href="#61-first-informal-uses-and-getting-familiar">6.1 First (informal) Uses and Getting Familiar</a></li>
+  <li class="toc2"><a href="#62-before-a-360-video-live-meeting">6.2 Before a 360° Video Live Meeting</a></li>
+  <li class="toc2"><a href="#when-operating-the-cam-onsite-for-a-360-video-live-meeting">When Operating the Cam Onsite for a 360° Video Live Meeting</a></li>
+  <li><a href="#glossary">Glossary</a></li>
+  <li><a href="#faqs">FAQs</a></li>
+</ul>
+    </aside>
+  </div>
+
+</div>
+
+<script>
+// Active TOC highlighting
+const headings = document.querySelectorAll('.guide-article h2, .guide-article h3');
+const tocLinks = document.querySelectorAll('.guide-toc a');
+if (headings.length && tocLinks.length) {
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('active'));
+        const a = document.querySelector(`.guide-toc a[href="#${e.target.id}"]`);
+        if (a) a.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-10% 0px -80% 0px' });
+  headings.forEach(h => { if (h.id) obs.observe(h); });
+}
+
+// Active sidenav highlighting
+const sideLinks = document.querySelectorAll('.guide-sidenav a');
+const allH = document.querySelectorAll('.guide-article h2, .guide-article h3');
+if (allH.length && sideLinks.length) {
+  const obs2 = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        sideLinks.forEach(l => l.classList.remove('active'));
+        const a = document.querySelector(`.guide-sidenav a[href="#${e.target.id}"]`);
+        if (a) a.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-10% 0px -80% 0px' });
+  allH.forEach(h => { if (h.id) obs2.observe(h); });
+}
+
+// FAQ feedback buttons
+document.querySelectorAll('.fb-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const feedback = btn.closest('.guide-feedback');
+    feedback.innerHTML = '<span style="color:var(--orange);font-weight:500">Thank you for your feedback!</span>';
+  });
+});
+</script>
+</body>
+</html>
