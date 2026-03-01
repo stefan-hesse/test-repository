@@ -62,7 +62,21 @@ Click **Workspaces** in the navigation menu and select the workspace you want.
 - Use a clear, descriptive filename: `web-console-menu.png` not `screenshot1.png`
 - Always include alt text (the text inside `[...]`) — this is important for accessibility
 - Always include a caption (the `*text*` on the line immediately after)
-- To update a screenshot: upload the new file with the SAME filename to Cloudinary — the guide updates automatically, no link change needed
+
+**To update an existing screenshot — always use Replace, never re-upload:**
+
+Do NOT upload the new file via the regular Upload button — Cloudinary will append a random suffix to keep the filename unique (e.g. `web-console-menu_x4rtko.png`), which breaks the link in your guide.
+
+Instead:
+1. Go to Cloudinary → navigate to `avatour/guide/screenshots/`
+2. Find the existing file
+3. Click the **three-dot menu (⋯)** on the file → **Replace**
+4. Upload your new screenshot
+5. Cloudinary keeps the exact same filename and URL — the guide updates automatically
+
+**After replacing, refresh Typora to see the updated image:**
+- Press **Cmd+Shift+R** to reload all images in the document
+- If that does not work, quit Typora completely and reopen the file
 
 ---
 
