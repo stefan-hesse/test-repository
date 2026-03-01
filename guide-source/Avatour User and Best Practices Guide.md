@@ -188,11 +188,13 @@ And Here are the collaboration tools and menu items available when presenting an
 
 ## 4. For Host and Admin Users - Avatour Web Console{#for-registered-users}
 
-When you log in to the Avatour Web Console you will see on the left hand side the below menu pane.
+When you log in to your Avatour User Accoung you will access the Web Console. 
 
 ### 4.1 Web Console - Overview Main Menu
 
-![Avatour Web Console - Main Menu](https://res.cloudinary.com/avatour/image/upload/w_0.5/v1772366766/avatour-screenshot-main-menu_qwpthq.png)
+On the left hand side you will see the following menu items.
+
+![Avatour Web Console - Main Menu](https://res.cloudinary.com/avatour/image/upload/v1772366766/avatour-screenshot-main-menu_qwpthq.png)
 
  *Avatour Web Console - Main Menu*
 
@@ -218,13 +220,15 @@ Please watch this video to see how to keep assets, meetings and collaborators or
 
 ### 4.2 Web Console - Details by Menu Item
 
-### Workspaces
+### 4.2.1 Workspaces
 
 Workspaces can be set up for many purposes (e.g. sites, projects, customer, supplier) and are organisational units helping you to work efficiently in a controlled environment. 
 
 ![Avatour Web Console - Main Menu Item Workspaces](https://res.cloudinary.com/avatour/image/upload/v1772360323/avatour-screenshot-main-menu-workspaces_hnhkjj.png) *Avatour Web Console - Main Menu Item Workspaces*
 
 ?? Please watch this video to see how to keep assets, meetings and collaborators organized (e.g. by project, site, customer, supplier) and the various workspace settings. 
+
+***Add create workspace sentence / screenshot?***
 
 Here is a view of the structure in a workspace.
 
@@ -243,7 +247,9 @@ N.B.: Several users can access a workspace at the same time without “meeting�
 
 **Report** - Create a report against the checklist selected in the workspace settings based on the workspace assets that you choose:
 
-![Avatour Workspace Report Asset Selection](https://res.cloudinary.com/avatour/image/upload/w_0.5/v1772378496/avatour-screenshot-workspace-report-asset-selection_jmojyu.png) 
+***better show side by side with a report example - explain AI - beta feature***
+
+![Avatour Workspace Report Asset Selection](https://res.cloudinary.com/avatour/image/upload/v1772378496/avatour-screenshot-workspace-report-asset-selection_jmojyu.png) 
 
 *Avatour Workspace Report Asset Selection*
 
@@ -251,33 +257,43 @@ N.B.: Several users can access a workspace at the same time without “meeting�
 
 **Meetings** - Hosts and Collaborator Editors can organise meetings in the workspace
 
-**Settings** for Workspace
+**Settings**
 
-image-20260213-105313.png
+![Avatour Settings - Workspace View](https://res.cloudinary.com/avatour/image/upload/v1772387752/avatour-screenshot-workspace-settings_llcei3.png) *Avatour Settings - Workspace View*
 
-- Report Template - select a checklist template against which our AI will report based on the chosen workspace assets.
+**(1) Workspace Settings**
 
-- Enable Notifications - Get daily digest emails to notify collaborators when Issues and Actions of Notes change status (for example, In Progress → Resolved).
+<u>Report Template</u> - select a checklist template against which our AI will report based on the chosen workspace assets.
 
-- image-20260125-104127.png
+***Report image needed - TO DO !!!***
 
-- Public Workspace - The workspace is like a website - everybody with the workspace link can view all assets and has direct access to assets via asset links. Direct asset links only work with the Public Workspace setting (Note: Non-collaborators will not see meeting info / join button).
+<u>Enable Notifications</u> - Get daily digest emails to notify collaborators when Issues and Actions of Notes change status (for example, In Progress → Resolved).
 
-- Meeting Settings
+***Email notification image needed - TO DO !!!***
 
-  - Authentication required - When enabled, participants need to sign in with their Avatour registered user account (Guest, Host or Admin) to join the meeting.
-  - Allow guest access to workspace assets
-  - Auto-Start Recording and Require consent for recorded meetings
-  - Require host - When enabled, the host must admit each participant to the meeting, and the meeting ends when the host leaves. When disabled, meeting participants can start / join a meeting without a host any time. 
-  - Allow spectator access - When enabled, participants can use the spectator code to join a meeting without a microphone or webcam. Spectators use chat to communicate with others in the meeting.
-  - Password protected meetings - When enabled, participants must enter a password to join the meeting which is defined by the host in the meeting settings.
-  - Show Travel-Savings QuestionTravel-
+<u>Public Workspace</u> - The workspace is like a website - everybody with the workspace link can view all assets and has direct access to assets via asset links. Direct asset links only work with the Public Workspace setting (Note: Non-collaborators will not see meeting info / join button).
 
-  N.B.: It is of course possible to use the above settings in combination (e.g. do not require a host but a password).
+**(2) Meeting Settings**
 
-### Assets
+<u>Authentication required</u> - When enabled, participants need to sign in with their Avatour registered user account (Guest, Host or Admin) to join the meeting.
 
-Here you manage all your assets (360° / 2D videos / pictures and pdf files). You can up- and download assets, allocate assets to workspaces, share assets with other users on the Avatour platform. You can also rename assets, acivate face blur and AI summarization when editing an asset.
+<u>Allow guest access</u> to workspace assets
+
+<u>Auto-Start Recording</u> and Require consent for recorded meetings
+
+<u>Require host</u> - When enabled, the host must admit each participant to the meeting, and the meeting ends when the host leaves. When disabled, meeting participants can start / join a meeting without a host any time. 
+
+<u>Allow spectator access</u> - When enabled, participants can use the spectator code to join a meeting without a microphone or webcam. Spectators use chat to communicate with others in the meeting.
+
+<u>Password protected meetings</u> - When enabled, participants must enter a password to join the meeting which is defined by the host in the meeting settings.
+
+<u>Show Travel-Savings Question</u> - Asks if Avatour meeting saves travel.
+
+> N.B.: It is of course possible to use the above settings in combination (e.g. not require a host but a password).
+
+### 4.2.2 Assets
+
+Here you manage all your assets (360° / 2D videos / pictures and pdf files). You can up- and download assets, allocate assets to workspaces, share assets with other users on the Avatour platform. You can also rename assets, acivate face blur and AI summarization when editing an asset. To edit an Asset click on the name or select it.
 
 ![Avatour Web Console - Main Menu Item Assets](https://res.cloudinary.com/avatour/image/upload/v1772360326/avatour-screenshot-main-menu-assets_ky5emz.png) *Avatour Web Console - Main Menu Item Assets*
 

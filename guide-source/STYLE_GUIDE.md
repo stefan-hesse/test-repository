@@ -204,7 +204,30 @@ This produces three files in the `dist/` folder:
 | `avatour-guide-embed.html` | For embedding in the Avatour website via iframe |
 | `avatour-guide-print.html` | Open in Chrome → Cmd+P → Save as PDF |
 
-The GitHub Actions workflow runs this automatically on every commit to `main`.
+The GitHub Actions workflow runs this automatically on every commit to `main`. The built files are committed back to the repository and deployed to GitHub Pages automatically — no manual steps needed.
+
+---
+
+## How the Webflow embed works
+
+The guide is embedded on the Avatour website using a single iframe. The iframe points to the embed file hosted on GitHub Pages:
+
+```
+https://stefan-hesse.github.io/test-repository/dist/avatour-guide-embed.html
+```
+
+The Webflow page contains only this code in an HTML Embed element:
+
+```html
+<iframe src="https://stefan-hesse.github.io/test-repository/dist/avatour-guide-embed.html"
+        width="100%"
+        style="border:none; min-height:100vh;">
+</iframe>
+```
+
+**You never need to touch Webflow when updating the guide.** Every time you commit and push a content change, GitHub Actions rebuilds the embed file and deploys it to GitHub Pages automatically. The iframe on the Avatour website picks up the new version within a minute or two.
+
+> **Note:** When the repository moves to the Avatour GitHub account, the GitHub Pages URL will change. At that point the iframe `src` in Webflow will need to be updated once to point to the new URL.
 
 ---
 
@@ -212,13 +235,13 @@ The GitHub Actions workflow runs this automatically on every commit to `main`.
 
 When a new release ships:
 
-- [ ] Update the `updated:` date in the file's front matter (top of the file)
+- [ ] Update the `updated:` date in the front matter at the top of the MD file
 - [ ] Update any changed feature descriptions
 - [ ] Add any new features to the relevant section
-- [ ] Upload new or updated screenshots to Cloudinary (keep filenames the same if replacing)
+- [ ] Upload new or updated screenshots to Cloudinary using **Replace** (not re-upload)
 - [ ] Add any new terms to the Glossary
 - [ ] Add any new FAQs
-- [ ] Commit — the build runs automatically
+- [ ] Commit and push in GitHub Desktop — build, deploy, and Webflow update happen automatically
 
 ---
 
