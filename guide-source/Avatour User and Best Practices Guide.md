@@ -21,7 +21,7 @@ Here are some good starting points to understand Avatour:
 
 #### 2.1.1 Meeting Participant 
 
-Anyone who joins an Avatour meeting. There is currently a limitation of 20 participants in any meeting.
+Joining an Avatour meeting does not require to be a registered Avatour user. Technically there is currently a limitation of 20 participants in any meeting.
 
 #### 2.1.2 Spectator
 
@@ -52,7 +52,7 @@ This user only has access to view Assets within a Workspace they have been added
 
 ### 3.1 How to Join an Avatour meeting and Visit an Avatour Workspace {#how-to-join-an-avatour-meeting-and-visit-an-avatour-workspace}
 #### Any "Flat Screen" Device with a Web Browser {#any-flat-screen}
-You can join from any desktop/laptop computer, smartphone, or tablet. Simply open your preferred browser, navigate to [https://avatour.live/join](https://avatour.live/join), and type in your name and the meeting code. If the owner of the meeting has sent an invitation that includes an Avatour meeting join link (ex: https://avatour.live/join?s=xxxxx), the meeting code will be auto-populated once you open the link. 
+You can join from any desktop/laptop computer, smartphone, or tablet. Simply open your preferred browser, navigate to [https://avatour.live/join](https://avatour.live/join), and type in your name and the meeting code. If the owner of the meeting has sent an invitation that includes an Avatour meeting join link (ex: https://avatour.live/join?s=xxxxx), the 5-symbol meeting code at the end of the link (xxxxx) will be auto-populated once you open the link. 
 
 > **Tip 1:** Sometimes the camera in Avatour is blocked when you have been in a Teams call before. Best solution in that case is to stop Teams running in the background and to exit and re-join the Avatour meeting.
 
@@ -68,9 +68,9 @@ You can join a meeting and visit a workspace from a range of compatible Meta and
 
 ### 3.2 Meeting and Workspace Collaboration Tools {#meeting-tools}
 
-You can access Assets and collaborate in Meetings (synchronously = together with other meeting participants, is like in any other Video Conference) and in Workspaces (asynchronously, 24/7). The collaboration tools are very similar in both but there are some differences due to the difference collaboration context (sync versus async).
+You can access Assets and collaborate in Meetings (synchronously = together with other meeting participants like in any other Video Conference) as well as in Workspaces (asynchronously, 24/7). The collaboration tools are very similar in both but there are some differences due to the collaboration context (sync versus async).
 
-Below are from left to right short explanations of the above meeting menu items. For more details see also [What meeting tools are available to remote guests on the web?](https://avatour.com/support/what-meeting-tools-are-available-to-remote-guests-on-the-web)
+Below are from left to right short explanations of the above meeting menu items. For more details see also [What meeting tools are available to remote guests on the web?](https://avatour.com/support/what-meeting-tools-are-available-to-remote-guests-on-the-web) ***Check link  To Do !!!***
 
 Here is an example of a view in an Avatour Meeting showing in the left side pane the Assets in the Workspace in which the Meeting happens, the Canvas in the middle (blank - here Assets can be shown), and in the right side pane the Meeting Participants.
 
@@ -115,7 +115,7 @@ Coming back to Meetings: Here is the bottom menu and in the following are explan
 
 > Tip: Send the meeting link or add it to any calendar item to invite meeting participants.
 
-***Add picture meeting tutorial***
+***Add picture meeting tutorial To Do !!!*** 
 
 While in a meeting you can also start the meeting Tutorial from the Info section.
 
@@ -141,28 +141,27 @@ Here are the tools and menu items available when <u>presenting an Asset in a Mee
 
 ![Avatour Menu while Presenting an Asset in a Meeting](https://res.cloudinary.com/avatour/image/upload/v1772303706/avatour-screenshot-present-asset-menu-meeting_oflsr5.png) *Avatour Menu when presenting an Asset in a Meeting*
 
-**Snapshot** - Take a 360° or 2D picture within a Live Capture or a presented Asset. All snapshots can be saved to the Assets in the meeting/workspace - see also Meeting Tools. A SuperFreeze 360° snapshot has a higher resolution (ca. 6k) and will pause the live stream for some seconds.
+**Snapshot** - Take a 360° or 2D picture within a Live Capture or a presented Asset. All snapshots can be saved to the Assets in the meeting/workspace. A SuperFreeze 360° snapshot has a higher resolution (ca. 6k) and will pause the live stream for some seconds.
 
 **Spotlight** - Available during a live 360 capture or if an Asset is being presented. This creates a pointer visible by all meeting participants and the camera operator, enabling you to draw the group’s attention to a specific object or area on screen.
 
 **Show/Hide Point-of-View (POV)** - This option displays each participants focus - Point of View - in the 360° video - recorded or live (circles with the participant’s name underneath)
 
-**Recorded video only!?**
-
-**Notes** - create notes (= dialog boxes) at certain positions in snapshots and videos. Any meeting participant can create a note. Only the note creator can edit and delete a note. When creating a note, you can set a Type: Observation, Issue, Action or Recommendation (the latter three can only be done by Hosts, Avatour Collaborator Viewers and Editors). 
+**Notes** - create notes (= dialog boxes) at certain positions in snapshots and recorded videos. Any meeting participant can create a note. Only the note creator can edit and delete a note. When creating a note, you can set a Type: Observation, Issue, Action or Recommendation (the latter three can only be done by Hosts, Avatour Collaborator Viewers and Editors). 
 
 ![Avatour Note and Notes Filter](https://res.cloudinary.com/avatour/image/upload/v1772374822/avatour-screenshot-present-asset-menu-meeting-showing-note-and-filters_g181oc.png) *Avatour Note and Note Filters*
 
 This makes it clear whether a note is informational or requires follow-up. In the timeline of a video notes are anchored to the precise moment in the capture.
 
-- Core collaborators (Host, Avatour Collaborator Viewers and Editors) can update a note’s Status as work moves forward: Open → In Progress → Resolved. Topics are also highlighted under the timeline of the video. Topics are AI generated based on the audio of an asset and can be initiated during Upload from the Avatour cam app or in the Assets section in the Web Console.
-- Share links to notes and specific scenes (=viewangles) in a video / snapshot either by email or directly copy the link and use/embed wherever you want.
+Core collaborators (Host, Avatour Collaborator Viewers and Editors) can update a note’s Status as work moves forward: Open → In Progress → Resolved.
 
-**Side Panel with Notes, Executive Summary, Topics etc. and Reports** - show all notes and topics of an asset in a side panel (click on the list icon next to the note icon in the above menu). Click in the side panel in the notes / topics to get to the note / topic in the video. In the Notes panel you can apply Note filters
+You can share a link which leads directly to the note. Copy the link and use / embed wherever you want.
+
+**Side Panel with Notes, Executive Summary, Topics etc. and Reports** - show all notes and topics of an asset in a side panel (click on the list icon next to the note icon in the above menu). Click in the side panel in the notes / topics to get to the note / topic in the video. In the Notes panel you can apply Note filters.
 
 ![Avatour Asset Executive Summary](https://res.cloudinary.com/avatour/image/upload/v1772377209/avatour-screenshot-present-asset-menu-meeting-showing-exec-summary_cqpqbs.png) *Avatour Executive Summary while presenting an Asset in a Meeting*
 
-
+Topics are also highlighted under the timeline of the video. Topics are AI generated based on the audio of an asset and can be initiated during Upload from the Avatour cam app or in the Assets section in the Web Console.
 
 ![Avatour Topics](https://res.cloudinary.com/avatour/image/upload/v1772377209/avatour-screenshot-present-asset-menu-meeting-showing-topics_duuq1a.png) *Avatour Topics while presenting an Asset in a Meeting*
 
@@ -172,9 +171,9 @@ You can also print a report with all notes, topics etc. even a full transciption
 
 **Share Link** - Share links to notes and specific scenes (=viewangles) in a video / snapshot either by email or directly copy the link and use/embed wherever you want.
 
-***Add Closed Caption***
+***Add Closed Caption - To Do !!!***
 
-And Here are the collaboration tools and menu items available when presenting an Asset in a <u>Workspace</u>. Most tools are like in a meeting but some are missing as these do only make sense when others are present (POV and Spotlight) and some are only available in workspaces - mainly video opertions related, which are explained below.
+And here are the collaboration tools and menu items available when presenting an Asset in a <u>Workspace</u>. Most tools are like in a meeting but some are missing as these do only make sense when others are present (POV and Spotlight) and some are only available in workspaces - mainly video opertions related, which are explained below.
 
 ![Avatour Menu while Presenting an Asset outside a meeting, e.g. when visiting a workspace](https://res.cloudinary.com/avatour/image/upload/v1772303705/avatour-screenshot-present-asset-menu-workspace_iri8gc.png) *Avatour Menu when presenting an Asset in a Workspace*
 
@@ -200,9 +199,15 @@ On the left hand side you will see the following menu items.
 
 **Workspaces** - Workspaces can be set up for many purposes (e.g. sites, projects, customer, supplier) and are organisational units helping you to work efficiently in a controlled environment comprising of the following elements.
 
+***2 videos still OK?? - To Do !!!***
+
+[Workspaces](https://avatour.com/support/video-tutorials-web-console-features-workspaces)
+
+[Managing access to Avatour meetings](https://avatour.com/support/managing-access-to-avatour-meetings)
+
 Please watch this video to see how to keep assets, meetings and collaborators organized (e.g. by project, site, customer, supplier) and the various workspace settings. And here is more information on Managing access to Avatour meetings
 
-**Assets** - All your assets (360° videos / pictures, pdfs…) in one place under My Assets. Admin users can see all Account Assets across all host users. Shared Assets are those which hosts share with all other users on the Avatour platform. Here you can rename assets, activate face blur and generate topics.
+**Assets** - All your assets (videos, pictures, pdfs) in one place under <u>My Assets</u>. Admin users can see all <u>Account Assets</u> across all host users. <u>Shared Assets</u> are those which hosts share with all other users on the Avatour platform. Here you can rename assets, activate face blur and generate topics.
 
 **Profile** - Manage your language and reset your password.
 
@@ -234,7 +239,7 @@ Here is a view of the structure in a workspace.
 
 ![Avatour Workspace with Assets Panel, blank Canvas and Meetings Panel](https://res.cloudinary.com/avatour/image/upload/v1772198701/avatour-screenshot-workspace-assets-blank-meetings_qeumpl.png) *Avatour Workspace with Assets Panel (left), blank Canvas (center) and Meetings Panel (right)*
 
-Each workspace comprises of the following elements:
+Each workspace comprises of the following elements (explained from left to right).
 
 **Assets** - Manage assets allocated to that workspace 
 
@@ -243,11 +248,11 @@ Each workspace comprises of the following elements:
 - **Viewer** - can view assets in the workspace. Adding a Collaborator Viewer will send an invitation to become a registered Avatour Guest user.
 - **Editor** - have the same right as the Host (owner of the workspace) and with this full workspace control. Adding a Collaborator Viewer will send an invitation to become a registered Avatour Host user.
 
-N.B.: Several users can access a workspace at the same time without “meeting” each other. This makes a “workspace” different from a “meeting”. In addition to using the Collaborator roles you can also make the Workspace Public and give access through the various Meeting Access settings - for both see below under “Settings”.
+> N.B.: Several users can access a workspace at the same time without “meeting” each other. This makes a “workspace” different from a “meeting”. In addition to using the Collaborator roles you can also make the Workspace Public and give access through the various Meeting Access settings - for both see below under “Settings”.
 
 **Report** - Create a report against the checklist selected in the workspace settings based on the workspace assets that you choose:
 
-***better show side by side with a report example - explain AI - beta feature***
+***better show side by side with a report example - explain AI - beta feature To Do !!!***
 
 ![Avatour Workspace Report Asset Selection](https://res.cloudinary.com/avatour/image/upload/v1772378496/avatour-screenshot-workspace-report-asset-selection_jmojyu.png) 
 
@@ -307,6 +312,10 @@ Here you can manage your profile details like your password.
 
 This menu item is only available to Admin Users. Here you can (1) manage default settings for your account and even look those settings so that other users can not change those settings and (2) adjust some customise some branding elements (e.g. your logo. For more info see How do I add my company branding to the Avatour experience?).
 
+***Link still OK - To Do !!!*** [How do I add my company branding to the Avatour experience?).](https://avatour.com/support/how-do-i-add-my-company-branding-to-the-avatour-experience)
+
+***Show Avatour with Dropdown Arrow everywhere? - To Do !!!*** 
+
 ![Avatour Web Console - Main Menu Item Settings (1 of 2)](https://res.cloudinary.com/avatour/image/upload/v1772360321/avatour-screenshot-main-menu-settings-1-of-2_fsaatf.png) *Avatour Web Console - Main Menu Item Settings (1 of 2)*
 
 ![Avatour Web Console - Main Menu Item Settings (2 of 2)](https://res.cloudinary.com/avatour/image/upload/v1772360320/avatour-screenshot-main-menu-settings-2-of-2_qimc09.png) *Avatour Web Console - Main Menu Item Settings (2 of 2)*
@@ -343,7 +352,133 @@ Here you can start tutorials on certain topics.
 
  
 
-## 5. For Camera Operators {#for-camera-operators}
+## 5. Onsite - **How to use the Avatour Turnkey Kit**{#for-camera-operators}
+
+### 5.1 Avatour Turnkey Kit 3.1 [(Pilot PanoX V2 setup)](https://avatour.com/quickstart-panox-v2) 
+
+Be sure to attach the Ulanzi external battery between the tripod base and extendable stick or mount the camera directly onto the Telesin extendable battery stick. In addition to (1) extending the total battery life from ca. 1 hour (camera battery only) to ca. 3 hours, it will also help (2) to extend the height of the camera setup, (3) add weight to the bottom for better stability and (4) also help to prevent any potential overheating of the camera. We recommend to always use the external batteries right from the start, especially for live meetings. 
+
+*For previous camera models see Kit 2.1:* [*Pilot One setup*](https://avatour.com/quickstart-pilot-one/) *and Kits 3.0* [*Pilot Pano setup*](https://avatour.com/quickstart-labpano-pilot-pano/)*)*
+
+- *Kit 2.1: Connect a USB cable from the battery to the USB-C port of the USB-C hub. Then, connect the camera directly to the hub.*
+- *Kits 3.0 / 3.1: Connect a USB cable from the battery to the camera.*
+- Kit 3.0 / Pilot Pano cam only: Installing the cooling module (optional accessory):
+  - *(1) Remove the Pilot Pano battery by opening the side panel and pulling the battery out*
+  - (2) Insert the cooling module where the battery was before
+  - *(3) Connect the Ulanzi external battery to the cooling module by USB-A to USB-C cable. This cable would have been packed with the cooling module.*
+
+### 5.2 Connectivity
+
+<u>**Before you start:**</u> For live tours you need to be connected to the internet using (1) a local WiFi or (2) a Mobile Network. You should have at least 10 Mbps Uplink and Downlink bandwidth. This allows enough available bandwidth for the camera to Live Capture stream at our recommended 5 Mbps. You can still stream at lower bandwidths (1-2 Mbps), which works best when you are standing still (see also below e. Best Practices: During a Meeting). To test connectivity speed and quality you can use the following methods:
+
+Test at one location: Any speed checker you might already use (e.g. https://www.speedtest.net/)
+
+**Testing tools from Avatour (recommended):**
+
+1. Test at one location: Open https://avatour.live/test from any device in any browser (should take less than one minute) enter your email address and a short reason for the test - measure at different locations onsite. For evaluation of the results, see [How do I interpret the results of the Avatour Network Test?](https://avatour.com/support/how-do-i-interpret-the-results-of-the-avatour-network-test)
+2. Test while walking (better for checking the entire tour!): Network test with our Avatour Host app for smartphones (Android: available,  iOS: exp. Feb. 2024). When logged into the app, select a Workspace and choose “Run Connectivity Test”. Watch the connectivity graph while walking through the site, and confirm your network bandwidth meets our recommended 10 Mbps
+3. Test while walking (better for checking the entire tour!): Run a network test with your Avatour 360°camera. Login to the Avatour app from the camera’s home screen and go to the Menu (the three red lines in the top right corner) Settings → Network → Connection Test. Watch the connectivity graph while walking through the site, and confirm your network bandwidth meets our recommended 10 Mbps
+
+**Local Wifi**: 
+
+> **<u>It is highly recommended to connect your camera to a local WiFi network.</u>**
+
+If your IT team requires our device MAC address to be whitelisted, you can find on the Pilot cameras the MAC address here: Settings app (camera home screen) --> About --> scroll down to WiFi Address
+
+**Mobile Network:** For areas outside of local WiFi range, connect the camera to a mobile network
+
+<u>Option A: Use the kit provided hotspot and SIM card</u>
+
+**Kits 3.0 / 3.1**: Place the GlocalMe hotspot in your pocket, or keep it somewhere on your person.
+
+- *Troubleshooting Note*: If your GlocalMe hotspot is displaying the message “Data connection is not enabled”, you should check that the hotspot is configured to use the pre-installed SIM card rather than a Cloud SIM. To confirm this, swipe right to the third screen on the hotspot, choose "SIM Card Manager", and select "SIM Card".
+- *Troubleshooting Note*: Please also make sure that “5G network” is enabled in the SIM Card Manager
+- *Troubleshooting Note*: If you are still unable to connect to a carrier’s network, confirm that you have the correct APN selected for your region. Review the article [here](https://avatour.com/support/how-do-i-change-the-apn-on-my-glocalme-hotspot) to create/manage your hotspot’s APNs.
+
+***Kit 2.1**: Use the hotspot attached by magnet to the extendable stick. You can connect to the hotspot via WiFi or wired ethernet connection (hotspot to USB-C hub)*
+
+It’s recommended to first use the SIM card that is preinstalled in your kit provided hotspot. This is a “global” SIM card working in over 200 countries usually automatically connecting to a locally available mobile network. We can implement Roaming Profiles with preferred mobile network providers per country. After testing further the connectivity and if the connection quality remains poor, we recommend sourcing your own local SIM card from the Mobile Network Operator with the strongest signal at your location(s).
+
+<u>Option B: Use your own equipment</u> - hotspot (smartphone or dedicated hotspot device) and SIM data card
+
+**Important Notes**: 
+
+- Keep the hotspot switched off while connected to your local WiFi network. Once you are out of range of this network, then connect the camera to your SIM data.
+- Carry the hotspot with you ideally in your shirt front pocket. Back pockets, e.g. trousers are less ideal because your body will block some of the wifi signal between the hotspot and the 360° camera.
+- Mobile Network Operators sometimes limit bandwidth for no obvious reason (“throttling”) to manage their overall network. This can have a negative impact on the Avatour experience. Get in touch with your Avatour CSM or our Support team ([support@avatour.live](mailto:support@avatour.live)) if you think that is happening.
+- If using the GlocalMe hotspot, you can find the WiFi name and password by swiping one screen to the left. The first screen that displays can be ignored.
+
+**Low bandwidth situations**
+
+- Record a video of the location ahead of time - for details see [How do you record and upload 360 videos with the Avatour App?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app) This can then be presented during your meeting.
+- The operator or other team members onsite can choose to share their smartphone's camera to live stream the location. This will only require a network upload bandwidth of 0.1 - 0.3 Mbps.
+
+**No connectivity at all** - Recorded video only - see [How do you record and upload 360 videos with the Avatour App?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)
+
+### 5.3 Audio
+
+#### 360° Camera and Operator
+
+In principle, you can connect any bluetooth audio device including your PPE headsets if they support bluetooth.
+
+If you plan to host an Avatour meeting in an outdoor or noisy environment, we recommend connecting the **Shokz headphones** provided in your kit: 
+
+- **Power On/Off**: Hold the “+” button for 3 seconds. You will see a blue LED light when the headset is turned on and a red LED light when the headset is turned off
+- **Bluetooth Pairing Mode**: While the headset is turned off, hold the “+” button for 5 seconds. An LED light will flash blue and red when in pairing mode
+- **Volume Up/Down**: Use the “+” and “-” buttons to increase or decrease listening volume
+
+If in a quieter environment, you can choose to connect a bluetooth speaker, such as the clip on **NoxGear speaker**:
+
+- **Power On/Off**: Hold the Play/Pause button in the center of the device for 2 seconds
+- **Bluetooth Pairing Mode:** Once the device is turned on, it will enter pairing mode (blue and red flashing LEDs). Once paired, it will display a blue LED
+- **Volume Up/Down**: Use the “+” and “-” buttons to increase or decrease listening volume
+
+**Kits 3.0 / 3.1:** You can pair/connect any bluetooth device from the camera’s home screen’s Settings app. Go to Settings → Bluetooth.
+
+***Kit 2.1**: In order to pair/connect a bluetooth headset/speaker, you must first have a wired connection between the USB-C hub (with Jabra bluetooth dongle) and the camera. If using the Shokz headset or NoxGear speaker, these will connect as soon as they are turned on.*
+
+
+
+#### Other Onsite Participants
+
+Connect to the meeting using your smartphone’s / tablet’s / laptop’s browser, and use any wired or wireless headphones (preferably ones with noise canceling enabled). **Please be aware that each smartphone onsite will take away bandwidth from the 360° camera** and can have a negative impact on the Avatour meeting for all participants! Therefore **we recommend to join in**
+
+- **On-Site Mode** - Join the meeting in On-Site mode when you're physically present at the same location as the 360 camera. On-Site Mode is perfect for users who wish to utilize their phones primarily for detailed close-ups. On-Site Mode mutes the mic and speaker by default to eliminate audio feedback
+
+  ***Screenshot Onsite Mode To Do !!!***
+
+**Important Note**: 
+
+- Make sure that you are muted when not actively speaking
+- Have your smartphone connected to a different network than the camera’s network, if possible.
+
+
+
+### 5.4 Avatour Camera App
+
+***Add Top level menu screen shot from Visor - To Do !!!***
+
+***Links still up to date? To Do !!!***
+
+**Live 360° Meeting** - For a detailed description see [How to start a Live Capture meeting with your Pilot camera?](https://avatour.com/support/how-to-start-a-live-capture-meeting-with-your-pilot-camera)
+
+> When hosting a Live Capture meeting with your 360 camera, you will have similar meeting tools available to you that mirrors the web experience. Here is a link to our Knowledge Base article that explains these tools in more detail: [Operator App Tools](https://avatour.com/support/what-avatour-app-tools-are-available-to-labpano-pilot-camera-operators)
+
+**Offline 360° video recording with Quick Capture** - For a detailed description see [How do you record and upload 360 videos with the Avatour App?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app):
+
+**Settings** - Within Settings, you have the following options:
+
+- **Network**: This option allows you to change which WiFi network the camera is connected to or run a network connection test to view your streaming throughput
+- **Live Capture**: Adjust your Live Capture settings depending on available bandwidth, guest’s VR sensitivity, or if your camera’s protective lenses are installed:
+  - **Target Frame** **Rate**: Adjust the frame rate for your Live Capture video between 15 fps, 24 fps, and 30 fps. Higher frame rates produce a smoother video, but will require more upload bandwidth. Default: 15 fps
+  - **Target Bitrate**: Enables you to increase or decrease the maximum streaming bitrate for your Live Capture. You can set your target bitrate between 1 Mbps and 10 Mbps. Higher bitrates will result in higher video resolution, but will require more upload bandwidth. Default: 5 Mbps
+  - **Optimize Motion**: This will decrease the video frame rate, generating less load on your network's upload bandwidth, and increase your streaming bitrate. In addition, this option helps to reduce motion sickness for VR participants. Default: Off
+  - **Protective Lenses**: This will affect how the 360° video is stitched depending if protective lenses have been installed on your camera. If you do not have protective lenses, set this to “No”. If you received a Kit 3.0, you have pre-installed protective lenses on and should set this to “Yes”. Default: Yes
+- **Quick Capture**: Adjust your Quick Capture settings depending on your preferred video frame rate, available bandwidth for recorded video uploads, or if your camera’s protective lenses are installed (see also [How do you record and upload 360 videos with the Avatour App?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)):
+  - **Target Frame Rate**: Adjust the frame rate for your Quick Capture video recordings between 15 fps, 24 fps, and 30 fps. Higher frame rates produce a smoother video, but will increase video file size and upload time. Recommended: 30 fps
+  - **Target Bitrate**: Set the target bitrate for Quick Capture uploads between 5 Mbps and 20 Mbps. Lower bitrates increase upload speeds, but will decrease video quality. Recommended: 20 Mbps
+  - **Protective Lenses**: *See Protective Lenses section for Live Capture above*
+- **About**: View device serial number and software version
 
 ## 6. Best Practice Advice
 
@@ -376,7 +511,7 @@ For your first uses and getting familiar with the Avatour Web Console and the Av
 
 - Prior to an Avatour meeting, plan out the route you will take through the facility. Do a test Avatour meeting with the camera, and check that all areas have bitrates above 1 Mbps bandwidth. This can be seen on the camera screen itself, or as a remote participant by going to Settings and activating Show Bitrate.
 
-- If you notice some areas have little to no bandwidth, it is best to take images or a recording. These can then be presented during the meeting for remote participants to review. You can follow the guide here that explains our Quick Capture for recording and uploading videos/images: How do you record and upload 360 videos with the Avatour App?
+- If you notice some areas have little to no bandwidth, it is best to take images or a recording. These can then be presented during the meeting for remote participants to review. You can follow the guide here that explains our Quick Capture for recording and uploading videos/images: [How do you record and upload 360 videos with the Avatour App?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)
 
 - If you have remote participants joining the meeting who have not used Avatour before, provide them with a short summary of the platform, its functionality (360 live video, assets, snapshots, annotations, spotlight) and the meeting tools.
 
