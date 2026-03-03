@@ -210,30 +210,71 @@ The GitHub Actions workflow runs this automatically on every commit to `main`. T
 
 ## How the Webflow embed works
 
-The guide is embedded on the Avatour website using a single iframe. The iframe points to the embed file hosted on GitHub Pages:
+Pages are embedded on the Avatour website using a single iframe per page. The iframe points to the hosted HTML file on GitHub Pages.
 
-```
-https://stefan-hesse.github.io/test-repository/dist/avatour-guide-embed.html
-```
+### Current hosted pages
 
-The Webflow page contains only this code in an HTML Embed element:
+| Page | GitHub Pages URL | Webflow page |
+|------|-----------------|--------------|
+| User & Best Practices Guide | `https://stefan-hesse.github.io/test-repository/dist/avatour-guide-embed.html` | `/user-guide` |
+| Business Benefits | `https://stefan-hesse.github.io/test-repository/dist/avatour-business-benefits.html` | `/business-benefits` |
+
+### Adding a new page
+
+To host any new standalone HTML page the same way:
+
+1. Place the `.html` file in the `dist/` folder of the repository
+2. Commit and push via GitHub Desktop
+3. GitHub Actions deploys it to GitHub Pages automatically within ~2 minutes
+4. The URL will be: `https://stefan-hesse.github.io/test-repository/dist/[filename].html`
+5. In Webflow, add a Section with zero padding, drop an HTML Embed inside it, and paste:
 
 ```html
-<iframe src="https://stefan-hesse.github.io/test-repository/dist/avatour-guide-embed.html"
+<iframe src="https://stefan-hesse.github.io/test-repository/dist/[filename].html"
         width="100%"
-        style="border:none; min-height:100vh;">
+        style="border:none; min-height:[height]px;">
 </iframe>
 ```
 
-**You never need to touch Webflow when updating the guide.** Every time you commit and push a content change, GitHub Actions rebuilds the embed file and deploys it to GitHub Pages automatically. The iframe on the Avatour website picks up the new version within a minute or two.
+Set `min-height` to match the page length (e.g. `100vh` for the guide, `3600px` for the Business Benefits page).
 
-> **Note — production migration pending:** Avatour uses **Bitbucket** (not GitHub) for its company repositories. The current setup on Stefan's personal GitHub account is a test environment only. When ready to move to production, Prasad will need to:
-> 1. Create a repository in Bitbucket
-> 2. Convert the GitHub Actions workflow to a **Bitbucket Pipelines** file (`bitbucket-pipelines.yml`) — same logic, different syntax
-> 3. Host the embed file on **AWS S3** instead of GitHub Pages (Avatour already uses AWS)
-> 4. Update the iframe `src` in Webflow once to point to the new S3 URL
+### Webflow page structure for iframe embeds
+
+For full-bleed iframe pages, the embed must sit directly inside the Section — **not** inside a container or padding wrapper:
+
+```
+Body
+└── page-wrapper
+    ├── TopBar
+    ├── Section  ← zero padding, no max-width
+    │   └── Code Embed  ← iframe goes here directly
+    └── Footer
+```
+
+**You never need to touch Webflow when updating content.** Every commit and push triggers a GitHub Actions rebuild and redeploy automatically. The iframe picks up the new version within ~2 minutes.
+
+### Preventing .DS_Store commits
+
+macOS creates `.DS_Store` files automatically in every folder. To prevent these from being committed, uncheck `.DS_Store` in the GitHub Desktop Changes panel before committing. To permanently ignore them, add a `.gitignore` file to the repository root containing:
+
+```
+.DS_Store
+**/.DS_Store
+```
+
+---
+
+## Production migration (pending)
+
+> **Note:** The current setup uses Stefan's personal GitHub account as a test environment. Avatour uses **Bitbucket** (not GitHub) for its company repositories. When ready to move to production, Prasad will need to:
 >
-> Everything else — the Markdown source file, build script, Typora workflow, and Cloudinary screenshots — moves across unchanged.
+> 1. Create a repository in **Bitbucket** (Avatour company account)
+> 2. Move the `dist/` files, `guide-source/` folder, and build script across
+> 3. Convert the GitHub Actions workflow (`.github/workflows/`) to a **Bitbucket Pipelines** file (`bitbucket-pipelines.yml`) — same logic, different syntax
+> 4. Host the `dist/` files on **AWS S3** instead of GitHub Pages (Avatour already uses AWS), with a public bucket policy or CloudFront distribution
+> 5. Update the iframe `src` in Webflow **once** for each embedded page to point to the new S3 URLs
+>
+> Everything else — the Markdown source file, build script, Typora workflow, Cloudinary screenshots, and the `.html` files for standalone pages — moves across unchanged.
 
 ---
 
