@@ -111,13 +111,11 @@ Coming back to Meetings: Here is the bottom menu and in the following are explan
 
 **Participants** - Open/close the participants pane.
 
-**Meeting Info** - This section gives you information about your meeting (e.g. the meeting code and invite link to the meeting). From here you can also access the related Online Tutorial.
+**Meeting Info** - This section gives you information about your meeting (e.g. the meeting code and invite link to the meeting). From here you can also access the related Online Tutorial and other usefule links.
 
 > Tip: Send the meeting link or add it to any calendar item to invite meeting participants.
 
-***Add picture meeting tutorial To Do !!!*** 
-
-While in a meeting you can also start the meeting Tutorial from the Info section.
+![Avatour Meeting Info](https://res.cloudinary.com/avatour/image/upload/v1772547439/avatour-screenshot-meeting-info-side-pane_nx7dp4.png) *Avatour Meeting Info Side Pane*
 
 **Settings** - Adjust your language, audio, and video settings. For live 360° video meetings you can use "<u>Show Bitrate</u>" wich will show you in the upper left corner of the canvas the connectivity stats for the live 360° video stream (1. Upload Bandwidth Onsite, 2. Your Download Capacity, 3. Your Download Speed). This can be very helpful to analyze any potential connectivity issues (is it onsite or with the remote participant?)
 
@@ -171,17 +169,19 @@ You can also print a report with all notes, topics etc. even a full transciption
 
 **Share Link** - Share links to notes and specific scenes (=viewangles) in a video / snapshot either by email or directly copy the link and use/embed wherever you want.
 
-***Add Closed Caption - To Do !!!***
+**Closed Captions (CC)** - Here you can activate to show on-screen text transcriptions while presenting a video.
+
+
 
 And here are the collaboration tools and menu items available when presenting an Asset in a <u>Workspace</u>. Most tools are like in a meeting but some are missing as these do only make sense when others are present (POV and Spotlight) and some are only available in workspaces - mainly video opertions related, which are explained below.
 
 ![Avatour Menu while Presenting an Asset outside a meeting, e.g. when visiting a workspace](https://res.cloudinary.com/avatour/image/upload/v1772303705/avatour-screenshot-present-asset-menu-workspace_iri8gc.png) *Avatour Menu when presenting an Asset in a Workspace*
 
-**10 seconds back and forth** - ...
+**10 seconds steps** - Skip through the video in 10 second steps - forward and backward.
 
-**faster playback seconds back and forth** - ...
+**Playback Speed** - Here you can choose a playback speed factor (0.5-2)
 
-**Trimming a video (scissors)** - ...
+**Trimming a video (scissors)** - With the scissors you can trim a video at the beginning and at the end.
 
 
 
@@ -199,7 +199,7 @@ On the left hand side you will see the following menu items.
 
 **Workspaces** - Workspaces can be set up for many purposes (e.g. sites, projects, customer, supplier) and are organisational units helping you to work efficiently in a controlled environment comprising of the following elements.
 
-***2 videos still OK?? - To Do !!!***
+***2 videos still OK?? Show here or above under meetings and below with workspace details - To Do !!!*** 
 
 [Workspaces](https://avatour.com/support/video-tutorials-web-console-features-workspaces)
 
@@ -231,9 +231,7 @@ Workspaces can be set up for many purposes (e.g. sites, projects, customer, supp
 
 ![Avatour Web Console - Main Menu Item Workspaces](https://res.cloudinary.com/avatour/image/upload/v1772360323/avatour-screenshot-main-menu-workspaces_hnhkjj.png) *Avatour Web Console - Main Menu Item Workspaces*
 
-?? Please watch this video to see how to keep assets, meetings and collaborators organized (e.g. by project, site, customer, supplier) and the various workspace settings. 
-
-***Add create workspace sentence / screenshot?***
+?? Please watch this video to see how to keep assets, meetings and collaborators organized (e.g. by project, site, customer, supplier) and the various workspace settings. ***Add create workspace sentence / screenshot?***
 
 Here is a view of the structure in a workspace.
 
@@ -270,7 +268,7 @@ Each workspace comprises of the following elements (explained from left to right
 
 <u>Report Template</u> - select a checklist template against which our AI will report based on the chosen workspace assets.
 
-***Report image needed - TO DO !!!***
+***Report image needed - not neccessary to show here if we show it already above - TO DO !!!***
 
 <u>Enable Notifications</u> - Get daily digest emails to notify collaborators when Issues and Actions of Notes change status (for example, In Progress → Resolved).
 
