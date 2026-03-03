@@ -1,4 +1,4 @@
-# Avatour User and Best Practices Guide
+# Avatour Test User and Best Practices Guide
 
 ## 1. For All Avatour Users {#for-all-avatour-users}
 
