@@ -227,7 +227,13 @@ The Webflow page contains only this code in an HTML Embed element:
 
 **You never need to touch Webflow when updating the guide.** Every time you commit and push a content change, GitHub Actions rebuilds the embed file and deploys it to GitHub Pages automatically. The iframe on the Avatour website picks up the new version within a minute or two.
 
-> **Note:** When the repository moves to the Avatour GitHub account, the GitHub Pages URL will change. At that point the iframe `src` in Webflow will need to be updated once to point to the new URL.
+> **Note — production migration pending:** Avatour uses **Bitbucket** (not GitHub) for its company repositories. The current setup on Stefan's personal GitHub account is a test environment only. When ready to move to production, Prasad will need to:
+> 1. Create a repository in Bitbucket
+> 2. Convert the GitHub Actions workflow to a **Bitbucket Pipelines** file (`bitbucket-pipelines.yml`) — same logic, different syntax
+> 3. Host the embed file on **AWS S3** instead of GitHub Pages (Avatour already uses AWS)
+> 4. Update the iframe `src` in Webflow once to point to the new S3 URL
+>
+> Everything else — the Markdown source file, build script, Typora workflow, and Cloudinary screenshots — moves across unchanged.
 
 ---
 
