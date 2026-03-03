@@ -1,0 +1,1765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business Benefits — Avatour</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #132A39;
+    --orange: #FF4E00;
+    --orange-light: #FF6B2B;
+    --white: #ffffff;
+    --off-white: #F7F5F2;
+    --light-grey: #E8E4DF;
+    --mid-grey: #9A9590;
+    --text: #1A1A1A;
+    --card-bg: #ffffff;
+    --navy-light: #1E3D52;
+    --navy-mid: #243F52;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--off-white);
+    color: var(--text);
+    overflow-x: hidden;
+  }
+
+  /* ─── HERO ─────────────────────────────────────────── */
+  .hero {
+    background: var(--navy);
+    position: relative;
+    overflow: hidden;
+    padding: 100px 6vw 90px;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 60% 80% at 80% 50%, rgba(255,78,0,0.12) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 60% at 20% 80%, rgba(255,78,0,0.06) 0%, transparent 50%);
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 20px;
+  }
+
+  .hero h1 {
+    font-size: clamp(36px, 5vw, 62px);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.06;
+    letter-spacing: -0.02em;
+  }
+
+  .hero h1 em {
+    font-style: normal;
+    color: var(--orange);
+  }
+
+  .hero-sub {
+    margin-top: 24px;
+    font-size: 18px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.65;
+    max-width: 480px;
+  }
+
+  .hero-stat-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .hero-stat {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-stat::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--orange);
+  }
+
+  .hero-stat-value {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1;
+  }
+
+  .hero-stat-value span {
+    color: var(--orange);
+  }
+
+  .hero-stat-label {
+    margin-top: 8px;
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.04em;
+  }
+
+  .hero-stat-source {
+    margin-top: 4px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: rgba(255,255,255,0.3);
+  }
+
+  /* ─── SECTION WRAPPERS ───────────────────────────── */
+  section {
+    padding: 90px 6vw;
+  }
+
+  .section-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 12px;
+  }
+
+  .section-title {
+    font-size: clamp(28px, 3.5vw, 44px);
+    font-weight: 700;
+    color: var(--navy);
+    letter-spacing: -0.02em;
+    line-height: 1.12;
+  }
+
+  .section-intro {
+    margin-top: 16px;
+    font-size: 17px;
+    font-weight: 300;
+    color: #555;
+    line-height: 1.7;
+    max-width: 640px;
+  }
+
+  /* ─── FRAMEWORK STRIP ───────────────────────────── */
+  .framework {
+    background: var(--navy);
+    padding: 60px 6vw;
+  }
+
+  .framework-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .framework-title {
+    font-size: 13px;
+    font-family: 'DM Mono', monospace;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 36px;
+  }
+
+  .framework-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    flex-wrap: wrap;
+  }
+
+  .framework-node {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 10px;
+    padding: 20px 28px;
+    min-width: 180px;
+    text-align: center;
+    position: relative;
+  }
+
+  .framework-node.highlight {
+    background: var(--orange);
+    border-color: var(--orange);
+  }
+
+  .framework-node-icon {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+
+  .framework-node-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1.3;
+  }
+
+  .framework-node-sub {
+    font-size: 11px;
+    color: rgba(255,255,255,0.5);
+    margin-top: 4px;
+  }
+
+  .framework-node.highlight .framework-node-sub {
+    color: rgba(255,255,255,0.8);
+  }
+
+  .framework-arrow {
+    font-size: 20px;
+    color: var(--orange);
+    padding: 0 8px;
+    flex-shrink: 0;
+  }
+
+  .framework-result {
+    margin-top: 36px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255,78,0,0.12);
+    border: 1px solid rgba(255,78,0,0.3);
+    border-radius: 100px;
+    padding: 12px 28px;
+  }
+
+  .framework-result-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--orange);
+    flex-shrink: 0;
+  }
+
+  .framework-result-text {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--white);
+  }
+
+  .framework-result-text em {
+    font-style: normal;
+    color: var(--orange);
+  }
+
+  /* ─── USE CASE TABS ─────────────────────────────── */
+  .use-case-tabs {
+    background: var(--off-white);
+  }
+
+  .tab-nav {
+    display: flex;
+    gap: 4px;
+    margin-top: 40px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+  }
+
+  .tab-btn {
+    padding: 10px 22px;
+    border: 1.5px solid var(--light-grey);
+    border-radius: 100px;
+    background: transparent;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .tab-btn:hover {
+    border-color: var(--orange);
+    color: var(--orange);
+  }
+
+  .tab-btn.active {
+    background: var(--navy);
+    border-color: var(--navy);
+    color: var(--white);
+  }
+
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+
+  .use-case-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+    box-shadow: 0 2px 20px rgba(19,42,57,0.07);
+    border: 1px solid var(--light-grey);
+  }
+
+  .uc-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+
+  .uc-icon {
+    width: 44px; height: 44px;
+    border-radius: 10px;
+    background: rgba(255,78,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+
+  .uc-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--orange);
+    background: rgba(255,78,0,0.08);
+    border: 1px solid rgba(255,78,0,0.2);
+    border-radius: 4px;
+    padding: 3px 8px;
+  }
+
+  .uc-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--navy);
+    letter-spacing: -0.01em;
+    margin-bottom: 8px;
+  }
+
+  .uc-desc {
+    font-size: 15px;
+    font-weight: 300;
+    color: #666;
+    line-height: 1.65;
+    margin-bottom: 24px;
+  }
+
+  .stakeholder-block {
+    border-left: 3px solid var(--light-grey);
+    padding-left: 16px;
+    margin-bottom: 16px;
+  }
+
+  .stakeholder-block.primary {
+    border-left-color: var(--orange);
+  }
+
+  .stakeholder-role {
+    font-size: 11px;
+    font-family: 'DM Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--mid-grey);
+    margin-bottom: 6px;
+  }
+
+  .stakeholder-block.primary .stakeholder-role {
+    color: var(--orange);
+  }
+
+  .benefit-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--off-white);
+    border: 1px solid var(--light-grey);
+    border-radius: 6px;
+    padding: 5px 10px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--navy);
+    margin: 3px 3px 3px 0;
+  }
+
+  .benefit-tag.financial { border-color: #D4EDDA; background: #F0FAF2; color: #1A6B35; }
+  .benefit-tag.time { border-color: #CCE5FF; background: #EEF5FF; color: #1A4B8C; }
+  .benefit-tag.strategic { border-color: #E2D9F3; background: #F4F0FB; color: #5B4B8A; }
+  .benefit-tag.soft { border-color: var(--light-grey); background: var(--off-white); color: #555; }
+
+  .benefit-tag::before { font-size: 12px; }
+  .benefit-tag.financial::before { content: '💰'; }
+  .benefit-tag.time::before { content: '⏱'; }
+  .benefit-tag.strategic::before { content: '🎯'; }
+  .benefit-tag.soft::before { content: '✦'; font-size: 10px; }
+
+  /* ─── ROI METRICS SECTION ───────────────────────── */
+  .roi-section {
+    background: var(--white);
+  }
+
+  .roi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 48px;
+  }
+
+  .roi-card {
+    border: 1px solid var(--light-grey);
+    border-radius: 14px;
+    padding: 32px 28px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .roi-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(19,42,57,0.1);
+  }
+
+  .roi-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+  }
+
+  .roi-card.financial::before { background: linear-gradient(90deg, #2ECC71, #27AE60); }
+  .roi-card.time::before { background: linear-gradient(90deg, #3498DB, #2980B9); }
+  .roi-card.carbon::before { background: linear-gradient(90deg, #1ABC9C, #16A085); }
+  .roi-card.sales::before { background: linear-gradient(90deg, var(--orange), #FF8C42); }
+  .roi-card.quality::before { background: linear-gradient(90deg, #9B59B6, #8E44AD); }
+  .roi-card.ai::before { background: linear-gradient(90deg, var(--navy), var(--navy-light)); }
+
+  .roi-card-icon {
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+
+  .roi-card-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+
+  .roi-card-desc {
+    font-size: 14px;
+    font-weight: 300;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  .roi-metric {
+    background: var(--off-white);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 8px;
+  }
+
+  .roi-metric-label {
+    font-size: 11px;
+    font-family: 'DM Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--mid-grey);
+    margin-bottom: 3px;
+  }
+
+  .roi-metric-value {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--navy);
+  }
+
+  /* ─── AI REPORT CALLOUT ─────────────────────────── */
+  .ai-callout {
+    background: var(--navy);
+    border-radius: 20px;
+    padding: 48px;
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 40px;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ai-callout::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 50% 100% at 90% 50%, rgba(255,78,0,0.15) 0%, transparent 60%);
+  }
+
+  .ai-callout-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,78,0,0.15);
+    border: 1px solid rgba(255,78,0,0.3);
+    border-radius: 100px;
+    padding: 6px 16px;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 16px;
+  }
+
+  .ai-callout h3 {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+
+  .ai-callout p {
+    font-size: 15px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.65;
+  }
+
+  .ai-features {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .ai-feature-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 14px 18px;
+    min-width: 260px;
+  }
+
+  .ai-feature-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--orange);
+    flex-shrink: 0;
+  }
+
+  .ai-feature-text {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--white);
+  }
+
+  /* ─── SOFT BENEFITS ─────────────────────────────── */
+  .soft-section {
+    background: var(--off-white);
+  }
+
+  .soft-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 48px;
+  }
+
+  .soft-card {
+    background: var(--white);
+    border-radius: 14px;
+    padding: 28px 24px;
+    border: 1px solid var(--light-grey);
+    transition: border-color 0.2s ease;
+  }
+
+  .soft-card:hover {
+    border-color: var(--orange);
+  }
+
+  .soft-card-icon {
+    font-size: 28px;
+    margin-bottom: 14px;
+  }
+
+  .soft-card-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 6px;
+    line-height: 1.3;
+  }
+
+  .soft-card-text {
+    font-size: 13px;
+    font-weight: 300;
+    color: #777;
+    line-height: 1.55;
+  }
+
+  /* ─── STAKEHOLDER VIEW ──────────────────────────── */
+  .stakeholder-section {
+    background: var(--white);
+  }
+
+  .stakeholder-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 48px;
+  }
+
+  .sh-card {
+    border: 1px solid var(--light-grey);
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  .sh-card-header {
+    padding: 20px 24px;
+    background: var(--navy);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .sh-avatar {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: rgba(255,78,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+
+  .sh-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--white);
+  }
+
+  .sh-role {
+    font-size: 11px;
+    color: rgba(255,255,255,0.5);
+    font-family: 'DM Mono', monospace;
+    letter-spacing: 0.06em;
+  }
+
+  .sh-body {
+    padding: 24px;
+  }
+
+  .sh-benefit-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--off-white);
+  }
+
+  .sh-benefit-row:last-child { border-bottom: none; }
+
+  .sh-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--orange);
+    flex-shrink: 0;
+    margin-top: 7px;
+  }
+
+  .sh-benefit-text {
+    font-size: 13px;
+    color: #444;
+    line-height: 1.5;
+  }
+
+  .sh-benefit-type {
+    margin-left: auto;
+    font-size: 10px;
+    font-family: 'DM Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--mid-grey);
+    flex-shrink: 0;
+    padding-top: 2px;
+  }
+
+  /* ─── COLGATE PROOF POINT ───────────────────────── */
+  .proof-section {
+    background: var(--navy);
+    padding: 80px 6vw;
+  }
+
+  .proof-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .proof-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 16px;
+  }
+
+  .proof-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+
+  .proof-desc {
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.7;
+  }
+
+  .proof-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .proof-stat {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 24px;
+  }
+
+  .proof-stat-num {
+    font-size: 38px;
+    font-weight: 700;
+    color: var(--orange);
+    letter-spacing: -0.02em;
+    line-height: 1;
+  }
+
+  .proof-stat-unit {
+    font-size: 18px;
+    color: rgba(255,255,255,0.5);
+    font-weight: 300;
+  }
+
+  .proof-stat-label {
+    margin-top: 8px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.45);
+    font-weight: 400;
+    line-height: 1.4;
+  }
+
+  .proof-quote {
+    grid-column: 1 / -1;
+    border-left: 3px solid var(--orange);
+    padding-left: 20px;
+    margin-top: 8px;
+  }
+
+  .proof-quote-text {
+    font-size: 15px;
+    font-style: italic;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.65;
+  }
+
+  .proof-quote-attr {
+    margin-top: 10px;
+    font-size: 12px;
+    font-family: 'DM Mono', monospace;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 0.06em;
+  }
+
+  /* ─── STRATEGIC SECTION ─────────────────────────── */
+  .strategic-section {
+    background: var(--off-white);
+  }
+
+  .strategic-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    margin-top: 48px;
+  }
+
+  .strategic-col {
+    background: var(--white);
+    border-radius: 14px;
+    padding: 32px 28px;
+    border: 1px solid var(--light-grey);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .strategic-col::after {
+    content: attr(data-num);
+    position: absolute;
+    top: -16px;
+    right: 20px;
+    font-size: 80px;
+    font-weight: 700;
+    color: rgba(19,42,57,0.04);
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1;
+  }
+
+  .strategic-col-icon {
+    font-size: 28px;
+    margin-bottom: 14px;
+  }
+
+  .strategic-col-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 10px;
+  }
+
+  .strategic-col-text {
+    font-size: 14px;
+    font-weight: 300;
+    color: #666;
+    line-height: 1.65;
+  }
+
+  .strategic-col ul {
+    margin-top: 14px;
+    list-style: none;
+  }
+
+  .strategic-col ul li {
+    display: flex;
+    gap: 8px;
+    font-size: 13px;
+    color: #555;
+    padding: 5px 0;
+    border-bottom: 1px solid var(--off-white);
+    line-height: 1.4;
+  }
+
+  .strategic-col ul li:last-child { border-bottom: none; }
+
+  .strategic-col ul li::before {
+    content: '→';
+    color: var(--orange);
+    flex-shrink: 0;
+    font-size: 12px;
+    margin-top: 1px;
+  }
+
+  /* ─── CTA ───────────────────────────────────────── */
+  .cta {
+    background: var(--off-white);
+    padding: 80px 6vw;
+    text-align: center;
+  }
+
+  .cta-inner {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .cta h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--navy);
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+  }
+
+  .cta p {
+    font-size: 17px;
+    font-weight: 300;
+    color: #666;
+    line-height: 1.65;
+    margin-bottom: 36px;
+  }
+
+  .cta-btn {
+    display: inline-block;
+    background: var(--orange);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 16px 40px;
+    border-radius: 100px;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+
+  .cta-btn:hover {
+    background: var(--orange-light);
+    transform: translateY(-2px);
+  }
+
+  /* ─── ANIMATIONS ────────────────────────────────── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .fade-in {
+    opacity: 0;
+    animation: fadeUp 0.6s ease forwards;
+  }
+
+  .fade-in-1 { animation-delay: 0.1s; }
+  .fade-in-2 { animation-delay: 0.25s; }
+  .fade-in-3 { animation-delay: 0.4s; }
+  .fade-in-4 { animation-delay: 0.55s; }
+
+  /* ─── RESPONSIVE ────────────────────────────────── */
+  @media (max-width: 900px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+    .use-case-card { grid-template-columns: 1fr; }
+    .roi-grid { grid-template-columns: 1fr 1fr; }
+    .soft-grid { grid-template-columns: 1fr 1fr; }
+    .stakeholder-grid { grid-template-columns: 1fr; }
+    .strategic-columns { grid-template-columns: 1fr; }
+    .proof-inner { grid-template-columns: 1fr; gap: 40px; }
+    .ai-callout { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 600px) {
+    .roi-grid { grid-template-columns: 1fr; }
+    .soft-grid { grid-template-columns: 1fr; }
+    .hero-stat-grid { grid-template-columns: 1fr 1fr; }
+    .proof-stats { grid-template-columns: 1fr 1fr; }
+    .framework-flow { flex-direction: column; gap: 8px; }
+    .framework-arrow { transform: rotate(90deg); }
+  }
+</style>
+</head>
+<body>
+
+<!-- ─── HERO ─────────────────────────────────────────────────────── -->
+<section class="hero">
+  <div class="hero-grid">
+    <div class="fade-in fade-in-1">
+      <div class="hero-eyebrow">Business Value Framework</div>
+      <h1>Better Visibility.<br><em>Better Business.</em></h1>
+      <p class="hero-sub">Avatour transforms how your organisation accesses and understands physical sites — delivering measurable financial returns, operational efficiency, and strategic advantage.</p>
+    </div>
+    <div class="hero-stat-grid fade-in fade-in-2">
+      <div class="hero-stat">
+        <div class="hero-stat-value">$<span>78K</span></div>
+        <div class="hero-stat-label">Saved in a single session</div>
+        <div class="hero-stat-source">Colgate-Palmolive · Thailand Review</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-value"><span>350</span>hrs</div>
+        <div class="hero-stat-label">Travel time recovered</div>
+        <div class="hero-stat-source">Colgate-Palmolive · Thailand Review</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-value"><span>64K</span>lbs</div>
+        <div class="hero-stat-label">CO₂ emissions avoided</div>
+        <div class="hero-stat-source">Colgate-Palmolive · Thailand Review</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-value"><span>12</span>×</div>
+        <div class="hero-stat-label">More experts engaged</div>
+        <div class="hero-stat-source">vs. typical in-person delegation</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FRAMEWORK ─────────────────────────────────────────────────── -->
+<div class="framework">
+  <div class="framework-inner">
+    <div class="framework-title">The Avatour Value Chain</div>
+    <div class="framework-flow">
+      <div class="framework-node">
+        <div class="framework-node-icon">📍</div>
+        <div class="framework-node-title">Any Site,<br>Anywhere</div>
+        <div class="framework-node-sub">Factories · Labs · Warehouses</div>
+      </div>
+      <div class="framework-arrow">→</div>
+      <div class="framework-node highlight">
+        <div class="framework-node-icon">🌐</div>
+        <div class="framework-node-title">360° Immersive<br>Remote Presence</div>
+        <div class="framework-node-sub">Live · Recorded · AI-Assisted</div>
+      </div>
+      <div class="framework-arrow">→</div>
+      <div class="framework-node">
+        <div class="framework-node-icon">👥</div>
+        <div class="framework-node-title">All Stakeholders<br>Connected</div>
+        <div class="framework-node-sub">Internal · Customers · Partners</div>
+      </div>
+      <div class="framework-arrow">→</div>
+      <div class="framework-node">
+        <div class="framework-node-icon">📊</div>
+        <div class="framework-node-title">Measurable<br>Outcomes</div>
+        <div class="framework-node-sub">Cost · Time · Quality · Growth</div>
+      </div>
+    </div>
+    <div class="framework-result">
+      <div class="framework-result-dot"></div>
+      <div class="framework-result-text">Better visibility → <em>Faster, better decisions → Better business outcomes</em></div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── USE CASE TABS ─────────────────────────────────────────────── -->
+<section class="use-case-tabs">
+  <div class="section-inner">
+    <div class="section-label">Use Case Benefit Profiles</div>
+    <h2 class="section-title">Benefits vary by use case.<br>The ROI is always real.</h2>
+    <p class="section-intro">Different use cases deliver different types of value to different stakeholders. Explore each to understand where Avatour creates the most impact for your organisation.</p>
+
+    <div class="tab-nav">
+      <button class="tab-btn active" onclick="showTab('inspect')">🔍 Inspections & Audits</button>
+      <button class="tab-btn" onclick="showTab('show')">🏆 Sales & Showrooms</button>
+      <button class="tab-btn" onclick="showTab('safety')">🦺 Safety Walks</button>
+      <button class="tab-btn" onclick="showTab('gemba')">🔄 Gemba / CI Walks</button>
+      <button class="tab-btn" onclick="showTab('training')">🎓 Remote Training</button>
+    </div>
+
+    <!-- Inspect -->
+    <div class="tab-panel active" id="tab-inspect">
+      <div class="use-case-card">
+        <div>
+          <div class="uc-header">
+            <div class="uc-icon">🔍</div>
+            <div class="uc-tag">Look Use Case</div>
+          </div>
+          <div class="uc-title">Quality Audits & Supplier Inspections</div>
+          <div class="uc-desc">Conduct full facility audits with your entire team of experts present remotely in 360° — and automatically generate a structured inspection report the moment the session ends.</div>
+          <div class="stakeholder-block primary">
+            <div class="stakeholder-role">Your Organisation (Auditor)</div>
+            <span class="benefit-tag financial">Cost savings on travel</span>
+            <span class="benefit-tag time">Time-to-report: hours not days</span>
+            <span class="benefit-tag strategic">More experts per audit</span>
+            <span class="benefit-tag financial">Reduced audit program cost</span>
+          </div>
+          <div class="stakeholder-block">
+            <div class="stakeholder-role">Supplier / Site (Auditee)</div>
+            <span class="benefit-tag soft">Less operational disruption</span>
+            <span class="benefit-tag soft">Less preparation overhead</span>
+            <span class="benefit-tag strategic">Faster corrective action loop</span>
+          </div>
+        </div>
+        <div>
+          <div style="background: var(--off-white); border-radius: 12px; padding: 28px; border: 1px solid var(--light-grey);">
+            <div style="font-size:12px; font-family: 'DM Mono', monospace; text-transform:uppercase; letter-spacing:0.1em; color: var(--mid-grey); margin-bottom:16px;">AI-Powered Reporting Advantage</div>
+            <div style="font-size:15px; font-weight:500; color:var(--navy); margin-bottom:10px; line-height:1.4;">Generate a complete inspection report — automatically.</div>
+            <div style="font-size:14px; font-weight:300; color:#666; line-height:1.65; margin-bottom:20px;">Avatour's AI listens to the session, transcribes findings in real time, and pre-fills your inspection template — each finding linked directly to the exact 360° video frame that captured it.</div>
+            <div style="display:flex; flex-direction:column; gap:8px;">
+              <div style="display:flex; align-items:center; gap:10px; font-size:13px; color:#444;">
+                <span style="color:var(--orange);">✓</span> Audio transcription → structured findings
+              </div>
+              <div style="display:flex; align-items:center; gap:10px; font-size:13px; color:#444;">
+                <span style="color:var(--orange);">✓</span> Findings anchored to best visual evidence
+              </div>
+              <div style="display:flex; align-items:center; gap:10px; font-size:13px; color:#444;">
+                <span style="color:var(--orange);">✓</span> Draft report ready for review immediately after
+              </div>
+              <div style="display:flex; align-items:center; gap:10px; font-size:13px; color:#444;">
+                <span style="color:var(--orange);">✓</span> PDF export — no manual write-up required
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Show -->
+    <div class="tab-panel" id="tab-show">
+      <div class="use-case-card">
+        <div>
+          <div class="uc-header">
+            <div class="uc-icon">🏆</div>
+            <div class="uc-tag">Show Use Case</div>
+          </div>
+          <div class="uc-title">Sales Tours & Customer Showcases</div>
+          <div class="uc-desc">Give prospects and customers an immersive walkthrough of your facilities, innovation centres, or manufacturing capabilities — without anyone needing to travel.</div>
+          <div class="stakeholder-block primary">
+            <div class="stakeholder-role">Your Organisation (Host / Seller)</div>
+            <span class="benefit-tag strategic">Accelerate deal cycles</span>
+            <span class="benefit-tag financial">New contract value won</span>
+            <span class="benefit-tag strategic">Stand out as innovator</span>
+            <span class="benefit-tag financial">Expand addressable market</span>
+          </div>
+          <div class="stakeholder-block">
+            <div class="stakeholder-role">Customer / Prospect (Visitor)</div>
+            <span class="benefit-tag financial">Zero travel cost for evaluation</span>
+            <span class="benefit-tag time">Faster due diligence</span>
+            <span class="benefit-tag soft">More evaluators per session</span>
+            <span class="benefit-tag soft">Replay session for internal alignment</span>
+          </div>
+        </div>
+        <div>
+          <div style="background: var(--off-white); border-radius: 12px; padding: 28px; border: 1px solid var(--light-grey);">
+            <div style="font-size:12px; font-family: 'DM Mono', monospace; text-transform:uppercase; letter-spacing:0.1em; color: var(--mid-grey); margin-bottom:16px;">Measurable Sales KPIs</div>
+            <div style="display:flex; flex-direction:column; gap:10px;">
+              <div class="roi-metric">
+                <div class="roi-metric-label">Track for New Customers</div>
+                <div class="roi-metric-value">Total contract value of deals closed via Avatour sessions</div>
+              </div>
+              <div class="roi-metric">
+                <div class="roi-metric-label">Track for Existing Customers</div>
+                <div class="roi-metric-value">CSAT per session + NPS trend over time</div>
+              </div>
+              <div class="roi-metric">
+                <div class="roi-metric-label">Track Engagement Quality</div>
+                <div class="roi-metric-value">Session replays by customer = buying intent signal</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Safety -->
+    <div class="tab-panel" id="tab-safety">
+      <div class="use-case-card">
+        <div>
+          <div class="uc-header">
+            <div class="uc-icon">🦺</div>
+            <div class="uc-tag">Look Use Case · HSE</div>
+          </div>
+          <div class="uc-title">Health, Safety & Environmental Walks</div>
+          <div class="uc-desc">Enable HSE teams, auditors, and regulators to conduct thorough safety reviews without exposing additional personnel to operational hazards.</div>
+          <div class="stakeholder-block primary">
+            <div class="stakeholder-role">HSE Team / Management</div>
+            <span class="benefit-tag financial">Reduced exposure liability</span>
+            <span class="benefit-tag time">Faster compliance reporting</span>
+            <span class="benefit-tag strategic">Consistent documentation standard</span>
+          </div>
+          <div class="stakeholder-block">
+            <div class="stakeholder-role">Site Workforce</div>
+            <span class="benefit-tag soft">Fewer visitors on hazardous floor</span>
+            <span class="benefit-tag soft">Less disruption to operations</span>
+            <span class="benefit-tag strategic">Clear evidence trail for follow-up</span>
+          </div>
+        </div>
+        <div>
+          <div style="background: #FFF8F5; border-radius: 12px; padding: 28px; border: 1px solid #FFD4C2;">
+            <div style="font-size: 13px; font-weight: 600; color: var(--orange); margin-bottom: 12px;">⚠ Safety Multiplier Effect</div>
+            <div style="font-size: 14px; font-weight: 300; color: #666; line-height: 1.65;">Every additional person physically present on a hazardous site increases risk exposure. Avatour allows 10–20 experts to observe simultaneously — with zero additional physical presence required. The safety benefit compounds with the scale of participation.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gemba -->
+    <div class="tab-panel" id="tab-gemba">
+      <div class="use-case-card">
+        <div>
+          <div class="uc-header">
+            <div class="uc-icon">🔄</div>
+            <div class="uc-tag">Look Use Case · Ops</div>
+          </div>
+          <div class="uc-title">Gemba Walks & Continuous Improvement</div>
+          <div class="uc-desc">Bring lean manufacturing experts, process engineers, and leadership to the floor — remotely — to identify waste, share best practices across facilities, and drive consistent operational improvement.</div>
+          <div class="stakeholder-block primary">
+            <div class="stakeholder-role">Operations / CI Teams</div>
+            <span class="benefit-tag financial">Eliminate multi-site travel costs</span>
+            <span class="benefit-tag time">More walks, same headcount</span>
+            <span class="benefit-tag strategic">Benchmarking across facilities</span>
+          </div>
+          <div class="stakeholder-block">
+            <div class="stakeholder-role">Site / Plant Teams</div>
+            <span class="benefit-tag soft">Less disruption to production</span>
+            <span class="benefit-tag strategic">Access to global expertise</span>
+            <span class="benefit-tag soft">Recordable for team review</span>
+          </div>
+        </div>
+        <div>
+          <div style="background: var(--off-white); border-radius: 12px; padding: 28px; border: 1px solid var(--light-grey);">
+            <div style="font-size:12px; font-family: 'DM Mono', monospace; text-transform:uppercase; letter-spacing:0.1em; color: var(--mid-grey); margin-bottom:14px;">Chris Carpenter, Hill's Pet Nutrition</div>
+            <blockquote style="font-size:15px; font-style:italic; color:#444; line-height:1.65; border-left: 3px solid var(--orange); padding-left:14px;">"The time Avatour has saved us in travel and meetings has been great… less travel and less change of the plant production schedule means a more efficient production trial for our team."</blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Training -->
+    <div class="tab-panel" id="tab-training">
+      <div class="use-case-card">
+        <div>
+          <div class="uc-header">
+            <div class="uc-icon">🎓</div>
+            <div class="uc-tag">Show Use Case · L&D</div>
+          </div>
+          <div class="uc-title">Remote Training & Onboarding</div>
+          <div class="uc-desc">Train employees, contractors, or customers on physical sites without requiring everyone to travel. Record sessions for asynchronous learning — reviewed whenever needed.</div>
+          <div class="stakeholder-block primary">
+            <div class="stakeholder-role">L&D / Training Teams</div>
+            <span class="benefit-tag financial">Scale training without travel</span>
+            <span class="benefit-tag time">Reuse recorded sessions</span>
+            <span class="benefit-tag strategic">Consistent global standard</span>
+          </div>
+          <div class="stakeholder-block">
+            <div class="stakeholder-role">Trainees / New Employees</div>
+            <span class="benefit-tag soft">Site familiarisation before arrival</span>
+            <span class="benefit-tag soft">Improved work-life balance</span>
+            <span class="benefit-tag strategic">Access to remote / specialist sites</span>
+          </div>
+        </div>
+        <div>
+          <div style="background: var(--off-white); border-radius: 12px; padding: 28px; border: 1px solid var(--light-grey);">
+            <div style="font-size:12px; font-family: 'DM Mono', monospace; text-transform:uppercase; letter-spacing:0.1em; color: var(--mid-grey); margin-bottom:16px;">Talent Attraction Angle</div>
+            <div style="font-size:14px; font-weight:300; color:#666; line-height:1.65;">Show applicants their future workplace — virtually — during the recruitment process. A powerful differentiator for attracting top talent, especially for roles at remote, industrial, or specialist sites.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── ROI METRICS ────────────────────────────────────────────────── -->
+<section class="roi-section">
+  <div class="section-inner">
+    <div class="section-label">Quantifiable Value Dimensions</div>
+    <h2 class="section-title">Six categories of<br>measurable business value</h2>
+    <p class="section-intro">Avatour's ROI spans financial, operational, and strategic dimensions. Each is tracked within the platform's analytics dashboard.</p>
+
+    <div class="roi-grid">
+
+      <div class="roi-card financial">
+        <div class="roi-card-icon">✈️</div>
+        <div class="roi-card-title">Travel Cost Savings</div>
+        <div class="roi-card-desc">Calculated per session based on participant geolocation and site distance. Includes flights, accommodation, and per diem. Business class applied for intercontinental routes.</div>
+        <div class="roi-metric">
+          <div class="roi-metric-label">Measured as</div>
+          <div class="roi-metric-value">$ saved per session / per year</div>
+        </div>
+        <div class="roi-metric">
+          <div class="roi-metric-label">Example</div>
+          <div class="roi-metric-value">$78,876 for 12 US–Thailand participants</div>
+        </div>
+      </div>
+
+      <div class="roi-card time">
+        <div class="roi-card-icon">⏱</div>
+        <div class="roi-card-title">Productive Time Recovered</div>
+        <div class="roi-card-desc">Travel time eliminated is converted to financial value using participant day-rates. Intercontinental trips can consume 2–4 days of productive time per person.</div>
+        <div class="roi-metric">
+          <div class="roi-metric-label">Measured as</div>
+          <div class="roi-metric-value">Hours saved × daily rate</div>
+        </div>
+        <div class="roi-metric">
+          <div class="roi-metric-label">Tracked in-platform</div>
+          <div class="roi-metric-value">Aggregated by site, team, period</div>
+        </div>
+      </div>
+
+      <div class="roi-card carbon">
+        <div class="roi-card-icon">🌱</div>
+        <div class="roi-card-title">Carbon Emissions Avoided</div>
+        <div class="roi-card-desc">Calculated in tonnes CO₂ and equivalent trees saved. Feeds directly into ESG and sustainability reporting — a growing requirement from enterprise procurement teams.</div>
+        <div class="roi-metric">
+          <div class="roi-metric-label">Measured as</div>
+          <div class="roi-metric-value">Tonnes CO₂ avoided / trees equivalent</div>
+        </div>
+        <div class="roi-metric">
+          <div class="roi-metric-label">Example</div>
+          <div class="roi-metric-value">64,070 lbs (1 session, 12 participants)</div>
+        </div>
+      </div>
+
+      <div class="roi-card sales">
+        <div class="roi-card-icon">📈</div>
+        <div class="roi-card-title">Sales & Revenue Uplift</div>
+        <div class="roi-card-desc">For commercial show use cases. Track contracts influenced or won through Avatour-enabled customer engagements, and measure retention improvements via CSAT and NPS.</div>
+        <div class="roi-metric">
+          <div class="roi-metric-label">New Business</div>
+          <div class="roi-metric-value">TCV of contracts won via Avatour</div>
+        </div>
+        <div class="roi-metric">
+          <div class="roi-metric-label">Retention</div>
+          <div class="roi-metric-value">CSAT per session · NPS trend</div>
+        </div>
+      </div>
+
+      <div class="roi-card quality">
+        <div class="roi-card-icon">🧠</div>
+        <div class="roi-card-title">Decision Quality & Speed</div>
+        <div class="roi-card-desc">More experts can participate simultaneously in each session — increasing the quality of findings, reducing rework cycles, and accelerating time-to-decision across inspection and improvement workflows.</div>
+        <div class="roi-metric">
+          <div class="roi-metric-label">Measured as</div>
+          <div class="roi-metric-value">Participants per session · Rework cycles reduced</div>
+        </div>
+        <div class="roi-metric">
+          <div class="roi-metric-label">Value driver</div>
+          <div class="roi-metric-value">Faster corrective action → lower quality cost</div>
+        </div>
+      </div>
+
+      <div class="roi-card ai">
+        <div class="roi-card-icon">🤖</div>
+        <div class="roi-card-title">AI-Powered Reporting Efficiency</div>
+        <div class="roi-card-desc">Avatour's AI automatically transcribes sessions, pre-fills inspection templates, and links each finding to its 360° video evidence — eliminating hours of post-session report writing.</div>
+        <div class="roi-metric">
+          <div class="roi-metric-label">Measured as</div>
+          <div class="roi-metric-value">Hours saved on reporting per audit</div>
+        </div>
+        <div class="roi-metric">
+          <div class="roi-metric-label">Output</div>
+          <div class="roi-metric-value">Structured PDF report, immediately post-session</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- AI Callout -->
+    <div class="ai-callout">
+      <div style="position:relative; z-index:1;">
+        <div class="ai-callout-badge">✦ New Capability</div>
+        <h3>From session to<br>report in minutes.</h3>
+        <p>Avatour's AI captures what was seen and said during your 360° session — then does the work. Each finding is automatically linked to the exact video frame that documented it, creating an evidentiary chain no flat-video or text-note system can match.</p>
+      </div>
+      <div class="ai-features">
+        <div class="ai-feature-item">
+          <div class="ai-feature-dot"></div>
+          <div class="ai-feature-text">Live audio transcription</div>
+        </div>
+        <div class="ai-feature-item">
+          <div class="ai-feature-dot"></div>
+          <div class="ai-feature-text">AI-structured inspection template</div>
+        </div>
+        <div class="ai-feature-item">
+          <div class="ai-feature-dot"></div>
+          <div class="ai-feature-text">Findings linked to 360° video timestamps</div>
+        </div>
+        <div class="ai-feature-item">
+          <div class="ai-feature-dot"></div>
+          <div class="ai-feature-text">PDF report — no manual write-up</div>
+        </div>
+        <div class="ai-feature-item">
+          <div class="ai-feature-dot"></div>
+          <div class="ai-feature-text">Human review & edit before finalising</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── PROOF POINT ────────────────────────────────────────────────── -->
+<div class="proof-section">
+  <div class="proof-inner">
+    <div>
+      <div class="proof-eyebrow">Customer Proof Point</div>
+      <div class="proof-title">Colgate-Palmolive: $78K saved in a single session</div>
+      <div class="proof-desc">In January 2022, the team at Colgate-Palmolive invited 16 people to run a comprehensive review of a facility in Thailand — 12 of whom joined virtually from the US. What began as a pandemic solution became a permanent operational strategy.</div>
+    </div>
+    <div>
+      <div class="proof-stats">
+        <div class="proof-stat">
+          <div class="proof-stat-num">$78<span class="proof-stat-unit">K</span></div>
+          <div class="proof-stat-label">Total cost saved (flights, lodging, meals)</div>
+        </div>
+        <div class="proof-stat">
+          <div class="proof-stat-num">350<span class="proof-stat-unit">hrs</span></div>
+          <div class="proof-stat-label">Travel time recovered (flights alone)</div>
+        </div>
+        <div class="proof-stat">
+          <div class="proof-stat-num">64<span class="proof-stat-unit">K lbs</span></div>
+          <div class="proof-stat-label">CO₂ emissions avoided</div>
+        </div>
+        <div class="proof-stat">
+          <div class="proof-stat-num">1<span class="proof-stat-unit"> session</span></div>
+          <div class="proof-stat-label">16 participants · global coverage</div>
+        </div>
+        <div class="proof-quote">
+          <div class="proof-quote-text">"The time Avatour has saved us in travel and meetings has been great… less travel and less change of the plant production schedule means a more efficient production trial for our team."</div>
+          <div class="proof-quote-attr">Chris Carpenter · Factory Performance & Reliability Leader · Hill's Pet Nutrition</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── STAKEHOLDER VIEW ───────────────────────────────────────────── -->
+<section class="stakeholder-section">
+  <div class="section-inner">
+    <div class="section-label">By Stakeholder</div>
+    <h2 class="section-title">The right benefit,<br>for the right audience</h2>
+    <p class="section-intro">Different people experience Avatour's value differently. Here's how the business case lands across key organisational roles.</p>
+
+    <div class="stakeholder-grid">
+
+      <div class="sh-card">
+        <div class="sh-card-header">
+          <div class="sh-avatar">👔</div>
+          <div>
+            <div class="sh-name">CFO / Finance</div>
+            <div class="sh-role">Cost & ROI Focus</div>
+          </div>
+        </div>
+        <div class="sh-body">
+          <div class="sh-benefit-row">
+            <div class="sh-dot"></div>
+            <div class="sh-benefit-text">Quantifiable travel cost reduction per session and annually</div>
+            <div class="sh-benefit-type">Financial</div>
+          </div>
+          <div class="sh-benefit-row">
+            <div class="sh-dot"></div>
+            <div class="sh-benefit-text">Platform cost vs. travel budget comparison</div>
+            <div class="sh-benefit-type">Financial</div>
+          </div>
+          <div class="sh-benefit-row">
+            <div class="sh-dot"></div>
+            <div class="sh-benefit-text">ESG / carbon cost avoidance for reporting</div>
+            <div class="sh-benefit-type">Compliance</div>
+          </div>
+          <div class="sh-benefit-row">
+            <div class="sh-dot"></div>
+            <div class="sh-benefit-text">Built-in ROI tracking dashboard</div>
+            <div class="sh-benefit-type">Operational</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sh-card">
+        <div class="sh-card-header">
+          <div class="sh-avatar">⚙️</div>
+          <div>
+            <div class="sh-name">Operations / Quality</div>
+            <div class="sh-role">Efficiency & Compliance Focus</div>
+          </div>
+        </div>
+        <div class="sh-body">
+          <div class="sh-benefit-row">
+            <div class="sh-dot"></div>
+            <div class="sh-benefit-text">Faster audit cycles with more experts per session</div>
+            <div class="sh-benefit-type">Efficiency</div>
+          </div>
+          <div class="sh-benefit-row">
+            <div class="sh-dot"></div>
+            <div class="sh-benefit-text">AI-generated reports with 360° evidence trail</div>
+            <div class="sh-benefit-type">Quality</div>
+          </div>
+          <div class="sh-benefit-row">
+            <div class="sh-dot"></div>
+            <div class="sh-benefit-text">Consistent inspection standards across sites</div>
+            <div class="sh-benefit-type">Compliance</div>
+          </div>
+          <div class="sh-benefit-row">
+            <div class="sh-dot"></div>
+            <div class="sh-benefit-text">Recorded sessions for traceability and training</div>
+            <div class="sh-benefit-type">Documentation</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sh-card">
+        <div class="sh-card-header">
+          <div class="sh-avatar">🤝</div>
+          <div>
+            <div class="sh-name">Sales / Commercial</div>
+            <div class="sh-role">Revenue & Customer Focus</div>
+          </div>
+        </div>
+        <div class="sh-body">
+          <div class="sh-benefit-row">
+            <div class="sh-dot"></div>
+            <div class="sh-benefit-text">Differentiate through innovative customer experience</div>
+            <div class="sh-benefit-type">Strategic</div>
+          </div>
+          <div class="sh-benefit-row">
+            <div class="sh-dot"></div>
+            <div class="sh-benefit-text">Remove travel barriers to win global deals</div>
+            <div class="sh-benefit-type">Revenue</div>
+          </div>
+          <div class="sh-benefit-row">
+            <div class="sh-dot"></div>
+            <div class="sh-benefit-text">Track CSAT and NPS per engagement</div>
+            <div class="sh-benefit-type">CX</div>
+          </div>
+          <div class="sh-benefit-row">
+            <div class="sh-dot"></div>
+            <div class="sh-benefit-text">Replays enable asynchronous buyer alignment</div>
+            <div class="sh-benefit-type">Enablement</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sh-card">
+        <div class="sh-card-header">
+          <div class="sh-avatar">🦺</div>
+          <div>
+            <div class="sh-name">HSE / Safety</div>
+            <div class="sh-role">Risk & Compliance Focus</div>
+          </div>
+        </div>
+        <div class="sh-body">
+          <div class="sh-benefit-row">
+            <div class="sh-dot"></div>
+            <div class="sh-benefit-text">Reduce headcount exposure on hazardous sites</div>
+            <div class="sh-benefit-type">Safety</div>
+          </div>
+          <div class="sh-benefit-row">
+            <div class="sh-dot"></div>
+            <div class="sh-benefit-text">Include more safety experts per walkthrough</div>
+            <div class="sh-benefit-type">Quality</div>
+          </div>
+          <div class="sh-benefit-row">
+            <div class="sh-dot"></div>
+            <div class="sh-benefit-text">Auto-generated, evidence-backed safety reports</div>
+            <div class="sh-benefit-type">Compliance</div>
+          </div>
+          <div class="sh-benefit-row">
+            <div class="sh-dot"></div>
+            <div class="sh-benefit-text">Documented visual record for audits & incidents</div>
+            <div class="sh-benefit-type">Traceability</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sh-card">
+        <div class="sh-card-header">
+          <div class="sh-avatar">🌱</div>
+          <div>
+            <div class="sh-name">Sustainability / ESG</div>
+            <div class="sh-role">Environmental Focus</div>
+          </div>
+        </div>
+        <div class="sh-body">
+          <div class="sh-benefit-row">
+            <div class="sh-dot"></div>
+            <div class="sh-benefit-text">Verified CO₂ savings per session, aggregated annually</div>
+            <div class="sh-benefit-type">Environmental</div>
+          </div>
+          <div class="sh-benefit-row">
+            <div class="sh-dot"></div>
+            <div class="sh-benefit-text">Feeds ESG / Scope 3 emissions reporting</div>
+            <div class="sh-benefit-type">Reporting</div>
+          </div>
+          <div class="sh-benefit-row">
+            <div class="sh-dot"></div>
+            <div class="sh-benefit-text">Demonstrate green commitment to customers</div>
+            <div class="sh-benefit-type">Brand</div>
+          </div>
+          <div class="sh-benefit-row">
+            <div class="sh-dot"></div>
+            <div class="sh-benefit-text">Trees equivalent metric for communications</div>
+            <div class="sh-benefit-type">Comms</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sh-card">
+        <div class="sh-card-header">
+          <div class="sh-avatar">👤</div>
+          <div>
+            <div class="sh-name">Employee / Participant</div>
+            <div class="sh-role">Personal & Wellbeing Focus</div>
+          </div>
+        </div>
+        <div class="sh-body">
+          <div class="sh-benefit-row">
+            <div class="sh-dot"></div>
+            <div class="sh-benefit-text">Improved work-life balance — less time in transit</div>
+            <div class="sh-benefit-type">Wellbeing</div>
+          </div>
+          <div class="sh-benefit-row">
+            <div class="sh-dot"></div>
+            <div class="sh-benefit-text">Access world-class sites without travel burden</div>
+            <div class="sh-benefit-type">Access</div>
+          </div>
+          <div class="sh-benefit-row">
+            <div class="sh-dot"></div>
+            <div class="sh-benefit-text">Contribute expertise across more sessions</div>
+            <div class="sh-benefit-type">Impact</div>
+          </div>
+          <div class="sh-benefit-row">
+            <div class="sh-dot"></div>
+            <div class="sh-benefit-text">Attractive use of technology for talent retention</div>
+            <div class="sh-benefit-type">Retention</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── SOFT BENEFITS ─────────────────────────────────────────────── -->
+<section class="soft-section">
+  <div class="section-inner">
+    <div class="section-label">Beyond the Spreadsheet</div>
+    <h2 class="section-title">Strategic & soft benefits<br>that compound over time</h2>
+    <p class="section-intro">Not every benefit shows up immediately in a P&L. These advantages grow in value the longer Avatour is embedded in your operations.</p>
+
+    <div class="soft-grid">
+      <div class="soft-card">
+        <div class="soft-card-icon">🌍</div>
+        <div class="soft-card-title">Global Site Visibility</div>
+        <div class="soft-card-text">Give any site — however remote — the same visibility as your flagship facility. Overcome geography as a constraint on decision-making and oversight.</div>
+      </div>
+      <div class="soft-card">
+        <div class="soft-card-icon">🔁</div>
+        <div class="soft-card-title">Replayable Institutional Knowledge</div>
+        <div class="soft-card-text">Every recorded session becomes a permanent, searchable reference. Review critical decisions, onboard new team members, and prevent knowledge loss when people leave.</div>
+      </div>
+      <div class="soft-card">
+        <div class="soft-card-icon">🏆</div>
+        <div class="soft-card-title">Innovation Brand Signal</div>
+        <div class="soft-card-text">Using Avatour signals to customers, partners, and talent that your organisation embraces forward-thinking technology — a differentiator in competitive markets.</div>
+      </div>
+      <div class="soft-card">
+        <div class="soft-card-icon">⚖️</div>
+        <div class="soft-card-title">Reduced Operational Disruption</div>
+        <div class="soft-card-text">Virtual visitors reduce interference with live production schedules, minimise safety briefing overhead, and allow sites to maintain throughput during reviews.</div>
+      </div>
+      <div class="soft-card">
+        <div class="soft-card-icon">🎯</div>
+        <div class="soft-card-title">Better Talent Attraction</div>
+        <div class="soft-card-text">Show candidates their future workplace virtually during recruitment. Particularly effective for remote, industrial, or specialist sites that are hard to visit.</div>
+      </div>
+      <div class="soft-card">
+        <div class="soft-card-icon">🤲</div>
+        <div class="soft-card-title">Improved Work-Life Balance</div>
+        <div class="soft-card-text">Eliminating international travel improves wellbeing for employees and customer-side participants alike — a benefit that correlates with retention and engagement.</div>
+      </div>
+      <div class="soft-card">
+        <div class="soft-card-icon">🛡️</div>
+        <div class="soft-card-title">Reduced Safety Exposure</div>
+        <div class="soft-card-text">Hazardous facilities can be reviewed comprehensively by large expert teams — with zero additional physical presence and zero incremental risk.</div>
+      </div>
+      <div class="soft-card">
+        <div class="soft-card-icon">🔗</div>
+        <div class="soft-card-title">Deeper Stakeholder Inclusion</div>
+        <div class="soft-card-text">Remove the participation bottleneck. Invite every relevant expert to every session, regardless of location — increasing both buy-in and the quality of outcomes.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── STRATEGIC ──────────────────────────────────────────────────── -->
+<section class="strategic-section" style="background: var(--white);">
+  <div class="section-inner">
+    <div class="section-label">Strategic Positioning</div>
+    <h2 class="section-title">Three pillars of<br>long-term competitive advantage</h2>
+
+    <div class="strategic-columns">
+      <div class="strategic-col" data-num="01">
+        <div class="strategic-col-icon">🏅</div>
+        <div class="strategic-col-title">Superior Customer Experience</div>
+        <div class="strategic-col-text">Elevate every customer touchpoint that involves a physical site — from initial qualification tours to ongoing account reviews.</div>
+        <ul>
+          <li>Immersive virtual facility tours at zero cost to the buyer</li>
+          <li>Contract manufacturing pitches with real-time Q&A</li>
+          <li>Ongoing relationship sessions without travel friction</li>
+          <li>CSAT and NPS tracking built into every session</li>
+        </ul>
+      </div>
+      <div class="strategic-col" data-num="02">
+        <div class="strategic-col-icon">🔬</div>
+        <div class="strategic-col-title">Operational Excellence at Scale</div>
+        <div class="strategic-col-text">Apply best practices from your best sites to all sites — systematically — without flying experts around the world.</div>
+        <ul>
+          <li>Cross-facility Gemba programmes without travel budget</li>
+          <li>Centralised quality oversight across global supply chains</li>
+          <li>AI-powered documentation at every inspection</li>
+          <li>Standardised reporting for regulatory compliance</li>
+        </ul>
+      </div>
+      <div class="strategic-col" data-num="03">
+        <div class="strategic-col-icon">🧲</div>
+        <div class="strategic-col-title">Employer Brand & Talent Edge</div>
+        <div class="strategic-col-text">Signal to the market that your organisation operates at the frontier of enterprise technology — and attract the talent that wants to work there.</div>
+        <ul>
+          <li>Virtual office and facility tours during hiring process</li>
+          <li>Demonstrates commitment to work-life balance</li>
+          <li>Tangible ESG contribution for sustainability-focused hires</li>
+          <li>Technology-forward brand signal in competitive markets</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CTA ───────────────────────────────────────────────────────── -->
+<div class="cta">
+  <div class="cta-inner">
+    <h2>See the ROI for<br>your organisation.</h2>
+    <p>Book a 30-minute session and we'll walk you through your facility in 360° — and show you exactly what your team stands to save.</p>
+    <a href="#" class="cta-btn">Book a Demo →</a>
+  </div>
+</div>
+
+<script>
+  function showTab(name) {
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('tab-' + name).classList.add('active');
+    event.target.classList.add('active');
+  }
+
+  // Intersection Observer for fade-in elements beyond the hero
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.roi-card, .soft-card, .sh-card, .strategic-col').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    observer.observe(el);
+  });
+</script>
+
+</body>
+</html>
