@@ -173,7 +173,7 @@ You can also print a report with all notes, topics etc. even a full transciption
 
 
 
-And here are the collaboration tools and menu items available when presenting an Asset in a <u>Workspace</u>. Most tools are like in a meeting but some are missing as these do only make sense when others are present (POV and Spotlight) and some are only available in workspaces - mainly video opertions related, which are explained below.
+And here are the collaboration tools and menu items available when presenting an Asset in a <u>Workspace</u>. Most tools are like in a meeting but some are missing as these do only make sense when others are present (POV and Spotlight) and some are only available in workspaces - mainly video operations related, which are explained below.
 
 ![Avatour Menu while Presenting an Asset outside a meeting, e.g. when visiting a workspace](https://res.cloudinary.com/avatour/image/upload/v1772303705/avatour-screenshot-present-asset-menu-workspace_iri8gc.png) *Avatour Menu when presenting an Asset in a Workspace*
 
