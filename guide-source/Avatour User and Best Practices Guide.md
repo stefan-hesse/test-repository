@@ -15,7 +15,7 @@ Here are some good starting points to understand Avatour:
 
 
 
-## 2. Avatour User Types
+## 2. Avatour User Types - Test
 
 ### 2.1 Users not needing to be a Registered User
 
