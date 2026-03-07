@@ -41,9 +41,9 @@ This user only has access to view Assets within a Workspace they have been added
 
 **Admin User** - These users have host feature access and can manage all aspects of the Avatour account. Additional Admin privileges include:
 
-- Account Assets: View all assets that have been uploaded by all Host users in your account. This tab is seen within the "Assets" section of the Host Dashboard
+- Account: Create new Host users, and upgrade Guest users to Host. Deleting users (Admin users have to be changed to Host User before they can be deleted / removed. When deleting a user one can transfer the assets of that Host User to another Host / Admin user.
 - Settings: Decide if all meetings by default do not require a Host to be present, or if the Igloo projection feature is enabled. If you have requested a custom domain, Admins may also edit the Host Dashboard and meeting room branding images.
-- User Management: Create new Host users, and upgrade Guest users to Host. Deleting users (Admin users have to be changed to Host User before they can be deleted / removed. When deleting a user one can transfer the assets of that Host User to another Host / Admin user.
+- Account Assets: View all assets that have been uploaded by all Host users in your account. This tab is seen within the "Assets" section of the Host Dashboard
 - View all Host Analytics: View all account host's meeting analytics
 
 
@@ -68,9 +68,12 @@ You can join a meeting and visit a workspace from a range of compatible Meta and
 
 ### 3.2 Meeting and Workspace Collaboration Tools {#meeting-tools}
 
-You can access Assets and collaborate in Meetings (synchronously = together with other meeting participants like in any other Video Conference) as well as in Workspaces (asynchronously, 24/7). The collaboration tools are very similar in both but there are some differences due to the collaboration context (sync versus async).
+You can access Assets and collaborate in 
 
-Below are from left to right short explanations of the above meeting menu items. For more details see also [What meeting tools are available to remote guests on the web?](https://avatour.com/support/what-meeting-tools-are-available-to-remote-guests-on-the-web) ***Check link  To Do !!!***
+- Meetings (synchronously = together with other meeting participants like in any other Video Conference) 
+- Workspaces (asynchronously, 24/7). 
+
+The collaboration tools are very similar in both but there are some differences due to the collaboration context (sync versus async).
 
 Here is an example of a view in an Avatour Meeting showing in the left side pane the Assets in the Workspace in which the Meeting happens, the Canvas in the middle (blank - here Assets can be shown), and in the right side pane the Meeting Participants.
 
@@ -155,6 +158,10 @@ Core collaborators (Host, Avatour Collaborator Viewers and Editors) can update a
 
 You can share a link which leads directly to the note. Copy the link and use / embed wherever you want.
 
+<u>Voice Command Generated Notes</u> -  It is now also possible to generate notes through voice commands (e.g. saying "take note") from an audio track in any video (live / recorded, 360° / 2D). Placeholders are shown on the video timeline and the note position can then be dragged in the video to the exact position and of course also edited with further content.
+
+![Avatour Notes - Voice Command Generated](https://res.cloudinary.com/avatour/image/upload/v1772921944/avatour-screenshot-notes-voice-command-generated_ic5cu4.png) *Avatour Notes - Voice Command Generated*
+
 **Side Panel with Notes, Executive Summary, Topics etc. and Reports** - show all notes and topics of an asset in a side panel (click on the list icon next to the note icon in the above menu). Click in the side panel in the notes / topics to get to the note / topic in the video. In the Notes panel you can apply Note filters.
 
 ![Avatour Asset Executive Summary](https://res.cloudinary.com/avatour/image/upload/v1772377209/avatour-screenshot-present-asset-menu-meeting-showing-exec-summary_cqpqbs.png) *Avatour Executive Summary while presenting an Asset in a Meeting*
@@ -193,19 +200,9 @@ When you log in to your Avatour User Accoung you will access the Web Console.
 
 On the left hand side you will see the following menu items.
 
-![Avatour Web Console - Main Menu](https://res.cloudinary.com/avatour/image/upload/v1772366766/avatour-screenshot-main-menu_qwpthq.png)
-
- *Avatour Web Console - Main Menu*
+![Avatour Web Console - Main Menu](https://res.cloudinary.com/avatour/image/upload/v1772366766/avatour-screenshot-main-menu_qwpthq.png) *Avatour Web Console - Main Menu*
 
 **Workspaces** - Workspaces can be set up for many purposes (e.g. sites, projects, customer, supplier) and are organisational units helping you to work efficiently in a controlled environment comprising of the following elements.
-
-***2 videos still OK?? Show here or above under meetings and below with workspace details - To Do !!!*** 
-
-[Workspaces](https://avatour.com/support/video-tutorials-web-console-features-workspaces)
-
-[Managing access to Avatour meetings](https://avatour.com/support/managing-access-to-avatour-meetings)
-
-Please watch this video to see how to keep assets, meetings and collaborators organized (e.g. by project, site, customer, supplier) and the various workspace settings. And here is more information on Managing access to Avatour meetings
 
 **Assets** - All your assets (videos, pictures, pdfs) in one place under <u>My Assets</u>. Admin users can see all <u>Account Assets</u> across all host users. <u>Shared Assets</u> are those which hosts share with all other users on the Avatour platform. Here you can rename assets, activate face blur and generate topics.
 
@@ -227,13 +224,15 @@ Please watch this video to see how to keep assets, meetings and collaborators or
 
 ### 4.2.1 Workspaces
 
-Workspaces can be set up for many purposes (e.g. sites, projects, customer, supplier) and are organisational units helping you to work efficiently in a controlled environment. 
+Workspaces can be set up for many purposes (e.g. sites, projects, customer, supplier) and are organisational units helping you to work efficiently in a controlled environment.  You can create a new one with the "New Workspace" button in the upper right corner of the screen.
 
 ![Avatour Web Console - Main Menu Item Workspaces](https://res.cloudinary.com/avatour/image/upload/v1772360323/avatour-screenshot-main-menu-workspaces_hnhkjj.png) *Avatour Web Console - Main Menu Item Workspaces*
 
-?? Please watch this video to see how to keep assets, meetings and collaborators organized (e.g. by project, site, customer, supplier) and the various workspace settings. ***Add create workspace sentence / screenshot?***
+Click notifications (the bell icon) to get a summary of activities in a workspace over the last 7 days.
 
-Here is a view of the structure in a workspace.
+![Avatour Web Console - Workspace Recent Activities](https://res.cloudinary.com/avatour/image/upload/v1772919758/avatour-screenshot-main-menu-workspace-recent-activities_gby1ws.png) *Avatour Web Console - Workspace Recent Activities*
+
+You can enter a workspace by clicking on it. Here is a view of the structure in a workspace.
 
 ![Avatour Workspace with Assets Panel, blank Canvas and Meetings Panel](https://res.cloudinary.com/avatour/image/upload/v1772198701/avatour-screenshot-workspace-assets-blank-meetings_qeumpl.png) *Avatour Workspace with Assets Panel (left), blank Canvas (center) and Meetings Panel (right)*
 
@@ -248,13 +247,9 @@ Each workspace comprises of the following elements (explained from left to right
 
 > N.B.: Several users can access a workspace at the same time without “meeting” each other. This makes a “workspace” different from a “meeting”. In addition to using the Collaborator roles you can also make the Workspace Public and give access through the various Meeting Access settings - for both see below under “Settings”.
 
-**Report** - Create a report against the checklist selected in the workspace settings based on the workspace assets that you choose:
+**Report** - Create a report against the checklist selected in the workspace settings based on the workspace assets that you choose. You can edit the proposed answers.
 
-***better show side by side with a report example - explain AI - beta feature To Do !!!***
-
-![Avatour Workspace Report Asset Selection](https://res.cloudinary.com/avatour/image/upload/v1772378496/avatour-screenshot-workspace-report-asset-selection_jmojyu.png) 
-
-*Avatour Workspace Report Asset Selection*
+![Avatour Workspace Report and Asset Selection](https://res.cloudinary.com/avatour/image/upload/v1772924118/avatour-screenshot-asset-selection-and-workspace-report_itjt8f.png) *Avatour Workspace Report and Asset Selection*
 
 **Map** - For assets with GPS meta data show the location on the map / satellite image.
 
@@ -266,13 +261,11 @@ Each workspace comprises of the following elements (explained from left to right
 
 **(1) Workspace Settings**
 
-<u>Report Template</u> - select a checklist template against which our AI will report based on the chosen workspace assets.
-
-***Report image needed - not neccessary to show here if we show it already above - TO DO !!!***
+<u>Report Template</u> - select a checklist template against which our AI will report based on the chosen workspace assets (see also above Report)
 
 <u>Enable Notifications</u> - Get daily digest emails to notify collaborators when Issues and Actions of Notes change status (for example, In Progress → Resolved).
 
-***Email notification image needed - TO DO !!!***
+![Email Notifications - Example](https://res.cloudinary.com/avatour/image/upload/c_crop,h_600,w_600,x_170,y_60/v1772804314/Screenshot_2026-03-05_140654_bjk0xk.png) *Email Notifications - Example*
 
 <u>Public Workspace</u> - The workspace is like a website - everybody with the workspace link can view all assets and has direct access to assets via asset links. Direct asset links only work with the Public Workspace setting (Note: Non-collaborators will not see meeting info / join button).
 
@@ -308,11 +301,7 @@ Here you can manage your profile details like your password.
 
 ### Settings
 
-This menu item is only available to Admin Users. Here you can (1) manage default settings for your account and even look those settings so that other users can not change those settings and (2) adjust some customise some branding elements (e.g. your logo. For more info see How do I add my company branding to the Avatour experience?).
-
-***Link still OK - To Do !!!*** [How do I add my company branding to the Avatour experience?).](https://avatour.com/support/how-do-i-add-my-company-branding-to-the-avatour-experience)
-
-***Show Avatour with Dropdown Arrow everywhere? - To Do !!!*** 
+This menu item is only available to Admin Users. Here you can (1) manage default settings for your account and even look those settings so that other users can not change those settings and (2) adjust some customise some branding elements (e.g. your logo. For more info see [How do I add my company branding to the Avatour experience?](https://avatour.com/support/how-do-i-add-my-company-branding-to-the-avatour-experience)).
 
 ![Avatour Web Console - Main Menu Item Settings (1 of 2)](https://res.cloudinary.com/avatour/image/upload/v1772360321/avatour-screenshot-main-menu-settings-1-of-2_fsaatf.png) *Avatour Web Console - Main Menu Item Settings (1 of 2)*
 
@@ -320,11 +309,9 @@ This menu item is only available to Admin Users. Here you can (1) manage default
 
 ### Account
 
-Here Admin Users can manage your users and devices (360° cams allocted to your Avatour platform instance).
+Here Admin Users can manage your registered users (host, guest, admin) and capture devices (360° cams allocated to your Avatour platform instance).
 
-![Avatour Web Console - Main Menu Item Account (1 of 2)](https://res.cloudinary.com/avatour/image/upload/v1772360318/avatour-screenshot-main-menu-account-1-of-2_oq5amr.png) *Avatour Web Console - Main Menu Item Account (1 of 2)*
-
-![Avatour Web Console - Main Menu Item Account (2 of 2)](https://res.cloudinary.com/avatour/image/upload/v1772360316/avatour-screenshot-main-menu-account-2-of-2_udgyjz.png) *Avatour Web Console - Main Menu Item Account (2 of 2)*
+![Avatour Web Console - Main Menu Item Account (1 of 2)](https://res.cloudinary.com/avatour/image/upload/v1772803328/avatour-screenshot-main-menu-account-1-of-2_oq5amr.png) *Avatour Web Console - Main Menu Item Account*
 
 ### Analytics
 
@@ -454,15 +441,17 @@ Connect to the meeting using your smartphone’s / tablet’s / laptop’s brows
 
 ### 5.4 Avatour Camera App
 
-***Add Top level menu screen shot from Visor - To Do !!!***
+Here are (1) the Top Level, (2) Settings and (3) Network Settings menus.
 
-***Links still up to date? To Do !!!***
+![Avatour 360° Camera App - Three Menus](https://res.cloudinary.com/avatour/image/upload/v1772918698/avatour-screenshot-cam-app-3-menu-screens_nju8bt.png) *Avatour 360° Camera App - 3 Menus*
 
-**Live 360° Meeting** - For a detailed description see [How to start a Live Capture meeting with your Pilot camera?](https://avatour.com/support/how-to-start-a-live-capture-meeting-with-your-pilot-camera)
+**Quick Capture** - For offline 360° video recording. - For a detailed description see [How do you record and upload 360 videos with the Avatour App?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app). We recommend using an external audio device (connected via bluetooth).
 
-> When hosting a Live Capture meeting with your 360 camera, you will have similar meeting tools available to you that mirrors the web experience. Here is a link to our Knowledge Base article that explains these tools in more detail: [Operator App Tools](https://avatour.com/support/what-avatour-app-tools-are-available-to-labpano-pilot-camera-operators)
+**Live Meeting** - For live 360° Video Conferencing. You will see your workspaces and clicking on one will initiate the live video stream from the 360° camera. Before you can join the meeting with your 360° cam you need to connect an audio device via bluetooth. For a detailed description see [How to start a Live Capture meeting with your Pilot camera?](https://avatour.com/support/how-to-start-a-live-capture-meeting-with-your-pilot-camera)
 
-**Offline 360° video recording with Quick Capture** - For a detailed description see [How do you record and upload 360 videos with the Avatour App?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app):
+> When hosting a Live Capture meeting with your 360 camera, you will have similar meeting tools available to you that mirror the web experience. Here is a link to our Knowledge Base article that explains these tools in more detail: [Operator App Tools](https://avatour.com/support/what-avatour-app-tools-are-available-to-labpano-pilot-camera-operators)
+
+**Gallery** - Find here all your 360° videos and pictures for upload to the Avatour Web Console.
 
 **Settings** - Within Settings, you have the following options:
 
@@ -477,6 +466,8 @@ Connect to the meeting using your smartphone’s / tablet’s / laptop’s brows
   - **Target Bitrate**: Set the target bitrate for Quick Capture uploads between 5 Mbps and 20 Mbps. Lower bitrates increase upload speeds, but will decrease video quality. Recommended: 20 Mbps
   - **Protective Lenses**: *See Protective Lenses section for Live Capture above*
 - **About**: View device serial number and software version
+
+**Account** - For login with your Avatour host or admin account.
 
 ## 6. Best Practice Advice
 
