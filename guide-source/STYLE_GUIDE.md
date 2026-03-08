@@ -64,6 +64,34 @@ No. The `dist/` folder in your local repository is just a local copy — the Act
 
 ---
 
+## Production migration — pending (Prasad)
+
+The current setup on Stefan's personal GitHub account is a test environment. When ready to move to production:
+
+1. Create a repository in **Bitbucket** (Avatour's company standard)
+2. Convert `build-guide.yml` to a **Bitbucket Pipelines** file (`bitbucket-pipelines.yml`) — same logic, different syntax
+3. Host the embed file on **AWS S3** instead of GitHub Pages
+4. Update the iframe `src` in Webflow once to point to the new S3 URL
+
+Everything else — the MD source file, `build.py`, Typora workflow, and Cloudinary screenshots — moves across unchanged.
+
+**Italian and Spanish translation — activate at migration time:**
+
+Updated `build.py` and `build-guide.yml` files are already prepared in the Claude outputs folder. To activate:
+
+1. Replace the current `build.py` and `build-guide.yml` with the prepared versions
+2. Set up an Anthropic API account at **console.anthropic.com** using the Avatour company email
+3. Add initial credits — set a monthly spend limit of ~$10 (a full translation run costs ~$0.10–0.30)
+4. Add the API key as a Bitbucket Pipelines secret named `ANTHROPIC_API_KEY`
+5. The build will then produce 9 output files: standalone, embed, and print for EN, IT, and ES
+6. The guide header will show an EN / IT / ES language switcher
+
+Until the API key is configured the build produces English only — no errors.
+
+---
+
+
+
 ## Basic Markdown rules
 
 | What you want | What you type |
@@ -328,32 +356,6 @@ The Webflow page contains only:
 | Screenshot not updating in Typora | Image cache | Cmd+Shift+R, or quit and reopen |
 | Build fails in GitHub Actions | Error in MD file | Check Actions log for the error line |
 | TOC link doesn't jump to section | Anchor mismatch | Check `{#anchor-id}` matches exactly |
-
----
-
-## Production migration — pending (Prasad)
-
-The current setup on Stefan's personal GitHub account is a test environment. When ready to move to production:
-
-1. Create a repository in **Bitbucket** (Avatour's company standard)
-2. Convert `build-guide.yml` to a **Bitbucket Pipelines** file (`bitbucket-pipelines.yml`) — same logic, different syntax
-3. Host the embed file on **AWS S3** instead of GitHub Pages
-4. Update the iframe `src` in Webflow once to point to the new S3 URL
-
-Everything else — the MD source file, `build.py`, Typora workflow, and Cloudinary screenshots — moves across unchanged.
-
-**Italian and Spanish translation — activate at migration time:**
-
-Updated `build.py` and `build-guide.yml` files are already prepared in the Claude outputs folder. To activate:
-
-1. Replace the current `build.py` and `build-guide.yml` with the prepared versions
-2. Set up an Anthropic API account at **console.anthropic.com** using the Avatour company email
-3. Add initial credits — set a monthly spend limit of ~$10 (a full translation run costs ~$0.10–0.30)
-4. Add the API key as a Bitbucket Pipelines secret named `ANTHROPIC_API_KEY`
-5. The build will then produce 9 output files: standalone, embed, and print for EN, IT, and ES
-6. The guide header will show an EN / IT / ES language switcher
-
-Until the API key is configured the build produces English only — no errors.
 
 ---
 
