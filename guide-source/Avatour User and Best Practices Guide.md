@@ -293,13 +293,13 @@ Here you manage all your assets (360° / 2D videos / pictures and pdf files). Yo
 
 ![Avatour Web Console - Main Menu Item Assets](https://res.cloudinary.com/avatour/image/upload/v1772360326/avatour-screenshot-main-menu-assets_ky5emz.png) *Avatour Web Console - Main Menu Item Assets*
 
-### Profile
+### 4.2.3 Profile
 
 Here you can manage your profile details like your password.
 
 ![Avatour Web Console - Main Menu Item Profile](https://res.cloudinary.com/avatour/image/upload/v1772360324/avatour-screenshot-main-menu-profile_j934va.png) *Avatour Web Console - Main Menu Item Profile*
 
-### Settings
+### 4.2.4 Settings
 
 This menu item is only available to Admin Users. Here you can (1) manage default settings for your account and even look those settings so that other users can not change those settings and (2) adjust some customise some branding elements (e.g. your logo. For more info see [How do I add my company branding to the Avatour experience?](https://avatour.com/support/how-do-i-add-my-company-branding-to-the-avatour-experience)).
 
@@ -307,13 +307,13 @@ This menu item is only available to Admin Users. Here you can (1) manage default
 
 ![Avatour Web Console - Main Menu Item Settings (2 of 2)](https://res.cloudinary.com/avatour/image/upload/v1772360320/avatour-screenshot-main-menu-settings-2-of-2_qimc09.png) *Avatour Web Console - Main Menu Item Settings (2 of 2)*
 
-### Account
+### 4.2.5 Account
 
 Here Admin Users can manage your registered users (host, guest, admin) and capture devices (360° cams allocated to your Avatour platform instance).
 
 ![Avatour Web Console - Main Menu Item Account (1 of 2)](https://res.cloudinary.com/avatour/image/upload/v1772803328/avatour-screenshot-main-menu-account-1-of-2_oq5amr.png) *Avatour Web Console - Main Menu Item Account*
 
-### Analytics
+### 4.2.6 Analytics
 
 This section gives you information about your meetings and savings.
 
@@ -323,13 +323,13 @@ This section gives you information about your meetings and savings.
 
 ![Avatour Web Console - Main Menu Item Analytics (3 of 3)](https://res.cloudinary.com/avatour/image/upload/v1772360312/avatour-screenshot-main-menu-analytics-3-of-3_hn2pmr.png) *Avatour Web Console - Main Menu Item Analytics (3 of 3)*
 
-### Device Login
+### 4.2.7 Device Login
 
 Use this section to enter the 6-digit code which is shown on your 360° cam (e.g. when you need to log in again or sometimes it needs refreshing). This is a more convenient way that entering your login credentials through the small keyboard in the 360° cam screen.
 
 ![Avatour Web Console - Main Menu Item Device Login](https://res.cloudinary.com/avatour/image/upload/v1772360310/avatour-screenshot-main-menu-device-login_vlymhj.png) *Avatour Web Console - Main Menu Item Device Login*
 
-### Tutorials
+### 4.2.8 Tutorials
 
 Here you can start tutorials on certain topics.
 
@@ -508,7 +508,7 @@ For your first uses and getting familiar with the Avatour Web Console and the Av
 
 - If you are planning to use the 360 camera in a high temperature environment, it’s recommended to use the cooling module (Pilot Pano only). This will help reduce the chances of the camera overheating and shutting down automatically.
 
-### When Operating the Cam Onsite for a 360° Video Live Meeting
+### 6.3 When Operating the Cam Onsite for a 360° Video Live Meeting
 
 - When operating the camera, make sure that you are walking slowly. This helps with the video quality and reduces any potential video downtime when the camera’s network connection switches between WiFi access points.
 
