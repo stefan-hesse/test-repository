@@ -499,8 +499,11 @@ body.print-mode .faq-a { display: block !important; padding-bottom: 10px; }
     <div class="sidenav-section">Guide sections</div>
 <a href="#for-all-avatour-users">1. For All Avatour Users</a>
 <a href="#2-avatour-user-types">2. Avatour User Types</a>
-<a href="#21-users-not-needing-to-be-a-registered-user" class="sub">2.1 Users not needing to be a Registered User</a>
-<a href="#22-registered-users" class="sub">2.2 Registered Users</a>
+<a href="#21-meeting-attendees-no-account-required" class="sub">2.1 Meeting Attendees (No Account required)</a>
+<a href="#22-registered-users">2.2 Registered Users</a>
+<a href="#221-guest-users" class="sub">2.2.1 Guest Users</a>
+<a href="#222-licensed-users-web-console-access" class="sub">2.2.2 Licensed Users (Web Console Access)</a>
+<a href="#223-workspace-collaborator-permissions" class="sub">2.2.3 Workspace Collaborator Permissions</a>
 <a href="#for-remote-meeting-participants-and-workspace-visitors">3. For Remote Meeting Participants and Workspace Visitors</a>
 <a href="#how-to-join-an-avatour-meeting-and-visit-an-avatour-workspace" class="sub">3.1 How to Join an Avatour meeting and Visit an Avatour Workspace</a>
 <a href="#meeting-tools" class="sub">3.2 Meeting and Workspace Collaboration Tools</a>
@@ -543,35 +546,102 @@ body.print-mode .faq-a { display: block !important; padding-bottom: 10px; }
 
       <h1 id="avatour-user-and-best-practices-guide">Avatour User and Best Practices Guide</h1>
 <h2 id="for-all-avatour-users">1. For All Avatour Users</h2>
-<p>Here are some good starting points to understand Avatour:</p>
+<p>If you are new to Avatour, the following resources provide a helpful introduction to the platform and its capabilities:</p>
 <ol>
 <li><a href="https://avatour.com/how-it-works">Avatour How it Works video</a> 
-   This video will give a good overview of the main features.</li>
+   A short overview of Avatour’s main features and how the platform enables immersive remote collaboration.</li>
 <li><a href="https://avatour.com/faqs">FAQs</a> 
-   Read our Frequently Asked Questions</li>
+   Answers to frequently asked questions</li>
 <li><a href="https://avatour.com/glossary">Glossary</a> 
-   Here you find the major Avatour Terms</li>
+   Definitions of key Avatour terms and concepts.</li>
 <li>Website
-   Have a look at the <a href="https://avatour.com/features">Avatour Features</a> and also at the dedicated pages on Use Cases and Industries especially relevent to you.</li>
+   Have a look at the <a href="https://avatour.com/features">Avatour Features</a> page along with the dedicated Use Cases and Industries sections to learn how Avatour can support your specific needs.</li>
 </ol>
 <h2 id="2-avatour-user-types">2. Avatour User Types</h2>
-<h3 id="21-users-not-needing-to-be-a-registered-user">2.1 Users not needing to be a Registered User</h3>
-<h4 id="211-meeting-participant">2.1.1 Meeting Participant</h4>
-<p>Joining an Avatour meeting does not require to be a registered Avatour user. Technically there is currently a limitation of 20 participants in any meeting.</p>
-<h4 id="212-spectator">2.1.2 Spectator</h4>
-<p>Meeting participants who have limited feature access. In a meeting, Spectators are unable to display their webcam feed, use their device's microphone, or use the Present functionality. Spectators are also prevented from playing/pausing Assets and capturing Snapshots. There is currently a limitation of 10 spectators in any meeting bringing the total number in a meeting to a maximum of 30.</p>
-<h3 id="22-registered-users">2.2 Registered Users</h3>
-<p>Registered Users have registered with their email address and have established a password.</p>
-<h4 id="221-guest-user-free">2.2.1 Guest User (free)</h4>
-<p>This user only has access to view Assets within a Workspace they have been added to as Viewer Collaborator. When Single-Sign-On (SSO) is activated for an Avatour customer (domain) Guest accounts are automatically created when logging in to Avatour with the customer domain email account. </p>
-<h4 id="222-licensed-users-with-access-to-the-web-console">2.2.2 Licensed Users (with access to the Web Console)</h4>
-<p><strong>Host User</strong> - This is the main licensed user type and enables hosting Live Capture video, uploading Quick Captures, and creating Workspaces. Host users have a login to access the Host Dashboard and the Operator App on the 360° cam. You must be a Host or Admin to be added as an Editor Collaborator in a Workspace.</p>
-<p><strong>Admin User</strong> - These users have host feature access and can manage all aspects of the Avatour account. Additional Admin privileges include:</p>
+<h3 id="21-meeting-attendees-no-account-required">2.1 Meeting Attendees (No Account required)</h3>
+<p>Users can join the meeting without registering for an Avatour account.
+Exception: If the host has restricted the meeting to registered users — for example, to allow only internal employees to join via Single Sign-On (SSO) — the calendar invitation will indicate that participants must log in to authenticate.</p>
+<p>Users access the meeting as follows:
+- Receive a calendar invitation from the host.
+- Use the meeting link in the invitation to join.
+- Enter a meeting password if the host has enabled one.
+- Participants can join without an Avatour account unless the meeting is restricted and requires login to authenticate.</p>
+<h4 id="211-participant">2.1.1 Participant</h4>
 <ul>
-<li>Account: Create new Host users, and upgrade Guest users to Host. Deleting users (Admin users have to be changed to Host User before they can be deleted / removed. When deleting a user one can transfer the assets of that Host User to another Host / Admin user.</li>
-<li>Settings: Decide if all meetings by default do not require a Host to be present, or if the Igloo projection feature is enabled. If you have requested a custom domain, Admins may also edit the Host Dashboard and meeting room branding images.</li>
-<li>Account Assets: View all assets that have been uploaded by all Host users in your account. This tab is seen within the "Assets" section of the Host Dashboard</li>
-<li>View all Host Analytics: View all account host's meeting analytics</li>
+<li>Can join and interact fully (webcam, microphone, chat, and Present functionality).</li>
+<li>Maximum of 20 interactive participants per meeting.</li>
+</ul>
+<h4 id="212-spectator">2.1.2 Spectator</h4>
+<ul>
+<li>Can view the meeting and participate via chat only.</li>
+<li>Cannot share video, use a microphone, present, play/pause Assets, or capture Snapshots.</li>
+<li>Maximum of 10 Spectators per meeting.</li>
+<li>Together with Participants, a meeting can host up to 30 attendees.</li>
+</ul>
+<h2 id="22-registered-users">2.2 Registered Users</h2>
+<p>Registered Users have an Avatour account. Accounts are created in one of the following ways:</p>
+<ul>
+<li><strong>Admin-invited:</strong> During onboarding, Avatour sets up a <strong>dedicated tenant</strong> for the organization and creates one or more <strong>Admin accounts</strong>. Admins can then <strong>invite users</strong> within the organization and assign them to <strong>groups</strong>, which define their platform role (Guest, Host, or Admin). Invited users receive a <strong>signup link</strong> to complete account setup and set a password.  </li>
+<li><strong>Host-invited:</strong> Hosts can add users as <strong>Editor collaborators</strong> to a Workspace. This consumes a <strong>Host license</strong> and ensures the user has Host-level access.  </li>
+<li><strong>SSO auto-provisioning (Enterprise/Business tier only):</strong> Accounts can be automatically created by the IdP. By default, SSO-provisioned accounts are added to the <strong>Guest group</strong>, unless overridden via <strong>SAML group mappings</strong>. Admins can still invite users and assign group membership directly even when SSO is enabled.</li>
+</ul>
+<p><strong>Summary:</strong>  </p>
+<p>Registered users and their group membership can be managed in multiple ways:</p>
+<ul>
+<li><strong>Admin management:</strong> An Admin in the Avatour console can create users and assign them to groups, which define their platform role (Guest, Host, or Admin).  </li>
+<li><strong>SSO provisioning:</strong> For Enterprise or Business tier customers with SSO enabled, the IdP can automatically provision accounts and assign group membership, which defines the user’s platform role.  </li>
+<li><strong>Host-invited users:</strong> Hosts can invite other users as Editor collaborators to specific Workspaces. Assigning the Editor collaborator role consumes a Host license.</li>
+</ul>
+<p><strong>Recommended Best Practice (Enterprise Customers):</strong><br />
+For organizations expecting a large number of users who need access to Avatour, it is recommended to <strong>integrate Single Sign-On (SSO)</strong> and manage users and group memberships from the <strong>IdP</strong>. This approach streamlines account provisioning, group assignment, and license management, reducing administrative overhead and ensuring consistent access control.</p>
+<hr />
+<h3 id="221-guest-users">2.2.1 Guest Users</h3>
+<ul>
+<li>Added to the <strong>Guest group</strong>.  </li>
+<li>Can <strong>view Assets</strong> within Workspaces where they have been added as <strong>Viewer collaborators</strong>.  </li>
+<li>Cannot create workspaces, host meetings or upload content.  </li>
+<li>SSO-provisioned Guest accounts <strong>authenticate via the IdP</strong>; no Avatour-managed password is required.</li>
+</ul>
+<hr />
+<h3 id="222-licensed-users-web-console-access">2.2.2 Licensed Users (Web Console Access)</h3>
+<h4 id="host-users-group-host">Host Users (Group: Host)</h4>
+<ul>
+<li>Can create/ manage Workspaces, invite collaborators to a workspace, <strong>host live meetings</strong>, upload <strong>Quick Captures</strong>.  </li>
+<li>Has access to the <strong>Host Dashboard</strong> and <strong>Operator App</strong> on supported 360° cameras.  </li>
+</ul>
+<h4 id="admin-users-group-admin">Admin Users (Group: Admin)</h4>
+<ul>
+<li>Includes all Host capabilities plus full account administration.</li>
+</ul>
+<p><strong>Additional Admin privileges include:</strong></p>
+<p><strong>Account Management</strong><br />
+- Create new users and assign them to groups.
+- Reset passwords when managed by Avatour (not applicable when SSO is enabled). 
+- Upgrade Guest users to Host.<br />
+- Deactivate users (Admin accounts must first be converted to Host before deletion).<br />
+- Transfer assets from one Host user to another during deletion.</p>
+<p><strong>Settings</strong><br />
+- Configure <strong>organization-wide security settings</strong> for assets, workspaces and meetings hosted on the platform (e.g., whether a Host must be present to start a meeting, whether faces should be blurred on all videos uploaded to the platform).<br />
+- Enable or disable <strong>AI features</strong> or <strong>recording</strong>.<br />
+- Apply company branding consistently across the platform if a <strong>custom domain</strong> is configured.</p>
+<p><strong>Assets &amp; Analytics</strong><br />
+- View all Assets uploaded by any user in the organization.<br />
+- Review platform usage across the organization.</p>
+<hr />
+<h3 id="223-workspace-collaborator-permissions">2.2.3 Workspace Collaborator Permissions</h3>
+<p>Workspace permissions define what a user can do <strong>within a specific Workspace</strong>. These are separate from platform-level group membership (Guest, Host, Admin).</p>
+<ul>
+<li><strong>Editor collaborator:</strong> Users with this permission can:</li>
+<li>Manage Assets (upload, remove, blur faces, generate summaries)  </li>
+<li>Manage meeting settings (enable/disable recording, allow or remove participants)  </li>
+<li>Schedule and host live meetings  </li>
+<li>Generate reports based on predefined templates  </li>
+<li>
+<p>Add or remove collaborators from the Workspace  </p>
+</li>
+<li>
+<p><strong>Viewer collaborator:</strong> Users with this permission have read-only access to Workspace Assets. They <strong>cannot modify Assets, manage meetings, or manage collaborators</strong>, but they <strong>can create Notes on Assets</strong>. </p>
+</li>
 </ul>
 <h2 id="for-remote-meeting-participants-and-workspace-visitors">3. For Remote Meeting Participants and Workspace Visitors</h2>
 <h3 id="how-to-join-an-avatour-meeting-and-visit-an-avatour-workspace">3.1 How to Join an Avatour meeting and Visit an Avatour Workspace</h3>
@@ -938,8 +1008,11 @@ body.print-mode .faq-a { display: block !important; padding-bottom: 10px; }
 <ul>
   <li><a href="#for-all-avatour-users">1. For All Avatour Users</a></li>
   <li><a href="#2-avatour-user-types">2. Avatour User Types</a></li>
-  <li class="toc2"><a href="#21-users-not-needing-to-be-a-registered-user">2.1 Users not needing to be a Registered User</a></li>
-  <li class="toc2"><a href="#22-registered-users">2.2 Registered Users</a></li>
+  <li class="toc2"><a href="#21-meeting-attendees-no-account-required">2.1 Meeting Attendees (No Account required)</a></li>
+  <li><a href="#22-registered-users">2.2 Registered Users</a></li>
+  <li class="toc2"><a href="#221-guest-users">2.2.1 Guest Users</a></li>
+  <li class="toc2"><a href="#222-licensed-users-web-console-access">2.2.2 Licensed Users (Web Console Access)</a></li>
+  <li class="toc2"><a href="#223-workspace-collaborator-permissions">2.2.3 Workspace Collaborator Permissions</a></li>
   <li><a href="#for-remote-meeting-participants-and-workspace-visitors">3. For Remote Meeting Participants and Workspace Visitors</a></li>
   <li class="toc2"><a href="#how-to-join-an-avatour-meeting-and-visit-an-avatour-workspace">3.1 How to Join an Avatour meeting and Visit an Avatour Workspace</a></li>
   <li class="toc2"><a href="#meeting-tools">3.2 Meeting and Workspace Collaboration Tools</a></li>
