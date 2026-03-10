@@ -113,15 +113,55 @@ Workspace permissions define what a user can do **within a specific Workspace**.
   
 ## 3. For Remote Meeting Participants and Workspace Visitors {#for-remote-meeting-participants-and-workspace-visitors}
 
+Avatour allows users to collaborate in two primary ways:
+
+- **Join a live meeting:**  
+  You may receive a **calendar invitation** to join an Avatour meeting. During the meeting, participants can conduct a **live remote site visit** or synchronously review assets together.
+
+- **Visit a Workspace:**  
+  You may also be invited as a **collaborator to a Workspace** to review assets **asynchronously** (on your own schedule).
+
 ### 3.1 How to Join an Avatour meeting and Visit an Avatour Workspace {#how-to-join-an-avatour-meeting-and-visit-an-avatour-workspace}
 #### Any "Flat Screen" Device with a Web Browser {#any-flat-screen}
-You can join from any desktop/laptop computer, smartphone, or tablet. Simply open your preferred browser, navigate to [https://avatour.live/join](https://avatour.live/join), and type in your name and the meeting code. If the owner of the meeting has sent an invitation that includes an Avatour meeting join link (ex: https://avatour.live/join?s=xxxxx), the 5-symbol meeting code at the end of the link (xxxxx) will be auto-populated once you open the link. 
+You can join an Avatour meeting from **any desktop or laptop computer, smartphone, or tablet** using a web browser.  
 
-> **Tip 1:** Sometimes the camera in Avatour is blocked when you have been in a Teams call before. Best solution in that case is to stop Teams running in the background and to exit and re-join the Avatour meeting.
+> **Note:** Joining an Avatour meeting requires that you **grant microphone permissions**. Please accept any permission prompts from your browser.
 
-> **Tip 2:** Do NOT use the Avatour iOS / Android apps. These are only needed if you want to stream Avatour live meetings with an Insta360 cam as those cams can not directly run our live 360° software and need the “help” of a smartphone!
+1. **Via calendar invitation (recommended):**  
+   - You will typically receive a **calendar invitation** with a **direct join link** (for example: `https://avatour.live/join?s=xxxxx`).  
+   - Clicking the link will automatically populate the **5-character meeting code** and take you to the meeting.
+   - **Authentication required:** Some meetings are restricted to registered users. In this case, the invitation will indicate that you need to **log in to access the meeting**.  
+   - **Password-protected meetings:** Some meetings may require a password. In that case, the invitation will include the password you must enter to join.
 
-For visiting a workspace (without incurring a meeting) you will need to have the link to the workspace and depending on the workspace settings you need to login as a registered Avtour User.  
+2. **Via meeting code:**  
+   - If the host shares a **5-character meeting code** separately, go to [https://avatour.live/join](https://avatour.live/join), enter your **name** and the **meeting code**, and join the meeting.  
+   - If the meeting is **password-protected**, enter the password provided by the host.  
+   - If the meeting requires **authentication**, you will need to **log in with your Avatour account** before joining.
+
+> **Tip 1:** If your camera or microphone does not work, it may be in use by another application (for example, Microsoft Teams or Zoom). Close any apps that might be using your camera or microphone, then leave and rejoin the Avatour meeting.  
+
+> **Tip 2:** If you are still unable to join the meeting, run this test: [https://avatour.live/test](https://avatour.live/test).  
+> The test can identify whether your **corporate firewall or network** is blocking access, and will provide information to guide discussions with your IT team.  
+
+> **Tip 3:** Do **not** use the Avatour iOS or Android apps to join meetings. These apps are only required when **streaming a live meeting from an Insta360 camera**, since those cameras cannot run the Avatour 360° software directly and require a smartphone to assist.
+
+### Visiting a Workspace Without Joining a Meeting
+
+You can access a Workspace without joining a live meeting in the following ways:
+
+- **Public Workspace:**  
+  If the Workspace is public, the link can be accessed directly—no login required.
+
+- **Restricted Workspace:**  
+  If the Workspace is restricted, you must be added as a **collaborator** with either **Editor** or **Viewer** permissions.
+
+  1. When you are added as a collaborator, you will receive an **email notification** with a link to the Workspace.
+  2. Click the link in the email to open the Workspace. If you are not already logged in, you will be prompted to **log in or complete signup**.
+  3. Once logged in, the Workspace will open automatically.
+
+  Alternatively, you can log in at  
+  https://avatour.live/login  
+  and access the Workspace from your **list of Workspaces**.
 
 #### VR Headset {#vr-headset}
 You can join a meeting and visit a workspace from a range of compatible Meta and Pico headsets. To do this: 
