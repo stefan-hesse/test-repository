@@ -228,7 +228,7 @@ The bottom menu provides access to the main interface controls and panels:
 - **Enable Full Screen** – Make the meeting tab full screen.  
 - **Exit Meeting** – Leave the meeting.  
 - **Start Recording** – Use this button to start and stop recording manually during a meeting. Alternatively, meetings can be recorded automatically if **auto-start recording** is enabled in the workspace settings. In both cases, recordings are saved to the workspace assets.
-- **Map** – Open or close the map panel for GPS-enabled assets or live streaming routes.  
+- **Map** – Open or close the map panel for assets with a GPS track. Clicking a location jumps to the exact point in the video. The map updates live as the video plays.
 - **Participants** – Open or close the participants panel.  
 - **Meeting Info** – View the meeting code, invite link, and access related tutorials.  
 
