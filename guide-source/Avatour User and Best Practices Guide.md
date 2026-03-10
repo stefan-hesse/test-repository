@@ -171,61 +171,75 @@ You can join a meeting and visit a workspace from a range of compatible Meta and
 
 ### 3.2 Meeting and Workspace Collaboration Tools {#meeting-tools}
 
-You can access Assets and collaborate in 
+Avatour allows collaboration in two main contexts:
 
-- Meetings (synchronously = together with other meeting participants like in any other Video Conference) 
-- Workspaces (asynchronously, 24/7). 
+1. **Meetings (synchronous):** Collaborate in real-time with other participants, including live site visits or reviewing recorded assets together.  
+2. **Workspaces (asynchronous):** Review and interact with assets on your own schedule, 24/7.
 
-The collaboration tools are very similar in both but there are some differences due to the collaboration context (sync versus async).
+The **collaboration tools are mostly similar** between meetings and workspaces, with some differences due to the synchronous vs asynchronous context.
 
-Here is an example of a view in an Avatour Meeting showing in the left side pane the Assets in the Workspace in which the Meeting happens, the Canvas in the middle (blank - here Assets can be shown), and in the right side pane the Meeting Participants.
+### 3.2.1 Interface Layout
 
-![Avatour Meeting UI with Assets Panel, blank Canvas and Participants Panel](https://res.cloudinary.com/avatour/image/upload/v1772362400/avatour-screenshot-meeting-assets-blank-participants_pugprq.png) *Avatour Meeting with Assets Panel (left), blank Canvas (center) and Participants Panel (right)*
+The Avatour interface is organized around three main areas:
 
-Here is an example of a view in a Workspace showing in the left side pane the again the Assets in that Workspace in which the Meeting happens, the Canvas in the middle (blank - here Assets can be shown), and in the right side pane the Meetings schedule.
+- **Left panel** – Workspace assets and supporting tools  
+- **Center canvas** – Main viewing area for live video or assets  
+- **Right panel** – Contextual information, such as participants, meetings, or chat  
 
-![Avatour Workspace with Assets Panel, blank Canvas and Meetings Panel](https://res.cloudinary.com/avatour/image/upload/v1772198701/avatour-screenshot-workspace-assets-blank-meetings_qeumpl.png) *Avatour Workspace with Assets Panel (left), blank Canvas (center) and Meetings Panel (right)*
+Most interactions are initiated from the **bottom menu**.  
+Clicking a menu option opens a **side panel** on the left or right side of the screen, while the **center canvas** remains the primary viewing area.
 
-We will explain the workspace structure and bottom menu items further below.
+---
+### 3.2.2 Meeting View Example
 
-Coming back to Meetings: Here is the bottom menu and in the following are explanations of each menu item from left to right starting with Assets.
+Here is an example of a view in an Avatour Meeting:
 
-![Avatour Meeting Bottom Menu](https://res.cloudinary.com/avatour/image/upload/v1772300383/avatour-screenshot-meeting-bottom-menu_bflaor.png) *Avatour Meeting Bottom Menu*
+![Avatour Meeting UI with Assets Panel, blank Canvas and Participants Panel](https://res.cloudinary.com/avatour/image/upload/v1772362400/avatour-screenshot-meeting-assets-blank-participants_pugprq.png)  
+*Avatour Meeting with Assets Panel (left), Canvas (center), and Participants Panel (right)*
 
-**Assets** - Files in the workspace that can be reviewed with all participants in the meeting. This includes recorded videos, images/snapshots, and PDFs. Hosts and Collaborator Editors can up- and download assets.
+---
 
-**Chat** - By clicking the chat bubble, you can send messages to all meeting participants.
+### 3.2.3 Workspace View Example
 
-**Camera** - Turn off/on 
+Here is an example of a Workspace view:
 
-**Microphone** - Mute/unmute
+![Avatour Workspace with Assets Panel, blank Canvas and Meetings Panel](https://res.cloudinary.com/avatour/image/upload/v1772198701/avatour-screenshot-workspace-assets-blank-meetings_qeumpl.png)  
+*Avatour Workspace with Assets Panel (left), Canvas (center), and Meetings Panel (right)*
 
-**Present** - see the separate section on the Present menu below
+---
 
-**Host Tools** - (for the meeting host only): 
+### 3.2.4 Bottom Menu Overview
 
-- **Lock Focus** - lock the view for all participants to the host view - see also Meeting Tools.
-- **Mute All** - mute all participants
+The bottom menu provides access to the main interface controls and panels:
 
-**Enable Full Screen** - Puts the meeting tab in full screen
+**Meeting Bottom Menu**  
 
-**Exit the Meeting** - leave the meeting.
+![Avatour Meeting Bottom Menu](https://res.cloudinary.com/avatour/image/upload/v1772300383/avatour-screenshot-meeting-bottom-menu_bflaor.png)  
+*Avatour Meeting Bottom Menu*
 
-**Start Recording** - When enabled in the workspace settings you can record an Avatour meeting. The recording will be available in your assets and also automatically allocated to the workspace in which the meeting happened.
+- **Assets** – Review workspace files, including recorded videos, images, snapshots, and PDFs. 
+- **Chat** – Send messages to all meeting participants.  
+- **Camera** – Turn your webcam on or off.  
+- **Microphone** – Mute or unmute yourself.  
+- **Present** – Present an asset, desktop, or webcam feed (see Present section below).  
+- **Host Tools** (hosts only):  
+  - **Lock Focus** – Lock the view for all participants.  
+  - **Mute All** – Mute all participants.  
+- **Enable Full Screen** – Make the meeting tab full screen.  
+- **Exit Meeting** – Leave the meeting.  
+- **Start Recording** – Use this button to start and stop recording manually during a meeting. Alternatively, meetings can be recorded automatically if **auto-start recording** is enabled in the workspace settings. In both cases, recordings are saved to the workspace assets.
+- **Map** – Open or close the map panel for GPS-enabled assets or live streaming routes.  
+- **Participants** – Open or close the participants panel.  
+- **Meeting Info** – View the meeting code, invite link, and access related tutorials.  
 
-**Geo Location** - For assets and live streaming with GPS open/close the map pane. In the map you will see the route of the video and you can click on a point in that route which will take you exactls to the moment in the video.
+![Avatour Meeting Info](https://res.cloudinary.com/avatour/image/upload/v1772547439/avatour-screenshot-meeting-info-side-pane_nx7dp4.png)  
+*Avatour Meeting Info Side Pane*
 
-**Participants** - Open/close the participants pane.
+- **Settings** – Adjust language, audio, and video settings. For live 360° video meetings, use **Show Bitrate** to monitor connectivity stats.
 
-**Meeting Info** - This section gives you information about your meeting (e.g. the meeting code and invite link to the meeting). From here you can also access the related Online Tutorial and other usefule links.
+> Tip: Send the meeting link or add it to a calendar item to invite participants.
 
-> Tip: Send the meeting link or add it to any calendar item to invite meeting participants.
-
-![Avatour Meeting Info](https://res.cloudinary.com/avatour/image/upload/v1772547439/avatour-screenshot-meeting-info-side-pane_nx7dp4.png) *Avatour Meeting Info Side Pane*
-
-**Settings** - Adjust your language, audio, and video settings. For live 360° video meetings you can use "<u>Show Bitrate</u>" wich will show you in the upper left corner of the canvas the connectivity stats for the live 360° video stream (1. Upload Bandwidth Onsite, 2. Your Download Capacity, 3. Your Download Speed). This can be very helpful to analyze any potential connectivity issues (is it onsite or with the remote participant?)
-
-
+---
 
 **Present Menu**
 
