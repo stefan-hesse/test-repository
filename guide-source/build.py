@@ -415,19 +415,7 @@ details[open] .faq-q::after { transform: rotate(45deg); }
 .fb-btn:hover { border-color: var(--orange); color: var(--orange); }
 
 /* RELATED */
-.guide-related { margin-top: 28px; }
-.related-label {
-  font-family: 'Titillium Web', sans-serif;
-  font-size: 11px; font-weight: 700; letter-spacing: .1em;
-  text-transform: uppercase; color: var(--muted); margin-bottom: 8px;
-}
-.guide-related a {
-  display: block; font-size: 13.5px; color: var(--orange);
-  text-decoration: none; padding: 5px 0;
-  border-bottom: 1px solid var(--border);
-}
-.guide-related a:last-child { border-bottom: none; }
-.guide-related a:hover { text-decoration: underline; }
+
 
 /* PRINT STYLES */
 @media print {
@@ -948,13 +936,7 @@ def build_full_html(article_html, toc_html, sidenav_html, meta, body_class=""):
         <button class="fb-btn">No</button>
       </div>
 
-      <div class="guide-related">
-        <div class="related-label">Related articles</div>
-        <a href="#">How do I add my company branding to the Avatour experience?</a>
-        <a href="#">Managing access to Avatour meetings</a>
-        <a href="#">What are the network requirements for Avatour?</a>
-        <a href="#">Are my Avatour sessions secure?</a>
-      </div>
+
 
     </article>
 
