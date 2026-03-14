@@ -50,6 +50,18 @@ body {
   color:rgba(255,255,255,.5); letter-spacing:.09em; text-transform:uppercase;
 }
 .hright { margin-left:auto; display:flex; gap:12px; align-items:center; }
+
+/* LANGUAGE SWITCHER */
+.lang-switcher { display:flex; gap:4px; align-items:center; }
+.lang-btn {
+  font-family:'Titillium Web',sans-serif; font-size:11px; font-weight:700;
+  letter-spacing:.06em; padding:4px 8px; border-radius:4px;
+  border:1px solid rgba(255,255,255,.25); background:transparent;
+  color:rgba(255,255,255,.6); cursor:pointer; text-decoration:none;
+  transition:all .15s;
+}
+.lang-btn:hover { background:rgba(255,255,255,.1); color:#fff; }
+.lang-btn.active { background:var(--orange); border-color:var(--orange); color:#fff; }
 .hbtn {
   font-family:'Titillium Web',sans-serif; font-size:12px; font-weight:700;
   color:var(--blue); background:var(--orange);
@@ -488,6 +500,7 @@ body.print-mode .faq-a { display: block !important; padding-bottom: 10px; }
   <div class="hd"></div>
   <span class="hlabel">User Guide</span>
   <div class="hright">
+    <div class="lang-switcher"><a class="lang-btn active" href="avatour-guide.html">EN</a><a class="lang-btn" href="avatour-guide-it.html">IT</a><a class="lang-btn" href="avatour-guide-es.html">ES</a></div>
     <span class="hversion">v2.0 · Updated 2026</span>
     <a class="hbtn" href="https://avatour.live">Log in to Avatour</a>
   </div>
@@ -636,13 +649,15 @@ For organizations expecting a large number of users who need access to Avatour, 
 <h3 id="223-workspace-collaborator-permissions">2.2.3 Workspace Collaborator Permissions</h3>
 <p>Workspace permissions define what a user can do <strong>within a specific Workspace</strong>. These are separate from platform-level group membership (Guest, Host, Admin).</p>
 <ul>
-<li><strong>Editor collaborator:</strong> Users with this permission can:</li>
+<li>
+<p><strong>Editor collaborator:</strong> Users with this permission can:</p>
+<ul>
 <li>Manage Assets (upload, remove, blur faces, generate summaries)  </li>
 <li>Manage meeting settings (enable/disable recording, allow or remove participants)  </li>
 <li>Schedule and host live meetings  </li>
 <li>Generate reports based on predefined templates  </li>
-<li>
-<p>Add or remove collaborators from the Workspace  </p>
+<li>Add or remove collaborators from the Workspace  </li>
+</ul>
 </li>
 <li>
 <p><strong>Viewer collaborator:</strong> Users with this permission have read-only access to Workspace Assets. They <strong>cannot modify Assets, manage meetings, or manage collaborators</strong>, but they <strong>can create Notes on Assets</strong>. </p>
@@ -667,19 +682,23 @@ For organizations expecting a large number of users who need access to Avatour, 
 <p><strong>Note:</strong> Joining an Avatour meeting requires that you <strong>grant microphone permissions</strong>. Please accept any permission prompts from your browser.</p>
 </blockquote>
 <ol>
-<li><strong>Via calendar invitation (recommended):</strong>  </li>
+<li>
+<p><strong>Via calendar invitation (recommended):</strong>  </p>
+<ul>
 <li>You will typically receive a <strong>calendar invitation</strong> with a <strong>direct join link</strong> (for example: <code>https://avatour.live/join?s=xxxxx</code>).  </li>
 <li>Clicking the link will automatically populate the <strong>5-character meeting code</strong> and take you to the meeting.</li>
 <li><strong>Authentication required:</strong> Some meetings are restricted to registered users. In this case, the invitation will indicate that you need to <strong>log in to access the meeting</strong>.  </li>
-<li>
-<p><strong>Password-protected meetings:</strong> Some meetings may require a password. In that case, the invitation will include the password you must enter to join.</p>
+<li><strong>Password-protected meetings:</strong> Some meetings may require a password. In that case, the invitation will include the password you must enter to join.</li>
+</ul>
 </li>
 <li>
 <p><strong>Via meeting code:</strong>  </p>
-</li>
+<ul>
 <li>If the host shares a <strong>5-character meeting code</strong> separately, go to <a href="https://avatour.live/join">https://avatour.live/join</a>, enter your <strong>name</strong> and the <strong>meeting code</strong>, and join the meeting.  </li>
 <li>If the meeting is <strong>password-protected</strong>, enter the password provided by the host.  </li>
 <li>If the meeting requires <strong>authentication</strong>, you will need to <strong>log in with your Avatour account</strong> before joining.</li>
+</ul>
+</li>
 </ol>
 <blockquote>
 <p><strong>Tip 1:</strong> If your camera or microphone does not work, it may be in use by another application (for example, Microsoft Teams or Zoom). Close any apps that might be using your camera or microphone, then leave and rejoin the Avatour meeting.  </p>
@@ -697,12 +716,12 @@ The test can identify whether your <strong>corporate firewall or network</strong
 <li>
 <p><strong>Restricted Workspace:</strong><br />
   If the Workspace is restricted, you must be added as a <strong>collaborator</strong> with either <strong>Editor</strong> or <strong>Viewer</strong> permissions.</p>
-</li>
-<li>
-<p>When you are added as a collaborator, you will receive an <strong>email notification</strong> with a link to the Workspace.</p>
-</li>
+<ol>
+<li>When you are added as a collaborator, you will receive an <strong>email notification</strong> with a link to the Workspace.</li>
 <li>Click the link in the email to open the Workspace. If you are not already logged in, you will be prompted to <strong>log in or complete signup</strong>.</li>
 <li>Once logged in, the Workspace will open automatically.</li>
+</ol>
+</li>
 </ul>
 <p>Alternatively, you can log in at<br />
   https://avatour.live/login<br />
@@ -751,9 +770,11 @@ Clicking a menu option opens a <strong>side panel</strong> on the left or right 
 <li><strong>Camera</strong> – Turn your webcam on or off.  </li>
 <li><strong>Microphone</strong> – Mute or unmute yourself.  </li>
 <li><strong>Present</strong> – Present an asset, desktop, or webcam feed (see Present section below).  </li>
-<li><strong>Host Tools</strong> (hosts only):  </li>
+<li><strong>Host Tools</strong> (hosts only):  <ul>
 <li><strong>Lock Focus</strong> – Lock the view for all participants.  </li>
 <li><strong>Mute All</strong> – Mute all participants.  </li>
+</ul>
+</li>
 <li><strong>Enable Full Screen</strong> – Make the meeting tab full screen.  </li>
 <li><strong>Exit Meeting</strong> – Leave the meeting.  </li>
 <li><strong>Start Recording</strong> – Use this button to start and stop recording manually during a meeting. Alternatively, meetings can be recorded automatically if <strong>auto-start recording</strong> is enabled in the workspace settings. In both cases, recordings are saved to the workspace assets.</li>
@@ -887,10 +908,12 @@ Clicking a menu option opens a <strong>side panel</strong> on the left or right 
 <ul>
 <li><em>Kit 2.1: Connect a USB cable from the battery to the USB-C port of the USB-C hub. Then, connect the camera directly to the hub.</em></li>
 <li><em>Kits 3.0 / 3.1: Connect a USB cable from the battery to the camera.</em></li>
-<li>Kit 3.0 / Pilot Pano cam only: Installing the cooling module (optional accessory):</li>
+<li>Kit 3.0 / Pilot Pano cam only: Installing the cooling module (optional accessory):<ul>
 <li><em>(1) Remove the Pilot Pano battery by opening the side panel and pulling the battery out</em></li>
 <li>(2) Insert the cooling module where the battery was before</li>
 <li><em>(3) Connect the Ulanzi external battery to the cooling module by USB-A to USB-C cable. This cable would have been packed with the cooling module.</em></li>
+</ul>
+</li>
 </ul>
 <h3 id="52-connectivity">5.2 Connectivity</h3>
 <p><u><strong>Before you start:</strong></u> For live tours you need to be connected to the internet using (1) a local WiFi or (2) a Mobile Network. You should have at least 10 Mbps Uplink and Downlink bandwidth. This allows enough available bandwidth for the camera to Live Capture stream at our recommended 5 Mbps. You can still stream at lower bandwidths (1-2 Mbps), which works best when you are standing still (see also below e. Best Practices: During a Meeting). To test connectivity speed and quality you can use the following methods:</p>
@@ -950,9 +973,11 @@ Clicking a menu option opens a <strong>side panel</strong> on the left or right 
 <h4 id="other-onsite-participants">Other Onsite Participants</h4>
 <p>Connect to the meeting using your smartphone’s / tablet’s / laptop’s browser, and use any wired or wireless headphones (preferably ones with noise canceling enabled). <strong>Please be aware that each smartphone onsite will take away bandwidth from the 360° camera</strong> and can have a negative impact on the Avatour meeting for all participants! Therefore <strong>we recommend to join in</strong></p>
 <ul>
-<li><strong>On-Site Mode</strong> - Join the meeting in On-Site mode when you're physically present at the same location as the 360 camera. On-Site Mode is perfect for users who wish to utilize their phones primarily for detailed close-ups. On-Site Mode mutes the mic and speaker by default to eliminate audio feedback</li>
-</ul>
+<li>
+<p><strong>On-Site Mode</strong> - Join the meeting in On-Site mode when you're physically present at the same location as the 360 camera. On-Site Mode is perfect for users who wish to utilize their phones primarily for detailed close-ups. On-Site Mode mutes the mic and speaker by default to eliminate audio feedback</p>
 <p><strong><em>Screenshot Onsite Mode To Do !!!</em></strong></p>
+</li>
+</ul>
 <p><strong>Important Note</strong>: </p>
 <ul>
 <li>Make sure that you are muted when not actively speaking</li>
@@ -970,19 +995,23 @@ Clicking a menu option opens a <strong>side panel</strong> on the left or right 
 <p><strong>Settings</strong> - Within Settings, you have the following options:</p>
 <ul>
 <li><strong>Network</strong>: This option allows you to change which WiFi network the camera is connected to or run a network connection test to view your streaming throughput</li>
-<li><strong>Live Capture</strong>: Adjust your Live Capture settings depending on available bandwidth, guest’s VR sensitivity, or if your camera’s protective lenses are installed:</li>
+<li>
+<p><strong>Live Capture</strong>: Adjust your Live Capture settings depending on available bandwidth, guest’s VR sensitivity, or if your camera’s protective lenses are installed:</p>
+<ul>
 <li><strong>Target Frame</strong> <strong>Rate</strong>: Adjust the frame rate for your Live Capture video between 15 fps, 24 fps, and 30 fps. Higher frame rates produce a smoother video, but will require more upload bandwidth. Default: 15 fps</li>
 <li><strong>Target Bitrate</strong>: Enables you to increase or decrease the maximum streaming bitrate for your Live Capture. You can set your target bitrate between 1 Mbps and 10 Mbps. Higher bitrates will result in higher video resolution, but will require more upload bandwidth. Default: 5 Mbps</li>
 <li><strong>Optimize Motion</strong>: This will decrease the video frame rate, generating less load on your network's upload bandwidth, and increase your streaming bitrate. In addition, this option helps to reduce motion sickness for VR participants. Default: Off</li>
-<li>
-<p><strong>Protective Lenses</strong>: This will affect how the 360° video is stitched depending if protective lenses have been installed on your camera. If you do not have protective lenses, set this to “No”. If you received a Kit 3.0, you have pre-installed protective lenses on and should set this to “Yes”. Default: Yes</p>
+<li><strong>Protective Lenses</strong>: This will affect how the 360° video is stitched depending if protective lenses have been installed on your camera. If you do not have protective lenses, set this to “No”. If you received a Kit 3.0, you have pre-installed protective lenses on and should set this to “Yes”. Default: Yes</li>
+</ul>
 </li>
 <li>
 <p><strong>Quick Capture</strong>: Adjust your Quick Capture settings depending on your preferred video frame rate, available bandwidth for recorded video uploads, or if your camera’s protective lenses are installed. Quick Capture has a set resolution of 4k which usually strikes a good balance between video quality and file size. (For higher resolutions you can use the native camera apps, also on the PanoX V2, for details see <a href="https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app">How do you record and upload 360 videos with the Avatour App?</a>):</p>
-</li>
+<ul>
 <li><strong>Target Frame Rate</strong>: Adjust the frame rate for your Quick Capture video recordings between 15 fps, 24 fps, and 30 fps. Higher frame rates produce a smoother video, but will increase video file size and upload time. Recommended: 30 fps</li>
 <li><strong>Target Bitrate</strong>: Set the target bitrate for Quick Capture uploads between 5 Mbps and 20 Mbps. Lower bitrates increase upload speeds, but will decrease video quality. Recommended: 20 Mbps</li>
 <li><strong>Protective Lenses</strong>: <em>See Protective Lenses section for Live Capture above</em></li>
+</ul>
+</li>
 <li><strong>About</strong>: View device serial number and software version</li>
 </ul>
 <p><strong>Account</strong> - For login with your Avatour host or admin account.</p>
