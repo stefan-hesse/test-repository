@@ -1286,6 +1286,56 @@ def build_lang_switcher_html(active_lang, embed=False):
     return f'<div class="lang-switcher">{"".join(buttons)}</div>'
 
 
+def build_outputs_for_lang(md_text, meta, lang_code):
+    """Run the full build pipeline for one language and write 3 output files."""
+    info   = LANGUAGES[lang_code]
+    suffix = info['suffix']
+
+    lang_meta = dict(meta)
+    lang_meta['lang'] = lang_code
+
+    # Extract glossary and FAQs
+    glossary = extract_glossary(md_text)
+    faqs     = extract_faqs(md_text)
+
+    # Convert Markdown → HTML
+    article_html = md_to_html(md_text)
+
+    # Replace raw glossary/FAQ sections with styled components
+    glossary_html = build_glossary_html(glossary)
+    faq_html      = build_faq_html(faqs)
+    article_html  = replace_glossary_section(article_html, glossary_html)
+    article_html  = replace_faq_section(article_html, faq_html)
+
+    # Auto-tag glossary terms
+    article_html = auto_tag_glossary(article_html, glossary)
+
+    # Build navigation
+    toc_html     = build_toc_html(md_text)
+    sidenav_html = build_sidenav_html(md_text)
+
+    # Output 1: Standalone HTML
+    standalone = build_full_html(article_html, toc_html, sidenav_html, lang_meta)
+    out1 = os.path.join(DIST_DIR, f"avatour-guide{suffix}.html")
+    with open(out1, 'w', encoding='utf-8') as f:
+        f.write(standalone)
+    print(f"  ✓ Standalone  → {out1}")
+
+    # Output 2: Embed HTML
+    embed = build_embed_html(article_html, toc_html, sidenav_html, lang_meta)
+    out2 = os.path.join(DIST_DIR, f"avatour-guide-embed{suffix}.html")
+    with open(out2, 'w', encoding='utf-8') as f:
+        f.write(embed)
+    print(f"  ✓ Embed       → {out2}")
+
+    # Output 3: Print/PDF HTML
+    print_html = build_full_html(article_html, toc_html, sidenav_html, lang_meta, body_class="print-mode")
+    out3 = os.path.join(DIST_DIR, f"avatour-guide-print{suffix}.html")
+    with open(out3, 'w', encoding='utf-8') as f:
+        f.write(print_html)
+    print(f"  ✓ Print/PDF   → {out3}")
+
+
 def main():
     os.makedirs(DIST_DIR, exist_ok=True)
 
