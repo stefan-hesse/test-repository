@@ -14,14 +14,25 @@ Requirements:
   pip install markdown pymdown-extensions python-frontmatter --break-system-packages
 """
 
-import os, re, json
+import os, re, json, time
 import frontmatter
 import markdown
 from markdown.extensions.toc import TocExtension
+try:
+    import anthropic
+    ANTHROPIC_AVAILABLE = True
+except ImportError:
+    ANTHROPIC_AVAILABLE = False
 
 # ── CONFIG ────────────────────────────────────────────────────────────────
 SOURCE_FILE = "guide-source/Avatour User and Best Practices Guide.md"
 DIST_DIR    = "dist"
+
+LANGUAGES = {
+    "en": {"label": "EN",  "full": "English",  "suffix": ""},
+    "it": {"label": "IT",  "full": "Italiano", "suffix": "-it"},
+    "es": {"label": "ES",  "full": "Español",  "suffix": "-es"},
+}
 
 BRAND = {
     "blue":   "#132A39",
@@ -80,6 +91,18 @@ body {
   color:rgba(255,255,255,.5); letter-spacing:.09em; text-transform:uppercase;
 }
 .hright { margin-left:auto; display:flex; gap:12px; align-items:center; }
+
+/* LANGUAGE SWITCHER */
+.lang-switcher { display:flex; gap:4px; align-items:center; }
+.lang-btn {
+  font-family:'Titillium Web',sans-serif; font-size:11px; font-weight:700;
+  letter-spacing:.06em; padding:4px 8px; border-radius:4px;
+  border:1px solid rgba(255,255,255,.25); background:transparent;
+  color:rgba(255,255,255,.6); cursor:pointer; text-decoration:none;
+  transition:all .15s;
+}
+.lang-btn:hover { background:rgba(255,255,255,.1); color:#fff; }
+.lang-btn.active { background:var(--orange); border-color:var(--orange); color:#fff; }
 .hbtn {
   font-family:'Titillium Web',sans-serif; font-size:12px; font-weight:700;
   color:var(--blue); background:var(--orange);
@@ -800,12 +823,33 @@ def build_sidenav_html(md_text):
 
 def md_to_html(md_text):
     """Convert Markdown to HTML using Python-Markdown with extensions."""
+    # sane_lists: fixes mixed list handling
+    # mdx_truly_sane_lists not available in all envs, so we pre-process
+    # indentation instead: normalise 2-space indent → 4-space so Python-
+    # Markdown recognises nested lists (Typora saves with 2-space indent)
+    def normalise_list_indent(text):
+        lines = text.split('\n')
+        out = []
+        for line in lines:
+            # Count leading spaces
+            stripped = line.lstrip(' ')
+            spaces = len(line) - len(stripped)
+            # If this looks like a list item (starts with - or * or digit.)
+            # and has indentation, double the indent to convert 2→4, 4→8 etc.
+            if spaces > 0 and stripped and stripped[0] in '-*' or (spaces > 0 and stripped and stripped[0].isdigit() and len(stripped) > 1 and stripped[1] in '.) '):
+                line = ' ' * (spaces * 2) + stripped
+            out.append(line)
+        return '\n'.join(out)
+
+    md_text = normalise_list_indent(md_text)
+
     md = markdown.Markdown(extensions=[
         TocExtension(slugify=lambda value, separator: re.sub(r'[^\w-]', '', value.lower().replace(' ', separator))),
         'tables',
         'fenced_code',
         'attr_list',
         'md_in_html',
+        'sane_lists',
     ])
     return md.convert(md_text)
 
@@ -836,8 +880,10 @@ LOGO_SVG = """<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/20
 
 
 def build_full_html(article_html, toc_html, sidenav_html, meta, body_class=""):
+    lang_code = meta.get('lang', 'en')
+    lang_switcher = build_lang_switcher_html(lang_code, embed=False)
     return f"""<!DOCTYPE html>
-<html lang="en">
+<html lang="{lang_code}">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -854,6 +900,7 @@ def build_full_html(article_html, toc_html, sidenav_html, meta, body_class=""):
   <div class="hd"></div>
   <span class="hlabel">User Guide</span>
   <div class="hright">
+    {lang_switcher}
     <span class="hversion">v{meta.get('version','2.0')} · Updated {meta.get('updated','2026')}</span>
     <a class="hbtn" href="https://avatour.live">Log in to Avatour</a>
   </div>
@@ -1209,61 +1256,142 @@ document.querySelectorAll('.fb-btn').forEach(btn => {
 
 
 # ── MAIN ──────────────────────────────────────────────────────────────────
+def build_lang_switcher_html(active_lang, embed=False):
+    """Build EN / IT / ES switcher buttons linking to the correct output files."""
+    buttons = []
+    for code, info in LANGUAGES.items():
+        suffix = info['suffix']
+        if embed:
+            href = f"avatour-guide-embed{suffix}.html"
+        else:
+            href = f"avatour-guide{suffix}.html"
+        active = ' active' if code == active_lang else ''
+        buttons.append(f'<a class="lang-btn{active}" href="{href}">{info["label"]}</a>')
+    return f'<div class="lang-switcher">{"".join(buttons)}</div>'
+
+
+def translate_markdown(md_text, target_lang):
+    """
+    Translate Markdown source text to target language using Claude API.
+    Preserves all Markdown syntax, anchor IDs, URLs, and code blocks.
+    """
+    if not ANTHROPIC_AVAILABLE:
+        print(f"  ⚠ anthropic package not installed — skipping translation to {target_lang}")
+        return md_text
+
+    lang_names = {"it": "Italian", "es": "Spanish"}
+    lang_name = lang_names.get(target_lang, target_lang)
+
+    client = anthropic.Anthropic()
+
+    # Split into chunks of ~3000 words to stay within token limits
+    # Split on H2 headings to keep sections together
+    sections = re.split(r'(?=^## )', md_text, flags=re.MULTILINE)
+
+    translated_sections = []
+    for i, section in enumerate(sections):
+        if not section.strip():
+            continue
+
+        print(f"    Translating section {i+1}/{len(sections)} to {lang_name}...")
+
+        prompt = f"""Translate the following Markdown text from English to {lang_name}.
+
+CRITICAL RULES — follow these exactly:
+- Translate ONLY the human-readable text
+- Do NOT translate or modify: URLs, anchor IDs like {{#anchor-id}}, HTML tags, Markdown syntax (##, **, *, >, -, 1., etc.), code blocks, image paths, class names, variable names
+- Preserve ALL blank lines and line breaks exactly as they appear
+- Preserve ALL special characters and punctuation style
+- Do NOT add any preamble or explanation — output ONLY the translated Markdown
+
+TEXT TO TRANSLATE:
+{section}"""
+
+        message = client.messages.create(
+            model="claude-sonnet-4-20250514",
+            max_tokens=4096,
+            messages=[{"role": "user", "content": prompt}]
+        )
+        translated_sections.append(message.content[0].text)
+        time.sleep(0.5)  # Brief pause between API calls
+
+    return "\n\n".join(translated_sections)
+
+
+def build_outputs_for_lang(md_text, meta, lang_code):
+    """Run the full build pipeline for one language and write 3 output files."""
+    info   = LANGUAGES[lang_code]
+    suffix = info['suffix']
+
+    lang_meta = dict(meta)
+    lang_meta['lang'] = lang_code
+
+    # Extract glossary and FAQs
+    glossary = extract_glossary(md_text)
+    faqs     = extract_faqs(md_text)
+
+    # Convert Markdown → HTML
+    article_html = md_to_html(md_text)
+
+    # Replace raw glossary/FAQ sections with styled components
+    glossary_html = build_glossary_html(glossary)
+    faq_html      = build_faq_html(faqs)
+    article_html  = replace_glossary_section(article_html, glossary_html)
+    article_html  = replace_faq_section(article_html, faq_html)
+
+    # Auto-tag glossary terms
+    article_html = auto_tag_glossary(article_html, glossary)
+
+    # Build navigation
+    toc_html     = build_toc_html(md_text)
+    sidenav_html = build_sidenav_html(md_text)
+
+    # Output 1: Standalone HTML
+    standalone = build_full_html(article_html, toc_html, sidenav_html, lang_meta)
+    out1 = os.path.join(DIST_DIR, f"avatour-guide{suffix}.html")
+    with open(out1, 'w', encoding='utf-8') as f:
+        f.write(standalone)
+    print(f"  ✓ Standalone  → {out1}")
+
+    # Output 2: Embed HTML
+    embed = build_embed_html(article_html, toc_html, sidenav_html, lang_meta)
+    out2 = os.path.join(DIST_DIR, f"avatour-guide-embed{suffix}.html")
+    with open(out2, 'w', encoding='utf-8') as f:
+        f.write(embed)
+    print(f"  ✓ Embed       → {out2}")
+
+    # Output 3: Print/PDF HTML
+    print_html = build_full_html(article_html, toc_html, sidenav_html, lang_meta, body_class="print-mode")
+    out3 = os.path.join(DIST_DIR, f"avatour-guide-print{suffix}.html")
+    with open(out3, 'w', encoding='utf-8') as f:
+        f.write(print_html)
+    print(f"  ✓ Print/PDF   → {out3}")
+
+
 def main():
     os.makedirs(DIST_DIR, exist_ok=True)
 
-    # 1. Load source
-    post = frontmatter.load(SOURCE_FILE)
-    md_text = post.content
-    meta = {
-        'title':    post.get('title', 'Avatour User Guide'),
-        'version':  post.get('version', '2.0'),
-        'updated':  post.get('updated', '2026'),
+    # Load English source
+    post    = frontmatter.load(SOURCE_FILE)
+    en_text = post.content
+    meta    = {
+        'title':   post.get('title', 'Avatour User Guide'),
+        'version': post.get('version', '2.0'),
+        'updated': post.get('updated', '2026'),
     }
 
-    # 2. Extract glossary and FAQs before converting
-    glossary = extract_glossary(md_text)
-    faqs = extract_faqs(md_text)
-    print(f"  Found {len(glossary)} glossary terms, {len(faqs)} FAQ entries")
+    # Build English outputs
+    print("\n  [EN] English")
+    build_outputs_for_lang(en_text, meta, 'en')
 
-    # 3. Convert Markdown → HTML
-    article_html = md_to_html(md_text)
+    # Build translated outputs
+    for lang_code in ['it', 'es']:
+        lang_name = LANGUAGES[lang_code]['full']
+        print(f"\n  [{lang_code.upper()}] {lang_name} — translating...")
+        translated_text = translate_markdown(en_text, lang_code)
+        build_outputs_for_lang(translated_text, meta, lang_code)
 
-    # 4. Replace raw glossary/FAQ sections with styled components
-    glossary_html = build_glossary_html(glossary)
-    faq_html = build_faq_html(faqs)
-    article_html = replace_glossary_section(article_html, glossary_html)
-    article_html = replace_faq_section(article_html, faq_html)
-
-    # 5. Auto-tag glossary terms in body text
-    article_html = auto_tag_glossary(article_html, glossary)
-
-    # 6. Build navigation components
-    toc_html      = build_toc_html(md_text)
-    sidenav_html  = build_sidenav_html(md_text)
-
-    # 7. Output 1: Standalone HTML
-    standalone = build_full_html(article_html, toc_html, sidenav_html, meta)
-    out1 = os.path.join(DIST_DIR, "avatour-guide.html")
-    with open(out1, 'w', encoding='utf-8') as f:
-        f.write(standalone)
-    print(f"  ✓ Standalone HTML  → {out1}")
-
-    # 8. Output 2: Embed HTML
-    embed = build_embed_html(article_html, toc_html, sidenav_html, meta)
-    out2 = os.path.join(DIST_DIR, "avatour-guide-embed.html")
-    with open(out2, 'w', encoding='utf-8') as f:
-        f.write(embed)
-    print(f"  ✓ Embed HTML       → {out2}")
-
-    # 9. Output 3: Print/PDF HTML (open in browser, Cmd+P, Save as PDF)
-    print_html = build_full_html(article_html, toc_html, sidenav_html, meta, body_class="print-mode")
-    out3 = os.path.join(DIST_DIR, "avatour-guide-print.html")
-    with open(out3, 'w', encoding='utf-8') as f:
-        f.write(print_html)
-    print(f"  ✓ Print/PDF HTML   → {out3}")
-    print(f"\n  To generate PDF: open {out3} in Chrome → Cmd+P → Save as PDF")
-    print(f"  (For automated PDF: install puppeteer and run: node pdf.js)")
+    print(f"\n  To generate PDFs: open each avatour-guide-print*.html in Chrome → Cmd+P → Save as PDF")
 
 
 if __name__ == "__main__":
