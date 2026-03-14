@@ -2,10 +2,17 @@
 """
 Avatour User Guide — Build Script
 ==================================
-Converts guide-source/Avatour User and Best Practices Guide.md into three outputs:
-  1. standalone HTML  → dist/avatour-guide.html
-  2. embed HTML       → dist/avatour-guide-embed.html
-  3. PDF-ready HTML   → dist/avatour-guide-print.html  (open in browser → Print → Save as PDF)
+Builds three HTML outputs for each language from separate source files:
+
+  Source files (in guide-source/):
+    Avatour User and Best Practices Guide.md        → EN
+    Avatour User and Best Practices Guide - IT.md   → IT
+    Avatour User and Best Practices Guide - ES.md   → ES
+
+  Outputs (in dist/):
+    avatour-guide.html / -it.html / -es.html        → Standalone HTML
+    avatour-guide-embed.html / -embed-it.html / -embed-es.html → Webflow embed
+    avatour-guide-print.html / -print-it.html / -print-es.html → PDF-ready
 
 Usage:
   python guide-source/build.py
@@ -14,24 +21,33 @@ Requirements:
   pip install markdown pymdown-extensions python-frontmatter --break-system-packages
 """
 
-import os, re, json, time
+import os, re, json
 import frontmatter
 import markdown
 from markdown.extensions.toc import TocExtension
-try:
-    import anthropic
-    ANTHROPIC_AVAILABLE = True
-except ImportError:
-    ANTHROPIC_AVAILABLE = False
 
 # ── CONFIG ────────────────────────────────────────────────────────────────
-SOURCE_FILE = "guide-source/Avatour User and Best Practices Guide.md"
-DIST_DIR    = "dist"
+DIST_DIR = "dist"
 
 LANGUAGES = {
-    "en": {"label": "EN",  "full": "English",  "suffix": ""},
-    "it": {"label": "IT",  "full": "Italiano", "suffix": "-it"},
-    "es": {"label": "ES",  "full": "Español",  "suffix": "-es"},
+    "en": {
+        "label":  "EN",
+        "full":   "English",
+        "suffix": "",
+        "source": "guide-source/Avatour User and Best Practices Guide.md",
+    },
+    "it": {
+        "label":  "IT",
+        "full":   "Italiano",
+        "suffix": "-it",
+        "source": "guide-source/Avatour User and Best Practices Guide - IT.md",
+    },
+    "es": {
+        "label":  "ES",
+        "full":   "Español",
+        "suffix": "-es",
+        "source": "guide-source/Avatour User and Best Practices Guide - ES.md",
+    },
 }
 
 BRAND = {
@@ -1270,126 +1286,26 @@ def build_lang_switcher_html(active_lang, embed=False):
     return f'<div class="lang-switcher">{"".join(buttons)}</div>'
 
 
-def translate_markdown(md_text, target_lang):
-    """
-    Translate Markdown source text to target language using Claude API.
-    Preserves all Markdown syntax, anchor IDs, URLs, and code blocks.
-    """
-    if not ANTHROPIC_AVAILABLE:
-        print(f"  ⚠ anthropic package not installed — skipping translation to {target_lang}")
-        return md_text
-
-    lang_names = {"it": "Italian", "es": "Spanish"}
-    lang_name = lang_names.get(target_lang, target_lang)
-
-    client = anthropic.Anthropic()
-
-    # Split into chunks of ~3000 words to stay within token limits
-    # Split on H2 headings to keep sections together
-    sections = re.split(r'(?=^## )', md_text, flags=re.MULTILINE)
-
-    translated_sections = []
-    for i, section in enumerate(sections):
-        if not section.strip():
-            continue
-
-        print(f"    Translating section {i+1}/{len(sections)} to {lang_name}...")
-
-        prompt = f"""Translate the following Markdown text from English to {lang_name}.
-
-CRITICAL RULES — follow these exactly:
-- Translate ONLY the human-readable text
-- Do NOT translate or modify: URLs, anchor IDs like {{#anchor-id}}, HTML tags, Markdown syntax (##, **, *, >, -, 1., etc.), code blocks, image paths, class names, variable names
-- Preserve ALL blank lines and line breaks exactly as they appear
-- Preserve ALL special characters and punctuation style
-- Do NOT add any preamble or explanation — output ONLY the translated Markdown
-
-TEXT TO TRANSLATE:
-{section}"""
-
-        message = client.messages.create(
-            model="claude-sonnet-4-20250514",
-            max_tokens=4096,
-            messages=[{"role": "user", "content": prompt}]
-        )
-        translated_sections.append(message.content[0].text)
-        time.sleep(0.5)  # Brief pause between API calls
-
-    return "\n\n".join(translated_sections)
-
-
-def build_outputs_for_lang(md_text, meta, lang_code):
-    """Run the full build pipeline for one language and write 3 output files."""
-    info   = LANGUAGES[lang_code]
-    suffix = info['suffix']
-
-    lang_meta = dict(meta)
-    lang_meta['lang'] = lang_code
-
-    # Extract glossary and FAQs
-    glossary = extract_glossary(md_text)
-    faqs     = extract_faqs(md_text)
-
-    # Convert Markdown → HTML
-    article_html = md_to_html(md_text)
-
-    # Replace raw glossary/FAQ sections with styled components
-    glossary_html = build_glossary_html(glossary)
-    faq_html      = build_faq_html(faqs)
-    article_html  = replace_glossary_section(article_html, glossary_html)
-    article_html  = replace_faq_section(article_html, faq_html)
-
-    # Auto-tag glossary terms
-    article_html = auto_tag_glossary(article_html, glossary)
-
-    # Build navigation
-    toc_html     = build_toc_html(md_text)
-    sidenav_html = build_sidenav_html(md_text)
-
-    # Output 1: Standalone HTML
-    standalone = build_full_html(article_html, toc_html, sidenav_html, lang_meta)
-    out1 = os.path.join(DIST_DIR, f"avatour-guide{suffix}.html")
-    with open(out1, 'w', encoding='utf-8') as f:
-        f.write(standalone)
-    print(f"  ✓ Standalone  → {out1}")
-
-    # Output 2: Embed HTML
-    embed = build_embed_html(article_html, toc_html, sidenav_html, lang_meta)
-    out2 = os.path.join(DIST_DIR, f"avatour-guide-embed{suffix}.html")
-    with open(out2, 'w', encoding='utf-8') as f:
-        f.write(embed)
-    print(f"  ✓ Embed       → {out2}")
-
-    # Output 3: Print/PDF HTML
-    print_html = build_full_html(article_html, toc_html, sidenav_html, lang_meta, body_class="print-mode")
-    out3 = os.path.join(DIST_DIR, f"avatour-guide-print{suffix}.html")
-    with open(out3, 'w', encoding='utf-8') as f:
-        f.write(print_html)
-    print(f"  ✓ Print/PDF   → {out3}")
-
-
 def main():
     os.makedirs(DIST_DIR, exist_ok=True)
 
-    # Load English source
-    post    = frontmatter.load(SOURCE_FILE)
-    en_text = post.content
-    meta    = {
-        'title':   post.get('title', 'Avatour User Guide'),
-        'version': post.get('version', '2.0'),
-        'updated': post.get('updated', '2026'),
-    }
+    for lang_code, info in LANGUAGES.items():
+        source_file = info['source']
 
-    # Build English outputs
-    print("\n  [EN] English")
-    build_outputs_for_lang(en_text, meta, 'en')
+        # Skip if source file doesn't exist yet
+        if not os.path.exists(source_file):
+            print(f"\n  [{lang_code.upper()}] Skipping — source file not found: {source_file}")
+            continue
 
-    # Build translated outputs
-    for lang_code in ['it', 'es']:
-        lang_name = LANGUAGES[lang_code]['full']
-        print(f"\n  [{lang_code.upper()}] {lang_name} — translating...")
-        translated_text = translate_markdown(en_text, lang_code)
-        build_outputs_for_lang(translated_text, meta, lang_code)
+        post = frontmatter.load(source_file)
+        meta = {
+            'title':   post.get('title', 'Avatour User Guide'),
+            'version': post.get('version', '2.0'),
+            'updated': post.get('updated', '2026'),
+        }
+
+        print(f"\n  [{lang_code.upper()}] {info['full']} — building from {source_file}")
+        build_outputs_for_lang(post.content, meta, lang_code)
 
     print(f"\n  To generate PDFs: open each avatour-guide-print*.html in Chrome → Cmd+P → Save as PDF")
 
