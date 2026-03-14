@@ -1107,6 +1107,20 @@ def build_embed_html(article_html, toc_html, sidenav_html, meta):
     )
 
     EMBED_JS = """
+// ── POST HEIGHT TO PARENT (so Webflow iframe resizes to content) ───────
+function postHeight() {
+  var h = document.body.scrollHeight;
+  if (window.parent !== window) {
+    window.parent.postMessage({ iframeHeight: h }, '*');
+  }
+}
+// Post on load and after a short delay for images/fonts
+window.addEventListener('load', function() {
+  postHeight();
+  setTimeout(postHeight, 800);
+  setTimeout(postHeight, 2000);
+});
+
 // ── FAQ ACCORDION ──────────────────────────────────────────────────────
 document.querySelectorAll('.faq-q').forEach(btn => {
   btn.addEventListener('click', () => {
