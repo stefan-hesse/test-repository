@@ -31,22 +31,25 @@ DIST_DIR = "dist"
 
 LANGUAGES = {
     "en": {
-        "label":  "EN",
-        "full":   "English",
-        "suffix": "",
-        "source": "guide-source/Avatour User and Best Practices Guide.md",
+        "label":       "EN",
+        "full":        "English",
+        "suffix":      "",
+        "source":      "guide-source/Avatour User and Best Practices Guide.md",
+        "webflow_url": "https://avatour.com/user-guide",
     },
     "it": {
-        "label":  "IT",
-        "full":   "Italiano",
-        "suffix": "-it",
-        "source": "guide-source/Avatour User and Best Practices Guide – IT.md",
+        "label":       "IT",
+        "full":        "Italiano",
+        "suffix":      "-it",
+        "source":      "guide-source/Avatour User and Best Practices Guide - IT.md",
+        "webflow_url": "https://avatour.com/user-guide-it",
     },
     "es": {
-        "label":  "ES",
-        "full":   "Español",
-        "suffix": "-es",
-        "source": "guide-source/Avatour User and Best Practices Guide – ES.md",
+        "label":       "ES",
+        "full":        "Español",
+        "suffix":      "-es",
+        "source":      "guide-source/Avatour User and Best Practices Guide - ES.md",
+        "webflow_url": "https://avatour.com/user-guide-es",
     },
 }
 
@@ -1276,20 +1279,25 @@ document.querySelectorAll('.fb-btn').forEach(btn => {
 EMBED_BASE_URL = "https://stefan-hesse.github.io/test-repository/dist"
 
 def build_lang_switcher_html(active_lang, embed=False):
-    """Build EN / IT / ES switcher buttons linking to the correct output files.
-    Standalone: relative links (works when all files are in the same folder).
-    Embed: absolute URLs (required for iframe context on Webflow).
+    """Build EN / IT / ES switcher buttons.
+    Standalone: relative links between local HTML files.
+    Embed: links to Webflow pages via window.top.location (breaks out of iframe).
     """
     buttons = []
     for code, info in LANGUAGES.items():
         suffix = info['suffix']
+        active = ' active' if code == active_lang else ''
         if embed:
-            # Use absolute URL so links work inside an iframe on any domain
-            href = f"{EMBED_BASE_URL}/avatour-guide-embed{suffix}.html"
+            # Navigate the parent Webflow page, not just the iframe
+            webflow_url = info.get('webflow_url', '#')
+            buttons.append(
+                f'<a class="lang-btn{active}" href="{webflow_url}" '
+                f'onclick="window.top.location.href=\'{ webflow_url }\'; return false;">'
+                f'{info["label"]}</a>'
+            )
         else:
             href = f"avatour-guide{suffix}.html"
-        active = ' active' if code == active_lang else ''
-        buttons.append(f'<a class="lang-btn{active}" href="{href}">{info["label"]}</a>')
+            buttons.append(f'<a class="lang-btn{active}" href="{href}">{info["label"]}</a>')
     return f'<div class="lang-switcher">{"".join(buttons)}</div>'
 
 
