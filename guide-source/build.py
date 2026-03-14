@@ -400,19 +400,7 @@ details[open] .faq-q::after { transform: rotate(45deg); }
 .guide-toc li a.active { color: var(--orange); border-left-color: var(--orange); font-weight: 500; }
 .guide-toc li.toc2 a { padding-left: 22px; font-size: 12px; }
 
-/* FEEDBACK */
-.guide-feedback {
-  margin-top: 48px; padding-top: 24px;
-  border-top: 1px solid var(--border);
-  display: flex; align-items: center; gap: 12px;
-}
-.guide-feedback span { font-size: 13.5px; color: var(--slate); }
-.fb-btn {
-  font-family: 'Titillium Web', sans-serif; font-size: 12px; font-weight: 700;
-  border: 1px solid var(--border); border-radius: 4px;
-  padding: 5px 16px; cursor: pointer; background: #fff; color: var(--slate);
-}
-.fb-btn:hover { border-color: var(--orange); color: var(--orange); }
+
 
 /* RELATED */
 
@@ -930,11 +918,7 @@ def build_full_html(article_html, toc_html, sidenav_html, meta, body_class=""):
 
       {article_html}
 
-      <div class="guide-feedback">
-        <span>Was this article helpful?</span>
-        <button class="fb-btn">Yes</button>
-        <button class="fb-btn">No</button>
-      </div>
+
 
 
 
@@ -1186,13 +1170,7 @@ if (headings.length) {
   headings.forEach(h => { if (h.id) obs.observe(h); });
 }
 
-// ── FEEDBACK BUTTONS ───────────────────────────────────────────────────
-document.querySelectorAll('.fb-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const feedback = btn.closest('.guide-feedback');
-    if (feedback) feedback.innerHTML = '<span style="color:var(--orange);font-weight:500">Thank you for your feedback!</span>';
-  });
-});
+
 """
 
     # Strip Glossary and FAQ sections entirely from the embed
