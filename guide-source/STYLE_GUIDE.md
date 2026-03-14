@@ -9,12 +9,20 @@ This document explains how to edit and maintain the Avatour User & Best Practice
 ```
 test-repository/
   dist/
-    avatour-guide.html           ← Standalone HTML (share with customers)
-    avatour-guide-embed.html     ← Embedded on avatour.com via iframe
-    avatour-guide-print.html     ← Open in Chrome → Save as PDF
+    avatour-guide.html              ← Standalone HTML — English
+    avatour-guide-it.html           ← Standalone HTML — Italian
+    avatour-guide-es.html           ← Standalone HTML — Spanish
+    avatour-guide-embed.html        ← Webflow embed — English
+    avatour-guide-embed-it.html     ← Webflow embed — Italian
+    avatour-guide-embed-es.html     ← Webflow embed — Spanish
+    avatour-guide-print.html        ← PDF-ready — English
+    avatour-guide-print-it.html     ← PDF-ready — Italian
+    avatour-guide-print-es.html     ← PDF-ready — Spanish
     avatour-business-benefits.html  ← Separate page (not built by build.py)
   guide-source/
-    Avatour User and Best Practices Guide.md  ← THE SOURCE FILE — edit this
+    Avatour User and Best Practices Guide.md       ← English source — edit this
+    Avatour User and Best Practices Guide - IT.md  ← Italian source — edit this
+    Avatour User and Best Practices Guide - ES.md  ← Spanish source — edit this
     STYLE_GUIDE.md               ← This document
     build.py                     ← Build script — do not edit unless needed
   .github/
@@ -22,7 +30,9 @@ test-repository/
       build-guide.yml            ← GitHub Actions workflow — do not edit
 ```
 
-> **Note:** You can ignore the local `dist/` folder entirely. The built HTML files are committed back to GitHub automatically by the Actions bot after every build. GitHub Desktop may show the `dist/` files as changed — just ignore this. Never commit changes to `dist/` manually. The only file you ever need to edit is `Avatour User and Best Practices Guide.md`.
+> **Note:** You can ignore the local `dist/` folder entirely. The built HTML files are committed back to GitHub automatically by the Actions bot after every build. GitHub Desktop may show the `dist/` files as changed — just ignore this. Never commit changes to `dist/` manually.
+
+> **Note:** All 9 output files must stay in the same `dist/` folder. The language switcher buttons (EN / IT / ES) in the guide header use relative links between the files — if they are in different folders the switcher will not work.
 
 ---
 
@@ -63,34 +73,6 @@ Total time from saving in Typora to the website updating: about 2 minutes.
 No. The `dist/` folder in your local repository is just a local copy — the Actions bot commits the freshly built files back to GitHub automatically after every build. GitHub Desktop may show the `dist/` files as changed after a build; you can safely ignore this or pull the latest changes if you want your local copy to be current. The authoritative versions always live in the GitHub repository and are served from GitHub Pages.
 
 ---
-
-## Production migration — pending (Prasad)
-
-The current setup on Stefan's personal GitHub account is a test environment. When ready to move to production:
-
-1. Create a repository in **Bitbucket** (Avatour's company standard)
-2. Convert `build-guide.yml` to a **Bitbucket Pipelines** file (`bitbucket-pipelines.yml`) — same logic, different syntax
-3. Host the embed file on **AWS S3** instead of GitHub Pages
-4. Update the iframe `src` in Webflow once to point to the new S3 URL
-
-Everything else — the MD source file, `build.py`, Typora workflow, and Cloudinary screenshots — moves across unchanged.
-
-**Italian and Spanish translation — activate at migration time:**
-
-Updated `build.py` and `build-guide.yml` files are already prepared in the Claude outputs folder. To activate:
-
-1. Replace the current `build.py` and `build-guide.yml` with the prepared versions
-2. Set up an Anthropic API account at **console.anthropic.com** using the Avatour company email
-3. Add initial credits — set a monthly spend limit of ~$10 (a full translation run costs ~$0.10–0.30)
-4. Add the API key as a Bitbucket Pipelines secret named `ANTHROPIC_API_KEY`
-5. The build will then produce 9 output files: standalone, embed, and print for EN, IT, and ES
-6. The guide header will show an EN / IT / ES language switcher
-
-Until the API key is configured the build produces English only — no errors.
-
----
-
-
 
 ## Basic Markdown rules
 
@@ -316,33 +298,49 @@ Press **Cmd+P**, then set:
 
 ## How the Webflow embed works
 
-The guide is embedded on avatour.com using a single iframe pointing to GitHub Pages:
+The guide is embedded on avatour.com as three separate pages — one per language. Each page contains a single iframe pointing to the corresponding GitHub Pages file.
 
-```
-https://stefan-hesse.github.io/test-repository/dist/avatour-guide-embed.html
-```
+**Three separate Webflow pages (recommended for SEO and direct linking):**
 
-The Webflow page contains only:
+| Webflow page | Suggested slug | iframe src |
+|---|---|---|
+| User Guide (English) | `/user-guide` | `avatour-guide-embed.html` |
+| Guida Utente (Italian) | `/user-guide-it` | `avatour-guide-embed-it.html` |
+| Guía del Usuario (Spanish) | `/user-guide-es` | `avatour-guide-embed-es.html` |
+
+**Iframe code for each page — just paste into a Webflow HTML Embed element:**
+
+English:
 ```html
 <iframe src="https://stefan-hesse.github.io/test-repository/dist/avatour-guide-embed.html"
-        width="100%"
-        style="border:none; min-height:100vh;">
-</iframe>
+        width="100%" style="border:none; min-height:100vh;"></iframe>
 ```
 
-**You never need to touch Webflow when updating the guide.** Every push triggers a build and deploy automatically.
+Italian:
+```html
+<iframe src="https://stefan-hesse.github.io/test-repository/dist/avatour-guide-embed-it.html"
+        width="100%" style="border:none; min-height:100vh;"></iframe>
+```
+
+Spanish:
+```html
+<iframe src="https://stefan-hesse.github.io/test-repository/dist/avatour-guide-embed-es.html"
+        width="100%" style="border:none; min-height:100vh;"></iframe>
+```
+
+**You never need to touch Webflow when updating the guide.** Every push triggers a build and deploy automatically. The language switcher (EN / IT / ES) built into the guide header allows visitors to switch languages directly within the guide.
+
+> **Note:** When the repository moves to Bitbucket + AWS S3, the base URL will change from `stefan-hesse.github.io/test-repository/dist/` to the new S3 URL. At that point all three iframe `src` values in Webflow will need a one-time update.
 
 ---
 
 ## Monthly update checklist
 
-- [ ] Update the `updated:` date in the front matter at the top of the MD file
-- [ ] Update any changed feature descriptions
-- [ ] Add new features to the relevant section
-- [ ] Update screenshots in Cloudinary using **Replace**
-- [ ] Add new Glossary terms if needed
-- [ ] Add new FAQs if needed
-- [ ] Commit and push in GitHub Desktop — everything updates automatically
+- [ ] Update the English source file `Avatour User and Best Practices Guide.md`
+- [ ] Update the Italian source file `Avatour User and Best Practices Guide - IT.md`
+- [ ] Update the Spanish source file `Avatour User and Best Practices Guide - ES.md`
+- [ ] Update screenshots in Cloudinary using **Replace** (all languages share the same images)
+- [ ] Commit and push in GitHub Desktop — all 9 output files rebuild automatically
 
 ---
 
@@ -356,6 +354,32 @@ The Webflow page contains only:
 | Screenshot not updating in Typora | Image cache | Cmd+Shift+R, or quit and reopen |
 | Build fails in GitHub Actions | Error in MD file | Check Actions log for the error line |
 | TOC link doesn't jump to section | Anchor mismatch | Check `{#anchor-id}` matches exactly |
+
+---
+
+## Production migration — pending (Prasad)
+
+The current setup on Stefan's personal GitHub account is a test environment. When ready to move to production:
+
+1. Create a repository in **Bitbucket** (Avatour's company standard)
+2. Convert `build-guide.yml` to a **Bitbucket Pipelines** file (`bitbucket-pipelines.yml`) — same logic, different syntax
+3. Host the embed file on **AWS S3** instead of GitHub Pages
+4. Update the iframe `src` in Webflow once to point to the new S3 URL
+
+Everything else — the MD source file, `build.py`, Typora workflow, and Cloudinary screenshots — moves across unchanged.
+
+**Italian and Spanish translation — activate at migration time:**
+
+Updated `build.py` and `build-guide.yml` files are already prepared in the Claude outputs folder. To activate:
+
+1. Replace the current `build.py` and `build-guide.yml` with the prepared versions
+2. Set up an Anthropic API account at **console.anthropic.com** using the Avatour company email
+3. Add initial credits — set a monthly spend limit of ~$10 (a full translation run costs ~$0.10–0.30)
+4. Add the API key as a Bitbucket Pipelines secret named `ANTHROPIC_API_KEY`
+5. The build will then produce 9 output files: standalone, embed, and print for EN, IT, and ES
+6. The guide header will show an EN / IT / ES language switcher
+
+Until the API key is configured the build produces English only — no errors.
 
 ---
 

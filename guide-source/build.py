@@ -40,13 +40,13 @@ LANGUAGES = {
         "label":  "IT",
         "full":   "Italiano",
         "suffix": "-it",
-        "source": "guide-source/Avatour User and Best Practices Guide - IT.md",
+        "source": "guide-source/Avatour User and Best Practices Guide – IT.md",
     },
     "es": {
         "label":  "ES",
         "full":   "Español",
         "suffix": "-es",
-        "source": "guide-source/Avatour User and Best Practices Guide - ES.md",
+        "source": "guide-source/Avatour User and Best Practices Guide – ES.md",
     },
 }
 
@@ -1272,13 +1272,20 @@ document.querySelectorAll('.fb-btn').forEach(btn => {
 
 
 # ── MAIN ──────────────────────────────────────────────────────────────────
+# Base URL for embed absolute links (GitHub Pages — update when migrating to S3)
+EMBED_BASE_URL = "https://stefan-hesse.github.io/test-repository/dist"
+
 def build_lang_switcher_html(active_lang, embed=False):
-    """Build EN / IT / ES switcher buttons linking to the correct output files."""
+    """Build EN / IT / ES switcher buttons linking to the correct output files.
+    Standalone: relative links (works when all files are in the same folder).
+    Embed: absolute URLs (required for iframe context on Webflow).
+    """
     buttons = []
     for code, info in LANGUAGES.items():
         suffix = info['suffix']
         if embed:
-            href = f"avatour-guide-embed{suffix}.html"
+            # Use absolute URL so links work inside an iframe on any domain
+            href = f"{EMBED_BASE_URL}/avatour-guide-embed{suffix}.html"
         else:
             href = f"avatour-guide{suffix}.html"
         active = ' active' if code == active_lang else ''
