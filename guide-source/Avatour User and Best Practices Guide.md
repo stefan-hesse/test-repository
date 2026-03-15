@@ -8,7 +8,7 @@ If you are new to Avatour, the following resources provide a helpful introductio
    A short overview of Avatour’s main features and how the platform enables immersive remote collaboration.
 2. [FAQs](https://avatour.com/faqs) 
    Answers to frequently asked questions
-3. [Glossary](https://avatour.com/glossary) 
+3. [Glossary for User Guide](#glossary)  
    Definitions of key Avatour terms and concepts.
 4. Website
    Have a look at the [Avatour Features](https://avatour.com/features) page along with the dedicated Use Cases and Industries sections to learn how Avatour can support your specific needs.
