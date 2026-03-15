@@ -263,7 +263,7 @@ body {
   color: var(--orange); text-decoration: none;
 }
 
-/* GLOSSARY SECTION */
+/* GLOSSARY SECTION — grid style (legacy/simple source) */
 .glossary-grid {
   display: grid; grid-template-columns: 1fr 1fr;
   gap: 1px; background: var(--border);
@@ -280,6 +280,36 @@ body {
   margin-bottom: 4px;
 }
 .glossary-def { font-size: 13px; color: var(--slate); line-height: 1.55; }
+
+/* GLOSSARY SECTION — structured heading style (pre-tagged source) */
+.guide-article h3.glossary-letter {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 11px; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--muted);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 6px; margin: 28px 0 12px;
+}
+.guide-article h4[id^="glossary-"] {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 14px; font-weight: 700; color: var(--blue);
+  margin: 20px 0 6px;
+  scroll-margin-top: 80px;
+}
+.guide-article h4[id^="glossary-"]:target {
+  color: var(--orange);
+  animation: glossary-flash .6s ease;
+}
+@keyframes glossary-flash {
+  0%   { color: var(--orange); }
+  50%  { color: var(--blue); }
+  100% { color: var(--orange); }
+}
+/* guide-term inline links */
+a.guide-term {
+  border-bottom: 1px dashed var(--orange);
+  color: inherit; text-decoration: none; cursor: help;
+}
+a.guide-term:hover { color: var(--orange); }
 
 /* FAQS */
 .faq-item {

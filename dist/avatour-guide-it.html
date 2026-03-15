@@ -262,7 +262,7 @@ body {
   color: var(--orange); text-decoration: none;
 }
 
-/* GLOSSARY SECTION */
+/* GLOSSARY SECTION — grid style (legacy/simple source) */
 .glossary-grid {
   display: grid; grid-template-columns: 1fr 1fr;
   gap: 1px; background: var(--border);
@@ -279,6 +279,36 @@ body {
   margin-bottom: 4px;
 }
 .glossary-def { font-size: 13px; color: var(--slate); line-height: 1.55; }
+
+/* GLOSSARY SECTION — structured heading style (pre-tagged source) */
+.guide-article h3.glossary-letter {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 11px; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--muted);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 6px; margin: 28px 0 12px;
+}
+.guide-article h4[id^="glossary-"] {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 14px; font-weight: 700; color: var(--blue);
+  margin: 20px 0 6px;
+  scroll-margin-top: 80px;
+}
+.guide-article h4[id^="glossary-"]:target {
+  color: var(--orange);
+  animation: glossary-flash .6s ease;
+}
+@keyframes glossary-flash {
+  0%   { color: var(--orange); }
+  50%  { color: var(--blue); }
+  100% { color: var(--orange); }
+}
+/* guide-term inline links */
+a.guide-term {
+  border-bottom: 1px dashed var(--orange);
+  color: inherit; text-decoration: none; cursor: help;
+}
+a.guide-term:hover { color: var(--orange); }
 
 /* FAQS */
 .faq-item {
@@ -517,7 +547,8 @@ body.print-mode .faq-a { display: block !important; padding-bottom: 10px; }
 <a href="#62-prima-di-una-riunione-live-con-video-360" class="sub">6.2 Prima di una Riunione Live con Video 360°</a>
 <a href="#63-durante-loperazione-della-telecamera-in-loco-per-una-riunione-live-con-video-360" class="sub">6.3 Durante l'Operazione della Telecamera in Loco per una Riunione Live con Video 360°</a>
 <div class="sidenav-section">Reference</div>
-<a href="https://avatour.com/glossary" target="_blank" rel="noopener">Glossary ↗</a>
+<a href="#glossary">Glossary for User Guide</a>
+<a href="https://avatour.com/glossary" target="_blank" rel="noopener">Glossary (Website) ↗</a>
 <a href="https://avatour.com/faqs" target="_blank" rel="noopener">FAQs ↗</a>
 <a href="https://avatour.live/test" target="_blank" rel="noopener">Network Test ↗</a>
 <a href="mailto:support@avatour.live">Open Support Ticket ↗</a>
@@ -1114,7 +1145,7 @@ Cliccando su un'opzione del menu si apre un <strong>pannello laterale</strong> s
   <li class="toc2"><a href="#61-primi-usi-informali-e-familiarizzazione">6.1 Primi Usi (Informali) e Familiarizzazione</a></li>
   <li class="toc2"><a href="#62-prima-di-una-riunione-live-con-video-360">6.2 Prima di una Riunione Live con Video 360°</a></li>
   <li class="toc2"><a href="#63-durante-loperazione-della-telecamera-in-loco-per-una-riunione-live-con-video-360">6.3 Durante l'Operazione della Telecamera in Loco per una Riunione Live con Video 360°</a></li>
-  <li><a href="#glossary">Glossary</a></li>
+  <li><a href="#glossary">Glossary for User Guide</a></li>
   <li><a href="#faqs">FAQs</a></li>
 </ul>
     </aside>
