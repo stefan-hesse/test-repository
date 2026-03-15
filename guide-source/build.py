@@ -672,6 +672,20 @@ def build_faq_html(faqs):
     return html
 
 
+def open_links_in_new_tab(html):
+    """Add target=_blank and rel=noopener to all external links in article HTML."""
+    import re as _re
+    def add_target(m):
+        tag = m.group(0)
+        href_m = _re.search(r'href=["\']([^"\']*)["\']', tag)
+        if href_m:
+            url = href_m.group(1)
+            if (url.startswith('http') or url.startswith('mailto')) and 'target=' not in tag:
+                tag = tag[:-1] + ' target="_blank" rel="noopener">'
+        return tag
+    return _re.sub(r'<a [^>]+>', add_target, html)
+
+
 def auto_tag_glossary(html_content, glossary):
     """
     Scan body text and wrap glossary terms with tooltip spans.
@@ -808,9 +822,9 @@ def build_sidenav_html(md_text):
         html += f'<a href="#{anchor_id}"{css}>{title}</a>\n'
 
     html += '<div class="sidenav-section">Reference</div>\n'
-    html += '<a href="#glossary">Glossary</a>\n'
-    html += '<a href="#faqs">FAQs</a>\n'
-    html += '<a href="https://avatour.live/test">Network Test ↗</a>\n'
+    html += '<a href="https://avatour.com/glossary" target="_blank" rel="noopener">Glossary ↗</a>\n'
+    html += '<a href="https://avatour.com/faqs" target="_blank" rel="noopener">FAQs ↗</a>\n'
+    html += '<a href="https://avatour.live/test" target="_blank" rel="noopener">Network Test ↗</a>\n'
     html += '<a href="mailto:support@avatour.live">Open Support Ticket ↗</a>\n'
 
     return html
@@ -867,11 +881,7 @@ def replace_faq_section(html, faq_html):
     return result
 
 
-LOGO_SVG = """<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="50" cy="50" r="45" fill="#FF4E00"/>
-  <ellipse cx="50" cy="50" rx="30" ry="20" stroke="white" stroke-width="5" fill="none"/>
-  <circle cx="50" cy="50" r="8" fill="white"/>
-</svg>"""
+LOGO_IMG = '<img src="https://res.cloudinary.com/avatour/image/upload/v1772627129/avatour-name-logo-whiteontransparent_zwfsxa.svg" alt="Avatour" style="height:22px; width:auto; display:block;">'
 
 
 def build_full_html(article_html, toc_html, sidenav_html, meta, body_class=""):
@@ -888,9 +898,8 @@ def build_full_html(article_html, toc_html, sidenav_html, meta, body_class=""):
 <body{' class="' + body_class + '"' if body_class else ''}>
 
 <header class="guide-header">
-  <a class="guide-logo" href="#">
-    {LOGO_SVG}
-    AVATOUR
+  <a class="guide-logo" href="https://avatour.com" target="_blank" rel="noopener">
+    {LOGO_IMG}
   </a>
   <div class="hd"></div>
   <span class="hlabel">User Guide</span>
@@ -1298,6 +1307,9 @@ def build_outputs_for_lang(md_text, meta, lang_code):
 
     # Auto-tag glossary terms
     article_html = auto_tag_glossary(article_html, glossary)
+
+    # Open all external links in new tab
+    article_html = open_links_in_new_tab(article_html)
 
     # Build navigation
     toc_html     = build_toc_html(md_text)
