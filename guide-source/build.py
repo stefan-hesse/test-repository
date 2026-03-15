@@ -322,7 +322,7 @@ body {
   color: var(--orange); text-decoration: none;
 }
 
-/* GLOSSARY SECTION */
+/* GLOSSARY SECTION — grid style (legacy/simple source) */
 .glossary-grid {
   display: grid; grid-template-columns: 1fr 1fr;
   gap: 1px; background: var(--border);
@@ -339,6 +339,36 @@ body {
   margin-bottom: 4px;
 }
 .glossary-def { font-size: 13px; color: var(--slate); line-height: 1.55; }
+
+/* GLOSSARY SECTION — structured heading style (pre-tagged source) */
+.guide-article h3.glossary-letter {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 11px; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--muted);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 6px; margin: 28px 0 12px;
+}
+.guide-article h4[id^="glossary-"] {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 14px; font-weight: 700; color: var(--blue);
+  margin: 20px 0 6px;
+  scroll-margin-top: 80px;
+}
+.guide-article h4[id^="glossary-"]:target {
+  color: var(--orange);
+  animation: glossary-flash .6s ease;
+}
+@keyframes glossary-flash {
+  0%   { color: var(--orange); }
+  50%  { color: var(--blue); }
+  100% { color: var(--orange); }
+}
+/* guide-term inline links */
+a.guide-term {
+  border-bottom: 1px dashed var(--orange);
+  color: inherit; text-decoration: none; cursor: help;
+}
+a.guide-term:hover { color: var(--orange); }
 
 /* FAQS */
 .faq-item {
@@ -773,6 +803,9 @@ def extract_headings(md_text):
     stop_ids = {"glossary", "faqs"}
 
     for line in md_text.splitlines():
+        # Skip #### glossary term headings — not included in main navigation
+        if re.match(r'^#{3,4}\s+', line) and '{#glossary-' in line:
+            continue
         m = re.match(r"^(#{2,3})\s+(.+)", line)
         if not m:
             continue
@@ -806,7 +839,7 @@ def build_toc_html(md_text):
         css = ' class="toc2"' if level == 3 else ""
         items += f'  <li{css}><a href="#{anchor_id}">{title}</a></li>\n'
 
-    items += '  <li><a href="#glossary">Glossary</a></li>\n'
+    items += '  <li><a href="#glossary">Glossary for User Guide</a></li>\n'
     items += '  <li><a href="#faqs">FAQs</a></li>\n'
 
     return f'<div class="toc-label">On this page</div>\n<ul>\n{items}</ul>'
@@ -822,7 +855,8 @@ def build_sidenav_html(md_text):
         html += f'<a href="#{anchor_id}"{css}>{title}</a>\n'
 
     html += '<div class="sidenav-section">Reference</div>\n'
-    html += '<a href="https://avatour.com/glossary" target="_blank" rel="noopener">Glossary ↗</a>\n'
+    html += '<a href="#glossary">Glossary for User Guide</a>\n'
+    html += '<a href="https://avatour.com/glossary" target="_blank" rel="noopener">Glossary (Website) ↗</a>\n'
     html += '<a href="https://avatour.com/faqs" target="_blank" rel="noopener">FAQs ↗</a>\n'
     html += '<a href="https://avatour.live/test" target="_blank" rel="noopener">Network Test ↗</a>\n'
     html += '<a href="mailto:support@avatour.live">Open Support Ticket ↗</a>\n'
@@ -1292,21 +1326,31 @@ def build_outputs_for_lang(md_text, meta, lang_code):
     lang_meta = dict(meta)
     lang_meta['lang'] = lang_code
 
-    # Extract glossary and FAQs
-    glossary = extract_glossary(md_text)
+    # Detect whether source already has pre-tagged glossary terms
+    # (inline <a class="guide-term"> links from the other pipeline)
+    pre_tagged = 'class="guide-term"' in md_text
+
+    # Extract glossary and FAQs (only used if NOT pre-tagged)
+    glossary = extract_glossary(md_text) if not pre_tagged else {}
     faqs     = extract_faqs(md_text)
 
     # Convert Markdown → HTML
     article_html = md_to_html(md_text)
 
-    # Replace raw glossary/FAQ sections with styled components
-    glossary_html = build_glossary_html(glossary)
-    faq_html      = build_faq_html(faqs)
-    article_html  = replace_glossary_section(article_html, glossary_html)
-    article_html  = replace_faq_section(article_html, faq_html)
+    if pre_tagged:
+        # Source already has inline term links and a structured glossary —
+        # skip the build script's glossary grid replacement and auto-tagging
+        print(f"    Pre-tagged glossary detected — skipping auto-tag and grid replacement")
+    else:
+        # Standard pipeline: replace raw glossary/FAQ with styled components
+        # and auto-tag glossary terms in body text
+        glossary_html = build_glossary_html(glossary)
+        article_html  = replace_glossary_section(article_html, glossary_html)
+        article_html  = auto_tag_glossary(article_html, glossary)
 
-    # Auto-tag glossary terms
-    article_html = auto_tag_glossary(article_html, glossary)
+    # Always process FAQs
+    faq_html     = build_faq_html(faqs)
+    article_html = replace_faq_section(article_html, faq_html)
 
     # Open all external links in new tab
     article_html = open_links_in_new_tab(article_html)
