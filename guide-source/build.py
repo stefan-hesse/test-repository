@@ -883,7 +883,6 @@ def build_sidenav_html(md_text):
 
     html += '<div class="sidenav-section">Reference</div>\n'
     html += '<a href="#glossary">Glossary for User Guide</a>\n'
-    html += '<a href="https://avatour.com/glossary" target="_blank" rel="noopener">Glossary (Website) ↗</a>\n'
     html += '<a href="https://avatour.com/faqs" target="_blank" rel="noopener">FAQs ↗</a>\n'
     html += '<a href="https://avatour.live/test" target="_blank" rel="noopener">Network Test ↗</a>\n'
     html += '<a href="mailto:support@avatour.live">Open Support Ticket ↗</a>\n'
@@ -1279,15 +1278,7 @@ if (headings.length) {
 
 """
 
-    # Strip Glossary and FAQ sections entirely from the embed
-    # (both live in the website footer as separate pages)
     import re as _re2
-    faq_html_fixed = _re2.sub(
-        r'<h2[^>]*id="glossary"[^>]*>.*',
-        '',
-        faq_html_fixed,
-        flags=_re2.DOTALL
-    )
 
     # Fix 3: rewrite gloss-term spans to use data attributes instead of nested HTML
     # (Webflow can mangle nested spans; data attributes are safer)
@@ -1312,20 +1303,9 @@ if (headings.length) {
         flags=_re2.DOTALL
     )
 
-    # Strip glossary/FAQ/reference links from sidenav for embed version
-    embed_sidenav = _re2.sub(
-        r'<div class="sidenav-section">Reference</div>.*',
-        '',
-        sidenav_html,
-        flags=_re2.DOTALL
-    )
-    # Strip glossary/FAQ from TOC for embed version
-    embed_toc = _re2.sub(
-        r'<li><a href="#glossary">.*',
-        '',
-        toc_html,
-        flags=_re2.DOTALL
-    )
+    # Keep full sidenav and TOC including Glossary for User Guide
+    embed_sidenav = sidenav_html
+    embed_toc = toc_html
 
     return f"""<!DOCTYPE html>
 <html lang="en">
