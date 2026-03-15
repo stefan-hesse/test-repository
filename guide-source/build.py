@@ -587,12 +587,39 @@ if (allH.length && sideLinks.length) {
 }
 
 // FAQ feedback buttons
-document.querySelectorAll('.fb-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const feedback = btn.closest('.guide-feedback');
-    feedback.innerHTML = '<span style="color:var(--orange);font-weight:500">Thank you for your feedback!</span>';
+// ── GUIDE-TERM TOOLTIPS ────────────────────────────────────────────────
+(function() {
+  var tip = document.createElement('div');
+  tip.style.cssText = [
+    'display:none', 'position:fixed', 'z-index:9999',
+    'background:#132A39', 'color:#fff', 'font-size:12px',
+    'line-height:1.5', 'padding:8px 12px', 'border-radius:5px',
+    'width:280px', 'max-width:90vw', 'pointer-events:none',
+    'box-shadow:0 4px 16px rgba(0,0,0,.2)',
+    "font-family:'Roboto',sans-serif"
+  ].join(';');
+  document.body.appendChild(tip);
+
+  document.querySelectorAll('a.guide-term[data-tooltip]').forEach(function(el) {
+    el.addEventListener('mouseenter', function(e) {
+      tip.textContent = el.getAttribute('data-tooltip');
+      tip.style.display = 'block';
+      positionGuideTip(e);
+    });
+    el.addEventListener('mousemove', positionGuideTip);
+    el.addEventListener('mouseleave', function() { tip.style.display = 'none'; });
   });
-});
+
+  function positionGuideTip(e) {
+    var pad = 14, w = tip.offsetWidth || 280, h = tip.offsetHeight || 60;
+    var x = e.clientX + pad;
+    var y = e.clientY - h - pad;
+    if (x + w > window.innerWidth) x = e.clientX - w - pad;
+    if (y < 0) y = e.clientY + pad;
+    tip.style.left = x + 'px';
+    tip.style.top  = y + 'px';
+  }
+})();
 """
 
 # ── GLOSSARY DATA ─────────────────────────────────────────────────────────
@@ -1116,6 +1143,42 @@ def build_embed_html(article_html, toc_html, sidenav_html, meta):
     )
 
     EMBED_JS = """
+// ── GUIDE-TERM TOOLTIPS ────────────────────────────────────────────────
+(function() {
+  var tip = document.createElement('div');
+  tip.style.cssText = [
+    'display:none', 'position:fixed', 'z-index:9999',
+    'background:#132A39', 'color:#fff', 'font-size:12px',
+    'line-height:1.5', 'padding:8px 12px', 'border-radius:5px',
+    'width:280px', 'max-width:90vw', 'pointer-events:none',
+    'box-shadow:0 4px 16px rgba(0,0,0,.2)',
+    "font-family:'Roboto',sans-serif"
+  ].join(';');
+  document.body.appendChild(tip);
+
+  document.querySelectorAll('a.guide-term[data-tooltip]').forEach(function(el) {
+    el.addEventListener('mouseenter', function(e) {
+      tip.textContent = el.getAttribute('data-tooltip');
+      tip.style.display = 'block';
+      positionGuideTip(e);
+    });
+    el.addEventListener('mousemove', positionGuideTip);
+    el.addEventListener('mouseleave', function() {
+      tip.style.display = 'none';
+    });
+  });
+
+  function positionGuideTip(e) {
+    var pad = 14, w = tip.offsetWidth || 280, h = tip.offsetHeight || 60;
+    var x = e.clientX + pad;
+    var y = e.clientY - h - pad;
+    if (x + w > window.innerWidth) x = e.clientX - w - pad;
+    if (y < 0) y = e.clientY + pad;
+    tip.style.left = x + 'px';
+    tip.style.top  = y + 'px';
+  }
+})();
+
 // ── POST HEIGHT TO PARENT (so Webflow iframe resizes to content) ───────
 function postHeight() {
   var h = document.body.scrollHeight;
