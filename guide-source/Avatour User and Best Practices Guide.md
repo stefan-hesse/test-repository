@@ -331,125 +331,103 @@ You can also rename assets, enable face blur, and generate AI topics.
 
 **Device Login** – Pair a 360° camera with your Avatour account by entering the code displayed on the camera. Once paired, the camera can stream 360° video into your meetings, and upload recordings directly to your workspaces. 
 
+**Tutorials** - Access step-by-step tutorials for common tasks in the Web Console.
+
 **Sign Out** – Log out of your account.
  
+## 4. For Host and Admin Users - Avatour Web Console {#for-registered-users}
 
-### 4.2 Web Console - Details by Menu Item
+When you log in to your Avatour User Account, you will access the **Web Console**.  
 
-### 4.2.1 Workspaces
+### 4.1 Web Console - Overview Main Menu
 
-Workspaces can be set up for many purposes (e.g. sites, projects, customer, supplier) and are organisational units helping you to work efficiently in a controlled environment.  You can create a new one with the "New Workspace" button in the upper right corner of the screen.
+On the left-hand side, you will see the following menu items:
+
+![Avatour Web Console - Main Menu](https://res.cloudinary.com/avatour/image/upload/v1772366766/avatour-screenshot-main-menu_qwpthq.png) *Avatour Web Console - Main Menu*
+
+- **Workspaces** – Organize your content efficiently. Each workspace contains **Assets**, **Collaborators**, **Meetings**, and **Settings**.  
+- **Assets** – Access and manage all your assets (videos, images, PDFs). Admins can view all account assets, and shared assets are visible to all users.  
+- **Profile** – Manage your language and password.  
+- **Analytics** – Track session activity, workspace usage, and ROI metrics.  
+- **Settings** *(Admin only)* – Configure workspace, meeting, and asset defaults across the organization. Admins can also customize branding (logo, colors, backgrounds).  
+- **Account** *(Admin only)* – Manage registered users and 360° cameras.  
+- **Device Login** – Enter the code displayed on your 360° camera to pair it with your account.  
+- **Tutorials** – Access guided tutorials.  
+- **Sign out** – Log out of the console.
+
+> Sections like Profile, Device Login, Tutorials, and Sign out are self-explanatory and do not have detailed subsections.
+
+---
+
+### 4.2 Web Console - Details by Menu Item (with images)
+
+#### 4.2.1 Workspaces
+
+Workspaces are flexible organizational units that let you manage assets, collaborators, and meetings in one place. You can create a new workspace with the **New Workspace** button in the upper-right corner.
 
 ![Avatour Web Console - Main Menu Item Workspaces](https://res.cloudinary.com/avatour/image/upload/v1772360323/avatour-screenshot-main-menu-workspaces_hnhkjj.png) *Avatour Web Console - Main Menu Item Workspaces*
 
-Click notifications (the bell icon) to get a summary of activities in a workspace over the last 7 days.
+Click the bell icon to see a summary of workspace activity over the last 7 days.
 
-![Avatour Web Console - Workspace Recent Activities](https://res.cloudinary.com/avatour/image/upload/v1772919758/avatour-screenshot-main-menu-workspace-recent-activities_gby1ws.png) *Avatour Web Console - Workspace Recent Activities*
+![Avatour Web Console - Workspace Recent Activities](https://res.cloudinary.com/avatour/image/upload/v1772919758/avatour-screenshot-main-menu-workspace-recent-activities_gby1ws.png) *Workspace Recent Activities*
 
-You can enter a workspace by clicking on it. Here is a view of the structure in a workspace.
+Inside a workspace:
 
-![Avatour Workspace with Assets Panel, blank Canvas and Meetings Panel](https://res.cloudinary.com/avatour/image/upload/v1772198701/avatour-screenshot-workspace-assets-blank-meetings_qeumpl.png) *Avatour Workspace with Assets Panel (left), blank Canvas (center) and Meetings Panel (right)*
+![Avatour Workspace with Assets Panel, blank Canvas and Meetings Panel](https://res.cloudinary.com/avatour/image/upload/v1772198701/avatour-screenshot-workspace-assets-blank-meetings_qeumpl.png) *Workspace with Assets (left), Canvas (center), Meetings (right)*
 
-Each workspace comprises of the following elements (explained from left to right).
+- **Assets** – Manage files allocated to this workspace.  
+- **Collaborators** – Control access:
+  - **Viewer** – Can view assets. Invitation creates a Guest user if needed.  
+  - **Editor** – Full workspace control, same rights as Host. Invitation upgrades user to Host if needed.  
+> Multiple users can access a workspace simultaneously without a meeting. Public workspaces and meeting access settings provide alternative access.  
+- **Report** – Generate a report using a checklist template on selected workspace assets.  
 
-**Assets** - Manage assets allocated to that workspace 
+![Avatour Workspace Report and Asset Selection](https://res.cloudinary.com/avatour/image/upload/v1772924118/avatour-screenshot-asset-selection-and-workspace-report_itjt8f.png) *Workspace Report and Asset Selection*
 
-**Collaborators** - Manage Access to the Workspace
+- **Map** – Display GPS-enabled asset locations on a map.  
+- **Meetings** – Organize meetings in the workspace.  
+- **Settings** – Configure workspace and meeting defaults:
 
-- **Viewer** - can view assets in the workspace. Adding a Collaborator Viewer will send an invitation to become a registered Avatour Guest user.
-- **Editor** - have the same right as the Host (owner of the workspace) and with this full workspace control. Adding a Collaborator Viewer will send an invitation to become a registered Avatour Host user.
+![Avatour Settings - Workspace View](https://res.cloudinary.com/avatour/image/upload/v1772387752/avatour-screenshot-workspace-settings_llcei3.png) *Workspace Settings*
 
-> N.B.: Several users can access a workspace at the same time without “meeting” each other. This makes a “workspace” different from a “meeting”. In addition to using the Collaborator roles you can also make the Workspace Public and give access through the various Meeting Access settings - for both see below under “Settings”.
+**Workspace Settings**
+- **Report Template** – Select checklist template for AI reporting.  
+- **Enable Notifications** – Daily digest emails for note status changes.  
 
-**Report** - Create a report against the checklist selected in the workspace settings based on the workspace assets that you choose. You can edit the proposed answers.
+![Email Notifications - Example](https://res.cloudinary.com/avatour/image/upload/c_crop,h_600,w_600,x_170,y_60/v1772804314/Screenshot_2026-03-05_140654_bjk0xk.png) *Email Notifications Example*
 
-![Avatour Workspace Report and Asset Selection](https://res.cloudinary.com/avatour/image/upload/v1772924118/avatour-screenshot-asset-selection-and-workspace-report_itjt8f.png) *Avatour Workspace Report and Asset Selection*
+- **Public Workspace** – Anyone with the link can view assets directly.
 
-**Map** - For assets with GPS meta data show the location on the map / satellite image.
+**Meeting Settings**
+- **Authentication required** – Participants must sign in.  
+- **Allow guest access** – Permit non-registered users to view assets.  
+- **Auto-Start Recording / Manual Start** – Choose if meetings auto-record or are started manually.  
+- **Require host** – Host must admit participants; meeting ends when host leaves.  
+- **Allow spectator access** – Join without mic or camera; communicate via chat.  
+- **Password protected meetings** – Require a password for joining.  
+- **Show Travel-Savings Question** – Ask participants if the meeting reduced travel.  
 
-**Meetings** - Hosts and Collaborator Editors can organise meetings in the workspace
+> Settings can be combined (e.g., no host required but password protected).
 
-**Settings**
+---
 
-![Avatour Settings - Workspace View](https://res.cloudinary.com/avatour/image/upload/v1772387752/avatour-screenshot-workspace-settings_llcei3.png) *Avatour Settings - Workspace View*
+#### 4.2.2 Assets
 
-**(1) Workspace Settings**
+Manage all 360°/2D videos, pictures, and PDFs. Upload/download assets, allocate to workspaces, share with other users, rename, print/download reports, activate face blur, and AI summarization.
 
-<u>Report Template</u> - select a checklist template against which our AI will report based on the chosen workspace assets (see also above Report)
+![Avatour Web Console - Main Menu Item Assets](https://res.cloudinary.com/avatour/image/upload/v1772360326/avatour-screenshot-main-menu-assets_ky5emz.png) *Main Menu Item Assets*
 
-<u>Enable Notifications</u> - Get daily digest emails to notify collaborators when Issues and Actions of Notes change status (for example, In Progress → Resolved).
+---
 
-![Email Notifications - Example](https://res.cloudinary.com/avatour/image/upload/c_crop,h_600,w_600,x_170,y_60/v1772804314/Screenshot_2026-03-05_140654_bjk0xk.png) *Email Notifications - Example*
+#### 4.2.3 Analytics
 
-<u>Public Workspace</u> - The workspace is like a website - everybody with the workspace link can view all assets and has direct access to assets via asset links. Direct asset links only work with the Public Workspace setting (Note: Non-collaborators will not see meeting info / join button).
+Provides insights into meetings, workspace usage, and ROI metrics.
 
-**(2) Meeting Settings**
+![Avatour Web Console - Main Menu Item Analytics (1 of 3)](https://res.cloudinary.com/avatour/image/upload/v1772360315/avatour-screenshot-main-menu-analytics-1-of-3_ds3epe.png) *Analytics Overview*
 
-<u>Authentication required</u> - When enabled, participants need to sign in with their Avatour registered user account (Guest, Host or Admin) to join the meeting.
+![Avatour Web Console - Main Menu Item Analytics (2 of 3)](https://res.cloudinary.com/avatour/image/upload/v1772360313/avatour-screenshot-main-menu-analytics-2-of-3_vpcsme.png) *Meeting Activity & Workspace Usage*
 
-<u>Allow guest access</u> to workspace assets
-
-<u>Auto-Start Recording</u> and Require consent for recorded meetings
-
-<u>Require host</u> - When enabled, the host must admit each participant to the meeting, and the meeting ends when the host leaves. When disabled, meeting participants can start / join a meeting without a host any time. 
-
-<u>Allow spectator access</u> - When enabled, participants can use the spectator code to join a meeting without a microphone or webcam. Spectators use chat to communicate with others in the meeting.
-
-<u>Password protected meetings</u> - When enabled, participants must enter a password to join the meeting which is defined by the host in the meeting settings.
-
-<u>Show Travel-Savings Question</u> - Asks if Avatour meeting saves travel.
-
-> N.B.: It is of course possible to use the above settings in combination (e.g. not require a host but a password).
-
-### 4.2.2 Assets
-
-Here you manage all your assets (360° / 2D videos / pictures and pdf files). You can up- and download assets, allocate assets to workspaces, share assets with other users on the Avatour platform. You can also rename assets, print / download asset reports, activate face blur and AI summarization. To edit an Asset click on the name or select it.
-
-![Avatour Web Console - Main Menu Item Assets](https://res.cloudinary.com/avatour/image/upload/v1772360326/avatour-screenshot-main-menu-assets_ky5emz.png) *Avatour Web Console - Main Menu Item Assets*
-
-### 4.2.3 Profile
-
-Here you can manage your profile details like your password.
-
-![Avatour Web Console - Main Menu Item Profile](https://res.cloudinary.com/avatour/image/upload/v1772360324/avatour-screenshot-main-menu-profile_j934va.png) *Avatour Web Console - Main Menu Item Profile*
-
-### 4.2.4 Settings
-
-This menu item is only available to Admin Users. Here you can (1) manage default settings for your account and even look those settings so that other users can not change those settings and (2) adjust some customise some branding elements (e.g. your logo. For more info see [How do I add my company branding to the Avatour experience?](https://avatour.com/support/how-do-i-add-my-company-branding-to-the-avatour-experience)).
-
-![Avatour Web Console - Main Menu Item Settings (1 of 2)](https://res.cloudinary.com/avatour/image/upload/v1772360321/avatour-screenshot-main-menu-settings-1-of-2_fsaatf.png) *Avatour Web Console - Main Menu Item Settings (1 of 2)*
-
-![Avatour Web Console - Main Menu Item Settings (2 of 2)](https://res.cloudinary.com/avatour/image/upload/v1772360320/avatour-screenshot-main-menu-settings-2-of-2_qimc09.png) *Avatour Web Console - Main Menu Item Settings (2 of 2)*
-
-### 4.2.5 Account
-
-Here Admin Users can manage your registered users (host, guest, admin) and capture devices (360° cams allocated to your Avatour platform instance).
-
-![Avatour Web Console - Main Menu Item Account (1 of 2)](https://res.cloudinary.com/avatour/image/upload/v1772803328/avatour-screenshot-main-menu-account-1-of-2_oq5amr.png) *Avatour Web Console - Main Menu Item Account*
-
-### 4.2.6 Analytics
-
-This section gives you information about your meetings and savings.
-
-![Avatour Web Console - Main Menu Item Analytics (1 of 3)](https://res.cloudinary.com/avatour/image/upload/v1772360315/avatour-screenshot-main-menu-analytics-1-of-3_ds3epe.png) *Avatour Web Console - Main Menu Item Analytics (1 of 3)*
-
-![Avatour Web Console - Main Menu Item Analytics (2 of 3)](https://res.cloudinary.com/avatour/image/upload/v1772360313/avatour-screenshot-main-menu-analytics-2-of-3_vpcsme.png) *Avatour Web Console - Main Menu Item Analytics (2 of 3)*
-
-![Avatour Web Console - Main Menu Item Analytics (3 of 3)](https://res.cloudinary.com/avatour/image/upload/v1772360312/avatour-screenshot-main-menu-analytics-3-of-3_hn2pmr.png) *Avatour Web Console - Main Menu Item Analytics (3 of 3)*
-
-### 4.2.7 Device Login
-
-Use this section to enter the 6-digit code which is shown on your 360° cam (e.g. when you need to log in again or sometimes it needs refreshing). This is a more convenient way that entering your login credentials through the small keyboard in the 360° cam screen.
-
-![Avatour Web Console - Main Menu Item Device Login](https://res.cloudinary.com/avatour/image/upload/v1772360310/avatour-screenshot-main-menu-device-login_vlymhj.png) *Avatour Web Console - Main Menu Item Device Login*
-
-### 4.2.8 Tutorials
-
-Here you can start tutorials on certain topics.
-
-![Avatour Web Console - Main Menu Item Tutorials](https://res.cloudinary.com/avatour/image/upload/v1772360310/avatour-screenshot-main-menu-tutorials_nr9hme.png) *Avatour Web Console - Main Menu Item Tutorials*
-
- 
+![Avatour Web Console - Main Menu Item Analytics (3 of 3)](https://res.cloudinary.com/avatour/image/upload/v1772360312/avatour-screenshot-main-menu-analytics-3-of-3_hn2pmr.png) *Device License Usage & ROI* 
 
 ## 5. Onsite - **How to use the Avatour Turnkey Kit**{#for-camera-operators}
 
