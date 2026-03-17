@@ -242,77 +242,63 @@ The bottom menu provides access to the main interface controls and panels:
 
 ---
 
-**Present Menu**
+### Present Menu
 
-**Camera** - Allows you to share your webcam or smartphone/tablet camera. Can also be used as Video-in-Video while presenting an asset or in a live 360° video meeting, e.g. to show a detail on site (although going close with the 360° cam also gives a good detailed view, e.g. of a barcode, small print on a lable).
+The **Present** option in the meeting bottom menu allows you to share content with all participants.
 
-**Desktop** - Allows you to share your desktop’s screen
+- **Camera** – Share your smartphone/tablet camera. This can also be used during a live 360° video meeting to overlay a secondary view for close-ups or specific details. 
+- **Desktop** – Share your desktop screen with all participants.  
+- **Asset** – Present an asset from the workspace. Selecting an asset opens the **Asset toolbar**, which provides playback controls and collaboration tools specific to the asset being presented.
 
-**Asset** - Show one of the assets from the asset section - see above. While presenting an asset the Asset menu will appear - see next point.
+### Asset Toolbar (Meeting)
 
-
-
-**Present Asset Menu** 
-
-There are slight differences in the Menu Items when presenting an Asset in a <u>Meeting</u> and when presenting in a <u>Workspace</u> (async).
-
-Here are the tools and menu items available when <u>presenting an Asset in a Meeting</u> - explained from left to right.
+When presenting an asset in a meeting, the **Asset Toolbar** appears above the canvas. Here are the tools and menu items available when <u>presenting an Asset in a Meeting</u> - explained from left to right.
 
 ![Avatour Menu while Presenting an Asset in a Meeting](https://res.cloudinary.com/avatour/image/upload/v1772303706/avatour-screenshot-present-asset-menu-meeting_oflsr5.png) *Avatour Menu when presenting an Asset in a Meeting*
 
-**Snapshot** - Take a 360° or 2D picture within a Live Capture or a presented Asset. All snapshots can be saved to the Assets in the meeting/workspace. A SuperFreeze 360° snapshot has a higher resolution (ca. 6k) and will pause the live stream for some seconds.
 
-**Spotlight** - Available during a live 360 capture or if an Asset is being presented. This creates a pointer visible by all meeting participants and the camera operator, enabling you to draw the group’s attention to a specific object or area on screen.
+- **Video Timeline / Progress Bar** – Shows video progress with notes and key topics extracted from audio. Click a note or topic to jump to that moment and open the note. Includes **Play / Pause** controls.   
+- **Snapshot** – Capture a 360° or 2D image from the asset.  
+- **Spotlight** – Highlight a specific area for all participants during live sessions.  
+- **Show/Hide Point-of-View (POV)** – Display where each participant is looking in the 360° video.  
+- **Notes** – Create notes anchored to specific moments in the asset. Notes can be categorized (Observation, Issue, Action, Recommendation), tracked by status (Open → In Progress → Resolved), and shared via direct links.  
 
-**Show/Hide Point-of-View (POV)** - This option displays each participants focus - Point of View - in the 360° video - recorded or live (circles with the participant’s name underneath)
+  ![Avatour Note and Notes Filter](https://res.cloudinary.com/avatour/image/upload/v1772374822/avatour-screenshot-present-asset-menu-meeting-showing-note-and-filters_g181oc.png) *Avatour Note and Note Filters*
 
-**Notes** - create notes (= dialog boxes) at certain positions in snapshots and recorded videos. Any meeting participant can create a note. Only the note creator can edit and delete a note. When creating a note, you can set a Type: Observation, Issue, Action or Recommendation (the latter three can only be done by Hosts, Avatour Collaborator Viewers and Editors). 
+  **Voice Command Notes** – These are automatically generated placeholders when the recording detects mentions like “insert note,” “take a note,” or “make a note.” These notes appear on the timeline and need to be **positioned and finalized** by the user. 
 
-![Avatour Note and Notes Filter](https://res.cloudinary.com/avatour/image/upload/v1772374822/avatour-screenshot-present-asset-menu-meeting-showing-note-and-filters_g181oc.png) *Avatour Note and Note Filters*
+  ![Avatour Notes - Voice Command Generated](https://res.cloudinary.com/avatour/image/upload/v1772921944/avatour-screenshot-notes-voice-command-generated_ic5cu4.png) *Avatour Notes - Voice Command Generated*
 
-This makes it clear whether a note is informational or requires follow-up. In the timeline of a video notes are anchored to the precise moment in the capture.
+- **Notes and Summary Panel** – Opens a side panel that displays all notes, key topics, and an executive summary for the asset. Clicking an item jumps to that moment in the video.  
 
-Core collaborators (Host, Avatour Collaborator Viewers and Editors) can update a note’s Status as work moves forward: Open → In Progress → Resolved.
+  ![Avatour Asset Executive Summary](https://res.cloudinary.com/avatour/image/upload/v1772377209/avatour-screenshot-present-asset-menu-meeting-showing-exec-summary_cqpqbs.png) *Avatour Executive Summary while presenting an Asset in a Meeting*
 
-You can share a link which leads directly to the note. Copy the link and use / embed wherever you want.
+  ![Avatour Topics](https://res.cloudinary.com/avatour/image/upload/v1772377209/avatour-screenshot-present-asset-menu-meeting-showing-topics_duuq1a.png) *Avatour Topics while presenting an Asset in a Meeting*
 
-<u>Voice Command Generated Notes</u> -  It is now also possible to generate notes through voice commands (e.g. saying "take note") from an audio track in any video (live / recorded, 360° / 2D). Placeholders are shown on the video timeline and the note position can then be dragged in the video to the exact position and of course also edited with further content.
+  From the **Side Panel**, you can **print an asset report** or **download it as TXT or CSV**. Reports can include notes, AI-generated topics, and full transcriptions. You can also **choose which elements to include** before exporting.  
 
-![Avatour Notes - Voice Command Generated](https://res.cloudinary.com/avatour/image/upload/v1772921944/avatour-screenshot-notes-voice-command-generated_ic5cu4.png) *Avatour Notes - Voice Command Generated*
+  ![Avatour Asset Report Print Menus](https://res.cloudinary.com/avatour/image/upload/v1773496969/avatour-screenshot-asset-report-print-menus_kn0syn.png)  
+  *Avatour Asset Report Print / Download Menus*  
 
-**Side Panel with Notes, Executive Summary, Topics etc. and Reports** - show all notes and topics of an asset in a side panel (click on the list icon next to the note icon in the above menu). Click in the side panel in the notes / topics to get to the note / topic in the video. In the Notes panel you can apply Note filters.
+  ![Avatour Print Asset Report Element Selection](https://res.cloudinary.com/avatour/image/upload/v1772376570/avatour-screenshot-asset-report-element-selection_ud8c5k.png)  
+  *Avatour Asset Report Element Selection Menu*
 
-![Avatour Asset Executive Summary](https://res.cloudinary.com/avatour/image/upload/v1772377209/avatour-screenshot-present-asset-menu-meeting-showing-exec-summary_cqpqbs.png) *Avatour Executive Summary while presenting an Asset in a Meeting*
+- **Share Link** – Share a link to a specific note or scene in the asset.  
+- **Closed Captions (CC)** – Display on-screen text transcription during video playback.
 
-Topics are also highlighted under the timeline of the video. Topics are AI generated based on the audio of an asset and can be initiated during Upload from the Avatour cam app or in the Assets section in the Web Console.
+### Asset Toolbar (Workspace)
 
-![Avatour Topics](https://res.cloudinary.com/avatour/image/upload/v1772377209/avatour-screenshot-present-asset-menu-meeting-showing-topics_duuq1a.png) *Avatour Topics while presenting an Asset in a Meeting*
-
-You can also print an asset report - or download as TXT / CSV file...
-
-![Avatour Asset Report Print Menus](https://res.cloudinary.com/avatour/image/upload/v1773496969/avatour-screenshot-asset-report-print-menus_kn0syn.png) *Avatour Asset Report Print / Download Menus*
-
-...with all notes, topics etc. even a full transciption for an asset and select what to include:
-
-![Avatour Print Asset Report Element Selection](https://res.cloudinary.com/avatour/image/upload/v1772376570/avatour-screenshot-asset-report-element-selection_ud8c5k.png) *Avatour Asset Report Element Selection Menu*
-
-**Share Link** - Share links to notes and specific scenes (=viewangles) in a video / snapshot either by email or directly copy the link and use/embed wherever you want.
-
-**Closed Captions (CC)** - Here you can activate to show on-screen text transcriptions while presenting a video.
-
-
-
-And here are the collaboration tools and menu items available when presenting an Asset in a <u>Workspace</u>. Most tools are like in a meeting but some are missing as these do only make sense when others are present (POV and Spotlight) and some are only available in workspaces - mainly video operations related, which are explained below.
+When reviewing an asset in a workspace, the toolbar is similar but optimized for individual use:
 
 ![Avatour Menu while Presenting an Asset outside a meeting, e.g. when visiting a workspace](https://res.cloudinary.com/avatour/image/upload/v1772303705/avatour-screenshot-present-asset-menu-workspace_iri8gc.png) *Avatour Menu when presenting an Asset in a Workspace*
 
-**10 seconds steps** - Skip through the video in 10 second steps - forward and backward.
-
-**Playback Speed** - Here you can choose a playback speed factor (0.5-2)
-
-**Trimming a video (scissors)** - With the scissors you can trim a video at the beginning and at the end.
-
-
+- **Video Timeline / Progress Bar** – Shows video progress with notes and key topics extracted from audio. Click anywhere on the timeline to scrub through the video. Click a note or topic to jump to that moment and open the note. Includes **Play / Pause** controls.  
+- **Snapshot, Notes, Notes and Summary Panel Panel, Share Link, Closed Captions**  
+- Not available: **Spotlight, POV** (these require live participants)  
+- Additional controls:
+  - **10-second steps** – Skip forward/backward  
+  - **Playback Speed** – Adjust speed (0.5×–2×)  
+  - **Trim Video** – Trim beginning or end of the asset
 
 ## 4. For Host and Admin Users - Avatour Web Console{#for-registered-users}
 
