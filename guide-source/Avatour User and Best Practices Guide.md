@@ -300,32 +300,38 @@ When reviewing an asset in a workspace, the toolbar is similar but optimized for
   - **Playback Speed** – Adjust speed (0.5×–2×)  
   - **Trim Video** – Trim beginning or end of the asset
 
-## 4. For Host and Admin Users - Avatour Web Console{#for-registered-users}
 
-When you log in to your Avatour User Accoung you will access the Web Console. 
+## 4. For Host and Admin Users – Avatour Web Console {#for-host-and-admin-users}
 
-### 4.1 Web Console - Overview Main Menu
+When you log in to your Avatour account, you access the **Web Console** — the central place to manage workspaces, assets, users, and settings.
 
-On the left hand side you will see the following menu items.
+### 4.1 Web Console – Main Menu Overview
 
-![Avatour Web Console - Main Menu](https://res.cloudinary.com/avatour/image/upload/v1772366766/avatour-screenshot-main-menu_qwpthq.png) *Avatour Web Console - Main Menu*
+On the left-hand side, you will find the main navigation menu:
 
-**Workspaces** - Workspaces can be set up for many purposes (e.g. sites, projects, customer, supplier) and are organisational units helping you to work efficiently in a controlled environment comprising of the following elements.
+![Avatour Web Console - Main Menu](https://res.cloudinary.com/avatour/image/upload/v1772366766/avatour-screenshot-main-menu_qwpthq.png)  
+*Avatour Web Console – Main Menu*
 
-**Assets** - All your assets (videos, pictures, pdfs) in one place under <u>My Assets</u>. Admin users can see all <u>Account Assets</u> across all host users. <u>Shared Assets</u> are those which hosts share with all other users on the Avatour platform. Here you can rename assets, activate face blur and generate topics.
+**Workspaces** – Create and manage Workspaces. Workspaces are flexible units to organize your Avatour content, including **assets**, **collaborators**, and **meetings** by site, project, partner, or meeting type.
 
-**Profile** - Manage your language and reset your password.
+**Assets** – Access and manage all assets:
+- **My Assets** – Your personal assets  
+- **Account Assets** *(Admin only)* – All assets across the account  
+- **Shared Assets** – Assets shared across the Avatour platform  
 
-**Analytics** - Get insight about sessions and usage
+You can also rename assets, enable face blur, and generate AI topics.
 
-**Settings** - For Admin Users only. Manage some general settings and customize your branding.
+**Profile** – Manage your profile settings, including language and password.
 
-**Account** - For Admin Users only. Manage users and devices (= 360° cams).
+**Analytics – Key Insights**  - Track meeting activity, workspace and asset usage, device license metrics, and measure ROI, time savings, and environmental impact from using 360° live meetings.
 
-**Device Login** - Enter here the number shown on the Avatour app on your 360° cam to log in as user on the 360° cam. You can also log in on your 360° cam with your Avatour host account email and password but simply entering the device code on the Avatour Web Console might be easier.
+**Settings** *(Admin only)* – Set default configurations for workspaces, meetings, and assets across the organization. You can also customize branding (e.g., logo, colors, background) to align with your company’s look and feel, especially for external users.
 
-**Sign out** of your account.
+**Account** *(Admin only)* – Manage users and devices (e.g. 360° cameras).
 
+**Device Login** – Pair a 360° camera with your Avatour account by entering the code displayed on the camera. Once paired, the camera can stream 360° video into your meetings, and upload recordings directly to your workspaces. 
+
+**Sign Out** – Log out of your account.
  
 
 ### 4.2 Web Console - Details by Menu Item
