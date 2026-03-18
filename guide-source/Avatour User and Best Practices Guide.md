@@ -376,7 +376,8 @@ Inside a workspace:
 ![Avatour Workspace with Assets Panel, blank Canvas and Meetings Panel](https://res.cloudinary.com/avatour/image/upload/v1772198701/avatour-screenshot-workspace-assets-blank-meetings_qeumpl.png) *Workspace with Assets (left), Canvas (center), Meetings (right)*
 
 - **Assets** – Manage files allocated to this workspace.  
-- **Collaborators** – Control access:
+- **Collaborators** – 
+  Control access to workspaces by 
   - **Viewer** – Can view assets. Invitation creates a Guest user if needed.  
   - **Editor** – Full workspace control, same rights as Host. Invitation upgrades user to Host if needed.  
 > Multiple users can access a workspace simultaneously without a meeting. Public workspaces and meeting access settings provide alternative access.  
@@ -447,6 +448,7 @@ Follow the guide to unpack, assemble, and power on your camera.
 - **If your kit includes a Telesin battery stick:** Mount the camera directly onto the Telesin extendable battery stick and connect it via USB-C.  
 
 Using the external battery:
+
 1. Extends total battery life from ~40 minutes (camera battery only) to ~3 hours.  
 2. Adds stability to the camera setup.  
 3. Helps prevent potential overheating.  
@@ -455,12 +457,14 @@ Using the external battery:
 
 #### Audio Considerations for Live Meetings and Recordings
 
-- **Noisy environments:** Use the Shokz headphones included in your kit for clear audio capture.  
+- **Noisy environments:** 
+  Use the Shokz headphones included in your kit for clear audio capture.  
   - **Power On/Off:** Hold the “+” button for 3 seconds (blue LED = on, red LED = off).  
   - **Bluetooth Pairing Mode:** While the headset is off, hold the “+” button for 5 seconds (LED flashes blue/red).  
   - **Volume:** Use the “+” and “-” buttons.  
 
-- **Quieter environments / multiple participants near camera:** Use the NoxGear clip-on speaker. It’s not as high fidelity as conference speakers (e.g., Jabra Speak), but is easy to clip onto your shirt and captures nearby voices effectively.  
+- **Quieter environments / multiple participants near camera:** 
+  Use the NoxGear clip-on speaker. It’s not as high fidelity as conference speakers (e.g., Jabra Speak), but is easy to clip onto your shirt and captures nearby voices effectively.  
   - **Power On/Off:** Hold the Play/Pause button for 2 seconds.  
   - **Bluetooth Pairing Mode:** Automatically enters pairing mode when powered on (LED flashes blue/red; solid blue when paired).  
   - **Volume:** Use the “+” and “-” buttons.  
