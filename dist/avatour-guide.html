@@ -512,21 +512,17 @@ body.print-mode .faq-a { display: block !important; padding-bottom: 10px; }
 <a href="#322-meeting-view-example" class="sub">3.2.2 Meeting View Example</a>
 <a href="#323-workspace-view-example" class="sub">3.2.3 Workspace View Example</a>
 <a href="#324-bottom-menu-overview" class="sub">3.2.4 Bottom Menu Overview</a>
+<a href="#present-menu" class="sub">Present Menu</a>
+<a href="#asset-toolbar-meeting" class="sub">Asset Toolbar (Meeting)</a>
+<a href="#asset-toolbar-workspace" class="sub">Asset Toolbar (Workspace)</a>
+<a href="#for-host-and-admin-users">4. For Host and Admin Users – Avatour Web Console</a>
+<a href="#41-web-console-main-menu-overview" class="sub">4.1 Web Console – Main Menu Overview</a>
 <a href="#for-registered-users">4. For Host and Admin Users - Avatour Web Console</a>
 <a href="#41-web-console-overview-main-menu" class="sub">4.1 Web Console - Overview Main Menu</a>
-<a href="#42-web-console-details-by-menu-item" class="sub">4.2 Web Console - Details by Menu Item</a>
-<a href="#421-workspaces" class="sub">4.2.1 Workspaces</a>
-<a href="#422-assets" class="sub">4.2.2 Assets</a>
-<a href="#423-profile" class="sub">4.2.3 Profile</a>
-<a href="#424-settings" class="sub">4.2.4 Settings</a>
-<a href="#425-account" class="sub">4.2.5 Account</a>
-<a href="#426-analytics" class="sub">4.2.6 Analytics</a>
-<a href="#427-device-login" class="sub">4.2.7 Device Login</a>
-<a href="#428-tutorials" class="sub">4.2.8 Tutorials</a>
-<a href="#for-camera-operators">5. Onsite - **How to use the Avatour Turnkey Kit**</a>
-<a href="#51-avatour-turnkey-kit-31-pilot-panox-v2-setuphttpsavatourcomquickstart-panox-v2" class="sub">5.1 Avatour Turnkey Kit 3.1 [(Pilot PanoX V2 setup)](https://avatour.com/quickstart-panox-v2)</a>
-<a href="#52-connectivity" class="sub">5.2 Connectivity</a>
-<a href="#53-audio" class="sub">5.3 Audio</a>
+<a href="#42-web-console-details-by-menu-item-with-images" class="sub">4.2 Web Console - Details by Menu Item (with images)</a>
+<a href="#for-camera-operators">5. Onsite - **How to Use the Avatour Turnkey Kit**</a>
+<a href="#51-getting-started" class="sub">5.1 Getting Started</a>
+<a href="#52-useful-tips" class="sub">5.2 Useful Tips</a>
 <a href="#54-avatour-camera-app" class="sub">5.4 Avatour Camera App</a>
 <a href="#6-best-practice-advice">6. Best Practice Advice</a>
 <a href="#61-first-informal-uses-and-getting-familiar" class="sub">6.1 First (informal) Uses and Getting Familiar</a>
@@ -770,194 +766,253 @@ Clicking a menu option opens a <strong>side panel</strong> on the left or right 
 <p>Tip: Send the meeting link or add it to a calendar item to invite participants.</p>
 </blockquote>
 <hr />
-<p><strong>Present Menu</strong></p>
-<p><strong>Camera</strong> - Allows you to share your webcam or smartphone/tablet camera. Can also be used as Video-in-Video while presenting an asset or in a live 360° video meeting, e.g. to show a detail on site (although going close with the 360° cam also gives a good detailed view, e.g. of a barcode, small print on a lable).</p>
-<p><strong>Desktop</strong> - Allows you to share your desktop’s screen</p>
-<p><strong>Asset</strong> - Show one of the assets from the asset section - see above. While presenting an asset the Asset menu will appear - see next point.</p>
-<p><strong>Present Asset Menu</strong> </p>
-<p>There are slight differences in the Menu Items when presenting an Asset in a <u>Meeting</u> and when presenting in a <u>Workspace</u> (async).</p>
-<p>Here are the tools and menu items available when <u>presenting an Asset in a Meeting</u> - explained from left to right.</p>
+<h3 id="present-menu">Present Menu</h3>
+<p>The <strong>Present</strong> option in the meeting bottom menu allows you to share content with all participants.</p>
+<ul>
+<li><strong>Camera</strong> – Share your smartphone/tablet camera. This can also be used during a live 360° video meeting to overlay a secondary view for close-ups or specific details. </li>
+<li><strong>Desktop</strong> – Share your desktop screen with all participants.  </li>
+<li><strong>Asset</strong> – Present an asset from the workspace. Selecting an asset opens the <strong>Asset toolbar</strong>, which provides playback controls and collaboration tools specific to the asset being presented.</li>
+</ul>
+<h3 id="asset-toolbar-meeting">Asset Toolbar (Meeting)</h3>
+<p>When presenting an asset in a meeting, the <strong>Asset Toolbar</strong> appears above the canvas. Here are the tools and menu items available when <u>presenting an Asset in a Meeting</u> - explained from left to right.</p>
 <p><img alt="Avatour Menu while Presenting an Asset in a Meeting" src="https://res.cloudinary.com/avatour/image/upload/v1772303706/avatour-screenshot-present-asset-menu-meeting_oflsr5.png" /> <em>Avatour Menu when presenting an Asset in a Meeting</em></p>
-<p><strong>Snapshot</strong> - Take a 360° or 2D picture within a Live Capture or a presented Asset. All snapshots can be saved to the Assets in the meeting/workspace. A SuperFreeze 360° snapshot has a higher resolution (ca. 6k) and will pause the live stream for some seconds.</p>
-<p><strong>Spotlight</strong> - Available during a live 360 capture or if an Asset is being presented. This creates a pointer visible by all meeting participants and the camera operator, enabling you to draw the group’s attention to a specific object or area on screen.</p>
-<p><strong>Show/Hide Point-of-View (POV)</strong> - This option displays each participants focus - Point of View - in the 360° video - recorded or live (circles with the participant’s name underneath)</p>
-<p><strong>Notes</strong> - create notes (= dialog boxes) at certain positions in snapshots and recorded videos. Any meeting participant can create a note. Only the note creator can edit and delete a note. When creating a note, you can set a Type: Observation, Issue, Action or Recommendation (the latter three can only be done by Hosts, Avatour Collaborator Viewers and Editors). </p>
+<ul>
+<li><strong>Video Timeline / Progress Bar</strong> – Shows video progress with notes and key topics extracted from audio. Click a note or topic to jump to that moment and open the note. Includes <strong>Play / Pause</strong> controls.   </li>
+<li><strong>Snapshot</strong> – Capture a 360° or 2D image from the asset.  </li>
+<li><strong>Spotlight</strong> – Highlight a specific area for all participants during live sessions.  </li>
+<li><strong>Show/Hide Point-of-View (POV)</strong> – Display where each participant is looking in the 360° video.  </li>
+<li><strong>Notes</strong> – Create notes anchored to specific moments in the asset. Notes can be categorized (Observation, Issue, Action, Recommendation), tracked by status (Open → In Progress → Resolved), and shared via direct links.  </li>
+</ul>
 <p><img alt="Avatour Note and Notes Filter" src="https://res.cloudinary.com/avatour/image/upload/v1772374822/avatour-screenshot-present-asset-menu-meeting-showing-note-and-filters_g181oc.png" /> <em>Avatour Note and Note Filters</em></p>
-<p>This makes it clear whether a note is informational or requires follow-up. In the timeline of a video notes are anchored to the precise moment in the capture.</p>
-<p>Core collaborators (Host, Avatour Collaborator Viewers and Editors) can update a note’s Status as work moves forward: Open → In Progress → Resolved.</p>
-<p>You can share a link which leads directly to the note. Copy the link and use / embed wherever you want.</p>
-<p><u>Voice Command Generated Notes</u> -  It is now also possible to generate notes through voice commands (e.g. saying "take note") from an audio track in any video (live / recorded, 360° / 2D). Placeholders are shown on the video timeline and the note position can then be dragged in the video to the exact position and of course also edited with further content.</p>
+<p><strong>Voice Command Notes</strong> – These are automatically generated placeholders when the recording detects mentions like “insert note,” “take a note,” or “make a note.” These notes appear on the timeline and need to be <strong>positioned and finalized</strong> by the user. </p>
 <p><img alt="Avatour Notes - Voice Command Generated" src="https://res.cloudinary.com/avatour/image/upload/v1772921944/avatour-screenshot-notes-voice-command-generated_ic5cu4.png" /> <em>Avatour Notes - Voice Command Generated</em></p>
-<p><strong>Side Panel with Notes, Executive Summary, Topics etc. and Reports</strong> - show all notes and topics of an asset in a side panel (click on the list icon next to the note icon in the above menu). Click in the side panel in the notes / topics to get to the note / topic in the video. In the Notes panel you can apply Note filters.</p>
+<ul>
+<li><strong>Notes and Summary Panel</strong> – Opens a side panel that displays all notes, key topics, and an executive summary for the asset. Clicking an item jumps to that moment in the video.  </li>
+</ul>
 <p><img alt="Avatour Asset Executive Summary" src="https://res.cloudinary.com/avatour/image/upload/v1772377209/avatour-screenshot-present-asset-menu-meeting-showing-exec-summary_cqpqbs.png" /> <em>Avatour Executive Summary while presenting an Asset in a Meeting</em></p>
-<p>Topics are also highlighted under the timeline of the video. Topics are AI generated based on the audio of an asset and can be initiated during Upload from the Avatour cam app or in the Assets section in the Web Console.</p>
 <p><img alt="Avatour Topics" src="https://res.cloudinary.com/avatour/image/upload/v1772377209/avatour-screenshot-present-asset-menu-meeting-showing-topics_duuq1a.png" /> <em>Avatour Topics while presenting an Asset in a Meeting</em></p>
-<p>You can also print an asset report - or download as TXT / CSV file...</p>
-<p><img alt="Avatour Asset Report Print Menus" src="https://res.cloudinary.com/avatour/image/upload/v1773496969/avatour-screenshot-asset-report-print-menus_kn0syn.png" /> <em>Avatour Asset Report Print / Download Menus</em></p>
-<p>...with all notes, topics etc. even a full transciption for an asset and select what to include:</p>
-<p><img alt="Avatour Print Asset Report Element Selection" src="https://res.cloudinary.com/avatour/image/upload/v1772376570/avatour-screenshot-asset-report-element-selection_ud8c5k.png" /> <em>Avatour Asset Report Element Selection Menu</em></p>
-<p><strong>Share Link</strong> - Share links to notes and specific scenes (=viewangles) in a video / snapshot either by email or directly copy the link and use/embed wherever you want.</p>
-<p><strong>Closed Captions (CC)</strong> - Here you can activate to show on-screen text transcriptions while presenting a video.</p>
-<p>And here are the collaboration tools and menu items available when presenting an Asset in a <u>Workspace</u>. Most tools are like in a meeting but some are missing as these do only make sense when others are present (POV and Spotlight) and some are only available in workspaces - mainly video operations related, which are explained below.</p>
+<p>From the <strong>Side Panel</strong>, you can <strong>print an asset report</strong> or <strong>download it as TXT or CSV</strong>. Reports can include notes, AI-generated topics, and full transcriptions. You can also <strong>choose which elements to include</strong> before exporting.  </p>
+<p><img alt="Avatour Asset Report Print Menus" src="https://res.cloudinary.com/avatour/image/upload/v1773496969/avatour-screenshot-asset-report-print-menus_kn0syn.png" /><br />
+<em>Avatour Asset Report Print / Download Menus</em>  </p>
+<p><img alt="Avatour Print Asset Report Element Selection" src="https://res.cloudinary.com/avatour/image/upload/v1772376570/avatour-screenshot-asset-report-element-selection_ud8c5k.png" /><br />
+<em>Avatour Asset Report Element Selection Menu</em></p>
+<ul>
+<li><strong>Share Link</strong> – Share a link to a specific note or scene in the asset.  </li>
+<li><strong>Closed Captions (CC)</strong> – Display on-screen text transcription during video playback.</li>
+</ul>
+<h3 id="asset-toolbar-workspace">Asset Toolbar (Workspace)</h3>
+<p>When reviewing an asset in a workspace, the toolbar is similar but optimized for individual use:</p>
 <p><img alt="Avatour Menu while Presenting an Asset outside a meeting, e.g. when visiting a workspace" src="https://res.cloudinary.com/avatour/image/upload/v1772303705/avatour-screenshot-present-asset-menu-workspace_iri8gc.png" /> <em>Avatour Menu when presenting an Asset in a Workspace</em></p>
-<p><strong>10 seconds steps</strong> - Skip through the video in 10 second steps - forward and backward.</p>
-<p><strong>Playback Speed</strong> - Here you can choose a playback speed factor (0.5-2)</p>
-<p><strong>Trimming a video (scissors)</strong> - With the scissors you can trim a video at the beginning and at the end.</p>
-<h2 id="4-for-host-and-admin-users---avatour-web-consolefor-registered-users">4. For Host and Admin Users - Avatour Web Console{#for-registered-users}</h2>
-<p>When you log in to your Avatour User Accoung you will access the Web Console. </p>
+<ul>
+<li><strong>Video Timeline / Progress Bar</strong> – Shows video progress with notes and key topics extracted from audio. Click anywhere on the timeline to scrub through the video. Click a note or topic to jump to that moment and open the note. Includes <strong>Play / Pause</strong> controls.  </li>
+<li><strong>Snapshot, Notes, Notes and Summary Panel Panel, Share Link, Closed Captions</strong>  </li>
+<li>Not available: <strong>Spotlight, POV</strong> (these require live participants)  </li>
+<li>Additional controls:</li>
+<li><strong>10-second steps</strong> – Skip forward/backward  </li>
+<li><strong>Playback Speed</strong> – Adjust speed (0.5×–2×)  </li>
+<li><strong>Trim Video</strong> – Trim beginning or end of the asset</li>
+</ul>
+<h2 id="for-host-and-admin-users">4. For Host and Admin Users – Avatour Web Console</h2>
+<p>When you log in to your Avatour account, you access the <strong>Web Console</strong> — the central place to manage workspaces, assets, users, and settings.</p>
+<h3 id="41-web-console--main-menu-overview">4.1 Web Console – Main Menu Overview</h3>
+<p>On the left-hand side, you will find the main navigation menu:</p>
+<p><img alt="Avatour Web Console - Main Menu" src="https://res.cloudinary.com/avatour/image/upload/v1772366766/avatour-screenshot-main-menu_qwpthq.png" /><br />
+<em>Avatour Web Console – Main Menu</em></p>
+<p><strong>Workspaces</strong> – Create and manage Workspaces. Workspaces are flexible units to organize your Avatour content, including <strong>assets</strong>, <strong>collaborators</strong>, and <strong>meetings</strong> by site, project, partner, or meeting type.</p>
+<p><strong>Assets</strong> – Access and manage all assets:
+- <strong>My Assets</strong> – Your personal assets<br />
+- <strong>Account Assets</strong> <em>(Admin only)</em> – All assets across the account<br />
+- <strong>Shared Assets</strong> – Assets shared across the Avatour platform  </p>
+<p>You can also rename assets, enable face blur, and generate AI topics.</p>
+<p><strong>Profile</strong> – Manage your profile settings, including language and password.</p>
+<p><strong>Analytics – Key Insights</strong>  - Track meeting activity, workspace and asset usage, device license metrics, and measure ROI, time savings, and environmental impact from using 360° live meetings.</p>
+<p><strong>Settings</strong> <em>(Admin only)</em> – Set default configurations for workspaces, meetings, and assets across the organization. You can also customize branding (e.g., logo, colors, background) to align with your company’s look and feel, especially for external users.</p>
+<p><strong>Account</strong> <em>(Admin only)</em> – Manage users and devices (e.g. 360° cameras).</p>
+<p><strong>Device Login</strong> – Pair a 360° camera with your Avatour account by entering the code displayed on the camera. Once paired, the camera can stream 360° video into your meetings, and upload recordings directly to your workspaces. </p>
+<p><strong>Tutorials</strong> - Access step-by-step tutorials for common tasks in the Web Console.</p>
+<p><strong>Sign Out</strong> – Log out of your account.</p>
+<h2 id="for-registered-users">4. For Host and Admin Users - Avatour Web Console</h2>
+<p>When you log in to your Avatour User Account, you will access the <strong>Web Console</strong>.  </p>
 <h3 id="41-web-console---overview-main-menu">4.1 Web Console - Overview Main Menu</h3>
-<p>On the left hand side you will see the following menu items.</p>
+<p>On the left-hand side, you will see the following menu items:</p>
 <p><img alt="Avatour Web Console - Main Menu" src="https://res.cloudinary.com/avatour/image/upload/v1772366766/avatour-screenshot-main-menu_qwpthq.png" /> <em>Avatour Web Console - Main Menu</em></p>
-<p><strong>Workspaces</strong> - Workspaces can be set up for many purposes (e.g. sites, projects, customer, supplier) and are organisational units helping you to work efficiently in a controlled environment comprising of the following elements.</p>
-<p><strong>Assets</strong> - All your assets (videos, pictures, pdfs) in one place under <u>My Assets</u>. Admin users can see all <u>Account Assets</u> across all host users. <u>Shared Assets</u> are those which hosts share with all other users on the Avatour platform. Here you can rename assets, activate face blur and generate topics.</p>
-<p><strong>Profile</strong> - Manage your language and reset your password.</p>
-<p><strong>Analytics</strong> - Get insight about sessions and usage</p>
-<p><strong>Settings</strong> - For Admin Users only. Manage some general settings and customize your branding.</p>
-<p><strong>Account</strong> - For Admin Users only. Manage users and devices (= 360° cams).</p>
-<p><strong>Device Login</strong> - Enter here the number shown on the Avatour app on your 360° cam to log in as user on the 360° cam. You can also log in on your 360° cam with your Avatour host account email and password but simply entering the device code on the Avatour Web Console might be easier.</p>
-<p><strong>Sign out</strong> of your account.</p>
-<h3 id="42-web-console---details-by-menu-item">4.2 Web Console - Details by Menu Item</h3>
-<h3 id="421-workspaces">4.2.1 Workspaces</h3>
-<p>Workspaces can be set up for many purposes (e.g. sites, projects, customer, supplier) and are organisational units helping you to work efficiently in a controlled environment.  You can create a new one with the "New Workspace" button in the upper right corner of the screen.</p>
+<ul>
+<li><strong>Workspaces</strong> – Organize your content efficiently. Each workspace contains <strong>Assets</strong>, <strong>Collaborators</strong>, <strong>Meetings</strong>, and <strong>Settings</strong>.  </li>
+<li><strong>Assets</strong> – Access and manage all your assets (videos, images, PDFs). Admins can view all account assets, and shared assets are visible to all users.  </li>
+<li><strong>Profile</strong> – Manage your language and password.  </li>
+<li><strong>Analytics</strong> – Track session activity, workspace usage, and ROI metrics.  </li>
+<li><strong>Settings</strong> <em>(Admin only)</em> – Configure workspace, meeting, and asset defaults across the organization. Admins can also customize branding (logo, colors, backgrounds).  </li>
+<li><strong>Account</strong> <em>(Admin only)</em> – Manage registered users and 360° cameras.  </li>
+<li><strong>Device Login</strong> – Enter the code displayed on your 360° camera to pair it with your account.  </li>
+<li><strong>Tutorials</strong> – Access guided tutorials.  </li>
+<li><strong>Sign out</strong> – Log out of the console.</li>
+</ul>
+<blockquote>
+<p>Sections like Profile, Device Login, Tutorials, and Sign out are self-explanatory and do not have detailed subsections.</p>
+</blockquote>
+<hr />
+<h3 id="42-web-console---details-by-menu-item-with-images">4.2 Web Console - Details by Menu Item (with images)</h3>
+<h4 id="421-workspaces">4.2.1 Workspaces</h4>
+<p>Workspaces are flexible organizational units that let you manage assets, collaborators, and meetings in one place. You can create a new workspace with the <strong>New Workspace</strong> button in the upper-right corner.</p>
 <p><img alt="Avatour Web Console - Main Menu Item Workspaces" src="https://res.cloudinary.com/avatour/image/upload/v1772360323/avatour-screenshot-main-menu-workspaces_hnhkjj.png" /> <em>Avatour Web Console - Main Menu Item Workspaces</em></p>
-<p>Click notifications (the bell icon) to get a summary of activities in a workspace over the last 7 days.</p>
-<p><img alt="Avatour Web Console - Workspace Recent Activities" src="https://res.cloudinary.com/avatour/image/upload/v1772919758/avatour-screenshot-main-menu-workspace-recent-activities_gby1ws.png" /> <em>Avatour Web Console - Workspace Recent Activities</em></p>
-<p>You can enter a workspace by clicking on it. Here is a view of the structure in a workspace.</p>
-<p><img alt="Avatour Workspace with Assets Panel, blank Canvas and Meetings Panel" src="https://res.cloudinary.com/avatour/image/upload/v1772198701/avatour-screenshot-workspace-assets-blank-meetings_qeumpl.png" /> <em>Avatour Workspace with Assets Panel (left), blank Canvas (center) and Meetings Panel (right)</em></p>
-<p>Each workspace comprises of the following elements (explained from left to right).</p>
-<p><strong>Assets</strong> - Manage assets allocated to that workspace </p>
-<p><strong>Collaborators</strong> - Manage Access to the Workspace</p>
+<p>Click the bell icon to see a summary of workspace activity over the last 7 days.</p>
+<p><img alt="Avatour Web Console - Workspace Recent Activities" src="https://res.cloudinary.com/avatour/image/upload/v1772919758/avatour-screenshot-main-menu-workspace-recent-activities_gby1ws.png" /> <em>Workspace Recent Activities</em></p>
+<p>Inside a workspace:</p>
+<p><img alt="Avatour Workspace with Assets Panel, blank Canvas and Meetings Panel" src="https://res.cloudinary.com/avatour/image/upload/v1772198701/avatour-screenshot-workspace-assets-blank-meetings_qeumpl.png" /> <em>Workspace with Assets (left), Canvas (center), Meetings (right)</em></p>
 <ul>
-<li><strong>Viewer</strong> - can view assets in the workspace. Adding a Collaborator Viewer will send an invitation to become a registered Avatour Guest user.</li>
-<li><strong>Editor</strong> - have the same right as the Host (owner of the workspace) and with this full workspace control. Adding a Collaborator Viewer will send an invitation to become a registered Avatour Host user.</li>
-</ul>
-<blockquote>
-<p>N.B.: Several users can access a workspace at the same time without “meeting” each other. This makes a “workspace” different from a “meeting”. In addition to using the Collaborator roles you can also make the Workspace Public and give access through the various Meeting Access settings - for both see below under “Settings”.</p>
+<li><strong>Assets</strong> – Manage files allocated to this workspace.  </li>
+<li><strong>Collaborators</strong> – Control access:</li>
+<li><strong>Viewer</strong> – Can view assets. Invitation creates a Guest user if needed.  </li>
+<li><strong>Editor</strong> – Full workspace control, same rights as Host. Invitation upgrades user to Host if needed.  <blockquote>
+<p>Multiple users can access a workspace simultaneously without a meeting. Public workspaces and meeting access settings provide alternative access.  </p>
 </blockquote>
-<p><strong>Report</strong> - Create a report against the checklist selected in the workspace settings based on the workspace assets that you choose. You can edit the proposed answers.</p>
-<p><img alt="Avatour Workspace Report and Asset Selection" src="https://res.cloudinary.com/avatour/image/upload/v1772924118/avatour-screenshot-asset-selection-and-workspace-report_itjt8f.png" /> <em>Avatour Workspace Report and Asset Selection</em></p>
-<p><strong>Map</strong> - For assets with GPS meta data show the location on the map / satellite image.</p>
-<p><strong>Meetings</strong> - Hosts and Collaborator Editors can organise meetings in the workspace</p>
-<p><strong>Settings</strong></p>
-<p><img alt="Avatour Settings - Workspace View" src="https://res.cloudinary.com/avatour/image/upload/v1772387752/avatour-screenshot-workspace-settings_llcei3.png" /> <em>Avatour Settings - Workspace View</em></p>
-<p><strong>(1) Workspace Settings</strong></p>
-<p><u>Report Template</u> - select a checklist template against which our AI will report based on the chosen workspace assets (see also above Report)</p>
-<p><u>Enable Notifications</u> - Get daily digest emails to notify collaborators when Issues and Actions of Notes change status (for example, In Progress → Resolved).</p>
-<p><img alt="Email Notifications - Example" src="https://res.cloudinary.com/avatour/image/upload/c_crop,h_600,w_600,x_170,y_60/v1772804314/Screenshot_2026-03-05_140654_bjk0xk.png" /> <em>Email Notifications - Example</em></p>
-<p><u>Public Workspace</u> - The workspace is like a website - everybody with the workspace link can view all assets and has direct access to assets via asset links. Direct asset links only work with the Public Workspace setting (Note: Non-collaborators will not see meeting info / join button).</p>
-<p><strong>(2) Meeting Settings</strong></p>
-<p><u>Authentication required</u> - When enabled, participants need to sign in with their Avatour registered user account (Guest, Host or Admin) to join the meeting.</p>
-<p><u>Allow guest access</u> to workspace assets</p>
-<p><u>Auto-Start Recording</u> and Require consent for recorded meetings</p>
-<p><u>Require host</u> - When enabled, the host must admit each participant to the meeting, and the meeting ends when the host leaves. When disabled, meeting participants can start / join a meeting without a host any time. </p>
-<p><u>Allow spectator access</u> - When enabled, participants can use the spectator code to join a meeting without a microphone or webcam. Spectators use chat to communicate with others in the meeting.</p>
-<p><u>Password protected meetings</u> - When enabled, participants must enter a password to join the meeting which is defined by the host in the meeting settings.</p>
-<p><u>Show Travel-Savings Question</u> - Asks if Avatour meeting saves travel.</p>
+</li>
+<li><strong>Report</strong> – Generate a report using a checklist template on selected workspace assets.  </li>
+</ul>
+<p><img alt="Avatour Workspace Report and Asset Selection" src="https://res.cloudinary.com/avatour/image/upload/v1772924118/avatour-screenshot-asset-selection-and-workspace-report_itjt8f.png" /> <em>Workspace Report and Asset Selection</em></p>
+<ul>
+<li><strong>Map</strong> – Display GPS-enabled asset locations on a map.  </li>
+<li><strong>Meetings</strong> – Organize meetings in the workspace.  </li>
+<li><strong>Settings</strong> – Configure workspace and meeting defaults:</li>
+</ul>
+<p><img alt="Avatour Settings - Workspace View" src="https://res.cloudinary.com/avatour/image/upload/v1772387752/avatour-screenshot-workspace-settings_llcei3.png" /> <em>Workspace Settings</em></p>
+<p><strong>Workspace Settings</strong>
+- <strong>Report Template</strong> – Select checklist template for AI reporting.<br />
+- <strong>Enable Notifications</strong> – Daily digest emails for note status changes.  </p>
+<p><img alt="Email Notifications - Example" src="https://res.cloudinary.com/avatour/image/upload/c_crop,h_600,w_600,x_170,y_60/v1772804314/Screenshot_2026-03-05_140654_bjk0xk.png" /> <em>Email Notifications Example</em></p>
+<ul>
+<li><strong>Public Workspace</strong> – Anyone with the link can view assets directly.</li>
+</ul>
+<p><strong>Meeting Settings</strong>
+- <strong>Authentication required</strong> – Participants must sign in.<br />
+- <strong>Allow guest access</strong> – Permit non-registered users to view assets.<br />
+- <strong>Auto-Start Recording / Manual Start</strong> – Choose if meetings auto-record or are started manually.<br />
+- <strong>Require host</strong> – Host must admit participants; meeting ends when host leaves.<br />
+- <strong>Allow spectator access</strong> – Join without mic or camera; communicate via chat.<br />
+- <strong>Password protected meetings</strong> – Require a password for joining.<br />
+- <strong>Show Travel-Savings Question</strong> – Ask participants if the meeting reduced travel.  </p>
 <blockquote>
-<p>N.B.: It is of course possible to use the above settings in combination (e.g. not require a host but a password).</p>
+<p>Settings can be combined (e.g., no host required but password protected).</p>
 </blockquote>
-<h3 id="422-assets">4.2.2 Assets</h3>
-<p>Here you manage all your assets (360° / 2D videos / pictures and pdf files). You can up- and download assets, allocate assets to workspaces, share assets with other users on the Avatour platform. You can also rename assets, print / download asset reports, activate face blur and AI summarization. To edit an Asset click on the name or select it.</p>
-<p><img alt="Avatour Web Console - Main Menu Item Assets" src="https://res.cloudinary.com/avatour/image/upload/v1772360326/avatour-screenshot-main-menu-assets_ky5emz.png" /> <em>Avatour Web Console - Main Menu Item Assets</em></p>
-<h3 id="423-profile">4.2.3 Profile</h3>
-<p>Here you can manage your profile details like your password.</p>
-<p><img alt="Avatour Web Console - Main Menu Item Profile" src="https://res.cloudinary.com/avatour/image/upload/v1772360324/avatour-screenshot-main-menu-profile_j934va.png" /> <em>Avatour Web Console - Main Menu Item Profile</em></p>
-<h3 id="424-settings">4.2.4 Settings</h3>
-<p>This menu item is only available to Admin Users. Here you can (1) manage default settings for your account and even look those settings so that other users can not change those settings and (2) adjust some customise some branding elements (e.g. your logo. For more info see <a href="https://avatour.com/support/how-do-i-add-my-company-branding-to-the-avatour-experience">How do I add my company branding to the Avatour experience?</a>).</p>
-<p><img alt="Avatour Web Console - Main Menu Item Settings (1 of 2)" src="https://res.cloudinary.com/avatour/image/upload/v1772360321/avatour-screenshot-main-menu-settings-1-of-2_fsaatf.png" /> <em>Avatour Web Console - Main Menu Item Settings (1 of 2)</em></p>
-<p><img alt="Avatour Web Console - Main Menu Item Settings (2 of 2)" src="https://res.cloudinary.com/avatour/image/upload/v1772360320/avatour-screenshot-main-menu-settings-2-of-2_qimc09.png" /> <em>Avatour Web Console - Main Menu Item Settings (2 of 2)</em></p>
-<h3 id="425-account">4.2.5 Account</h3>
-<p>Here Admin Users can manage your registered users (host, guest, admin) and capture devices (360° cams allocated to your Avatour platform instance).</p>
-<p><img alt="Avatour Web Console - Main Menu Item Account (1 of 2)" src="https://res.cloudinary.com/avatour/image/upload/v1772803328/avatour-screenshot-main-menu-account-1-of-2_oq5amr.png" /> <em>Avatour Web Console - Main Menu Item Account</em></p>
-<h3 id="426-analytics">4.2.6 Analytics</h3>
-<p>This section gives you information about your meetings and savings.</p>
-<p><img alt="Avatour Web Console - Main Menu Item Analytics (1 of 3)" src="https://res.cloudinary.com/avatour/image/upload/v1772360315/avatour-screenshot-main-menu-analytics-1-of-3_ds3epe.png" /> <em>Avatour Web Console - Main Menu Item Analytics (1 of 3)</em></p>
-<p><img alt="Avatour Web Console - Main Menu Item Analytics (2 of 3)" src="https://res.cloudinary.com/avatour/image/upload/v1772360313/avatour-screenshot-main-menu-analytics-2-of-3_vpcsme.png" /> <em>Avatour Web Console - Main Menu Item Analytics (2 of 3)</em></p>
-<p><img alt="Avatour Web Console - Main Menu Item Analytics (3 of 3)" src="https://res.cloudinary.com/avatour/image/upload/v1772360312/avatour-screenshot-main-menu-analytics-3-of-3_hn2pmr.png" /> <em>Avatour Web Console - Main Menu Item Analytics (3 of 3)</em></p>
-<h3 id="427-device-login">4.2.7 Device Login</h3>
-<p>Use this section to enter the 6-digit code which is shown on your 360° cam (e.g. when you need to log in again or sometimes it needs refreshing). This is a more convenient way that entering your login credentials through the small keyboard in the 360° cam screen.</p>
-<p><img alt="Avatour Web Console - Main Menu Item Device Login" src="https://res.cloudinary.com/avatour/image/upload/v1772360310/avatour-screenshot-main-menu-device-login_vlymhj.png" /> <em>Avatour Web Console - Main Menu Item Device Login</em></p>
-<h3 id="428-tutorials">4.2.8 Tutorials</h3>
-<p>Here you can start tutorials on certain topics.</p>
-<p><img alt="Avatour Web Console - Main Menu Item Tutorials" src="https://res.cloudinary.com/avatour/image/upload/v1772360310/avatour-screenshot-main-menu-tutorials_nr9hme.png" /> <em>Avatour Web Console - Main Menu Item Tutorials</em></p>
-<h2 id="5-onsite---how-to-use-the-avatour-turnkey-kit">5. Onsite - <strong id="for-camera-operators">How to use the Avatour Turnkey Kit</strong></h2>
-<h3 id="51-avatour-turnkey-kit-31-pilot-panox-v2-setup">5.1 Avatour Turnkey Kit 3.1 <a href="https://avatour.com/quickstart-panox-v2">(Pilot PanoX V2 setup)</a></h3>
-<p>Be sure to attach the Ulanzi external battery between the tripod base and extendable stick or mount the camera directly onto the Telesin extendable battery stick. In addition to (1) extending the total battery life from ca. 1 hour (camera battery only) to ca. 3 hours, it will also help (2) to extend the height of the camera setup, (3) add weight to the bottom for better stability and (4) also help to prevent any potential overheating of the camera. We recommend to always use the external batteries right from the start, especially for live meetings. </p>
-<p><em>For previous camera models see Kit 2.1:</em> <a href="https://avatour.com/quickstart-pilot-one/"><em>Pilot One setup</em></a> <em>and Kits 3.0</em> <a href="https://avatour.com/quickstart-labpano-pilot-pano/"><em>Pilot Pano setup</em></a><em>)</em></p>
+<hr />
+<h4 id="422-assets">4.2.2 Assets</h4>
+<p>Manage all 360°/2D videos, pictures, and PDFs. Upload/download assets, allocate to workspaces, share with other users, rename, print/download reports, activate face blur, and AI summarization.</p>
+<p><img alt="Avatour Web Console - Main Menu Item Assets" src="https://res.cloudinary.com/avatour/image/upload/v1772360326/avatour-screenshot-main-menu-assets_ky5emz.png" /> <em>Main Menu Item Assets</em></p>
+<hr />
+<h4 id="423-analytics">4.2.3 Analytics</h4>
+<p>Provides insights into meetings, workspace usage, and ROI metrics.</p>
+<p><img alt="Avatour Web Console - Main Menu Item Analytics (1 of 3)" src="https://res.cloudinary.com/avatour/image/upload/v1772360315/avatour-screenshot-main-menu-analytics-1-of-3_ds3epe.png" /> <em>Analytics Overview</em></p>
+<p><img alt="Avatour Web Console - Main Menu Item Analytics (2 of 3)" src="https://res.cloudinary.com/avatour/image/upload/v1772360313/avatour-screenshot-main-menu-analytics-2-of-3_vpcsme.png" /> <em>Meeting Activity &amp; Workspace Usage</em></p>
+<p><img alt="Avatour Web Console - Main Menu Item Analytics (3 of 3)" src="https://res.cloudinary.com/avatour/image/upload/v1772360312/avatour-screenshot-main-menu-analytics-3-of-3_hn2pmr.png" /> <em>Device License Usage &amp; ROI</em> </p>
+<h2 id="5-onsite---how-to-use-the-avatour-turnkey-kit">5. Onsite - <strong id="for-camera-operators">How to Use the Avatour Turnkey Kit</strong></h2>
+<h3 id="51-getting-started">5.1 Getting Started</h3>
+<p><a href="https://avatour.com/quickstart-panox-v2">Quick Start Guide – Avatour Turnkey Kit 3.1 (Pilot PanoX V2 setup)</a></p>
+<p>Follow the guide to unpack, assemble, and power on your camera.</p>
+<hr />
+<h3 id="52-useful-tips">5.2 Useful Tips</h3>
+<h4 id="external-battery--longer-live-meetings--improved-thermals">External Battery – Longer Live Meetings &amp; Improved Thermals</h4>
 <ul>
-<li><em>Kit 2.1: Connect a USB cable from the battery to the USB-C port of the USB-C hub. Then, connect the camera directly to the hub.</em></li>
-<li><em>Kits 3.0 / 3.1: Connect a USB cable from the battery to the camera.</em></li>
-<li>Kit 3.0 / Pilot Pano cam only: Installing the cooling module (optional accessory):</li>
-<li><em>(1) Remove the Pilot Pano battery by opening the side panel and pulling the battery out</em></li>
-<li>(2) Insert the cooling module where the battery was before</li>
-<li><em>(3) Connect the Ulanzi external battery to the cooling module by USB-A to USB-C cable. This cable would have been packed with the cooling module.</em></li>
+<li>
+<p><strong>If your kit includes a Ulanzi battery:</strong> Attach it between the tripod base and the extendable stick, then connect the battery to the camera via USB-C.  </p>
+</li>
+<li>
+<p><strong>If your kit includes a Telesin battery stick:</strong> Mount the camera directly onto the Telesin extendable battery stick and connect it via USB-C.  </p>
+</li>
 </ul>
-<h3 id="52-connectivity">5.2 Connectivity</h3>
-<p><u><strong>Before you start:</strong></u> For live tours you need to be connected to the internet using (1) a local WiFi or (2) a Mobile Network. You should have at least 10 Mbps Uplink and Downlink bandwidth. This allows enough available bandwidth for the camera to Live Capture stream at our recommended 5 Mbps. You can still stream at lower bandwidths (1-2 Mbps), which works best when you are standing still (see also below e. Best Practices: During a Meeting). To test connectivity speed and quality you can use the following methods:</p>
-<p>Test at one location: Any speed checker you might already use (e.g. https://www.speedtest.net/)</p>
-<p><strong>Testing tools from Avatour (recommended):</strong></p>
-<ol>
-<li>Test at one location: Open https://avatour.live/test from any device in any browser (should take less than one minute) enter your email address and a short reason for the test - measure at different locations onsite. For evaluation of the results, see <a href="https://avatour.com/support/how-do-i-interpret-the-results-of-the-avatour-network-test">How do I interpret the results of the Avatour Network Test?</a></li>
-<li>Test while walking (better for checking the entire tour!): Network test with our Avatour Host app for smartphones (Android: available,  iOS: exp. Feb. 2024). When logged into the app, select a Workspace and choose “Run Connectivity Test”. Watch the connectivity graph while walking through the site, and confirm your network bandwidth meets our recommended 10 Mbps</li>
-<li>Test while walking (better for checking the entire tour!): Run a network test with your Avatour 360°camera. Login to the Avatour app from the camera’s home screen and go to the Menu (the three red lines in the top right corner) Settings → Network → Connection Test. Watch the connectivity graph while walking through the site, and confirm your network bandwidth meets our recommended 10 Mbps</li>
-</ol>
-<p><strong>Local Wifi</strong>: </p>
+<p>Using the external battery:
+1. Extends total battery life from ~40 minutes (camera battery only) to ~3 hours.<br />
+2. Adds stability to the camera setup.<br />
+3. Helps prevent potential overheating.  </p>
 <blockquote>
-<p><strong><u>It is highly recommended to connect your camera to a local WiFi network.</u></strong></p>
+<p>We recommend always using the external battery from the start, especially for live meetings.</p>
 </blockquote>
-<p>If your IT team requires our device MAC address to be whitelisted, you can find on the Pilot cameras the MAC address here: Settings app (camera home screen) --&gt; About --&gt; scroll down to WiFi Address</p>
-<p><strong>Mobile Network:</strong> For areas outside of local WiFi range, connect the camera to a mobile network</p>
-<p><u>Option A: Use the kit provided hotspot and SIM card</u></p>
-<p><strong>Kits 3.0 / 3.1</strong>: Place the GlocalMe hotspot in your pocket, or keep it somewhere on your person.</p>
+<h4 id="audio-considerations-for-live-meetings-and-recordings">Audio Considerations for Live Meetings and Recordings</h4>
 <ul>
-<li><em>Troubleshooting Note</em>: If your GlocalMe hotspot is displaying the message “Data connection is not enabled”, you should check that the hotspot is configured to use the pre-installed SIM card rather than a Cloud SIM. To confirm this, swipe right to the third screen on the hotspot, choose "SIM Card Manager", and select "SIM Card".</li>
-<li><em>Troubleshooting Note</em>: Please also make sure that “5G network” is enabled in the SIM Card Manager</li>
-<li><em>Troubleshooting Note</em>: If you are still unable to connect to a carrier’s network, confirm that you have the correct APN selected for your region. Review the article <a href="https://avatour.com/support/how-do-i-change-the-apn-on-my-glocalme-hotspot">here</a> to create/manage your hotspot’s APNs.</li>
+<li><strong>Noisy environments:</strong> Use the Shokz headphones included in your kit for clear audio capture.  </li>
+<li><strong>Power On/Off:</strong> Hold the “+” button for 3 seconds (blue LED = on, red LED = off).  </li>
+<li><strong>Bluetooth Pairing Mode:</strong> While the headset is off, hold the “+” button for 5 seconds (LED flashes blue/red).  </li>
+<li>
+<p><strong>Volume:</strong> Use the “+” and “-” buttons.  </p>
+</li>
+<li>
+<p><strong>Quieter environments / multiple participants near camera:</strong> Use the NoxGear clip-on speaker. It’s not as high fidelity as conference speakers (e.g., Jabra Speak), but is easy to clip onto your shirt and captures nearby voices effectively.  </p>
+</li>
+<li><strong>Power On/Off:</strong> Hold the Play/Pause button for 2 seconds.  </li>
+<li><strong>Bluetooth Pairing Mode:</strong> Automatically enters pairing mode when powered on (LED flashes blue/red; solid blue when paired).  </li>
+<li>
+<p><strong>Volume:</strong> Use the “+” and “-” buttons.  </p>
+</li>
+<li>
+<p><strong>Using your own device:</strong> If you prefer an alternative (e.g., a conference speaker or personal headset), you can pair it via the camera: Settings → Bluetooth.  </p>
+</li>
 </ul>
-<p><em><strong>Kit 2.1</strong>: Use the hotspot attached by magnet to the extendable stick. You can connect to the hotspot via WiFi or wired ethernet connection (hotspot to USB-C hub)</em></p>
-<p>It’s recommended to first use the SIM card that is preinstalled in your kit provided hotspot. This is a “global” SIM card working in over 200 countries usually automatically connecting to a locally available mobile network. We can implement Roaming Profiles with preferred mobile network providers per country. After testing further the connectivity and if the connection quality remains poor, we recommend sourcing your own local SIM card from the Mobile Network Operator with the strongest signal at your location(s).</p>
-<p><u>Option B: Use your own equipment</u> - hotspot (smartphone or dedicated hotspot device) and SIM data card</p>
-<p><strong>Important Notes</strong>: </p>
+<h4 id="connectivity-connectivity-connectivity">Connectivity, Connectivity, Connectivity</h4>
+<p><strong>Before you start:</strong> Ensure internet connection via:
+- <strong>Local WiFi</strong> (preferred)
+- <strong>Mobile Network</strong> (if outside WiFi range)</p>
+<p><strong>Recommended bandwidth:</strong> 10 Mbps uplink/downlink for full 360° streaming (~5 Mbps). Lower bandwidth (1–2 Mbps) only works when standing still.</p>
+<h5 id="test-network-speed">Test Network Speed</h5>
 <ul>
-<li>Keep the hotspot switched off while connected to your local WiFi network. Once you are out of range of this network, then connect the camera to your SIM data.</li>
-<li>Carry the hotspot with you ideally in your shirt front pocket. Back pockets, e.g. trousers are less ideal because your body will block some of the wifi signal between the hotspot and the 360° camera.</li>
-<li>Mobile Network Operators sometimes limit bandwidth for no obvious reason (“throttling”) to manage their overall network. This can have a negative impact on the Avatour experience. Get in touch with your Avatour CSM or our Support team (<a href="mailto:support@avatour.live">support@avatour.live</a>) if you think that is happening.</li>
-<li>If using the GlocalMe hotspot, you can find the WiFi name and password by swiping one screen to the left. The first screen that displays can be ignored.</li>
+<li><strong>Single-location test:</strong> Any speed checker you normally use (e.g., <a href="https://www.speedtest.net">Speedtest</a>) to verify both upload  bandwidth.   </li>
+<li><strong>Walking test across site:</strong> From the camera: Settings → Network → Connection Test. Walk through the entire space to confirm coverage and bandwidth.</li>
 </ul>
-<p><strong>Low bandwidth situations</strong></p>
+<h5 id="local-wifi">Local WiFi</h5>
 <ul>
-<li>Record a video of the location ahead of time - for details see <a href="https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app">How do you record and upload 360 videos with the Avatour App?</a> This can then be presented during your meeting.</li>
-<li>The operator or other team members onsite can choose to share their smartphone's camera to live stream the location. This will only require a network upload bandwidth of 0.1 - 0.3 Mbps.</li>
+<li>Highly recommended for stable connections.  </li>
+<li>If IT requires whitelisting, find MAC address: Settings → About → WiFi Address.</li>
 </ul>
-<p><strong>No connectivity at all</strong> - Recorded video only - see <a href="https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app">How do you record and upload 360 videos with the Avatour App?</a></p>
-<h3 id="53-audio">5.3 Audio</h3>
-<h4 id="360-camera-and-operator">360° Camera and Operator</h4>
-<p>In principle, you can connect any bluetooth audio device including your PPE headsets if they support bluetooth.</p>
-<p>If you plan to host an Avatour meeting in an outdoor or noisy environment, we recommend connecting the <strong>Shokz headphones</strong> provided in your kit: </p>
+<h5 id="mobile-network">Mobile Network</h5>
+<p><strong>Option A: Kit-provided hotspot &amp; SIM</strong>
+- Attach GlocalMe hotspot to Telesin battery stick (magnet).<br />
+- Ensures no interference and maintains connection if moving away from camera.<br />
+- Troubleshooting:
+  - Confirm pre-installed SIM (not Cloud SIM).<br />
+  - Enable 5G in SIM Card Manager.<br />
+  - Verify correct APN for your region (<a href="https://avatour.com/support/how-do-i-change-the-apn-on-my-glocalme-hotspot">APN setup guide</a>).</p>
+<p><strong>Option B: Personal hotspot / SIM</strong>
+- Use your own smartphone or dedicated hotspot.  </p>
+<p><strong>Important Note:</strong>  </p>
+<blockquote>
+<p>Keep hotspot off while connected to WiFi; enable only when out of range. The camera's OS dynamically switches between WiFi networks based on signal strength and may inadvertently switch to the hotspot even when WiFi is available.</p>
+<p>Mobile networks may throttle bandwidth unexpectedly. Check with your carrier on data plan limits, or contact Avatour support if using our hotspot and SIM.</p>
+</blockquote>
+<h5 id="low-bandwidth-situations">Low Bandwidth Situations</h5>
 <ul>
-<li><strong>Power On/Off</strong>: Hold the “+” button for 3 seconds. You will see a blue LED light when the headset is turned on and a red LED light when the headset is turned off</li>
-<li><strong>Bluetooth Pairing Mode</strong>: While the headset is turned off, hold the “+” button for 5 seconds. An LED light will flash blue and red when in pairing mode</li>
-<li><strong>Volume Up/Down</strong>: Use the “+” and “-” buttons to increase or decrease listening volume</li>
+<li>Pre-record location videos for later playback (<a href="https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app">recording guide</a>).  </li>
+<li>Share a smartphone camera stream to supplement low-bandwidth areas (0.1–0.3 Mbps upload).</li>
 </ul>
-<p>If in a quieter environment, you can choose to connect a bluetooth speaker, such as the clip on <strong>NoxGear speaker</strong>:</p>
+<h5 id="no-connectivity">No Connectivity</h5>
 <ul>
-<li><strong>Power On/Off</strong>: Hold the Play/Pause button in the center of the device for 2 seconds</li>
-<li><strong>Bluetooth Pairing Mode:</strong> Once the device is turned on, it will enter pairing mode (blue and red flashing LEDs). Once paired, it will display a blue LED</li>
-<li><strong>Volume Up/Down</strong>: Use the “+” and “-” buttons to increase or decrease listening volume</li>
+<li>Only pre-recorded video can be used (<a href="https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app">recording guide</a>).</li>
 </ul>
-<p><strong>Kits 3.0 / 3.1:</strong> You can pair/connect any bluetooth device from the camera’s home screen’s Settings app. Go to Settings → Bluetooth.</p>
-<p><em><strong>Kit 2.1</strong>: In order to pair/connect a bluetooth headset/speaker, you must first have a wired connection between the USB-C hub (with Jabra bluetooth dongle) and the camera. If using the Shokz headset or NoxGear speaker, these will connect as soon as they are turned on.</em></p>
-<h4 id="other-onsite-participants">Other Onsite Participants</h4>
-<p>Connect to the meeting using your smartphone’s / tablet’s / laptop’s browser, and use any wired or wireless headphones (preferably ones with noise canceling enabled). <strong>Please be aware that each smartphone onsite will take away bandwidth from the 360° camera</strong> and can have a negative impact on the Avatour meeting for all participants! Therefore <strong>we recommend to join in</strong></p>
+<h4 id="other-onsite-participants--best-practices">Other Onsite Participants – Best Practices</h4>
+<p>When multiple participants join a live Avatour meeting from the same location as the 360° camera, careful management of <strong>audio and bandwidth</strong> is crucial:  </p>
 <ul>
-<li><strong>On-Site Mode</strong> - Join the meeting in On-Site mode when you're physically present at the same location as the 360 camera. On-Site Mode is perfect for users who wish to utilize their phones primarily for detailed close-ups. On-Site Mode mutes the mic and speaker by default to eliminate audio feedback</li>
+<li>Each smartphone, tablet, or laptop connected onsite consumes network bandwidth and can negatively impact the 360° camera feed.  </li>
+<li>Multiple microphones and speakers in the same space can cause <strong>audio feedback</strong>, making the meeting experience unpleasant for all participants.</li>
 </ul>
-<p><strong><em>Screenshot Onsite Mode To Do !!!</em></strong></p>
-<p><strong>Important Note</strong>: </p>
+<h4 id="other-onsite-participants--best-practices_1">Other Onsite Participants – Best Practices</h4>
+<p>When multiple participants join a live Avatour meeting from the same location as the 360° camera, careful management of <strong>audio and bandwidth</strong> is crucial:  </p>
 <ul>
-<li>Make sure that you are muted when not actively speaking</li>
-<li>Have your smartphone connected to a different network than the camera’s network, if possible.</li>
+<li>Each smartphone, tablet, or laptop connected onsite consumes network bandwidth and can negatively impact the 360° camera feed.  </li>
+<li>Multiple microphones and speakers in the same space can cause <strong>audio feedback</strong>, making the meeting experience unpleasant for all participants.</li>
 </ul>
+<p>To address these challenges, follow these <strong>best practices</strong>:</p>
+<ul>
+<li><strong>Use wired or wireless headphones:</strong> Preferably with noise-canceling to prevent echo and feedback.  </li>
+<li><strong>On-Site Mode:</strong> Join the meeting in On-Site mode when physically present near the 360° camera.  </li>
+<li>This mode is optimized for onsite use:  <ul>
+<li>Mutes the participant’s mic and speaker by default.  </li>
+<li>Does <strong>not</strong> send the participant’s camera feed.  </li>
+<li>Does <strong>not</strong> display the 360° camera feed in the participant’s browser.  </li>
+<li>Conserves network bandwidth, ensuring the 360° camera has maximum available upload for the live stream.  </li>
+<li>Useful when a user wants to share specific details; you <strong>can share back your camera</strong> for targeted views.  </li>
+</ul>
+</li>
+<li><strong>Mute when not actively speaking:</strong> Prevents unwanted audio feedback and distractions.  </li>
+<li><strong>Use a separate network if possible:</strong> Have your smartphone connected to a different network than the camera’s network to reduce interference.  </li>
+</ul>
+<p>Following these guidelines ensures a smooth, high-quality live tour for both onsite and remote participants.</p>
 <h3 id="54-avatour-camera-app">5.4 Avatour Camera App</h3>
 <p>Here are (1) the Top Level, (2) Settings and (3) Network Settings menus.</p>
 <p><img alt="Avatour 360° Camera App - Three Menus" src="https://res.cloudinary.com/avatour/image/upload/v1772918698/avatour-screenshot-cam-app-3-menu-screens_nju8bt.png" /> <em>Avatour 360° Camera App - 3 Menus</em></p>
@@ -1104,21 +1159,17 @@ Clicking a menu option opens a <strong>side panel</strong> on the left or right 
   <li class="toc2"><a href="#322-meeting-view-example">3.2.2 Meeting View Example</a></li>
   <li class="toc2"><a href="#323-workspace-view-example">3.2.3 Workspace View Example</a></li>
   <li class="toc2"><a href="#324-bottom-menu-overview">3.2.4 Bottom Menu Overview</a></li>
+  <li class="toc2"><a href="#present-menu">Present Menu</a></li>
+  <li class="toc2"><a href="#asset-toolbar-meeting">Asset Toolbar (Meeting)</a></li>
+  <li class="toc2"><a href="#asset-toolbar-workspace">Asset Toolbar (Workspace)</a></li>
+  <li><a href="#for-host-and-admin-users">4. For Host and Admin Users – Avatour Web Console</a></li>
+  <li class="toc2"><a href="#41-web-console-main-menu-overview">4.1 Web Console – Main Menu Overview</a></li>
   <li><a href="#for-registered-users">4. For Host and Admin Users - Avatour Web Console</a></li>
   <li class="toc2"><a href="#41-web-console-overview-main-menu">4.1 Web Console - Overview Main Menu</a></li>
-  <li class="toc2"><a href="#42-web-console-details-by-menu-item">4.2 Web Console - Details by Menu Item</a></li>
-  <li class="toc2"><a href="#421-workspaces">4.2.1 Workspaces</a></li>
-  <li class="toc2"><a href="#422-assets">4.2.2 Assets</a></li>
-  <li class="toc2"><a href="#423-profile">4.2.3 Profile</a></li>
-  <li class="toc2"><a href="#424-settings">4.2.4 Settings</a></li>
-  <li class="toc2"><a href="#425-account">4.2.5 Account</a></li>
-  <li class="toc2"><a href="#426-analytics">4.2.6 Analytics</a></li>
-  <li class="toc2"><a href="#427-device-login">4.2.7 Device Login</a></li>
-  <li class="toc2"><a href="#428-tutorials">4.2.8 Tutorials</a></li>
-  <li><a href="#for-camera-operators">5. Onsite - **How to use the Avatour Turnkey Kit**</a></li>
-  <li class="toc2"><a href="#51-avatour-turnkey-kit-31-pilot-panox-v2-setuphttpsavatourcomquickstart-panox-v2">5.1 Avatour Turnkey Kit 3.1 [(Pilot PanoX V2 setup)](https://avatour.com/quickstart-panox-v2)</a></li>
-  <li class="toc2"><a href="#52-connectivity">5.2 Connectivity</a></li>
-  <li class="toc2"><a href="#53-audio">5.3 Audio</a></li>
+  <li class="toc2"><a href="#42-web-console-details-by-menu-item-with-images">4.2 Web Console - Details by Menu Item (with images)</a></li>
+  <li><a href="#for-camera-operators">5. Onsite - **How to Use the Avatour Turnkey Kit**</a></li>
+  <li class="toc2"><a href="#51-getting-started">5.1 Getting Started</a></li>
+  <li class="toc2"><a href="#52-useful-tips">5.2 Useful Tips</a></li>
   <li class="toc2"><a href="#54-avatour-camera-app">5.4 Avatour Camera App</a></li>
   <li><a href="#6-best-practice-advice">6. Best Practice Advice</a></li>
   <li class="toc2"><a href="#61-first-informal-uses-and-getting-familiar">6.1 First (informal) Uses and Getting Familiar</a></li>
