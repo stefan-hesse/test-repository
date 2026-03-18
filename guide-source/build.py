@@ -4,17 +4,17 @@ Avatour User Guide — Build Script
 ==================================
 Converts guide-source/Avatour User and Best Practices Guide.md into three outputs:
   1. standalone HTML  → dist/avatour-guide.html
-  2. embed HTML       → dist/avatour-guide-embed.html
-  3. PDF-ready HTML   → dist/avatour-guide-print.html  (open in browser → Print → Save as PDF)
+  2. embed HTML       → dist/avatour-guide-embed.html  (for Webflow iframe)
+  3. PDF-ready HTML   → dist/avatour-guide-print.html  (open in Chrome → Cmd+P → Save as PDF)
 
 Usage:
   python guide-source/build.py
 
 Requirements:
-  pip install markdown pymdown-extensions python-frontmatter --break-system-packages
+  pip install markdown pymdown-extensions python-frontmatter
 """
 
-import os, re, json
+import os, re
 import frontmatter
 import markdown
 from markdown.extensions.toc import TocExtension
@@ -22,16 +22,6 @@ from markdown.extensions.toc import TocExtension
 # ── CONFIG ────────────────────────────────────────────────────────────────
 SOURCE_FILE = "guide-source/Avatour User and Best Practices Guide.md"
 DIST_DIR    = "dist"
-
-BRAND = {
-    "blue":   "#132A39",
-    "orange": "#FF4E00",
-    "slate":  "#5A6875",
-    "light":  "#E8EEF2",
-    "border": "#DDE5EA",
-    "text":   "#1A2A34",
-    "muted":  "#7A8A95",
-}
 
 # ── CSS ───────────────────────────────────────────────────────────────────
 CSS = """
@@ -69,11 +59,8 @@ body {
 }
 .guide-logo {
   display: flex; align-items: center; gap: 10px;
-  font-family: 'Titillium Web', sans-serif;
-  font-size: 17px; font-weight: 700;
-  color: #fff; text-decoration: none; flex-shrink: 0;
+  text-decoration: none; flex-shrink: 0;
 }
-.guide-logo svg { width: 26px; height: 26px; }
 .hd { width:1px; height:20px; background:rgba(255,255,255,.2); flex-shrink:0; }
 .hlabel {
   font-family:'Titillium Web',sans-serif; font-size:12px; font-weight:600;
@@ -157,14 +144,12 @@ body {
   margin-bottom: 28px; padding-bottom: 20px;
   border-bottom: 1px solid var(--border);
 }
-.guide-meta a { color: var(--orange); text-decoration: none; }
 
 /* HEADINGS */
 .guide-article h2 {
   font-family: 'Titillium Web', sans-serif;
   font-size: 20px; font-weight: 700; color: var(--blue);
-  margin: 40px 0 12px;
-  padding-top: 8px;
+  margin: 40px 0 12px; padding-top: 8px;
   border-top: 2px solid var(--border);
   scroll-margin-top: calc(var(--header-h) + 16px);
 }
@@ -213,7 +198,7 @@ body {
 .guide-article tr:last-child td { border-bottom: none; }
 .guide-article tr:nth-child(even) td { background: #f9fbfc; }
 
-/* BLOCKQUOTES (used for notes and tips) */
+/* BLOCKQUOTES */
 .guide-article blockquote {
   border-left: 3px solid var(--orange);
   background: #fff8f5;
@@ -224,7 +209,7 @@ body {
 .guide-article blockquote p { margin-bottom: 0; color: #2a3a44; }
 .guide-article blockquote strong { color: var(--orange); }
 
-/* INLINE SCREENSHOTS */
+/* SCREENSHOTS */
 .guide-article img {
   width: 100%; display: block;
   border: 1px solid var(--border);
@@ -234,99 +219,6 @@ body {
   display: block; font-size: 12px;
   color: var(--muted); text-align: center;
   margin-bottom: 20px; font-style: italic;
-}
-
-/* ADMIN BADGE (inline in headings) */
-.admin-badge {
-  display: inline-block;
-  font-size: 10px; font-weight: 700;
-  font-family: 'Titillium Web', sans-serif;
-  letter-spacing: .06em; text-transform: uppercase;
-  padding: 2px 7px; border-radius: 3px;
-  background: #fff0e8; color: #b83a00;
-  vertical-align: middle; margin-left: 6px;
-}
-
-/* GLOSSARY TOOLTIPS */
-.gloss-term {
-  border-bottom: 1px dashed var(--orange);
-  cursor: help; position: relative;
-  color: inherit;
-}
-.gloss-term .gloss-tip {
-  display: none;
-  position: absolute; bottom: calc(100% + 6px); left: 50%;
-  transform: translateX(-50%);
-  background: var(--blue); color: #fff;
-  font-size: 12px; line-height: 1.5;
-  padding: 8px 12px; border-radius: 5px;
-  width: 260px; z-index: 300;
-  box-shadow: 0 4px 16px rgba(0,0,0,.2);
-  pointer-events: none;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  text-decoration: none;
-}
-.gloss-term .gloss-tip::after {
-  content: '';
-  position: absolute; top: 100%; left: 50%;
-  transform: translateX(-50%);
-  border: 5px solid transparent;
-  border-top-color: var(--blue);
-}
-.gloss-term:hover .gloss-tip { display: block; }
-.gloss-link {
-  display: block; font-size: 11px; margin-top: 4px;
-  color: var(--orange); text-decoration: none;
-}
-
-/* GLOSSARY SECTION */
-.glossary-grid {
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 1px; background: var(--border);
-  border: 1px solid var(--border); border-radius: 6px;
-  overflow: hidden; margin: 16px 0;
-}
-.glossary-item {
-  background: #fff; padding: 14px 16px;
-}
-.glossary-item:hover { background: #fafbfc; }
-.glossary-term {
-  font-family: 'Titillium Web', sans-serif;
-  font-size: 13px; font-weight: 700; color: var(--blue);
-  margin-bottom: 4px;
-}
-.glossary-def { font-size: 13px; color: var(--slate); line-height: 1.55; }
-
-/* FAQS */
-.faq-item {
-  border-bottom: 1px solid var(--border);
-}
-.faq-item:last-child { border-bottom: none; }
-.faq-q {
-  font-family: 'Titillium Web', sans-serif;
-  font-size: 14px; font-weight: 700; color: var(--blue);
-  padding: 14px 0 14px 0;
-  cursor: pointer;
-  display: flex; justify-content: space-between; align-items: center;
-  gap: 12px;
-  list-style: none;
-}
-.faq-q::-webkit-details-marker { display: none; }
-.faq-q::after {
-  content: '+'; color: var(--orange); font-size: 20px;
-  font-weight: 300; flex-shrink: 0; transition: transform .15s;
-}
-details[open] .faq-q::after { transform: rotate(45deg); }
-.faq-a {
-  padding: 0 0 14px 0;
-  font-size: 13.5px; color: #2a3a44; line-height: 1.7;
-}
-.faq-section-title {
-  font-family: 'Titillium Web', sans-serif;
-  font-size: 11px; font-weight: 700;
-  text-transform: uppercase; letter-spacing: .1em;
-  color: var(--muted); margin: 24px 0 8px;
 }
 
 /* DIVIDER */
@@ -358,44 +250,12 @@ details[open] .faq-q::after { transform: rotate(45deg); }
 .guide-toc li a.active { color: var(--orange); border-left-color: var(--orange); font-weight: 500; }
 .guide-toc li.toc2 a { padding-left: 22px; font-size: 12px; }
 
-/* FEEDBACK */
-.guide-feedback {
-  margin-top: 48px; padding-top: 24px;
-  border-top: 1px solid var(--border);
-  display: flex; align-items: center; gap: 12px;
-}
-.guide-feedback span { font-size: 13.5px; color: var(--slate); }
-.fb-btn {
-  font-family: 'Titillium Web', sans-serif; font-size: 12px; font-weight: 700;
-  border: 1px solid var(--border); border-radius: 4px;
-  padding: 5px 16px; cursor: pointer; background: #fff; color: var(--slate);
-}
-.fb-btn:hover { border-color: var(--orange); color: var(--orange); }
-
-/* RELATED */
-.guide-related { margin-top: 28px; }
-.related-label {
-  font-family: 'Titillium Web', sans-serif;
-  font-size: 11px; font-weight: 700; letter-spacing: .1em;
-  text-transform: uppercase; color: var(--muted); margin-bottom: 8px;
-}
-.guide-related a {
-  display: block; font-size: 13.5px; color: var(--orange);
-  text-decoration: none; padding: 5px 0;
-  border-bottom: 1px solid var(--border);
-}
-.guide-related a:last-child { border-bottom: none; }
-.guide-related a:hover { text-decoration: underline; }
-
 /* PRINT STYLES */
 @media print {
-  .guide-header, .guide-sidenav, .guide-toc,
-  .guide-feedback, .guide-related { display: none !important; }
+  .guide-header, .guide-sidenav, .guide-toc { display: none !important; }
   .guide-main { margin-left: 0; padding-right: 0; }
   .guide-article { padding: 0; max-width: 100%; }
   .guide-article img { max-width: 80%; margin: 12px auto; }
-  .gloss-term { border-bottom: none; }
-  .gloss-term .gloss-tip { display: none !important; }
 }
 
 /* RESPONSIVE */
@@ -407,28 +267,18 @@ details[open] .faq-q::after { transform: rotate(45deg); }
   .guide-sidenav { display: none; }
   .guide-main { margin-left: 0; }
   .guide-article { padding: 28px 20px 60px; }
-  .glossary-grid { grid-template-columns: 1fr; }
 }
 
 /* PDF / PRINT MODE */
 body.print-mode .guide-header,
 body.print-mode .guide-sidenav,
-body.print-mode .guide-toc,
-body.print-mode .guide-feedback,
-body.print-mode .guide-related { display: none; }
+body.print-mode .guide-toc { display: none; }
 body.print-mode { background: white; }
 body.print-mode .guide-layout { padding-top: 0; }
 body.print-mode .guide-main { margin-left: 0; padding-right: 0; }
-body.print-mode body {
-  font-size: 10.5pt;
-  line-height: 1.5;
-}
 body.print-mode .guide-article {
-  max-width: 100%;
-  padding: 0;
-  margin: 0;
-  font-size: 10.5pt;
-  line-height: 1.5;
+  max-width: 100%; padding: 0; margin: 0;
+  font-size: 10.5pt; line-height: 1.5;
 }
 body.print-mode .guide-article p { margin-bottom: 8px; }
 body.print-mode .guide-article h1 { font-size: 20pt; margin-bottom: 6px; }
@@ -438,70 +288,40 @@ body.print-mode .guide-article h4 { font-size: 10pt; margin: 10px 0 4px; }
 body.print-mode .guide-article li { margin-bottom: 3px; }
 body.print-mode .guide-article table { font-size: 9.5pt; }
 body.print-mode .guide-article blockquote { font-size: 10pt; padding: 8px 12px; margin: 10px 0; }
-body.print-mode .glossary-def { font-size: 9.5pt; line-height: 1.45; }
-body.print-mode .faq-q { font-size: 10.5pt; padding: 8px 0; }
-body.print-mode .faq-a { font-size: 10pt; line-height: 1.5; }
 
-/* Page setup: margins, running header/footer with page numbers */
 @page {
   size: A4;
   margin: 20mm 18mm 22mm 18mm;
   @top-center {
     content: "Avatour User and Best Practices Guide";
     font-family: 'Titillium Web', sans-serif;
-    font-size: 9pt;
-    color: #7A8A95;
+    font-size: 9pt; color: #7A8A95;
   }
   @bottom-left {
     content: "avatour.com";
     font-family: 'Titillium Web', sans-serif;
-    font-size: 9pt;
-    color: #7A8A95;
+    font-size: 9pt; color: #7A8A95;
   }
   @bottom-right {
     content: "Page " counter(page) " of " counter(pages);
     font-family: 'Titillium Web', sans-serif;
-    font-size: 9pt;
-    color: #7A8A95;
+    font-size: 9pt; color: #7A8A95;
   }
 }
 
-/* Avoid page breaks inside key elements */
 body.print-mode .guide-article li,
 body.print-mode .guide-article p,
 body.print-mode .guide-article blockquote,
 body.print-mode .guide-article tr { page-break-inside: avoid; }
-
-/* Keep headings with the content that follows */
 body.print-mode .guide-article h2,
 body.print-mode .guide-article h3,
 body.print-mode .guide-article h4 { page-break-after: avoid; }
-
-/* Start each H2 section on a new page — but not the very first one */
 body.print-mode .guide-article h2 ~ h2 { page-break-before: always; }
-
-/* Images: never break, centered, max 90% width */
 body.print-mode .guide-article img {
-  max-width: 90%;
-  display: block;
-  margin: 12px auto;
-  page-break-inside: avoid;
+  max-width: 90%; display: block;
+  margin: 12px auto; page-break-inside: avoid;
 }
-
-/* Tables: keep together where possible */
 body.print-mode .guide-article table { page-break-inside: avoid; }
-
-/* Glossary grid: single column for print */
-body.print-mode .glossary-grid { grid-template-columns: 1fr 1fr; }
-
-/* Remove orange dashed underlines from glossary terms in print */
-body.print-mode .gloss-term { border-bottom: none; }
-body.print-mode .gloss-term .gloss-tip { display: none !important; }
-
-/* FAQ accordions: show all answers open in print */
-body.print-mode details { display: block; }
-body.print-mode details summary::after { display: none; }
-body.print-mode .faq-a { display: block !important; padding-bottom: 10px; }
 """
 
 # ── JAVASCRIPT ────────────────────────────────────────────────────────────
@@ -537,206 +357,15 @@ if (allH.length && sideLinks.length) {
   }, { rootMargin: '-10% 0px -80% 0px' });
   allH.forEach(h => { if (h.id) obs2.observe(h); });
 }
-
-// FAQ feedback buttons
-document.querySelectorAll('.fb-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const feedback = btn.closest('.guide-feedback');
-    feedback.innerHTML = '<span style="color:var(--orange);font-weight:500">Thank you for your feedback!</span>';
-  });
-});
 """
 
-# ── GLOSSARY DATA ─────────────────────────────────────────────────────────
-def extract_glossary(md_text):
-    """Extract glossary terms and definitions from the Markdown source."""
-    glossary = {}
-    in_glossary = False
-    current_term = None
-    current_def = []
-
-    for line in md_text.splitlines():
-        if "GLOSSARY_START" in line:
-            in_glossary = True
-            continue
-        if "GLOSSARY_END" in line:
-            if current_term:
-                glossary[current_term] = " ".join(current_def).strip()
-            in_glossary = False
-            continue
-        if not in_glossary:
-            continue
-
-        # Bold term on its own line
-        term_match = re.match(r'^\*\*(.+?)\*\*\s*$', line.strip())
-        if term_match:
-            if current_term:
-                glossary[current_term] = " ".join(current_def).strip()
-            current_term = term_match.group(1)
-            current_def = []
-        elif current_term and line.strip():
-            current_def.append(line.strip())
-
-    return glossary
+# ── LOGO ──────────────────────────────────────────────────────────────────
+LOGO_IMG = '<img src="https://res.cloudinary.com/avatour/image/upload/v1772627129/avatour-name-logo-whiteontransparent_zwfsxa.svg" alt="Avatour" style="height:22px; width:auto; display:block;">'
 
 
-def extract_faqs(md_text):
-    """Extract FAQ sections and Q&A pairs from the Markdown source."""
-    faqs = []
-    in_faqs = False
-    current_section = None
-    current_q = None
-    current_a = []
-
-    for line in md_text.splitlines():
-        if "FAQS_START" in line:
-            in_faqs = True
-            continue
-        if "FAQS_END" in line:
-            if current_q:
-                faqs.append((current_section, current_q, " ".join(current_a).strip()))
-            in_faqs = False
-            continue
-        if not in_faqs:
-            continue
-
-        # Section heading (###)
-        sec_match = re.match(r'^### (.+)$', line)
-        if sec_match:
-            if current_q:
-                faqs.append((current_section, current_q, " ".join(current_a).strip()))
-                current_q = None
-                current_a = []
-            current_section = sec_match.group(1)
-            continue
-
-        # Question (bold, starts with **)
-        q_match = re.match(r'^\*\*(.+?)\*\*\s*$', line.strip())
-        if q_match:
-            if current_q:
-                faqs.append((current_section, current_q, " ".join(current_a).strip()))
-            current_q = q_match.group(1)
-            current_a = []
-        elif current_q and line.strip():
-            current_a.append(line.strip())
-
-    return faqs
-
-
-def build_glossary_html(glossary):
-    """Build the two-column glossary grid HTML."""
-    items = ""
-    for term, defn in sorted(glossary.items()):
-        term_id = "gloss-" + re.sub(r'[^a-z0-9]', '-', term.lower())
-        items += f"""
-        <div class="glossary-item" id="{term_id}">
-          <div class="glossary-term">{term}</div>
-          <div class="glossary-def">{defn}</div>
-        </div>"""
-    return f'<div class="glossary-grid">{items}</div>'
-
-
-def build_faq_html(faqs):
-    """Build the FAQ accordion HTML."""
-    html = ""
-    current_section = None
-    for section, question, answer in faqs:
-        if section != current_section:
-            current_section = section
-            html += f'<div class="faq-section-title">{section}</div>\n'
-        # Convert inline markdown links in answer
-        answer = re.sub(r'\[([^\]]+)\]\(([^)]+)\)', r'<a href="\2">\1</a>', answer)
-        html += f"""
-        <details class="faq-item">
-          <summary class="faq-q">{question}</summary>
-          <div class="faq-a">{answer}</div>
-        </details>"""
-    return html
-
-
-def auto_tag_glossary(html_content, glossary):
-    """
-    Scan body text and wrap glossary terms with tooltip spans.
-    Skips headings, existing tags, image alt text, and the glossary section itself.
-    Each term is tagged only on its FIRST occurrence to avoid clutter.
-    """
-    tagged = set()
-
-    def replace_term(match, term, defn, term_id):
-        word = match.group(0)
-        if term in tagged:
-            return word
-        tagged.add(term)
-        short_def = defn[:120] + "…" if len(defn) > 120 else defn
-        return (
-            f'<span class="gloss-term">{word}'
-            f'<span class="gloss-tip">{short_def}'
-            f'<a class="gloss-link" href="#{term_id}">See full definition →</a>'
-            f'</span></span>'
-        )
-
-    # Sort longest terms first to avoid partial matches
-    sorted_terms = sorted(glossary.keys(), key=len, reverse=True)
-
-    # Process only paragraph and list content — skip headings and the glossary/FAQ sections
-    # Split into segments: taggable vs non-taggable
-    def process_segment(seg):
-        for term in sorted_terms:
-            if term in tagged:
-                continue
-            term_id = "gloss-" + re.sub(r'[^a-z0-9]', '-', term.lower())
-            defn = glossary[term]
-            pattern = r'(?<![a-zA-Z])' + re.escape(term) + r'(?![a-zA-Z])'
-            seg = re.sub(
-                pattern,
-                lambda m, t=term, d=defn, tid=term_id: replace_term(m, t, d, tid),
-                seg,
-                count=1
-            )
-        return seg
-
-    # Split HTML into taggable (<p>, <li>) and non-taggable (headings, code, glossary section)
-    # Simple approach: process text between tags, skip heading tags and the glossary/faq divs
-    result = []
-    pos = 0
-    # Find the glossary section start to avoid tagging there
-    gloss_start = html_content.find('id="glossary"')
-    tag_pattern = re.compile(r'<[^>]+>|[^<]+')
-
-    in_skip = False
-    skip_depth = 0
-    in_heading = False
-
-    for m in tag_pattern.finditer(html_content):
-        chunk = m.group(0)
-        if chunk.startswith('<'):
-            tag_lower = chunk.lower()
-            # Detect start of glossary/FAQ section — stop tagging after this
-            if m.start() >= gloss_start and gloss_start > 0:
-                result.append(chunk)
-                continue
-            # Skip headings
-            if re.match(r'<h[1-6][\s>]', tag_lower):
-                in_heading = True
-            elif re.match(r'</h[1-6]>', tag_lower):
-                in_heading = False
-            result.append(chunk)
-        else:
-            if in_heading or (m.start() >= gloss_start > 0):
-                result.append(chunk)
-            else:
-                result.append(process_segment(chunk))
-
-    return ''.join(result)
-
-
+# ── HEADING EXTRACTION ────────────────────────────────────────────────────
 def extract_headings(md_text):
-    """
-    Extract all H2/H3 headings from the Markdown source.
-    Handles both explicit anchors {#anchor} and auto-generated slugs.
-    Returns list of (level, title, anchor_id) tuples.
-    Stops before Glossary/FAQs (always appended as fixed reference links).
-    """
+    """Extract H2/H3 headings, return list of (level, title, anchor_id)."""
     headings = []
     stop_ids = {"glossary", "faqs"}
 
@@ -747,7 +376,6 @@ def extract_headings(md_text):
         level = len(m.group(1))
         raw = m.group(2).strip()
 
-        # Extract explicit anchor {#anchor-id}
         anchor_match = re.search(r"\{#([\w-]+)\}", raw)
         if anchor_match:
             anchor_id = anchor_match.group(1)
@@ -767,74 +395,70 @@ def extract_headings(md_text):
 
 
 def build_toc_html(md_text):
-    """Build the right-side TOC automatically from MD headings."""
+    """Build right-side TOC from headings."""
     headings = extract_headings(md_text)
     items = ""
     for level, title, anchor_id in headings:
         css = ' class="toc2"' if level == 3 else ""
         items += f'  <li{css}><a href="#{anchor_id}">{title}</a></li>\n'
-
-    items += '  <li><a href="#glossary">Glossary</a></li>\n'
-    items += '  <li><a href="#faqs">FAQs</a></li>\n'
-
     return f'<div class="toc-label">On this page</div>\n<ul>\n{items}</ul>'
 
 
 def build_sidenav_html(md_text):
-    """Build the left sidebar navigation automatically from MD headings."""
+    """Build left sidebar from headings."""
     headings = extract_headings(md_text)
     html = '<div class="sidenav-section">Guide sections</div>\n'
-
     for level, title, anchor_id in headings:
         css = ' class="sub"' if level == 3 else ""
         html += f'<a href="#{anchor_id}"{css}>{title}</a>\n'
-
     html += '<div class="sidenav-section">Reference</div>\n'
-    html += '<a href="#glossary">Glossary</a>\n'
-    html += '<a href="#faqs">FAQs</a>\n'
-    html += '<a href="https://avatour.live/test">Network Test ↗</a>\n'
+    html += '<a href="https://avatour.com/glossary" target="_blank" rel="noopener">Glossary ↗</a>\n'
+    html += '<a href="https://avatour.com/faqs" target="_blank" rel="noopener">FAQs ↗</a>\n'
+    html += '<a href="https://avatour.live/test" target="_blank" rel="noopener">Network Test ↗</a>\n'
     html += '<a href="mailto:support@avatour.live">Open Support Ticket ↗</a>\n'
-
     return html
 
 
+# ── MARKDOWN → HTML ───────────────────────────────────────────────────────
 def md_to_html(md_text):
-    """Convert Markdown to HTML using Python-Markdown with extensions."""
+    """Convert Markdown to HTML. Normalises 2-space list indent to 4-space."""
+    def normalise_list_indent(text):
+        lines = text.split('\n')
+        out = []
+        for line in lines:
+            stripped = line.lstrip(' ')
+            spaces = len(line) - len(stripped)
+            if spaces > 0 and stripped and (
+                stripped[0] in '-*' or
+                (stripped[0].isdigit() and len(stripped) > 1 and stripped[1] in '.) ')
+            ):
+                line = ' ' * (spaces * 2) + stripped
+            out.append(line)
+        return '\n'.join(out)
+
+    md_text = normalise_list_indent(md_text)
     md = markdown.Markdown(extensions=[
         TocExtension(slugify=lambda value, separator: re.sub(r'[^\w-]', '', value.lower().replace(' ', separator))),
-        'tables',
-        'fenced_code',
-        'attr_list',
-        'md_in_html',
+        'tables', 'fenced_code', 'attr_list', 'md_in_html', 'sane_lists',
     ])
     return md.convert(md_text)
 
 
-def replace_glossary_section(html, glossary_html):
-    """Replace the auto-generated glossary section with the styled grid."""
-    # The markdown renders ** terms as bold paragraphs — replace the whole section
-    # with the pre-built grid between the h2#glossary and the next h2
-    pattern = r'(<h2[^>]*id="glossary"[^>]*>.*?</h2>)(.*?)(<h2|$)'
-    replacement = r'\1' + '\n' + glossary_html + '\n' + r'\3'
-    result = re.sub(pattern, replacement, html, flags=re.DOTALL)
-    return result
+# ── OPEN LINKS IN NEW TAB ─────────────────────────────────────────────────
+def open_links_in_new_tab(html):
+    """Add target=_blank to all external links."""
+    def add_target(m):
+        tag = m.group(0)
+        href_m = re.search(r'href=["\']([^"\']*)["\']', tag)
+        if href_m:
+            url = href_m.group(1)
+            if (url.startswith('http') or url.startswith('mailto')) and 'target=' not in tag:
+                tag = tag[:-1] + ' target="_blank" rel="noopener">'
+        return tag
+    return re.sub(r'<a [^>]+>', add_target, html)
 
 
-def replace_faq_section(html, faq_html):
-    """Replace the auto-generated FAQ section with the accordion."""
-    pattern = r'(<h2[^>]*id="faqs"[^>]*>.*?</h2>)(.*?)$'
-    replacement = r'\1' + '\n' + faq_html + '\n'
-    result = re.sub(pattern, replacement, html, flags=re.DOTALL)
-    return result
-
-
-LOGO_SVG = """<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="50" cy="50" r="45" fill="#FF4E00"/>
-  <ellipse cx="50" cy="50" rx="30" ry="20" stroke="white" stroke-width="5" fill="none"/>
-  <circle cx="50" cy="50" r="8" fill="white"/>
-</svg>"""
-
-
+# ── HTML BUILDERS ─────────────────────────────────────────────────────────
 def build_full_html(article_html, toc_html, sidenav_html, meta, body_class=""):
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -847,9 +471,8 @@ def build_full_html(article_html, toc_html, sidenav_html, meta, body_class=""):
 <body{' class="' + body_class + '"' if body_class else ''}>
 
 <header class="guide-header">
-  <a class="guide-logo" href="#">
-    {LOGO_SVG}
-    AVATOUR
+  <a class="guide-logo" href="https://avatour.com" target="_blank" rel="noopener">
+    {LOGO_IMG}
   </a>
   <div class="hd"></div>
   <span class="hlabel">User Guide</span>
@@ -876,20 +499,6 @@ def build_full_html(article_html, toc_html, sidenav_html, meta, body_class=""):
 
       {article_html}
 
-      <div class="guide-feedback">
-        <span>Was this article helpful?</span>
-        <button class="fb-btn">Yes</button>
-        <button class="fb-btn">No</button>
-      </div>
-
-      <div class="guide-related">
-        <div class="related-label">Related articles</div>
-        <a href="#">How do I add my company branding to the Avatour experience?</a>
-        <a href="#">Managing access to Avatour meetings</a>
-        <a href="#">What are the network requirements for Avatour?</a>
-        <a href="#">Are my Avatour sessions secure?</a>
-      </div>
-
     </article>
 
     <aside class="guide-toc">
@@ -904,202 +513,55 @@ def build_full_html(article_html, toc_html, sidenav_html, meta, body_class=""):
 </html>"""
 
 
-def build_embed_html(article_html, toc_html, sidenav_html, meta):
-    """
-    Webflow-compatible embed version.
-    Fixes three Webflow-specific issues:
-      1. Sidebar: shown but non-fixed (scrolls with page)
-      2. FAQs: <details>/<summary> replaced with JS accordion (Webflow strips these)
-      3. Glossary tooltips: CSS :hover replaced with JS mouseenter (more reliable in iframes)
-    """
-    # Fix 1: make all fixed/sticky positions work inside an iframe/embed
+def build_embed_html(article_html, toc_html, meta):
+    """Webflow-compatible embed — no header, TOC only, iframe height reporting."""
     embed_css = CSS.replace("position: fixed;", "position: sticky;")
 
     EMBED_EXTRA_CSS = """
 /* WEBFLOW EMBED OVERRIDES */
 .guide-header { display: none; }
-
-/* Reset the standalone layout (which assumes fixed sidebars) */
-.guide-layout {
-  padding-top: 0;
-  display: flex;
-  align-items: flex-start;
-  gap: 0;
-}
+.guide-layout { padding-top: 0; display: flex; align-items: flex-start; }
 .guide-sidenav { display: none !important; }
 .guide-main {
   margin-left: 0 !important;
   padding-right: 0 !important;
-  flex: 1;
-  min-width: 0;
-  display: flex;
-  justify-content: flex-start;
-  gap: 32px;
+  flex: 1; min-width: 0;
+  display: flex; justify-content: flex-start; gap: 32px;
 }
-.guide-article {
-  width: 100%;
-  max-width: 780px;
-  flex: 1;
-}
+.guide-article { width: 100%; max-width: 780px; flex: 1; }
 
-/* TOC: JS-driven fixed position (CSS sticky breaks in Webflow embeds) */
+/* TOC: JS-driven fixed position */
 .guide-toc {
-  position: fixed;
-  top: 20px;
+  position: fixed; top: 20px;
   max-height: calc(100vh - 40px);
-  overflow-y: auto;
-  flex-shrink: 0;
-  width: 190px;
-  padding: 0 0 0 8px;
-  right: 16px;
-  z-index: 100;
+  overflow-y: auto; flex-shrink: 0;
+  width: 190px; padding: 0 0 0 8px;
+  right: 16px; z-index: 100;
 }
-/* Spacer so article column doesn't go under the fixed TOC */
-.guide-main {
-  padding-right: 220px !important;
-}
-
-/* Fix 2: JS-powered FAQ accordion (replaces <details>/<summary>) */
-.faq-item { border-bottom: 1px solid var(--border); }
-.faq-item:last-child { border-bottom: none; }
-.faq-q {
-  font-family: 'Titillium Web', sans-serif;
-  font-size: 14px; font-weight: 700; color: var(--blue);
-  padding: 14px 0; cursor: pointer;
-  display: flex; justify-content: space-between; align-items: center;
-  gap: 12px; list-style: none; border: none; background: none;
-  width: 100%; text-align: left;
-}
-.faq-q .faq-icon {
-  color: var(--orange); font-size: 20px; font-weight: 300;
-  flex-shrink: 0; transition: transform .15s; line-height: 1;
-}
-.faq-q.open .faq-icon { transform: rotate(45deg); }
-.faq-a {
-  display: none; padding: 0 0 14px 0;
-  font-size: 13.5px; color: #2a3a44; line-height: 1.7;
-}
-.faq-a.open { display: block; }
-.faq-section-title {
-  font-family: 'Titillium Web', sans-serif;
-  font-size: 11px; font-weight: 700;
-  text-transform: uppercase; letter-spacing: .1em;
-  color: var(--muted); margin: 24px 0 8px;
-}
-
-/* Fix 3: JS-powered glossary tooltips */
-.gloss-tip {
-  display: none;
-  position: absolute;
-  background: var(--blue); color: #fff;
-  font-size: 12px; line-height: 1.5;
-  padding: 8px 12px; border-radius: 5px;
-  width: 260px; z-index: 9999;
-  box-shadow: 0 4px 16px rgba(0,0,0,.2);
-  pointer-events: none;
-  font-family: 'Roboto', sans-serif;
-  top: 0; left: 0;
-}
-.gloss-tip::after {
-  content: '';
-  position: absolute; top: 100%; left: 20px;
-  border: 5px solid transparent;
-  border-top-color: var(--blue);
-}
-.gloss-tip.visible { display: block; }
-.gloss-term {
-  border-bottom: 1px dashed var(--orange);
-  cursor: help;
-}
+.guide-main { padding-right: 220px !important; }
 """
 
-    # Fix 2: replace <details>/<summary> FAQ markup with plain div/button markup
-    faq_html_fixed = article_html
-    import re as _re
-    # Replace <details class="faq-item"> ... </details> blocks with div+button pattern
-    def replace_faq_block(m):
-        inner = m.group(1)
-        # Extract question from <summary class="faq-q">...</summary>
-        q_match = _re.search(r'<summary[^>]*>(.*?)</summary>', inner, _re.DOTALL)
-        # Extract answer from <div class="faq-a">...</div>
-        a_match = _re.search(r'<div class="faq-a">(.*?)</div>', inner, _re.DOTALL)
-        if not q_match or not a_match:
-            return m.group(0)
-        question = q_match.group(1).strip()
-        answer = a_match.group(1).strip()
-        return (
-            f'<div class="faq-item">'
-            f'<button class="faq-q"><span>{question}</span><span class="faq-icon">+</span></button>'
-            f'<div class="faq-a">{answer}</div>'
-            f'</div>'
-        )
-    faq_html_fixed = _re.sub(
-        r'<details class="faq-item">(.*?)</details>',
-        replace_faq_block,
-        faq_html_fixed,
-        flags=_re.DOTALL
-    )
-
     EMBED_JS = """
-// ── FAQ ACCORDION ──────────────────────────────────────────────────────
-document.querySelectorAll('.faq-q').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const answer = btn.nextElementSibling;
-    const isOpen = btn.classList.contains('open');
-    // Close all
-    document.querySelectorAll('.faq-q').forEach(b => {
-      b.classList.remove('open');
-      b.nextElementSibling.classList.remove('open');
-    });
-    // Open this one if it was closed
-    if (!isOpen) {
-      btn.classList.add('open');
-      answer.classList.add('open');
-    }
-  });
-});
-
-// ── GLOSSARY TOOLTIPS ──────────────────────────────────────────────────
-const guideContainer = document.querySelector('.guide-layout') || document.body;
-guideContainer.style.position = 'relative';
-const tip = document.createElement('div');
-tip.className = 'gloss-tip';
-guideContainer.appendChild(tip);
-
-document.querySelectorAll('.gloss-term').forEach(term => {
-  const defn = term.getAttribute('data-def') || '';
-  const href = term.getAttribute('data-href') || '#glossary';
-
-  term.addEventListener('mouseenter', e => {
-    tip.innerHTML = defn + '<a style="color:#FF4E00;font-size:11px;display:block;margin-top:6px;" href="' + href + '">See full definition →</a>';
-    tip.style.display = 'block';
-    positionTip(e);
-  });
-  term.addEventListener('mousemove', positionTip);
-  term.addEventListener('mouseleave', () => { tip.style.display = 'none'; });
-});
-
-function positionTip(e) {
-  const pad = 14;
-  const w = tip.offsetWidth || 260;
-  const h = tip.offsetHeight || 80;
-  const rect = guideContainer.getBoundingClientRect();
-  let x = e.clientX - rect.left + pad;
-  let y = e.clientY - rect.top + window.scrollY - h - pad;
-  if (x + w > guideContainer.offsetWidth) x = e.clientX - rect.left - w - pad;
-  if (y - window.scrollY < 0) y = e.clientY - rect.top + window.scrollY + pad;
-  tip.style.left = x + 'px';
-  tip.style.top  = y + 'px';
+// Post height to parent so Webflow iframe resizes to content
+function postHeight() {
+  var h = document.body.scrollHeight;
+  if (window.parent !== window) {
+    window.parent.postMessage({ iframeHeight: h }, '*');
+  }
 }
+window.addEventListener('load', function() {
+  postHeight();
+  setTimeout(postHeight, 800);
+  setTimeout(postHeight, 2000);
+});
 
-// ── TOC: JS-DRIVEN POSITIONING (CSS sticky breaks in Webflow embeds) ──
+// TOC positioning
+const guideContainer = document.querySelector('.guide-layout') || document.body;
 const tocEl = document.querySelector('.guide-toc');
 if (tocEl) {
   function positionTOC() {
     const rect = guideContainer.getBoundingClientRect();
-    const rightGap = 16;
-    // Position TOC fixed relative to viewport, aligned to right of guide container
-    tocEl.style.right = Math.max(rightGap, window.innerWidth - rect.right + rightGap) + 'px';
+    tocEl.style.right = Math.max(16, window.innerWidth - rect.right + 16) + 'px';
     tocEl.style.top = Math.max(20, rect.top + 20) + 'px';
   }
   positionTOC();
@@ -1107,79 +569,21 @@ if (tocEl) {
   window.addEventListener('resize', positionTOC, { passive: true });
 }
 
-// ── ACTIVE TOC + SIDENAV ───────────────────────────────────────────────
+// Active TOC highlighting
 const headings = document.querySelectorAll('.guide-article h2, .guide-article h3');
 const tocLinks = document.querySelectorAll('.guide-toc a');
-const sideLinks = document.querySelectorAll('.guide-sidenav a');
 if (headings.length) {
   const obs = new IntersectionObserver(entries => {
     entries.forEach(e => {
       if (e.isIntersecting) {
         const id = e.target.id;
         tocLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + id));
-        sideLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + id));
       }
     });
   }, { rootMargin: '-10% 0px -80% 0px' });
   headings.forEach(h => { if (h.id) obs.observe(h); });
 }
-
-// ── FEEDBACK BUTTONS ───────────────────────────────────────────────────
-document.querySelectorAll('.fb-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const feedback = btn.closest('.guide-feedback');
-    if (feedback) feedback.innerHTML = '<span style="color:var(--orange);font-weight:500">Thank you for your feedback!</span>';
-  });
-});
 """
-
-    # Strip Glossary and FAQ sections entirely from the embed
-    # (both live in the website footer as separate pages)
-    import re as _re2
-    faq_html_fixed = _re2.sub(
-        r'<h2[^>]*id="glossary"[^>]*>.*',
-        '',
-        faq_html_fixed,
-        flags=_re2.DOTALL
-    )
-
-    # Fix 3: rewrite gloss-term spans to use data attributes instead of nested HTML
-    # (Webflow can mangle nested spans; data attributes are safer)
-    def replace_gloss_span(m):
-        # Extract the visible term text and the tooltip content
-        full = m.group(0)
-        term_text_m = _re2.search(r'^<span class="gloss-term">(.+?)<span class="gloss-tip">', full, _re2.DOTALL)
-        tip_m = _re2.search(r'<span class="gloss-tip">(.*?)<a class="gloss-link"[^>]*href="([^"]+)"', full, _re2.DOTALL)
-        if not term_text_m or not tip_m:
-            return full
-        term_text = term_text_m.group(1).strip()
-        defn = tip_m.group(1).strip()
-        href = tip_m.group(2)
-        # Escape for data attribute
-        defn_safe = defn.replace('"', '&quot;').replace("'", '&#39;')
-        return f'<span class="gloss-term" data-def="{defn_safe}" data-href="{href}">{term_text}</span>'
-
-    faq_html_fixed = _re2.sub(
-        r'<span class="gloss-term">.*?</span></span>',
-        replace_gloss_span,
-        faq_html_fixed,
-        flags=_re2.DOTALL
-    )
-
-    # Strip glossary/FAQ/reference links from sidenav for embed version
-    embed_sidenav = _re2.sub(
-        r'<div class="sidenav-section">Reference</div>.*',
-        '',
-        sidenav_html,
-        flags=_re2.DOTALL
-    )
-    # Strip glossary/FAQ from TOC for embed version
-    embed_toc = _re2.sub(
-        r'<li><a href="#glossary">.*',
-        '',
-        toc_html,
-        flags=_re2.DOTALL
-    )
 
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -1196,10 +600,10 @@ document.querySelectorAll('.fb-btn').forEach(btn => {
 <div class="guide-layout">
   <div class="guide-main">
     <article class="guide-article" style="padding-top: 24px;">
-      {faq_html_fixed}
+      {article_html}
     </article>
     <aside class="guide-toc">
-      {embed_toc}
+      {toc_html}
     </aside>
   </div>
 </div>
@@ -1212,58 +616,46 @@ document.querySelectorAll('.fb-btn').forEach(btn => {
 def main():
     os.makedirs(DIST_DIR, exist_ok=True)
 
-    # 1. Load source
+    # Load source
     post = frontmatter.load(SOURCE_FILE)
     md_text = post.content
     meta = {
-        'title':    post.get('title', 'Avatour User Guide'),
-        'version':  post.get('version', '2.0'),
-        'updated':  post.get('updated', '2026'),
+        'title':   post.get('title', 'Avatour User Guide'),
+        'version': post.get('version', '2.0'),
+        'updated': post.get('updated', '2026'),
     }
 
-    # 2. Extract glossary and FAQs before converting
-    glossary = extract_glossary(md_text)
-    faqs = extract_faqs(md_text)
-    print(f"  Found {len(glossary)} glossary terms, {len(faqs)} FAQ entries")
-
-    # 3. Convert Markdown → HTML
+    # Convert Markdown → HTML
     article_html = md_to_html(md_text)
 
-    # 4. Replace raw glossary/FAQ sections with styled components
-    glossary_html = build_glossary_html(glossary)
-    faq_html = build_faq_html(faqs)
-    article_html = replace_glossary_section(article_html, glossary_html)
-    article_html = replace_faq_section(article_html, faq_html)
+    # Open all external links in new tab
+    article_html = open_links_in_new_tab(article_html)
 
-    # 5. Auto-tag glossary terms in body text
-    article_html = auto_tag_glossary(article_html, glossary)
+    # Build navigation
+    toc_html     = build_toc_html(md_text)
+    sidenav_html = build_sidenav_html(md_text)
 
-    # 6. Build navigation components
-    toc_html      = build_toc_html(md_text)
-    sidenav_html  = build_sidenav_html(md_text)
-
-    # 7. Output 1: Standalone HTML
+    # Output 1: Standalone HTML
     standalone = build_full_html(article_html, toc_html, sidenav_html, meta)
     out1 = os.path.join(DIST_DIR, "avatour-guide.html")
     with open(out1, 'w', encoding='utf-8') as f:
         f.write(standalone)
-    print(f"  ✓ Standalone HTML  → {out1}")
+    print(f"  ✓ Standalone  → {out1}")
 
-    # 8. Output 2: Embed HTML
-    embed = build_embed_html(article_html, toc_html, sidenav_html, meta)
+    # Output 2: Embed HTML
+    embed = build_embed_html(article_html, toc_html, meta)
     out2 = os.path.join(DIST_DIR, "avatour-guide-embed.html")
     with open(out2, 'w', encoding='utf-8') as f:
         f.write(embed)
-    print(f"  ✓ Embed HTML       → {out2}")
+    print(f"  ✓ Embed       → {out2}")
 
-    # 9. Output 3: Print/PDF HTML (open in browser, Cmd+P, Save as PDF)
+    # Output 3: Print/PDF HTML
     print_html = build_full_html(article_html, toc_html, sidenav_html, meta, body_class="print-mode")
     out3 = os.path.join(DIST_DIR, "avatour-guide-print.html")
     with open(out3, 'w', encoding='utf-8') as f:
         f.write(print_html)
-    print(f"  ✓ Print/PDF HTML   → {out3}")
+    print(f"  ✓ Print/PDF   → {out3}")
     print(f"\n  To generate PDF: open {out3} in Chrome → Cmd+P → Save as PDF")
-    print(f"  (For automated PDF: install puppeteer and run: node pdf.js)")
 
 
 if __name__ == "__main__":
