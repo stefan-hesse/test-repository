@@ -429,92 +429,82 @@ Provides insights into meetings, workspace usage, and ROI metrics.
 
 ![Avatour Web Console - Main Menu Item Analytics (3 of 3)](https://res.cloudinary.com/avatour/image/upload/v1772360312/avatour-screenshot-main-menu-analytics-3-of-3_hn2pmr.png) *Device License Usage & ROI* 
 
-## 5. Onsite - **How to use the Avatour Turnkey Kit**{#for-camera-operators}
+## 5. Onsite - **How to Use the Avatour Turnkey Kit**{#for-camera-operators}
 
-### 5.1 Avatour Turnkey Kit 3.1 [(Pilot PanoX V2 setup)](https://avatour.com/quickstart-panox-v2) 
+### 5.1 Getting Started
+[Quick Start Guide – Avatour Turnkey Kit 3.1 (Pilot PanoX V2 setup)](https://avatour.com/quickstart-panox-v2)
 
-Be sure to attach the Ulanzi external battery between the tripod base and extendable stick or mount the camera directly onto the Telesin extendable battery stick. In addition to (1) extending the total battery life from ca. 1 hour (camera battery only) to ca. 3 hours, it will also help (2) to extend the height of the camera setup, (3) add weight to the bottom for better stability and (4) also help to prevent any potential overheating of the camera. We recommend to always use the external batteries right from the start, especially for live meetings. 
+Follow the guide to unpack, assemble, and power on your camera.
 
-*For previous camera models see Kit 2.1:* [*Pilot One setup*](https://avatour.com/quickstart-pilot-one/) *and Kits 3.0* [*Pilot Pano setup*](https://avatour.com/quickstart-labpano-pilot-pano/)*)*
+---
 
-- *Kit 2.1: Connect a USB cable from the battery to the USB-C port of the USB-C hub. Then, connect the camera directly to the hub.*
-- *Kits 3.0 / 3.1: Connect a USB cable from the battery to the camera.*
-- Kit 3.0 / Pilot Pano cam only: Installing the cooling module (optional accessory):
-  - *(1) Remove the Pilot Pano battery by opening the side panel and pulling the battery out*
-  - (2) Insert the cooling module where the battery was before
-  - *(3) Connect the Ulanzi external battery to the cooling module by USB-A to USB-C cable. This cable would have been packed with the cooling module.*
+### 5.2 Useful Tips
 
-### 5.2 Connectivity
+#### External Battery – Longer Live Meetings & Improved Thermals 
 
-<u>**Before you start:**</u> For live tours you need to be connected to the internet using (1) a local WiFi or (2) a Mobile Network. You should have at least 10 Mbps Uplink and Downlink bandwidth. This allows enough available bandwidth for the camera to Live Capture stream at our recommended 5 Mbps. You can still stream at lower bandwidths (1-2 Mbps), which works best when you are standing still (see also below e. Best Practices: During a Meeting). To test connectivity speed and quality you can use the following methods:
+- **If your kit includes a Ulanzi battery:** Attach it between the tripod base and the extendable stick, then connect the battery to the camera via USB-C.  
 
-Test at one location: Any speed checker you might already use (e.g. https://www.speedtest.net/)
+- **If your kit includes a Telesin battery stick:** Mount the camera directly onto the Telesin extendable battery stick and connect it via USB-C.  
 
-**Testing tools from Avatour (recommended):**
+Using the external battery:
+1. Extends total battery life from ~40 minutes (camera battery only) to ~3 hours.  
+2. Adds stability to the camera setup.  
+3. Helps prevent potential overheating.  
 
-1. Test at one location: Open https://avatour.live/test from any device in any browser (should take less than one minute) enter your email address and a short reason for the test - measure at different locations onsite. For evaluation of the results, see [How do I interpret the results of the Avatour Network Test?](https://avatour.com/support/how-do-i-interpret-the-results-of-the-avatour-network-test)
-2. Test while walking (better for checking the entire tour!): Network test with our Avatour Host app for smartphones (Android: available,  iOS: exp. Feb. 2024). When logged into the app, select a Workspace and choose “Run Connectivity Test”. Watch the connectivity graph while walking through the site, and confirm your network bandwidth meets our recommended 10 Mbps
-3. Test while walking (better for checking the entire tour!): Run a network test with your Avatour 360°camera. Login to the Avatour app from the camera’s home screen and go to the Menu (the three red lines in the top right corner) Settings → Network → Connection Test. Watch the connectivity graph while walking through the site, and confirm your network bandwidth meets our recommended 10 Mbps
+> We recommend always using the external battery from the start, especially for live meetings.
 
-**Local Wifi**: 
+#### Audio Considerations for Live Meetings and Recordings
 
-> **<u>It is highly recommended to connect your camera to a local WiFi network.</u>**
+- **Noisy environments:** Use the Shokz headphones included in your kit for clear audio capture.  
+  - **Power On/Off:** Hold the “+” button for 3 seconds (blue LED = on, red LED = off).  
+  - **Bluetooth Pairing Mode:** While the headset is off, hold the “+” button for 5 seconds (LED flashes blue/red).  
+  - **Volume:** Use the “+” and “-” buttons.  
 
-If your IT team requires our device MAC address to be whitelisted, you can find on the Pilot cameras the MAC address here: Settings app (camera home screen) --> About --> scroll down to WiFi Address
+- **Quieter environments / multiple participants near camera:** Use the NoxGear clip-on speaker. It’s not as high fidelity as conference speakers (e.g., Jabra Speak), but is easy to clip onto your shirt and captures nearby voices effectively.  
+  - **Power On/Off:** Hold the Play/Pause button for 2 seconds.  
+  - **Bluetooth Pairing Mode:** Automatically enters pairing mode when powered on (LED flashes blue/red; solid blue when paired).  
+  - **Volume:** Use the “+” and “-” buttons.  
 
-**Mobile Network:** For areas outside of local WiFi range, connect the camera to a mobile network
+- **Using your own device:** If you prefer an alternative (e.g., a conference speaker or personal headset), you can pair it via the camera: Settings → Bluetooth.  
 
-<u>Option A: Use the kit provided hotspot and SIM card</u>
+#### Connectivity, Connectivity, Connectivity
+**Before you start:** Ensure internet connection via:
+- **Local WiFi** (preferred)
+- **Mobile Network** (if outside WiFi range)
 
-**Kits 3.0 / 3.1**: Place the GlocalMe hotspot in your pocket, or keep it somewhere on your person.
+**Recommended bandwidth:** 10 Mbps uplink/downlink for full 360° streaming (~5 Mbps). Lower bandwidth (1–2 Mbps) only works when standing still.
 
-- *Troubleshooting Note*: If your GlocalMe hotspot is displaying the message “Data connection is not enabled”, you should check that the hotspot is configured to use the pre-installed SIM card rather than a Cloud SIM. To confirm this, swipe right to the third screen on the hotspot, choose "SIM Card Manager", and select "SIM Card".
-- *Troubleshooting Note*: Please also make sure that “5G network” is enabled in the SIM Card Manager
-- *Troubleshooting Note*: If you are still unable to connect to a carrier’s network, confirm that you have the correct APN selected for your region. Review the article [here](https://avatour.com/support/how-do-i-change-the-apn-on-my-glocalme-hotspot) to create/manage your hotspot’s APNs.
+##### Test Network Speed
+- **Single-location test:** Any speed checker you normally use (e.g., [Speedtest](https://www.speedtest.net)) to verify both upload  bandwidth.   
+- **Walking test across site:** From the camera: Settings → Network → Connection Test. Walk through the entire space to confirm coverage and bandwidth.
 
-***Kit 2.1**: Use the hotspot attached by magnet to the extendable stick. You can connect to the hotspot via WiFi or wired ethernet connection (hotspot to USB-C hub)*
+##### Local WiFi
+- Highly recommended for stable connections.  
+- If IT requires whitelisting, find MAC address: Settings → About → WiFi Address.
 
-It’s recommended to first use the SIM card that is preinstalled in your kit provided hotspot. This is a “global” SIM card working in over 200 countries usually automatically connecting to a locally available mobile network. We can implement Roaming Profiles with preferred mobile network providers per country. After testing further the connectivity and if the connection quality remains poor, we recommend sourcing your own local SIM card from the Mobile Network Operator with the strongest signal at your location(s).
+##### Mobile Network
+**Option A: Kit-provided hotspot & SIM**
+- Attach GlocalMe hotspot to Telesin battery stick (magnet).  
+- Ensures no interference and maintains connection if moving away from camera.  
+- Troubleshooting:
+  - Confirm pre-installed SIM (not Cloud SIM).  
+  - Enable 5G in SIM Card Manager.  
+  - Verify correct APN for your region ([APN setup guide](https://avatour.com/support/how-do-i-change-the-apn-on-my-glocalme-hotspot)).
 
-<u>Option B: Use your own equipment</u> - hotspot (smartphone or dedicated hotspot device) and SIM data card
+**Option B: Personal hotspot / SIM**
+- Use your own smartphone or dedicated hotspot.  
 
-**Important Notes**: 
+**Important Note:**  
+> Keep hotspot off while connected to WiFi; enable only when out of range. The camera's OS dynamically switches between WiFi networks based on signal strength and may inadvertently switch to the hotspot even when WiFi is available.
 
-- Keep the hotspot switched off while connected to your local WiFi network. Once you are out of range of this network, then connect the camera to your SIM data.
-- Carry the hotspot with you ideally in your shirt front pocket. Back pockets, e.g. trousers are less ideal because your body will block some of the wifi signal between the hotspot and the 360° camera.
-- Mobile Network Operators sometimes limit bandwidth for no obvious reason (“throttling”) to manage their overall network. This can have a negative impact on the Avatour experience. Get in touch with your Avatour CSM or our Support team ([support@avatour.live](mailto:support@avatour.live)) if you think that is happening.
-- If using the GlocalMe hotspot, you can find the WiFi name and password by swiping one screen to the left. The first screen that displays can be ignored.
+> Mobile networks may throttle bandwidth unexpectedly. Check with your carrier on data plan limits, or contact Avatour support if using our hotspot and SIM.
 
-**Low bandwidth situations**
+##### Low Bandwidth Situations
+- Pre-record location videos for later playback ([recording guide](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)).  
+- Share a smartphone camera stream to supplement low-bandwidth areas (0.1–0.3 Mbps upload).
 
-- Record a video of the location ahead of time - for details see [How do you record and upload 360 videos with the Avatour App?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app) This can then be presented during your meeting.
-- The operator or other team members onsite can choose to share their smartphone's camera to live stream the location. This will only require a network upload bandwidth of 0.1 - 0.3 Mbps.
-
-**No connectivity at all** - Recorded video only - see [How do you record and upload 360 videos with the Avatour App?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)
-
-### 5.3 Audio
-
-#### 360° Camera and Operator
-
-In principle, you can connect any bluetooth audio device including your PPE headsets if they support bluetooth.
-
-If you plan to host an Avatour meeting in an outdoor or noisy environment, we recommend connecting the **Shokz headphones** provided in your kit: 
-
-- **Power On/Off**: Hold the “+” button for 3 seconds. You will see a blue LED light when the headset is turned on and a red LED light when the headset is turned off
-- **Bluetooth Pairing Mode**: While the headset is turned off, hold the “+” button for 5 seconds. An LED light will flash blue and red when in pairing mode
-- **Volume Up/Down**: Use the “+” and “-” buttons to increase or decrease listening volume
-
-If in a quieter environment, you can choose to connect a bluetooth speaker, such as the clip on **NoxGear speaker**:
-
-- **Power On/Off**: Hold the Play/Pause button in the center of the device for 2 seconds
-- **Bluetooth Pairing Mode:** Once the device is turned on, it will enter pairing mode (blue and red flashing LEDs). Once paired, it will display a blue LED
-- **Volume Up/Down**: Use the “+” and “-” buttons to increase or decrease listening volume
-
-**Kits 3.0 / 3.1:** You can pair/connect any bluetooth device from the camera’s home screen’s Settings app. Go to Settings → Bluetooth.
-
-***Kit 2.1**: In order to pair/connect a bluetooth headset/speaker, you must first have a wired connection between the USB-C hub (with Jabra bluetooth dongle) and the camera. If using the Shokz headset or NoxGear speaker, these will connect as soon as they are turned on.*
-
-
+##### No Connectivity
+- Only pre-recorded video can be used ([recording guide](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)).
 
 #### Other Onsite Participants
 
@@ -528,7 +518,6 @@ Connect to the meeting using your smartphone’s / tablet’s / laptop’s brows
 
 - Make sure that you are muted when not actively speaking
 - Have your smartphone connected to a different network than the camera’s network, if possible.
-
 
 
 ### 5.4 Avatour Camera App
