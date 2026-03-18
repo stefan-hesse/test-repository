@@ -506,19 +506,34 @@ Using the external battery:
 ##### No Connectivity
 - Only pre-recorded video can be used ([recording guide](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)).
 
-#### Other Onsite Participants
+#### Other Onsite Participants – Best Practices
 
-Connect to the meeting using your smartphone’s / tablet’s / laptop’s browser, and use any wired or wireless headphones (preferably ones with noise canceling enabled). **Please be aware that each smartphone onsite will take away bandwidth from the 360° camera** and can have a negative impact on the Avatour meeting for all participants! Therefore **we recommend to join in**
+When multiple participants join a live Avatour meeting from the same location as the 360° camera, careful management of **audio and bandwidth** is crucial:  
 
-- **On-Site Mode** - Join the meeting in On-Site mode when you're physically present at the same location as the 360 camera. On-Site Mode is perfect for users who wish to utilize their phones primarily for detailed close-ups. On-Site Mode mutes the mic and speaker by default to eliminate audio feedback
+- Each smartphone, tablet, or laptop connected onsite consumes network bandwidth and can negatively impact the 360° camera feed.  
+- Multiple microphones and speakers in the same space can cause **audio feedback**, making the meeting experience unpleasant for all participants.
 
-  ***Screenshot Onsite Mode To Do !!!***
+#### Other Onsite Participants – Best Practices
 
-**Important Note**: 
+When multiple participants join a live Avatour meeting from the same location as the 360° camera, careful management of **audio and bandwidth** is crucial:  
 
-- Make sure that you are muted when not actively speaking
-- Have your smartphone connected to a different network than the camera’s network, if possible.
+- Each smartphone, tablet, or laptop connected onsite consumes network bandwidth and can negatively impact the 360° camera feed.  
+- Multiple microphones and speakers in the same space can cause **audio feedback**, making the meeting experience unpleasant for all participants.
 
+To address these challenges, follow these **best practices**:
+
+- **Use wired or wireless headphones:** Preferably with noise-canceling to prevent echo and feedback.  
+- **On-Site Mode:** Join the meeting in On-Site mode when physically present near the 360° camera.  
+  - This mode is optimized for onsite use:  
+    - Mutes the participant’s mic and speaker by default.  
+    - Does **not** send the participant’s camera feed.  
+    - Does **not** display the 360° camera feed in the participant’s browser.  
+    - Conserves network bandwidth, ensuring the 360° camera has maximum available upload for the live stream.  
+    - Useful when a user wants to share specific details; you **can share back your camera** for targeted views.  
+- **Mute when not actively speaking:** Prevents unwanted audio feedback and distractions.  
+- **Use a separate network if possible:** Have your smartphone connected to a different network than the camera’s network to reduce interference.  
+
+Following these guidelines ensures a smooth, high-quality live tour for both onsite and remote participants.
 
 ### 5.4 Avatour Camera App
 
