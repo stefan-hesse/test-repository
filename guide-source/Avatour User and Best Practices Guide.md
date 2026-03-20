@@ -13,7 +13,7 @@ If you are new to Avatour, the following resources provide a helpful introductio
 4. Website
    Have a look at the [Avatour Features](https://avatour.com/features) page along with the dedicated Use Cases and Industries sections to learn how Avatour can support your specific needs.
 
-## 2. Avatour User Types
+## 2. Avatour User Types  {#avatour-user-types}
 
 ### 2.1 Meeting Attendees (No Account required)
 Users can join the meeting without registering for an Avatour account.
@@ -37,7 +37,7 @@ Users access the meeting as follows:
 - Maximum of 10 Spectators per meeting.
 - Together with Participants, a meeting can host up to 30 attendees.
 
-## 2.2 Registered Users
+## 2.2 Registered Users {#registered-users}
 
 Registered Users have an Avatour account. Accounts are created in one of the following ways:
 
@@ -300,8 +300,8 @@ When reviewing an asset in a workspace, the toolbar is similar but optimized for
   - **Playback Speed** – Adjust speed (0.5×–2×)  
   - **Trim Video** – Trim beginning or end of the asset
 
- 
-## 4. For Host and Admin Users - Avatour Web Console {#for-registered-users}
+
+## 4. For Host and Admin Users - Avatour Web Console {#for-host-and-admin-users-avatour-web-console}
 
 When you log in to your Avatour User Account, you will access the **Web Console**.  
 
@@ -396,7 +396,7 @@ Provides insights into meetings, workspace usage, and ROI metrics.
 
 ![Avatour Web Console - Main Menu Item Analytics (3 of 3)](https://res.cloudinary.com/avatour/image/upload/v1772360312/avatour-screenshot-main-menu-analytics-3-of-3_hn2pmr.png) *Device License Usage & ROI* 
 
-## 5. Onsite - **How to Use the Avatour Turnkey Kit**{#for-camera-operators}
+## 5. Onsite - How to Use the Avatour Turnkey Kit {#onsite-how-to-use-the-avatour-turnkey-kit}
 
 ### 5.1 Getting Started
 [Quick Start Guide – Avatour Turnkey Kit 3.1 (Pilot PanoX V2 setup)](https://avatour.com/quickstart-panox-v2)
@@ -536,7 +536,7 @@ Here are (1) the Top Level, (2) Settings and (3) Network Settings menus.
 
 **Account** - For login with your Avatour host or admin account.
 
-## 6. Best Practice Advice
+## 6. Best Practice Advice {#best-practice-advice}
 
 ### 6.1 First (informal) Uses and Getting Familiar
 
