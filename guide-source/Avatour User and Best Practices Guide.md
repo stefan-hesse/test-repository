@@ -37,7 +37,7 @@ Users access the meeting as follows:
 - Maximum of 10 Spectators per meeting.
 - Together with Participants, a meeting can host up to 30 attendees.
 
-## 2.2 Registered Users {#registered-users}
+### 2.2 Registered Users
 
 Registered Users have an Avatour account. Accounts are created in one of the following ways:
 
@@ -56,9 +56,7 @@ Registered users and their group membership can be managed in multiple ways:
 **Recommended Best Practice (Enterprise Customers):**  
 For organizations expecting a large number of users who need access to Avatour, it is recommended to **integrate Single Sign-On (SSO)** and manage users and group memberships from the **IdP**. This approach streamlines account provisioning, group assignment, and license management, reducing administrative overhead and ensuring consistent access control.
 
----
-
-### 2.2.1 Guest Users
+#### 2.2.1 Guest Users
 
 - Added to the **Guest group**.  
 - Can **view Assets** within Workspaces where they have been added as **Viewer collaborators**.  
@@ -67,14 +65,14 @@ For organizations expecting a large number of users who need access to Avatour, 
 
 ---
 
-### 2.2.2 Licensed Users (Web Console Access)
+#### 2.2.2 Licensed Users (Web Console Access)
 
-#### Host Users (Group: Host)
+##### Host Users (Group: Host)
 
 - Can create/ manage Workspaces, invite collaborators to a workspace, **host live meetings**, upload **Quick Captures**.  
 - Has access to the **Host Dashboard** and **Operator App** on supported 360° cameras.  
 
-#### Admin Users (Group: Admin)
+##### Admin Users (Group: Admin)
 
 - Includes all Host capabilities plus full account administration.
 
@@ -99,7 +97,7 @@ For organizations expecting a large number of users who need access to Avatour, 
 
 ---
 
-### 2.2.3 Workspace Collaborator Permissions
+#### 2.2.3 Workspace Collaborator Permissions
 
 Workspace permissions define what a user can do **within a specific Workspace**. These are separate from platform-level group membership (Guest, Host, Admin).
 
@@ -122,9 +120,11 @@ Avatour allows users to collaborate in two primary ways:
 - **Visit a Workspace:**  
   You may also be invited as a **collaborator to a Workspace** to review assets **asynchronously** (on your own schedule).
 
-### 3.1 How to Join an Avatour meeting and Visit an Avatour Workspace {#how-to-join-an-avatour-meeting-and-visit-an-avatour-workspace}
-#### Any "Flat Screen" Device with a Web Browser {#any-flat-screen}
+### 3.1 How to Join an Avatour Meeting and Visit an Avatour Workspace {#how-to-join-an-avatour-meeting-and-visit-an-avatour-workspace}
+#### 3.1.1 Any "Flat Screen" Device with a Web Browser {#any-flat-screen}
 You can join an Avatour meeting from **any desktop or laptop computer, smartphone, or tablet** using a web browser.  
+
+##### Joining a Meeting
 
 > **Note:** Joining an Avatour meeting requires that you **grant microphone permissions**. Please accept any permission prompts from your browser.
 
@@ -146,7 +146,7 @@ You can join an Avatour meeting from **any desktop or laptop computer, smartphon
 
 > **Tip 3:** Do **not** use the Avatour iOS or Android apps to join meetings. These apps are only required when **streaming a live meeting from an Insta360 camera**, since those cameras cannot run the Avatour 360° software directly and require a smartphone to assist.
 
-### Visiting a Workspace Without Joining a Meeting
+##### Visiting a Workspace Without Joining a Meeting
 
 You can access a Workspace without joining a live meeting in the following ways:
 
@@ -164,7 +164,7 @@ You can access a Workspace without joining a live meeting in the following ways:
   https://avatour.live/login  
   and access the Workspace from your **list of Workspaces**.
 
-#### VR Headset {#vr-headset}
+#### 3.1.2 VR Headset {#vr-headset}
 You can join a meeting and visit a workspace from a range of compatible Meta and Pico headsets. To do this: 
 
 1. Install our Avatour app from your respective VR store app: [How to install Avatour VR app](https://avatour.com/support/which-vr-headsets-can-i-use-with-avatour)
@@ -179,7 +179,7 @@ Avatour allows collaboration in two main contexts:
 
 The **collaboration tools are mostly similar** between meetings and workspaces, with some differences due to the synchronous vs asynchronous context.
 
-### 3.2.1 Interface Layout
+#### 3.2.1 Interface Layout
 
 The Avatour interface is organized around three main areas:
 
@@ -191,7 +191,7 @@ Most interactions are initiated from the **bottom menu**.
 Clicking a menu option opens a **side panel** on the left or right side of the screen, while the **center canvas** remains the primary viewing area.
 
 ---
-### 3.2.2 Meeting View Example
+#### 3.2.2 Meeting View Example
 
 Here is an example of a view in an Avatour Meeting:
 
@@ -200,7 +200,7 @@ Here is an example of a view in an Avatour Meeting:
 
 ---
 
-### 3.2.3 Workspace View Example
+#### 3.2.3 Workspace View Example
 
 Here is an example of a Workspace view:
 
@@ -209,7 +209,7 @@ Here is an example of a Workspace view:
 
 ---
 
-### 3.2.4 Bottom Menu Overview
+#### 3.2.4 Bottom Menu Overview
 
 The bottom menu provides access to the main interface controls and panels:
 
@@ -242,7 +242,7 @@ The bottom menu provides access to the main interface controls and panels:
 
 ---
 
-### Present Menu
+##### Present Menu
 
 The **Present** option in the meeting bottom menu allows you to share content with all participants.
 
@@ -250,7 +250,7 @@ The **Present** option in the meeting bottom menu allows you to share content wi
 - **Desktop** – Share your desktop screen with all participants.  
 - **Asset** – Present an asset from the workspace. Selecting an asset opens the **Asset toolbar**, which provides playback controls and collaboration tools specific to the asset being presented.
 
-### Asset Toolbar (Meeting)
+##### Asset Toolbar (Meeting)
 
 When presenting an asset in a meeting, the **Asset Toolbar** appears above the canvas. Here are the tools and menu items available when <u>presenting an Asset in a Meeting</u> - explained from left to right.
 
@@ -286,7 +286,7 @@ When presenting an asset in a meeting, the **Asset Toolbar** appears above the c
 - **Share Link** – Share a link to a specific note or scene in the asset.  
 - **Closed Captions (CC)** – Display on-screen text transcription during video playback.
 
-### Asset Toolbar (Workspace)
+##### Asset Toolbar (Workspace)
 
 When reviewing an asset in a workspace, the toolbar is similar but optimized for individual use:
 
@@ -439,6 +439,7 @@ Using the external battery:
 
 #### Connectivity, Connectivity, Connectivity
 **Before you start:** Ensure internet connection via:
+
 - **Local WiFi** (preferred)
 - **Mobile Network** (if outside WiFi range)
 
@@ -505,7 +506,7 @@ To address these challenges, follow these **best practices**:
 
 Following these guidelines ensures a smooth, high-quality live tour for both onsite and remote participants.
 
-### 5.4 Avatour Camera App
+### 5.3 Avatour Camera App
 
 Here are (1) the Top Level, (2) Settings and (3) Network Settings menus.
 
