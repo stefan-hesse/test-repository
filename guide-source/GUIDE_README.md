@@ -236,21 +236,85 @@ Press **Cmd+P**, then set:
 
 ## How the Webflow embed works
 
-The guide is embedded on avatour.com as a single iframe pointing to GitHub Pages:
+Pages are hosted on GitHub Pages and embedded on avatour.com via a single iframe per page.
 
-```
-https://stefan-hesse.github.io/test-repository/dist/avatour-guide-embed.html
-```
+### GitHub Pages setup
 
-The Webflow page contains only:
+GitHub Pages must be enabled on the repository. To check or enable it:
+
+1. Go to **github.com/stefan-hesse/test-repository → Settings → Pages**
+2. Under **Source**, select **Deploy from a branch**
+3. Set branch to **main** and folder to **/ (root)**
+4. Click **Save**
+
+> **Note:** GitHub Pages requires a paid plan for private repositories. The repository is currently on **GitHub Pro** ($4/month). If the plan lapses or the repository visibility changes, Pages will return a 404 and the Webflow embeds will stop working.
+
+### Currently hosted pages
+
+| Page | GitHub Pages URL | Webflow page |
+|------|-----------------|--------------|
+| User & Best Practices Guide | `dist/avatour-guide-embed.html` | `/user-guide` |
+| Business Benefits | `dist/avatour-business-benefits.html` | `/business-benefits` |
+
+Base URL for all: `https://stefan-hesse.github.io/test-repository/`
+
+> **Note — IT/ES translations pending:** Italian and Spanish guide versions are planned but not yet active. They will be added as part of the production migration to Bitbucket + AWS S3, using the Anthropic API for automated translation.
+
+### Adding a new page
+
+To host any additional standalone HTML page:
+
+1. Place the `.html` file in the `dist/` folder of the repository
+2. Commit and push via GitHub Desktop
+3. GitHub Pages deploys it automatically within ~2 minutes
+4. In Webflow, add a Section (zero padding, no container), drop an HTML Embed inside, and paste:
+
 ```html
-<iframe src="https://stefan-hesse.github.io/test-repository/dist/avatour-guide-embed.html"
+<iframe src="https://stefan-hesse.github.io/test-repository/dist/[filename].html"
         width="100%"
-        style="border:none; min-height:100vh;">
+        style="border:none; min-height:[height]px;">
 </iframe>
 ```
 
-**You never need to touch Webflow when updating the guide.** Every push triggers a build and deploy automatically.
+Set `min-height` to match the page length — e.g. `100vh` for the guide, `3600px` for the Business Benefits page.
+
+### Webflow page structure for iframe embeds
+
+The iframe must sit directly inside the Section — not inside a container or padding wrapper:
+
+```
+Body
+└── page-wrapper
+    ├── TopBar
+    ├── Section  ← zero padding, no max-width
+    │   └── Code Embed  ← iframe goes here directly
+    └── Footer
+```
+
+**You never need to touch Webflow when updating content.** Every push triggers a build and deploy automatically. The iframe picks up the new version within ~2 minutes.
+
+---
+
+## Keeping the repository clean
+
+### .DS_Store files
+
+macOS automatically creates `.DS_Store` files in every folder. A `.gitignore` is already in place to prevent them being committed:
+
+```
+.DS_Store
+**/.DS_Store
+```
+
+If `.DS_Store` appears in the GitHub Desktop Changes panel, simply leave it **unchecked** before committing. If it was accidentally committed previously and keeps reappearing, run this once in Terminal from the repository folder:
+
+```bash
+git rm --cached .DS_Store
+```
+
+Then commit the removal ("Remove .DS_Store from tracking") and push — it will not reappear.
+
+> **Note:** If Terminal shows `xcrun: error: invalid active developer path`, run `xcode-select --install` first to install the macOS Command Line Tools, then retry.
 
 ---
 
@@ -264,6 +328,9 @@ The Webflow page contains only:
 | Screenshot not updating in Typora | Image cache | Cmd+Shift+R, or quit and reopen |
 | Build fails in GitHub Actions | Error in MD file | Check Actions log for the error line |
 | TOC link doesn't jump to section | Anchor mismatch | Check `{#anchor-id}` matches exactly |
+| Webflow page shows 404 | Page unpublished or missing in Webflow | Check Pages panel in Webflow Designer — republish or recreate the page |
+| Webflow iframe shows 404 | GitHub Pages disabled or plan lapsed | Go to repo Settings → Pages and re-enable; check GitHub Pro plan is active |
+| `.DS_Store` keeps appearing in GitHub Desktop | File was previously committed | Run `git rm --cached .DS_Store` in Terminal, then commit the removal |
 
 ---
 
