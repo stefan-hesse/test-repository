@@ -367,7 +367,7 @@ Exception: If the host has restricted the meeting to registered users — for ex
 <li>Maximum of 10 Spectators per meeting.</li>
 <li>Together with Participants, a meeting can host up to 30 attendees.</li>
 </ul>
-<h2 id="registered-users">2.2 Registered Users</h2>
+<h3 id="22-registered-users">2.2 Registered Users</h3>
 <p>Registered Users have an Avatour account. Accounts are created in one of the following ways:</p>
 <ul>
 <li><strong>Admin-invited:</strong> During onboarding, Avatour sets up a <strong>dedicated tenant</strong> for the organization and creates one or more <strong>Admin accounts</strong>. Admins can then <strong>invite users</strong> within the organization and assign them to <strong>groups</strong>, which define their platform role (Guest, Host, or Admin). Invited users receive a <strong>signup link</strong> to complete account setup and set a password.  </li>
@@ -383,8 +383,7 @@ Exception: If the host has restricted the meeting to registered users — for ex
 </ul>
 <p><strong>Recommended Best Practice (Enterprise Customers):</strong><br />
 For organizations expecting a large number of users who need access to Avatour, it is recommended to <strong>integrate Single Sign-On (SSO)</strong> and manage users and group memberships from the <strong>IdP</strong>. This approach streamlines account provisioning, group assignment, and license management, reducing administrative overhead and ensuring consistent access control.</p>
-<hr />
-<h3 id="221-guest-users">2.2.1 Guest Users</h3>
+<h4 id="221-guest-users">2.2.1 Guest Users</h4>
 <ul>
 <li>Added to the <strong>Guest group</strong>.  </li>
 <li>Can <strong>view Assets</strong> within Workspaces where they have been added as <strong>Viewer collaborators</strong>.  </li>
@@ -392,13 +391,13 @@ For organizations expecting a large number of users who need access to Avatour, 
 <li>SSO-provisioned Guest accounts <strong>authenticate via the IdP</strong>; no Avatour-managed password is required.</li>
 </ul>
 <hr />
-<h3 id="222-licensed-users-web-console-access">2.2.2 Licensed Users (Web Console Access)</h3>
-<h4 id="host-users-group-host">Host Users (Group: Host)</h4>
+<h4 id="222-licensed-users-web-console-access">2.2.2 Licensed Users (Web Console Access)</h4>
+<h5 id="host-users-group-host">Host Users (Group: Host)</h5>
 <ul>
 <li>Can create/ manage Workspaces, invite collaborators to a workspace, <strong>host live meetings</strong>, upload <strong>Quick Captures</strong>.  </li>
 <li>Has access to the <strong>Host Dashboard</strong> and <strong>Operator App</strong> on supported 360° cameras.  </li>
 </ul>
-<h4 id="admin-users-group-admin">Admin Users (Group: Admin)</h4>
+<h5 id="admin-users-group-admin">Admin Users (Group: Admin)</h5>
 <ul>
 <li>Includes all Host capabilities plus full account administration.</li>
 </ul>
@@ -417,7 +416,7 @@ For organizations expecting a large number of users who need access to Avatour, 
 - View all Assets uploaded by any user in the organization.<br />
 - Review platform usage across the organization.</p>
 <hr />
-<h3 id="223-workspace-collaborator-permissions">2.2.3 Workspace Collaborator Permissions</h3>
+<h4 id="223-workspace-collaborator-permissions">2.2.3 Workspace Collaborator Permissions</h4>
 <p>Workspace permissions define what a user can do <strong>within a specific Workspace</strong>. These are separate from platform-level group membership (Guest, Host, Admin).</p>
 <ul>
 <li>
@@ -446,9 +445,10 @@ For organizations expecting a large number of users who need access to Avatour, 
   You may also be invited as a <strong>collaborator to a Workspace</strong> to review assets <strong>asynchronously</strong> (on your own schedule).</p>
 </li>
 </ul>
-<h3 id="how-to-join-an-avatour-meeting-and-visit-an-avatour-workspace">3.1 How to Join an Avatour meeting and Visit an Avatour Workspace</h3>
-<h4 id="any-flat-screen">Any "Flat Screen" Device with a Web Browser</h4>
+<h3 id="how-to-join-an-avatour-meeting-and-visit-an-avatour-workspace">3.1 How to Join an Avatour Meeting and Visit an Avatour Workspace</h3>
+<h4 id="any-flat-screen">3.1.1 Any "Flat Screen" Device with a Web Browser</h4>
 <p>You can join an Avatour meeting from <strong>any desktop or laptop computer, smartphone, or tablet</strong> using a web browser.  </p>
+<h5 id="joining-a-meeting">Joining a Meeting</h5>
 <blockquote>
 <p><strong>Note:</strong> Joining an Avatour meeting requires that you <strong>grant microphone permissions</strong>. Please accept any permission prompts from your browser.</p>
 </blockquote>
@@ -477,7 +477,7 @@ For organizations expecting a large number of users who need access to Avatour, 
 The test can identify whether your <strong>corporate firewall or network</strong> is blocking access, and will provide information to guide discussions with your IT team.  </p>
 <p><strong>Tip 3:</strong> Do <strong>not</strong> use the Avatour iOS or Android apps to join meetings. These apps are only required when <strong>streaming a live meeting from an Insta360 camera</strong>, since those cameras cannot run the Avatour 360° software directly and require a smartphone to assist.</p>
 </blockquote>
-<h3 id="visiting-a-workspace-without-joining-a-meeting">Visiting a Workspace Without Joining a Meeting</h3>
+<h5 id="visiting-a-workspace-without-joining-a-meeting">Visiting a Workspace Without Joining a Meeting</h5>
 <p>You can access a Workspace without joining a live meeting in the following ways:</p>
 <ul>
 <li>
@@ -497,7 +497,7 @@ The test can identify whether your <strong>corporate firewall or network</strong
 <p>Alternatively, you can log in at<br />
   https://avatour.live/login<br />
   and access the Workspace from your <strong>list of Workspaces</strong>.</p>
-<h4 id="vr-headset">VR Headset</h4>
+<h4 id="vr-headset">3.1.2 VR Headset</h4>
 <p>You can join a meeting and visit a workspace from a range of compatible Meta and Pico headsets. To do this: </p>
 <ol>
 <li>Install our Avatour app from your respective VR store app: <a href="https://avatour.com/support/which-vr-headsets-can-i-use-with-avatour" target="_blank" rel="noopener">How to install Avatour VR app</a></li>
@@ -510,7 +510,7 @@ The test can identify whether your <strong>corporate firewall or network</strong
 <li><strong>Workspaces (asynchronous):</strong> Review and interact with assets on your own schedule, 24/7.</li>
 </ol>
 <p>The <strong>collaboration tools are mostly similar</strong> between meetings and workspaces, with some differences due to the synchronous vs asynchronous context.</p>
-<h3 id="321-interface-layout">3.2.1 Interface Layout</h3>
+<h4 id="321-interface-layout">3.2.1 Interface Layout</h4>
 <p>The Avatour interface is organized around three main areas:</p>
 <ul>
 <li><strong>Left panel</strong> – Workspace assets and supporting tools  </li>
@@ -520,17 +520,17 @@ The test can identify whether your <strong>corporate firewall or network</strong
 <p>Most interactions are initiated from the <strong>bottom menu</strong>.<br />
 Clicking a menu option opens a <strong>side panel</strong> on the left or right side of the screen, while the <strong>center canvas</strong> remains the primary viewing area.</p>
 <hr />
-<h3 id="322-meeting-view-example">3.2.2 Meeting View Example</h3>
+<h4 id="322-meeting-view-example">3.2.2 Meeting View Example</h4>
 <p>Here is an example of a view in an Avatour Meeting:</p>
 <p><img alt="Avatour Meeting UI with Assets Panel, blank Canvas and Participants Panel" src="https://res.cloudinary.com/avatour/image/upload/v1772362400/avatour-screenshot-meeting-assets-blank-participants_pugprq.png" /><br />
 <em>Avatour Meeting with Assets Panel (left), Canvas (center), and Participants Panel (right)</em></p>
 <hr />
-<h3 id="323-workspace-view-example">3.2.3 Workspace View Example</h3>
+<h4 id="323-workspace-view-example">3.2.3 Workspace View Example</h4>
 <p>Here is an example of a Workspace view:</p>
 <p><img alt="Avatour Workspace with Assets Panel, blank Canvas and Meetings Panel" src="https://res.cloudinary.com/avatour/image/upload/v1772198701/avatour-screenshot-workspace-assets-blank-meetings_qeumpl.png" /><br />
 <em>Avatour Workspace with Assets Panel (left), Canvas (center), and Meetings Panel (right)</em></p>
 <hr />
-<h3 id="324-bottom-menu-overview">3.2.4 Bottom Menu Overview</h3>
+<h4 id="324-bottom-menu-overview">3.2.4 Bottom Menu Overview</h4>
 <p>The bottom menu provides access to the main interface controls and panels:</p>
 <p><strong>Meeting Bottom Menu</strong>  </p>
 <p><img alt="Avatour Meeting Bottom Menu" src="https://res.cloudinary.com/avatour/image/upload/v1772300383/avatour-screenshot-meeting-bottom-menu_bflaor.png" /><br />
@@ -562,14 +562,14 @@ Clicking a menu option opens a <strong>side panel</strong> on the left or right 
 <p>Tip: Send the meeting link or add it to a calendar item to invite participants.</p>
 </blockquote>
 <hr />
-<h3 id="present-menu">Present Menu</h3>
+<h5 id="present-menu">Present Menu</h5>
 <p>The <strong>Present</strong> option in the meeting bottom menu allows you to share content with all participants.</p>
 <ul>
 <li><strong>Camera</strong> – Share your smartphone/tablet camera. This can also be used during a live 360° video meeting to overlay a secondary view for close-ups or specific details. </li>
 <li><strong>Desktop</strong> – Share your desktop screen with all participants.  </li>
 <li><strong>Asset</strong> – Present an asset from the workspace. Selecting an asset opens the <strong>Asset toolbar</strong>, which provides playback controls and collaboration tools specific to the asset being presented.</li>
 </ul>
-<h3 id="asset-toolbar-meeting">Asset Toolbar (Meeting)</h3>
+<h5 id="asset-toolbar-meeting">Asset Toolbar (Meeting)</h5>
 <p>When presenting an asset in a meeting, the <strong>Asset Toolbar</strong> appears above the canvas. Here are the tools and menu items available when <u>presenting an Asset in a Meeting</u> - explained from left to right.</p>
 <p><img alt="Avatour Menu while Presenting an Asset in a Meeting" src="https://res.cloudinary.com/avatour/image/upload/v1772303706/avatour-screenshot-present-asset-menu-meeting_oflsr5.png" /> <em>Avatour Menu when presenting an Asset in a Meeting</em></p>
 <ul>
@@ -597,7 +597,7 @@ Clicking a menu option opens a <strong>side panel</strong> on the left or right 
 <li><strong>Share Link</strong> – Share a link to a specific note or scene in the asset.  </li>
 <li><strong>Closed Captions (CC)</strong> – Display on-screen text transcription during video playback.</li>
 </ul>
-<h3 id="asset-toolbar-workspace">Asset Toolbar (Workspace)</h3>
+<h5 id="asset-toolbar-workspace">Asset Toolbar (Workspace)</h5>
 <p>When reviewing an asset in a workspace, the toolbar is similar but optimized for individual use:</p>
 <p><img alt="Avatour Menu while Presenting an Asset outside a meeting, e.g. when visiting a workspace" src="https://res.cloudinary.com/avatour/image/upload/v1772303705/avatour-screenshot-present-asset-menu-workspace_iri8gc.png" /> <em>Avatour Menu when presenting an Asset in a Workspace</em></p>
 <ul>
@@ -736,9 +736,11 @@ Clicking a menu option opens a <strong>side panel</strong> on the left or right 
 </li>
 </ul>
 <h4 id="connectivity-connectivity-connectivity">Connectivity, Connectivity, Connectivity</h4>
-<p><strong>Before you start:</strong> Ensure internet connection via:
-- <strong>Local WiFi</strong> (preferred)
-- <strong>Mobile Network</strong> (if outside WiFi range)</p>
+<p><strong>Before you start:</strong> Ensure internet connection via:</p>
+<ul>
+<li><strong>Local WiFi</strong> (preferred)</li>
+<li><strong>Mobile Network</strong> (if outside WiFi range)</li>
+</ul>
 <p><strong>Recommended bandwidth:</strong> 10 Mbps uplink/downlink for full 360° streaming (~5 Mbps). Lower bandwidth (1–2 Mbps) only works when standing still.</p>
 <h5 id="test-network-speed">Test Network Speed</h5>
 <ul>
@@ -804,7 +806,7 @@ Clicking a menu option opens a <strong>side panel</strong> on the left or right 
 <li><strong>Use a separate network if possible:</strong> Have your smartphone connected to a different network than the camera’s network to reduce interference.  </li>
 </ul>
 <p>Following these guidelines ensures a smooth, high-quality live tour for both onsite and remote participants.</p>
-<h3 id="54-avatour-camera-app">5.4 Avatour Camera App</h3>
+<h3 id="53-avatour-camera-app">5.3 Avatour Camera App</h3>
 <p>Here are (1) the Top Level, (2) Settings and (3) Network Settings menus.</p>
 <p><img alt="Avatour 360° Camera App - Three Menus" src="https://res.cloudinary.com/avatour/image/upload/v1772918698/avatour-screenshot-cam-app-3-menu-screens_nju8bt.png" /> <em>Avatour 360° Camera App - 3 Menus</em></p>
 <p><strong>Quick Capture</strong> - For offline 360° video recording. - For a detailed description see <a href="https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app" target="_blank" rel="noopener">How do you record and upload 360 videos with the Avatour App?</a>. We recommend using an external audio device (connected via bluetooth). N.B. You can also do standard 2D videos and pictures - simply change the mode between 360° and 2D in the bottom right corner once in the QC screen.</p>
@@ -926,28 +928,17 @@ Clicking a menu option opens a <strong>side panel</strong> on the left or right 
   <li><a href="#for-all-avatour-users">1. For All Avatour Users</a></li>
   <li><a href="#avatour-user-types">2. Avatour User Types</a></li>
   <li class="toc2"><a href="#21-meeting-attendees-no-account-required">2.1 Meeting Attendees (No Account required)</a></li>
-  <li><a href="#registered-users">2.2 Registered Users</a></li>
-  <li class="toc2"><a href="#221-guest-users">2.2.1 Guest Users</a></li>
-  <li class="toc2"><a href="#222-licensed-users-web-console-access">2.2.2 Licensed Users (Web Console Access)</a></li>
-  <li class="toc2"><a href="#223-workspace-collaborator-permissions">2.2.3 Workspace Collaborator Permissions</a></li>
+  <li class="toc2"><a href="#22-registered-users">2.2 Registered Users</a></li>
   <li><a href="#for-remote-meeting-participants-and-workspace-visitors">3. For Remote Meeting Participants and Workspace Visitors</a></li>
-  <li class="toc2"><a href="#how-to-join-an-avatour-meeting-and-visit-an-avatour-workspace">3.1 How to Join an Avatour meeting and Visit an Avatour Workspace</a></li>
-  <li class="toc2"><a href="#visiting-a-workspace-without-joining-a-meeting">Visiting a Workspace Without Joining a Meeting</a></li>
+  <li class="toc2"><a href="#how-to-join-an-avatour-meeting-and-visit-an-avatour-workspace">3.1 How to Join an Avatour Meeting and Visit an Avatour Workspace</a></li>
   <li class="toc2"><a href="#meeting-tools">3.2 Meeting and Workspace Collaboration Tools</a></li>
-  <li class="toc2"><a href="#321-interface-layout">3.2.1 Interface Layout</a></li>
-  <li class="toc2"><a href="#322-meeting-view-example">3.2.2 Meeting View Example</a></li>
-  <li class="toc2"><a href="#323-workspace-view-example">3.2.3 Workspace View Example</a></li>
-  <li class="toc2"><a href="#324-bottom-menu-overview">3.2.4 Bottom Menu Overview</a></li>
-  <li class="toc2"><a href="#present-menu">Present Menu</a></li>
-  <li class="toc2"><a href="#asset-toolbar-meeting">Asset Toolbar (Meeting)</a></li>
-  <li class="toc2"><a href="#asset-toolbar-workspace">Asset Toolbar (Workspace)</a></li>
   <li><a href="#for-host-and-admin-users-avatour-web-console">4. For Host and Admin Users - Avatour Web Console</a></li>
   <li class="toc2"><a href="#41-web-console-overview-main-menu">4.1 Web Console - Overview Main Menu</a></li>
   <li class="toc2"><a href="#42-web-console-details-by-menu-item-with-images">4.2 Web Console - Details by Menu Item (with images)</a></li>
   <li><a href="#onsite-how-to-use-the-avatour-turnkey-kit">5. Onsite - How to Use the Avatour Turnkey Kit</a></li>
   <li class="toc2"><a href="#51-getting-started">5.1 Getting Started</a></li>
   <li class="toc2"><a href="#52-useful-tips">5.2 Useful Tips</a></li>
-  <li class="toc2"><a href="#54-avatour-camera-app">5.4 Avatour Camera App</a></li>
+  <li class="toc2"><a href="#53-avatour-camera-app">5.3 Avatour Camera App</a></li>
   <li><a href="#best-practice-advice">6. Best Practice Advice</a></li>
   <li class="toc2"><a href="#61-first-informal-uses-and-getting-familiar">6.1 First (informal) Uses and Getting Familiar</a></li>
   <li class="toc2"><a href="#62-before-a-360-video-live-meeting">6.2 Before a 360° Video Live Meeting</a></li>
