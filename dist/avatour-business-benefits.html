@@ -1066,6 +1066,7 @@
       <button class="tab-btn" onclick="showTab('safety')">🦺 Safety Walks</button>
       <button class="tab-btn" onclick="showTab('gemba')">🔄 Gemba / CI Walks</button>
       <button class="tab-btn" onclick="showTab('training')">🎓 Remote Training</button>
+      <button class="tab-btn" onclick="showTab('progress')">🏗️ Project Progress</button>
     </div>
 
     <!-- Inspect -->
@@ -1258,10 +1259,65 @@
         </div>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- ─── ROI METRICS ────────────────────────────────────────────────── -->
+    <!-- Project Progress -->
+    <div class="tab-panel" id="tab-progress">
+      <div class="use-case-card">
+        <div>
+          <div class="uc-header">
+            <div class="uc-icon">🏗️</div>
+            <div class="uc-tag">Look Use Case · Projects</div>
+          </div>
+          <div class="uc-title">Project Progress Control</div>
+          <div class="uc-desc">Keep all project stakeholders aligned on construction or installation progress — without requiring repeated site visits. Whether it's a new facility being built, a production line being installed, or a major site modification, Avatour gives every decision-maker direct visual access to the current state of the project in 360°.</div>
+          <div class="stakeholder-block primary">
+            <div class="stakeholder-role">Client / Owner Team</div>
+            <span class="benefit-tag strategic">Better joint decisions with full visual context</span>
+            <span class="benefit-tag time">Faster sign-off — no waiting for next site visit</span>
+            <span class="benefit-tag financial">Reduced project delays from communication gaps</span>
+            <span class="benefit-tag financial">Travel savings across repeated milestone reviews</span>
+            <span class="benefit-tag soft">Fewer personnel on active construction sites</span>
+          </div>
+          <div class="stakeholder-block">
+            <div class="stakeholder-role">Contractor / Site Team</div>
+            <span class="benefit-tag strategic">Permanent visual record of each milestone</span>
+            <span class="benefit-tag soft">Reduced disruption from client visits</span>
+            <span class="benefit-tag strategic">Transparent progress builds client confidence</span>
+          </div>
+          <div class="stakeholder-block">
+            <div class="stakeholder-role">Engineering Consultants · Senior Management · Regulators</div>
+            <span class="benefit-tag time">Join any session remotely — no travel required</span>
+            <span class="benefit-tag strategic">Decisions made with the same visual context as on-site</span>
+          </div>
+        </div>
+        <div>
+          <div style="background: var(--off-white); border-radius: 12px; padding: 28px; border: 1px solid var(--light-grey); margin-bottom: 16px;">
+            <div style="font-size:12px; font-family: 'DM Mono', monospace; text-transform:uppercase; letter-spacing:0.1em; color: var(--mid-grey); margin-bottom:16px;">AI-Generated Punch Lists & Snag Reports</div>
+            <div style="font-size:14px; font-weight:300; color:#666; line-height:1.65; margin-bottom:16px;">Progress inspections generate findings — deviations, open items, snags. Avatour's AI transcribes these in real time and pre-fills a structured report, with each finding linked to the exact 360° video frame that documented it.</div>
+            <div style="display:flex; flex-direction:column; gap:8px;">
+              <div style="display:flex; align-items:center; gap:10px; font-size:13px; color:#444;">
+                <span style="color:var(--orange);">✓</span> Live transcription of identified issues
+              </div>
+              <div style="display:flex; align-items:center; gap:10px; font-size:13px; color:#444;">
+                <span style="color:var(--orange);">✓</span> Findings anchored to 360° video timestamps
+              </div>
+              <div style="display:flex; align-items:center; gap:10px; font-size:13px; color:#444;">
+                <span style="color:var(--orange);">✓</span> Structured punch list / snag report — PDF export
+              </div>
+              <div style="display:flex; align-items:center; gap:10px; font-size:13px; color:#444;">
+                <span style="color:var(--orange);">✓</span> Immutable visual evidence trail for sign-off disputes
+              </div>
+            </div>
+          </div>
+          <div style="background: #FFF8F5; border-radius: 12px; padding: 20px 24px; border: 1px solid #FFD4C2;">
+            <div style="font-size:13px; font-weight:600; color:var(--orange); margin-bottom:8px;">Also applicable: FAT & SAT</div>
+            <div style="font-size:13px; font-weight:300; color:#666; line-height:1.6;">Factory Acceptance Tests (FAT) and Site Acceptance Tests (SAT) follow the same pattern — a formal inspection of equipment or installation against a specification. Avatour enables the client's acceptance team to participate fully and remotely, with AI-assisted documentation of every finding against the test protocol.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> ────────────────────────────────────────────────── -->
 <section class="roi-section">
   <div class="section-inner">
     <div class="section-label">Quantifiable Value Dimensions</div>
