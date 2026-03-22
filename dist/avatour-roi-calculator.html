@@ -799,48 +799,54 @@ function showSlide(n, btn) {
 }
 
 // ───────────────────────────────────────────────
-// TRAVEL COST MODEL — matches original Avatour calculator
+// TRAVEL COST MODEL — aligned to original Avatour ROI calculator
 //
-// The original uses these approximate coefficients:
-//   Car:   $0.50/km (return trip), per-diem × nights
-//   Train: $0.20/km (return), per-diem × nights
-//   Cont.  flight: base econ cost = $450 + $0.10/km (return),
-//          business class multiplier applied to biz-class fraction
-//   Inter. flight: base econ = $900 + $0.08/km (return),
-//          business class multiplier 2.5× for biz fraction
-//   Productivity: total travel hours × hourly rate
-//   CO₂ (kg/km/person): car 0.21, train 0.04, cont 0.26, inter 0.20
+// Reverse-engineered from the live calculator at avatour.com/roi and
+// the methodology article at avatour.com/article/avatour-efficiency.
+//
+// COST: uniform rate $0.1524/km on ONE-WAY distance × 2 (round trip)
+//   Business class multiplier: cont ×2.0, inter ×2.5, applied to biz fraction only
+//   Overnight cost: user-supplied per-diem × user-supplied overnights per mode
+//   Source: CNET 2023 travel cost survey (~$0.245/mile converted to $/km)
+//
+// TIME: one-way distance ÷ mode speed (no airport overhead in calculator)
+//   Car: 80 km/h | Train: 100 km/h | All flights: 800 km/h
+//   (Article mentions 2.5h/flight overhead for in-platform efficiency estimates,
+//    but the standalone ROI calculator does not apply this.)
+//
+// CO₂: one-way distance × uniform air rate 0.1713 kg/km (all air modes)
+//   Car: 0.170 kg/km | Train: 0.041 kg/km | Air (all): 0.1713 kg/km
+//   Source: UK BEIS 2019 data via OurWorldInData (referenced in methodology article)
 // ───────────────────────────────────────────────
 
-const CO2_PER_KM = { car: 0.21, train: 0.04, cont: 0.26, inter: 0.20 };
+const COST_RATE  = 0.1524;  // $/km base (round-trip, economy)
+const CO2_PER_KM = { car: 0.170, train: 0.041, cont: 0.1713, inter: 0.1713 };
 
 function travelCostPerTrip(mode, km, nights) {
   const perdiem = v('p1_perdiem');
   const bizFrac = v('p1_bizclass') / 100;
   let cost = 0;
   if (mode === 'car') {
-    cost = km * 2 * 0.50;
+    cost = km * 2 * COST_RATE;                              // no biz class for car
   } else if (mode === 'train') {
-    cost = km * 2 * 0.20;
+    cost = km * 2 * COST_RATE;                              // no biz class for train
   } else if (mode === 'cont') {
-    const econ = 450 + km * 2 * 0.10;
-    const biz  = econ * 2.0;
-    cost = econ * (1 - bizFrac) + biz * bizFrac;
+    const econ = km * 2 * COST_RATE;
+    cost = econ * (1 - bizFrac) + econ * 2.0 * bizFrac;    // cont biz = 2×
   } else if (mode === 'inter') {
-    const econ = 900 + km * 2 * 0.08;
-    const biz  = econ * 2.5;
-    cost = econ * (1 - bizFrac) + biz * bizFrac;
+    const econ = km * 2 * COST_RATE;
+    cost = econ * (1 - bizFrac) + econ * 2.5 * bizFrac;    // inter biz = 2.5×
   }
   cost += nights * perdiem;
   return cost;
 }
 
 function travelHoursPerTrip(mode, km) {
-  // Car 80km/h, Train 100km/h + 30min buffer, Cont: 800km/h + 3h airports, Inter: 900km/h + 5h airports
-  if (mode === 'car')   return (km * 2) / 80;
-  if (mode === 'train') return (km * 2) / 100 + 0.5;
-  if (mode === 'cont')  return (km * 2) / 800 + 3;
-  if (mode === 'inter') return (km * 2) / 900 + 5;
+  // One-way distance ÷ speed (matches original calculator behaviour)
+  if (mode === 'car')   return km / 80;
+  if (mode === 'train') return km / 100;
+  if (mode === 'cont')  return km / 800;
+  if (mode === 'inter') return km / 800;
   return 0;
 }
 
@@ -860,7 +866,7 @@ function getWeightedAverages() {
     const w = m.pct / totalPct;
     avgCost  += w * travelCostPerTrip(m.id, m.km, m.nights);
     avgHours += w * travelHoursPerTrip(m.id, m.km);
-    avgCO2   += w * m.km * 2 * CO2_PER_KM[m.id];
+    avgCO2   += w * m.km * CO2_PER_KM[m.id];       // one-way distance (matches original)
   });
   return { avgCost, avgHours, avgCO2 };
 }
@@ -890,7 +896,7 @@ function calculate() {
     const trips = totalTripsPerYear * frac;
     p1_travel += trips * travelCostPerTrip(m.id, m.km, m.nights);
     p1_time   += trips * travelHoursPerTrip(m.id, m.km) * rate;
-    p1_co2_kg += trips * m.km * 2 * CO2_PER_KM[m.id];
+    p1_co2_kg += trips * m.km * CO2_PER_KM[m.id];       // one-way (matches original)
   });
   const p1_total = p1_travel + p1_time;
 
