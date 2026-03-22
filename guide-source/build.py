@@ -14,7 +14,7 @@ Requirements:
   pip install markdown pymdown-extensions python-frontmatter
 """
 
-import os, re
+import os, re, shutil
 import frontmatter
 import markdown
 from markdown.extensions.toc import TocExtension
@@ -612,9 +612,30 @@ if (headings.length) {
 </html>"""
 
 
+# ── STATIC FILE PASSTHROUGH ───────────────────────────────────────────────
+# HTML files listed here are copied from guide-source/ → dist/ on every build.
+# To add a new standalone page: place the .html file in guide-source/ and
+# add its filename to this list.
+STATIC_FILES = [
+    "avatour-business-benefits.html",
+    "avatour-roi-calculator.html",
+]
+
+def copy_static_files():
+    for filename in STATIC_FILES:
+        src  = os.path.join("guide-source", filename)
+        dest = os.path.join(DIST_DIR, filename)
+        if os.path.exists(src):
+            shutil.copy2(src, dest)
+            print(f"  ✓ Static      → {dest}")
+        else:
+            print(f"  ⚠ Not found   → {src}  (skipping)")
+
+
 # ── MAIN ──────────────────────────────────────────────────────────────────
 def main():
     os.makedirs(DIST_DIR, exist_ok=True)
+    copy_static_files()
 
     # Load source
     post = frontmatter.load(SOURCE_FILE)

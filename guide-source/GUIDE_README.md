@@ -9,19 +9,25 @@ This document covers everything you need to know to edit, build, and publish the
 ```
 test-repository/
   dist/
-    avatour-guide.html           ← Standalone HTML (share with customers)
-    avatour-guide-embed.html     ← Embedded on avatour.com via iframe
-    avatour-guide-print.html     ← Open in Chrome → Save as PDF
+    avatour-guide.html               ← Standalone HTML (share with customers)
+    avatour-guide-embed.html         ← Embedded on avatour.com via iframe
+    avatour-guide-print.html         ← Open in Chrome → Save as PDF
+    avatour-business-benefits.html   ← Copied from guide-source/ by build.py
+    avatour-roi-calculator.html      ← Copied from guide-source/ by build.py
   guide-source/
     Avatour User and Best Practices Guide.md  ← THE SOURCE FILE — edit this
-    GUIDE_README.md              ← This document
-    build.py                     ← Build script — do not edit unless needed
+    avatour-business-benefits.html   ← Static page source — edit here, not in dist/
+    avatour-roi-calculator.html      ← Static page source — edit here, not in dist/
+    GUIDE_README.md                  ← This document
+    build.py                         ← Build script — do not edit unless needed
   .github/
     workflows/
-      build-guide.yml            ← GitHub Actions workflow — do not edit
+      build-guide.yml                ← GitHub Actions workflow — do not edit
 ```
 
-> **Note:** You can ignore the local `dist/` folder entirely. The built HTML files are committed back to GitHub automatically by the Actions bot after every build. GitHub Desktop may show the `dist/` files as changed — just ignore this. Never commit changes to `dist/` manually. The only file you ever need to edit is `Avatour User and Best Practices Guide.md`.
+> **Note:** You can ignore the local `dist/` folder entirely. The built HTML files are committed back to GitHub automatically by the Actions bot after every build. GitHub Desktop may show the `dist/` files as changed — just ignore this. Never commit changes to `dist/` manually.
+>
+> **Static HTML pages** (`avatour-business-benefits.html`, `avatour-roi-calculator.html`) live in `guide-source/` and are automatically copied into `dist/` by `build.py` on every build. Always edit these files in `guide-source/` — never in `dist/`.
 
 ---
 
@@ -255,6 +261,7 @@ GitHub Pages must be enabled on the repository. To check or enable it:
 |------|-----------------|--------------|
 | User & Best Practices Guide | `dist/avatour-guide-embed.html` | `/user-guide` |
 | Business Benefits | `dist/avatour-business-benefits.html` | `/business-benefits` |
+| ROI Calculator | `dist/avatour-roi-calculator.html` | `/roi` (replaces existing) |
 
 Base URL for all: `https://stefan-hesse.github.io/test-repository/`
 
@@ -262,11 +269,18 @@ Base URL for all: `https://stefan-hesse.github.io/test-repository/`
 
 ### Adding a new page
 
-To host any additional standalone HTML page:
+To host any additional standalone HTML page via the build pipeline:
 
-1. Place the `.html` file in the `dist/` folder of the repository
-2. Commit and push via GitHub Desktop
-3. GitHub Pages deploys it automatically within ~2 minutes
+1. Place the `.html` file in the **`guide-source/`** folder (not `dist/`)
+2. Open `guide-source/build.py` and add the filename to the `STATIC_FILES` list near the bottom of the file:
+   ```python
+   STATIC_FILES = [
+       "avatour-business-benefits.html",
+       "avatour-roi-calculator.html",
+       "your-new-page.html",       # ← add here
+   ]
+   ```
+3. Commit and push via GitHub Desktop — the build copies the file into `dist/` and deploys it automatically
 4. In Webflow, add a Section (zero padding, no container), drop an HTML Embed inside, and paste:
 
 ```html
@@ -277,6 +291,8 @@ To host any additional standalone HTML page:
 ```
 
 Set `min-height` to match the page length — e.g. `100vh` for the guide, `3600px` for the Business Benefits page.
+
+> **Important:** Never place static HTML files directly in `dist/`. They will be overwritten the next time the build runs. Always put them in `guide-source/` and add them to `STATIC_FILES` in `build.py`.
 
 ### Webflow page structure for iframe embeds
 
@@ -330,6 +346,7 @@ Then commit the removal ("Remove .DS_Store from tracking") and push — it will 
 | TOC link doesn't jump to section | Anchor mismatch | Check `{#anchor-id}` matches exactly |
 | Webflow page shows 404 | Page unpublished or missing in Webflow | Check Pages panel in Webflow Designer — republish or recreate the page |
 | Webflow iframe shows 404 | GitHub Pages disabled or plan lapsed | Go to repo Settings → Pages and re-enable; check GitHub Pro plan is active |
+| Static page (business-benefits, roi-calculator) shows 404 | File placed in `dist/` directly and wiped by next build | Move file to `guide-source/` and add to `STATIC_FILES` in `build.py` |
 | `.DS_Store` keeps appearing in GitHub Desktop | File was previously committed | Run `git rm --cached .DS_Store` in Terminal, then commit the removal |
 
 ---
