@@ -308,40 +308,27 @@ body.print-mode .guide-article table { page-break-inside: avoid; }
 /* WEBFLOW EMBED OVERRIDES */
 .guide-header { display: none; }
 .guide-sidenav { display: none !important; }
-
-/* Two-column grid: article | TOC */
-.guide-layout {
-  padding-top: 0;
-  display: grid;
-  grid-template-columns: 1fr 200px;
-  grid-template-rows: auto;
-  align-items: start;
-  gap: 0 24px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
+.guide-layout { padding-top: 0; }
 .guide-main {
   margin-left: 0 !important;
-  padding-right: 0 !important;
-  grid-column: 1;
-  min-width: 0;
+  padding-right: 220px !important;
+  display: block;
 }
 .guide-article {
   width: 100%;
   max-width: 780px;
   padding-top: 24px;
 }
-
-/* TOC: sticky in grid layout — works because grid rows scroll with page */
+/* TOC positioned by JS */
 .guide-toc {
-  grid-column: 2;
-  position: sticky;
-  top: 20px;
-  max-height: calc(100vh - 40px);
+  position: fixed;
+  width: 190px;
+  max-height: 80vh;
   overflow-y: auto;
   padding: 0 0 0 8px;
-  width: 190px;
-  align-self: start;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
 }
 
 </style>
@@ -965,11 +952,11 @@ Clicking a menu option opens a <strong>side panel</strong> on the left or right 
   </div>
 </div>
 <script>
-// Post height to parent so Webflow iframe resizes to content
+// ── POST HEIGHT ────────────────────────────────────────────────────────
 function postHeight() {
   var h = document.body.scrollHeight;
   if (window.parent !== window) {
-    window.parent.postMessage({ iframeHeight: h }, '*');
+    window.parent.postMessage({ avatourHeight: h }, '*');
   }
 }
 window.addEventListener('load', function() {
@@ -978,25 +965,36 @@ window.addEventListener('load', function() {
   setTimeout(postHeight, 2000);
 });
 
-// Fix anchor links inside iframe — intercept clicks and scroll with offset
-// SCROLL_OFFSET: pixels to subtract from scroll position.
-// Accounts for the Webflow site header visible above the iframe.
-// Adjust this value if the header height changes.
-var SCROLL_OFFSET = 80;
-
+// ── ANCHOR LINKS ───────────────────────────────────────────────────────
+// The parent Webflow page controls scrolling — not the iframe.
+// On click we send the target's offset within the iframe to the parent,
+// which adds the iframe's own top offset and scrolls to the right place.
 document.querySelectorAll('.guide-toc a[href^="#"]').forEach(function(link) {
   link.addEventListener('click', function(e) {
     e.preventDefault();
     var id = this.getAttribute('href').slice(1);
     var target = document.getElementById(id);
-    if (target) {
-      var top = target.getBoundingClientRect().top + window.pageYOffset - SCROLL_OFFSET;
-      window.scrollTo({ top: top, behavior: 'smooth' });
-    }
+    if (!target) return;
+    var offsetInIframe = target.getBoundingClientRect().top + window.pageYOffset;
+    window.parent.postMessage({ avatourScrollTo: offsetInIframe }, '*');
   });
 });
 
-// Active TOC highlighting
+// ── TOC STICKY POSITION ────────────────────────────────────────────────
+// Parent sends back the iframe's current top offset in the viewport
+// whenever the page scrolls. We use this to keep the TOC pinned just
+// below the Webflow nav bar.
+var tocEl = document.querySelector('.guide-toc');
+window.addEventListener('message', function(e) {
+  if (!e.data || !tocEl) return;
+  if (typeof e.data.avatourIframeTop === 'number') {
+    var pad = 20;
+    var top = Math.max(pad, e.data.avatourIframeTop + pad);
+    tocEl.style.top = top + 'px';
+  }
+});
+
+// ── ACTIVE TOC HIGHLIGHTING ────────────────────────────────────────────
 var headings = document.querySelectorAll('.guide-article h2, .guide-article h3');
 var tocLinks = document.querySelectorAll('.guide-toc a');
 if (headings.length) {
