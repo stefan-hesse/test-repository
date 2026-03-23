@@ -14,7 +14,7 @@ Requirements:
   pip install markdown pymdown-extensions python-frontmatter
 """
 
-import os, re, shutil
+import os, re
 import frontmatter
 import markdown
 from markdown.extensions.toc import TocExtension
@@ -520,25 +520,28 @@ def build_embed_html(article_html, toc_html, meta):
     EMBED_EXTRA_CSS = """
 /* WEBFLOW EMBED OVERRIDES */
 .guide-header { display: none; }
-.guide-layout { padding-top: 0; display: flex; align-items: flex-start; }
+.guide-layout { padding-top: 0; display: flex; align-items: flex-start; gap: 0; }
 .guide-sidenav { display: none !important; }
 .guide-main {
   margin-left: 0 !important;
-  padding-right: 0 !important;
   flex: 1; min-width: 0;
-  display: flex; justify-content: flex-start; gap: 32px;
+  display: flex; justify-content: flex-start;
+  padding-right: 220px !important;
 }
 .guide-article { width: 100%; max-width: 780px; flex: 1; }
 
-/* TOC: JS-driven fixed position */
+/* TOC: sticky inside the iframe scroll container */
 .guide-toc {
-  position: fixed; top: 20px;
+  position: sticky;
+  top: 20px;
+  align-self: flex-start;
+  width: 190px;
+  flex-shrink: 0;
   max-height: calc(100vh - 40px);
-  overflow-y: auto; flex-shrink: 0;
-  width: 190px; padding: 0 0 0 8px;
-  right: 16px; z-index: 100;
+  overflow-y: auto;
+  padding: 0 0 0 8px;
+  margin-left: 20px;
 }
-.guide-main { padding-right: 220px !important; }
 """
 
     EMBED_JS = """
@@ -555,33 +558,33 @@ window.addEventListener('load', function() {
   setTimeout(postHeight, 2000);
 });
 
-// TOC positioning
-const guideContainer = document.querySelector('.guide-layout') || document.body;
-const tocEl = document.querySelector('.guide-toc');
-if (tocEl) {
-  function positionTOC() {
-    const rect = guideContainer.getBoundingClientRect();
-    tocEl.style.right = Math.max(16, window.innerWidth - rect.right + 16) + 'px';
-    tocEl.style.top = Math.max(20, rect.top + 20) + 'px';
-  }
-  positionTOC();
-  window.addEventListener('scroll', positionTOC, { passive: true });
-  window.addEventListener('resize', positionTOC, { passive: true });
-}
+// Fix anchor links inside iframe — intercept clicks and scroll smoothly
+document.querySelectorAll('.guide-toc a[href^="#"]').forEach(function(link) {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    var id = this.getAttribute('href').slice(1);
+    var target = document.getElementById(id);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
 
 // Active TOC highlighting
-const headings = document.querySelectorAll('.guide-article h2, .guide-article h3');
-const tocLinks = document.querySelectorAll('.guide-toc a');
+var headings = document.querySelectorAll('.guide-article h2, .guide-article h3');
+var tocLinks = document.querySelectorAll('.guide-toc a');
 if (headings.length) {
-  const obs = new IntersectionObserver(entries => {
-    entries.forEach(e => {
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
       if (e.isIntersecting) {
-        const id = e.target.id;
-        tocLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + id));
+        var id = e.target.id;
+        tocLinks.forEach(function(l) {
+          l.classList.toggle('active', l.getAttribute('href') === '#' + id);
+        });
       }
     });
   }, { rootMargin: '-10% 0px -80% 0px' });
-  headings.forEach(h => { if (h.id) obs.observe(h); });
+  headings.forEach(function(h) { if (h.id) obs.observe(h); });
 }
 """
 
@@ -612,71 +615,82 @@ if (headings.length) {
 </html>"""
 
 
-# ── STATIC FILE PASSTHROUGH ───────────────────────────────────────────────
-# HTML files listed here are copied from guide-source/ → dist/ on every build.
-# To add a new standalone page: place the .html file in guide-source/ and
-# add its filename to this list.
-STATIC_FILES = [
-    "avatour-business-benefits.html",
-    "avatour-roi-calculator.html",
+# ── MAIN ──────────────────────────────────────────────────────────────────
+# ── LANGUAGE CONFIG ──────────────────────────────────────────────────────
+# Add or remove languages here. 'suffix' is appended to output filenames.
+# Source file is optional — if missing the language is skipped silently.
+LANGUAGES = [
+    {
+        "code":    "en",
+        "suffix":  "",
+        "source":  "guide-source/Avatour User and Best Practices Guide.md",
+        "webflow": "https://avatour.com/user-guide",
+    },
+    {
+        "code":    "it",
+        "suffix":  "-it",
+        "source":  "guide-source/Avatour User and Best Practices Guide - IT.md",
+        "webflow": "https://avatour.com/user-guide-it",
+    },
+    {
+        "code":    "es",
+        "suffix":  "-es",
+        "source":  "guide-source/Avatour User and Best Practices Guide - ES.md",
+        "webflow": "https://avatour.com/user-guide-es",
+    },
 ]
 
-def copy_static_files():
-    for filename in STATIC_FILES:
-        src  = os.path.join("guide-source", filename)
-        dest = os.path.join(DIST_DIR, filename)
-        if os.path.exists(src):
-            shutil.copy2(src, dest)
-            print(f"  ✓ Static      → {dest}")
-        else:
-            print(f"  ⚠ Not found   → {src}  (skipping)")
 
+def build_outputs_for_lang(lang):
+    """Build all three outputs for one language. Skips if source missing."""
+    source = lang["source"]
+    suffix = lang["suffix"]
+    code   = lang["code"]
 
-# ── MAIN ──────────────────────────────────────────────────────────────────
-def main():
-    os.makedirs(DIST_DIR, exist_ok=True)
-    copy_static_files()
+    if not os.path.exists(source):
+        print(f"  [{code.upper()}] Skipping — source not found: {source}")
+        return
 
-    # Load source
-    post = frontmatter.load(SOURCE_FILE)
+    post = frontmatter.load(source)
     md_text = post.content
     meta = {
         'title':   post.get('title', 'Avatour User Guide'),
         'version': post.get('version', '2.0'),
         'updated': post.get('updated', '2026'),
+        'lang':    code,
     }
 
-    # Convert Markdown → HTML
+    print(f"  [{code.upper()}] Building from {source}")
+
     article_html = md_to_html(md_text)
-
-    # Open all external links in new tab
     article_html = open_links_in_new_tab(article_html)
-
-    # Build navigation
     toc_html     = build_toc_html(md_text)
     sidenav_html = build_sidenav_html(md_text)
 
-    # Output 1: Standalone HTML
-    standalone = build_full_html(article_html, toc_html, sidenav_html, meta)
-    out1 = os.path.join(DIST_DIR, "avatour-guide.html")
+    # Standalone
+    out1 = os.path.join(DIST_DIR, f"avatour-guide{suffix}.html")
     with open(out1, 'w', encoding='utf-8') as f:
-        f.write(standalone)
-    print(f"  ✓ Standalone  → {out1}")
+        f.write(build_full_html(article_html, toc_html, sidenav_html, meta))
+    print(f"    ✓ Standalone  → {out1}")
 
-    # Output 2: Embed HTML
-    embed = build_embed_html(article_html, toc_html, meta)
-    out2 = os.path.join(DIST_DIR, "avatour-guide-embed.html")
+    # Embed
+    out2 = os.path.join(DIST_DIR, f"avatour-guide-embed{suffix}.html")
     with open(out2, 'w', encoding='utf-8') as f:
-        f.write(embed)
-    print(f"  ✓ Embed       → {out2}")
+        f.write(build_embed_html(article_html, toc_html, meta))
+    print(f"    ✓ Embed       → {out2}")
 
-    # Output 3: Print/PDF HTML
-    print_html = build_full_html(article_html, toc_html, sidenav_html, meta, body_class="print-mode")
-    out3 = os.path.join(DIST_DIR, "avatour-guide-print.html")
+    # Print/PDF
+    out3 = os.path.join(DIST_DIR, f"avatour-guide-print{suffix}.html")
     with open(out3, 'w', encoding='utf-8') as f:
-        f.write(print_html)
-    print(f"  ✓ Print/PDF   → {out3}")
-    print(f"\n  To generate PDF: open {out3} in Chrome → Cmd+P → Save as PDF")
+        f.write(build_full_html(article_html, toc_html, sidenav_html, meta, body_class="print-mode"))
+    print(f"    ✓ Print/PDF   → {out3}")
+
+
+def main():
+    os.makedirs(DIST_DIR, exist_ok=True)
+    for lang in LANGUAGES:
+        build_outputs_for_lang(lang)
+    print(f"\n  PDF: open any avatour-guide-print*.html in Chrome → Cmd+P → Save as PDF")
 
 
 if __name__ == "__main__":
