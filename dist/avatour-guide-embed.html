@@ -307,27 +307,41 @@ body.print-mode .guide-article table { page-break-inside: avoid; }
 
 /* WEBFLOW EMBED OVERRIDES */
 .guide-header { display: none; }
-.guide-layout { padding-top: 0; display: flex; align-items: flex-start; gap: 0; }
 .guide-sidenav { display: none !important; }
+
+/* Two-column grid: article | TOC */
+.guide-layout {
+  padding-top: 0;
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  grid-template-rows: auto;
+  align-items: start;
+  gap: 0 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
 .guide-main {
   margin-left: 0 !important;
-  flex: 1; min-width: 0;
-  display: flex; justify-content: flex-start;
-  padding-right: 220px !important;
+  padding-right: 0 !important;
+  grid-column: 1;
+  min-width: 0;
 }
-.guide-article { width: 100%; max-width: 780px; flex: 1; }
+.guide-article {
+  width: 100%;
+  max-width: 780px;
+  padding-top: 24px;
+}
 
-/* TOC: sticky inside the iframe scroll container */
+/* TOC: sticky in grid layout — works because grid rows scroll with page */
 .guide-toc {
+  grid-column: 2;
   position: sticky;
   top: 20px;
-  align-self: flex-start;
-  width: 190px;
-  flex-shrink: 0;
   max-height: calc(100vh - 40px);
   overflow-y: auto;
   padding: 0 0 0 8px;
-  margin-left: 20px;
+  width: 190px;
+  align-self: start;
 }
 
 </style>
@@ -964,14 +978,20 @@ window.addEventListener('load', function() {
   setTimeout(postHeight, 2000);
 });
 
-// Fix anchor links inside iframe — intercept clicks and scroll smoothly
+// Fix anchor links inside iframe — intercept clicks and scroll with offset
+// SCROLL_OFFSET: pixels to subtract from scroll position.
+// Accounts for the Webflow site header visible above the iframe.
+// Adjust this value if the header height changes.
+var SCROLL_OFFSET = 80;
+
 document.querySelectorAll('.guide-toc a[href^="#"]').forEach(function(link) {
   link.addEventListener('click', function(e) {
     e.preventDefault();
     var id = this.getAttribute('href').slice(1);
     var target = document.getElementById(id);
     if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      var top = target.getBoundingClientRect().top + window.pageYOffset - SCROLL_OFFSET;
+      window.scrollTo({ top: top, behavior: 'smooth' });
     }
   });
 });
