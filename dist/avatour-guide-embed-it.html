@@ -308,28 +308,37 @@ body.print-mode .guide-article table { page-break-inside: avoid; }
 /* WEBFLOW EMBED OVERRIDES */
 .guide-header { display: none; }
 .guide-sidenav { display: none !important; }
-.guide-layout { padding-top: 0; }
+
+/* Full-height layout — iframe is now 100vh with internal scroll */
+.guide-layout {
+  padding-top: 0;
+  display: flex;
+  align-items: flex-start;
+  min-height: 100vh;
+}
 .guide-main {
   margin-left: 0 !important;
   padding-right: 220px !important;
-  display: block;
+  flex: 1;
+  min-width: 0;
 }
 .guide-article {
   width: 100%;
   max-width: 780px;
   padding-top: 24px;
 }
-/* TOC: fixed at top of viewport — WEBFLOW_HEADER_HEIGHT must match
-   the actual combined height of Webflow nav bars on avatour.com */
+
+/* TOC: sticky within the iframe's own scroll container */
 .guide-toc {
-  position: fixed;
+  position: sticky;
+  top: 20px;
+  align-self: flex-start;
   width: 190px;
-  max-height: calc(100vh - 120px);
+  max-height: calc(100vh - 40px);
   overflow-y: auto;
   padding: 0 0 0 8px;
-  top: 120px;
-  right: 20px;
-  z-index: 100;
+  flex-shrink: 0;
+  margin-left: 20px;
 }
 
 </style>
@@ -961,17 +970,15 @@ window.addEventListener('load', function() {
 });
 
 // ── ANCHOR LINKS ───────────────────────────────────────────────────────
-// The parent Webflow page controls scrolling. We send the target's offset
-// within the iframe; the Webflow head script adds the iframe top offset
-// and scrolls the parent page.
+// iframe now has fixed height (100vh) and scrolls internally —
+// scrollIntoView works correctly within the iframe's own scroll container.
 document.querySelectorAll('.guide-toc a[href^="#"]').forEach(function(link) {
   link.addEventListener('click', function(e) {
     e.preventDefault();
     var id = this.getAttribute('href').slice(1);
     var target = document.getElementById(id);
     if (!target) return;
-    var offsetInIframe = target.getBoundingClientRect().top + window.pageYOffset;
-    window.parent.postMessage({ avatourScrollTo: offsetInIframe }, '*');
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 });
 
