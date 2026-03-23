@@ -522,36 +522,47 @@ def build_embed_html(article_html, toc_html, meta):
 .guide-header { display: none; }
 .guide-sidenav { display: none !important; }
 
-/* Full-height layout — iframe is now 100vh with internal scroll */
+/* Outer layout — single column, full height */
 .guide-layout {
   padding-top: 0;
-  display: flex;
-  align-items: flex-start;
   min-height: 100vh;
 }
+
+/* guide-main becomes the flex row: article + TOC side by side */
 .guide-main {
+  display: flex !important;
+  align-items: flex-start;
   margin-left: 0 !important;
-  padding-right: 220px !important;
-  flex: 1;
-  min-width: 0;
+  padding-right: 0 !important;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 .guide-article {
-  width: 100%;
+  flex: 1;
+  min-width: 0;
   max-width: 780px;
   padding-top: 24px;
 }
 
-/* TOC: sticky within the iframe's own scroll container */
+/* Offset for anchor links so headings don't land at the very top */
+.guide-article h2,
+.guide-article h3,
+.guide-article h4 {
+  scroll-margin-top: 24px;
+}
+
+/* TOC: sticky — works because guide-main is a flex row and page scrolls */
 .guide-toc {
   position: sticky;
   top: 20px;
-  align-self: flex-start;
+  flex-shrink: 0;
   width: 190px;
   max-height: calc(100vh - 40px);
   overflow-y: auto;
   padding: 0 0 0 8px;
-  flex-shrink: 0;
-  margin-left: 20px;
+  margin-left: 24px;
+  align-self: flex-start;
 }
 """
 
