@@ -531,7 +531,7 @@ def build_embed_html(article_html, toc_html, sidenav_html, meta):
   height: 100vh !important;
   max-height: 100vh !important;
   overflow-y: scroll !important;
-  padding-bottom: 80px !important;
+  padding-bottom: 120px !important;
 }
 
 /* Main: margin accounts for the sidenav width */
