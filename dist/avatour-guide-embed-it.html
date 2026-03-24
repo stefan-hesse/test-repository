@@ -307,50 +307,34 @@ body.print-mode .guide-article table { page-break-inside: avoid; }
 
 /* ── WEBFLOW EMBED OVERRIDES ─────────────────────────────────────────── */
 
-/* Hide the guide header */
+/* Hide header and TOC — embed has sidenav only */
 .guide-header { display: none !important; }
+.guide-toc    { display: none !important; }
 
 /* Remove padding for the hidden header */
 .guide-layout { padding-top: 0 !important; }
 
-/* Sidenav: sticky from top, always visible */
+/* Sidenav: sticky from top of iframe viewport, always visible */
 .guide-sidenav {
   display: block !important;
   top: 0 !important;
   height: 100vh !important;
 }
 
-/* Main: flex row so article and TOC sit side by side */
+/* Main: correct left margin for sidenav, no right padding for TOC */
 .guide-main {
-  display: flex !important;
-  align-items: flex-start !important;
   margin-left: var(--sidebar-w) !important;
-  padding-right: 0 !important;
+  padding-right: 40px !important;
+  justify-content: flex-start !important;
 }
 
-/* Article: fills available space */
+/* Article: full width up to comfortable reading width */
 .guide-article {
-  flex: 1 !important;
-  min-width: 0 !important;
+  max-width: 820px !important;
+  width: 100% !important;
 }
 
-/* TOC: sticky flex child, always visible */
-.guide-toc {
-  display: block !important;
-  position: sticky !important;
-  top: 0 !important;
-  flex-shrink: 0 !important;
-  align-self: flex-start !important;
-  width: var(--toc-w) !important;
-  max-height: 100vh !important;
-  right: auto !important;
-  left: auto !important;
-}
-
-/* Override responsive rules that would hide sidenav/TOC */
-@media (max-width: 1100px) {
-  .guide-toc { display: block !important; }
-}
+/* Always show sidenav regardless of viewport width */
 @media (max-width: 780px) {
   .guide-sidenav { display: block !important; }
   .guide-main { margin-left: var(--sidebar-w) !important; }
@@ -979,29 +963,6 @@ Cliccando su un'opzione del menu si apre un <strong>pannello laterale</strong> s
 </li>
 </ul>
     </article>
-    <aside class="guide-toc">
-      <div class="toc-label">On this page</div>
-<ul>
-  <li><a href="#for-all-avatour-users">1. Per Tutti gli Utenti Avatour</a></li>
-  <li><a href="#avatour-user-types">2. Tipi di Utenti Avatour</a></li>
-  <li class="toc2"><a href="#21-partecipanti-alla-riunione-nessun-account-richiesto">2.1 Partecipanti alla Riunione (Nessun Account Richiesto)</a></li>
-  <li class="toc2"><a href="#22-utenti-registrati">2.2 Utenti Registrati</a></li>
-  <li><a href="#for-remote-meeting-participants-and-workspace-visitors">3. Per i Partecipanti alle Riunioni Remote e i Visitatori del Workspace</a></li>
-  <li class="toc2"><a href="#how-to-join-an-avatour-meeting-and-visit-an-avatour-workspace">3.1 Come Partecipare a una Riunione Avatour e Visitare un Workspace Avatour</a></li>
-  <li class="toc2"><a href="#meeting-tools">3.2 Strumenti di Collaborazione per Riunioni e Workspace</a></li>
-  <li><a href="#for-host-and-admin-users-avatour-web-console">4. Per Utenti Host e Admin - Web Console Avatour</a></li>
-  <li class="toc2"><a href="#41-web-console-panoramica-del-menu-principale">4.1 Web Console - Panoramica del Menu Principale</a></li>
-  <li class="toc2"><a href="#42-web-console-dettagli-per-voce-di-menu-con-immagini">4.2 Web Console - Dettagli per Voce di Menu (con immagini)</a></li>
-  <li><a href="#onsite-how-to-use-the-avatour-turnkey-kit">5. In Loco - Come Utilizzare il Kit Turnkey Avatour</a></li>
-  <li class="toc2"><a href="#51-per-iniziare">5.1 Per Iniziare</a></li>
-  <li class="toc2"><a href="#52-consigli-utili">5.2 Consigli Utili</a></li>
-  <li class="toc2"><a href="#53-app-telecamera-avatour">5.3 App Telecamera Avatour</a></li>
-  <li><a href="#best-practice-advice">6. Consigli di Buone Pratiche</a></li>
-  <li class="toc2"><a href="#61-primi-usi-informali-e-familiarizzazione">6.1 Primi Usi (Informali) e Familiarizzazione</a></li>
-  <li class="toc2"><a href="#62-prima-di-una-riunione-live-con-video-360">6.2 Prima di una Riunione Live con Video 360°</a></li>
-  <li class="toc2"><a href="#63-durante-loperazione-della-telecamera-in-loco-per-una-riunione-live-con-video-360">6.3 Durante l'Operazione della Telecamera in Loco per una Riunione Live con Video 360°</a></li>
-</ul>
-    </aside>
   </div>
 </div>
 <script>
