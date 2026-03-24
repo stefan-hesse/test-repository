@@ -313,7 +313,7 @@ When you log in to your Avatour User Account, you will access the **Web Console*
 
 On the left-hand side, you will see the following menu items:
 
-![Avatour Web Console - Main Menu](https://res.cloudinary.com/avatour/image/upload/v1772366766/avatour-screenshot-main-menu_qwpthq.png) *Avatour Web Console - Main Menu*
+![Avatour Web Console - Main Menu](https://res.cloudinary.com/avatour/image/upload//v1774364052/avatour-screenshot-main-menu_qwpthq.png) *Avatour Web Console - Main Menu*
 
 - **Workspaces** – Organize your content efficiently. Each workspace contains **Assets**, **Collaborators**, **Meetings**, and **Settings**.  
 - **Assets** – Access and manage all your assets (videos, images, PDFs). Admins can view all account assets, and shared assets are visible to all users.  
