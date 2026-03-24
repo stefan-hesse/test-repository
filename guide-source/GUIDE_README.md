@@ -37,7 +37,7 @@ test-repository/
 
 | Tool | Purpose |
 |------|---------|
-| **Typora** (Mac app) | Writing and editing the guide source files |
+| **MacDown** (Mac app) | Writing and editing the guide source files |
 | **GitHub Desktop** (Mac app) | Committing and pushing changes to GitHub |
 | **GitHub** (github.com) | Stores the files, runs the automated build |
 | **GitHub Actions** | Builds all nine HTML outputs automatically on every push |
@@ -48,7 +48,7 @@ test-repository/
 
 ## The editing workflow (every time)
 
-1. **Edit** the relevant Markdown source file in Typora — saves automatically
+1. **Edit** the relevant Markdown source file in MacDown and save
 2. **Open GitHub Desktop** — your changes appear highlighted in green/red
 3. **Type a short summary** in the Summary field (e.g. `Update onsite operator section`)
 4. **Click Commit to main**
@@ -63,7 +63,7 @@ test-repository/
 
 **The Webflow pages update automatically** — no action needed in Webflow after the build completes.
 
-Total time from saving in Typora to the website updating: about 2 minutes.
+Total time from saving in MacDown to the website updating: about 2 minutes.
 
 ---
 
@@ -109,6 +109,40 @@ Each language has a dedicated Webflow page. The page contains two HTML embeds:
 For Italian use `avatour-guide-embed-it.html`, for Spanish use `avatour-guide-embed-es.html`.
 
 **You never need to touch Webflow when updating the guide content.** Every push triggers a build and deploy automatically.
+
+---
+
+## Headings and anchors
+
+### How deep to go with headings
+
+The guide uses h1 through h4 as standard, with h5 acceptable for deeply nested technical specs (such as camera settings in section 5.3). The general rule:
+
+| Level | Use for | Example |
+|-------|---------|---------|
+| `#` h1 | Page title only — once per file | `# Avatour User and Best Practices Guide` |
+| `##` h2 | Main sections | `## 2. Avatour User Types` |
+| `###` h3 | Subsections | `### 2.1 Meeting Attendees` |
+| `####` h4 | Sub-subsections | `#### 2.1.1 Participant` |
+| `#####` h5 | Deeply nested technical specs only | Camera settings sub-items in 5.3 |
+
+**Avoid going deeper than h4 outside of section 5.3.** If you find yourself needing h5 elsewhere, consider restructuring the content instead — the sidebar only shows h2 and h3, so anything deeper is navigation-invisible anyway.
+
+### What anchors are for
+
+Anchors like `{#for-all-avatour-users}` on headings serve two purposes:
+
+1. **Stable sidebar links** — without an anchor, the build script auto-generates one from the heading text. If you rephrase the heading, the auto-generated anchor changes and any existing links to it break. An explicit anchor stays stable regardless of how you rephrase the heading.
+2. **Clean deep-link URLs** — lets you share a direct link like `avatour.com/user-guide#for-all-avatour-users` that reliably jumps to the right section.
+
+**Anchors are only needed on h2 and h3 headings** — specifically those you want to link to externally or that appear in the sidebar. H4 and deeper do not need anchors.
+
+Rules for anchor IDs: lowercase only, hyphens instead of spaces, no special characters, unique within the file.
+
+```markdown
+## Web Console Overview {#web-console-overview}
+### 4.1 Getting Started {#getting-started}
+```
 
 ---
 
@@ -159,8 +193,8 @@ You can join from any desktop, laptop, or smartphone.
     You can join from any desktop, laptop, or smartphone.
 ```
 
-**Fix in Typora:** Select the affected lines → press **Shift+Tab** until back at the left margin.
-**How to spot it:** Any unexpected grey monospace box in Typora = something is indented.
+**Fix in MacDown:** Select the affected lines and remove the leading spaces or tabs manually.
+**How to spot it:** Any unexpected grey monospace box in MacDown's preview = something is indented.
 
 ### 3. Blockquotes must start at the left margin
 
@@ -250,7 +284,7 @@ If you use the regular Upload button, Cloudinary appends a random suffix (e.g. `
 4. Upload your new screenshot
 5. Cloudinary keeps the exact same URL — the guide updates automatically
 
-**Refresh Typora after replacing:** Press **Cmd+Shift+R** — if that doesn't work, quit Typora and reopen the file.
+**Refresh MacDown after replacing:** Press **Cmd+R** to reload — if that doesn't work, close and reopen the file.
 
 ---
 
@@ -292,7 +326,7 @@ Press **Cmd+P**, then set:
 
 | Problem | Likely cause | Fix |
 |---------|-------------|-----|
-| Grey monospace code block (unintended) | Text or `>` is indented | Select in Typora → Shift+Tab |
+| Grey monospace code block (unintended) | Text or `>` is indented | Select in MacDown and remove leading spaces/tabs |
 | Anchor ID showing as text in heading | Missing space after `##` | Add space: `## Heading` |
 | Blockquote showing as code | `>` is indented | Move `>` to the left margin |
 | Screenshot not updating in Typora | Image cache | Cmd+Shift+R, or quit and reopen |
