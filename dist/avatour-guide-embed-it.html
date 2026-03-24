@@ -32,7 +32,7 @@ body {
 
 /* HEADER */
 .guide-header {
-  position: fixed; top: 0; left: 0; right: 0;
+  position: sticky; top: 0; left: 0; right: 0;
   height: var(--header-h);
   background: var(--blue);
   display: flex; align-items: center;
@@ -66,7 +66,7 @@ body {
 /* LEFT NAV */
 .guide-sidenav {
   width: var(--sidebar-w); flex-shrink: 0;
-  position: fixed; top: var(--header-h); left: 0; bottom: 0;
+  position: sticky; top: var(--header-h); left: 0; bottom: 0;
   background: #fafbfc; border-right: 1px solid var(--border);
   overflow-y: auto; padding: 20px 0 40px;
 }
@@ -210,7 +210,7 @@ body {
 /* RIGHT TOC */
 .guide-toc {
   width: var(--toc-w); flex-shrink: 0;
-  position: fixed; top: calc(var(--header-h) + 44px); right: 0;
+  position: sticky; top: calc(var(--header-h) + 44px); right: 0;
   padding: 0 20px;
   max-height: calc(100vh - var(--header-h) - 44px);
   overflow-y: auto;
@@ -307,13 +307,13 @@ body.print-mode .guide-article table { page-break-inside: avoid; }
 
 /* ── WEBFLOW EMBED OVERRIDES ─────────────────────────────────────────── */
 
-/* Hide the guide header only */
+/* Hide the guide header */
 .guide-header { display: none !important; }
 
-/* Reset layout — no padding for the hidden header */
+/* Remove padding that was for the now-hidden fixed header */
 .guide-layout { padding-top: 0 !important; }
 
-/* Sidenav: sticky from top of iframe viewport */
+/* Sidenav: switch from fixed to sticky, start from top of iframe */
 .guide-sidenav {
   position: sticky !important;
   top: 0 !important;
@@ -321,13 +321,13 @@ body.print-mode .guide-article table { page-break-inside: avoid; }
   overflow-y: auto !important;
 }
 
-/* Main content: margin matches sidenav width, padding matches TOC width */
+/* Main content area: keep margins for sidenav and TOC widths */
 .guide-main {
   margin-left: var(--sidebar-w) !important;
   padding-right: var(--toc-w) !important;
 }
 
-/* TOC: sticky from top of iframe viewport */
+/* TOC: switch from fixed to sticky, start from top of iframe */
 .guide-toc {
   position: sticky !important;
   top: 0 !important;
@@ -336,7 +336,7 @@ body.print-mode .guide-article table { page-break-inside: avoid; }
   overflow-y: auto !important;
 }
 
-/* Scroll offset so headings land with breathing room */
+/* Heading scroll offset */
 .guide-article h2,
 .guide-article h3,
 .guide-article h4 {
