@@ -302,6 +302,21 @@ Press **Cmd+P**, then set:
 
 ---
 
+## Updating the Italian and Spanish translations
+
+When you update the English source file, you do not need to re-translate the entire document. Instead:
+
+1. Upload the **updated English MD file** here in Claude
+2. Upload the **current Italian MD file** (`Avatour User and Best Practices Guide - IT.md`)
+3. Upload the **current Spanish MD file** (`Avatour User and Best Practices Guide - ES.md`)
+4. Say: *"Please update the Italian and Spanish translations to match the updated English version"*
+
+Claude will compare the English versions, identify exactly what changed, and apply only those changes to the IT and ES files — leaving everything else untouched. You only need to review the changed sections rather than the whole document.
+
+> **Note:** If you don't have the current IT/ES files to hand, Claude can re-translate the full document from scratch — just upload the updated English file and ask for a full translation.
+
+---
+
 ## Production migration — pending (Prasad)
 
 The current setup on Stefan's personal GitHub account (`test-repository`) is a test environment. When ready to move to production:
