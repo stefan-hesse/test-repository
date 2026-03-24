@@ -526,15 +526,22 @@ def build_embed_html(article_html, toc_html, sidenav_html, meta):
 /* Remove padding for the hidden header */
 .guide-layout { padding-top: 0 !important; }
 
-/* Sidenav: fix top offset and force visible regardless of viewport width */
+/* Sidenav: fix top offset, force visible at all widths */
 .guide-sidenav {
   display: block !important;
   top: 0 !important;
   height: 100vh !important;
 }
 
-/* TOC: fix top offset and force visible */
+/* Main: ensure correct margins so article doesn't overlap sidenav or TOC */
+.guide-main {
+  margin-left: var(--sidebar-w) !important;
+  padding-right: var(--toc-w) !important;
+}
+
+/* TOC: fix top offset, force visible at all widths */
 .guide-toc {
+  display: block !important;
   top: 0 !important;
   max-height: 100vh !important;
 }
