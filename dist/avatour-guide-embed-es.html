@@ -32,7 +32,7 @@ body {
 
 /* HEADER */
 .guide-header {
-  position: sticky; top: 0; left: 0; right: 0;
+  position: fixed; top: 0; left: 0; right: 0;
   height: var(--header-h);
   background: var(--blue);
   display: flex; align-items: center;
@@ -66,7 +66,7 @@ body {
 /* LEFT NAV */
 .guide-sidenav {
   width: var(--sidebar-w); flex-shrink: 0;
-  position: sticky; top: var(--header-h); left: 0; bottom: 0;
+  position: fixed; top: var(--header-h); left: 0; bottom: 0;
   background: #fafbfc; border-right: 1px solid var(--border);
   overflow-y: auto; padding: 20px 0 40px;
 }
@@ -210,7 +210,7 @@ body {
 /* RIGHT TOC */
 .guide-toc {
   width: var(--toc-w); flex-shrink: 0;
-  position: sticky; top: calc(var(--header-h) + 44px); right: 0;
+  position: fixed; top: calc(var(--header-h) + 44px); right: 0;
   padding: 0 20px;
   max-height: calc(100vh - var(--header-h) - 44px);
   overflow-y: auto;
@@ -307,55 +307,19 @@ body.print-mode .guide-article table { page-break-inside: avoid; }
 
 /* ── WEBFLOW EMBED OVERRIDES ─────────────────────────────────────────── */
 
-/* Hide header and TOC */
-.guide-header { display: none !important; }
-.guide-toc    { display: none !important; }
+/* Hide the guide header and remove the space reserved for it */
+.guide-header   { display: none !important; }
+.guide-layout   { padding-top: 0 !important; }
+.guide-toc      { display: none !important; }
 
-/* Layout: no header padding, no horizontal overflow */
-.guide-layout {
-  padding-top: 0 !important;
-  overflow-x: hidden !important;
-}
+/* Sidenav: was fixed top:header-h, now fixed top:0 since header is gone */
+.guide-sidenav  { top: 0 !important; }
 
-/* Sidenav: sticky from top, always visible */
-.guide-sidenav {
-  display: block !important;
-  top: 0 !important;
-  height: 100vh !important;
-}
+/* Main: no left offset needed beyond the fixed sidenav width */
+.guide-main     { margin-left: var(--sidebar-w) !important; padding-right: 40px !important; }
 
-/* Main: sits to the right of the sidenav, fills remaining width */
-.guide-main {
-  margin-left: var(--sidebar-w) !important;
-  padding-right: 0 !important;
-  min-width: 0 !important;
-  width: calc(100% - var(--sidebar-w)) !important;
-  box-sizing: border-box !important;
-  justify-content: flex-start !important;
-}
-
-/* Article: constrained to its parent, with comfortable padding */
-.guide-article {
-  width: 100% !important;
-  max-width: 760px !important;
-  min-width: 0 !important;
-  box-sizing: border-box !important;
-  padding-right: 40px !important;
-}
-
-/* Always show sidenav regardless of viewport width */
-@media (max-width: 780px) {
-  .guide-sidenav { display: block !important; }
-  .guide-main {
-    margin-left: var(--sidebar-w) !important;
-    width: calc(100% - var(--sidebar-w)) !important;
-  }
-}
-
-/* Heading scroll offset */
-.guide-article h2,
-.guide-article h3,
-.guide-article h4 {
+/* Scroll offset for anchor links */
+.guide-article h2, .guide-article h3, .guide-article h4 {
   scroll-margin-top: 20px;
 }
 
