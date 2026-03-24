@@ -515,18 +515,18 @@ def build_full_html(article_html, toc_html, sidenav_html, meta, body_class=""):
 
 def build_embed_html(article_html, toc_html, meta):
     """Webflow-compatible embed — no header, TOC only, iframe height reporting."""
-    embed_css = CSS  # use base CSS unchanged; EMBED_EXTRA_CSS handles overrides
+    embed_css = CSS.replace('position: fixed;', 'position: sticky;')
 
     EMBED_EXTRA_CSS = """
 /* ── WEBFLOW EMBED OVERRIDES ─────────────────────────────────────────── */
 
-/* Hide the guide header only */
+/* Hide the guide header */
 .guide-header { display: none !important; }
 
-/* Reset layout — no padding for the hidden header */
+/* Remove padding that was for the now-hidden fixed header */
 .guide-layout { padding-top: 0 !important; }
 
-/* Sidenav: sticky from top of iframe viewport */
+/* Sidenav: switch from fixed to sticky, start from top of iframe */
 .guide-sidenav {
   position: sticky !important;
   top: 0 !important;
@@ -534,13 +534,13 @@ def build_embed_html(article_html, toc_html, meta):
   overflow-y: auto !important;
 }
 
-/* Main content: margin matches sidenav width, padding matches TOC width */
+/* Main content area: keep margins for sidenav and TOC widths */
 .guide-main {
   margin-left: var(--sidebar-w) !important;
   padding-right: var(--toc-w) !important;
 }
 
-/* TOC: sticky from top of iframe viewport */
+/* TOC: switch from fixed to sticky, start from top of iframe */
 .guide-toc {
   position: sticky !important;
   top: 0 !important;
@@ -549,7 +549,7 @@ def build_embed_html(article_html, toc_html, meta):
   overflow-y: auto !important;
 }
 
-/* Scroll offset so headings land with breathing room */
+/* Heading scroll offset */
 .guide-article h2,
 .guide-article h3,
 .guide-article h4 {
