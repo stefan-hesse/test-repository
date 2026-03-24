@@ -161,8 +161,8 @@ body {
 }
 .guide-article h4 {
   font-family: 'Titillium Web', sans-serif;
-  font-size: 13px; font-weight: 700; color: var(--slate);
-  text-transform: uppercase; letter-spacing: .07em;
+  font-size: 15px; font-weight: 700; color: var(--slate);
+  text-transform: none; letter-spacing: 0;
   margin: 20px 0 8px;
 }
 
