@@ -513,7 +513,7 @@ def build_full_html(article_html, toc_html, sidenav_html, meta, body_class=""):
 </html>"""
 
 
-def build_embed_html(article_html, toc_html, meta):
+def build_embed_html(article_html, toc_html, sidenav_html, meta):
     """Webflow-compatible embed — no header, TOC only, iframe height reporting."""
     embed_css = CSS.replace('position: fixed;', 'position: sticky;')
 
@@ -523,30 +523,30 @@ def build_embed_html(article_html, toc_html, meta):
 /* Hide the guide header */
 .guide-header { display: none !important; }
 
-/* Remove padding that was for the now-hidden fixed header */
+/* Remove padding for the hidden header */
 .guide-layout { padding-top: 0 !important; }
 
-/* Sidenav: switch from fixed to sticky, start from top of iframe */
+/* Sidenav: fix top offset and force visible regardless of viewport width */
 .guide-sidenav {
-  position: sticky !important;
+  display: block !important;
   top: 0 !important;
   height: 100vh !important;
-  overflow-y: auto !important;
 }
 
-/* Main content area: keep margins for sidenav and TOC widths */
-.guide-main {
-  margin-left: var(--sidebar-w) !important;
-  padding-right: var(--toc-w) !important;
-}
-
-/* TOC: switch from fixed to sticky, start from top of iframe */
+/* TOC: fix top offset and force visible */
 .guide-toc {
-  position: sticky !important;
   top: 0 !important;
-  right: auto !important;
   max-height: 100vh !important;
-  overflow-y: auto !important;
+}
+
+/* Override responsive rules that hide sidenav/TOC at narrow widths */
+@media (max-width: 1100px) {
+  .guide-toc { display: block !important; }
+  .guide-main { padding-right: var(--toc-w) !important; }
+}
+@media (max-width: 780px) {
+  .guide-sidenav { display: block !important; }
+  .guide-main { margin-left: var(--sidebar-w) !important; }
 }
 
 /* Heading scroll offset */
@@ -603,6 +603,9 @@ if (headings.length) {
 </head>
 <body>
 <div class="guide-layout">
+  <nav class="guide-sidenav">
+    {sidenav_html}
+  </nav>
   <div class="guide-main">
     <article class="guide-article" style="padding-top: 24px;">
       {article_html}
@@ -678,7 +681,7 @@ def build_outputs_for_lang(lang):
     # Embed
     out2 = os.path.join(DIST_DIR, f"avatour-guide-embed{suffix}.html")
     with open(out2, 'w', encoding='utf-8') as f:
-        f.write(build_embed_html(article_html, toc_html, meta))
+        f.write(build_embed_html(article_html, toc_html, sidenav_html, meta))
     print(f"    ✓ Embed       → {out2}")
 
     # Print/PDF
