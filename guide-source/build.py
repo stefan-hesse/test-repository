@@ -415,7 +415,6 @@ def build_sidenav_html(md_text):
     html += '<a href="https://avatour.com/glossary" target="_blank" rel="noopener">Glossary ↗</a>\n'
     html += '<a href="https://avatour.com/faqs" target="_blank" rel="noopener">FAQs ↗</a>\n'
     html += '<a href="https://avatour.live/test" target="_blank" rel="noopener">Network Test ↗</a>\n'
-    html += '<a href="mailto:support@avatour.live">Open Support Ticket ↗</a>\n'
     return html
 
 
