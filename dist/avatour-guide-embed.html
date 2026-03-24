@@ -310,30 +310,30 @@ body.print-mode .guide-article table { page-break-inside: avoid; }
 /* Hide the guide header */
 .guide-header { display: none !important; }
 
-/* Remove padding that was for the now-hidden fixed header */
+/* Remove padding for the hidden header */
 .guide-layout { padding-top: 0 !important; }
 
-/* Sidenav: switch from fixed to sticky, start from top of iframe */
+/* Sidenav: fix top offset and force visible regardless of viewport width */
 .guide-sidenav {
-  position: sticky !important;
+  display: block !important;
   top: 0 !important;
   height: 100vh !important;
-  overflow-y: auto !important;
 }
 
-/* Main content area: keep margins for sidenav and TOC widths */
-.guide-main {
-  margin-left: var(--sidebar-w) !important;
-  padding-right: var(--toc-w) !important;
-}
-
-/* TOC: switch from fixed to sticky, start from top of iframe */
+/* TOC: fix top offset and force visible */
 .guide-toc {
-  position: sticky !important;
   top: 0 !important;
-  right: auto !important;
   max-height: 100vh !important;
-  overflow-y: auto !important;
+}
+
+/* Override responsive rules that hide sidenav/TOC at narrow widths */
+@media (max-width: 1100px) {
+  .guide-toc { display: block !important; }
+  .guide-main { padding-right: var(--toc-w) !important; }
+}
+@media (max-width: 780px) {
+  .guide-sidenav { display: block !important; }
+  .guide-main { margin-left: var(--sidebar-w) !important; }
 }
 
 /* Heading scroll offset */
@@ -347,6 +347,33 @@ body.print-mode .guide-article table { page-break-inside: avoid; }
 </head>
 <body>
 <div class="guide-layout">
+  <nav class="guide-sidenav">
+    <div class="sidenav-section">Guide sections</div>
+<a href="#for-all-avatour-users">1. For All Avatour Users</a>
+<a href="#avatour-user-types">2. Avatour User Types</a>
+<a href="#21-meeting-attendees-no-account-required" class="sub">2.1 Meeting Attendees (No Account required)</a>
+<a href="#22-registered-users" class="sub">2.2 Registered Users</a>
+<a href="#for-remote-meeting-participants-and-workspace-visitors">3. For Remote Meeting Participants and Workspace Visitors</a>
+<a href="#how-to-join-an-avatour-meeting-and-visit-an-avatour-workspace" class="sub">3.1 How to Join an Avatour Meeting and Visit an Avatour Workspace</a>
+<a href="#meeting-tools" class="sub">3.2 Meeting and Workspace Collaboration Tools</a>
+<a href="#for-host-and-admin-users-avatour-web-console">4. For Host and Admin Users - Avatour Web Console</a>
+<a href="#41-web-console-overview-main-menu" class="sub">4.1 Web Console - Overview Main Menu</a>
+<a href="#42-web-console-details-by-menu-item-with-images" class="sub">4.2 Web Console - Details by Menu Item (with images)</a>
+<a href="#onsite-how-to-use-the-avatour-turnkey-kit">5. Onsite - How to Use the Avatour Turnkey Kit</a>
+<a href="#51-getting-started" class="sub">5.1 Getting Started</a>
+<a href="#52-useful-tips" class="sub">5.2 Useful Tips</a>
+<a href="#53-avatour-camera-app" class="sub">5.3 Avatour Camera App</a>
+<a href="#best-practice-advice">6. Best Practice Advice</a>
+<a href="#61-first-informal-uses-and-getting-familiar" class="sub">6.1 First (informal) Uses and Getting Familiar</a>
+<a href="#62-before-a-360-video-live-meeting" class="sub">6.2 Before a 360° Video Live Meeting</a>
+<a href="#63-when-operating-the-cam-onsite-for-a-360-video-live-meeting" class="sub">6.3 When Operating the Cam Onsite for a 360° Video Live Meeting</a>
+<div class="sidenav-section">Reference</div>
+<a href="https://avatour.com/glossary" target="_blank" rel="noopener">Glossary ↗</a>
+<a href="https://avatour.com/faqs" target="_blank" rel="noopener">FAQs ↗</a>
+<a href="https://avatour.live/test" target="_blank" rel="noopener">Network Test ↗</a>
+<a href="mailto:support@avatour.live">Open Support Ticket ↗</a>
+
+  </nav>
   <div class="guide-main">
     <article class="guide-article" style="padding-top: 24px;">
       <h1 id="avatour-user-and-best-practices-guide">Avatour User and Best Practices Guide</h1>

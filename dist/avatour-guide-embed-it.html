@@ -310,30 +310,30 @@ body.print-mode .guide-article table { page-break-inside: avoid; }
 /* Hide the guide header */
 .guide-header { display: none !important; }
 
-/* Remove padding that was for the now-hidden fixed header */
+/* Remove padding for the hidden header */
 .guide-layout { padding-top: 0 !important; }
 
-/* Sidenav: switch from fixed to sticky, start from top of iframe */
+/* Sidenav: fix top offset and force visible regardless of viewport width */
 .guide-sidenav {
-  position: sticky !important;
+  display: block !important;
   top: 0 !important;
   height: 100vh !important;
-  overflow-y: auto !important;
 }
 
-/* Main content area: keep margins for sidenav and TOC widths */
-.guide-main {
-  margin-left: var(--sidebar-w) !important;
-  padding-right: var(--toc-w) !important;
-}
-
-/* TOC: switch from fixed to sticky, start from top of iframe */
+/* TOC: fix top offset and force visible */
 .guide-toc {
-  position: sticky !important;
   top: 0 !important;
-  right: auto !important;
   max-height: 100vh !important;
-  overflow-y: auto !important;
+}
+
+/* Override responsive rules that hide sidenav/TOC at narrow widths */
+@media (max-width: 1100px) {
+  .guide-toc { display: block !important; }
+  .guide-main { padding-right: var(--toc-w) !important; }
+}
+@media (max-width: 780px) {
+  .guide-sidenav { display: block !important; }
+  .guide-main { margin-left: var(--sidebar-w) !important; }
 }
 
 /* Heading scroll offset */
@@ -347,6 +347,33 @@ body.print-mode .guide-article table { page-break-inside: avoid; }
 </head>
 <body>
 <div class="guide-layout">
+  <nav class="guide-sidenav">
+    <div class="sidenav-section">Guide sections</div>
+<a href="#for-all-avatour-users">1. Per Tutti gli Utenti Avatour</a>
+<a href="#avatour-user-types">2. Tipi di Utenti Avatour</a>
+<a href="#21-partecipanti-alla-riunione-nessun-account-richiesto" class="sub">2.1 Partecipanti alla Riunione (Nessun Account Richiesto)</a>
+<a href="#22-utenti-registrati" class="sub">2.2 Utenti Registrati</a>
+<a href="#for-remote-meeting-participants-and-workspace-visitors">3. Per i Partecipanti alle Riunioni Remote e i Visitatori del Workspace</a>
+<a href="#how-to-join-an-avatour-meeting-and-visit-an-avatour-workspace" class="sub">3.1 Come Partecipare a una Riunione Avatour e Visitare un Workspace Avatour</a>
+<a href="#meeting-tools" class="sub">3.2 Strumenti di Collaborazione per Riunioni e Workspace</a>
+<a href="#for-host-and-admin-users-avatour-web-console">4. Per Utenti Host e Admin - Web Console Avatour</a>
+<a href="#41-web-console-panoramica-del-menu-principale" class="sub">4.1 Web Console - Panoramica del Menu Principale</a>
+<a href="#42-web-console-dettagli-per-voce-di-menu-con-immagini" class="sub">4.2 Web Console - Dettagli per Voce di Menu (con immagini)</a>
+<a href="#onsite-how-to-use-the-avatour-turnkey-kit">5. In Loco - Come Utilizzare il Kit Turnkey Avatour</a>
+<a href="#51-per-iniziare" class="sub">5.1 Per Iniziare</a>
+<a href="#52-consigli-utili" class="sub">5.2 Consigli Utili</a>
+<a href="#53-app-telecamera-avatour" class="sub">5.3 App Telecamera Avatour</a>
+<a href="#best-practice-advice">6. Consigli di Buone Pratiche</a>
+<a href="#61-primi-usi-informali-e-familiarizzazione" class="sub">6.1 Primi Usi (Informali) e Familiarizzazione</a>
+<a href="#62-prima-di-una-riunione-live-con-video-360" class="sub">6.2 Prima di una Riunione Live con Video 360°</a>
+<a href="#63-durante-loperazione-della-telecamera-in-loco-per-una-riunione-live-con-video-360" class="sub">6.3 Durante l'Operazione della Telecamera in Loco per una Riunione Live con Video 360°</a>
+<div class="sidenav-section">Reference</div>
+<a href="https://avatour.com/glossary" target="_blank" rel="noopener">Glossary ↗</a>
+<a href="https://avatour.com/faqs" target="_blank" rel="noopener">FAQs ↗</a>
+<a href="https://avatour.live/test" target="_blank" rel="noopener">Network Test ↗</a>
+<a href="mailto:support@avatour.live">Open Support Ticket ↗</a>
+
+  </nav>
   <div class="guide-main">
     <article class="guide-article" style="padding-top: 24px;">
       <h1 id="guida-utente-e-buone-pratiche-di-avatour">Guida Utente e Buone Pratiche di Avatour</h1>
