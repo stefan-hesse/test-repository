@@ -515,60 +515,24 @@ def build_full_html(article_html, toc_html, sidenav_html, meta, body_class=""):
 
 def build_embed_html(article_html, toc_html, sidenav_html, meta):
     """Webflow-compatible embed — no header, TOC only, iframe height reporting."""
-    embed_css = CSS.replace('position: fixed;', 'position: sticky;')
+    embed_css = CSS  # unchanged — fixed positioning works in the fixed-height iframe
 
     EMBED_EXTRA_CSS = """
 /* ── WEBFLOW EMBED OVERRIDES ─────────────────────────────────────────── */
 
-/* Hide header and TOC */
-.guide-header { display: none !important; }
-.guide-toc    { display: none !important; }
+/* Hide the guide header and remove the space reserved for it */
+.guide-header   { display: none !important; }
+.guide-layout   { padding-top: 0 !important; }
+.guide-toc      { display: none !important; }
 
-/* Layout: no header padding, no horizontal overflow */
-.guide-layout {
-  padding-top: 0 !important;
-  overflow-x: hidden !important;
-}
+/* Sidenav: was fixed top:header-h, now fixed top:0 since header is gone */
+.guide-sidenav  { top: 0 !important; }
 
-/* Sidenav: sticky from top, always visible */
-.guide-sidenav {
-  display: block !important;
-  top: 0 !important;
-  height: 100vh !important;
-}
+/* Main: no left offset needed beyond the fixed sidenav width */
+.guide-main     { margin-left: var(--sidebar-w) !important; padding-right: 40px !important; }
 
-/* Main: sits to the right of the sidenav, fills remaining width */
-.guide-main {
-  margin-left: var(--sidebar-w) !important;
-  padding-right: 0 !important;
-  min-width: 0 !important;
-  width: calc(100% - var(--sidebar-w)) !important;
-  box-sizing: border-box !important;
-  justify-content: flex-start !important;
-}
-
-/* Article: constrained to its parent, with comfortable padding */
-.guide-article {
-  width: 100% !important;
-  max-width: 760px !important;
-  min-width: 0 !important;
-  box-sizing: border-box !important;
-  padding-right: 40px !important;
-}
-
-/* Always show sidenav regardless of viewport width */
-@media (max-width: 780px) {
-  .guide-sidenav { display: block !important; }
-  .guide-main {
-    margin-left: var(--sidebar-w) !important;
-    width: calc(100% - var(--sidebar-w)) !important;
-  }
-}
-
-/* Heading scroll offset */
-.guide-article h2,
-.guide-article h3,
-.guide-article h4 {
+/* Scroll offset for anchor links */
+.guide-article h2, .guide-article h3, .guide-article h4 {
   scroll-margin-top: 20px;
 }
 """
