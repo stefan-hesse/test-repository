@@ -307,50 +307,34 @@ body.print-mode .guide-article table { page-break-inside: avoid; }
 
 /* ── WEBFLOW EMBED OVERRIDES ─────────────────────────────────────────── */
 
-/* Hide the guide header */
+/* Hide header and TOC — embed has sidenav only */
 .guide-header { display: none !important; }
+.guide-toc    { display: none !important; }
 
 /* Remove padding for the hidden header */
 .guide-layout { padding-top: 0 !important; }
 
-/* Sidenav: sticky from top, always visible */
+/* Sidenav: sticky from top of iframe viewport, always visible */
 .guide-sidenav {
   display: block !important;
   top: 0 !important;
   height: 100vh !important;
 }
 
-/* Main: flex row so article and TOC sit side by side */
+/* Main: correct left margin for sidenav, no right padding for TOC */
 .guide-main {
-  display: flex !important;
-  align-items: flex-start !important;
   margin-left: var(--sidebar-w) !important;
-  padding-right: 0 !important;
+  padding-right: 40px !important;
+  justify-content: flex-start !important;
 }
 
-/* Article: fills available space */
+/* Article: full width up to comfortable reading width */
 .guide-article {
-  flex: 1 !important;
-  min-width: 0 !important;
+  max-width: 820px !important;
+  width: 100% !important;
 }
 
-/* TOC: sticky flex child, always visible */
-.guide-toc {
-  display: block !important;
-  position: sticky !important;
-  top: 0 !important;
-  flex-shrink: 0 !important;
-  align-self: flex-start !important;
-  width: var(--toc-w) !important;
-  max-height: 100vh !important;
-  right: auto !important;
-  left: auto !important;
-}
-
-/* Override responsive rules that would hide sidenav/TOC */
-@media (max-width: 1100px) {
-  .guide-toc { display: block !important; }
-}
+/* Always show sidenav regardless of viewport width */
 @media (max-width: 780px) {
   .guide-sidenav { display: block !important; }
   .guide-main { margin-left: var(--sidebar-w) !important; }
@@ -985,29 +969,6 @@ Clicking a menu option opens a <strong>side panel</strong> on the left or right 
 </li>
 </ul>
     </article>
-    <aside class="guide-toc">
-      <div class="toc-label">On this page</div>
-<ul>
-  <li><a href="#for-all-avatour-users">1. For All Avatour Users</a></li>
-  <li><a href="#avatour-user-types">2. Avatour User Types</a></li>
-  <li class="toc2"><a href="#21-meeting-attendees-no-account-required">2.1 Meeting Attendees (No Account required)</a></li>
-  <li class="toc2"><a href="#22-registered-users">2.2 Registered Users</a></li>
-  <li><a href="#for-remote-meeting-participants-and-workspace-visitors">3. For Remote Meeting Participants and Workspace Visitors</a></li>
-  <li class="toc2"><a href="#how-to-join-an-avatour-meeting-and-visit-an-avatour-workspace">3.1 How to Join an Avatour Meeting and Visit an Avatour Workspace</a></li>
-  <li class="toc2"><a href="#meeting-tools">3.2 Meeting and Workspace Collaboration Tools</a></li>
-  <li><a href="#for-host-and-admin-users-avatour-web-console">4. For Host and Admin Users - Avatour Web Console</a></li>
-  <li class="toc2"><a href="#41-web-console-overview-main-menu">4.1 Web Console - Overview Main Menu</a></li>
-  <li class="toc2"><a href="#42-web-console-details-by-menu-item-with-images">4.2 Web Console - Details by Menu Item (with images)</a></li>
-  <li><a href="#onsite-how-to-use-the-avatour-turnkey-kit">5. Onsite - How to Use the Avatour Turnkey Kit</a></li>
-  <li class="toc2"><a href="#51-getting-started">5.1 Getting Started</a></li>
-  <li class="toc2"><a href="#52-useful-tips">5.2 Useful Tips</a></li>
-  <li class="toc2"><a href="#53-avatour-camera-app">5.3 Avatour Camera App</a></li>
-  <li><a href="#best-practice-advice">6. Best Practice Advice</a></li>
-  <li class="toc2"><a href="#61-first-informal-uses-and-getting-familiar">6.1 First (informal) Uses and Getting Familiar</a></li>
-  <li class="toc2"><a href="#62-before-a-360-video-live-meeting">6.2 Before a 360° Video Live Meeting</a></li>
-  <li class="toc2"><a href="#63-when-operating-the-cam-onsite-for-a-360-video-live-meeting">6.3 When Operating the Cam Onsite for a 360° Video Live Meeting</a></li>
-</ul>
-    </aside>
   </div>
 </div>
 <script>

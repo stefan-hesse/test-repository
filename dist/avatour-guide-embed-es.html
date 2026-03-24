@@ -307,50 +307,34 @@ body.print-mode .guide-article table { page-break-inside: avoid; }
 
 /* ── WEBFLOW EMBED OVERRIDES ─────────────────────────────────────────── */
 
-/* Hide the guide header */
+/* Hide header and TOC — embed has sidenav only */
 .guide-header { display: none !important; }
+.guide-toc    { display: none !important; }
 
 /* Remove padding for the hidden header */
 .guide-layout { padding-top: 0 !important; }
 
-/* Sidenav: sticky from top, always visible */
+/* Sidenav: sticky from top of iframe viewport, always visible */
 .guide-sidenav {
   display: block !important;
   top: 0 !important;
   height: 100vh !important;
 }
 
-/* Main: flex row so article and TOC sit side by side */
+/* Main: correct left margin for sidenav, no right padding for TOC */
 .guide-main {
-  display: flex !important;
-  align-items: flex-start !important;
   margin-left: var(--sidebar-w) !important;
-  padding-right: 0 !important;
+  padding-right: 40px !important;
+  justify-content: flex-start !important;
 }
 
-/* Article: fills available space */
+/* Article: full width up to comfortable reading width */
 .guide-article {
-  flex: 1 !important;
-  min-width: 0 !important;
+  max-width: 820px !important;
+  width: 100% !important;
 }
 
-/* TOC: sticky flex child, always visible */
-.guide-toc {
-  display: block !important;
-  position: sticky !important;
-  top: 0 !important;
-  flex-shrink: 0 !important;
-  align-self: flex-start !important;
-  width: var(--toc-w) !important;
-  max-height: 100vh !important;
-  right: auto !important;
-  left: auto !important;
-}
-
-/* Override responsive rules that would hide sidenav/TOC */
-@media (max-width: 1100px) {
-  .guide-toc { display: block !important; }
-}
+/* Always show sidenav regardless of viewport width */
 @media (max-width: 780px) {
   .guide-sidenav { display: block !important; }
   .guide-main { margin-left: var(--sidebar-w) !important; }
@@ -979,29 +963,6 @@ Al hacer clic en una opción del menú se abre un <strong>panel lateral</strong>
 </li>
 </ul>
     </article>
-    <aside class="guide-toc">
-      <div class="toc-label">On this page</div>
-<ul>
-  <li><a href="#for-all-avatour-users">1. Para Todos los Usuarios de Avatour</a></li>
-  <li><a href="#avatour-user-types">2. Tipos de Usuarios de Avatour</a></li>
-  <li class="toc2"><a href="#21-asistentes-a-la-reunión-sin-cuenta-requerida">2.1 Asistentes a la Reunión (Sin Cuenta Requerida)</a></li>
-  <li class="toc2"><a href="#22-usuarios-registrados">2.2 Usuarios Registrados</a></li>
-  <li><a href="#for-remote-meeting-participants-and-workspace-visitors">3. Para Participantes de Reuniones Remotas y Visitantes del Workspace</a></li>
-  <li class="toc2"><a href="#how-to-join-an-avatour-meeting-and-visit-an-avatour-workspace">3.1 Cómo Unirse a una Reunión de Avatour y Visitar un Workspace de Avatour</a></li>
-  <li class="toc2"><a href="#meeting-tools">3.2 Herramientas de Colaboración para Reuniones y Workspace</a></li>
-  <li><a href="#for-host-and-admin-users-avatour-web-console">4. Para Usuarios Host y Admin - Consola Web de Avatour</a></li>
-  <li class="toc2"><a href="#41-consola-web-descripción-general-del-menú-principal">4.1 Consola Web - Descripción General del Menú Principal</a></li>
-  <li class="toc2"><a href="#42-consola-web-detalles-por-elemento-del-menú-con-imágenes">4.2 Consola Web - Detalles por Elemento del Menú (con imágenes)</a></li>
-  <li><a href="#onsite-how-to-use-the-avatour-turnkey-kit">5. En el Sitio - Cómo Usar el Kit Turnkey de Avatour</a></li>
-  <li class="toc2"><a href="#51-primeros-pasos">5.1 Primeros Pasos</a></li>
-  <li class="toc2"><a href="#52-consejos-útiles">5.2 Consejos Útiles</a></li>
-  <li class="toc2"><a href="#53-app-de-cámara-de-avatour">5.3 App de Cámara de Avatour</a></li>
-  <li><a href="#best-practice-advice">6. Consejos de Mejores Prácticas</a></li>
-  <li class="toc2"><a href="#61-primeros-usos-informales-y-familiarización">6.1 Primeros Usos (Informales) y Familiarización</a></li>
-  <li class="toc2"><a href="#62-antes-de-una-reunión-en-vivo-con-video-360">6.2 Antes de una Reunión en Vivo con Video 360°</a></li>
-  <li class="toc2"><a href="#63-durante-la-operación-de-la-cámara-en-el-sitio-para-una-reunión-en-vivo-con-video-360">6.3 Durante la Operación de la Cámara en el Sitio para una Reunión en Vivo con Video 360°</a></li>
-</ul>
-    </aside>
   </div>
 </div>
 <script>
