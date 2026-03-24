@@ -526,30 +526,43 @@ def build_embed_html(article_html, toc_html, sidenav_html, meta):
 /* Remove padding for the hidden header */
 .guide-layout { padding-top: 0 !important; }
 
-/* Sidenav: fix top offset, force visible at all widths */
+/* Sidenav: sticky from top, always visible */
 .guide-sidenav {
   display: block !important;
   top: 0 !important;
   height: 100vh !important;
 }
 
-/* Main: ensure correct margins so article doesn't overlap sidenav or TOC */
+/* Main: flex row so article and TOC sit side by side */
 .guide-main {
+  display: flex !important;
+  align-items: flex-start !important;
   margin-left: var(--sidebar-w) !important;
-  padding-right: var(--toc-w) !important;
+  padding-right: 0 !important;
 }
 
-/* TOC: fix top offset, force visible at all widths */
+/* Article: fills available space */
+.guide-article {
+  flex: 1 !important;
+  min-width: 0 !important;
+}
+
+/* TOC: sticky flex child, always visible */
 .guide-toc {
   display: block !important;
+  position: sticky !important;
   top: 0 !important;
+  flex-shrink: 0 !important;
+  align-self: flex-start !important;
+  width: var(--toc-w) !important;
   max-height: 100vh !important;
+  right: auto !important;
+  left: auto !important;
 }
 
-/* Override responsive rules that hide sidenav/TOC at narrow widths */
+/* Override responsive rules that would hide sidenav/TOC */
 @media (max-width: 1100px) {
   .guide-toc { display: block !important; }
-  .guide-main { padding-right: var(--toc-w) !important; }
 }
 @media (max-width: 780px) {
   .guide-sidenav { display: block !important; }
