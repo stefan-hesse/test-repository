@@ -4,22 +4,22 @@
 
 Se sei nuovo su Avatour, le seguenti risorse forniscono un'utile introduzione alla piattaforma e alle sue funzionalità:
 
-1. [Video su come funziona Avatour](https://avatour.com/how-it-works) 
+1. [Video su come funziona Avatour](https://avatour.com/how-it-works)  
    Una breve panoramica delle principali funzionalità di Avatour e di come la piattaforma consente la collaborazione remota immersiva.
-2. [FAQ](https://avatour.com/faqs) 
+2. [FAQ](https://avatour.com/faqs)  
    Risposte alle domande frequenti
-3. [Glossario](https://avatour.com/glossary) 
+3. [Glossario](https://avatour.com/glossary)  
    Definizioni dei principali termini e concetti di Avatour.
-4. Sito Web
+4. Sito Web  
    Consulta la pagina delle [Funzionalità di Avatour](https://avatour.com/features) insieme alle sezioni dedicate ai Casi d'Uso e ai Settori per scoprire come Avatour può supportare le tue esigenze specifiche.
 
 ## 2. Tipi di Utenti Avatour {#avatour-user-types}
 
 ### 2.1 Partecipanti alla Riunione (Nessun Account Richiesto)
-Gli utenti possono partecipare alla riunione senza registrarsi a un account Avatour.
-Eccezione: Se l'host ha limitato la riunione agli utenti registrati — ad esempio, per consentire solo ai dipendenti interni di partecipare tramite Single Sign-On (SSO) — l'invito del calendario indicherà che i partecipanti devono effettuare l'accesso per autenticarsi.
+Gli utenti possono partecipare alla riunione senza registrarsi a un account Avatour.Eccezione: Se l'host ha limitato la riunione agli utenti registrati — ad esempio, per consentire solo ai dipendenti interni di partecipare tramite Single Sign-On (SSO) — l'invito del calendario indicherà che i partecipanti devono effettuare l'accesso per autenticarsi.
 
 Gli utenti accedono alla riunione come segue:
+
 - Ricevono un invito del calendario dall'host.
 - Utilizzano il link della riunione nell'invito per partecipare.
 - Inseriscono una password della riunione se l'host ne ha abilitata una.
@@ -79,6 +79,7 @@ Per le organizzazioni che si aspettano un gran numero di utenti che necessitano 
 **I privilegi Admin aggiuntivi includono:**
 
 **Gestione Account**
+
 - Creare nuovi utenti e assegnarli a gruppi.
 - Reimpostare le password quando gestite da Avatour (non applicabile quando SSO è abilitato).
 - Aggiornare gli utenti Guest a Host.
@@ -86,11 +87,13 @@ Per le organizzazioni che si aspettano un gran numero di utenti che necessitano 
 - Trasferire gli asset da un utente Host a un altro durante l'eliminazione.
 
 **Impostazioni**
+
 - Configurare le **impostazioni di sicurezza a livello di organizzazione** per asset, workspace e riunioni ospitate sulla piattaforma (ad esempio, se un Host deve essere presente per avviare una riunione, se i volti devono essere oscurati su tutti i video caricati sulla piattaforma).
 - Abilitare o disabilitare le **funzionalità AI** o la **registrazione**.
 - Applicare il branding aziendale in modo coerente sulla piattaforma se è configurato un **dominio personalizzato**.
 
 **Asset e Analytics**
+
 - Visualizzare tutti gli Asset caricati da qualsiasi utente nell'organizzazione.
 - Rivedere l'utilizzo della piattaforma in tutta l'organizzazione.
 
@@ -304,7 +307,7 @@ Quando si rivede un asset in un workspace, la barra degli strumenti è simile ma
 
 Quando accedi al tuo Account Utente Avatour, accederai alla **Web Console**.
 
-### 4.1 Web Console - Panoramica del Menu Principale
+### 4.1 Web Console - Panoramica del Menu Principale {#web-console-overview-main-menu}
 
 Sul lato sinistro vedrai le seguenti voci del menu:
 
@@ -324,7 +327,7 @@ Sul lato sinistro vedrai le seguenti voci del menu:
 
 ---
 
-### 4.2 Web Console - Dettagli per Voce di Menu (con immagini)
+### 4.2 Web Console - Dettagli per Voce di Menu (con immagini)  {#web-console-details-by-menu-item} 
 
 #### 4.2.1 Workspace
 
@@ -365,6 +368,7 @@ All'interno di un workspace:
 - **Workspace Pubblico** – Chiunque abbia il link può visualizzare gli asset direttamente.
 
 **Impostazioni Riunione**
+
 - **Autenticazione richiesta** – I partecipanti devono effettuare l'accesso.
 - **Consenti accesso guest** – Permetti agli utenti non registrati di visualizzare gli asset.
 - **Avvio Automatico Registrazione / Avvio Manuale** – Scegli se le riunioni vengono registrate automaticamente o avviate manualmente.
@@ -454,6 +458,7 @@ Utilizzo della batteria esterna:
 
 ##### Rete Mobile
 **Opzione A: Hotspot e SIM forniti con il kit**
+
 - Collega l'hotspot GlocalMe al bastone batteria Telesin (magnete).
 - Garantisce nessuna interferenza e mantiene la connessione se ci si allontana dalla telecamera.
 - Risoluzione dei problemi:
