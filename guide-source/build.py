@@ -520,50 +520,34 @@ def build_embed_html(article_html, toc_html, sidenav_html, meta):
     EMBED_EXTRA_CSS = """
 /* ── WEBFLOW EMBED OVERRIDES ─────────────────────────────────────────── */
 
-/* Hide the guide header */
+/* Hide header and TOC — embed has sidenav only */
 .guide-header { display: none !important; }
+.guide-toc    { display: none !important; }
 
 /* Remove padding for the hidden header */
 .guide-layout { padding-top: 0 !important; }
 
-/* Sidenav: sticky from top, always visible */
+/* Sidenav: sticky from top of iframe viewport, always visible */
 .guide-sidenav {
   display: block !important;
   top: 0 !important;
   height: 100vh !important;
 }
 
-/* Main: flex row so article and TOC sit side by side */
+/* Main: correct left margin for sidenav, no right padding for TOC */
 .guide-main {
-  display: flex !important;
-  align-items: flex-start !important;
   margin-left: var(--sidebar-w) !important;
-  padding-right: 0 !important;
+  padding-right: 40px !important;
+  justify-content: flex-start !important;
 }
 
-/* Article: fills available space */
+/* Article: full width up to comfortable reading width */
 .guide-article {
-  flex: 1 !important;
-  min-width: 0 !important;
+  max-width: 820px !important;
+  width: 100% !important;
 }
 
-/* TOC: sticky flex child, always visible */
-.guide-toc {
-  display: block !important;
-  position: sticky !important;
-  top: 0 !important;
-  flex-shrink: 0 !important;
-  align-self: flex-start !important;
-  width: var(--toc-w) !important;
-  max-height: 100vh !important;
-  right: auto !important;
-  left: auto !important;
-}
-
-/* Override responsive rules that would hide sidenav/TOC */
-@media (max-width: 1100px) {
-  .guide-toc { display: block !important; }
-}
+/* Always show sidenav regardless of viewport width */
 @media (max-width: 780px) {
   .guide-sidenav { display: block !important; }
   .guide-main { margin-left: var(--sidebar-w) !important; }
@@ -630,9 +614,6 @@ if (headings.length) {
     <article class="guide-article" style="padding-top: 24px;">
       {article_html}
     </article>
-    <aside class="guide-toc">
-      {toc_html}
-    </aside>
   </div>
 </div>
 <script>{EMBED_JS}</script>
