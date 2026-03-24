@@ -307,37 +307,49 @@ body.print-mode .guide-article table { page-break-inside: avoid; }
 
 /* ── WEBFLOW EMBED OVERRIDES ─────────────────────────────────────────── */
 
-/* Hide header and TOC — embed has sidenav only */
+/* Hide header and TOC */
 .guide-header { display: none !important; }
 .guide-toc    { display: none !important; }
 
-/* Remove padding for the hidden header */
-.guide-layout { padding-top: 0 !important; }
+/* Layout: no header padding, no horizontal overflow */
+.guide-layout {
+  padding-top: 0 !important;
+  overflow-x: hidden !important;
+}
 
-/* Sidenav: sticky from top of iframe viewport, always visible */
+/* Sidenav: sticky from top, always visible */
 .guide-sidenav {
   display: block !important;
   top: 0 !important;
   height: 100vh !important;
 }
 
-/* Main: correct left margin for sidenav, no right padding for TOC */
+/* Main: sits to the right of the sidenav, fills remaining width */
 .guide-main {
   margin-left: var(--sidebar-w) !important;
-  padding-right: 40px !important;
+  padding-right: 0 !important;
+  min-width: 0 !important;
+  width: calc(100% - var(--sidebar-w)) !important;
+  box-sizing: border-box !important;
   justify-content: flex-start !important;
 }
 
-/* Article: full width up to comfortable reading width */
+/* Article: constrained to its parent, with comfortable padding */
 .guide-article {
-  max-width: 820px !important;
   width: 100% !important;
+  max-width: 760px !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+  padding-right: 40px !important;
 }
 
 /* Always show sidenav regardless of viewport width */
 @media (max-width: 780px) {
   .guide-sidenav { display: block !important; }
-  .guide-main { margin-left: var(--sidebar-w) !important; }
+  .guide-main {
+    margin-left: var(--sidebar-w) !important;
+    width: calc(100% - var(--sidebar-w)) !important;
+  }
 }
 
 /* Heading scroll offset */
