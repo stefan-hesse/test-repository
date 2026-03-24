@@ -525,7 +525,10 @@ def build_embed_html(article_html, toc_html, sidenav_html, meta):
 .guide-toc      { display: none !important; }
 
 /* Sidenav: fixed from top (no header), left:0 within the iframe */
-.guide-sidenav  { top: 0 !important; }
+.guide-sidenav {
+  top: 0 !important;
+  padding-bottom: 40px !important;
+}
 
 /* Main: margin accounts for the sidenav width */
 .guide-main {
