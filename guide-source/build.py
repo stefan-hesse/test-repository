@@ -520,16 +520,13 @@ def build_embed_html(article_html, toc_html, meta):
     EMBED_EXTRA_CSS = """
 /* ── WEBFLOW EMBED OVERRIDES ─────────────────────────────────────────── */
 
-/* Hide the guide header only — show sidenav and TOC */
+/* Hide the guide header only */
 .guide-header { display: none !important; }
 
 /* Reset layout — no padding for the hidden header */
-.guide-layout {
-  padding-top: 0 !important;
-  min-height: 100%;
-}
+.guide-layout { padding-top: 0 !important; }
 
-/* Sidenav: restore, make sticky at top */
+/* Sidenav: sticky from top of iframe viewport */
 .guide-sidenav {
   position: sticky !important;
   top: 0 !important;
@@ -537,13 +534,13 @@ def build_embed_html(article_html, toc_html, meta):
   overflow-y: auto !important;
 }
 
-/* Main content area */
+/* Main content: margin matches sidenav width, padding matches TOC width */
 .guide-main {
   margin-left: var(--sidebar-w) !important;
   padding-right: var(--toc-w) !important;
 }
 
-/* TOC: sticky at top */
+/* TOC: sticky from top of iframe viewport */
 .guide-toc {
   position: sticky !important;
   top: 0 !important;
@@ -552,7 +549,7 @@ def build_embed_html(article_html, toc_html, meta):
   overflow-y: auto !important;
 }
 
-/* Scroll offset so headings land with a little breathing room */
+/* Scroll offset so headings land with breathing room */
 .guide-article h2,
 .guide-article h3,
 .guide-article h4 {
