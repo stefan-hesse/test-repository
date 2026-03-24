@@ -360,6 +360,7 @@ All'interno di un workspace:
 ![Avatour Settings - Workspace View](https://res.cloudinary.com/avatour/image/upload/v1772387752/avatour-screenshot-workspace-settings_llcei3.png) *Impostazioni Workspace*
 
 **Impostazioni Workspace**
+
 - **Modello di Report** – Seleziona il modello di checklist per la reportistica AI.
 - **Abilita Notifiche** – Email di riepilogo giornaliero per le modifiche di stato delle note.
 

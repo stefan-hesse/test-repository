@@ -359,6 +359,7 @@ Dentro de un workspace:
 ![Avatour Settings - Workspace View](https://res.cloudinary.com/avatour/image/upload/v1772387752/avatour-screenshot-workspace-settings_llcei3.png) *Configuración del Workspace*
 
 **Configuración del Workspace**
+
 - **Plantilla de Informe** – Selecciona la plantilla de lista de verificación para informes de IA.
 - **Habilitar Notificaciones** – Correos electrónicos de resumen diario para cambios de estado de notas.
 
