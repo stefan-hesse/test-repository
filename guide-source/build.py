@@ -524,10 +524,14 @@ def build_embed_html(article_html, toc_html, sidenav_html, meta):
 .guide-layout   { padding-top: 0 !important; }
 .guide-toc      { display: none !important; }
 
-/* Sidenav: fixed from top (no header), left:0 within the iframe */
+/* Sidenav: fixed from top (no header), left:0 within the iframe.
+   height uses calc to subtract top+bottom padding so all items are reachable */
 .guide-sidenav {
   top: 0 !important;
-  padding-bottom: 40px !important;
+  height: 100vh !important;
+  max-height: 100vh !important;
+  overflow-y: scroll !important;
+  padding-bottom: 80px !important;
 }
 
 /* Main: margin accounts for the sidenav width */
