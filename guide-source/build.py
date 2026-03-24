@@ -525,11 +525,29 @@ def build_embed_html(article_html, toc_html, sidenav_html, meta):
 .guide-layout   { padding-top: 0 !important; }
 .guide-toc      { display: none !important; }
 
-/* Sidenav: was fixed top:header-h, now fixed top:0 since header is gone */
+/* Sidenav: fixed from top (no header), left:0 within the iframe */
 .guide-sidenav  { top: 0 !important; }
 
-/* Main: no left offset needed beyond the fixed sidenav width */
-.guide-main     { margin-left: var(--sidebar-w) !important; padding-right: 40px !important; }
+/* Main: margin accounts for the sidenav width */
+.guide-main {
+  margin-left: var(--sidebar-w) !important;
+  padding-right: 40px !important;
+  /* Prevent content overflowing the iframe width */
+  max-width: calc(100% - var(--sidebar-w)) !important;
+  box-sizing: border-box !important;
+  overflow-x: hidden !important;
+}
+
+/* Article: constrained to its container */
+.guide-article {
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Layout: no horizontal overflow */
+.guide-layout {
+  overflow-x: hidden !important;
+}
 
 /* Scroll offset for anchor links */
 .guide-article h2, .guide-article h3, .guide-article h4 {
