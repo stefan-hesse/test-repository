@@ -307,55 +307,43 @@ body.print-mode .guide-article table { page-break-inside: avoid; }
 
 /* ── WEBFLOW EMBED OVERRIDES ─────────────────────────────────────────── */
 
-/* Hide elements that don't belong in the embed */
-.guide-header   { display: none !important; }
-.guide-sidenav  { display: none !important; }
+/* Hide the guide header only — show sidenav and TOC */
+.guide-header { display: none !important; }
 
 /* Reset layout — no padding for the hidden header */
-.guide-layout   { padding-top: 0 !important; }
+.guide-layout {
+  padding-top: 0 !important;
+  min-height: 100%;
+}
 
-/* guide-main: flex row — article left, TOC right */
+/* Sidenav: restore, make sticky at top */
+.guide-sidenav {
+  position: sticky !important;
+  top: 0 !important;
+  height: 100vh !important;
+  overflow-y: auto !important;
+}
+
+/* Main content area */
 .guide-main {
-  display: flex !important;
-  align-items: flex-start !important;
-  margin-left: 0 !important;
-  padding-right: 0 !important;
-  max-width: 1060px;
-  padding: 0 24px !important;
-  justify-content: flex-start !important;
+  margin-left: var(--sidebar-w) !important;
+  padding-right: var(--toc-w) !important;
 }
 
-.guide-article {
-  flex: 1 !important;
-  min-width: 0 !important;
-  max-width: 760px !important;
-  padding-top: 24px !important;
+/* TOC: sticky at top */
+.guide-toc {
+  position: sticky !important;
+  top: 0 !important;
+  right: auto !important;
+  max-height: 100vh !important;
+  overflow-y: auto !important;
 }
 
-/* Scroll offset so headings land below the visible top */
+/* Scroll offset so headings land with a little breathing room */
 .guide-article h2,
 .guide-article h3,
 .guide-article h4 {
   scroll-margin-top: 20px;
-}
-
-/* TOC: sticky inside the iframe's own scroll container.
-   Requires: iframe has fixed height (100vh) in Webflow — already set.
-   position:sticky works here because guide-main is a flex container
-   with align-items:flex-start, so the TOC doesn't stretch to full height. */
-.guide-toc {
-  position: sticky !important;
-  top: 20px !important;
-  width: 190px !important;
-  flex-shrink: 0 !important;
-  align-self: flex-start !important;
-  max-height: calc(100vh - 40px) !important;
-  overflow-y: auto !important;
-  padding: 0 0 0 8px !important;
-  margin-left: 24px !important;
-  /* Override any fixed positioning from the base CSS */
-  right: auto !important;
-  left: auto !important;
 }
 
 </style>
