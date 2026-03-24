@@ -515,54 +515,60 @@ def build_full_html(article_html, toc_html, sidenav_html, meta, body_class=""):
 
 def build_embed_html(article_html, toc_html, meta):
     """Webflow-compatible embed — no header, TOC only, iframe height reporting."""
-    embed_css = CSS.replace("position: fixed;", "position: sticky;")
+    embed_css = CSS  # use base CSS unchanged; EMBED_EXTRA_CSS handles overrides
 
     EMBED_EXTRA_CSS = """
-/* WEBFLOW EMBED OVERRIDES */
-.guide-header { display: none; }
-.guide-sidenav { display: none !important; }
+/* ── WEBFLOW EMBED OVERRIDES ─────────────────────────────────────────── */
 
-/* Outer layout — single column, full height */
-.guide-layout {
-  padding-top: 0;
-  min-height: 100vh;
-}
+/* Hide elements that don't belong in the embed */
+.guide-header   { display: none !important; }
+.guide-sidenav  { display: none !important; }
 
-/* guide-main becomes the flex row: article + TOC side by side */
+/* Reset layout — no padding for the hidden header */
+.guide-layout   { padding-top: 0 !important; }
+
+/* guide-main: flex row — article left, TOC right */
 .guide-main {
   display: flex !important;
-  align-items: flex-start;
+  align-items: flex-start !important;
   margin-left: 0 !important;
   padding-right: 0 !important;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-.guide-article {
-  flex: 1;
-  min-width: 0;
-  max-width: 780px;
-  padding-top: 24px;
+  max-width: 1060px;
+  padding: 0 24px !important;
+  justify-content: flex-start !important;
 }
 
-/* Offset for anchor links so headings don't land at the very top */
+.guide-article {
+  flex: 1 !important;
+  min-width: 0 !important;
+  max-width: 760px !important;
+  padding-top: 24px !important;
+}
+
+/* Scroll offset so headings land below the visible top */
 .guide-article h2,
 .guide-article h3,
 .guide-article h4 {
-  scroll-margin-top: 24px;
+  scroll-margin-top: 20px;
 }
 
-/* TOC: sticky — works because guide-main is a flex row and page scrolls */
+/* TOC: sticky inside the iframe's own scroll container.
+   Requires: iframe has fixed height (100vh) in Webflow — already set.
+   position:sticky works here because guide-main is a flex container
+   with align-items:flex-start, so the TOC doesn't stretch to full height. */
 .guide-toc {
-  position: sticky;
-  top: 20px;
-  flex-shrink: 0;
-  width: 190px;
-  max-height: calc(100vh - 40px);
-  overflow-y: auto;
-  padding: 0 0 0 8px;
-  margin-left: 24px;
-  align-self: flex-start;
+  position: sticky !important;
+  top: 20px !important;
+  width: 190px !important;
+  flex-shrink: 0 !important;
+  align-self: flex-start !important;
+  max-height: calc(100vh - 40px) !important;
+  overflow-y: auto !important;
+  padding: 0 0 0 8px !important;
+  margin-left: 24px !important;
+  /* Override any fixed positioning from the base CSS */
+  right: auto !important;
+  left: auto !important;
 }
 """
 
