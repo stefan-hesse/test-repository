@@ -4,14 +4,14 @@
 
 If you are new to Avatour, the following resources provide a helpful introduction to the platform and its capabilities:
 
-1. [Avatour How it Works video](https://avatour.com/how-it-works) 
-   A short overview of Avatour’s main features and how the platform enables immersive remote collaboration.
-2. [FAQs](https://avatour.com/faqs) 
-   Answers to frequently asked questions
-3. [Glossary](https://avatour.com/glossary) 
-   Definitions of key Avatour terms and concepts.
-4. Website
-   Have a look at the [Avatour Features](https://avatour.com/features) page along with the dedicated Use Cases and Industries sections to learn how Avatour can support your specific needs.
+1. [Avatour How it Works video](https://avatour.com/how-it-works)  
+A short overview of Avatour’s main features and how the platform enables immersive remote collaboration.
+2. [FAQs](https://avatour.com/faqs)  
+Answers to frequently asked questions
+3. [Glossary](https://avatour.com/glossary)  
+Definitions of key Avatour terms and concepts.
+4. Website  
+Have a look especially at the [Avatour Features](https://avatour.com/features) page along with the dedicated Use Cases and Industries sections to learn how Avatour can support your specific needs.
 
 ## 2. Avatour User Types  {#avatour-user-types}
 
@@ -20,6 +20,7 @@ Users can join the meeting without registering for an Avatour account.
 Exception: If the host has restricted the meeting to registered users — for example, to allow only internal employees to join via Single Sign-On (SSO) — the calendar invitation will indicate that participants must log in to authenticate.
 
 Users access the meeting as follows:
+
 - Receive a calendar invitation from the host.
 - Use the meeting link in the invitation to join.
 - Enter a meeting password if the host has enabled one.
@@ -79,6 +80,7 @@ For organizations expecting a large number of users who need access to Avatour, 
 **Additional Admin privileges include:**
 
 **Account Management**  
+
 - Create new users and assign them to groups.
 - Reset passwords when managed by Avatour (not applicable when SSO is enabled). 
 - Upgrade Guest users to Host.  
@@ -86,12 +88,14 @@ For organizations expecting a large number of users who need access to Avatour, 
 - Transfer assets from one Host user to another during deletion.
 
 **Settings**  
+
 - Configure **organization-wide security settings** for assets, workspaces and meetings hosted on the platform (e.g., whether a Host must be present to start a meeting, whether faces should be blurred on all videos uploaded to the platform).  
 - Enable or disable **AI features** or **recording**.  
 - Apply company branding consistently across the platform if a **custom domain** is configured.
   
 
-**Assets & Analytics**  
+**Assets & Analytics** 
+ 
 - View all Assets uploaded by any user in the organization.  
 - Review platform usage across the organization.
 
@@ -305,7 +309,7 @@ When reviewing an asset in a workspace, the toolbar is similar but optimized for
 
 When you log in to your Avatour User Account, you will access the **Web Console**.  
 
-### 4.1 Web Console - Overview Main Menu
+### 4.1 Web Console - Overview Main Menu {#web-console-overview-main-menu}
 
 On the left-hand side, you will see the following menu items:
 
@@ -325,7 +329,7 @@ On the left-hand side, you will see the following menu items:
 
 ---
 
-### 4.2 Web Console - Details by Menu Item (with images)
+### 4.2 Web Console - Details by Menu Item (with images) {#web-console-details-by-menu-item}
 
 #### 4.2.1 Workspaces
 
@@ -358,6 +362,7 @@ Inside a workspace:
 ![Avatour Settings - Workspace View](https://res.cloudinary.com/avatour/image/upload/v1772387752/avatour-screenshot-workspace-settings_llcei3.png) *Workspace Settings*
 
 **Workspace Settings**
+
 - **Report Template** – Select checklist template for AI reporting.  
 - **Enable Notifications** – Daily digest emails for note status changes.  
 
@@ -366,13 +371,14 @@ Inside a workspace:
 - **Public Workspace** – Anyone with the link can view assets directly.
 
 **Meeting Settings**
-- **Authentication required** – Participants must sign in.  
-- **Allow guest access** – Permit non-registered users to view assets.  
-- **Auto-Start Recording / Manual Start** – Choose if meetings auto-record or are started manually.  
-- **Require host** – Host must admit participants; meeting ends when host leaves.  
-- **Allow spectator access** – Join without mic or camera; communicate via chat.  
-- **Password protected meetings** – Require a password for joining.  
-- **Show Travel-Savings Question** – Ask participants if the meeting reduced travel.  
+  
+* **Authentication required** – Participants must sign in.  
+* **Allow guest access** – Permit non-registered users to view assets.  
+* **Auto-Start Recording / Manual Start** – Choose if meetings auto-record or are started manually.  
+* **Require host** – Host must admit participants; meeting ends when host leaves.  
+* **Allow spectator access** – Join without mic or camera; communicate via chat.  
+* **Password protected meetings** – Require a password for joining.  
+* **Show Travel-Savings Question** – Ask participants if the meeting reduced travel.  
 
 > Settings can be combined (e.g., no host required but password protected).
 
@@ -454,7 +460,8 @@ Using the external battery:
 - If IT requires whitelisting, find MAC address: Settings → About → WiFi Address.
 
 ##### Mobile Network
-**Option A: Kit-provided hotspot & SIM**
+**Option A: Kit-provided hotspot & SIM**  
+
 - Attach GlocalMe hotspot to Telesin battery stick (magnet).  
 - Ensures no interference and maintains connection if moving away from camera.  
 - Troubleshooting:
