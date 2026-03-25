@@ -47,7 +47,8 @@
   .pillar-badge .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--orange); flex-shrink: 0; }
 
   /* ── LAYOUT ── */
-  .calc-layout { max-width: 1120px; margin: 0 auto; padding: 0 40px 80px; display: grid; grid-template-columns: 1fr 360px; gap: 28px; align-items: start; }
+  .calc-layout { max-width: 860px; margin: 0 auto; padding: 0 40px 80px; display: block; }
+  .calc-layout.has-results { max-width: 1120px; display: grid; grid-template-columns: 1fr 360px; gap: 28px; align-items: start; }
 
   /* ── SECTION BLOCKS ── */
   .section-block { background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; padding: 26px 28px; margin-bottom: 18px; transition: border-color .2s, box-shadow .2s; box-shadow: 0 1px 4px rgba(19,42,57,0.06); }
@@ -266,7 +267,7 @@
 
   /* Responsive */
   @media (max-width: 860px) {
-    .calc-layout { grid-template-columns: 1fr; padding: 0 20px 60px; }
+    .calc-layout, .calc-layout.has-results { display: block; padding: 0 20px 60px; }
     .page-header-inner { padding: 36px 20px 36px; }
     .results-panel { position: static; }
     .uc-grid { grid-template-columns: repeat(2,1fr); }
@@ -540,7 +541,7 @@
 </div>
 
 <!-- STICKY RESULTS -->
-<div class="results-panel">
+<div class="results-panel" id="results-panel" style="display:none;">
   <div class="results-card">
     <div class="results-header">
       <div class="results-header-label">Your Avatour ROI</div>
@@ -999,6 +1000,8 @@ function calculate() {
   updateSlides({ grossSavings, p1_total, p1_travel, p1_time, p2_total, p2_travel, p2_time, p3_total,
                  netSavings, roi, paybackMo, annualCost, co2_t, sites, sessPerMonth, monthlyCost });
 
+  el('results-panel').style.display = '';
+  el('results-panel').closest('.calc-layout').classList.add('has-results');
   el('slides-section').classList.add('visible');
   el('slides-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
