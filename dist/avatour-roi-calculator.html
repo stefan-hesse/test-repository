@@ -889,6 +889,29 @@ function getWeightedAverages() {
 // MAIN CALCULATION
 // ───────────────────────────────────────────────
 function calculate() {
+  // ── VALIDATE COST ──
+  const costField = el('cost_cust_val');
+  if (!costField.value || costField.value === '') {
+    costField.style.borderColor = 'var(--orange)';
+    costField.style.boxShadow = '0 0 0 3px rgba(255,78,0,0.2)';
+    costField.focus();
+    // Show inline error message
+    let errMsg = document.getElementById('cost_error_msg');
+    if (!errMsg) {
+      errMsg = document.createElement('span');
+      errMsg.id = 'cost_error_msg';
+      errMsg.style.cssText = 'font-size:11.5px; color:var(--orange); font-weight:600; margin-top:4px; display:block;';
+      costField.parentNode.appendChild(errMsg);
+    }
+    errMsg.textContent = 'Please enter your annual Avatour cost to calculate ROI.';
+    return;
+  }
+  // Clear any previous error
+  costField.style.borderColor = '';
+  costField.style.boxShadow = '';
+  const errMsg = document.getElementById('cost_error_msg');
+  if (errMsg) errMsg.textContent = '';
+
   // ── PILLAR 1 ──
   const sites = v('p1_sites');
   const sessPerMonth = v('p1_sessions');
@@ -974,7 +997,7 @@ function calculate() {
 
   // ── UPDATE SLIDES ──
   updateSlides({ grossSavings, p1_total, p1_travel, p1_time, p2_total, p2_travel, p2_time, p3_total,
-                 netSavings, roi, paybackMo, annualCost, co2_t, sites, sessPerMonth, monthlyCost });
+                 netSavings, roi, paybackMo, annualCost, co2_t, sites, sessPerMonth, monthlyCost: annualCostInput/12 });
 
   el('results-panel').style.display = '';
   document.querySelector('.calc-layout').classList.add('has-results');
