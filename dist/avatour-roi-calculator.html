@@ -102,9 +102,7 @@
   .uc-card.selected .uc-check::after { content: '✓'; color: white; font-weight: 700; }
 
   /* ── COST TOGGLE ── */
-  .cost-toggle { display: flex; gap: 9px; margin-bottom: 14px; }
-  .toggle-btn { flex: 1; padding: 8px; border-radius: 7px; border: 1px solid var(--border); background: transparent; color: var(--text-muted); font-family: var(--font-b); font-size: 12px; cursor: pointer; transition: all .2s; font-weight: 500; }
-  .toggle-btn.active { border-color: var(--orange); background: var(--orange-light); color: var(--white); }
+
 
   /* ── CALC BTN ── */
   .calc-btn { width: 100%; padding: 15px; background: var(--orange); color: var(--white); font-family: var(--font-d); font-size: 15px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; border: none; border-radius: 9px; cursor: pointer; transition: all .2s; margin-top: 6px; }
@@ -374,7 +372,7 @@
     <div class="form-grid">
       <div class="field">
         <label>Number of Locations</label>
-        <input type="number" id="p1_sites" value="5" min="1" oninput="updateIndicativeCost()">
+        <input type="number" id="p1_sites" value="5" min="1">
       </div>
       <div class="field">
         <label>Sessions per Month per Location</label>
@@ -516,22 +514,14 @@
         <div class="section-desc">Used to calculate net ROI and payback period.</div>
       </div>
     </div>
-    <div class="cost-toggle">
-      <button class="toggle-btn active" onclick="setCostMode('indicative', this)">Use indicative price</button>
-      <button class="toggle-btn" onclick="setCostMode('custom', this)">Enter my own cost</button>
-    </div>
-    <div id="cost_indicative_block" class="form-grid cols-1">
-      <div class="field">
-        <label>Indicative Annual Cost (USD) — ($5,000 + locations × $5,000) / month</label>
-        <input type="number" id="cost_ind_val" value="30000" readonly style="opacity:.55;cursor:default;">
-        <span class="input-hint" id="cost_ind_hint">Based on 5 locations: $5,000 + 5 × $5,000 = $30,000/yr ($2,500/mo). Indicative only — contact Avatour for exact pricing.</span>
-      </div>
-    </div>
-    <div id="cost_custom_block" style="display:none;">
+
+
+    <div id="cost_custom_block">
       <div class="form-grid cols-1">
         <div class="field">
-          <label>Your Monthly Avatour Cost (USD)</label>
-          <input type="number" id="cost_cust_val" value="30000" min="0">
+          <label>Your Annual Avatour Cost (USD)</label>
+          <input type="number" id="cost_cust_val" value="" min="0" >
+          <span class="input-hint">Enter your actual annual subscription cost to calculate net ROI and payback period.</span>
         </div>
       </div>
     </div>
@@ -808,22 +798,8 @@ function getSelectedUCs() {
 // ───────────────────────────────────────────────
 // COST MODE
 // ───────────────────────────────────────────────
-let costMode = 'indicative';
-function setCostMode(mode, btn) {
-  costMode = mode;
-  document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  el('cost_indicative_block').style.display = mode === 'indicative' ? '' : 'none';
-  el('cost_custom_block').style.display = mode === 'custom' ? '' : 'none';
-}
 
-function updateIndicativeCost() {
-  const locs = Math.max(1, parseInt(el('p1_sites').value) || 1);
-  const annual  = 5000 + locs * 5000;
-  const monthly = annual / 12;
-  el('cost_ind_val').value = annual;
-  const hint = el('cost_ind_hint');
-  if (hint) hint.textContent = `Based on ${locs} location${locs>1?'s':''}: $5,000 + ${locs} × $5,000 = $${annual.toLocaleString()}/yr ($${Math.round(monthly).toLocaleString()}/mo). Indicative only — contact Avatour for exact pricing.`;
+ location${locs>1?'s':''}: $5,000 + ${locs} × $5,000 = $${annual.toLocaleString()}/yr ($${Math.round(monthly).toLocaleString()}/mo). Indicative only — contact Avatour for exact pricing.`;
 }
 
 // ───────────────────────────────────────────────
@@ -956,8 +932,8 @@ function calculate() {
   const grossSavings = p1_total + p2_total + p3_total;
 
   // ── COST ──
-  const monthlyCost = costMode === 'indicative' ? v('cost_ind_val') : v('cost_cust_val');
-  const annualCost  = monthlyCost * 12;
+  const annualCostInput = v('cost_cust_val');
+  const annualCost  = annualCostInput;
   const netSavings  = grossSavings - annualCost;
   const roi         = annualCost > 0 ? (netSavings / annualCost * 100) : 0;
   const paybackMo   = grossSavings > 0 ? (annualCost / (grossSavings / 12)) : 0;
@@ -965,7 +941,7 @@ function calculate() {
 
   // ── STORE ──
   window._R = { grossSavings, p1_total, p1_travel, p1_time, p2_total, p2_travel, p2_time, p3_total,
-                netSavings, roi, paybackMo, annualCost, co2_t, sites, sessPerMonth, monthlyCost };
+                netSavings, roi, paybackMo, annualCost, co2_t, sites, sessPerMonth, monthlyCost: annualCostInput/12 };
 
   // ── STICKY PANEL ──
   const roiStr = (roi >= 0 ? '+' : '') + Math.round(roi) + '% ROI';
@@ -1131,7 +1107,6 @@ avatour.com  |  Be There. Without Being There.`;
 
 // Init
 updatePctCheck();
-updateIndicativeCost();
 
 // Print styles
 const ps = document.createElement('style');
