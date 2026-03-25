@@ -197,7 +197,7 @@ Cliccando su un'opzione del menu si apre un **pannello laterale** sul lato sinis
 
 Ecco un esempio di vista in una Riunione Avatour:
 
-![Avatour Meeting UI with Assets Panel, blank Canvas and Participants Panel](https://res.cloudinary.com/avatour/image/upload/v1772362400/avatour-screenshot-meeting-assets-blank-participants_pugprq.png)
+![Avatour Meeting UI with Assets Panel, blank Canvas and Participants Panel](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-meeting-assets-blank-participants_pugprq.png)
 *Riunione Avatour con Pannello Asset (sinistra), Canvas (centro) e Pannello Partecipanti (destra)*
 
 ---
@@ -206,7 +206,7 @@ Ecco un esempio di vista in una Riunione Avatour:
 
 Ecco un esempio di vista Workspace:
 
-![Avatour Workspace with Assets Panel, blank Canvas and Meetings Panel](https://res.cloudinary.com/avatour/image/upload/v1772198701/avatour-screenshot-workspace-assets-blank-meetings_qeumpl.png)
+![Avatour Workspace with Assets Panel, blank Canvas and Meetings Panel](https://res.cloudinary.com/avatour/image/upload//avatour-screenshot-workspace-assets-blank-meetings_qeumpl.png)
 *Workspace Avatour con Pannello Asset (sinistra), Canvas (centro) e Pannello Riunioni (destra)*
 
 ---
@@ -217,7 +217,7 @@ Il menu in basso fornisce accesso ai principali controlli dell'interfaccia e ai 
 
 **Menu in Basso della Riunione**
 
-![Avatour Meeting Bottom Menu](https://res.cloudinary.com/avatour/image/upload/v1772300383/avatour-screenshot-meeting-bottom-menu_bflaor.png)
+![Avatour Meeting Bottom Menu](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-meeting-bottom-menu_bflaor.png)
 *Menu in Basso della Riunione Avatour*
 
 - **Asset** – Rivedi i file del workspace, inclusi video registrati, immagini, snapshot e PDF.
@@ -235,7 +235,7 @@ Il menu in basso fornisce accesso ai principali controlli dell'interfaccia e ai 
 - **Partecipanti** – Apri o chiudi il pannello dei partecipanti.
 - **Info Riunione** – Visualizza il codice della riunione, il link di invito e accedi ai tutorial correlati.
 
-![Avatour Meeting Info](https://res.cloudinary.com/avatour/image/upload/v1772547439/avatour-screenshot-meeting-info-side-pane_nx7dp4.png)
+![Avatour Meeting Info](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-meeting-info-side-pane_nx7dp4.png)
 *Pannello Laterale Informazioni Riunione Avatour*
 
 - **Impostazioni** – Regola le impostazioni di lingua, audio e video. Per le riunioni video live 360°, usa **Mostra Bitrate** per monitorare le statistiche di connettività.
@@ -256,7 +256,7 @@ L'opzione **Presenta** nel menu in basso della riunione consente di condividere 
 
 Quando si presenta un asset in una riunione, la **Barra degli Strumenti Asset** appare sopra il canvas. Ecco gli strumenti e le voci del menu disponibili quando si <u>presenta un Asset in una Riunione</u> - spiegati da sinistra a destra.
 
-![Avatour Menu while Presenting an Asset in a Meeting](https://res.cloudinary.com/avatour/image/upload/v1772303706/avatour-screenshot-present-asset-menu-meeting_oflsr5.png) *Menu Avatour durante la presentazione di un Asset in una Riunione*
+![Avatour Menu while Presenting an Asset in a Meeting](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting_oflsr5.png) *Menu Avatour durante la presentazione di un Asset in una Riunione*
 
 
 - **Timeline Video / Barra di Avanzamento** – Mostra l'avanzamento del video con note e argomenti chiave estratti dall'audio. Clicca su una nota o un argomento per passare a quel momento e aprire la nota. Include i controlli **Riproduci / Pausa**.
@@ -265,24 +265,24 @@ Quando si presenta un asset in una riunione, la **Barra degli Strumenti Asset** 
 - **Mostra/Nascondi Punto di Vista (POV)** – Mostra dove ogni partecipante sta guardando nel video 360°.
 - **Note** – Crea note ancorate a momenti specifici nell'asset. Le note possono essere categorizzate (Osservazione, Problema, Azione, Raccomandazione), tracciate per stato (Aperto → In Corso → Risolto) e condivise tramite link diretti.
 
-  ![Avatour Note and Notes Filter](https://res.cloudinary.com/avatour/image/upload/v1772374822/avatour-screenshot-present-asset-menu-meeting-showing-note-and-filters_g181oc.png) *Nota Avatour e Filtri Note*
+  ![Avatour Note and Notes Filter](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-note-and-filters_g181oc.png) *Nota Avatour e Filtri Note*
 
   - **Note da Comandi Vocali** – Questi sono segnaposto generati automaticamente quando la registrazione rileva menzioni come "inserisci nota", "prendi nota" o "fai una nota". Queste note appaiono sulla timeline e devono essere **posizionate e finalizzate** dall'utente.
 
-  ![Avatour Notes - Voice Command Generated](https://res.cloudinary.com/avatour/image/upload/v1772921944/avatour-screenshot-notes-voice-command-generated_ic5cu4.png) *Note Avatour - Generate da Comandi Vocali*
+  ![Avatour Notes - Voice Command Generated](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-notes-voice-command-generated_ic5cu4.png) *Note Avatour - Generate da Comandi Vocali*
 
 - **Pannello Note e Riepilogo** – Apre un pannello laterale che mostra tutte le note, gli argomenti chiave e un riepilogo esecutivo per l'asset. Cliccando su un elemento si passa a quel momento nel video.
 
-  ![Avatour Asset Executive Summary](https://res.cloudinary.com/avatour/image/upload/v1772377209/avatour-screenshot-present-asset-menu-meeting-showing-exec-summary_cqpqbs.png) *Riepilogo Esecutivo Avatour durante la presentazione di un Asset in una Riunione*
+  ![Avatour Asset Executive Summary](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-exec-summary_cqpqbs.png) *Riepilogo Esecutivo Avatour durante la presentazione di un Asset in una Riunione*
 
-  ![Avatour Topics](https://res.cloudinary.com/avatour/image/upload/v1772377209/avatour-screenshot-present-asset-menu-meeting-showing-topics_duuq1a.png) *Argomenti Avatour durante la presentazione di un Asset in una Riunione*
+  ![Avatour Topics](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-topics_duuq1a.png) *Argomenti Avatour durante la presentazione di un Asset in una Riunione*
 
   Dal **Pannello Laterale**, puoi **stampare un report dell'asset** o **scaricarlo come TXT o CSV**. I report possono includere note, argomenti generati dall'AI e trascrizioni complete. Puoi anche **scegliere quali elementi includere** prima di esportare.
 
-  ![Avatour Asset Report Print Menus](https://res.cloudinary.com/avatour/image/upload/v1773496969/avatour-screenshot-asset-report-print-menus_kn0syn.png)
+  ![Avatour Asset Report Print Menus](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-asset-report-print-menus_kn0syn.png)
   *Menu Stampa / Download Report Asset Avatour*
 
-  ![Avatour Print Asset Report Element Selection](https://res.cloudinary.com/avatour/image/upload/v1772376570/avatour-screenshot-asset-report-element-selection_ud8c5k.png)
+  ![Avatour Print Asset Report Element Selection](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-asset-report-element-selection_ud8c5k.png)
   *Menu Selezione Elementi Report Asset Avatour*
 
 - **Link di Condivisione** – Condividi un link a una nota specifica o a una scena nell'asset.
@@ -292,7 +292,7 @@ Quando si presenta un asset in una riunione, la **Barra degli Strumenti Asset** 
 
 Quando si rivede un asset in un workspace, la barra degli strumenti è simile ma ottimizzata per uso individuale:
 
-![Avatour Menu while Presenting an Asset outside a meeting, e.g. when visiting a workspace](https://res.cloudinary.com/avatour/image/upload/v1772303705/avatour-screenshot-present-asset-menu-workspace_iri8gc.png) *Menu Avatour durante la presentazione di un Asset in un Workspace*
+![Avatour Menu while Presenting an Asset outside a meeting, e.g. when visiting a workspace](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-workspace_iri8gc.png) *Menu Avatour durante la presentazione di un Asset in un Workspace*
 
 - **Timeline Video / Barra di Avanzamento** – Mostra l'avanzamento del video con note e argomenti chiave estratti dall'audio. Clicca in qualsiasi punto della timeline per scorrere il video. Clicca su una nota o un argomento per passare a quel momento e aprire la nota. Include i controlli **Riproduci / Pausa**.
 - **Snapshot, Note, Pannello Note e Riepilogo, Link di Condivisione, Sottotitoli**
@@ -311,7 +311,7 @@ Quando accedi al tuo Account Utente Avatour, accederai alla **Web Console**.
 
 Sul lato sinistro vedrai le seguenti voci del menu:
 
-![Avatour Web Console - Main Menu](https://res.cloudinary.com/avatour/image/upload//v1774364052/avatour-screenshot-main-menu_qwpthq.png) *Web Console Avatour - Menu Principale*
+![Avatour Web Console - Main Menu](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu_qwpthq.png) *Web Console Avatour - Menu Principale*
 
 - **Workspace** – Organizza i tuoi contenuti in modo efficiente. Ogni workspace contiene **Asset**, **Collaboratori**, **Riunioni** e **Impostazioni**.
 - **Asset** – Accedi e gestisci tutti i tuoi asset (video, immagini, PDF). Gli Admin possono visualizzare tutti gli asset dell'account e gli asset condivisi sono visibili a tutti gli utenti.
@@ -333,15 +333,15 @@ Sul lato sinistro vedrai le seguenti voci del menu:
 
 I Workspace sono unità organizzative flessibili che consentono di gestire asset, collaboratori e riunioni in un unico posto. Puoi creare un nuovo workspace con il pulsante **Nuovo Workspace** nell'angolo in alto a destra.
 
-![Avatour Web Console - Main Menu Item Workspaces](https://res.cloudinary.com/avatour/image/upload/v1772360323/avatour-screenshot-main-menu-workspaces_hnhkjj.png) *Web Console Avatour - Voce Menu Principale Workspace*
+![Avatour Web Console - Main Menu Item Workspaces](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-workspaces_hnhkjj.png) *Web Console Avatour - Voce Menu Principale Workspace*
 
 Clicca sull'icona campanella per vedere un riepilogo delle attività del workspace negli ultimi 7 giorni.
 
-![Avatour Web Console - Workspace Recent Activities](https://res.cloudinary.com/avatour/image/upload/v1772919758/avatour-screenshot-main-menu-workspace-recent-activities_gby1ws.png) *Attività Recenti del Workspace*
+![Avatour Web Console - Workspace Recent Activities](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-workspace-recent-activities_gby1ws.png) *Attività Recenti del Workspace*
 
 All'interno di un workspace:
 
-![Avatour Workspace with Assets Panel, blank Canvas and Meetings Panel](https://res.cloudinary.com/avatour/image/upload/v1772198701/avatour-screenshot-workspace-assets-blank-meetings_qeumpl.png) *Workspace con Asset (sinistra), Canvas (centro), Riunioni (destra)*
+![Avatour Workspace with Assets Panel, blank Canvas and Meetings Panel](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-workspace-assets-blank-meetings_qeumpl.png) *Workspace con Asset (sinistra), Canvas (centro), Riunioni (destra)*
 
 - **Asset** – Gestisci i file allocati a questo workspace.
 - **Collaboratori** –
@@ -351,20 +351,20 @@ All'interno di un workspace:
 > Più utenti possono accedere a un workspace contemporaneamente senza una riunione. I workspace pubblici e le impostazioni di accesso alle riunioni forniscono accesso alternativo.
 - **Report** – Genera un report utilizzando un modello di checklist sugli asset del workspace selezionati.
 
-![Avatour Workspace Report and Asset Selection](https://res.cloudinary.com/avatour/image/upload/v1772924118/avatour-screenshot-asset-selection-and-workspace-report_itjt8f.png) *Report Workspace e Selezione Asset*
+![Avatour Workspace Report and Asset Selection](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-asset-selection-and-workspace-report_itjt8f.png) *Report Workspace e Selezione Asset*
 
 - **Mappa** – Mostra le posizioni degli asset con GPS abilitato su una mappa.
 - **Riunioni** – Organizza riunioni nel workspace.
 - **Impostazioni** – Configura le impostazioni predefinite di workspace e riunione:
 
-![Avatour Settings - Workspace View](https://res.cloudinary.com/avatour/image/upload/v1772387752/avatour-screenshot-workspace-settings_llcei3.png) *Impostazioni Workspace*
+![Avatour Settings - Workspace View](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-workspace-settings_llcei3.png) *Impostazioni Workspace*
 
 **Impostazioni Workspace**
 
 - **Modello di Report** – Seleziona il modello di checklist per la reportistica AI.
 - **Abilita Notifiche** – Email di riepilogo giornaliero per le modifiche di stato delle note.
 
-![Email Notifications - Example](https://res.cloudinary.com/avatour/image/upload/c_crop,h_600,w_600,x_170,y_60/v1772804314/Screenshot_2026-03-05_140654_bjk0xk.png) *Esempio di Notifiche Email*
+![Email Notifications - Example](https://res.cloudinary.com/avatour/image/upload/c_crop,h_600,w_600,x_170,y_60/Screenshot_2026-03-05_140654_bjk0xk.png) *Esempio di Notifiche Email*
 
 - **Workspace Pubblico** – Chiunque abbia il link può visualizzare gli asset direttamente.
 
@@ -386,7 +386,7 @@ All'interno di un workspace:
 
 Gestisci tutti i video 360°/2D, le immagini e i PDF. Carica/scarica asset, allocali ai workspace, condividili con altri utenti, rinominali, stampa/scarica report, attiva la sfocatura dei volti e la riepilogazione AI.
 
-![Avatour Web Console - Main Menu Item Assets](https://res.cloudinary.com/avatour/image/upload/v1772360326/avatour-screenshot-main-menu-assets_ky5emz.png) *Voce Menu Principale Asset*
+![Avatour Web Console - Main Menu Item Assets](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-assets_ky5emz.png) *Voce Menu Principale Asset*
 
 ---
 
@@ -394,11 +394,11 @@ Gestisci tutti i video 360°/2D, le immagini e i PDF. Carica/scarica asset, allo
 
 Fornisce informazioni su riunioni, utilizzo del workspace e metriche ROI.
 
-![Avatour Web Console - Main Menu Item Analytics (1 of 3)](https://res.cloudinary.com/avatour/image/upload/v1772360315/avatour-screenshot-main-menu-analytics-1-of-3_ds3epe.png) *Panoramica Analytics*
+![Avatour Web Console - Main Menu Item Analytics (1 of 3)](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-analytics-1-of-3_ds3epe.png) *Panoramica Analytics*
 
-![Avatour Web Console - Main Menu Item Analytics (2 of 3)](https://res.cloudinary.com/avatour/image/upload/v1772360313/avatour-screenshot-main-menu-analytics-2-of-3_vpcsme.png) *Attività Riunioni e Utilizzo Workspace*
+![Avatour Web Console - Main Menu Item Analytics (2 of 3)](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-analytics-2-of-3_vpcsme.png) *Attività Riunioni e Utilizzo Workspace*
 
-![Avatour Web Console - Main Menu Item Analytics (3 of 3)](https://res.cloudinary.com/avatour/image/upload/v1772360312/avatour-screenshot-main-menu-analytics-3-of-3_hn2pmr.png) *Utilizzo Licenze Dispositivo e ROI*
+![Avatour Web Console - Main Menu Item Analytics (3 of 3)](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-analytics-3-of-3_hn2pmr.png) *Utilizzo Licenze Dispositivo e ROI*
 
 ## 5. In Loco - Come Utilizzare il Kit Turnkey Avatour {#onsite-how-to-use-the-avatour-turnkey-kit}
 
