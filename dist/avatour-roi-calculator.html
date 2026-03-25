@@ -977,7 +977,7 @@ function calculate() {
                  netSavings, roi, paybackMo, annualCost, co2_t, sites, sessPerMonth, monthlyCost });
 
   el('results-panel').style.display = '';
-  el('results-panel').closest('.calc-layout').classList.add('has-results');
+  document.querySelector('.calc-layout').classList.add('has-results');
   el('slides-section').classList.add('visible');
   el('slides-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
