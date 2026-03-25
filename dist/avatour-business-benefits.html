@@ -412,16 +412,16 @@
     margin: 3px 3px 3px 0;
   }
 
-  .benefit-tag.financial { border-color: #D4EDDA; background: #F0FAF2; color: #1A6B35; }
-  .benefit-tag.time { border-color: #CCE5FF; background: #EEF5FF; color: #1A4B8C; }
-  .benefit-tag.strategic { border-color: #E2D9F3; background: #F4F0FB; color: #5B4B8A; }
+  .benefit-tag.financial { border-color: rgba(255,78,0,0.25); background: rgba(255,78,0,0.06); color: var(--navy); }
+  .benefit-tag.time { border-color: rgba(19,42,57,0.2); background: rgba(19,42,57,0.05); color: var(--navy); }
+  .benefit-tag.strategic { border-color: rgba(19,42,57,0.3); background: rgba(19,42,57,0.08); color: var(--navy); }
   .benefit-tag.soft { border-color: var(--light-grey); background: var(--off-white); color: #555; }
 
-  .benefit-tag::before { font-size: 12px; }
-  .benefit-tag.financial::before { content: '💰'; }
-  .benefit-tag.time::before { content: '⏱'; }
-  .benefit-tag.strategic::before { content: '🎯'; }
-  .benefit-tag.soft::before { content: '✦'; font-size: 10px; }
+  .benefit-tag::before { font-size: 10px; color: var(--orange); }
+  .benefit-tag.financial::before { content: '▸'; }
+  .benefit-tag.time::before { content: '▸'; }
+  .benefit-tag.strategic::before { content: '▸'; }
+  .benefit-tag.soft::before { content: '▸'; }
 
   /* ─── ROI METRICS SECTION ───────────────────────── */
   .roi-section {
@@ -456,12 +456,12 @@
     height: 3px;
   }
 
-  .roi-card.financial::before { background: linear-gradient(90deg, #2ECC71, #27AE60); }
-  .roi-card.time::before { background: linear-gradient(90deg, #3498DB, #2980B9); }
-  .roi-card.carbon::before { background: linear-gradient(90deg, #1ABC9C, #16A085); }
-  .roi-card.sales::before { background: linear-gradient(90deg, var(--orange), #FF8C42); }
-  .roi-card.quality::before { background: linear-gradient(90deg, #9B59B6, #8E44AD); }
-  .roi-card.ai::before { background: linear-gradient(90deg, var(--navy), var(--navy-light)); }
+  .roi-card.financial::before { background: var(--orange); }
+  .roi-card.time::before { background: var(--navy); }
+  .roi-card.carbon::before { background: linear-gradient(90deg, var(--navy), var(--navy-light)); }
+  .roi-card.sales::before { background: var(--orange); }
+  .roi-card.quality::before { background: var(--navy); }
+  .roi-card.ai::before { background: linear-gradient(90deg, var(--navy), var(--orange)); }
 
   .roi-card-icon {
     font-size: 28px;
