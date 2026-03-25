@@ -53,7 +53,7 @@
   .section-block { background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; padding: 26px 28px; margin-bottom: 18px; transition: border-color .2s, box-shadow .2s; box-shadow: 0 1px 4px rgba(19,42,57,0.06); }
   .section-block:hover { border-color: #b8c8d4; box-shadow: 0 3px 12px rgba(19,42,57,0.09); }
   .section-header { display: flex; align-items: flex-start; gap: 13px; margin-bottom: 22px; }
-  .section-icon { width: 40px; height: 40px; border-radius: 9px; display: flex; align-items: center; justify-content: center; font-size: 17px; flex-shrink: 0; background: var(--orange-light); border: 1px solid rgba(255,78,0,.2); }
+  .section-icon { width: 40px; height: 40px; border-radius: 9px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: var(--orange-light); border: 1px solid rgba(255,78,0,.2); padding: 9px; }
   .section-title { font-family: var(--font-d); font-size: 15px; font-weight: 700; margin-bottom: 3px; color: var(--navy); }
   .section-desc { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
   .section-badge { display: inline-flex; align-items: center; gap: 5px; font-size: 10px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; background: var(--orange-light); border: 1px solid rgba(255,78,0,.2); color: var(--orange); border-radius: 100px; padding: 2px 9px; margin-top: 4px; }
@@ -93,7 +93,7 @@
   .uc-card:hover { border-color: rgba(255,78,0,.35); background: rgba(255,78,0,.06); }
   .uc-card.selected { border-color: var(--orange); background: var(--orange-light); }
   .uc-card input { display: none; }
-  .uc-card-icon { font-size: 16px; }
+  .uc-card-icon { width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; }
   .uc-card-name { font-family: var(--font-d); font-size: 12px; font-weight: 700; line-height: 1.2; color: var(--navy); }
   .uc-card-desc { font-size: 10.5px; color: var(--text-muted); line-height: 1.35; }
   .uc-check { width: 14px; height: 14px; border-radius: 3px; border: 1.5px solid var(--input-border); background: transparent; margin-top: auto; display: flex; align-items: center; justify-content: center; transition: all .2s; font-size: 9px; }
@@ -226,7 +226,7 @@
   .s3-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3%; flex: 1; }
   .s3-card { background: #f5f7f9; border: 1px solid #dde5ea; border-radius: 8px; padding: 4% 4.5%; display: flex; flex-direction: column; gap: 3%; transition: border-color .2s; }
   .s3-card.uc-active { border-color: var(--orange); background: rgba(255,78,0,.06); }
-  .s3-card-icon { font-size: clamp(12px,1.6vw,19px); }
+  .s3-card-icon { width: clamp(16px,2vw,24px); height: clamp(16px,2vw,24px); display: flex; align-items: center; justify-content: center; }
   .s3-card-title { font-size: clamp(7px,.88vw,10.5px); font-weight: 700; line-height: 1.2; color: var(--navy); }
   .s3-card-desc { font-size: clamp(5.5px,.68vw,8px); color: #5a6e7a; line-height: 1.45; flex: 1; }
   .s3-pill { display: inline-flex; align-items: center; gap: 4px; background: rgba(255,78,0,.1); border: 1px solid rgba(255,78,0,.2); border-radius: 100px; padding: 1.5px 7px; font-size: clamp(5px,.6vw,7px); color: var(--orange); font-weight: 600; margin-top: auto; }
@@ -250,7 +250,7 @@
   .soft-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--orange), transparent); opacity: 0; transition: opacity .25s; }
   .soft-card:hover { border-color: rgba(255,78,0,.4); transform: translateY(-2px); }
   .soft-card:hover::before { opacity: 1; }
-  .soft-card-icon { font-size: 20px; margin-bottom: 10px; }
+  .soft-card-icon { width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; }
   .soft-card-title { font-family: var(--font-d); font-size: 13.5px; font-weight: 700; margin-bottom: 7px; color: #ffffff; }
   .soft-card-text { font-size: 12px; color: rgba(255,255,255,0.55); line-height: 1.6; }
   .soft-card-indicator { display: inline-flex; align-items: center; gap: 4px; margin-top: 11px; background: var(--orange-light); border: 1px solid rgba(255,78,0,.2); border-radius: 100px; padding: 2px 9px; font-size: 10px; font-weight: 600; color: var(--orange); letter-spacing: .04em; }
@@ -313,7 +313,7 @@
   <!-- USE CASES -->
   <div class="section-block">
     <div class="section-header">
-      <div class="section-icon">🎯</div>
+      <div class="section-icon"><img src="https://res.cloudinary.com/avatour/image/upload/icon-shake-hands_wlrkbm.svg" style="width:22px;height:22px;display:block;" alt=""></div>
       <div>
         <div class="section-title">Your Avatour Use Cases</div>
         <div class="section-desc">Select all that apply. Your selection shapes the soft benefit analysis on Slide 3.</div>
@@ -321,37 +321,37 @@
     </div>
     <div class="uc-grid">
       <label class="uc-card" onclick="toggleUC(this)">
-        <div class="uc-card-icon">🔍</div>
+        <div class="uc-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/remote-inspection_atolbr.svg" style="width:24px;height:24px;display:block;" alt=""></div>
         <div class="uc-card-name">Remote Inspections &amp; Audits</div>
         <div class="uc-card-desc">Quality, supplier, compliance, safety</div>
         <div class="uc-check"></div>
       </label>
       <label class="uc-card" onclick="toggleUC(this)">
-        <div class="uc-card-icon">🏭</div>
+        <div class="uc-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/improve-processes_jysb1x.svg" style="width:24px;height:24px;display:block;" alt=""></div>
         <div class="uc-card-name">Gemba &amp; Continuous Improvement</div>
         <div class="uc-card-desc">Lean walks, process reviews</div>
         <div class="uc-check"></div>
       </label>
       <label class="uc-card" onclick="toggleUC(this)">
-        <div class="uc-card-icon">🤝</div>
+        <div class="uc-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/icon-shake-hands_wlrkbm.svg" style="width:24px;height:24px;display:block;" alt=""></div>
         <div class="uc-card-name">Customer &amp; Sales Tours</div>
         <div class="uc-card-desc">Show capabilities, win contracts</div>
         <div class="uc-check"></div>
       </label>
       <label class="uc-card" onclick="toggleUC(this)">
-        <div class="uc-card-icon">🎓</div>
+        <div class="uc-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/onsite-training_xnx10b.svg" style="width:24px;height:24px;display:block;" alt=""></div>
         <div class="uc-card-name">Training &amp; Onboarding</div>
         <div class="uc-card-desc">Site-specific, safety, procedures</div>
         <div class="uc-check"></div>
       </label>
       <label class="uc-card" onclick="toggleUC(this)">
-        <div class="uc-card-icon">🛡️</div>
+        <div class="uc-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/increase-safety_vm0bio.svg" style="width:24px;height:24px;display:block;" alt=""></div>
         <div class="uc-card-name">Health, Safety &amp; Environment</div>
         <div class="uc-card-desc">HSE audits, incident response</div>
         <div class="uc-check"></div>
       </label>
       <label class="uc-card" onclick="toggleUC(this)">
-        <div class="uc-card-icon">📐</div>
+        <div class="uc-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/icon-timeline_vp8z17.svg" style="width:24px;height:24px;display:block;" alt=""></div>
         <div class="uc-card-name">Architecture &amp; Construction</div>
         <div class="uc-card-desc">Progress reviews, handovers</div>
         <div class="uc-check"></div>
@@ -362,7 +362,7 @@
   <!-- PILLAR 1 -->
   <div class="section-block">
     <div class="section-header">
-      <div class="section-icon">✈️</div>
+      <div class="section-icon"><img src="https://res.cloudinary.com/avatour/image/upload/icon-plane_oczrqp.svg" style="width:22px;height:22px;display:block;" alt=""></div>
       <div>
         <div class="section-title">Pillar 1 — Live 360° Sessions</div>
         <div class="section-badge">Replaces in-person site visits</div>
@@ -448,7 +448,7 @@
   <!-- PILLAR 2 -->
   <div class="section-block">
     <div class="section-header">
-      <div class="section-icon">🎥</div>
+      <div class="section-icon"><img src="https://res.cloudinary.com/avatour/image/upload/record-playback_z91edi.svg" style="width:22px;height:22px;display:block;" alt=""></div>
       <div>
         <div class="section-title">Pillar 2 — Recorded Collaboration (Sync &amp; Async)</div>
         <div class="section-badge">Reviews of recorded 360° assets</div>
@@ -477,7 +477,7 @@
   <!-- PILLAR 3 -->
   <div class="section-block">
     <div class="section-header">
-      <div class="section-icon">🤖</div>
+      <div class="section-icon"><img src="https://res.cloudinary.com/avatour/image/upload/icon-pinned-note-2_quli8e.svg" style="width:22px;height:22px;display:block;" alt=""></div>
       <div>
         <div class="section-title">Pillar 3 — AI Inspection Report Generation</div>
         <div class="section-badge">New capability</div>
@@ -509,7 +509,7 @@
   <!-- COST -->
   <div class="section-block">
     <div class="section-header">
-      <div class="section-icon">💳</div>
+      <div class="section-icon"><img src="https://res.cloudinary.com/avatour/image/upload/save-money_tca5gy.svg" style="width:22px;height:22px;display:block;" alt=""></div>
       <div>
         <div class="section-title">Avatour Subscription Cost</div>
         <div class="section-desc">Used to calculate net ROI and payback period.</div>
@@ -630,7 +630,7 @@
         <div class="s2-grid">
           <!-- P1 -->
           <div>
-            <div class="s2-col-title">✈️ Pillar 1 — Live Sessions</div>
+            <div class="s2-col-title">Pillar 1 — Live Sessions</div>
             <div class="s2-row"><span class="s2-row-label">Travel cost savings</span><span class="s2-row-val orange" id="sl2_p1_travel">—</span></div>
             <div class="s2-bar-mini"><div class="s2-bar-fill" id="sl2_bar_p1t" style="background:var(--orange);width:0%"></div></div>
             <div class="s2-row"><span class="s2-row-label">Productivity time recovered</span><span class="s2-row-val orange" id="sl2_p1_time">—</span></div>
@@ -640,12 +640,12 @@
           </div>
           <!-- P2 + P3 + Cost -->
           <div>
-            <div class="s2-col-title">🎥 Pillar 2 — Recorded Collaboration</div>
+            <div class="s2-col-title">Pillar 2 — Recorded Collaboration</div>
             <div class="s2-row"><span class="s2-row-label">Travel cost savings</span><span class="s2-row-val blue" id="sl2_p2_travel">—</span></div>
             <div class="s2-row"><span class="s2-row-label">Productivity time recovered</span><span class="s2-row-val blue" id="sl2_p2_time">—</span></div>
             <div class="s2-total-row" style="margin-bottom:6%;"><span class="s2-total-label">P2 Subtotal</span><span class="s2-total-val" style="color:var(--blue)" id="sl2_p2_total">—</span></div>
 
-            <div class="s2-col-title">🤖 Pillar 3 — AI Reports</div>
+            <div class="s2-col-title">Pillar 3 — AI Reports</div>
             <div class="s2-row"><span class="s2-row-label">Report time saved / yr</span><span class="s2-row-val purple" id="sl2_p3_total">—</span></div>
             <div class="s2-total-row">
               <div>
@@ -708,37 +708,37 @@
   </div>
   <div class="soft-grid">
     <div class="soft-card">
-      <div class="soft-card-icon">🧠</div>
+      <div class="soft-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/icon-align-teams_vjcarc.svg" style="width:28px;height:28px;display:block;margin-bottom:10px;" alt=""></div>
       <div class="soft-card-title">Better Decision Quality</div>
       <div class="soft-card-text">More experts join simultaneously — on-site specialists, remote managers, external consultants — increasing quality of findings and reducing costly rework cycles.</div>
       <div class="soft-card-indicator">High Impact</div>
     </div>
     <div class="soft-card">
-      <div class="soft-card-icon">⚡</div>
+      <div class="soft-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/realtime-communication_ylphs5.svg" style="width:28px;height:28px;display:block;margin-bottom:10px;" alt=""></div>
       <div class="soft-card-title">Faster Corrective Action</div>
       <div class="soft-card-text">Issues identified during an Avatour session are linked directly to 360° video evidence, allowing teams to act immediately rather than waiting for a follow-up visit.</div>
       <div class="soft-card-indicator">High Impact</div>
     </div>
     <div class="soft-card">
-      <div class="soft-card-icon">🛡️</div>
+      <div class="soft-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/increase-safety_vm0bio.svg" style="width:28px;height:28px;display:block;margin-bottom:10px;" alt=""></div>
       <div class="soft-card-title">Increased Site Safety</div>
       <div class="soft-card-text">Hazardous environments — factory floors, construction sites, remote facilities — can be inspected remotely, reducing physical exposure to risk.</div>
       <div class="soft-card-indicator">Very High Impact</div>
     </div>
     <div class="soft-card">
-      <div class="soft-card-icon">😌</div>
+      <div class="soft-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/virtual-tours_myn8xh.svg" style="width:28px;height:28px;display:block;margin-bottom:10px;" alt=""></div>
       <div class="soft-card-title">Improved Work-Life Balance</div>
       <div class="soft-card-text">Fewer long-haul trips means less fatigue and burnout — especially for senior managers and quality engineers who travel most frequently.</div>
       <div class="soft-card-indicator">High Impact</div>
     </div>
     <div class="soft-card">
-      <div class="soft-card-icon">🏭</div>
+      <div class="soft-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/reduce-downtime_wmba73.svg" style="width:28px;height:28px;display:block;margin-bottom:10px;" alt=""></div>
       <div class="soft-card-title">Less Site Disruption</div>
       <div class="soft-card-text">A 360° session is far less disruptive than a physical delegation visit — reducing preparation effort and downtime for host teams.</div>
       <div class="soft-card-indicator">Medium Impact</div>
     </div>
     <div class="soft-card">
-      <div class="soft-card-icon">📼</div>
+      <div class="soft-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/record-playback_z91edi.svg" style="width:28px;height:28px;display:block;margin-bottom:10px;" alt=""></div>
       <div class="soft-card-title">Permanent Visual Record</div>
       <div class="soft-card-text">Every session creates a dated, searchable 360° video archive — invaluable for audits, training, project handovers, and compliance documentation.</div>
       <div class="soft-card-indicator">Very High Impact</div>
@@ -1063,12 +1063,12 @@ function pct2(id, pct) {
 // BUILD SOFT BENEFITS SLIDE (use-case aware)
 // ───────────────────────────────────────────────
 const SOFT_BENEFITS = [
-  { icon: '🧠', title: 'Better Decision Quality', desc: 'More experts participate simultaneously — increasing quality of findings and reducing costly rework cycles.', impact: 'High Impact', ucs: ['Remote Inspections', 'Gemba', 'Architecture'] },
-  { icon: '⚡', title: 'Faster Corrective Action', desc: 'Issues link directly to 360° evidence, enabling immediate action without waiting for a follow-up visit.', impact: 'High Impact', ucs: ['Remote Inspections', 'Gemba', 'Health, Safety'] },
-  { icon: '🛡️', title: 'Increased Site Safety', desc: 'Hazardous sites inspected remotely — fewer personnel physically exposed to risk.', impact: 'Very High', ucs: ['Health, Safety', 'Architecture', 'Remote Inspections'] },
-  { icon: '😌', title: 'Better Work-Life Balance', desc: 'Fewer long-haul trips reduces fatigue and burnout for managers and quality engineers.', impact: 'High Impact', ucs: [] },
-  { icon: '🏭', title: 'Less Site Disruption', desc: 'A 360° session is far less disruptive to host operations than a physical delegation visit.', impact: 'Medium', ucs: ['Customer', 'Remote Inspections'] },
-  { icon: '📼', title: 'Permanent Visual Record', desc: 'Every session creates a dated, searchable archive for audits, training, and compliance documentation.', impact: 'Very High', ucs: ['Training', 'Remote Inspections', 'Architecture'] },
+  { icon: '<img src="https://res.cloudinary.com/avatour/image/upload/icon-align-teams_vjcarc.svg" style="width:clamp(14px,1.8vw,22px);height:clamp(14px,1.8vw,22px);display:block;" alt="">', title: 'Better Decision Quality', desc: 'More experts participate simultaneously — increasing quality of findings and reducing costly rework cycles.', impact: 'High Impact', ucs: ['Remote Inspections', 'Gemba', 'Architecture'] },
+  { icon: '<img src="https://res.cloudinary.com/avatour/image/upload/realtime-communication_ylphs5.svg" style="width:clamp(14px,1.8vw,22px);height:clamp(14px,1.8vw,22px);display:block;" alt="">', title: 'Faster Corrective Action', desc: 'Issues link directly to 360° evidence, enabling immediate action without waiting for a follow-up visit.', impact: 'High Impact', ucs: ['Remote Inspections', 'Gemba', 'Health, Safety'] },
+  { icon: '<img src="https://res.cloudinary.com/avatour/image/upload/increase-safety_vm0bio.svg" style="width:clamp(14px,1.8vw,22px);height:clamp(14px,1.8vw,22px);display:block;" alt="">', title: 'Increased Site Safety', desc: 'Hazardous sites inspected remotely — fewer personnel physically exposed to risk.', impact: 'Very High', ucs: ['Health, Safety', 'Architecture', 'Remote Inspections'] },
+  { icon: '<img src="https://res.cloudinary.com/avatour/image/upload/virtual-tours_myn8xh.svg" style="width:clamp(14px,1.8vw,22px);height:clamp(14px,1.8vw,22px);display:block;" alt="">', title: 'Better Work-Life Balance', desc: 'Fewer long-haul trips reduces fatigue and burnout for managers and quality engineers.', impact: 'High Impact', ucs: [] },
+  { icon: '<img src="https://res.cloudinary.com/avatour/image/upload/reduce-downtime_wmba73.svg" style="width:clamp(14px,1.8vw,22px);height:clamp(14px,1.8vw,22px);display:block;" alt="">', title: 'Less Site Disruption', desc: 'A 360° session is far less disruptive to host operations than a physical delegation visit.', impact: 'Medium', ucs: ['Customer', 'Remote Inspections'] },
+  { icon: '<img src="https://res.cloudinary.com/avatour/image/upload/record-playback_z91edi.svg" style="width:clamp(14px,1.8vw,22px);height:clamp(14px,1.8vw,22px);display:block;" alt="">', title: 'Permanent Visual Record', desc: 'Every session creates a dated, searchable archive for audits, training, and compliance documentation.', impact: 'Very High', ucs: ['Training', 'Remote Inspections', 'Architecture'] },
 ];
 
 function buildSoftSlide(ucs) {
