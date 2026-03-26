@@ -565,11 +565,7 @@ def build_embed_html(article_html, toc_html, sidenav_html, meta):
 
 /* Scroll offset — override the base CSS which uses calc(header-h + 16px).
    In the embed, header is hidden so we reset to a small breathing room only. */
-/* Reset scroll-margin-top — base CSS uses calc(header-h + 16px) = 76px
-   which is wrong in embed since header is hidden. Override with 0. */
-.guide-article h2 { scroll-margin-top: 0 !important; }
-.guide-article h3 { scroll-margin-top: 0 !important; }
-.guide-article h4 { scroll-margin-top: 0 !important; }
+/* Leave scroll-margin-top from base CSS unchanged — it was working. */
 """
 
     EMBED_JS = """
