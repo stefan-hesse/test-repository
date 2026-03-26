@@ -1,45 +1,47 @@
 name: Build Avatour Guide
-
 on:
   push:
     branches: [main]
   workflow_dispatch:
-
-permissions:
-  contents: write
-
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-
       - name: Install dependencies
-        run: pip install markdown pymdown-extensions python-frontmatter
-
-      - name: Build guide outputs
-        run: python guide-source/build.py
-
-      - name: Commit built files to repository
+        run: pip install markdown pymdown-extensions python-frontmatter anthropic
+      - name: Debug env
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
-          git config user.name "github-actions[bot]"
+          if [ -z "$ANTHROPIC_API_KEY" ]; then
+            echo "ANTHROPIC_API_KEY is EMPTY"
+          else
+            echo "ANTHROPIC_API_KEY is SET (length: ${#ANTHROPIC_API_KEY})"
+          fi
+      - name: Run build (auto-translate + HTML generation)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python guide-source/build.py
+      - name: Commit updated files
+        run: |
+          git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add dist/
-          git diff --staged --quiet || git commit -m "Build: update dist/ [skip ci]"
+          git add "guide-source/Avatour User and Best Practices Guide - IT.md" || true
+          git add "guide-source/Avatour User and Best Practices Guide - ES.md" || true
+          git add "guide-source/Avatour User and Best Practices Guide - EN-prev.md" || true
+          git diff --cached --quiet || git commit -m "Auto-build: translate + generate HTML [skip ci]"
           git push
-
       - name: Upload built files as artifacts
         uses: actions/upload-artifact@v4
         with:
           name: avatour-guide-${{ github.run_number }}
           path: dist/
-          retention-days: 30
