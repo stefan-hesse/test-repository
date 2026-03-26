@@ -522,7 +522,11 @@ def build_full_html(article_html, toc_html, sidenav_html, meta, body_class=""):
 
 def build_embed_html(article_html, toc_html, sidenav_html, meta):
     """Webflow-compatible embed — no header, TOC only, iframe height reporting."""
-    embed_css = CSS  # unchanged — fixed positioning works in the fixed-height iframe
+    # Replace scroll-margin-top values for embed (header is hidden, so 76px offset is wrong)
+    embed_css = CSS.replace(
+        'scroll-margin-top: calc(var(--header-h) + 16px);',
+        'scroll-margin-top: 20px;'
+    )
 
     EMBED_EXTRA_CSS = """
 /* ── WEBFLOW EMBED OVERRIDES ─────────────────────────────────────────── */
