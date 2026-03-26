@@ -147,6 +147,8 @@ def run_auto_translate():
     shutil.copy2(en_path, en_prev_path)
     print(f"  [TRANSLATE] ✓ EN-prev updated")
 
+DIST_DIR = "dist"
+
 # Add or remove languages here. 'suffix' is appended to output filenames.
 # Source file is optional — if missing the language is skipped silently.
 LANGUAGES = [
