@@ -525,7 +525,7 @@ def build_embed_html(article_html, toc_html, sidenav_html, meta):
     # Replace scroll-margin-top values for embed (header is hidden, so 76px offset is wrong)
     embed_css = CSS.replace(
         'scroll-margin-top: calc(var(--header-h) + 16px);',
-        'scroll-margin-top: 80px;'
+        'scroll-margin-top: 120px;'
     )
 
     EMBED_EXTRA_CSS = """
