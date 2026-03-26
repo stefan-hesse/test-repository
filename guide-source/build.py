@@ -572,8 +572,9 @@ def build_embed_html(article_html, toc_html, sidenav_html, meta):
 
     EMBED_JS = """
 // ── ANCHOR LINKS ───────────────────────────────────────────────────────
-// Scroll to section within the iframe, then update the parent page URL
-// so the address bar shows avatour.com/user-guide#anchor (clean, shareable)
+// Scroll to section within the iframe. Then send a message to the parent
+// page (avatour.com) so it can update the URL via pushState.
+// Direct pushState from iframe is blocked by same-origin policy.
 document.querySelectorAll('.guide-sidenav a[href^="#"]').forEach(function(link) {
   link.addEventListener('click', function(e) {
     e.preventDefault();
@@ -581,11 +582,9 @@ document.querySelectorAll('.guide-sidenav a[href^="#"]').forEach(function(link) 
     var target = document.getElementById(id);
     if (!target) return;
     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    try {
-      if (window.top !== window) {
-        window.top.history.pushState(null, '', '#' + id);
-      }
-    } catch(err) {}
+    if (window.parent !== window) {
+      window.parent.postMessage({ avatourAnchor: id }, '*');
+    }
   });
 });
 
