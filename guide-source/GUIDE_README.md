@@ -110,6 +110,18 @@ For Italian use `avatour-guide-embed-it.html`, for Spanish use `avatour-guide-em
 
 **You never need to touch Webflow when updating the guide content.** Every push triggers a build and deploy automatically.
 
+> **Cache note:** Changes to guide **content** (the Markdown source files) are always picked up immediately — no action needed. However, if you update `build.py` itself and the changes don't appear on `avatour.com/user-guide` after the build completes, GitHub Pages may be serving a cached version of the embed file.
+>
+> **Fix:** Add or increment a `?v=` number in the iframe `src` on all three Webflow pages (EN, IT, ES), then publish Webflow:
+> ```
+> avatour-guide-embed.html?v=2
+> avatour-guide-embed-it.html?v=2
+> avatour-guide-embed-es.html?v=2
+> ```
+> Increment to `?v=3`, `?v=4` etc. on each subsequent `build.py` update. This is a rare operation — `build.py` changes are infrequent compared to content edits.
+>
+> **This will no longer be needed after the production migration to AWS S3**, which allows proper `Cache-Control` headers to be set on the embed files.
+
 ---
 
 ## Headings and anchors
