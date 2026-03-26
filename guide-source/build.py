@@ -165,18 +165,21 @@ LANGUAGES = [
         "suffix":  "",
         "source":  "guide-source/Avatour User and Best Practices Guide.md",
         "webflow": "https://avatour.com/user-guide",
+        "title":   "Avatour User and Best Practices Guide",
     },
     {
         "code":    "it",
         "suffix":  "-it",
         "source":  "guide-source/Avatour User and Best Practices Guide - IT.md",
         "webflow": "https://avatour.com/user-guide-it",
+        "title":   "Guida Utente e Best Practice di Avatour",
     },
     {
         "code":    "es",
         "suffix":  "-es",
         "source":  "guide-source/Avatour User and Best Practices Guide - ES.md",
         "webflow": "https://avatour.com/user-guide-es",
+        "title":   "Guía del Usuario y Mejores Prácticas de Avatour",
     },
 ]
 
@@ -799,7 +802,7 @@ def build_outputs_for_lang(lang):
     post = frontmatter.load(source)
     md_text = post.content
     meta = {
-        'title':   post.get('title', 'Avatour User Guide'),
+        'title':   post.get('title', lang.get('title', 'Avatour User and Best Practices Guide')),
         'version': post.get('version', '2.0'),
         'updated': post.get('updated', '2026'),
         'lang':    code,
