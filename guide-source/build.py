@@ -563,9 +563,9 @@ def build_embed_html(article_html, toc_html, sidenav_html, meta):
   overflow-x: hidden !important;
 }
 
-/* Scroll offset for anchor links */
+/* Scroll offset for anchor links — gives breathing room at top of iframe */
 .guide-article h2, .guide-article h3, .guide-article h4 {
-  scroll-margin-top: 20px;
+  scroll-margin-top: 32px;
 }
 """
 
