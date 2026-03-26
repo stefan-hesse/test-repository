@@ -565,16 +565,15 @@ def build_embed_html(article_html, toc_html, sidenav_html, meta):
 
 /* Scroll offset — override the base CSS which uses calc(header-h + 16px).
    In the embed, header is hidden so we reset to a small breathing room only. */
-.guide-article h2 { scroll-margin-top: 20px !important; }
-.guide-article h3 { scroll-margin-top: 20px !important; }
-.guide-article h4 { scroll-margin-top: 20px !important; }
+/* Reset scroll-margin-top — base CSS uses calc(header-h + 16px) = 76px
+   which is wrong in embed since header is hidden. Override with 0. */
+.guide-article h2 { scroll-margin-top: 0 !important; }
+.guide-article h3 { scroll-margin-top: 0 !important; }
+.guide-article h4 { scroll-margin-top: 0 !important; }
 """
 
     EMBED_JS = """
 // ── ANCHOR LINKS ───────────────────────────────────────────────────────
-// Scroll to section within the iframe. Then send a message to the parent
-// page (avatour.com) so it can update the URL via pushState.
-// Direct pushState from iframe is blocked by same-origin policy.
 document.querySelectorAll('.guide-sidenav a[href^="#"]').forEach(function(link) {
   link.addEventListener('click', function(e) {
     e.preventDefault();
@@ -582,9 +581,6 @@ document.querySelectorAll('.guide-sidenav a[href^="#"]').forEach(function(link) 
     var target = document.getElementById(id);
     if (!target) return;
     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    if (window.parent !== window) {
-      window.parent.postMessage({ avatourAnchor: id }, '*');
-    }
   });
 });
 
