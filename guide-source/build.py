@@ -74,6 +74,10 @@ def auto_translate_lang(en_sections, en_prev_dict, lang_path, lang_name, api_key
 
     changed = 0
     for heading, body in en_sections:
+        # Never translate the preamble — copy it as-is
+        if heading == '__preamble__':
+            lang_sections[heading] = ('', body)
+            continue
         if en_prev_dict.get(heading, '') != body:
             # Translate heading + body together
             translated = translate_text(heading + body, lang_name, api_key)
@@ -129,7 +133,11 @@ def run_auto_translate():
     else:
         print("  [TRANSLATE] No EN-prev found — translating full document")
 
-    total_changed = sum(1 for h, b in en_sections if en_prev_dict.get(h, '') != b)
+    # Count changed sections, excluding preamble
+    total_changed = sum(
+        1 for h, b in en_sections
+        if h != '__preamble__' and en_prev_dict.get(h, '') != b
+    )
     print(f"  [TRANSLATE] {total_changed} section(s) changed")
 
     if total_changed > 0:
