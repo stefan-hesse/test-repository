@@ -572,16 +572,18 @@ def build_embed_html(article_html, toc_html, sidenav_html, meta):
     EMBED_JS = """
 // ── ANCHOR LINKS ───────────────────────────────────────────────────────
 // Intercept sidebar link clicks:
-// 1. Scroll to the section inside the iframe
+// 1. Scroll to the section inside the iframe using scrollTop directly
+//    (more reliable than scrollIntoView when scroll-margin-top is ignored)
 // 2. Update the parent page URL to avatour.com/user-guide#anchor
-//    so the URL bar shows a clean, shareable link
 document.querySelectorAll('.guide-sidenav a[href^="#"]').forEach(function(link) {
   link.addEventListener('click', function(e) {
     e.preventDefault();
     var id = this.getAttribute('href').slice(1);
     var target = document.getElementById(id);
     if (!target) return;
-    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    var offset = 24; // breathing room at top
+    var targetTop = target.getBoundingClientRect().top + window.pageYOffset - offset;
+    window.scrollTo({ top: targetTop, behavior: 'smooth' });
     // Update parent page URL cleanly
     try {
       if (window.top !== window) {
