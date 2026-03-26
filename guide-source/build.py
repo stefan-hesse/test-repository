@@ -72,8 +72,11 @@ def auto_translate_lang(en_sections, en_prev_dict, lang_path, lang_name, api_key
     else:
         lang_sections = {}
 
-    changed = 0
+changed = 0
     for heading, body in en_sections:
+        if heading == '__preamble__':
+            lang_sections[heading] = ('', body)
+            continue
         if en_prev_dict.get(heading, '') != body:
             # Translate heading + body together
             translated = translate_text(heading + body, lang_name, api_key)
