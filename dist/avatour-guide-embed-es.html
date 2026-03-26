@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -48,6 +48,15 @@ body {
   color:rgba(255,255,255,.5); letter-spacing:.09em; text-transform:uppercase;
 }
 .hright { margin-left:auto; display:flex; gap:12px; align-items:center; }
+.lang-switcher { display:flex; gap:4px; align-items:center; }
+.lang-btn {
+  font-family:'Titillium Web',sans-serif; font-size:11px; font-weight:700;
+  letter-spacing:.06em; padding:4px 8px; border-radius:4px;
+  border:1px solid rgba(255,255,255,.25); background:transparent;
+  color:rgba(255,255,255,.6); cursor:pointer; text-decoration:none; transition:all .15s;
+}
+.lang-btn:hover { background:rgba(255,255,255,.1); color:#fff; }
+.lang-btn.active { background:var(--orange); border-color:var(--orange); color:#fff; }
 .hbtn {
   font-family:'Titillium Web',sans-serif; font-size:12px; font-weight:700;
   color:var(--blue); background:var(--orange);
@@ -184,8 +193,7 @@ body {
   border-left: 3px solid var(--orange);
   background: #fff8f5;
   margin: 16px 0; padding: 11px 16px;
-  border-radius: 0 6px 6px 0;
-  font-size: 13.5px;
+  border-radius: 0 6px 6px 0; font-size: 13.5px;
 }
 .guide-article blockquote p { margin-bottom: 0; color: #2a3a44; }
 .guide-article blockquote strong { color: var(--orange); }
@@ -236,7 +244,7 @@ body {
   .guide-header, .guide-sidenav, .guide-toc { display: none !important; }
   .guide-main { margin-left: 0; padding-right: 0; }
   .guide-article { padding: 0; max-width: 100%; }
-  .guide-article img { max-width: 100%; width: auto; display: block; margin: 12px auto; box-sizing: border-box; }
+  .guide-article img { max-width: 80%; margin: 12px auto; }
 }
 
 /* RESPONSIVE */
@@ -256,17 +264,10 @@ body.print-mode .guide-sidenav,
 body.print-mode .guide-toc { display: none; }
 body.print-mode { background: white; }
 body.print-mode .guide-layout { padding-top: 0; }
-body.print-mode .guide-main {
-  margin-left: 0 !important;
-  padding-right: 0 !important;
-  width: 100% !important;
-  max-width: 100% !important;
-  display: block !important;
-}
+body.print-mode .guide-main { margin-left: 0; padding-right: 0; }
 body.print-mode .guide-article {
-  width: 100%; max-width: 100%; padding: 0; margin: 0;
+  max-width: 100%; padding: 0; margin: 0;
   font-size: 10.5pt; line-height: 1.5;
-  overflow: hidden; box-sizing: border-box;
 }
 body.print-mode .guide-article p { margin-bottom: 8px; }
 body.print-mode .guide-article h1 { font-size: 20pt; margin-bottom: 6px; }
@@ -306,54 +307,30 @@ body.print-mode .guide-article h3,
 body.print-mode .guide-article h4 { page-break-after: avoid; }
 body.print-mode .guide-article h2 ~ h2 { page-break-before: always; }
 body.print-mode .guide-article img {
-  max-width: 100%; width: auto; display: block;
+  max-width: 90%; display: block;
   margin: 12px auto; page-break-inside: avoid;
-  box-sizing: border-box; height: auto;
 }
 body.print-mode .guide-article table { page-break-inside: avoid; }
 
 
-/* ── WEBFLOW EMBED OVERRIDES ─────────────────────────────────────────── */
-
-/* Hide the guide header and remove the space reserved for it */
-.guide-header   { display: none !important; }
-.guide-layout   { padding-top: 0 !important; }
-.guide-toc      { display: none !important; }
-
-/* Sidenav: fixed from top (no header), left:0 within the iframe.
-   height uses calc to subtract top+bottom padding so all items are reachable */
+/* WEBFLOW EMBED OVERRIDES */
+.guide-header { display: none; }
+.guide-layout { padding-top: 0; }
 .guide-sidenav {
-  top: 0 !important;
-  height: 100vh !important;
-  max-height: 100vh !important;
-  overflow-y: scroll !important;
-  padding-bottom: 120px !important;
+  position: fixed; top: 0; bottom: 0;
+  width: var(--sidebar-w); overflow-y: auto;
+  padding-bottom: 120px;
 }
-
-/* Main: margin accounts for the sidenav width */
 .guide-main {
   margin-left: var(--sidebar-w) !important;
-  padding-right: 40px !important;
-  /* Prevent content overflowing the iframe width */
-  max-width: calc(100% - var(--sidebar-w)) !important;
-  box-sizing: border-box !important;
-  overflow-x: hidden !important;
+  padding-right: 0 !important;
+  display: block;
 }
-
-/* Article: constrained to its container */
 .guide-article {
-  max-width: 100% !important;
-  box-sizing: border-box !important;
+  max-width: 780px;
+  padding-top: 24px;
 }
-
-/* Layout: no horizontal overflow */
-.guide-layout {
-  overflow-x: hidden !important;
-}
-
-/* Scroll offset — override the base CSS which uses calc(header-h + 16px).
-   In the embed, header is hidden so we reset to a small breathing room only. */
-/* Leave scroll-margin-top from base CSS unchanged — it was working. */
+.guide-toc { display: none; }
 
 </style>
 </head>
@@ -383,6 +360,7 @@ body.print-mode .guide-article table { page-break-inside: avoid; }
 <a href="https://avatour.com/glossary" target="_blank" rel="noopener">Glossary ↗</a>
 <a href="https://avatour.com/faqs" target="_blank" rel="noopener">FAQs ↗</a>
 <a href="https://avatour.live/test" target="_blank" rel="noopener">Network Test ↗</a>
+<a href="mailto:support@avatour.live">Open Support Ticket ↗</a>
 
   </nav>
   <div class="guide-main">
@@ -999,15 +977,15 @@ document.querySelectorAll('.guide-sidenav a[href^="#"]').forEach(function(link) 
   });
 });
 
-// ── ACTIVE TOC HIGHLIGHTING ────────────────────────────────────────────
+// ── ACTIVE SIDENAV HIGHLIGHTING ────────────────────────────────────────
 var headings = document.querySelectorAll('.guide-article h2, .guide-article h3');
-var tocLinks = document.querySelectorAll('.guide-toc a');
+var sideLinks = document.querySelectorAll('.guide-sidenav a');
 if (headings.length) {
   var obs = new IntersectionObserver(function(entries) {
     entries.forEach(function(e) {
       if (e.isIntersecting) {
         var id = e.target.id;
-        tocLinks.forEach(function(l) {
+        sideLinks.forEach(function(l) {
           l.classList.toggle('active', l.getAttribute('href') === '#' + id);
         });
       }
