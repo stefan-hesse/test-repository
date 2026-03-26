@@ -23,6 +23,16 @@ jobs:
       - name: Install dependencies
         run: pip install markdown pymdown-extensions python-frontmatter
 
+      - name: Debug env
+        run: |
+          if [ -z "$ANTHROPIC_API_KEY" ]; then
+            echo "ANTHROPIC_API_KEY is EMPTY"
+          else
+            echo "ANTHROPIC_API_KEY is SET (length: ${#ANTHROPIC_API_KEY})"
+          fi
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
       - name: Run build (auto-translate + HTML generation)
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
