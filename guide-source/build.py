@@ -810,6 +810,8 @@ def build_outputs_for_lang(lang):
 
     print(f"  [{code.upper()}] Building from {source}")
 
+    lang_title = lang.get('title', 'Avatour User and Best Practices Guide')
+    md_text = re.sub(r'^# .+', f'# {lang_title}', md_text, count=1)
     article_html = md_to_html(md_text)
     article_html = open_links_in_new_tab(article_html)
     toc_html     = build_toc_html(md_text)
