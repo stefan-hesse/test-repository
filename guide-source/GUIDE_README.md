@@ -19,9 +19,10 @@ test-repository/
     avatour-guide-embed-es.html     ← Embedded on avatour.com/user-guide-es via iframe
     avatour-guide-print-es.html     ← PDF-ready — Spanish
   guide-source/
-    Avatour User and Best Practices Guide.md      ← English source — edit this
-    Avatour User and Best Practices Guide - IT.md ← Italian source — edit this
-    Avatour User and Best Practices Guide - ES.md ← Spanish source — edit this
+    Avatour User and Best Practices Guide.md          ← English source — edit this
+    Avatour User and Best Practices Guide - IT.md     ← Italian — auto-generated, do not edit
+    Avatour User and Best Practices Guide - ES.md     ← Spanish — auto-generated, do not edit
+    Avatour User and Best Practices Guide - EN-prev.md ← Auto-generated snapshot for change detection — do not edit
     GUIDE_README.md                 ← This document
     build.py                        ← Build script — do not edit unless needed
   .github/
@@ -29,7 +30,7 @@ test-repository/
       build-guide.yml               ← GitHub Actions workflow — do not edit
 ```
 
-> **Note:** Never edit files in `dist/` manually. They are rebuilt automatically on every push. GitHub Desktop may show `dist/` files as changed after a build — just ignore this. The only files you ever need to edit are the three Markdown source files.
+> **Note:** Never edit files in `dist/` manually. They are rebuilt automatically on every push. The IT and ES Markdown files and `EN-prev.md` are also auto-generated — **only ever edit the English source file**. GitHub Desktop may show `dist/` files as changed after a build — just ignore this.
 
 ---
 
@@ -37,18 +38,19 @@ test-repository/
 
 | Tool | Purpose |
 |------|---------|
-| **MacDown** (Mac app) | Writing and editing the guide source files |
+| **Typora** (Mac app) | Writing and editing the English guide source file |
 | **GitHub Desktop** (Mac app) | Committing and pushing changes to GitHub |
 | **GitHub** (github.com) | Stores the files, runs the automated build |
-| **GitHub Actions** | Builds all nine HTML outputs automatically on every push |
+| **GitHub Actions** | Auto-translates changed sections and builds all nine HTML outputs on every push |
 | **GitHub Pages** | Hosts the embed files so Webflow can load them via iframe |
 | **Cloudinary** | Hosts all screenshots used in the guide |
+| **Anthropic API** | Powers automatic IT and ES translation via Claude |
 
 ---
 
 ## The editing workflow (every time)
 
-1. **Edit** the relevant Markdown source file in MacDown and save
+1. **Edit** the English Markdown source file in Typora and save
 2. **Open GitHub Desktop** — your changes appear highlighted in green/red
 3. **Type a short summary** in the Summary field (e.g. `Update onsite operator section`)
 4. **Click Commit to main**
@@ -63,13 +65,30 @@ test-repository/
 
 **The Webflow pages update automatically** — no action needed in Webflow after the build completes.
 
-Total time from saving in MacDown to the website updating: about 2 minutes.
+Total time from saving in Typora to the website updating: about 2–7 minutes (longer when translation runs).
+
+---
+
+## How auto-translation works
+
+Every time you push a change to the English source file, the build script automatically:
+
+1. Compares the current English file against `EN-prev.md` (a snapshot of the last build)
+2. Identifies which `##` sections have changed
+3. Sends only the changed sections to the Anthropic API for translation into Italian and Spanish
+4. Updates the IT and ES Markdown files with the new translations
+5. Rebuilds all nine HTML outputs from the updated source files
+6. Saves the current English file as the new `EN-prev.md` for next time
+
+**You never need to manually translate anything.** Just edit the English file and push.
+
+**Cost:** ~$0.01–0.30 per build run depending on how much changed. A full re-translation of the entire document costs around $0.30. Incremental changes to one or two sections cost a few cents.
+
+**If translation is skipped:** The build log will show `[TRANSLATE] 0 section(s) changed` — this is normal if your push only changed `build.py` or other non-content files. The HTML is still rebuilt correctly.
 
 ---
 
 ## Multi-language setup
-
-The build script automatically detects which source files exist and builds only those languages. If a source file is missing, that language is silently skipped.
 
 | Language | Source file | Webflow page |
 |----------|------------|--------------|
@@ -77,24 +96,14 @@ The build script automatically detects which source files exist and builds only 
 | Italian | `Avatour User and Best Practices Guide - IT.md` | `avatour.com/user-guide-it` |
 | Spanish | `Avatour User and Best Practices Guide - ES.md` | `avatour.com/user-guide-es` |
 
-The language switcher (EN / IT / ES buttons) is a separate HTML embed above the iframe on each Webflow page — it is **not** part of the built HTML files.
+The language switcher (EN / IT / ES buttons) is built into the header of every HTML output — it is part of the built files and switches between the three standalone HTML pages.
 
 ---
 
 ## How the Webflow embed works
 
-Each language has a dedicated Webflow page. The page contains two HTML embeds:
+Each language has a dedicated Webflow page. The page contains an HTML embed with an iframe:
 
-**Embed 1 — Language switcher** (above the iframe):
-```html
-<div style="display:flex; gap:8px; padding:8px 0;">
-  <a href="/user-guide" style="...">EN</a>
-  <a href="/user-guide-it" style="...">IT</a>
-  <a href="/user-guide-es" style="...">ES</a>
-</div>
-```
-
-**Embed 2 — The guide iframe:**
 ```html
 <iframe
   src="https://stefan-hesse.github.io/test-repository/dist/avatour-guide-embed.html"
@@ -205,8 +214,8 @@ You can join from any desktop, laptop, or smartphone.
     You can join from any desktop, laptop, or smartphone.
 ```
 
-**Fix in MacDown:** Select the affected lines and remove the leading spaces or tabs manually.
-**How to spot it:** Any unexpected grey monospace box in MacDown's preview = something is indented.
+**Fix in Typora:** Select the affected lines and remove the leading spaces or tabs manually.
+**How to spot it:** Any unexpected grey monospace box in Typora's preview = something is indented.
 
 ### 3. Blockquotes must start at the left margin
 
@@ -296,7 +305,7 @@ If you use the regular Upload button, Cloudinary appends a random suffix (e.g. `
 4. Upload your new screenshot
 5. Cloudinary keeps the exact same URL — the guide updates automatically
 
-**Refresh MacDown after replacing:** Press **Cmd+R** to reload — if that doesn't work, close and reopen the file.
+**Refresh Typora after replacing:** Press **Cmd+R** to reload — if that doesn't work, close and reopen the file.
 
 ---
 
@@ -311,6 +320,8 @@ If you use the regular Upload button, Cloudinary appends a random suffix (e.g. `
 | Re-upload a screenshot to Cloudinary | Use the Replace workflow — keeps the URL stable |
 | Manually edit the sidebar | It is auto-generated from your headings |
 | Edit files in `dist/` | They are rebuilt automatically — changes will be overwritten |
+| Edit the IT or ES Markdown files | They are auto-generated — changes will be overwritten on the next build |
+| Edit `EN-prev.md` | Auto-generated snapshot — do not touch |
 
 ---
 
@@ -338,28 +349,15 @@ Press **Cmd+P**, then set:
 
 | Problem | Likely cause | Fix |
 |---------|-------------|-----|
-| Grey monospace code block (unintended) | Text or `>` is indented | Select in MacDown and remove leading spaces/tabs |
+| Grey monospace code block (unintended) | Text or `>` is indented | Select in Typora and remove leading spaces/tabs |
 | Anchor ID showing as text in heading | Missing space after `##` | Add space: `## Heading` |
 | Blockquote showing as code | `>` is indented | Move `>` to the left margin |
 | Screenshot not updating in Typora | Image cache | Cmd+Shift+R, or quit and reopen |
 | Build fails in GitHub Actions | Error in MD file | Check Actions log for the error line |
 | Sidebar link doesn't jump to section | Anchor mismatch | Check `{#anchor-id}` matches exactly |
 | Italian/Spanish page not loading | Wrong filename casing | Must be lowercase: `avatour-guide-embed-it.html` not `-IT.html` |
-
----
-
-## Updating the Italian and Spanish translations
-
-When you update the English source file, you do not need to re-translate the entire document. Instead:
-
-1. Upload the **updated English MD file** here in Claude
-2. Upload the **current Italian MD file** (`Avatour User and Best Practices Guide - IT.md`)
-3. Upload the **current Spanish MD file** (`Avatour User and Best Practices Guide - ES.md`)
-4. Say: *"Please update the Italian and Spanish translations to match the updated English version"*
-
-Claude will compare the English versions, identify exactly what changed, and apply only those changes to the IT and ES files — leaving everything else untouched. You only need to review the changed sections rather than the whole document.
-
-> **Note:** If you don't have the current IT/ES files to hand, Claude can re-translate the full document from scratch — just upload the updated English file and ask for a full translation.
+| Translation skipped | No sections changed vs EN-prev | Normal if only `build.py` or non-content files were changed |
+| IT/ES content looks wrong after a build | Previous bad translation in IT/ES files | Delete `EN-prev.md` on GitHub and re-run — forces full re-translation |
 
 ---
 
@@ -369,14 +367,14 @@ The current setup on Stefan's personal GitHub account (`test-repository`) is a t
 
 1. Create a repository in **Bitbucket** (Avatour's company standard)
 2. Convert `build-guide.yml` to a **Bitbucket Pipelines** file (`bitbucket-pipelines.yml`) — same logic, different syntax
-3. Host the embed files on **AWS S3** instead of GitHub Pages
-4. Update the three iframe `src` values in Webflow to point to the new S3 URLs
+3. Add `ANTHROPIC_API_KEY` as a Bitbucket Pipelines secret (same as the GitHub Actions secret)
+4. Host the embed files on **AWS S3** instead of GitHub Pages
+5. Update the three iframe `src` values in Webflow to point to the new S3 URLs
 
-Everything else — the three MD source files, `build.py`, Typora workflow, and Cloudinary screenshots — moves across unchanged.
+Everything else — the English MD source file, `build.py`, Typora workflow, and Cloudinary screenshots — moves across unchanged.
 
 **Planned post-migration enhancements:**
 
-- **Automated re-translation** — when the English source changes, IT and ES can be re-translated automatically via the Anthropic API on every build. Requires an Anthropic API account under the Avatour company email and the key added as a Bitbucket Pipelines secret (`ANTHROPIC_API_KEY`). Cost: ~$0.10–0.30 per full build run.
 - **Glossary for User Guide** — detailed internal glossary with hover tooltips on terms throughout the guide. Source files from previous work are available.
 
 ---
