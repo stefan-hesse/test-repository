@@ -38,7 +38,7 @@ test-repository/
 
 | Tool | Purpose |
 |------|---------|
-| **Typora** (Mac app) | Writing and editing the English guide source file |
+| **MacDown** (Mac app) | Writing and editing the English guide source file |
 | **GitHub Desktop** (Mac app) | Committing and pushing changes to GitHub |
 | **GitHub** (github.com) | Stores the files, runs the automated build |
 | **GitHub Actions** | Auto-translates changed sections and builds all nine HTML outputs on every push |
@@ -50,7 +50,7 @@ test-repository/
 
 ## The editing workflow (every time)
 
-1. **Edit** the English Markdown source file in Typora and save
+1. **Edit** the English Markdown source file in MacDown and save
 2. **Open GitHub Desktop** — your changes appear highlighted in green/red
 3. **Type a short summary** in the Summary field (e.g. `Update onsite operator section`)
 4. **Click Commit to main**
@@ -65,7 +65,7 @@ test-repository/
 
 **The Webflow pages update automatically** — no action needed in Webflow after the build completes.
 
-Total time from saving in Typora to the website updating: about 2–7 minutes (longer when translation runs).
+Total time from saving in MacDown to the website updating: about 2–7 minutes (longer when translation runs).
 
 ---
 
@@ -214,8 +214,8 @@ You can join from any desktop, laptop, or smartphone.
     You can join from any desktop, laptop, or smartphone.
 ```
 
-**Fix in Typora:** Select the affected lines and remove the leading spaces or tabs manually.
-**How to spot it:** Any unexpected grey monospace box in Typora's preview = something is indented.
+**Fix in MacDown:** Select the affected lines and remove the leading spaces or tabs manually.
+**How to spot it:** Any unexpected grey monospace box in MacDown's preview = something is indented.
 
 ### 3. Blockquotes must start at the left margin
 
@@ -305,7 +305,7 @@ If you use the regular Upload button, Cloudinary appends a random suffix (e.g. `
 4. Upload your new screenshot
 5. Cloudinary keeps the exact same URL — the guide updates automatically
 
-**Refresh Typora after replacing:** Press **Cmd+R** to reload — if that doesn't work, close and reopen the file.
+**Refresh MacDown after replacing:** Press **Cmd+R** to reload — if that doesn't work, close and reopen the file.
 
 ---
 
@@ -349,10 +349,10 @@ Press **Cmd+P**, then set:
 
 | Problem | Likely cause | Fix |
 |---------|-------------|-----|
-| Grey monospace code block (unintended) | Text or `>` is indented | Select in Typora and remove leading spaces/tabs |
+| Grey monospace code block (unintended) | Text or `>` is indented | Select in MacDown and remove leading spaces/tabs |
 | Anchor ID showing as text in heading | Missing space after `##` | Add space: `## Heading` |
 | Blockquote showing as code | `>` is indented | Move `>` to the left margin |
-| Screenshot not updating in Typora | Image cache | Cmd+Shift+R, or quit and reopen |
+| Screenshot not updating in MacDown | Image cache | Cmd+Shift+R, or quit and reopen |
 | Build fails in GitHub Actions | Error in MD file | Check Actions log for the error line |
 | Sidebar link doesn't jump to section | Anchor mismatch | Check `{#anchor-id}` matches exactly |
 | Italian/Spanish page not loading | Wrong filename casing | Must be lowercase: `avatour-guide-embed-it.html` not `-IT.html` |
@@ -371,7 +371,7 @@ The current setup on Stefan's personal GitHub account (`test-repository`) is a t
 4. Host the embed files on **AWS S3** instead of GitHub Pages
 5. Update the three iframe `src` values in Webflow to point to the new S3 URLs
 
-Everything else — the English MD source file, `build.py`, Typora workflow, and Cloudinary screenshots — moves across unchanged.
+Everything else — the English MD source file, `build.py`, MacDown workflow, and Cloudinary screenshots — moves across unchanged.
 
 **Planned post-migration enhancements:**
 
