@@ -810,61 +810,31 @@ function showSlide(n, btn) {
 }
 
 // ───────────────────────────────────────────────
-// TRAVEL COST MODEL — aligned to original Avatour ROI calculator
+// TRAVEL COST MODEL — exact match to avatour.com/roi
+// Source: devon3000.github.io/roicalculator/roicalculator.js
 //
-// Reverse-engineered from the live calculator at avatour.com/roi and
-// the methodology article at avatour.com/article/avatour-efficiency.
-//
-// COST: uniform rate $0.1524/km on ONE-WAY distance × 2 (round trip)
-//   Business class multiplier: cont ×2.0, inter ×2.5, applied to biz fraction only
-//   Overnight cost: user-supplied per-diem × user-supplied overnights per mode
-//   Source: CNET 2023 travel cost survey (~$0.245/mile converted to $/km)
-//
-// TIME: one-way distance ÷ mode speed (no airport overhead in calculator)
-//   Car: 80 km/h | Train: 100 km/h | All flights: 800 km/h
-//   (Article mentions 2.5h/flight overhead for in-platform efficiency estimates,
-//    but the standalone ROI calculator does not apply this.)
-//
-// CO₂: one-way distance × uniform air rate 0.1713 kg/km (all air modes)
-//   Car: 0.170 kg/km | Train: 0.041 kg/km | Air (all): 0.1713 kg/km
-//   Source: UK BEIS 2019 data via OurWorldInData (referenced in methodology article)
+// COST: mode-specific $/km, ONE-WAY distance (not round-trip)
+//   Car $0.225 | Train $0.241 | Air biz $1.10 | Air eco $0.225
+// TIME: (distance/100) × timePer100Km × attendees × modePct
+//   Car 1.25 hrs/100km | Train 1.0 | Air 0.125
+// CO₂: mode-specific kg/km, ONE-WAY distance
+//   Car 0.192 | Train 0.040 | Air biz 0.300 | Air eco 0.150
 // ───────────────────────────────────────────────
 
-const COST_RATE  = 0.1524;  // $/km base (round-trip, economy)
-const CO2_PER_KM = { car: 0.170, train: 0.041, cont: 0.1713, inter: 0.1713 };
+// Constants copied exactly from roicalculator.js (avatour.com/roi)
+const COST_PER_KM     = { car: 0.225, train: 0.241, airBusiness: 1.1, airCoach: 0.225 };
+const TIME_PER_100KM  = { car: 1.25, train: 1.0, air: 0.125 };
+const CO2_PER_KM      = { car: 0.192, train: 0.040, airBusiness: 0.300, airCoach: 0.150 };
 
-function travelCostPerTrip(mode, km, nights) {
-  const perdiem = v('p1_perdiem');
-  const bizFrac = v('p1_bizclass') / 100;
-  let cost = 0;
-  if (mode === 'car') {
-    cost = km * 2 * COST_RATE;                              // no biz class for car
-  } else if (mode === 'train') {
-    cost = km * 2 * COST_RATE;                              // no biz class for train
-  } else if (mode === 'cont') {
-    const econ = km * 2 * COST_RATE;
-    cost = econ * (1 - bizFrac) + econ * 2.0 * bizFrac;    // cont biz = 2×
-  } else if (mode === 'inter') {
-    const econ = km * 2 * COST_RATE;
-    cost = econ * (1 - bizFrac) + econ * 2.5 * bizFrac;    // inter biz = 2.5×
-  }
-  cost += nights * perdiem;
-  return cost;
-}
-
-function travelHoursPerTrip(mode, km) {
-  // One-way distance ÷ speed (matches original calculator behaviour)
-  if (mode === 'car')   return km / 80;
-  if (mode === 'train') return km / 100;
-  if (mode === 'cont')  return km / 800;
-  if (mode === 'inter') return km / 800;
-  return 0;
-}
+function airCostRate(bizFrac) { return bizFrac * COST_PER_KM.airBusiness + (1 - bizFrac) * COST_PER_KM.airCoach; }
+function airCO2Rate(bizFrac)  { return bizFrac * CO2_PER_KM.airBusiness  + (1 - bizFrac) * CO2_PER_KM.airCoach; }
 
 // ───────────────────────────────────────────────
 // WEIGHTED AVERAGES across travel mix (used for P2)
 // ───────────────────────────────────────────────
 function getWeightedAverages() {
+  const bizFrac = v('p1_bizclass') / 100;
+  const perdiem = v('p1_perdiem');
   const modes = [
     { id: 'car',   pct: v('car_pct'),   km: v('car_km'),   nights: v('car_nights') },
     { id: 'train', pct: v('train_pct'), km: v('train_km'), nights: v('train_nights') },
@@ -875,9 +845,13 @@ function getWeightedAverages() {
   let avgCost = 0, avgHours = 0, avgCO2 = 0;
   modes.forEach(m => {
     const w = m.pct / totalPct;
-    avgCost  += w * travelCostPerTrip(m.id, m.km, m.nights);
-    avgHours += w * travelHoursPerTrip(m.id, m.km);
-    avgCO2   += w * m.km * CO2_PER_KM[m.id];       // one-way distance (matches original)
+    const isAir = (m.id === 'cont' || m.id === 'inter');
+    const cr = isAir ? airCostRate(bizFrac) : COST_PER_KM[m.id];
+    const tr = isAir ? TIME_PER_100KM.air   : TIME_PER_100KM[m.id];
+    const co = isAir ? airCO2Rate(bizFrac)  : CO2_PER_KM[m.id];
+    avgCost  += w * (cr * m.km + m.nights * perdiem);
+    avgHours += w * (m.km / 100 * tr);
+    avgCO2   += w * co * m.km;
   });
   return { avgCost, avgHours, avgCO2 };
 }
@@ -909,30 +883,43 @@ function calculate() {
   const errMsg = document.getElementById('cost_error_msg');
   if (errMsg) errMsg.textContent = '';
 
-  // ── PILLAR 1 ──
-  const sites = v('p1_sites');
+  // ── PILLAR 1 — exact roicalculator.js model ──
+  const sites       = v('p1_sites');
   const sessPerMonth = v('p1_sessions');
-  const attendees = v('p1_attendees');
-  const rate = v('p1_rate');
-  const totalTripsPerYear = sites * sessPerMonth * 12 * attendees;
+  const attendees   = v('p1_attendees');
+  const rate        = v('p1_rate');
+  const bizFrac     = v('p1_bizclass') / 100;
+  const perdiem     = v('p1_perdiem');
 
-  const modes = [
-    { id: 'car',   pct: v('car_pct'),   km: v('car_km'),   nights: v('car_nights') },
-    { id: 'train', pct: v('train_pct'), km: v('train_km'), nights: v('train_nights') },
-    { id: 'cont',  pct: v('cont_pct'),  km: v('cont_km'),  nights: v('cont_nights') },
-    { id: 'inter', pct: v('inter_pct'), km: v('inter_km'), nights: v('inter_nights') },
+  const modesData = [
+    { id: 'car',   pct: v('car_pct')/100,   km: v('car_km'),   nights: v('car_nights')   },
+    { id: 'train', pct: v('train_pct')/100, km: v('train_km'), nights: v('train_nights') },
+    { id: 'cont',  pct: v('cont_pct')/100,  km: v('cont_km'),  nights: v('cont_nights')  },
+    { id: 'inter', pct: v('inter_pct')/100, km: v('inter_km'), nights: v('inter_nights') },
   ];
-  const totalPct = modes.reduce((a,m) => a + m.pct, 0) || 100;
 
-  let p1_travel = 0, p1_time = 0, p1_co2_kg = 0;
-  modes.forEach(m => {
-    const frac = m.pct / totalPct;
-    const trips = totalTripsPerYear * frac;
-    p1_travel += trips * travelCostPerTrip(m.id, m.km, m.nights);
-    p1_time   += trips * travelHoursPerTrip(m.id, m.km) * rate;
-    p1_co2_kg += trips * m.km * CO2_PER_KM[m.id];       // one-way (matches original)
+  // roicalculator.js formula:
+  // cost = costRate * distance (one-way, per session — NOT per attendee)
+  // time = (distance/100 * timeRate) * attendees * modePct (per session)
+  // co2  = co2Rate * distance (one-way, per session — NOT per attendee)
+  // perDiem = nights * perdiem * attendees * modePct (per session)
+  // totals = sum * meetingsPerMonth (then * 12 * sites for annual)
+  let costSum=0, timeSum=0, co2Sum=0, perDiemSum=0;
+  modesData.forEach(m => {
+    const isAir = (m.id === 'cont' || m.id === 'inter');
+    const cr = isAir ? airCostRate(bizFrac)  : COST_PER_KM[m.id];
+    const co = isAir ? airCO2Rate(bizFrac)   : CO2_PER_KM[m.id];
+    const tr = isAir ? TIME_PER_100KM.air    : TIME_PER_100KM[m.id];
+    costSum    += cr * m.km;
+    timeSum    += (m.km / 100 * tr) * attendees * m.pct;
+    co2Sum     += co * m.km;
+    perDiemSum += m.nights * perdiem * attendees * m.pct;
   });
-  const p1_total = p1_travel + p1_time;
+
+  const p1_travel  = (costSum + perDiemSum) * sessPerMonth * 12 * sites;
+  const p1_time    = timeSum * sessPerMonth * 12 * sites * rate;
+  const p1_co2_kg  = co2Sum  * sessPerMonth * 12 * sites;
+  const p1_total   = p1_travel + p1_time;
 
   // ── PILLAR 2 ──
   // Same travel model as P1, scaled by replacement %, events × participants
