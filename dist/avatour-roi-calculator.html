@@ -451,7 +451,7 @@
       <div>
         <div class="section-title">Pillar 2 — Recorded Collaboration (Sync &amp; Async)</div>
         <div class="section-badge">Reviews of recorded 360° assets</div>
-        <div class="section-desc" style="margin-top:6px;">Covers both synchronous workspace meetings and solo async review of recorded 360° content. Same savings categories as Pillar 1, with a conversion factor for trips actually replaced.</div>
+        <div class="section-desc" style="margin-top:6px;">Every time your team reviews a recorded 360° asset together — whether in a live workspace session or solo async — it can replace what would otherwise have been an onsite visit. The calculator uses the same travel cost model as Pillar 1 (distances, per-diem, hourly rate, travel mix) to value each replaced visit, then applies your conversion factor to reflect how often that's actually the case.</div>
       </div>
     </div>
 
@@ -468,7 +468,7 @@
       <div class="field span-2">
         <label>% of Events Replacing a Full Onsite Visit</label>
         <input type="number" id="p2_replace_pct" value="10" min="0" max="100">
-        <span class="input-hint">Conservative default: 10%. These events use the same travel cost model as Pillar 1 to calculate savings — travel mix, per-diem, and hourly rate above apply.</span>
+        <span class="input-hint">What fraction of these collaboration events genuinely replaces a trip that would otherwise have happened? 10% is a conservative starting point — raise it if your team regularly uses recorded sessions instead of travelling to site.</span>
       </div>
     </div>
   </div>
@@ -813,7 +813,7 @@ function showSlide(n, btn) {
 // TRAVEL COST MODEL — exact match to avatour.com/roi
 // Source: devon3000.github.io/roicalculator/roicalculator.js
 //
-// COST: mode-specific $/km, ONE-WAY distance (not round-trip)
+// COST: mode-specific $/km, ONE-WAY distance
 //   Car $0.225 | Train $0.241 | Air biz $1.10 | Air eco $0.225
 // TIME: (distance/100) × timePer100Km × attendees × modePct
 //   Car 1.25 hrs/100km | Train 1.0 | Air 0.125
@@ -899,11 +899,11 @@ function calculate() {
   ];
 
   // roicalculator.js formula:
-  // cost = costRate * distance (one-way, per session — NOT per attendee)
-  // time = (distance/100 * timeRate) * attendees * modePct (per session)
-  // co2  = co2Rate * distance (one-way, per session — NOT per attendee)
-  // perDiem = nights * perdiem * attendees * modePct (per session)
-  // totals = sum * meetingsPerMonth (then * 12 * sites for annual)
+  // cost = costRate × distance (one-way, per session — NOT per attendee)
+  // time = (distance/100 × timeRate) × attendees × modePct (per session)
+  // co2  = co2Rate × distance (one-way, per session — NOT per attendee)
+  // perDiem = nights × perdiem × attendees × modePct (per session)
+  // totals = sum × sessPerMonth × 12 × sites (annual, all locations)
   let costSum=0, timeSum=0, co2Sum=0, perDiemSum=0;
   modesData.forEach(m => {
     const isAir = (m.id === 'cont' || m.id === 'inter');
