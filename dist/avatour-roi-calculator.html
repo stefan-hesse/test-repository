@@ -31,7 +31,7 @@
     --font-b: 'DM Sans', sans-serif;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { background: var(--page-bg); color: var(--text); font-family: var(--font-b); font-size: 15px; line-height: 1.6; min-height: 100vh; }
+  body { background: var(--page-bg); color: var(--text); font-family: var(--font-b); font-size: 16px; line-height: 1.625; min-height: 100vh; }
 
   /* ── PAGE HEADER ── */
   .page-header { padding: 0; max-width: 100%; margin: 0; background: var(--navy); }
@@ -41,7 +41,7 @@
   .hero-label { font-family: var(--font-d); font-size: 11px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--orange); margin-bottom: 12px; }
   .hero-title { font-family: var(--font-d); font-size: clamp(30px,4.5vw,50px); font-weight: 700; line-height: 1.1; margin-bottom: 16px; color: #ffffff; }
   .hero-title em { font-style: normal; color: var(--orange); }
-  .hero-sub { font-size: 15px; font-weight: 300; color: rgba(255,255,255,0.65); max-width: 580px; line-height: 1.75; margin-bottom: 36px; }
+  .hero-sub { font-size: 18px; font-weight: 400; color: rgba(255,255,255,0.80); max-width: 580px; line-height: 1.7; margin-bottom: 36px; }
   .pillar-badges { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 44px; }
   .pillar-badge { display: flex; align-items: center; gap: 7px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); border-radius: 100px; padding: 5px 13px; font-size: 12px; color: rgba(255,255,255,0.65); font-weight: 500; }
   .pillar-badge .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--orange); flex-shrink: 0; }
@@ -55,8 +55,8 @@
   .section-block:hover { border-color: #b8c8d4; box-shadow: 0 3px 12px rgba(19,42,57,0.09); }
   .section-header { display: flex; align-items: flex-start; gap: 13px; margin-bottom: 22px; }
   .section-icon { width: 40px; height: 40px; border-radius: 9px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: var(--orange-light); border: 1px solid rgba(255,78,0,.2); padding: 9px; }
-  .section-title { font-family: var(--font-d); font-size: 15px; font-weight: 700; margin-bottom: 3px; color: var(--navy); }
-  .section-desc { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+  .section-title { font-family: var(--font-d); font-size: 16px; font-weight: 700; margin-bottom: 3px; color: var(--navy); }
+  .section-desc { font-size: 15px; color: var(--text-muted); line-height: 1.65; }
   .section-badge { display: inline-flex; align-items: center; gap: 5px; font-size: 10px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; background: var(--orange-light); border: 1px solid rgba(255,78,0,.2); color: var(--orange); border-radius: 100px; padding: 2px 9px; margin-top: 4px; }
 
   /* ── FORM ── */
@@ -65,11 +65,11 @@
   .field { display: flex; flex-direction: column; gap: 5px; }
   .field.span-2 { grid-column: span 2; }
   label { font-size: 11px; font-weight: 600; color: var(--text-muted); letter-spacing: .04em; text-transform: uppercase; }
-  input[type="number"], input[type="text"], select { background: var(--input-bg); border: 1px solid var(--input-border); border-radius: 7px; padding: 8px 12px; color: var(--text); font-family: var(--font-b); font-size: 13.5px; width: 100%; transition: border-color .2s; -moz-appearance: textfield; }
+  input[type="number"], input[type="text"], select { background: var(--input-bg); border: 1px solid var(--input-border); border-radius: 7px; padding: 8px 12px; color: var(--text); font-family: var(--font-b); font-size: 15px; width: 100%; transition: border-color .2s; -moz-appearance: textfield; }
   input::-webkit-outer-spin-button, input::-webkit-inner-spin-button { -webkit-appearance: none; }
   input:focus, select:focus { outline: none; border-color: var(--orange); background: #ffffff; box-shadow: 0 0 0 3px rgba(255,78,0,.1); }
   select option { background: var(--navy-mid); }
-  .input-hint { font-size: 10.5px; color: var(--text-muted); line-height: 1.4; }
+  .input-hint { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
   .divider { border: none; border-top: 1px solid var(--border-light); margin: 18px 0; }
 
   /* ── TRAVEL TABLE ── */
@@ -105,7 +105,7 @@
 
 
   /* ── CALC BTN ── */
-  .calc-btn { width: 100%; padding: 15px; background: var(--orange); color: var(--white); font-family: var(--font-d); font-size: 15px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; border: none; border-radius: 9px; cursor: pointer; transition: all .2s; margin-top: 6px; }
+  .calc-btn { width: 100%; padding: 15px; background: var(--orange); color: var(--white); font-family: var(--font-d); font-size: 16px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; border: none; border-radius: 9px; cursor: pointer; transition: all .2s; margin-top: 6px; }
   .calc-btn:hover { background: #e64400; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(255,78,0,.3); }
 
   /* ── STICKY RESULTS ── */
@@ -117,8 +117,8 @@
   .results-body { padding: 18px 22px; background: var(--navy); }
   .metric-row { display: flex; justify-content: space-between; align-items: baseline; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
   .metric-row:last-child { border-bottom: none; }
-  .metric-label { font-size: 12px; color: rgba(255,255,255,0.55); }
-  .metric-value { font-family: var(--font-d); font-size: 15px; font-weight: 700; color: #ffffff; }
+  .metric-label { font-size: 13px; color: rgba(255,255,255,0.55); }
+  .metric-value { font-family: var(--font-d); font-size: 16px; font-weight: 700; color: #ffffff; }
   .metric-value.big { color: var(--orange); font-size: 19px; }
   .metric-value.green { color: var(--orange); }
   .metric-value.indent { font-size: 13px; color: rgba(255,255,255,.7); }
@@ -243,14 +243,15 @@
   .soft-header { text-align: center; margin-bottom: 36px; }
   .soft-eyebrow { font-family: var(--font-d); font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--orange); margin-bottom: 9px; }
   .soft-title { font-family: var(--font-d); font-size: clamp(20px,3.2vw,34px); font-weight: 700; line-height: 1.2; margin-bottom: 11px; color: #ffffff; }
-  .soft-subtitle { font-size: 14px; color: rgba(255,255,255,0.6); max-width: 520px; margin: 0 auto; line-height: 1.7; }
+  .soft-subtitle { font-size: 16px; color: rgba(255,255,255,0.6); max-width: 520px; margin: 0 auto; line-height: 1.7; }
   .soft-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
   .soft-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 13px; padding: 22px; transition: all .25s; position: relative; overflow: hidden; }
   .soft-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--orange), transparent); opacity: 0; transition: opacity .25s; }
   .soft-card:hover { border-color: rgba(255,78,0,.4); transform: translateY(-2px); }
   .soft-card:hover::before { opacity: 1; }
   .soft-card-icon { width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; }
-  .soft-card-title { font-family: var(--font-d); font-size: 13.5px; font-weight: 700; margin-bottom: 7px; color: #ffffff; }
+  .soft-card-title { font-family: var(--font-d); font-size: 15px; font-weight: 700; margin-bottom: 7px; color: #ffffff; }
+  .soft-card-text { font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.65; }
   .soft-card-text { font-size: 12px; color: rgba(255,255,255,0.55); line-height: 1.6; }
   .soft-card-indicator { display: inline-flex; align-items: center; gap: 4px; margin-top: 11px; background: var(--orange-light); border: 1px solid rgba(255,78,0,.2); border-radius: 100px; padding: 2px 9px; font-size: 10px; font-weight: 600; color: var(--orange); letter-spacing: .04em; }
 
@@ -821,25 +822,40 @@ function showSlide(n, btn) {
 //   Car 0.192 | Train 0.040 | Air biz 0.300 | Air eco 0.150
 // ───────────────────────────────────────────────
 
-// ───────────────────────────────────────────────
-// TRAVEL COST MODEL — corrected (v3)
-//
-// All costs and CO₂ are correctly scaled per participant:
-//   costRate × km × modePct × attendees
-//   co2Rate  × km × modePct × attendees
-// Time and per-diem were already correct in the previous version.
-//
-// Pillar 2 derives per-participant averages directly from
-// Pillar 1 session totals ÷ attendees, then scales by
-// P2 participants × replacement %.
-// ───────────────────────────────────────────────
-
-const COST_PER_KM    = { car: 0.225, train: 0.241, airBusiness: 1.1, airCoach: 0.225 };
-const TIME_PER_100KM = { car: 1.25, train: 1.0, air: 0.125 };
-const CO2_PER_KM     = { car: 0.192, train: 0.040, airBusiness: 0.300, airCoach: 0.150 };
+// Constants copied exactly from roicalculator.js (avatour.com/roi)
+const COST_PER_KM     = { car: 0.225, train: 0.241, airBusiness: 1.1, airCoach: 0.225 };
+const TIME_PER_100KM  = { car: 1.25, train: 1.0, air: 0.125 };
+const CO2_PER_KM      = { car: 0.192, train: 0.040, airBusiness: 0.300, airCoach: 0.150 };
 
 function airCostRate(bizFrac) { return bizFrac * COST_PER_KM.airBusiness + (1 - bizFrac) * COST_PER_KM.airCoach; }
 function airCO2Rate(bizFrac)  { return bizFrac * CO2_PER_KM.airBusiness  + (1 - bizFrac) * CO2_PER_KM.airCoach; }
+
+// ───────────────────────────────────────────────
+// WEIGHTED AVERAGES across travel mix (used for P2)
+// ───────────────────────────────────────────────
+function getWeightedAverages() {
+  const bizFrac = v('p1_bizclass') / 100;
+  const perdiem = v('p1_perdiem');
+  const modes = [
+    { id: 'car',   pct: v('car_pct'),   km: v('car_km'),   nights: v('car_nights') },
+    { id: 'train', pct: v('train_pct'), km: v('train_km'), nights: v('train_nights') },
+    { id: 'cont',  pct: v('cont_pct'),  km: v('cont_km'),  nights: v('cont_nights') },
+    { id: 'inter', pct: v('inter_pct'), km: v('inter_km'), nights: v('inter_nights') },
+  ];
+  let totalPct = modes.reduce((a,m) => a + m.pct, 0) || 100;
+  let avgCost = 0, avgHours = 0, avgCO2 = 0;
+  modes.forEach(m => {
+    const w = m.pct / totalPct;
+    const isAir = (m.id === 'cont' || m.id === 'inter');
+    const cr = isAir ? airCostRate(bizFrac) : COST_PER_KM[m.id];
+    const tr = isAir ? TIME_PER_100KM.air   : TIME_PER_100KM[m.id];
+    const co = isAir ? airCO2Rate(bizFrac)  : CO2_PER_KM[m.id];
+    avgCost  += w * (cr * m.km + m.nights * perdiem);
+    avgHours += w * (m.km / 100 * tr);
+    avgCO2   += w * co * m.km;
+  });
+  return { avgCost, avgHours, avgCO2 };
+}
 
 // ───────────────────────────────────────────────
 // MAIN CALCULATION
@@ -868,17 +884,13 @@ function calculate() {
   const errMsg = document.getElementById('cost_error_msg');
   if (errMsg) errMsg.textContent = '';
 
-  // ── PILLAR 1 — corrected model (v3, matches XLS) ──
-  // Transport cost and CO₂ are now per participant:
-  //   costRate × km × modePct × attendees  (was: costRate × km only)
-  //   co2Rate  × km × modePct × attendees  (was: co2Rate  × km only)
-  // Time and per-diem were already correct.
-  const sites        = v('p1_sites');
+  // ── PILLAR 1 — exact roicalculator.js model ──
+  const sites       = v('p1_sites');
   const sessPerMonth = v('p1_sessions');
-  const attendees    = v('p1_attendees');
-  const rate         = v('p1_rate');
-  const bizFrac      = v('p1_bizclass') / 100;
-  const perdiem      = v('p1_perdiem');
+  const attendees   = v('p1_attendees');
+  const rate        = v('p1_rate');
+  const bizFrac     = v('p1_bizclass') / 100;
+  const perdiem     = v('p1_perdiem');
 
   const modesData = [
     { id: 'car',   pct: v('car_pct')/100,   km: v('car_km'),   nights: v('car_nights')   },
@@ -887,16 +899,22 @@ function calculate() {
     { id: 'inter', pct: v('inter_pct')/100, km: v('inter_km'), nights: v('inter_nights') },
   ];
 
+  // roicalculator.js formula:
+  // cost = costRate × distance (one-way, per session — NOT per attendee)
+  // time = (distance/100 × timeRate) × attendees × modePct (per session)
+  // co2  = co2Rate × distance (one-way, per session — NOT per attendee)
+  // perDiem = nights × perdiem × attendees × modePct (per session)
+  // totals = sum × sessPerMonth × 12 × sites (annual, all locations)
   let costSum=0, timeSum=0, co2Sum=0, perDiemSum=0;
   modesData.forEach(m => {
     const isAir = (m.id === 'cont' || m.id === 'inter');
-    const cr = isAir ? airCostRate(bizFrac) : COST_PER_KM[m.id];
-    const co = isAir ? airCO2Rate(bizFrac)  : CO2_PER_KM[m.id];
-    const tr = isAir ? TIME_PER_100KM.air   : TIME_PER_100KM[m.id];
-    costSum    += cr * m.km * m.pct * attendees;             // per participant, weighted
-    timeSum    += (m.km / 100 * tr) * attendees * m.pct;    // unchanged
-    co2Sum     += co * m.km * m.pct * attendees;             // per participant, weighted
-    perDiemSum += m.nights * perdiem * attendees * m.pct;   // unchanged
+    const cr = isAir ? airCostRate(bizFrac)  : COST_PER_KM[m.id];
+    const co = isAir ? airCO2Rate(bizFrac)   : CO2_PER_KM[m.id];
+    const tr = isAir ? TIME_PER_100KM.air    : TIME_PER_100KM[m.id];
+    costSum    += cr * m.km;
+    timeSum    += (m.km / 100 * tr) * attendees * m.pct;
+    co2Sum     += co * m.km;
+    perDiemSum += m.nights * perdiem * attendees * m.pct;
   });
 
   const p1_travel  = (costSum + perDiemSum) * sessPerMonth * 12 * sites;
@@ -904,24 +922,18 @@ function calculate() {
   const p1_co2_kg  = co2Sum  * sessPerMonth * 12 * sites;
   const p1_total   = p1_travel + p1_time;
 
-  // ── PILLAR 2 — derived from P1 per-participant averages (matches XLS) ──
-  // avg per participant = P1 session total ÷ attendees
-  // then scaled by P2 participants × replacement % × events/month × 12
-  const p2_events       = v('p2_events');
+  // ── PILLAR 2 ──
+  // Same travel model as P1, scaled by replacement %, events × participants
+  const p2_events = v('p2_events');
   const p2_participants = v('p2_participants');
-  const p2_replacePct   = v('p2_replace_pct') / 100;
-
-  const avgTransportPerPerson = costSum / attendees;    // = sum(costRate × km × modePct)
-  const avgPerdiemsPerPerson  = perDiemSum / attendees; // = sum(nights × perdiem × modePct)
-  const avgTimePerPerson      = timeSum / attendees;    // = sum((km/100 × timeRate) × modePct)
-  const avgCO2PerPerson       = co2Sum / attendees;     // = sum(co2Rate × km × modePct)
-
-  const p2_events_annual     = p2_events * 12;
-  const p2_travel = (avgTransportPerPerson + avgPerdiemsPerPerson) * p2_participants * p2_replacePct * p2_events_annual;
-  const p2_time   = avgTimePerPerson * p2_participants * p2_replacePct * p2_events_annual * rate;
+  const p2_replacePct = v('p2_replace_pct') / 100;
+  const avg = getWeightedAverages();
+  const p2_replaced_trips_per_year = p2_events * 12 * p2_participants * p2_replacePct;
+  const p2_travel = p2_replaced_trips_per_year * avg.avgCost;
+  const p2_time   = p2_replaced_trips_per_year * avg.avgHours * rate;
   const p2_total  = p2_travel + p2_time;
 
-  // ── PILLAR 3 — unchanged ──
+  // ── PILLAR 3 ──
   const p3_monthly = v('p3_inspections') * v('p3_hours') * (v('p3_pct') / 100) * v('p3_rate');
   const p3_total = p3_monthly * 12;
 
