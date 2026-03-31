@@ -167,22 +167,20 @@ LANGUAGES = [
         "webflow": "https://avatour.com/user-guide",
         "title":   "Avatour User and Best Practices Guide",
     },
-    # Temporarily commented out during French initial translation run.
-    # Uncomment after FR file has been generated, then commit.
-    # {
-    #     "code":    "it",
-    #     "suffix":  "-it",
-    #     "source":  "guide-source/Avatour User and Best Practices Guide - IT.md",
-    #     "webflow": "https://avatour.com/user-guide-it",
-    #     "title":   "Guida Utente e Best Practice di Avatour",
-    # },
-    # {
-    #     "code":    "es",
-    #     "suffix":  "-es",
-    #     "source":  "guide-source/Avatour User and Best Practices Guide - ES.md",
-    #     "webflow": "https://avatour.com/user-guide-es",
-    #     "title":   "Guía del Usuario y Mejores Prácticas de Avatour",
-    # },
+    {
+        "code":    "it",
+        "suffix":  "-it",
+        "source":  "guide-source/Avatour User and Best Practices Guide - IT.md",
+        "webflow": "https://avatour.com/user-guide-it",
+        "title":   "Guida Utente e Best Practice di Avatour",
+    },
+    {
+        "code":    "es",
+        "suffix":  "-es",
+        "source":  "guide-source/Avatour User and Best Practices Guide - ES.md",
+        "webflow": "https://avatour.com/user-guide-es",
+        "title":   "Guía del Usuario y Mejores Prácticas de Avatour",
+    },
     {
         "code":    "fr",
         "suffix":  "-fr",
