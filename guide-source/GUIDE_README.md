@@ -18,10 +18,14 @@ test-repository/
     avatour-guide-es.html           ← Standalone HTML — Spanish
     avatour-guide-embed-es.html     ← Embedded on avatour.com/user-guide-es via iframe
     avatour-guide-print-es.html     ← PDF-ready — Spanish
+    avatour-guide-fr.html           ← Standalone HTML — French
+    avatour-guide-embed-fr.html     ← Embedded on avatour.com/user-guide-fr via iframe
+    avatour-guide-print-fr.html     ← PDF-ready — French
   guide-source/
     Avatour User and Best Practices Guide.md          ← English source — edit this
     Avatour User and Best Practices Guide - IT.md     ← Italian — auto-generated, do not edit
     Avatour User and Best Practices Guide - ES.md     ← Spanish — auto-generated, do not edit
+    Avatour User and Best Practices Guide - FR.md     ← French — auto-generated, do not edit
     Avatour User and Best Practices Guide - EN-prev.md ← Auto-generated snapshot for change detection — do not edit
     GUIDE_README.md                 ← This document
     build.py                        ← Build script — do not edit unless needed
@@ -30,7 +34,7 @@ test-repository/
       build-guide.yml               ← GitHub Actions workflow — do not edit
 ```
 
-> **Note:** Never edit files in `dist/` manually. They are rebuilt automatically on every push. The IT and ES Markdown files and `EN-prev.md` are also auto-generated — **only ever edit the English source file**. GitHub Desktop may show `dist/` files as changed after a build — just ignore this.
+> **Note:** Never edit files in `dist/` manually. They are rebuilt automatically on every push. The IT, ES and FR Markdown files and `EN-prev.md` are also auto-generated — **only ever edit the English source file**. GitHub Desktop may show `dist/` files as changed after a build — just ignore this.
 
 ---
 
@@ -95,6 +99,7 @@ Every time you push a change to the English source file, the build script automa
 | English | `Avatour User and Best Practices Guide.md` | `avatour.com/user-guide` |
 | Italian | `Avatour User and Best Practices Guide - IT.md` | `avatour.com/user-guide-it` |
 | Spanish | `Avatour User and Best Practices Guide - ES.md` | `avatour.com/user-guide-es` |
+| French | `Avatour User and Best Practices Guide - FR.md` | `avatour.com/user-guide-fr` |
 
 The language switcher (EN / IT / ES buttons) is built into the header of every HTML output — it is part of the built files and switches between the three standalone HTML pages.
 
@@ -320,7 +325,7 @@ If you use the regular Upload button, Cloudinary appends a random suffix (e.g. `
 | Re-upload a screenshot to Cloudinary | Use the Replace workflow — keeps the URL stable |
 | Manually edit the sidebar | It is auto-generated from your headings |
 | Edit files in `dist/` | They are rebuilt automatically — changes will be overwritten |
-| Edit the IT or ES Markdown files | They are auto-generated — changes will be overwritten on the next build |
+| Edit the IT, ES or FR Markdown files | They are auto-generated — changes will be overwritten on the next build |
 | Edit `EN-prev.md` | Auto-generated snapshot — do not touch |
 
 ---

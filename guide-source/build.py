@@ -60,7 +60,7 @@ Rules:
             'anthropic-version': '2023-06-01',
         }
     )
-    with urllib.request.urlopen(req) as resp:
+    with urllib.request.urlopen(req, timeout=120) as resp:
         return json.loads(resp.read())['content'][0]['text']
 
 def auto_translate_lang(en_sections, en_prev_dict, lang_path, lang_name, api_key):
@@ -141,14 +141,13 @@ def run_auto_translate():
     print(f"  [TRANSLATE] {total_changed} section(s) changed")
 
     if total_changed > 0:
-        print("  [TRANSLATE] → Italian")
-        auto_translate_lang(en_sections, en_prev_dict,
-            "guide-source/Avatour User and Best Practices Guide - IT.md",
-            "Italian", api_key)
-        print("  [TRANSLATE] → Spanish")
-        auto_translate_lang(en_sections, en_prev_dict,
-            "guide-source/Avatour User and Best Practices Guide - ES.md",
-            "Spanish", api_key)
+        for lang in LANGUAGES:
+            if lang["code"] == "en":
+                continue
+            lang_name = {"it": "Italian", "es": "Spanish", "fr": "French"}.get(lang["code"], lang["code"])
+            print(f"  [TRANSLATE] → {lang_name}")
+            auto_translate_lang(en_sections, en_prev_dict,
+                lang["source"], lang_name, api_key)
 
     # Save current EN as new EN-prev
     import shutil
