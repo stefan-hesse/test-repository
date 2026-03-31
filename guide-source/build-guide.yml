@@ -35,10 +35,7 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add dist/
-          git add "guide-source/Avatour User and Best Practices Guide - IT.md" || true
-          git add "guide-source/Avatour User and Best Practices Guide - ES.md" || true
-          git add "guide-source/Avatour User and Best Practices Guide - FR.md" || true
-          git add "guide-source/Avatour User and Best Practices Guide - EN-prev.md" || true
+          git add guide-source/
           git diff --cached --quiet || git commit -m "Auto-build: translate + generate HTML [skip ci]"
           git push
       - name: Upload built files as artifacts
