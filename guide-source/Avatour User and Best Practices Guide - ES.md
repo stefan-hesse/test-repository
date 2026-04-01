@@ -117,52 +117,52 @@ Los permisos de Espacio de Trabajo definen lo que un usuario puede hacer **dentr
 ## 3. Para Participantes de Reuniones Remotas y Visitantes del Espacio de Trabajo {#for-remote-meeting-participants-and-workspace-visitors}
 <section>
 
-Avatour permite a los usuarios colaborar de dos maneras principales:
+Avatour permite a los usuarios colaborar de dos formas principales:
 
 - **Unirse a una reunión de Avatour (Colaboración Sincrónica):**  
-  Puede recibir una **invitación de calendario** para unirse a una reunión de Avatour. Durante la reunión, los participantes pueden realizar una **visita remota en vivo al sitio** o revisar activos sincrónicamente juntos.
+  Puede recibir una **invitación de calendario** para unirse a una reunión de Avatour. Durante la reunión, los participantes pueden realizar una **visita remota en vivo al sitio** o revisar recursos de forma sincrónica juntos.
 
 - **Visitar un Espacio de Trabajo (Colaboración Asincrónica):**  
-  También puede ser invitado como **colaborador a un Espacio de Trabajo** para revisar activos **asincrónicamente** (según su propio horario).
+  También puede ser invitado como **colaborador a un Espacio de Trabajo** para revisar recursos de forma **asincrónica** (según su propio horario).
 
 ### 3.1 Cómo Unirse a una Reunión de Avatour y Visitar un Espacio de Trabajo de Avatour {#how-to-join-an-avatour-meeting-and-visit-an-avatour-workspace}
-#### 3.1.1 Cualquier Dispositivo de "Pantalla Plana" con un Navegador Web {#any-flat-screen}
+#### 3.1.1 Cualquier Dispositivo de "Pantalla Plana" con Navegador Web {#any-flat-screen}
 Puede unirse a una reunión de Avatour desde **cualquier computadora de escritorio o portátil, teléfono inteligente o tableta** usando un navegador web.  
 
 ##### Unirse a una Reunión de Avatour
 
-> **Nota:** Unirse a una reunión de Avatour requiere que **otorgue permisos de micrófono**. Por favor acepte cualquier solicitud de permiso de su navegador.
+> **Nota:** Unirse a una reunión de Avatour requiere que **conceda permisos de micrófono**. Por favor, acepte cualquier solicitud de permiso de su navegador.
 
-1. **Mediante invitación de calendario (recomendado):**  
-   - Normalmente recibirá una **invitación de calendario** con un **enlace de acceso directo** (por ejemplo: `https://avatour.live/join?s=xxxxx`).  
-   - Al hacer clic en el enlace se completará automáticamente el **código de reunión de 5 caracteres** y lo llevará a la reunión.
+1. **A través de invitación de calendario (recomendado):**  
+   - Normalmente recibirá una **invitación de calendario** con un **enlace directo para unirse** (por ejemplo: `https://avatour.live/join?s=xxxxx`).  
+   - Al hacer clic en el enlace, se completará automáticamente el **código de reunión de 5 caracteres** y lo llevará a la reunión.
    - **Autenticación requerida:** Algunas reuniones están restringidas a usuarios registrados. En este caso, la invitación indicará que necesita **iniciar sesión para acceder a la reunión**.  
    - **Reuniones protegidas con contraseña:** Algunas reuniones pueden requerir una contraseña. En ese caso, la invitación incluirá la contraseña que debe ingresar para unirse.
 
-2. **Mediante código de reunión:**  
+2. **A través de código de reunión:**  
    - Si el anfitrión comparte un **código de reunión de 5 caracteres** por separado, vaya a [https://avatour.live/join](https://avatour.live/join), ingrese su **nombre** y el **código de reunión**, y únase a la reunión.  
    - Si la reunión está **protegida con contraseña**, ingrese la contraseña proporcionada por el anfitrión.  
-   - Si la reunión requiere **autenticación**, deberá **iniciar sesión con su cuenta de Avatour** antes de unirse.
+   - Si la reunión requiere **autenticación**, necesitará **iniciar sesión con su cuenta de Avatour** antes de unirse.
 
-> **Consejo 1:** Si su cámara o micrófono no funciona, puede estar en uso por otra aplicación (por ejemplo, Microsoft Teams o Zoom). Cierre cualquier aplicación que pueda estar usando su cámara o micrófono, luego salga y vuelva a unirse a la reunión de Avatour.  
+> **Consejo 1:** Si su cámara o micrófono no funcionan, pueden estar en uso por otra aplicación (por ejemplo, Microsoft Teams o Zoom). Cierre cualquier aplicación que pueda estar usando su cámara o micrófono, luego salga y vuelva a unirse a la reunión de Avatour.  
 
 > **Consejo 2:** Si aún no puede unirse a la reunión, ejecute esta prueba: [https://avatour.live/test](https://avatour.live/test).  
 > La prueba puede identificar si su **firewall corporativo o red** está bloqueando el acceso, y proporcionará información para guiar las conversaciones con su equipo de TI.  
 
-> **Consejo 3:** **No** use las aplicaciones de Avatour para iOS o Android para unirse a reuniones. Estas aplicaciones solo son necesarias cuando **transmite una reunión en vivo desde una cámara Insta360**, ya que esas cámaras no pueden ejecutar el software 360° de Avatour directamente y requieren un teléfono inteligente para asistir.
+> **Consejo 3:** **No** use las aplicaciones de Avatour para iOS o Android para unirse a reuniones. Estas aplicaciones solo son necesarias cuando se **transmite una reunión en vivo desde una cámara Insta360**, ya que esas cámaras no pueden ejecutar el software Avatour 360° directamente y requieren un teléfono inteligente para asistir.
 
 ##### Visitar un Espacio de Trabajo de Avatour (sin unirse a una Reunión de Avatour)
 
 Puede acceder a un Espacio de Trabajo de las siguientes maneras:
 
 - **Espacio de Trabajo Público:**  
-  Si el Espacio de Trabajo es público, se puede acceder al enlace directamente—no se requiere inicio de sesión.
+  Si el Espacio de Trabajo es público, el enlace se puede acceder directamente—no se requiere inicio de sesión.
 
 - **Espacio de Trabajo Restringido:**  
   Si el Espacio de Trabajo está restringido, debe ser agregado como **colaborador** con permisos de **Editor** o **Visualizador**.
 
   1. Cuando sea agregado como colaborador, recibirá una **notificación por correo electrónico** con un enlace al Espacio de Trabajo.
-  2. Haga clic en el enlace del correo electrónico para abrir el Espacio de Trabajo. Si aún no ha iniciado sesión, se le pedirá que **inicie sesión o complete el registro**.
+  2. Haga clic en el enlace del correo electrónico para abrir el Espacio de Trabajo. Si no ha iniciado sesión, se le pedirá que **inicie sesión o complete el registro**.
   3. Una vez que haya iniciado sesión, el Espacio de Trabajo se abrirá automáticamente.
 
   Alternativamente, puede iniciar sesión en [https://avatour.live/login](https://avatour.live/login) y acceder al Espacio de Trabajo desde su **lista de Espacios de Trabajo**.
@@ -170,24 +170,24 @@ Puede acceder a un Espacio de Trabajo de las siguientes maneras:
 #### 3.1.2 Visor de Realidad Virtual {#vr-headset}
 Puede unirse a una reunión y visitar un espacio de trabajo desde una variedad de visores Meta y Pico compatibles. Para hacer esto: 
 
-1. Instale nuestra aplicación Avatour desde su respectiva tienda de aplicaciones de RV: [Cómo instalar la aplicación Avatour VR](https://avatour.com/support/which-vr-headsets-can-i-use-with-avatour)
+1. Instale nuestra aplicación Avatour desde la tienda de aplicaciones de su visor de RV respectivo: [Cómo instalar la aplicación Avatour VR](https://avatour.com/support/which-vr-headsets-can-i-use-with-avatour)
 2. Cargue nuestra aplicación e ingrese el código de reunión o seleccione un Espacio de Trabajo para unirse a una reunión. Para más información sobre cómo usar nuestra aplicación de RV, consulte nuestro artículo de la Base de Conocimientos [aquí](https://avatour.com/support/what-features-are-available-to-vr-guests).
 
 ### 3.2 Herramientas de Colaboración para Reuniones y Espacios de Trabajo {#meeting-tools}
 
 Avatour permite la colaboración en dos contextos principales:
 
-1. **Reuniones (sincrónicas):** Colabore en tiempo real con otros participantes, incluyendo visitas en vivo al sitio o revisión de activos grabados juntos.  
-2. **Espacios de Trabajo (asincrónicos):** Revise e interactúe con activos según su propio horario, 24/7.
+1. **Reuniones (sincrónicas):** Colabore en tiempo real con otros participantes, incluyendo visitas en vivo al sitio o revisión de recursos grabados juntos.  
+2. **Espacios de Trabajo (asincrónicos):** Revise e interactúe con recursos según su propio horario, 24/7.
 
 Las **herramientas de colaboración son mayormente similares** entre reuniones y espacios de trabajo, con algunas diferencias debido al contexto sincrónico vs asincrónico.
 
 #### 3.2.1 Disposición de la Interfaz
 
-La interfaz de Avatour está organizada en tres áreas principales:
+La interfaz de Avatour está organizada alrededor de tres áreas principales:
 
-- **Panel izquierdo** – Activos del espacio de trabajo y herramientas de soporte  
-- **Lienzo central** – Área de visualización principal para video en vivo o activos  
+- **Panel izquierdo** – Recursos del espacio de trabajo y herramientas de apoyo  
+- **Lienzo central** – Área de visualización principal para video en vivo o recursos  
 - **Panel derecho** – Información contextual, como participantes, reuniones o chat  
 
 La mayoría de las interacciones se inician desde el **menú inferior**.  
@@ -198,8 +198,8 @@ Al hacer clic en una opción del menú se abre un **panel lateral** en el lado i
 
 Aquí hay un ejemplo de una vista en una Reunión de Avatour:
 
-![Interfaz de Reunión de Avatour con Panel de Activos, Lienzo en blanco y Panel de Participantes](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-meeting-assets-blank-participants_pugprq.png)  
-*Reunión de Avatour con Panel de Activos (izquierda), Lienzo (centro) y Panel de Participantes (derecha)*
+![Interfaz de Reunión Avatour con Panel de Recursos, Lienzo en blanco y Panel de Participantes](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-meeting-assets-blank-participants_pugprq.png)  
+*Reunión de Avatour con Panel de Recursos (izquierda), Lienzo (centro) y Panel de Participantes (derecha)*
 
 ---
 
@@ -207,8 +207,8 @@ Aquí hay un ejemplo de una vista en una Reunión de Avatour:
 
 Aquí hay un ejemplo de una vista de Espacio de Trabajo:
 
-![Espacio de Trabajo de Avatour con Panel de Activos, Lienzo en blanco y Panel de Reuniones](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-workspace-assets-blank-meetings_qeumpl.png)  
-*Espacio de Trabajo de Avatour con Panel de Activos (izquierda), Lienzo (centro) y Panel de Reuniones (derecha)*
+![Espacio de Trabajo Avatour con Panel de Recursos, Lienzo en blanco y Panel de Reuniones](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-workspace-assets-blank-meetings_qeumpl.png)  
+*Espacio de Trabajo de Avatour con Panel de Recursos (izquierda), Lienzo (centro) y Panel de Reuniones (derecha)*
 
 ---
 
@@ -218,30 +218,30 @@ El menú inferior proporciona acceso a los controles principales de la interfaz 
 
 **Menú Inferior de Reunión**  
 
-![Menú Inferior de Reunión de Avatour](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-meeting-bottom-menu_bflaor.png)  
-*Menú Inferior de Reunión de Avatour*
+![Menú Inferior de Reunión Avatour](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-meeting-bottom-menu_bflaor.png)  
+*Menú Inferior de Reunión Avatour*
 
-- **Activos** – Revise los archivos del espacio de trabajo, incluyendo videos grabados, imágenes, capturas de pantalla y PDFs. 
+- **Recursos** – Revise archivos del espacio de trabajo, incluyendo videos grabados, imágenes, capturas y PDFs. 
 - **Chat** – Envíe mensajes a todos los participantes de la reunión.  
 - **Cámara** – Encienda o apague su cámara web.  
-- **Micrófono** – Silencie o active su sonido.  
-- **Presentar** – Presente un activo, escritorio o transmisión de cámara web (vea la sección Presentar a continuación).  
+- **Micrófono** – Active o desactive su audio.  
+- **Presentar** – Presente un recurso, escritorio o transmisión de cámara web (vea la sección Presentar a continuación).  
 - **Herramientas de Anfitrión** (solo anfitriones):  
   - **Bloquear Enfoque** – Bloquee la vista para todos los participantes.  
   - **Silenciar a Todos** – Silencie a todos los participantes.  
 - **Habilitar Pantalla Completa** – Ponga la pestaña de la reunión en pantalla completa.  
 - **Salir de la Reunión** – Abandone la reunión.  
-- **Iniciar Grabación** – Use este botón para iniciar y detener la grabación manualmente durante una reunión. Alternativamente, las reuniones pueden grabarse automáticamente si **inicio automático de grabación** está habilitado en la configuración del espacio de trabajo. En ambos casos, las grabaciones se guardan en los activos del espacio de trabajo.
-- **Mapa** – Abra o cierre el panel del mapa para activos con una pista GPS. Al hacer clic en una ubicación salta al punto exacto en el video. El mapa se actualiza en vivo mientras se reproduce el video.
+- **Iniciar Grabación** – Use este botón para iniciar y detener la grabación manualmente durante una reunión. Alternativamente, las reuniones pueden grabarse automáticamente si **inicio automático de grabación** está habilitado en la configuración del espacio de trabajo. En ambos casos, las grabaciones se guardan en los recursos del espacio de trabajo.
+- **Mapa** – Abra o cierre el panel del mapa para recursos con seguimiento GPS. Al hacer clic en una ubicación, salta al punto exacto en el video. El mapa se actualiza en vivo mientras se reproduce el video.
 - **Participantes** – Abra o cierre el panel de participantes.  
-- **Información de la Reunión** – Vea el código de reunión, enlace de invitación y acceda a tutoriales relacionados.  
+- **Información de la Reunión** – Vea el código de la reunión, enlace de invitación y acceda a tutoriales relacionados.  
 
-![Información de Reunión de Avatour](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-meeting-info-side-pane_nx7dp4.png)  
-*Panel Lateral de Información de Reunión de Avatour*
+![Información de Reunión Avatour](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-meeting-info-side-pane_nx7dp4.png)  
+*Panel Lateral de Información de Reunión Avatour*
 
-- **Configuración** – Ajuste el idioma, audio y configuración de video. Para reuniones de video 360° en vivo, use **Mostrar Tasa de Bits** para monitorear las estadísticas de conectividad.
+- **Configuración** – Ajuste la configuración de idioma, audio y video. Para reuniones de video 360° en vivo, use **Mostrar Tasa de Bits** para monitorear estadísticas de conectividad.
 
-> Consejo: Envíe el enlace de la reunión o agréguelo a un elemento del calendario para invitar participantes.
+> Consejo: Envíe el enlace de la reunión o agréguelo a un elemento de calendario para invitar participantes.
 
 ---
 
@@ -249,36 +249,38 @@ El menú inferior proporciona acceso a los controles principales de la interfaz 
 
 La opción **Presentar** en el menú inferior de la reunión le permite compartir contenido con todos los participantes.
 
-- **Cámara** – Comparta la cámara de su teléfono inteligente/tableta. Esto también puede usarse durante una reunión de video 360° en vivo para superponer una vista secundaria para primeros planos o detalles específicos. 
+- **Cámara** – Comparta la cámara de su teléfono inteligente/tableta. Esto también se puede usar durante una reunión de video 360° en vivo para superponer una vista secundaria para primeros planos o detalles específicos. 
 - **Escritorio** – Comparta la pantalla de su escritorio con todos los participantes.  
-- **Activo** – Presente un activo del espacio de trabajo. Al seleccionar un activo se abre la **Barra de herramientas de Activos**, que proporciona controles de reproducción y herramientas de colaboración específicas para el activo que se está presentando.
+- **Recurso** – Presente un recurso del espacio de trabajo. Al seleccionar un recurso se abre la **Barra de herramientas del Recurso**, que proporciona controles de reproducción y herramientas de colaboración específicas para el recurso que se está presentando.
 
-##### Barra de Herramientas de Activos (Reunión)
+##### Barra de Herramientas del Recurso (Reunión)
 
-Al presentar un activo en una reunión, la **Barra de Herramientas de Activos** aparece sobre el lienzo. Aquí están las herramientas y elementos del menú disponibles cuando <u>presenta un Activo en una Reunión</u> - explicados de izquierda a derecha.
+Cuando presenta un recurso en una reunión, la **Barra de Herramientas del Recurso** aparece sobre el lienzo. Aquí están las herramientas y elementos del menú disponibles cuando <u>presenta un Recurso en una Reunión</u> - explicados de izquierda a derecha.
 
-![Menú de Avatour al Presentar un Activo en una Reunión](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting_oflsr5.png) *Menú de Avatour al presentar un Activo en una Reunión*
+![Menú de Avatour al Presentar un Recurso en una Reunión](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting_oflsr5.png) *Menú de Avatour al presentar un Recurso en una Reunión*
 
 
 - **Línea de Tiempo del Video / Barra de Progreso** – Muestra el progreso del video con notas y temas clave extraídos del audio. Haga clic en una nota o tema para saltar a ese momento y abrir la nota. Incluye controles de **Reproducir / Pausar**.   
-- **Captura de Pantalla** – Capture una imagen 360° o 2D del activo.  
+- **Captura** – Capture una imagen 360° o 2D del recurso.  
 - **Foco** – Resalte un área específica para todos los participantes durante sesiones en vivo.  
 - **Mostrar/Ocultar Punto de Vista (POV)** – Muestre dónde está mirando cada participante en el video 360°.  
-- **Notas** – Cree notas ancladas a momentos específicos en el activo. Las notas pueden categorizarse (Observación, Problema, Acción, Recomendación), rastrearse por estado (Abierto → En Progreso → Resuelto), y compartirse mediante enlaces directos.  
+- **Notas** – Cree notas ancladas a momentos específicos en el recurso. Las notas pueden categorizarse (Observación, Problema, Acción, Recomendación), rastrearse por estado (Abierto → En Progreso → Resuelto) y compartirse a través de enlaces directos.  
 
-  ![Nota de Avatour y Filtro de Notas](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-note-and-filters_g181oc.png) *Nota de Avatour y Filtros de Notas*
+  ![Nota y Filtro de Notas de Avatour](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-note-and-filters_g181oc.png) *Nota y Filtros de Notas de Avatour*
 
   - **Notas por Comando de Voz** – Estos son marcadores de posición generados automáticamente cuando la grabación detecta menciones como "insertar nota", "tomar una nota" o "hacer una nota". Estas notas aparecen en la línea de tiempo y necesitan ser **posicionadas y finalizadas** por el usuario. 
 
   ![Notas de Avatour - Generadas por Comando de Voz](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-notes-voice-command-generated_ic5cu4.png) *Notas de Avatour - Generadas por Comando de Voz*
 
-- **Panel de Notas y Resumen** – Abre un panel lateral que muestra todas las notas, temas clave y un resumen ejecutivo del activo. Al hacer clic en un elemento salta a ese momento en el video.  
+- **Panel de Notas y Resumen** – Abre un panel lateral que muestra todas las notas, temas clave y un resumen ejecutivo del recurso. Al hacer clic en un elemento, lo lleva a ese momento en el video.  
 
-  ![Resumen Ejecutivo de Activo de Avatour](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-exec-summary_cqpqbs.png) *Resumen Ejecutivo de Avatour al presentar un Activo en una Reunión*
+  ![Resumen Ejecutivo de Recurso Avatour](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-exec-summary_cqpqbs.png) *Resumen Ejecutivo de Avatour al presentar un Recurso en una Reunión*
 
-  ![Temas de Avatour](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-topics_duuq1a.png) *Temas de Avat## 4. Para usuarios anfitriones y administradores - Consola web de Avatour {#for-host-and-admin-users-avatour-web-console}
+  ![Temas de Avatour](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-topics_duuq1a.png) *Temas de Avatour al presentar un Recurso en una Reunión*
 
-Cuando inicies sesión en tu Cuenta de Usuario de Avatour, accederás a la **Consola Web**.  
+  Desde## 4. Para usuarios anfitriones y administradores - Consola web de Avatour {#for-host-and-admin-users-avatour-web-console}
+
+Cuando inicias sesión en tu Cuenta de Usuario de Avatour, accederás a la **Consola Web**.  
 
 ### 4.1 Consola Web - Descripción General del Menú Principal {#web-console-overview-main-menu}
 
@@ -286,12 +288,12 @@ En el lado izquierdo, verás los siguientes elementos del menú:
 
 ![Avatour Web Console - Main Menu](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu_qwpthq.png) *Consola Web de Avatour - Menú Principal*
 
-- **Espacios de Trabajo** – Organiza tu contenido de manera eficiente. Cada espacio de trabajo contiene **Activos**, **Colaboradores**, **Reuniones** y **Configuración**.  
-- **Activos** – Accede y gestiona todos tus activos (videos, imágenes, PDFs). Los administradores pueden ver todos los activos de la cuenta, y los activos compartidos son visibles para todos los usuarios.  
+- **Espacios de Trabajo** – Organiza tu contenido de manera eficiente. Cada espacio de trabajo contiene **Recursos**, **Colaboradores**, **Reuniones** y **Configuración**.  
+- **Recursos** – Accede y gestiona todos tus recursos (videos, imágenes, PDFs). Los administradores pueden ver todos los recursos de la cuenta, y los recursos compartidos son visibles para todos los usuarios.  
 - **Perfil** – Gestiona tu idioma y contraseña.  
 - **Analíticas** – Rastrea la actividad de sesiones, uso de espacios de trabajo y métricas de ROI.  
-- **Configuración** *(Solo Administrador)* – Configura los valores predeterminados de espacios de trabajo, reuniones y activos en toda la organización. Los administradores también pueden personalizar la marca (logo, colores, fondos).  
-- **Cuenta** *(Solo Administrador)* – Gestiona usuarios registrados y cámaras 360°.  
+- **Configuración** *(Solo administrador)* – Configura los valores predeterminados de espacios de trabajo, reuniones y recursos en toda la organización. Los administradores también pueden personalizar la marca (logo, colores, fondos).  
+- **Cuenta** *(Solo administrador)* – Gestiona usuarios registrados y cámaras 360°.  
 - **Inicio de Sesión de Dispositivo** – Ingresa el código mostrado en tu cámara 360° para vincularla con tu cuenta.  
 - **Tutoriales** – Accede a tutoriales guiados.  
 - **Cerrar sesión** – Cierra sesión en la consola.
@@ -304,7 +306,7 @@ En el lado izquierdo, verás los siguientes elementos del menú:
 
 #### 4.2.1 Espacios de Trabajo
 
-Los espacios de trabajo son unidades organizativas flexibles que te permiten gestionar activos, colaboradores y reuniones en un solo lugar. Puedes crear un nuevo espacio de trabajo con el botón **Nuevo Espacio de Trabajo** en la esquina superior derecha.
+Los espacios de trabajo son unidades organizativas flexibles que te permiten gestionar recursos, colaboradores y reuniones en un solo lugar. Puedes crear un nuevo espacio de trabajo con el botón **Nuevo Espacio de Trabajo** en la esquina superior derecha.
 
 ![Avatour Web Console - Main Menu Item Workspaces](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-workspaces_hnhkjj.png) *Consola Web de Avatour - Elemento del Menú Principal Espacios de Trabajo*
 
@@ -314,52 +316,52 @@ Haz clic en el icono de campana para ver un resumen de la actividad del espacio 
 
 Dentro de un espacio de trabajo:
 
-![Avatour Workspace with Assets Panel, blank Canvas and Meetings Panel](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-workspace-assets-blank-meetings_qeumpl.png) *Espacio de Trabajo con Activos (izquierda), Lienzo (centro), Reuniones (derecha)*
+![Avatour Workspace with Assets Panel, blank Canvas and Meetings Panel](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-workspace-assets-blank-meetings_qeumpl.png) *Espacio de Trabajo con Recursos (izquierda), Lienzo (centro), Reuniones (derecha)*
 
-- **Activos** – Gestiona archivos asignados a este espacio de trabajo.  
+- **Recursos** – Gestiona archivos asignados a este espacio de trabajo.  
 - **Colaboradores** – 
-  Controla el acceso a espacios de trabajo mediante 
-  - **Visualizador** – Puede ver activos. La invitación crea un usuario Invitado si es necesario.  
+  Controla el acceso a los espacios de trabajo mediante 
+  - **Visualizador** – Puede ver recursos. La invitación crea un usuario Invitado si es necesario.  
   - **Editor** – Control total del espacio de trabajo, mismos derechos que el Anfitrión. La invitación actualiza al usuario a Anfitrión si es necesario.  
 > Múltiples usuarios pueden acceder a un espacio de trabajo simultáneamente sin una reunión. Los espacios de trabajo públicos y la configuración de acceso a reuniones proporcionan acceso alternativo.  
-- **Informe** – Genera un informe usando una plantilla de lista de verificación en los activos seleccionados del espacio de trabajo.  
+- **Informe** – Genera un informe usando una plantilla de lista de verificación sobre los recursos seleccionados del espacio de trabajo.  
 
-![Avatour Workspace Report and Asset Selection](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-asset-selection-and-workspace-report_itjt8f.png) *Informe del Espacio de Trabajo y Selección de Activos*
+![Avatour Workspace Report and Asset Selection](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-asset-selection-and-workspace-report_itjt8f.png) *Informe del Espacio de Trabajo y Selección de Recursos*
 
-- **Mapa** – Muestra ubicaciones de activos con GPS habilitado en un mapa.  
+- **Mapa** – Muestra ubicaciones de recursos con GPS en un mapa.  
 - **Reuniones** – Organiza reuniones en el espacio de trabajo.  
-- **Configuración** – Configura los valores predeterminados del espacio de trabajo y las reuniones:
+- **Configuración** – Configura los valores predeterminados del espacio de trabajo y reuniones:
 
 ![Avatour Settings - Workspace View](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-workspace-settings_llcei3.png) *Configuración del Espacio de Trabajo*
 
 **Configuración del Espacio de Trabajo**
 
 - **Plantilla de Informe** – Selecciona la plantilla de lista de verificación para informes de IA.  
-- **Habilitar Notificaciones** – Correos electrónicos de resumen diario para cambios de estado de notas.  
+- **Habilitar Notificaciones** – Correos de resumen diario para cambios de estado de notas.  
 
 ![Email Notifications - Example](https://res.cloudinary.com/avatour/image/upload/c_crop,h_600,w_600,x_170,y_60/Screenshot_2026-03-05_140654_bjk0xk.png) *Ejemplo de Notificaciones por Correo Electrónico*
 
-- **Espacio de Trabajo Público** – Cualquiera con el enlace puede ver los activos directamente.
+- **Espacio de Trabajo Público** – Cualquier persona con el enlace puede ver los recursos directamente.
 
 **Configuración de Reuniones**
   
 * **Autenticación requerida** – Los participantes deben iniciar sesión.  
-* **Permitir acceso de invitados** – Permitir que usuarios no registrados vean activos.  
+* **Permitir acceso de invitados** – Permitir que usuarios no registrados vean recursos.  
 * **Inicio Automático de Grabación / Inicio Manual** – Elige si las reuniones se graban automáticamente o se inician manualmente.  
 * **Requiere anfitrión** – El anfitrión debe admitir participantes; la reunión termina cuando el anfitrión se va.  
-* **Permitir acceso de espectador** – Unirse sin micrófono ni cámara; comunicarse por chat.  
+* **Permitir acceso de espectador** – Unirse sin micrófono o cámara; comunicarse vía chat.  
 * **Reuniones protegidas con contraseña** – Requiere una contraseña para unirse.  
-* **Mostrar Pregunta de Ahorro en Viajes** – Pregunta a los participantes si la reunión redujo viajes.  
+* **Mostrar Pregunta de Ahorro de Viaje** – Preguntar a los participantes si la reunión redujo los viajes.  
 
-> Las configuraciones se pueden combinar (p. ej., no se requiere anfitrión pero está protegida con contraseña).
+> Las configuraciones se pueden combinar (ej., sin anfitrión requerido pero protegido con contraseña).
 
 ---
 
-#### 4.2.2 Activos
+#### 4.2.2 Recursos
 
-Gestiona todos los videos 360°/2D, imágenes y PDFs. Sube/descarga activos, asígnalos a espacios de trabajo, compártelos con otros usuarios, renómbralos, imprime/descarga informes, activa el desenfoque facial y el resumen de IA.
+Gestiona todos los videos 360°/2D, imágenes y PDFs. Carga/descarga recursos, asígnalos a espacios de trabajo, compártelos con otros usuarios, renómbralos, imprime/descarga informes, activa el desenfoque facial y la resumención con IA.
 
-![Avatour Web Console - Main Menu Item Assets](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-assets_ky5emz.png) *Elemento del Menú Principal Activos*
+![Avatour Web Console - Main Menu Item Assets](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-assets_ky5emz.png) *Elemento del Menú Principal Recursos*
 
 ---
 
@@ -367,153 +369,11 @@ Gestiona todos los videos 360°/2D, imágenes y PDFs. Sube/descarga activos, as�
 
 Proporciona información sobre reuniones, uso de espacios de trabajo y métricas de ROI.
 
-![Avatour Web Console - Main Menu Item Analytics (1 of 3)](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-analytics-1-of-3_ds3epe.png) *Vista General de Analíticas*
+![Avatour Web Console - Main Menu Item Analytics (1 of 3)](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-analytics-1-of-3_ds3epe.png) *Descripción General de Analíticas*
 
 ![Avatour Web Console - Main Menu Item Analytics (2 of 3)](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-analytics-2-of-3_vpcsme.png) *Actividad de Reuniones y Uso de Espacios de Trabajo*
 
 ![Avatour Web Console - Main Menu Item Analytics (3 of 3)](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-analytics-3-of-3_hn2pmr.png) *Uso de Licencias de Dispositivos y ROI* 
-
-## 5. En el sitio - Cómo usar el kit llave en mano de Avatour {#onsite-how-to-use-the-avatour-turnkey-kit}
-
-### 5.1 Primeros Pasos
-[Guía de Inicio Rápido – Kit Llave en Mano Avatour 3.1 (configuración Pilot PanoX V2)](https://avatour.com/quickstart-panox-v2)
-
-Sigue la guía para desempacar, ensamblar y encender tu cámara.
-
----
-
-### 5.2 Consejos Útiles
-
-#### Batería Externa – Reuniones en Vivo Más Largas y Mejor Gestión Térmica 
-
-- **Si tu kit incluye una batería Ulanzi:** Fíjala entre la base del trípode y el palo extensible, luego conecta la batería a la cámara mediante USB-C.  
-
-- **Si tu kit incluye un palo de batería Telesin:** Monta la cámara directamente sobre el palo de batería extensible Telesin y conéctalo mediante USB-C.  
-
-Usar la batería externa:
-
-1. Extiende la duración total de la batería de ~40 minutos (solo batería de la cámara) a ~3 horas.  
-2. Añade estabilidad a la configuración de la cámara.  
-3. Ayuda a prevenir el posible sobrecalentamiento.  
-
-> Recomendamos usar siempre la batería externa desde el principio, especialmente para reuniones en vivo.
-
-#### Consideraciones de Audio para Reuniones en Vivo y Grabaciones
-
-- **Entornos ruidosos:** 
-  Usa los auriculares Shokz incluidos en tu kit para una captura de audio clara.  
-  - **Encender/Apagar:** Mantén presionado el botón "+" durante 3 segundos (LED azul = encendido, LED rojo = apagado).  
-  - **Modo de Emparejamiento Bluetooth:** Con los auriculares apagados, mantén presionado el botón "+" durante 5 segundos (LED parpadea azul/rojo).  
-  - **Volumen:** Usa los botones "+" y "-".  
-
-- **Entornos más silenciosos / múltiples participantes cerca de la cámara:** 
-  Usa el altavoz con clip NoxGear. No tiene la misma fidelidad que los altavoces de conferencia (ej., Jabra Speak), pero es fácil de sujetar a tu camisa y captura las voces cercanas de manera efectiva.  
-  - **Encender/Apagar:** Mantén presionado el botón Play/Pausa durante 2 segundos.  
-  - **Modo de Emparejamiento Bluetooth:** Entra automáticamente en modo de emparejamiento al encenderse (LED parpadea azul/rojo; azul fijo cuando está emparejado).  
-  - **Volumen:** Usa los botones "+" y "-".  
-
-- **Usando tu propio dispositivo:** Si prefieres una alternativa (ej., un altavoz de conferencia o auriculares personales), puedes emparejarlo a través de la cámara: Configuración → Bluetooth.  
-
-#### Conectividad, Conectividad, Conectividad
-**Antes de empezar:** Asegura la conexión a internet mediante:
-
-- **WiFi Local** (preferido)
-- **Red Móvil** (si estás fuera del alcance del WiFi)
-
-**Ancho de banda recomendado:** 10 Mbps de subida/bajada para streaming completo de 360° (~5 Mbps). Un ancho de banda menor (1–2 Mbps) solo funciona estando quieto.
-
-##### Probar Velocidad de Red
-- **Prueba de ubicación única:** Cualquier verificador de velocidad que uses normalmente (ej., [Speedtest](https://www.speedtest.net)) para verificar el ancho de banda de subida.   
-- **Prueba caminando por el sitio:** Desde la cámara: Configuración → Red → Prueba de Conexión. Camina por todo el espacio para confirmar cobertura y ancho de banda.
-
-##### WiFi Local
-- Altamente recomendado para conexiones estables.  
-- Si TI requiere lista blanca, encuentra la dirección MAC: Configuración → Acerca de → Dirección WiFi.
-
-##### Red Móvil
-**Opción A: Hotspot y SIM proporcionados en el kit**  
-
-- Fija el hotspot GlocalMe al palo de batería Telesin (imán).  
-- Asegura que no haya interferencia y mantiene la conexión si te alejas de la cámara.  
-- Solución de problemas:
-  - Confirma que la SIM esté preinstalada (no Cloud SIM).  
-  - Habilita 5G en el Administrador de Tarjeta SIM.  
-  - Verifica el APN correcto para tu región ([guía de configuración de APN](https://avatour.com/support/how-do-i-change-the-apn-on-my-glocalme-hotspot)).
-
-**Opción B: Hotspot personal / SIM**
-- Usa tu propio smartphone o hotspot dedicado.  
-
-**Nota Importante:**  
-> Mantén el hotspot apagado mientras estés conectado a WiFi; habilítalo solo cuando estés fuera de alcance. El sistema operativo de la cámara cambia dinámicamente entre redes WiFi según la intensidad de la señal y puede cambiar inadvertidamente al hotspot incluso cuando el WiFi está disponible.
-
-> Las redes móviles pueden limitar el ancho de banda inesperadamente. Consulta con tu operador sobre los límites del plan de datos, o contacta al soporte de Avatour si usas nuestro hotspot y SIM.
-
-##### Situaciones de Bajo Ancho de Banda
-- Pre-graba videos de ubicaciones para reproducción posterior ([guía de grabación](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)).  
-- Comparte una transmisión de cámara de smartphone para complementar áreas de bajo ancho de banda (0.1–0.3 Mbps de subida).
-
-##### Sin Conectividad
-- Solo se puede usar video pregrabado ([guía de grabación](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)).
-
-#### Otros Participantes en el Sitio – Mejores Prácticas
-
-Cuando múltiples participantes se unen a una reunión en vivo de Avatour desde la misma ubicación que la cámara 360°, la gestión cuidadosa del **audio y ancho de banda** es crucial:  
-
-- Cada smartphone, tablet o laptop conectado en el sitio consume ancho de banda de red y puede afectar negativamente la transmisión de la cámara 360°.  
-- Múltiples micrófonos y altavoces en el mismo espacio pueden causar **retroalimentación de audio**, haciendo la experiencia de la reunión desagradable para todos los participantes.
-
-#### Otros Participantes en el Sitio – Mejores Prácticas
-
-Cuando múltiples participantes se unen a una reunión en vivo de Avatour desde la misma ubicación que la cámara 360°, la gestión cuidadosa del **audio y ancho de banda** es crucial:  
-
-- Cada smartphone, tablet o laptop conectado en el sitio consume ancho de banda de red y puede afectar negativamente la transmisión de la cámara 360°.  
-- Múltiples micrófonos y altavoces en el mismo espacio pueden causar **retroalimentación de audio**, haciendo la experiencia de la reunión desagradable para todos los participantes.
-
-Para abordar estos desafíos, sigue estas **mejores prácticas**:
-
-- **Usa auriculares con cable o inalámbricos:** Preferiblemente con cancelación de ruido para prevenir eco y retroalimentación.  
-- **Modo En el Sitio:** Únete a la reunión en modo En el Sitio cuando estés físicamente presente cerca de la cámara 360°.  
-  - Este modo está optimizado para uso en el sitio:  
-    - Silencia el micrófono y altavoz del participante por defecto.  
-    - **No** envía la transmisión de cámara del participante.  
-    - **No** muestra la transmisión de la cámara 360° en el navegador del participante.  
-    - Conserva ancho de banda de red, asegurando que la cámara 360° tenga la máxima subida disponible para la transmisión en vivo.  
-    - Útil cuando un usuario quiere compartir detalles específicos; **puedes compartir tu cámara** para vistas específicas.  
-- **Silencia cuando no estés hablando activamente:** Previene retroalimentación de audio no deseada y distracciones.  
-- **Usa una red separada si es posible:** Ten tu smartphone conectado a una red diferente a la red de la cámara para reducir interferencia.  
-
-Seguir estas directrices asegura un tour en vivo fluido y de alta calidad tanto para participantes en el sitio como remotos.
-
-### 5.3 Aplicación de Cámara Avatour
-
-Aquí están (1) el Nivel Superior, (2) Configuración y (3) los menús de Configuración de Red.
-
-![Aplicación de Cámara 360° Avatour - Tres Menús](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-cam-app-3-menu-screens_nju8bt.png) *Aplicación de Cámara 360° Avatour - 3 Menús*
-
-**Captura Rápida** - Para grabación de video 360° sin conexión. - Para una descripción detallada consulta [¿Cómo grabas y subes videos 360 con la Aplicación Avatour?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app). Recomendamos usar un dispositivo de audio externo (conectado vía bluetooth). N.B. También puedes hacer videos e imágenes 2D estándar - simplemente cambia el modo entre 360° y 2D en la esquina inferior derecha una vez en la pantalla de CR.
-
-**Reunión en Vivo** - Para Videoconferencia 360° en vivo. Verás tus espacios de trabajo y al hacer clic en uno iniciará la transmisión de video en vivo desde la cámara 360°. Antes de poder unirte a la reunión con tu cámara 360° necesitas conectar un dispositivo de audio vía bluetooth. Para una descripción detallada consulta [¿Cómo iniciar una reunión de Captura en Vivo con tu cámara Pilot?](https://avatour.com/support/how-to-start-a-live-capture-meeting-with-your-pilot-camera)
-
-> Al organizar una reunión de Captura en Vivo con tu cámara 360°, tendrás herramientas de reunión similares disponibles que reflejan la experiencia web. Aquí hay un enlace a nuestro artículo de Base de Conocimientos que explica estas herramientas en más detalle: [Herramientas de la Aplicación del Operador](https://avatour.com/support/what-avatour-app-tools-are-available-to-labpano-pilot-camera-operators)
-
-**Galería** - Encuentra aquí todos tus videos e imágenes 360° para subir a la Consola Web de Avatour.
-
-**Configuración** - Dentro de Configuración, tienes las siguientes opciones:
-
-- **Red**: Esta opción te permite cambiar a qué red WiFi está conectada la cámara o ejecutar una prueba de conexión de red para ver tu rendimiento de streaming
-- **Captura en Vivo**: Ajusta tu configuración de Captura en Vivo dependiendo del ancho de banda disponible, la sensibilidad al VR de los invitados, o si las lentes protectoras de tu cámara están instaladas:
-  - **Tasa de Fotogramas Objetivo**: Ajusta la tasa de fotogramas para tu video de Captura en Vivo entre 15 fps, 24 fps y 30 fps. Tasas de fotogramas más altas producen un video más fluido, pero requerirán más ancho de banda de subida. Por defecto: 15 fps
-  - **Tasa de Bits Objetivo**: Te permite aumentar o disminuir la tasa de bits máxima de streaming para tu Captura en Vivo. Puedes establecer tu tasa de bits objetivo entre 1 Mbps y 10 Mbps. Tasas de bits más altas resultarán en mayor resolución de video, pero requerirán más ancho de banda de subida. Por defecto: 5 Mbps
-  - **Optimizar Movimiento**: Esto disminuirá la tasa de fotogramas del video, generando menos carga en el ancho de banda de subida de tu red, y aumentará tu tasa de bits de streaming. Además, esta opción ayuda a reducir el mareo por movimiento para participantes en VR. Por defecto: Desactivado
-  - **Lentes Protectoras**: Esto afectará cómo se une el video 360° dependiendo de si las lentes protectoras han sido instaladas en tu cámara. Si no tienes lentes protectoras, establece esto en "No". Si recibiste un Kit 3.0, tienes lentes protectoras preinstaladas y debes establecer esto en "Sí". Por defecto: Sí
-
-- **Captura Rápida**: Ajusta tu configuración de Captura Rápida dependiendo de tu tasa de fotogramas de video preferida, ancho de banda disponible para subidas de video grabado, o si las lentes protectoras de tu cámara están instaladas. Captura Rápida tiene una resolución establecida de 4k que generalmente logra un buen equilibrio entre calidad de video y tamaño de archivo. (Para resoluciones más altas puedes usar las aplicaciones nativas de la cámara, también en la PanoX V2, para detalles consulta [¿Cómo grabas y subes videos 360 con la Aplicación Avatour?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)):
-  - **Tasa de Fotogramas Objetivo**: Ajusta la tasa de fotogramas para tus grabaciones de video de Captura Rápida entre 15 fps, 24 fps y 30 fps. Tasas de fotogramas más altas producen un video más fluido, pero aumentarán el tamaño del archivo de video y el tiempo de subida. Recomendado: 30 fps
-  - **Tasa de Bits Objetivo**: Establece la tasa de bits objetivo para subidas de Captura Rápida entre 5 Mbps y 20 Mbps. Tasas de bits más bajas aumentan las velocidades de subida, pero disminuirán la calidad del video. Recomendado: 20 Mbps
-  - **Lentes Protectoras**: *Ver sección de Lentes Protectoras para Captura en Vivo arriba*
-- **Acerca de**: Ver número de serie del dispositivo y versión del software
-
-**Cuenta** - Para iniciar sesión con tu cuenta de anfitrión o administrador de Avatour.
 
 ## 6. Consejos de Mejores Prácticas {#best-practice-advice}
 
@@ -575,3 +435,63 @@ Para sus primeros usos y familiarizarse con la Consola Web de Avatour y el Kit L
 - Idealmente, los usuarios de smartphones en sitio deben unirse a la reunión (1) en modo en sitio y (2) en una red diferente de la que usa la cámara para no quitar ancho de banda de subida crucial de la cámara 360°.
 
 - Todos los participantes en sitio que se unan desde su smartphone deben estar silenciados, a menos que estén hablando activamente.
+## 6. Best Practice Advice {#best-practice-advice}
+
+### 6.1 First (informal) Uses and Getting Familiar
+
+For your first uses and getting familiar with the Avatour Web Console and the Avatour Turnkey Kit we recommend the following steps:
+
+1. Take the kit home and play with it with family and friends using your home internet connection.
+2. Take the kit to the office and connect to a corporate network (corporate issues might evolve, e.g. corporate firewalls - but you know from step one that Avatour is working and this is a topic to sort out by your IT team with the help of Avatour).
+3. Start to use Avatour onsite (outside your office) at the meeting location to which remote participants would usually need to travel to. More connectivity topics might evolve. Avatour to help in cooperation with your IT team.
+4. Start using with internal and external remote participants.
+
+### 6.2 Before a 360° Video Live Meeting
+
+- We recommend to do a recorded 360° video tour before any live tour if time allows for three reasons: (1) Have a fallback solution for the live tour, (2) have something for documentation and later review (on top of the recorded live tour) and (3) start to create a library of 360° videos of all your sites which can be helpful for many use cases. 
+- All kit components charged for at least 90 minutes before the live meeting. We anyway recommend to have all devices on continuous charge when not in use. Like that all devices will always be ready, also for unplanned ad hoc meetings.
+- Have the kit fully assembled (1. tripod base + 2. Ulanzi battery + 3. extendable stick + 4. 360° cam).
+
+- Confirm a Workspace is created for hosting a live meeting and include all relevant Assets.
+
+- Invite all participants to the meeting through your Workspace. This creates an invite on all participants calendars, and includes the meeting invite link.
+
+- Pair and connect your bluetooth headphones or speaker you plan to use for your tour to the camera.
+
+- All onsite smartphone users should connect from a different network than the camera’s network. This will reduce the load on the camera’s network bandwidth.
+
+- If you are alone as a camera operator, take a smartphone with you in the case you want to smartphone camera-share and show fine details.
+
+- Confirm the 360 camera can connect to your local WiFi.
+
+- Prior to an Avatour meeting, plan out the route you will take through the facility. Do a test Avatour meeting with the camera, and check that all areas have bitrates above 1 Mbps bandwidth. This can be seen on the camera screen itself, or as a remote participant by going to Settings and activating Show Bitrate.
+
+- If you notice some areas have little to no bandwidth, it is best to take images or a recording. These can then be presented during the meeting for remote participants to review. You can follow the guide here that explains our Quick Capture for recording and uploading videos/images: [How do you record and upload 360 videos with the Avatour App?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)
+
+- If you have remote participants joining the meeting who have not used Avatour before, provide them with a short summary of the platform, its functionality (360 live video, assets, snapshots, annotations, spotlight) and the meeting tools.
+
+- You can start in another video conferencing solution (e.g. Teams, Zoom, Google Meet) but before moving over to Avatour, completely close the other video conference application. In some cases, these other applications will prioritize your device’s microphone/speakers/webcam, causing them to be disabled for Avatour. Additionally, do NOT run Avatour AND another video conference at the same time as this will reduce available bandwidth.
+
+- If you are planning to use the 360 camera in a high temperature environment, it’s recommended to use the cooling module (Pilot Pano only). This will help reduce the chances of the camera overheating and shutting down automatically.
+
+### 6.3 When Operating the Cam Onsite for a 360° Video Live Meeting
+
+- When operating the camera, make sure that you are walking slowly. This helps with the video quality and reduces any potential video downtime when the camera’s network connection switches between WiFi access points.
+
+- Hold the camera out in front of you, and above eye level. This allows all remote participants to see the majority of your surrounding area.
+
+- For instances where the camera needs to remain stable, use the tripod stand and extend the camera to the correct height, best to eye-level.
+
+- Always connect the camera to your local WiFi network where possible. For areas without WiFi access, use the provided hotspot. The hotspot has a SIM card that will connect to a reliable cell network near you. Always keep the hotspot switched off when not in use indoors as otherwise the 360° cam could connect to the hotspot which we do not want indoors. When outdoors, keep the hotspot near the 360° camera.
+
+- When the on camera bitrate starts to drop below 2 Mbps, walk slower or stop completely until the signal stabilizes again. This usually happens when you change from one WiFi Access Point to another. 
+
+- If you know the connectivity and video will drop when moving to a specific location (Example: moving from an indoor production area to an outdoor area), let the remote participants know in advance.
+
+- If needing to show something in high detail or small writing, use your own or an onsite participant's smartphone to join the meeting and present your / their phone’s (back-facing) camera.
+
+- If possible we recommend that one additional person is onsite to help with the above described smartphone camera share as this often proves to be helpful / needed.
+
+- Ideally onsite smartphone users should join the meeting (1) in onsite mode and (2) on a different network from that the camera is using to not take away crucial upload bandwidth from the 360° cam.
+
+- All onsite participants joining from their smartphone should be muted, unless actively speaking.

@@ -271,7 +271,7 @@ When presenting an asset in a meeting, the **Asset Toolbar** appears above the c
 
   ![Avatour Notes - Voice Command Generated](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-notes-voice-command-generated_ic5cu4.png) *Avatour Notes - Voice Command Generated*
 
-- **Notes and Summary Panel** – Opens a side panel that displays all notes, key topics, and an executive summary for the asset. Clicking an item jumps to that moment in the video.  
+- **Notes and Summary Panel** – Opens a side panel that displays all notes, key topics, and an executive summary for the asset. Clicking an item brings you to that moment in the video.  
 
   ![Avatour Asset Executive Summary](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-exec-summary_cqpqbs.png) *Avatour Executive Summary while presenting an Asset in a Meeting*
 
@@ -294,7 +294,7 @@ When reviewing an asset in a workspace, the toolbar is similar but optimized for
 
 ![Avatour Menu while Presenting an Asset outside a meeting, e.g. when visiting a workspace](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-workspace_iri8gc.png) *Avatour Menu when presenting an Asset in a Workspace*
 
-- **Video Timeline / Progress Bar** – Shows video progress with notes and key topics extracted from audio. Click anywhere on the timeline to scrub through the video. Click a note or topic to jump to that moment and open the note. Includes **Play / Pause** controls.  
+- **Video Timeline / Progress Bar** – Shows video progress with notes and key topics extracted from the audio track. Click anywhere on the timeline to scrub through the video. Click a note or topic to jump to that moment and open the note. Includes **Play / Pause** controls.  
 - **Snapshot, Notes, Notes and Summary Panel Panel, Share Link, Closed Captions**  
 - Not available: **Spotlight, POV** (these require live participants)  
 - Additional controls:
@@ -305,11 +305,11 @@ When reviewing an asset in a workspace, the toolbar is similar but optimized for
 
 ## 4. For Host and Admin Users - Avatour Web Console {#for-host-and-admin-users-avatour-web-console}
 
-When you log in to your Avatour User Account, you will access the **Web Console**.  
+When you login to your Avatour User Account, you will access the **Web Console**.  
 
 ### 4.1 Web Console - Overview Main Menu {#web-console-overview-main-menu}
 
-On the left-hand side, you will see the following menu items:
+On the left side, you will see the following menu items:
 
 ![Avatour Web Console - Main Menu](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu_qwpthq.png) *Avatour Web Console - Main Menu*
 
