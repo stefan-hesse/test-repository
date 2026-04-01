@@ -64,8 +64,8 @@ def translate_heading(heading, target_language, api_key):
     time.sleep(2)
     return f"{prefix}{translated_text}{anchor}\n"
 
-def translate_body(body, target_language, api_key):
-    """Translate the body text of a section."""
+def translate_chunk(text, target_language, api_key):
+    """Translate a single chunk of markdown body text."""
     payload = json.dumps({
         "model": "claude-opus-4-5",
         "max_tokens": 4096,
@@ -73,15 +73,13 @@ def translate_body(body, target_language, api_key):
             f"""Translate the following Markdown text to {target_language}.
 
 CRITICAL RULES:
-- Return ONLY the translated text, nothing else — no explanation, no preamble
+- Return ONLY the translated text, nothing else — no explanation, no preamble, no added content
 - Preserve ALL Markdown formatting: bold, italic, links, images, code, blockquotes, lists, anchor IDs like {{#anchor}}, horizontal rules, and ALL subheadings (###, ####, #####)
 - Translate ONLY readable text — never translate URLs, image paths, anchor IDs, or code
-- Do NOT include any ## level headings — those are handled separately
-- The text to translate starts after the line "===START===" and ends before the line "===END==="
+- Do NOT add any content beyond what is provided below
+- Translate EXACTLY the text below and nothing more:
 
-===START===
-{body}
-===END==="""}]
+{text}"""}]
     }).encode('utf-8')
     req = urllib.request.Request(
         'https://api.anthropic.com/v1/messages',
@@ -95,12 +93,26 @@ CRITICAL RULES:
     with urllib.request.urlopen(req, timeout=120) as resp:
         result = json.loads(resp.read())['content'][0]['text']
     time.sleep(2)
-    # Strip any accidental ===START=== or ===END=== markers from output
-    result = re.sub(r'===START===\n?', '', result)
-    result = re.sub(r'\n?===END===', '', result)
-    # Strip any accidental <section> tags
+    # Clean up any stray tags
     result = re.sub(r'</?section>\n?', '', result)
+    result = re.sub(r'===(?:START|END)===\n?', '', result)
     return result
+
+def translate_body(body, target_language, api_key):
+    """Translate a section body, splitting on ### boundaries for large sections."""
+    # Split on ### subsection boundaries to keep chunks manageable
+    chunks = re.split(r'(?=^### )', body, flags=re.MULTILINE)
+    if len(chunks) == 1:
+        # Small section — translate directly
+        return translate_chunk(body, target_language, api_key)
+    # Translate each chunk separately and reassemble
+    translated_chunks = []
+    for chunk in chunks:
+        if chunk.strip():
+            translated_chunks.append(translate_chunk(chunk, target_language, api_key))
+        else:
+            translated_chunks.append(chunk)
+    return ''.join(translated_chunks)
 
 def auto_translate_lang(en_sections, en_prev_dict, lang_path, lang_name, api_key):
     """Translate changed EN sections into one language file."""
