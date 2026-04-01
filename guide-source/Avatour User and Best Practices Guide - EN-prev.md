@@ -155,7 +155,7 @@ You can join an Avatour meeting from **any desktop or laptop computer, smartphon
 You can access a Workspace in the following ways:
 
 - **Public Workspace:**  
-  If the Workspace is public, the link can be accessed directly—no login required.
+  If the Workspace is public, the link can be accessed directly — no login required.
 
 - **Restricted Workspace:**  
   If the Workspace is restricted, you must be added as a **collaborator** with either **Editor** or **Viewer** permissions.
@@ -309,7 +309,7 @@ When you login to your Avatour User Account, you will access the **Web Console**
 
 ### 4.1 Web Console - Overview Main Menu {#web-console-overview-main-menu}
 
-On the left-hand side, you will see the following menu items:
+On the left side, you will see the following menu items:
 
 ![Avatour Web Console - Main Menu](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu_qwpthq.png) *Avatour Web Console - Main Menu*
 
