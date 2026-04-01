@@ -36,8 +36,35 @@ def split_sections(text):
     sections.append((heading, ''.join(lines)))
     return sections
 
-def translate_text(text, target_language, api_key):
-    """Send text to Anthropic API and return translation."""
+def translate_heading(heading, target_language, api_key):
+    """Translate just the heading text, preserving the ## prefix and anchor ID."""
+    # Extract: prefix (##), text, anchor ({#...})
+    m = re.match(r'^(#{1,6}\s+)(.*?)(\s*\{#[\w-]+\})?\s*$', heading.strip())
+    if not m:
+        return heading
+    prefix, text, anchor = m.group(1), m.group(2), m.group(3) or ''
+    payload = json.dumps({
+        "model": "claude-opus-4-5",
+        "max_tokens": 256,
+        "messages": [{"role": "user", "content":
+            f"Translate this heading text to {target_language}. "
+            f"Return ONLY the translated text — no explanation, no punctuation changes, no quotes:\n{text}"}]
+    }).encode('utf-8')
+    req = urllib.request.Request(
+        'https://api.anthropic.com/v1/messages',
+        data=payload,
+        headers={
+            'Content-Type': 'application/json',
+            'x-api-key': api_key,
+            'anthropic-version': '2023-06-01',
+        }
+    )
+    with urllib.request.urlopen(req, timeout=60) as resp:
+        translated_text = json.loads(resp.read())['content'][0]['text'].strip()
+    return f"{prefix}{translated_text}{anchor}\n"
+
+def translate_body(body, target_language, api_key):
+    """Translate the body text of a section."""
     payload = json.dumps({
         "model": "claude-opus-4-5",
         "max_tokens": 4096,
@@ -45,11 +72,12 @@ def translate_text(text, target_language, api_key):
             f"""Translate the following Markdown text to {target_language}.
 
 Rules:
-- Preserve ALL Markdown formatting exactly: headings, bold, italic, links, images, code, blockquotes, lists, anchor IDs like {{#anchor}}, horizontal rules
+- Preserve ALL Markdown formatting exactly: bold, italic, links, images, code, blockquotes, lists, anchor IDs like {{#anchor}}, horizontal rules
 - Translate ONLY readable text — never translate URLs, image paths, anchor IDs, or code
+- Do NOT add or remove any headings (lines starting with #)
 - Return ONLY the translated Markdown — no preamble, no explanation
 
-{text}"""}]
+{body}"""}]
     }).encode('utf-8')
     req = urllib.request.Request(
         'https://api.anthropic.com/v1/messages',
@@ -84,15 +112,11 @@ def auto_translate_lang(en_sections, en_prev_dict, lang_path, lang_name, api_key
             lang_sections[heading] = ('', body)
             continue
         if en_prev_dict.get(heading, '') != body:
-            # Translate heading + body together
-            translated = translate_text(heading + body, lang_name, api_key)
-            # Split translated result back into heading + body
-            lines = translated.splitlines(keepends=True)
-            if lines and re.match(r'^## ', lines[0]):
-                lang_sections[heading] = (lines[0], ''.join(lines[1:]))
-            else:
-                lang_sections[heading] = (heading, translated)
-            label = heading.strip()[:60] if heading != '__preamble__' else 'preamble'
+            # Translate heading and body separately to guarantee heading is preserved
+            translated_heading = translate_heading(heading, lang_name, api_key)
+            translated_body = translate_body(body, lang_name, api_key)
+            lang_sections[heading] = (translated_heading, translated_body)
+            label = heading.strip()[:60]
             print(f"      ✓ {label}")
             changed += 1
 
