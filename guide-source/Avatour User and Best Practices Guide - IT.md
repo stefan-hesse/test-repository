@@ -1,17 +1,19 @@
 # Avatour User and Best Practices Guide
 
-## 1. Per tutti gli utenti Avatour {#for-all-avatour-users}
+## 1. For All Avatour Users {#for-all-avatour-users}
 
-Se sei nuovo su Avatour, le seguenti risorse forniscono un'utile introduzione alla piattaforma e alle sue funzionalità:
+If you are new to Avatour, the following resources provide a helpful introduction to the platform and its capabilities:
 
-1. [Video Come funziona Avatour](https://avatour.com/how-it-works)  
-Una breve panoramica delle principali funzionalità di Avatour e di come la piattaforma consente una collaborazione remota immersiva.
-2. [FAQ](https://avatour.com/faqs)  
-Risposte alle domande più frequenti.
-3. [Glossario](https://avatour.com/glossary)  
-Definizioni dei termini e concetti chiave di Avatour utilizzati frequentemente.
-4. Sito web  
-Dai un'occhiata in particolare alla pagina [Funzionalità di Avatour](https://avatour.com/features) insieme alle sezioni dedicate ai Casi d'uso e ai Settori per scoprire come Avatour può supportare le tue esigenze specifiche.## 2. Avatour User Types  {#avatour-user-types}
+1. [Avatour How it Works video](https://avatour.com/how-it-works)  
+A short overview of Avatour’s main features and how the platform enables immersive remote collaboration.
+2. [FAQs](https://avatour.com/faqs)  
+Answers to frequently asked questions.
+3. [Glossary](https://avatour.com/glossary)  
+Definitions of key Avatour terms and concepts frequently used.
+4. Website  
+Have a look especially at the [Avatour Features](https://avatour.com/features) page along with the dedicated Use Cases and Industries sections to learn how Avatour can support your specific needs.
+
+## 2. Avatour User Types  {#avatour-user-types}
 
 ### 2.1 Meeting Attendees (No Account required)
 Users can join the meeting without registering for an Avatour account.
@@ -112,198 +114,168 @@ Workspace permissions define what a user can do **within a specific Workspace**.
 
 - **Viewer collaborator:** Users with this permission have read-only access to Workspace Assets. They **cannot modify Assets, manage meetings, or manage collaborators**, but they **can create Notes on Assets**. 
   
-## 3. For Remote Meeting Participants and Workspace Visitors {#for-remote-meeting-participants-and-workspace-visitors}
+## 3. Per i Partecipanti alle Riunioni da Remoto e i Visitatori dei Workspace {#for-remote-meeting-participants-and-workspace-visitors}
 
-Avatour allows users to collaborate in two primary ways:
+Avatour consente agli utenti di collaborare in due modalità principali:
 
-- **Join a live meeting:**  
-  You may receive a **calendar invitation** to join an Avatour meeting. During the meeting, participants can conduct a **live remote site visit** or synchronously review assets together.
+- **Partecipare a una riunione Avatour (Collaborazione Sincrona):**  
+  Potresti ricevere un **invito tramite calendario** per partecipare a una riunione Avatour. Durante la riunione, i partecipanti possono condurre una **visita remota in tempo reale** o rivedere insieme le risorse in modo sincrono.
 
-- **Visit a Workspace:**  
-  You may also be invited as a **collaborator to a Workspace** to review assets **asynchronously** (on your own schedule).
+- **Visitare un Workspace (Collaborazione Asincrona):**  
+  Potresti anche essere invitato come **collaboratore in un Workspace** per rivedere le risorse **in modo asincrono** (secondo i tuoi tempi).
 
-### 3.1 How to Join an Avatour Meeting and Visit an Avatour Workspace {#how-to-join-an-avatour-meeting-and-visit-an-avatour-workspace}
-#### 3.1.1 Any "Flat Screen" Device with a Web Browser {#any-flat-screen}
-You can join an Avatour meeting from **any desktop or laptop computer, smartphone, or tablet** using a web browser.  
+### 3.1 Come Partecipare a una Riunione Avatour e Visitare un Workspace Avatour {#how-to-join-an-avatour-meeting-and-visit-an-avatour-workspace}
+#### 3.1.1 Qualsiasi Dispositivo a "Schermo Piatto" con un Browser Web {#any-flat-screen}
+Puoi partecipare a una riunione Avatour da **qualsiasi computer desktop o laptop, smartphone o tablet** utilizzando un browser web.  
 
-##### Joining a Meeting
+##### Partecipare a una Riunione Avatour
 
-> **Note:** Joining an Avatour meeting requires that you **grant microphone permissions**. Please accept any permission prompts from your browser.
+> **Nota:** Per partecipare a una riunione Avatour è necessario **concedere i permessi per il microfono**. Accetta eventuali richieste di autorizzazione dal tuo browser.
 
-1. **Via calendar invitation (recommended):**  
-   - You will typically receive a **calendar invitation** with a **direct join link** (for example: `https://avatour.live/join?s=xxxxx`).  
-   - Clicking the link will automatically populate the **5-character meeting code** and take you to the meeting.
-   - **Authentication required:** Some meetings are restricted to registered users. In this case, the invitation will indicate that you need to **log in to access the meeting**.  
-   - **Password-protected meetings:** Some meetings may require a password. In that case, the invitation will include the password you must enter to join.
+1. **Tramite invito calendario (consigliato):**  
+   - Riceverai solitamente un **invito tramite calendario** con un **link diretto per partecipare** (ad esempio: `https://avatour.live/join?s=xxxxx`).  
+   - Cliccando sul link verrà automaticamente inserito il **codice riunione di 5 caratteri** e sarai indirizzato alla riunione.
+   - **Autenticazione richiesta:** Alcune riunioni sono riservate agli utenti registrati. In questo caso, l'invito indicherà che devi **effettuare l'accesso per entrare nella riunione**.  
+   - **Riunioni protette da password:** Alcune riunioni potrebbero richiedere una password. In tal caso, l'invito includerà la password da inserire per partecipare.
 
-2. **Via meeting code:**  
-   - If the host shares a **5-character meeting code** separately, go to [https://avatour.live/join](https://avatour.live/join), enter your **name** and the **meeting code**, and join the meeting.  
-   - If the meeting is **password-protected**, enter the password provided by the host.  
-   - If the meeting requires **authentication**, you will need to **log in with your Avatour account** before joining.
+2. **Tramite codice riunione:**  
+   - Se l'organizzatore condivide separatamente un **codice riunione di 5 caratteri**, vai su [https://avatour.live/join](https://avatour.live/join), inserisci il tuo **nome** e il **codice riunione**, e partecipa alla riunione.  
+   - Se la riunione è **protetta da password**, inserisci la password fornita dall'organizzatore.  
+   - Se la riunione richiede **l'autenticazione**, dovrai **accedere con il tuo account Avatour** prima di partecipare.
 
-> **Tip 1:** If your camera or microphone does not work, it may be in use by another application (for example, Microsoft Teams or Zoom). Close any apps that might be using your camera or microphone, then leave and rejoin the Avatour meeting.  
+> **Suggerimento 1:** Se la tua fotocamera o il microfono non funzionano, potrebbero essere in uso da un'altra applicazione (ad esempio, Microsoft Teams o Zoom). Chiudi tutte le app che potrebbero utilizzare la tua fotocamera o il microfono, poi esci e riconnettiti alla riunione Avatour.  
 
-> **Tip 2:** If you are still unable to join the meeting, run this test: [https://avatour.live/test](https://avatour.live/test).  
-> The test can identify whether your **corporate firewall or network** is blocking access, and will provide information to guide discussions with your IT team.  
+> **Suggerimento 2:** Se ancora non riesci a partecipare alla riunione, esegui questo test: [https://avatour.live/test](https://avatour.live/test).  
+> Il test può identificare se il tuo **firewall aziendale o la rete** sta bloccando l'accesso e fornirà informazioni utili per le discussioni con il tuo team IT.  
 
-> **Tip 3:** Do **not** use the Avatour iOS or Android apps to join meetings. These apps are only required when **streaming a live meeting from an Insta360 camera**, since those cameras cannot run the Avatour 360° software directly and require a smartphone to assist.
+> **Suggerimento 3:** **Non** utilizzare le app Avatour per iOS o Android per partecipare alle riunioni. Queste app sono necessarie solo quando si **trasmette una riunione in diretta da una fotocamera Insta360**, poiché queste fotocamere non possono eseguire direttamente il software Avatour 360° e richiedono uno smartphone di supporto.
 
-##### Visiting a Workspace Without Joining a Meeting
+##### Visitare un Workspace Avatour (senza partecipare a una Riunione Avatour)
 
-You can access a Workspace without joining a live meeting in the following ways:
+Puoi accedere a un Workspace nei seguenti modi:
 
-- **Public Workspace:**  
-  If the Workspace is public, the link can be accessed directly—no login required.
+- **Workspace Pubblico:**  
+  Se il Workspace è pubblico, il link può essere accessibile direttamente—non è richiesto l'accesso.
 
-- **Restricted Workspace:**  
-  If the Workspace is restricted, you must be added as a **collaborator** with either **Editor** or **Viewer** permissions.
+- **Workspace Riservato:**  
+  Se il Workspace è riservato, devi essere aggiunto come **collaboratore** con permessi di **Editor** o **Visualizzatore**.
 
-  1. When you are added as a collaborator, you will receive an **email notification** with a link to the Workspace.
-  2. Click the link in the email to open the Workspace. If you are not already logged in, you will be prompted to **log in or complete signup**.
-  3. Once logged in, the Workspace will open automatically.
+  1. Quando vieni aggiunto come collaboratore, riceverai una **notifica via email** con un link al Workspace.
+  2. Clicca sul link nell'email per aprire il Workspace. Se non hai già effettuato l'accesso, ti verrà richiesto di **accedere o completare la registrazione**.
+  3. Una volta effettuato l'accesso, il Workspace si aprirà automaticamente.
 
-  Alternatively, you can log in at  
-  https://avatour.live/login  
-  and access the Workspace from your **list of Workspaces**.
+  In alternativa, puoi accedere su [https://avatour.live/login](https://avatour.live/login) e accedere al Workspace dalla tua **lista di Workspace**.
 
-#### 3.1.2 VR Headset {#vr-headset}
-You can join a meeting and visit a workspace from a range of compatible Meta and Pico headsets. To do this: 
+#### 3.1.2 Visore VR {#vr-headset}
+Puoi partecipare a una riunione e visitare un workspace da una gamma di visori Meta e Pico compatibili. Per farlo: 
 
-1. Install our Avatour app from your respective VR store app: [How to install Avatour VR app](https://avatour.com/support/which-vr-headsets-can-i-use-with-avatour)
-2. Load our app and input the meeting code or select a Workspace to join a meeting. For more information on how to use our VR app, see our Knowledge Base article [here](https://avatour.com/support/what-features-are-available-to-vr-guests).
+1. Installa la nostra app Avatour dal rispettivo store VR: [Come installare l'app Avatour VR](https://avatour.com/support/which-vr-headsets-can-i-use-with-avatour)
+2. Carica la nostra app e inserisci il codice riunione o seleziona un Workspace per partecipare a una riunione. Per maggiori informazioni su come utilizzare la nostra app VR, consulta il nostro articolo nella Knowledge Base [qui](https://avatour.com/support/what-features-are-available-to-vr-guests).
 
-### 3.2 Meeting and Workspace Collaboration Tools {#meeting-tools}
+### 3.2 Strumenti di Collaborazione per Riunioni e Workspace {#meeting-tools}
 
-Avatour allows collaboration in two main contexts:
+Avatour consente la collaborazione in due contesti principali:
 
-1. **Meetings (synchronous):** Collaborate in real-time with other participants, including live site visits or reviewing recorded assets together.  
-2. **Workspaces (asynchronous):** Review and interact with assets on your own schedule, 24/7.
+1. **Riunioni (sincrone):** Collabora in tempo reale con altri partecipanti, incluse visite in loco in diretta o revisione insieme di risorse registrate.  
+2. **Workspace (asincroni):** Rivedi e interagisci con le risorse secondo i tuoi tempi, 24/7.
 
-The **collaboration tools are mostly similar** between meetings and workspaces, with some differences due to the synchronous vs asynchronous context.
+Gli **strumenti di collaborazione sono per lo più simili** tra riunioni e workspace, con alcune differenze dovute al contesto sincrono vs asincrono.
 
-#### 3.2.1 Interface Layout
+#### 3.2.1 Layout dell'Interfaccia
 
-The Avatour interface is organized around three main areas:
+L'interfaccia di Avatour è organizzata attorno a tre aree principali:
 
-- **Left panel** – Workspace assets and supporting tools  
-- **Center canvas** – Main viewing area for live video or assets  
-- **Right panel** – Contextual information, such as participants, meetings, or chat  
+- **Pannello sinistro** – Risorse del workspace e strumenti di supporto  
+- **Canvas centrale** – Area di visualizzazione principale per video in diretta o risorse  
+- **Pannello destro** – Informazioni contestuali, come partecipanti, riunioni o chat  
 
-Most interactions are initiated from the **bottom menu**.  
-Clicking a menu option opens a **side panel** on the left or right side of the screen, while the **center canvas** remains the primary viewing area.
+La maggior parte delle interazioni viene avviata dal **menu inferiore**.  
+Cliccando un'opzione del menu si apre un **pannello laterale** sul lato sinistro o destro dello schermo, mentre il **canvas centrale** rimane l'area di visualizzazione principale.
 
 ---
-#### 3.2.2 Meeting View Example
+#### 3.2.2 Esempio di Vista Riunione
 
-Here is an example of a view in an Avatour Meeting:
+Ecco un esempio di vista in una Riunione Avatour:
 
-![Avatour Meeting UI with Assets Panel, blank Canvas and Participants Panel](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-meeting-assets-blank-participants_pugprq.png)  
-*Avatour Meeting with Assets Panel (left), Canvas (center), and Participants Panel (right)*
+![Interfaccia Riunione Avatour con Pannello Risorse, Canvas vuoto e Pannello Partecipanti](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-meeting-assets-blank-participants_pugprq.png)  
+*Riunione Avatour con Pannello Risorse (sinistra), Canvas (centro) e Pannello Partecipanti (destra)*
 
 ---
 
-#### 3.2.3 Workspace View Example
+#### 3.2.3 Esempio di Vista Workspace
 
-Here is an example of a Workspace view:
+Ecco un esempio di vista Workspace:
 
-![Avatour Workspace with Assets Panel, blank Canvas and Meetings Panel](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-workspace-assets-blank-meetings_qeumpl.png)  
-*Avatour Workspace with Assets Panel (left), Canvas (center), and Meetings Panel (right)*
-
----
-
-#### 3.2.4 Bottom Menu Overview
-
-The bottom menu provides access to the main interface controls and panels:
-
-**Meeting Bottom Menu**  
-
-![Avatour Meeting Bottom Menu](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-meeting-bottom-menu_bflaor.png)  
-*Avatour Meeting Bottom Menu*
-
-- **Assets** – Review workspace files, including recorded videos, images, snapshots, and PDFs. 
-- **Chat** – Send messages to all meeting participants.  
-- **Camera** – Turn your webcam on or off.  
-- **Microphone** – Mute or unmute yourself.  
-- **Present** – Present an asset, desktop, or webcam feed (see Present section below).  
-- **Host Tools** (hosts only):  
-  - **Lock Focus** – Lock the view for all participants.  
-  - **Mute All** – Mute all participants.  
-- **Enable Full Screen** – Make the meeting tab full screen.  
-- **Exit Meeting** – Leave the meeting.  
-- **Start Recording** – Use this button to start and stop recording manually during a meeting. Alternatively, meetings can be recorded automatically if **auto-start recording** is enabled in the workspace settings. In both cases, recordings are saved to the workspace assets.
-- **Map** – Open or close the map panel for assets with a GPS track. Clicking a location jumps to the exact point in the video. The map updates live as the video plays.
-- **Participants** – Open or close the participants panel.  
-- **Meeting Info** – View the meeting code, invite link, and access related tutorials.  
-
-![Avatour Meeting Info](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-meeting-info-side-pane_nx7dp4.png)  
-*Avatour Meeting Info Side Pane*
-
-- **Settings** – Adjust language, audio, and video settings. For live 360° video meetings, use **Show Bitrate** to monitor connectivity stats.
-
-> Tip: Send the meeting link or add it to a calendar item to invite participants.
+![Workspace Avatour con Pannello Risorse, Canvas vuoto e Pannello Riunioni](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-workspace-assets-blank-meetings_qeumpl.png)  
+*Workspace Avatour con Pannello Risorse (sinistra), Canvas (centro) e Pannello Riunioni (destra)*
 
 ---
 
-##### Present Menu
+#### 3.2.4 Panoramica del Menu Inferiore
 
-The **Present** option in the meeting bottom menu allows you to share content with all participants.
+Il menu inferiore fornisce accesso ai controlli principali dell'interfaccia e ai pannelli:
 
-- **Camera** – Share your smartphone/tablet camera. This can also be used during a live 360° video meeting to overlay a secondary view for close-ups or specific details. 
-- **Desktop** – Share your desktop screen with all participants.  
-- **Asset** – Present an asset from the workspace. Selecting an asset opens the **Asset toolbar**, which provides playback controls and collaboration tools specific to the asset being presented.
+**Menu Inferiore Riunione**  
 
-##### Asset Toolbar (Meeting)
+![Menu Inferiore Riunione Avatour](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-meeting-bottom-menu_bflaor.png)  
+*Menu Inferiore Riunione Avatour*
 
-When presenting an asset in a meeting, the **Asset Toolbar** appears above the canvas. Here are the tools and menu items available when <u>presenting an Asset in a Meeting</u> - explained from left to right.
+- **Risorse** – Rivedi i file del workspace, inclusi video registrati, immagini, istantanee e PDF. 
+- **Chat** – Invia messaggi a tutti i partecipanti alla riunione.  
+- **Fotocamera** – Attiva o disattiva la tua webcam.  
+- **Microfono** – Attiva o disattiva l'audio.  
+- **Presenta** – Presenta una risorsa, il desktop o il feed della webcam (vedi sezione Presenta sotto).  
+- **Strumenti Organizzatore** (solo organizzatori):  
+  - **Blocca Focus** – Blocca la visualizzazione per tutti i partecipanti.  
+  - **Silenzia Tutti** – Silenzia tutti i partecipanti.  
+- **Attiva Schermo Intero** – Metti la scheda della riunione a schermo intero.  
+- **Esci dalla Riunione** – Abbandona la riunione.  
+- **Avvia Registrazione** – Usa questo pulsante per avviare e interrompere manualmente la registrazione durante una riunione. In alternativa, le riunioni possono essere registrate automaticamente se l'**avvio automatico della registrazione** è abilitato nelle impostazioni del workspace. In entrambi i casi, le registrazioni vengono salvate nelle risorse del workspace.
+- **Mappa** – Apri o chiudi il pannello mappa per le risorse con traccia GPS. Cliccando su una posizione si salta al punto esatto nel video. La mappa si aggiorna in tempo reale durante la riproduzione del video.
+- **Partecipanti** – Apri o chiudi il pannello partecipanti.  
+- **Info Riunione** – Visualizza il codice riunione, il link di invito e accedi ai tutorial correlati.  
 
-![Avatour Menu while Presenting an Asset in a Meeting](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting_oflsr5.png) *Avatour Menu when presenting an Asset in a Meeting*
+![Info Riunione Avatour](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-meeting-info-side-pane_nx7dp4.png)  
+*Pannello Laterale Info Riunione Avatour*
 
+- **Impostazioni** – Regola le impostazioni di lingua, audio e video. Per le riunioni con video 360° in diretta, usa **Mostra Bitrate** per monitorare le statistiche di connessione.
 
-- **Video Timeline / Progress Bar** – Shows video progress with notes and key topics extracted from audio. Click a note or topic to jump to that moment and open the note. Includes **Play / Pause** controls.   
-- **Snapshot** – Capture a 360° or 2D image from the asset.  
-- **Spotlight** – Highlight a specific area for all participants during live sessions.  
-- **Show/Hide Point-of-View (POV)** – Display where each participant is looking in the 360° video.  
-- **Notes** – Create notes anchored to specific moments in the asset. Notes can be categorized (Observation, Issue, Action, Recommendation), tracked by status (Open → In Progress → Resolved), and shared via direct links.  
+> Suggerimento: Invia il link della riunione o aggiungilo a un elemento del calendario per invitare i partecipanti.
 
-  ![Avatour Note and Notes Filter](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-note-and-filters_g181oc.png) *Avatour Note and Note Filters*
+---
 
-  - **Voice Command Notes** – These are automatically generated placeholders when the recording detects mentions like “insert note,” “take a note,” or “make a note.” These notes appear on the timeline and need to be **positioned and finalized** by the user. 
+##### Menu Presenta
 
-  ![Avatour Notes - Voice Command Generated](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-notes-voice-command-generated_ic5cu4.png) *Avatour Notes - Voice Command Generated*
+L'opzione **Presenta** nel menu inferiore della riunione ti consente di condividere contenuti con tutti i partecipanti.
 
-- **Notes and Summary Panel** – Opens a side panel that displays all notes, key topics, and an executive summary for the asset. Clicking an item jumps to that moment in the video.  
+- **Fotocamera** – Condividi la fotocamera del tuo smartphone/tablet. Può essere utilizzata anche durante una riunione con video 360° in diretta per sovrapporre una vista secondaria per primi piani o dettagli specifici. 
+- **Desktop** – Condividi lo schermo del tuo desktop con tutti i partecipanti.  
+- **Risorsa** – Presenta una risorsa dal workspace. Selezionando una risorsa si apre la **Barra degli strumenti Risorsa**, che fornisce controlli di riproduzione e strumenti di collaborazione specifici per la risorsa presentata.
 
-  ![Avatour Asset Executive Summary](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-exec-summary_cqpqbs.png) *Avatour Executive Summary while presenting an Asset in a Meeting*
+##### Barra degli Strumenti Risorsa (Riunione)
 
-  ![Avatour Topics](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-topics_duuq1a.png) *Avatour Topics while presenting an Asset in a Meeting*
+Quando presenti una risorsa in una riunione, la **Barra degli Strumenti Risorsa** appare sopra il canvas. Ecco gli strumenti e le voci di menu disponibili quando si <u>presenta una Risorsa in una Riunione</u> - spiegati da sinistra a destra.
 
-  From the **Side Panel**, you can **print an asset report** or **download it as TXT or CSV**. Reports can include notes, AI-generated topics, and full transcriptions. You can also **choose which elements to include** before exporting.  
-
-  ![Avatour Asset Report Print Menus](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-asset-report-print-menus_kn0syn.png)  
-  *Avatour Asset Report Print / Download Menus*  
-
-  ![Avatour Print Asset Report Element Selection](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-asset-report-element-selection_ud8c5k.png)  
-  *Avatour Asset Report Element Selection Menu*
-
-- **Share Link** – Share a link to a specific note or scene in the asset.  
-- **Closed Captions (CC)** – Display on-screen text transcription during video playback.
-
-##### Asset Toolbar (Workspace)
-
-When reviewing an asset in a workspace, the toolbar is similar but optimized for individual use:
-
-![Avatour Menu while Presenting an Asset outside a meeting, e.g. when visiting a workspace](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-workspace_iri8gc.png) *Avatour Menu when presenting an Asset in a Workspace*
-
-- **Video Timeline / Progress Bar** – Shows video progress with notes and key topics extracted from audio. Click anywhere on the timeline to scrub through the video. Click a note or topic to jump to that moment and open the note. Includes **Play / Pause** controls.  
-- **Snapshot, Notes, Notes and Summary Panel Panel, Share Link, Closed Captions**  
-- Not available: **Spotlight, POV** (these require live participants)  
-- Additional controls:
-  - **10-second steps** – Skip forward/backward  
-  - **Playback Speed** – Adjust speed (0.5×–2×)  
-  - **Trim Video** – Trim beginning or end of the asset
+![Menu Avatour durante la Presentazione di una Risorsa in una Riunione](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting_oflsr5.png) *Menu Avatour durante la presentazione di una Risorsa in una Riunione*
 
 
-## 4. For Host and Admin Users - Avatour Web Console {#for-host-and-admin-users-avatour-web-console}
+- **Timeline Video / Barra di Avanzamento** – Mostra l'avanzamento del video con note e argomenti chiave estratti dall'audio. Clicca su una nota o un argomento per saltare a quel momento e aprire la nota. Include i controlli **Play / Pausa**.   
+- **Istantanea** – Cattura un'immagine 360° o 2D dalla risorsa.  
+- **Evidenziatore** – Evidenzia un'area specifica per tutti i partecipanti durante le sessioni in diretta.  
+- **Mostra/Nascondi Punto di Vista (POV)** – Visualizza dove ogni partecipante sta guardando nel video 360°.  
+- **Note** – Crea note ancorate a momenti specifici nella risorsa. Le note possono essere categorizzate (Osservazione, Problema, Azione, Raccomandazione), tracciate per stato (Aperta → In Corso → Risolta) e condivise tramite link diretti.  
+
+  ![Nota Avatour e Filtro Note](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-note-and-filters_g181oc.png) *Nota Avatour e Filtri Note*
+
+  - **Note da Comando Vocale** – Questi sono segnaposto generati automaticamente quando la registrazione rileva menzioni come "inserisci nota", "prendi una nota" o "fai una nota". Queste note appaiono sulla timeline e devono essere **posizionate e finalizzate** dall'utente. 
+
+  ![Note Avatour - Generate da Comando Vocale](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-notes-voice-command-generated_ic5cu4.png) *Note Avatour - Generate da Comando Vocale*
+
+- **Pannello Note e Riepilogo** – Apre un pannello laterale che mostra tutte le note, gli argomenti chiave e un riepilogo esecutivo per la risorsa. Cliccando su un elemento si salta a quel momento nel video.  
+
+  ![Riepilogo Esecutivo Risorsa Avatour](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-exec-summary_cqpqbs.png) *Riepilogo Esecutivo Avatour durante la presentazione di una Risorsa in una Riunione*
+
+  ![Argomenti Avatour](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-topics_duuq1a.png) *Argomenti Avatour durante la presentazione di una Risorsa in una## 4. For Host and Admin Users - Avatour Web Console {#for-host-and-admin-users-avatour-web-console}
 
 When you log in to your Avatour User Account, you will access the **Web Console**.  
 
