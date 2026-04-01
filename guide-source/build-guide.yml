@@ -30,6 +30,12 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python guide-source/build.py
+      - name: Debug guide-source contents
+        run: |
+          echo "=== guide-source files ==="
+          ls -la "guide-source/"
+          echo "=== git status ==="
+          git status
       - name: Commit updated files
         run: |
           git config user.name  "github-actions[bot]"
