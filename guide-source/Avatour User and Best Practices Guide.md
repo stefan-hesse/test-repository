@@ -190,7 +190,7 @@ The Avatour interface is organized around three main areas:
 - **Right panel** – Contextual information, such as participants, meetings, or chat  
 
 Most interactions are initiated from the **bottom menu**.  
-Clicking a menu option opens a **side panel** on the left or right side of the screen, while the **center canvas** remains the primary viewing area.
+Clicking a menu option opens a **side panel** on the left or right-hand side of the screen, while the **center canvas** remains the primary viewing area.
 
 ---
 #### 3.2.2 Meeting View Example
@@ -331,7 +331,7 @@ On the left side, you will see the following menu items:
 
 #### 4.2.1 Workspaces
 
-Workspaces are flexible organizational units that let you manage assets, collaborators, and meetings in one place. You can create a new workspace with the **New Workspace** button in the upper-right corner.
+Workspaces are flexible organizational units that let you manage assets, collaborators, and meetings in one place. You can create a new workspace with the **New Workspace** button in the upper right corner.
 
 ![Avatour Web Console - Main Menu Item Workspaces](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-workspaces_hnhkjj.png) *Avatour Web Console - Main Menu Item Workspaces*
 
