@@ -66,21 +66,22 @@ def translate_heading(heading, target_language, api_key):
 
 def translate_body(body, target_language, api_key):
     """Translate the body text of a section."""
-    # Wrap in XML tags so the model can't accidentally include content outside the section
-    wrapped = f"<section>\n{body}\n</section>"
     payload = json.dumps({
         "model": "claude-opus-4-5",
         "max_tokens": 4096,
         "messages": [{"role": "user", "content":
-            f"""Translate the text inside the <section> tags to {target_language}.
+            f"""Translate the following Markdown text to {target_language}.
 
-Rules:
-- Preserve ALL Markdown formatting exactly: bold, italic, links, images, code, blockquotes, lists, anchor IDs like {{#anchor}}, horizontal rules, and ALL heading levels (###, ####, #####)
+CRITICAL RULES:
+- Return ONLY the translated text, nothing else — no explanation, no preamble
+- Preserve ALL Markdown formatting: bold, italic, links, images, code, blockquotes, lists, anchor IDs like {{#anchor}}, horizontal rules, and ALL subheadings (###, ####, #####)
 - Translate ONLY readable text — never translate URLs, image paths, anchor IDs, or code
-- Return ONLY the translated content inside <section> tags — no preamble, no explanation
-- Keep the <section> and </section> tags in your response
+- Do NOT include any ## level headings — those are handled separately
+- The text to translate starts after the line "===START===" and ends before the line "===END==="
 
-{wrapped}"""}]
+===START===
+{body}
+===END==="""}]
     }).encode('utf-8')
     req = urllib.request.Request(
         'https://api.anthropic.com/v1/messages',
@@ -94,11 +95,11 @@ Rules:
     with urllib.request.urlopen(req, timeout=120) as resp:
         result = json.loads(resp.read())['content'][0]['text']
     time.sleep(2)
-    # Extract content between <section> tags
-    m = re.search(r'<section>\n?(.*?)\n?</section>', result, re.DOTALL)
-    if m:
-        return m.group(1)
-    # Fallback: return as-is if tags not found
+    # Strip any accidental ===START=== or ===END=== markers from output
+    result = re.sub(r'===START===\n?', '', result)
+    result = re.sub(r'\n?===END===', '', result)
+    # Strip any accidental <section> tags
+    result = re.sub(r'</?section>\n?', '', result)
     return result
 
 def auto_translate_lang(en_sections, en_prev_dict, lang_path, lang_name, api_key):
@@ -108,7 +109,10 @@ def auto_translate_lang(en_sections, en_prev_dict, lang_path, lang_name, api_key
     lang_sections = {}  # keyed by EN heading
     if os.path.exists(lang_path):
         with open(lang_path, 'r', encoding='utf-8') as f:
-            lang_list = split_sections(f.read())
+            raw = f.read()
+        # Clean up any leftover <section> tags from previous translation runs
+        raw = re.sub(r'</?section>\n?', '', raw)
+        lang_list = split_sections(raw)
         # Match by position: en_sections[i] corresponds to lang_list[i]
         for i, (en_heading, _) in enumerate(en_sections):
             if i < len(lang_list):
