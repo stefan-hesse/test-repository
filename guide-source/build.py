@@ -66,19 +66,21 @@ def translate_heading(heading, target_language, api_key):
 
 def translate_body(body, target_language, api_key):
     """Translate the body text of a section."""
+    # Wrap in XML tags so the model can't accidentally include content outside the section
+    wrapped = f"<section>\n{body}\n</section>"
     payload = json.dumps({
         "model": "claude-opus-4-5",
         "max_tokens": 4096,
         "messages": [{"role": "user", "content":
-            f"""Translate the following Markdown text to {target_language}.
+            f"""Translate the text inside the <section> tags to {target_language}.
 
 Rules:
-- Preserve ALL Markdown formatting exactly: bold, italic, links, images, code, blockquotes, lists, anchor IDs like {{#anchor}}, horizontal rules
+- Preserve ALL Markdown formatting exactly: bold, italic, links, images, code, blockquotes, lists, anchor IDs like {{#anchor}}, horizontal rules, and ALL heading levels (###, ####, #####)
 - Translate ONLY readable text — never translate URLs, image paths, anchor IDs, or code
-- Do NOT add or remove any headings (lines starting with #)
-- Return ONLY the translated Markdown — no preamble, no explanation
+- Return ONLY the translated content inside <section> tags — no preamble, no explanation
+- Keep the <section> and </section> tags in your response
 
-{body}"""}]
+{wrapped}"""}]
     }).encode('utf-8')
     req = urllib.request.Request(
         'https://api.anthropic.com/v1/messages',
@@ -92,6 +94,11 @@ Rules:
     with urllib.request.urlopen(req, timeout=120) as resp:
         result = json.loads(resp.read())['content'][0]['text']
     time.sleep(2)
+    # Extract content between <section> tags
+    m = re.search(r'<section>\n?(.*?)\n?</section>', result, re.DOTALL)
+    if m:
+        return m.group(1)
+    # Fallback: return as-is if tags not found
     return result
 
 def auto_translate_lang(en_sections, en_prev_dict, lang_path, lang_name, api_key):
