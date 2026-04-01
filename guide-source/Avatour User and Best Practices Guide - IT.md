@@ -1,195 +1,191 @@
 # Avatour User and Best Practices Guide
 
-## 1. For All Avatour Users {#for-all-avatour-users}
+## 1. Per Tutti gli Utenti Avatour {#for-all-avatour-users}
 
-If you are new to Avatour, the following resources provide a helpful introduction to the platform and its capabilities:
+Se sei nuovo su Avatour, le seguenti risorse forniscono un'utile introduzione alla piattaforma e alle sue funzionalità:
 
-1. [Avatour How it Works video](https://avatour.com/how-it-works)  
-A short overview of Avatour’s main features and how the platform enables immersive remote collaboration.
-2. [FAQs](https://avatour.com/faqs)  
-Answers to frequently asked questions.
-3. [Glossary](https://avatour.com/glossary)  
-Definitions of key Avatour terms and concepts frequently used.
-4. Website  
-Have a look especially at the [Avatour Features](https://avatour.com/features) page along with the dedicated Use Cases and Industries sections to learn how Avatour can support your specific needs.
+1. [Video Come Funziona Avatour](https://avatour.com/how-it-works)  
+Una breve panoramica delle principali funzionalità di Avatour e di come la piattaforma consente una collaborazione remota immersiva.
+2. [FAQ](https://avatour.com/faqs)  
+Risposte alle domande frequenti.
+3. [Glossario](https://avatour.com/glossary)  
+Definizioni dei termini e concetti chiave di Avatour utilizzati frequentemente.
+4. Sito Web  
+Dai un'occhiata in particolare alla pagina [Funzionalità di Avatour](https://avatour.com/features) insieme alle sezioni dedicate ai Casi d'Uso e ai Settori per scoprire come Avatour può supportare le tue esigenze specifiche.## 2. Tipi di Utenti Avatour  {#avatour-user-types}
 
-## 2. Avatour User Types  {#avatour-user-types}
+### 2.1 Partecipanti alle Riunioni (Account non richiesto)
+Gli utenti possono partecipare alla riunione senza registrarsi per un account Avatour.
+Eccezione: Se l'host ha limitato la riunione agli utenti registrati — ad esempio, per consentire solo ai dipendenti interni di partecipare tramite Single Sign-On (SSO) — l'invito del calendario indicherà che i partecipanti devono effettuare il login per autenticarsi.
 
-### 2.1 Meeting Attendees (No Account required)
-Users can join the meeting without registering for an Avatour account.
-Exception: If the host has restricted the meeting to registered users — for example, to allow only internal employees to join via Single Sign-On (SSO) — the calendar invitation will indicate that participants must log in to authenticate.
+Gli utenti accedono alla riunione come segue:
 
-Users access the meeting as follows:
+- Ricevono un invito del calendario dall'host.
+- Utilizzano il link della riunione nell'invito per partecipare.
+- Inseriscono una password della riunione se l'host ne ha abilitata una.
+- I partecipanti possono partecipare senza un account Avatour a meno che la riunione non sia limitata e richieda il login per autenticarsi.
 
-- Receive a calendar invitation from the host.
-- Use the meeting link in the invitation to join.
-- Enter a meeting password if the host has enabled one.
-- Participants can join without an Avatour account unless the meeting is restricted and requires login to authenticate.
+#### 2.1.1 Partecipante 
 
-#### 2.1.1 Participant 
+- Può partecipare e interagire completamente (webcam, microfono, chat e funzionalità Presenta).
+- Massimo 20 partecipanti interattivi per riunione.
 
-- Can join and interact fully (webcam, microphone, chat, and Present functionality).
-- Maximum of 20 interactive participants per meeting.
+#### 2.1.2 Spettatore
 
-#### 2.1.2 Spectator
+- Può visualizzare la riunione e partecipare solo tramite chat.
+- Non può condividere video, usare il microfono, presentare, riprodurre/mettere in pausa Asset o acquisire Snapshot.
+- Massimo 10 Spettatori per riunione.
+- Insieme ai Partecipanti, una riunione può ospitare fino a 30 partecipanti.
 
-- Can view the meeting and participate via chat only.
-- Cannot share video, use a microphone, present, play/pause Assets, or capture Snapshots.
-- Maximum of 10 Spectators per meeting.
-- Together with Participants, a meeting can host up to 30 attendees.
+### 2.2 Utenti Registrati
 
-### 2.2 Registered Users
+Gli Utenti Registrati hanno un account Avatour. Gli account vengono creati in uno dei seguenti modi:
 
-Registered Users have an Avatour account. Accounts are created in one of the following ways:
+- **Invitato dall'Admin:** Durante l'onboarding, Avatour configura un **tenant dedicato** per l'organizzazione e crea uno o più **account Admin**. Gli Admin possono quindi **invitare utenti** all'interno dell'organizzazione e assegnarli a **gruppi**, che definiscono il loro ruolo sulla piattaforma (Guest, Host o Admin). Gli utenti invitati ricevono un **link di registrazione** per completare la configurazione dell'account e impostare una password.  
+- **Invitato dall'Host:** Gli Host possono aggiungere utenti come **collaboratori Editor** a un Workspace. Questo consuma una **licenza Host** e garantisce che l'utente abbia accesso di livello Host.  
+- **Auto-provisioning SSO (solo tier Enterprise/Business):** Gli account possono essere creati automaticamente dall'IdP. Per impostazione predefinita, gli account provisionati tramite SSO vengono aggiunti al **gruppo Guest**, a meno che non sia sovrascritto tramite **mappature dei gruppi SAML**. Gli Admin possono comunque invitare utenti e assegnare l'appartenenza ai gruppi direttamente anche quando SSO è abilitato.
 
-- **Admin-invited:** During onboarding, Avatour sets up a **dedicated tenant** for the organization and creates one or more **Admin accounts**. Admins can then **invite users** within the organization and assign them to **groups**, which define their platform role (Guest, Host, or Admin). Invited users receive a **signup link** to complete account setup and set a password.  
-- **Host-invited:** Hosts can add users as **Editor collaborators** to a Workspace. This consumes a **Host license** and ensures the user has Host-level access.  
-- **SSO auto-provisioning (Enterprise/Business tier only):** Accounts can be automatically created by the IdP. By default, SSO-provisioned accounts are added to the **Guest group**, unless overridden via **SAML group mappings**. Admins can still invite users and assign group membership directly even when SSO is enabled.
+**Riepilogo:**  
 
-**Summary:**  
+Gli utenti registrati e la loro appartenenza ai gruppi possono essere gestiti in diversi modi:
 
-Registered users and their group membership can be managed in multiple ways:
+- **Gestione Admin:** Un Admin nella console Avatour può creare utenti e assegnarli a gruppi, che definiscono il loro ruolo sulla piattaforma (Guest, Host o Admin).  
+- **Provisioning SSO:** Per i clienti tier Enterprise o Business con SSO abilitato, l'IdP può provisionare automaticamente gli account e assegnare l'appartenenza ai gruppi, che definisce il ruolo dell'utente sulla piattaforma.  
+- **Utenti invitati dall'Host:** Gli Host possono invitare altri utenti come collaboratori Editor in Workspace specifici. L'assegnazione del ruolo di collaboratore Editor consuma una licenza Host.
 
-- **Admin management:** An Admin in the Avatour console can create users and assign them to groups, which define their platform role (Guest, Host, or Admin).  
-- **SSO provisioning:** For Enterprise or Business tier customers with SSO enabled, the IdP can automatically provision accounts and assign group membership, which defines the user’s platform role.  
-- **Host-invited users:** Hosts can invite other users as Editor collaborators to specific Workspaces. Assigning the Editor collaborator role consumes a Host license.
+**Best Practice Raccomandata (Clienti Enterprise):**  
+Per le organizzazioni che prevedono un gran numero di utenti che necessitano accesso ad Avatour, si raccomanda di **integrare il Single Sign-On (SSO)** e gestire gli utenti e le appartenenze ai gruppi dall'**IdP**. Questo approccio semplifica il provisioning degli account, l'assegnazione dei gruppi e la gestione delle licenze, riducendo il carico amministrativo e garantendo un controllo degli accessi coerente.
 
-**Recommended Best Practice (Enterprise Customers):**  
-For organizations expecting a large number of users who need access to Avatour, it is recommended to **integrate Single Sign-On (SSO)** and manage users and group memberships from the **IdP**. This approach streamlines account provisioning, group assignment, and license management, reducing administrative overhead and ensuring consistent access control.
+#### 2.2.1 Utenti Guest
 
-#### 2.2.1 Guest Users
-
-- Added to the **Guest group**.  
-- Can **view Assets** within Workspaces where they have been added as **Viewer collaborators**.  
-- Cannot create workspaces, host meetings or upload content.  
-- SSO-provisioned Guest accounts **authenticate via the IdP**; no Avatour-managed password is required.
+- Aggiunti al **gruppo Guest**.  
+- Possono **visualizzare Asset** all'interno dei Workspace dove sono stati aggiunti come **collaboratori Viewer**.  
+- Non possono creare workspace, ospitare riunioni o caricare contenuti.  
+- Gli account Guest provisionati tramite SSO **si autenticano tramite l'IdP**; non è richiesta una password gestita da Avatour.
 
 ---
 
-#### 2.2.2 Licensed Users (Web Console Access)
+#### 2.2.2 Utenti con Licenza (Accesso alla Console Web)
 
-##### Host Users (Group: Host)
+##### Utenti Host (Gruppo: Host)
 
-- Can create/ manage Workspaces, invite collaborators to a workspace, **host live meetings**, upload **Quick Captures**.  
-- Has access to the **Host Dashboard** and **Operator App** on supported 360° cameras.  
+- Possono creare/gestire Workspace, invitare collaboratori a un workspace, **ospitare riunioni live**, caricare **Quick Capture**.  
+- Hanno accesso alla **Dashboard Host** e all'**App Operator** sulle fotocamere 360° supportate.  
 
-##### Admin Users (Group: Admin)
+##### Utenti Admin (Gruppo: Admin)
 
-- Includes all Host capabilities plus full account administration.
+- Include tutte le funzionalità Host più l'amministrazione completa dell'account.
 
-**Additional Admin privileges include:**
+**I privilegi Admin aggiuntivi includono:**
 
-**Account Management**  
+**Gestione Account**  
 
-- Create new users and assign them to groups.
-- Reset passwords when managed by Avatour (not applicable when SSO is enabled). 
-- Upgrade Guest users to Host.  
-- Deactivate users (Admin accounts must first be converted to Host before deletion).  
-- Transfer assets from one Host user to another during deletion.
+- Creare nuovi utenti e assegnarli a gruppi.
+- Reimpostare le password quando gestite da Avatour (non applicabile quando SSO è abilitato). 
+- Aggiornare utenti Guest a Host.  
+- Disattivare utenti (gli account Admin devono prima essere convertiti in Host prima della cancellazione).  
+- Trasferire asset da un utente Host a un altro durante la cancellazione.
 
-**Settings**  
+**Impostazioni**  
 
-- Configure **organization-wide security settings** for assets, workspaces and meetings hosted on the platform (e.g., whether a Host must be present to start a meeting, whether faces should be blurred on all videos uploaded to the platform).  
-- Enable or disable **AI features** or **recording**.  
-- Apply company branding consistently across the platform if a **custom domain** is configured.
+- Configurare le **impostazioni di sicurezza a livello organizzazione** per asset, workspace e riunioni ospitate sulla piattaforma (ad es., se un Host deve essere presente per avviare una riunione, se i volti devono essere sfocati su tutti i video caricati sulla piattaforma).  
+- Abilitare o disabilitare le **funzionalità AI** o la **registrazione**.  
+- Applicare il branding aziendale in modo coerente su tutta la piattaforma se è configurato un **dominio personalizzato**.
   
 
-**Assets & Analytics** 
+**Asset e Analytics** 
  
-- View all Assets uploaded by any user in the organization.  
-- Review platform usage across the organization.
+- Visualizzare tutti gli Asset caricati da qualsiasi utente nell'organizzazione.  
+- Esaminare l'utilizzo della piattaforma in tutta l'organizzazione.
 
 ---
 
-#### 2.2.3 Workspace Collaborator Permissions
+#### 2.2.3 Permessi dei Collaboratori del Workspace
 
-Workspace permissions define what a user can do **within a specific Workspace**. These are separate from platform-level group membership (Guest, Host, Admin).
+I permessi del Workspace definiscono cosa un utente può fare **all'interno di un Workspace specifico**. Questi sono separati dall'appartenenza ai gruppi a livello di piattaforma (Guest, Host, Admin).
 
-- **Editor collaborator:** Users with this permission can:
-  - Manage Assets (upload, remove, blur faces, generate summaries)  
-  - Manage meeting settings (enable/disable recording, allow or remove participants)  
-  - Schedule and host live meetings  
-  - Generate reports based on predefined templates  
-  - Add or remove collaborators from the Workspace  
+- **Collaboratore Editor:** Gli utenti con questo permesso possono:
+  - Gestire Asset (caricare, rimuovere, sfocare volti, generare riassunti)  
+  - Gestire le impostazioni delle riunioni (abilitare/disabilitare la registrazione, consentire o rimuovere partecipanti)  
+  - Pianificare e ospitare riunioni live  
+  - Generare report basati su modelli predefiniti  
+  - Aggiungere o rimuovere collaboratori dal Workspace  
 
-- **Viewer collaborator:** Users with this permission have read-only access to Workspace Assets. They **cannot modify Assets, manage meetings, or manage collaborators**, but they **can create Notes on Assets**. 
-  
-## 3. Per i Partecipanti alle Riunioni da Remoto e i Visitatori dei Workspace {#for-remote-meeting-participants-and-workspace-visitors}
+- **Collaboratore Viewer:** Gli utenti con questo permesso hanno accesso in sola lettura agli Asset del Workspace. **Non possono modificare Asset, gestire riunioni o gestire collaboratori**, ma **possono creare Note sugli Asset**.## 3. Per i Partecipanti a Riunioni da Remoto e i Visitatori dei Workspace {#for-remote-meeting-participants-and-workspace-visitors}
 
-Avatour consente agli utenti di collaborare in due modalità principali:
+Avatour consente agli utenti di collaborare in due modi principali:
 
 - **Partecipare a una riunione Avatour (Collaborazione Sincrona):**  
-  Potresti ricevere un **invito tramite calendario** per partecipare a una riunione Avatour. Durante la riunione, i partecipanti possono condurre una **visita remota in tempo reale** o rivedere insieme le risorse in modo sincrono.
+  Potresti ricevere un **invito sul calendario** per partecipare a una riunione Avatour. Durante la riunione, i partecipanti possono condurre una **visita remota in tempo reale al sito** o rivedere gli asset insieme in modo sincrono.
 
 - **Visitare un Workspace (Collaborazione Asincrona):**  
-  Potresti anche essere invitato come **collaboratore in un Workspace** per rivedere le risorse **in modo asincrono** (secondo i tuoi tempi).
+  Potresti anche essere invitato come **collaboratore in un Workspace** per rivedere gli asset **in modo asincrono** (secondo i tuoi tempi).
 
 ### 3.1 Come Partecipare a una Riunione Avatour e Visitare un Workspace Avatour {#how-to-join-an-avatour-meeting-and-visit-an-avatour-workspace}
-#### 3.1.1 Qualsiasi Dispositivo a "Schermo Piatto" con un Browser Web {#any-flat-screen}
+#### 3.1.1 Qualsiasi Dispositivo "Schermo Piatto" con un Browser Web {#any-flat-screen}
 Puoi partecipare a una riunione Avatour da **qualsiasi computer desktop o laptop, smartphone o tablet** utilizzando un browser web.  
 
 ##### Partecipare a una Riunione Avatour
 
-> **Nota:** Per partecipare a una riunione Avatour è necessario **concedere i permessi per il microfono**. Accetta eventuali richieste di autorizzazione dal tuo browser.
+> **Nota:** Partecipare a una riunione Avatour richiede che tu **conceda i permessi per il microfono**. Accetta eventuali richieste di autorizzazione dal tuo browser.
 
-1. **Tramite invito calendario (consigliato):**  
-   - Riceverai solitamente un **invito tramite calendario** con un **link diretto per partecipare** (ad esempio: `https://avatour.live/join?s=xxxxx`).  
-   - Cliccando sul link verrà automaticamente inserito il **codice riunione di 5 caratteri** e sarai indirizzato alla riunione.
-   - **Autenticazione richiesta:** Alcune riunioni sono riservate agli utenti registrati. In questo caso, l'invito indicherà che devi **effettuare l'accesso per entrare nella riunione**.  
-   - **Riunioni protette da password:** Alcune riunioni potrebbero richiedere una password. In tal caso, l'invito includerà la password da inserire per partecipare.
+1. **Tramite invito sul calendario (consigliato):**  
+   - Riceverai generalmente un **invito sul calendario** con un **link diretto per partecipare** (ad esempio: `https://avatour.live/join?s=xxxxx`).  
+   - Cliccando il link verrà automaticamente inserito il **codice riunione di 5 caratteri** e verrai portato alla riunione.
+   - **Autenticazione richiesta:** Alcune riunioni sono limitate agli utenti registrati. In questo caso, l'invito indicherà che devi **effettuare il login per accedere alla riunione**.  
+   - **Riunioni protette da password:** Alcune riunioni potrebbero richiedere una password. In tal caso, l'invito includerà la password che devi inserire per partecipare.
 
 2. **Tramite codice riunione:**  
-   - Se l'organizzatore condivide separatamente un **codice riunione di 5 caratteri**, vai su [https://avatour.live/join](https://avatour.live/join), inserisci il tuo **nome** e il **codice riunione**, e partecipa alla riunione.  
-   - Se la riunione è **protetta da password**, inserisci la password fornita dall'organizzatore.  
-   - Se la riunione richiede **l'autenticazione**, dovrai **accedere con il tuo account Avatour** prima di partecipare.
+   - Se l'host condivide un **codice riunione di 5 caratteri** separatamente, vai su [https://avatour.live/join](https://avatour.live/join), inserisci il tuo **nome** e il **codice riunione**, e partecipa alla riunione.  
+   - Se la riunione è **protetta da password**, inserisci la password fornita dall'host.  
+   - Se la riunione richiede **l'autenticazione**, dovrai **effettuare il login con il tuo account Avatour** prima di partecipare.
 
-> **Suggerimento 1:** Se la tua fotocamera o il microfono non funzionano, potrebbero essere in uso da un'altra applicazione (ad esempio, Microsoft Teams o Zoom). Chiudi tutte le app che potrebbero utilizzare la tua fotocamera o il microfono, poi esci e riconnettiti alla riunione Avatour.  
+> **Suggerimento 1:** Se la tua fotocamera o il microfono non funzionano, potrebbero essere in uso da un'altra applicazione (ad esempio, Microsoft Teams o Zoom). Chiudi qualsiasi app che potrebbe utilizzare la tua fotocamera o il microfono, quindi esci e rientra nella riunione Avatour.  
 
 > **Suggerimento 2:** Se ancora non riesci a partecipare alla riunione, esegui questo test: [https://avatour.live/test](https://avatour.live/test).  
-> Il test può identificare se il tuo **firewall aziendale o la rete** sta bloccando l'accesso e fornirà informazioni utili per le discussioni con il tuo team IT.  
+> Il test può identificare se il tuo **firewall aziendale o la rete** sta bloccando l'accesso, e fornirà informazioni per guidare le discussioni con il tuo team IT.  
 
-> **Suggerimento 3:** **Non** utilizzare le app Avatour per iOS o Android per partecipare alle riunioni. Queste app sono necessarie solo quando si **trasmette una riunione in diretta da una fotocamera Insta360**, poiché queste fotocamere non possono eseguire direttamente il software Avatour 360° e richiedono uno smartphone di supporto.
+> **Suggerimento 3:** **Non** utilizzare le app Avatour per iOS o Android per partecipare alle riunioni. Queste app sono necessarie solo quando si **trasmette una riunione in diretta da una fotocamera Insta360**, poiché quelle fotocamere non possono eseguire direttamente il software Avatour 360° e richiedono uno smartphone di supporto.
 
 ##### Visitare un Workspace Avatour (senza partecipare a una Riunione Avatour)
 
 Puoi accedere a un Workspace nei seguenti modi:
 
 - **Workspace Pubblico:**  
-  Se il Workspace è pubblico, il link può essere accessibile direttamente—non è richiesto l'accesso.
+  Se il Workspace è pubblico, il link può essere accessibile direttamente—non è richiesto il login.
 
-- **Workspace Riservato:**  
-  Se il Workspace è riservato, devi essere aggiunto come **collaboratore** con permessi di **Editor** o **Visualizzatore**.
+- **Workspace con Restrizioni:**  
+  Se il Workspace è con restrizioni, devi essere aggiunto come **collaboratore** con permessi di **Editor** o **Visualizzatore**.
 
-  1. Quando vieni aggiunto come collaboratore, riceverai una **notifica via email** con un link al Workspace.
-  2. Clicca sul link nell'email per aprire il Workspace. Se non hai già effettuato l'accesso, ti verrà richiesto di **accedere o completare la registrazione**.
-  3. Una volta effettuato l'accesso, il Workspace si aprirà automaticamente.
+  1. Quando vieni aggiunto come collaboratore, riceverai una **notifica email** con un link al Workspace.
+  2. Clicca il link nell'email per aprire il Workspace. Se non hai già effettuato il login, ti verrà chiesto di **effettuare il login o completare la registrazione**.
+  3. Una volta effettuato il login, il Workspace si aprirà automaticamente.
 
-  In alternativa, puoi accedere su [https://avatour.live/login](https://avatour.live/login) e accedere al Workspace dalla tua **lista di Workspace**.
+  In alternativa, puoi effettuare il login su [https://avatour.live/login](https://avatour.live/login) e accedere al Workspace dalla tua **lista di Workspace**.
 
 #### 3.1.2 Visore VR {#vr-headset}
 Puoi partecipare a una riunione e visitare un workspace da una gamma di visori Meta e Pico compatibili. Per farlo: 
 
-1. Installa la nostra app Avatour dal rispettivo store VR: [Come installare l'app Avatour VR](https://avatour.com/support/which-vr-headsets-can-i-use-with-avatour)
+1. Installa la nostra app Avatour dal rispettivo store di app VR: [Come installare l'app Avatour VR](https://avatour.com/support/which-vr-headsets-can-i-use-with-avatour)
 2. Carica la nostra app e inserisci il codice riunione o seleziona un Workspace per partecipare a una riunione. Per maggiori informazioni su come utilizzare la nostra app VR, consulta il nostro articolo nella Knowledge Base [qui](https://avatour.com/support/what-features-are-available-to-vr-guests).
 
 ### 3.2 Strumenti di Collaborazione per Riunioni e Workspace {#meeting-tools}
 
 Avatour consente la collaborazione in due contesti principali:
 
-1. **Riunioni (sincrone):** Collabora in tempo reale con altri partecipanti, incluse visite in loco in diretta o revisione insieme di risorse registrate.  
-2. **Workspace (asincroni):** Rivedi e interagisci con le risorse secondo i tuoi tempi, 24/7.
+1. **Riunioni (sincrone):** Collabora in tempo reale con altri partecipanti, incluse visite in diretta al sito o revisione insieme di asset registrati.  
+2. **Workspace (asincroni):** Rivedi e interagisci con gli asset secondo i tuoi tempi, 24/7.
 
 Gli **strumenti di collaborazione sono per lo più simili** tra riunioni e workspace, con alcune differenze dovute al contesto sincrono vs asincrono.
 
 #### 3.2.1 Layout dell'Interfaccia
 
-L'interfaccia di Avatour è organizzata attorno a tre aree principali:
+L'interfaccia Avatour è organizzata attorno a tre aree principali:
 
-- **Pannello sinistro** – Risorse del workspace e strumenti di supporto  
-- **Canvas centrale** – Area di visualizzazione principale per video in diretta o risorse  
+- **Pannello sinistro** – Asset del workspace e strumenti di supporto  
+- **Canvas centrale** – Area di visualizzazione principale per video in diretta o asset  
 - **Pannello destro** – Informazioni contestuali, come partecipanti, riunioni o chat  
 
-La maggior parte delle interazioni viene avviata dal **menu inferiore**.  
+La maggior parte delle interazioni viene avviata dal **menu in basso**.  
 Cliccando un'opzione del menu si apre un **pannello laterale** sul lato sinistro o destro dello schermo, mentre il **canvas centrale** rimane l'area di visualizzazione principale.
 
 ---
@@ -197,8 +193,8 @@ Cliccando un'opzione del menu si apre un **pannello laterale** sul lato sinistro
 
 Ecco un esempio di vista in una Riunione Avatour:
 
-![Interfaccia Riunione Avatour con Pannello Risorse, Canvas vuoto e Pannello Partecipanti](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-meeting-assets-blank-participants_pugprq.png)  
-*Riunione Avatour con Pannello Risorse (sinistra), Canvas (centro) e Pannello Partecipanti (destra)*
+![Interfaccia Riunione Avatour con Pannello Asset, Canvas vuoto e Pannello Partecipanti](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-meeting-assets-blank-participants_pugprq.png)  
+*Riunione Avatour con Pannello Asset (sinistra), Canvas (centro) e Pannello Partecipanti (destra)*
 
 ---
 
@@ -206,64 +202,64 @@ Ecco un esempio di vista in una Riunione Avatour:
 
 Ecco un esempio di vista Workspace:
 
-![Workspace Avatour con Pannello Risorse, Canvas vuoto e Pannello Riunioni](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-workspace-assets-blank-meetings_qeumpl.png)  
-*Workspace Avatour con Pannello Risorse (sinistra), Canvas (centro) e Pannello Riunioni (destra)*
+![Workspace Avatour con Pannello Asset, Canvas vuoto e Pannello Riunioni](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-workspace-assets-blank-meetings_qeumpl.png)  
+*Workspace Avatour con Pannello Asset (sinistra), Canvas (centro) e Pannello Riunioni (destra)*
 
 ---
 
-#### 3.2.4 Panoramica del Menu Inferiore
+#### 3.2.4 Panoramica del Menu in Basso
 
-Il menu inferiore fornisce accesso ai controlli principali dell'interfaccia e ai pannelli:
+Il menu in basso fornisce accesso ai principali controlli dell'interfaccia e ai pannelli:
 
-**Menu Inferiore Riunione**  
+**Menu in Basso della Riunione**  
 
-![Menu Inferiore Riunione Avatour](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-meeting-bottom-menu_bflaor.png)  
-*Menu Inferiore Riunione Avatour*
+![Menu in Basso Riunione Avatour](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-meeting-bottom-menu_bflaor.png)  
+*Menu in Basso Riunione Avatour*
 
-- **Risorse** – Rivedi i file del workspace, inclusi video registrati, immagini, istantanee e PDF. 
+- **Asset** – Rivedi i file del workspace, inclusi video registrati, immagini, istantanee e PDF. 
 - **Chat** – Invia messaggi a tutti i partecipanti alla riunione.  
 - **Fotocamera** – Attiva o disattiva la tua webcam.  
-- **Microfono** – Attiva o disattiva l'audio.  
-- **Presenta** – Presenta una risorsa, il desktop o il feed della webcam (vedi sezione Presenta sotto).  
-- **Strumenti Organizzatore** (solo organizzatori):  
-  - **Blocca Focus** – Blocca la visualizzazione per tutti i partecipanti.  
+- **Microfono** – Silenzia o riattiva te stesso.  
+- **Presenta** – Presenta un asset, il desktop o il feed della webcam (vedi sezione Presenta sotto).  
+- **Strumenti Host** (solo per gli host):  
+  - **Blocca Focus** – Blocca la vista per tutti i partecipanti.  
   - **Silenzia Tutti** – Silenzia tutti i partecipanti.  
-- **Attiva Schermo Intero** – Metti la scheda della riunione a schermo intero.  
-- **Esci dalla Riunione** – Abbandona la riunione.  
-- **Avvia Registrazione** – Usa questo pulsante per avviare e interrompere manualmente la registrazione durante una riunione. In alternativa, le riunioni possono essere registrate automaticamente se l'**avvio automatico della registrazione** è abilitato nelle impostazioni del workspace. In entrambi i casi, le registrazioni vengono salvate nelle risorse del workspace.
-- **Mappa** – Apri o chiudi il pannello mappa per le risorse con traccia GPS. Cliccando su una posizione si salta al punto esatto nel video. La mappa si aggiorna in tempo reale durante la riproduzione del video.
+- **Abilita Schermo Intero** – Rendi la scheda della riunione a schermo intero.  
+- **Esci dalla Riunione** – Lascia la riunione.  
+- **Avvia Registrazione** – Usa questo pulsante per avviare e interrompere manualmente la registrazione durante una riunione. In alternativa, le riunioni possono essere registrate automaticamente se l'**avvio automatico della registrazione** è abilitato nelle impostazioni del workspace. In entrambi i casi, le registrazioni vengono salvate negli asset del workspace.
+- **Mappa** – Apri o chiudi il pannello mappa per gli asset con traccia GPS. Cliccando una posizione si salta al punto esatto nel video. La mappa si aggiorna in tempo reale durante la riproduzione del video.
 - **Partecipanti** – Apri o chiudi il pannello partecipanti.  
 - **Info Riunione** – Visualizza il codice riunione, il link di invito e accedi ai tutorial correlati.  
 
 ![Info Riunione Avatour](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-meeting-info-side-pane_nx7dp4.png)  
 *Pannello Laterale Info Riunione Avatour*
 
-- **Impostazioni** – Regola le impostazioni di lingua, audio e video. Per le riunioni con video 360° in diretta, usa **Mostra Bitrate** per monitorare le statistiche di connessione.
+- **Impostazioni** – Regola le impostazioni di lingua, audio e video. Per le riunioni video in diretta a 360°, usa **Mostra Bitrate** per monitorare le statistiche di connettività.
 
-> Suggerimento: Invia il link della riunione o aggiungilo a un elemento del calendario per invitare i partecipanti.
+> Suggerimento: Invia il link della riunione o aggiungilo a un evento del calendario per invitare i partecipanti.
 
 ---
 
 ##### Menu Presenta
 
-L'opzione **Presenta** nel menu inferiore della riunione ti consente di condividere contenuti con tutti i partecipanti.
+L'opzione **Presenta** nel menu in basso della riunione ti consente di condividere contenuti con tutti i partecipanti.
 
-- **Fotocamera** – Condividi la fotocamera del tuo smartphone/tablet. Può essere utilizzata anche durante una riunione con video 360° in diretta per sovrapporre una vista secondaria per primi piani o dettagli specifici. 
+- **Fotocamera** – Condividi la fotocamera del tuo smartphone/tablet. Questo può essere utilizzato anche durante una riunione video in diretta a 360° per sovrapporre una vista secondaria per primi piani o dettagli specifici. 
 - **Desktop** – Condividi lo schermo del tuo desktop con tutti i partecipanti.  
-- **Risorsa** – Presenta una risorsa dal workspace. Selezionando una risorsa si apre la **Barra degli strumenti Risorsa**, che fornisce controlli di riproduzione e strumenti di collaborazione specifici per la risorsa presentata.
+- **Asset** – Presenta un asset dal workspace. Selezionando un asset si apre la **Barra degli strumenti Asset**, che fornisce controlli di riproduzione e strumenti di collaborazione specifici per l'asset presentato.
 
-##### Barra degli Strumenti Risorsa (Riunione)
+##### Barra degli Strumenti Asset (Riunione)
 
-Quando presenti una risorsa in una riunione, la **Barra degli Strumenti Risorsa** appare sopra il canvas. Ecco gli strumenti e le voci di menu disponibili quando si <u>presenta una Risorsa in una Riunione</u> - spiegati da sinistra a destra.
+Quando presenti un asset in una riunione, la **Barra degli Strumenti Asset** appare sopra il canvas. Ecco gli strumenti e le voci di menu disponibili quando <u>presenti un Asset in una Riunione</u> - spiegati da sinistra a destra.
 
-![Menu Avatour durante la Presentazione di una Risorsa in una Riunione](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting_oflsr5.png) *Menu Avatour durante la presentazione di una Risorsa in una Riunione*
+![Menu Avatour durante la Presentazione di un Asset in una Riunione](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting_oflsr5.png) *Menu Avatour durante la presentazione di un Asset in una Riunione*
 
 
-- **Timeline Video / Barra di Avanzamento** – Mostra l'avanzamento del video con note e argomenti chiave estratti dall'audio. Clicca su una nota o un argomento per saltare a quel momento e aprire la nota. Include i controlli **Play / Pausa**.   
-- **Istantanea** – Cattura un'immagine 360° o 2D dalla risorsa.  
-- **Evidenziatore** – Evidenzia un'area specifica per tutti i partecipanti durante le sessioni in diretta.  
-- **Mostra/Nascondi Punto di Vista (POV)** – Visualizza dove ogni partecipante sta guardando nel video 360°.  
-- **Note** – Crea note ancorate a momenti specifici nella risorsa. Le note possono essere categorizzate (Osservazione, Problema, Azione, Raccomandazione), tracciate per stato (Aperta → In Corso → Risolta) e condivise tramite link diretti.  
+- **Timeline Video / Barra di Avanzamento** – Mostra l'avanzamento del video con note e argomenti chiave estratti dall'audio. Clicca una nota o un argomento per saltare a quel momento e aprire la nota. Include controlli **Play / Pausa**.   
+- **Istantanea** – Cattura un'immagine a 360° o 2D dall'asset.  
+- **Spotlight** – Evidenzia un'area specifica per tutti i partecipanti durante le sessioni in diretta.  
+- **Mostra/Nascondi Punto di Vista (POV)** – Mostra dove ogni partecipante sta guardando nel video a 360°.  
+- **Note** – Crea note ancorate a momenti specifici nell'asset. Le note possono essere categorizzate (Osservazione, Problema, Azione, Raccomandazione), tracciate per stato (Aperta → In Corso → Risolta) e condivise tramite link diretti.  
 
   ![Nota Avatour e Filtro Note](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-note-and-filters_g181oc.png) *Nota Avatour e Filtri Note*
 
@@ -271,306 +267,304 @@ Quando presenti una risorsa in una riunione, la **Barra degli Strumenti Risorsa*
 
   ![Note Avatour - Generate da Comando Vocale](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-notes-voice-command-generated_ic5cu4.png) *Note Avatour - Generate da Comando Vocale*
 
-- **Pannello Note e Riepilogo** – Apre un pannello laterale che mostra tutte le note, gli argomenti chiave e un riepilogo esecutivo per la risorsa. Cliccando su un elemento si salta a quel momento nel video.  
+- **Pannello Note e Riepilogo** – Apre un pannello laterale che mostra tutte le note, gli argomenti chiave e un riepilogo esecutivo per l'asset. Cliccando un elemento si salta a quel momento nel video.  
 
-  ![Riepilogo Esecutivo Risorsa Avatour](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-exec-summary_cqpqbs.png) *Riepilogo Esecutivo Avatour durante la presentazione di una Risorsa in una Riunione*
+  ![Riepilogo Esecutivo Asset Avatour](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-exec-summary_cqpqbs.png) *Riepilogo Esecutivo Avatour durante la presentazione di un Asset in una Riunione*
 
-  ![Argomenti Avatour](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-topics_duuq1a.png) *Argomenti Avatour durante la presentazione di una Risorsa in una## 4. For Host and Admin Users - Avatour Web Console {#for-host-and-admin-users-avatour-web-console}
+  ![Argomenti Avatour](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-topics_duuq1a.png) *Argomenti Avatour durante la presentazione di un Asset in una Riunione*
 
-When you log in to your Avatour User Account, you will access the **Web Console**.  
+  Dal **Pannello Laterale**, puoi **stampare un report dell'asset** o **scaricarlo come TXT o CSV**. I report possono includere note, argomenti generati dall'IA e trascrizioni complete. Puoi anche **scegliere quali## 4. Per Utenti Host e Admin - Console Web Avatour {#for-host-and-admin-users-avatour-web-console}
 
-### 4.1 Web Console - Overview Main Menu {#web-console-overview-main-menu}
+Quando accedi al tuo Account Utente Avatour, accederai alla **Console Web**.  
 
-On the left-hand side, you will see the following menu items:
+### 4.1 Console Web - Panoramica Menu Principale {#web-console-overview-main-menu}
 
-![Avatour Web Console - Main Menu](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu_qwpthq.png) *Avatour Web Console - Main Menu*
+Sul lato sinistro, vedrai le seguenti voci di menu:
 
-- **Workspaces** – Organize your content efficiently. Each workspace contains **Assets**, **Collaborators**, **Meetings**, and **Settings**.  
-- **Assets** – Access and manage all your assets (videos, images, PDFs). Admins can view all account assets, and shared assets are visible to all users.  
-- **Profile** – Manage your language and password.  
-- **Analytics** – Track session activity, workspace usage, and ROI metrics.  
-- **Settings** *(Admin only)* – Configure workspace, meeting, and asset defaults across the organization. Admins can also customize branding (logo, colors, backgrounds).  
-- **Account** *(Admin only)* – Manage registered users and 360° cameras.  
-- **Device Login** – Enter the code displayed on your 360° camera to pair it with your account.  
-- **Tutorials** – Access guided tutorials.  
-- **Sign out** – Log out of the console.
+![Console Web Avatour - Menu Principale](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu_qwpthq.png) *Console Web Avatour - Menu Principale*
 
-> Sections like Profile, Device Login, Tutorials, and Sign out are self-explanatory and do not have detailed subsections.
+- **Workspace** – Organizza i tuoi contenuti in modo efficiente. Ogni workspace contiene **Asset**, **Collaboratori**, **Meeting** e **Impostazioni**.  
+- **Asset** – Accedi e gestisci tutti i tuoi asset (video, immagini, PDF). Gli admin possono visualizzare tutti gli asset dell'account, e gli asset condivisi sono visibili a tutti gli utenti.  
+- **Profilo** – Gestisci la tua lingua e password.  
+- **Analytics** – Monitora l'attività delle sessioni, l'utilizzo dei workspace e le metriche ROI.  
+- **Impostazioni** *(Solo Admin)* – Configura le impostazioni predefinite di workspace, meeting e asset in tutta l'organizzazione. Gli admin possono anche personalizzare il branding (logo, colori, sfondi).  
+- **Account** *(Solo Admin)* – Gestisci gli utenti registrati e le videocamere 360°.  
+- **Login Dispositivo** – Inserisci il codice visualizzato sulla tua videocamera 360° per associarla al tuo account.  
+- **Tutorial** – Accedi ai tutorial guidati.  
+- **Esci** – Disconnettiti dalla console.
+
+> Sezioni come Profilo, Login Dispositivo, Tutorial ed Esci sono autoesplicative e non hanno sottosezioni dettagliate.
 
 ---
 
-### 4.2 Web Console - Details by Menu Item (with images) {#web-console-details-by-menu-item}
+### 4.2 Console Web - Dettagli per Voce di Menu (con immagini) {#web-console-details-by-menu-item}
 
-#### 4.2.1 Workspaces
+#### 4.2.1 Workspace
 
-Workspaces are flexible organizational units that let you manage assets, collaborators, and meetings in one place. You can create a new workspace with the **New Workspace** button in the upper-right corner.
+I workspace sono unità organizzative flessibili che ti permettono di gestire asset, collaboratori e meeting in un unico posto. Puoi creare un nuovo workspace con il pulsante **Nuovo Workspace** nell'angolo in alto a destra.
 
-![Avatour Web Console - Main Menu Item Workspaces](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-workspaces_hnhkjj.png) *Avatour Web Console - Main Menu Item Workspaces*
+![Console Web Avatour - Voce Menu Principale Workspace](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-workspaces_hnhkjj.png) *Console Web Avatour - Voce Menu Principale Workspace*
 
-Click the bell icon to see a summary of workspace activity over the last 7 days.
+Clicca sull'icona della campana per vedere un riepilogo dell'attività del workspace negli ultimi 7 giorni.
 
-![Avatour Web Console - Workspace Recent Activities](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-workspace-recent-activities_gby1ws.png) *Workspace Recent Activities*
+![Console Web Avatour - Attività Recenti Workspace](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-workspace-recent-activities_gby1ws.png) *Attività Recenti Workspace*
 
-Inside a workspace:
+All'interno di un workspace:
 
-![Avatour Workspace with Assets Panel, blank Canvas and Meetings Panel](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-workspace-assets-blank-meetings_qeumpl.png) *Workspace with Assets (left), Canvas (center), Meetings (right)*
+![Workspace Avatour con Pannello Asset, Canvas vuoto e Pannello Meeting](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-workspace-assets-blank-meetings_qeumpl.png) *Workspace con Asset (sinistra), Canvas (centro), Meeting (destra)*
 
-- **Assets** – Manage files allocated to this workspace.  
-- **Collaborators** – 
-  Control access to workspaces by 
-  - **Viewer** – Can view assets. Invitation creates a Guest user if needed.  
-  - **Editor** – Full workspace control, same rights as Host. Invitation upgrades user to Host if needed.  
-> Multiple users can access a workspace simultaneously without a meeting. Public workspaces and meeting access settings provide alternative access.  
-- **Report** – Generate a report using a checklist template on selected workspace assets.  
+- **Asset** – Gestisci i file allocati a questo workspace.  
+- **Collaboratori** – 
+  Controlla l'accesso ai workspace tramite 
+  - **Visualizzatore** – Può visualizzare gli asset. L'invito crea un utente Ospite se necessario.  
+  - **Editor** – Controllo completo del workspace, stessi diritti dell'Host. L'invito aggiorna l'utente a Host se necessario.  
+> Più utenti possono accedere a un workspace contemporaneamente senza un meeting. I workspace pubblici e le impostazioni di accesso ai meeting forniscono accesso alternativo.  
+- **Report** – Genera un report utilizzando un modello di checklist sugli asset del workspace selezionati.  
 
-![Avatour Workspace Report and Asset Selection](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-asset-selection-and-workspace-report_itjt8f.png) *Workspace Report and Asset Selection*
+![Report Workspace Avatour e Selezione Asset](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-asset-selection-and-workspace-report_itjt8f.png) *Report Workspace e Selezione Asset*
 
-- **Map** – Display GPS-enabled asset locations on a map.  
-- **Meetings** – Organize meetings in the workspace.  
-- **Settings** – Configure workspace and meeting defaults:
+- **Mappa** – Visualizza le posizioni degli asset abilitati GPS su una mappa.  
+- **Meeting** – Organizza meeting nel workspace.  
+- **Impostazioni** – Configura le impostazioni predefinite del workspace e dei meeting:
 
-![Avatour Settings - Workspace View](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-workspace-settings_llcei3.png) *Workspace Settings*
+![Impostazioni Avatour - Vista Workspace](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-workspace-settings_llcei3.png) *Impostazioni Workspace*
 
-**Workspace Settings**
+**Impostazioni Workspace**
 
-- **Report Template** – Select checklist template for AI reporting.  
-- **Enable Notifications** – Daily digest emails for note status changes.  
+- **Modello Report** – Seleziona il modello di checklist per il reporting AI.  
+- **Abilita Notifiche** – Email di riepilogo giornaliero per le modifiche di stato delle note.  
 
-![Email Notifications - Example](https://res.cloudinary.com/avatour/image/upload/c_crop,h_600,w_600,x_170,y_60/Screenshot_2026-03-05_140654_bjk0xk.png) *Email Notifications Example*
+![Notifiche Email - Esempio](https://res.cloudinary.com/avatour/image/upload/c_crop,h_600,w_600,x_170,y_60/Screenshot_2026-03-05_140654_bjk0xk.png) *Esempio Notifiche Email*
 
-- **Public Workspace** – Anyone with the link can view assets directly.
+- **Workspace Pubblico** – Chiunque abbia il link può visualizzare gli asset direttamente.
 
-**Meeting Settings**
+**Impostazioni Meeting**
   
-* **Authentication required** – Participants must sign in.  
-* **Allow guest access** – Permit non-registered users to view assets.  
-* **Auto-Start Recording / Manual Start** – Choose if meetings auto-record or are started manually.  
-* **Require host** – Host must admit participants; meeting ends when host leaves.  
-* **Allow spectator access** – Join without mic or camera; communicate via chat.  
-* **Password protected meetings** – Require a password for joining.  
-* **Show Travel-Savings Question** – Ask participants if the meeting reduced travel.  
+* **Autenticazione richiesta** – I partecipanti devono effettuare l'accesso.  
+* **Consenti accesso ospiti** – Permetti agli utenti non registrati di visualizzare gli asset.  
+* **Registrazione Automatica / Avvio Manuale** – Scegli se i meeting vengono registrati automaticamente o avviati manualmente.  
+* **Richiedi host** – L'host deve ammettere i partecipanti; il meeting termina quando l'host esce.  
+* **Consenti accesso spettatore** – Partecipa senza microfono o videocamera; comunica tramite chat.  
+* **Meeting protetti da password** – Richiedi una password per partecipare.  
+* **Mostra Domanda Risparmio Viaggi** – Chiedi ai partecipanti se il meeting ha ridotto i viaggi.  
 
-> Settings can be combined (e.g., no host required but password protected).
+> Le impostazioni possono essere combinate (es., nessun host richiesto ma protetto da password).
 
 ---
 
-#### 4.2.2 Assets
+#### 4.2.2 Asset
 
-Manage all 360°/2D videos, pictures, and PDFs. Upload/download assets, allocate to workspaces, share with other users, rename, print/download reports, activate face blur, and AI summarization.
+Gestisci tutti i video 360°/2D, immagini e PDF. Carica/scarica asset, alloca ai workspace, condividi con altri utenti, rinomina, stampa/scarica report, attiva la sfocatura volti e il riepilogo AI.
 
-![Avatour Web Console - Main Menu Item Assets](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-assets_ky5emz.png) *Main Menu Item Assets*
+![Console Web Avatour - Voce Menu Principale Asset](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-assets_ky5emz.png) *Voce Menu Principale Asset*
 
 ---
 
 #### 4.2.3 Analytics
 
-Provides insights into meetings, workspace usage, and ROI metrics.
+Fornisce approfondimenti su meeting, utilizzo dei workspace e metriche ROI.
 
-![Avatour Web Console - Main Menu Item Analytics (1 of 3)](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-analytics-1-of-3_ds3epe.png) *Analytics Overview*
+![Console Web Avatour - Voce Menu Principale Analytics (1 di 3)](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-analytics-1-of-3_ds3epe.png) *Panoramica Analytics*
 
-![Avatour Web Console - Main Menu Item Analytics (2 of 3)](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-analytics-2-of-3_vpcsme.png) *Meeting Activity & Workspace Usage*
+![Console Web Avatour - Voce Menu Principale Analytics (2 di 3)](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-analytics-2-of-3_vpcsme.png) *Attività Meeting e Utilizzo Workspace*
 
-![Avatour Web Console - Main Menu Item Analytics (3 of 3)](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-analytics-3-of-3_hn2pmr.png) *Device License Usage & ROI* 
+![Console Web Avatour - Voce Menu Principale Analytics (3 di 3)](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-analytics-3-of-3_hn2pmr.png) *Utilizzo Licenze Dispositivo e ROI*## 5. In loco - Come Utilizzare il Kit Chiavi in Mano Avatour {#onsite-how-to-use-the-avatour-turnkey-kit}
 
-## 5. Onsite - How to Use the Avatour Turnkey Kit {#onsite-how-to-use-the-avatour-turnkey-kit}
+### 5.1 Per Iniziare
+[Guida Rapida – Kit Chiavi in Mano Avatour 3.1 (configurazione Pilot PanoX V2)](https://avatour.com/quickstart-panox-v2)
 
-### 5.1 Getting Started
-[Quick Start Guide – Avatour Turnkey Kit 3.1 (Pilot PanoX V2 setup)](https://avatour.com/quickstart-panox-v2)
-
-Follow the guide to unpack, assemble, and power on your camera.
+Segui la guida per disimballare, assemblare e accendere la tua videocamera.
 
 ---
 
-### 5.2 Useful Tips
+### 5.2 Consigli Utili
 
-#### External Battery – Longer Live Meetings & Improved Thermals 
+#### Batteria Esterna – Meeting Live più Lunghi e Miglior Gestione Termica
 
-- **If your kit includes a Ulanzi battery:** Attach it between the tripod base and the extendable stick, then connect the battery to the camera via USB-C.  
+- **Se il tuo kit include una batteria Ulanzi:** Fissala tra la base del treppiede e l'asta estensibile, quindi collega la batteria alla videocamera tramite USB-C.
 
-- **If your kit includes a Telesin battery stick:** Mount the camera directly onto the Telesin extendable battery stick and connect it via USB-C.  
+- **Se il tuo kit include un'asta batteria Telesin:** Monta la videocamera direttamente sull'asta batteria estensibile Telesin e collegala tramite USB-C.
 
-Using the external battery:
+Utilizzare la batteria esterna:
 
-1. Extends total battery life from ~40 minutes (camera battery only) to ~3 hours.  
-2. Adds stability to the camera setup.  
-3. Helps prevent potential overheating.  
+1. Estende la durata totale della batteria da ~40 minuti (solo batteria della videocamera) a ~3 ore.
+2. Aggiunge stabilità alla configurazione della videocamera.
+3. Aiuta a prevenire potenziali surriscaldamenti.
 
-> We recommend always using the external battery from the start, especially for live meetings.
+> Raccomandiamo di utilizzare sempre la batteria esterna fin dall'inizio, specialmente per i meeting live.
 
-#### Audio Considerations for Live Meetings and Recordings
+#### Considerazioni Audio per Meeting Live e Registrazioni
 
-- **Noisy environments:** 
-  Use the Shokz headphones included in your kit for clear audio capture.  
-  - **Power On/Off:** Hold the “+” button for 3 seconds (blue LED = on, red LED = off).  
-  - **Bluetooth Pairing Mode:** While the headset is off, hold the “+” button for 5 seconds (LED flashes blue/red).  
-  - **Volume:** Use the “+” and “-” buttons.  
+- **Ambienti rumorosi:**
+  Usa le cuffie Shokz incluse nel tuo kit per una cattura audio chiara.
+  - **Accensione/Spegnimento:** Tieni premuto il pulsante "+" per 3 secondi (LED blu = acceso, LED rosso = spento).
+  - **Modalità Accoppiamento Bluetooth:** Con le cuffie spente, tieni premuto il pulsante "+" per 5 secondi (il LED lampeggia blu/rosso).
+  - **Volume:** Usa i pulsanti "+" e "-".
 
-- **Quieter environments / multiple participants near camera:** 
-  Use the NoxGear clip-on speaker. It’s not as high fidelity as conference speakers (e.g., Jabra Speak), but is easy to clip onto your shirt and captures nearby voices effectively.  
-  - **Power On/Off:** Hold the Play/Pause button for 2 seconds.  
-  - **Bluetooth Pairing Mode:** Automatically enters pairing mode when powered on (LED flashes blue/red; solid blue when paired).  
-  - **Volume:** Use the “+” and “-” buttons.  
+- **Ambienti più silenziosi / più partecipanti vicino alla videocamera:**
+  Usa l'altoparlante clip-on NoxGear. Non è ad alta fedeltà come gli altoparlanti da conferenza (es. Jabra Speak), ma è facile da agganciare alla camicia e cattura efficacemente le voci vicine.
+  - **Accensione/Spegnimento:** Tieni premuto il pulsante Play/Pausa per 2 secondi.
+  - **Modalità Accoppiamento Bluetooth:** Entra automaticamente in modalità accoppiamento all'accensione (il LED lampeggia blu/rosso; blu fisso quando accoppiato).
+  - **Volume:** Usa i pulsanti "+" e "-".
 
-- **Using your own device:** If you prefer an alternative (e.g., a conference speaker or personal headset), you can pair it via the camera: Settings → Bluetooth.  
+- **Utilizzo del proprio dispositivo:** Se preferisci un'alternativa (es. un altoparlante da conferenza o cuffie personali), puoi accoppiarlo tramite la videocamera: Impostazioni → Bluetooth.
 
-#### Connectivity, Connectivity, Connectivity
-**Before you start:** Ensure internet connection via:
+#### Connettività, Connettività, Connettività
+**Prima di iniziare:** Assicurati della connessione internet tramite:
 
-- **Local WiFi** (preferred)
-- **Mobile Network** (if outside WiFi range)
+- **WiFi Locale** (preferito)
+- **Rete Mobile** (se fuori dalla copertura WiFi)
 
-**Recommended bandwidth:** 10 Mbps uplink/downlink for full 360° streaming (~5 Mbps). Lower bandwidth (1–2 Mbps) only works when standing still.
+**Larghezza di banda raccomandata:** 10 Mbps uplink/downlink per lo streaming completo a 360° (~5 Mbps). Una larghezza di banda inferiore (1–2 Mbps) funziona solo restando fermi.
 
-##### Test Network Speed
-- **Single-location test:** Any speed checker you normally use (e.g., [Speedtest](https://www.speedtest.net)) to verify both upload  bandwidth.   
-- **Walking test across site:** From the camera: Settings → Network → Connection Test. Walk through the entire space to confirm coverage and bandwidth.
+##### Test della Velocità di Rete
+- **Test in singola posizione:** Qualsiasi strumento di speed test che usi normalmente (es. [Speedtest](https://www.speedtest.net)) per verificare la larghezza di banda in upload.
+- **Test in movimento attraverso il sito:** Dalla videocamera: Impostazioni → Rete → Test di Connessione. Cammina attraverso l'intero spazio per confermare copertura e larghezza di banda.
 
-##### Local WiFi
-- Highly recommended for stable connections.  
-- If IT requires whitelisting, find MAC address: Settings → About → WiFi Address.
+##### WiFi Locale
+- Altamente raccomandato per connessioni stabili.
+- Se l'IT richiede la whitelist, trova l'indirizzo MAC: Impostazioni → Info → Indirizzo WiFi.
 
-##### Mobile Network
-**Option A: Kit-provided hotspot & SIM**  
+##### Rete Mobile
+**Opzione A: Hotspot e SIM forniti nel kit**
 
-- Attach GlocalMe hotspot to Telesin battery stick (magnet).  
-- Ensures no interference and maintains connection if moving away from camera.  
-- Troubleshooting:
-  - Confirm pre-installed SIM (not Cloud SIM).  
-  - Enable 5G in SIM Card Manager.  
-  - Verify correct APN for your region ([APN setup guide](https://avatour.com/support/how-do-i-change-the-apn-on-my-glocalme-hotspot)).
+- Fissa l'hotspot GlocalMe all'asta batteria Telesin (magnete).
+- Garantisce nessuna interferenza e mantiene la connessione se ci si allontana dalla videocamera.
+- Risoluzione problemi:
+  - Conferma la SIM preinstallata (non Cloud SIM).
+  - Abilita il 5G nel Gestore Scheda SIM.
+  - Verifica l'APN corretto per la tua regione ([guida configurazione APN](https://avatour.com/support/how-do-i-change-the-apn-on-my-glocalme-hotspot)).
 
-**Option B: Personal hotspot / SIM**
-- Use your own smartphone or dedicated hotspot.  
+**Opzione B: Hotspot personale / SIM**
+- Usa il tuo smartphone o hotspot dedicato.
 
-**Important Note:**  
-> Keep hotspot off while connected to WiFi; enable only when out of range. The camera's OS dynamically switches between WiFi networks based on signal strength and may inadvertently switch to the hotspot even when WiFi is available.
+**Nota Importante:**
+> Tieni l'hotspot spento mentre sei connesso al WiFi; abilitalo solo quando sei fuori copertura. Il sistema operativo della videocamera passa dinamicamente tra le reti WiFi in base alla potenza del segnale e potrebbe passare inavvertitamente all'hotspot anche quando il WiFi è disponibile.
 
-> Mobile networks may throttle bandwidth unexpectedly. Check with your carrier on data plan limits, or contact Avatour support if using our hotspot and SIM.
+> Le reti mobili possono limitare la larghezza di banda in modo imprevisto. Verifica con il tuo operatore i limiti del piano dati, o contatta il supporto Avatour se utilizzi il nostro hotspot e SIM.
 
-##### Low Bandwidth Situations
-- Pre-record location videos for later playback ([recording guide](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)).  
-- Share a smartphone camera stream to supplement low-bandwidth areas (0.1–0.3 Mbps upload).
+##### Situazioni di Bassa Larghezza di Banda
+- Pre-registra video delle location per la riproduzione successiva ([guida alla registrazione](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)).
+- Condividi uno stream della fotocamera dello smartphone per integrare le aree a bassa larghezza di banda (0,1–0,3 Mbps in upload).
 
-##### No Connectivity
-- Only pre-recorded video can be used ([recording guide](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)).
+##### Nessuna Connettività
+- È possibile utilizzare solo video pre-registrati ([guida alla registrazione](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)).
 
-#### Other Onsite Participants – Best Practices
+#### Altri Partecipanti in Loco – Best Practice
 
-When multiple participants join a live Avatour meeting from the same location as the 360° camera, careful management of **audio and bandwidth** is crucial:  
+Quando più partecipanti si uniscono a un meeting Avatour live dalla stessa posizione della videocamera a 360°, è cruciale una gestione attenta di **audio e larghezza di banda**:
 
-- Each smartphone, tablet, or laptop connected onsite consumes network bandwidth and can negatively impact the 360° camera feed.  
-- Multiple microphones and speakers in the same space can cause **audio feedback**, making the meeting experience unpleasant for all participants.
+- Ogni smartphone, tablet o laptop connesso in loco consuma larghezza di banda di rete e può influire negativamente sul feed della videocamera a 360°.
+- Più microfoni e altoparlanti nello stesso spazio possono causare **feedback audio**, rendendo l'esperienza del meeting sgradevole per tutti i partecipanti.
 
-#### Other Onsite Participants – Best Practices
+#### Altri Partecipanti in Loco – Best Practice
 
-When multiple participants join a live Avatour meeting from the same location as the 360° camera, careful management of **audio and bandwidth** is crucial:  
+Quando più partecipanti si uniscono a un meeting Avatour live dalla stessa posizione della videocamera a 360°, è cruciale una gestione attenta di **audio e larghezza di banda**:
 
-- Each smartphone, tablet, or laptop connected onsite consumes network bandwidth and can negatively impact the 360° camera feed.  
-- Multiple microphones and speakers in the same space can cause **audio feedback**, making the meeting experience unpleasant for all participants.
+- Ogni smartphone, tablet o laptop connesso in loco consuma larghezza di banda di rete e può influire negativamente sul feed della videocamera a 360°.
+- Più microfoni e altoparlanti nello stesso spazio possono causare **feedback audio**, rendendo l'esperienza del meeting sgradevole per tutti i partecipanti.
 
-To address these challenges, follow these **best practices**:
+Per affrontare queste sfide, segui queste **best practice**:
 
-- **Use wired or wireless headphones:** Preferably with noise-canceling to prevent echo and feedback.  
-- **On-Site Mode:** Join the meeting in On-Site mode when physically present near the 360° camera.  
-  - This mode is optimized for onsite use:  
-    - Mutes the participant’s mic and speaker by default.  
-    - Does **not** send the participant’s camera feed.  
-    - Does **not** display the 360° camera feed in the participant’s browser.  
-    - Conserves network bandwidth, ensuring the 360° camera has maximum available upload for the live stream.  
-    - Useful when a user wants to share specific details; you **can share back your camera** for targeted views.  
-- **Mute when not actively speaking:** Prevents unwanted audio feedback and distractions.  
-- **Use a separate network if possible:** Have your smartphone connected to a different network than the camera’s network to reduce interference.  
+- **Usa cuffie cablate o wireless:** Preferibilmente con cancellazione del rumore per prevenire eco e feedback.
+- **Modalità In Loco:** Unisciti al meeting in modalità In Loco quando sei fisicamente presente vicino alla videocamera a 360°.
+  - Questa modalità è ottimizzata per l'uso in loco:
+    - Silenzia il microfono e l'altoparlante del partecipante per impostazione predefinita.
+    - **Non** invia il feed della videocamera del partecipante.
+    - **Non** mostra il feed della videocamera a 360° nel browser del partecipante.
+    - Conserva la larghezza di banda di rete, garantendo alla videocamera a 360° il massimo upload disponibile per lo streaming live.
+    - Utile quando un utente vuole condividere dettagli specifici; **puoi condividere la tua videocamera** per visualizzazioni mirate.
+- **Silenzia quando non stai parlando attivamente:** Previene feedback audio indesiderati e distrazioni.
+- **Usa una rete separata se possibile:** Connetti il tuo smartphone a una rete diversa da quella della videocamera per ridurre le interferenze.
 
-Following these guidelines ensures a smooth, high-quality live tour for both onsite and remote participants.
+Seguire queste linee guida garantisce un tour live fluido e di alta qualità sia per i partecipanti in loco che per quelli remoti.
 
-### 5.3 Avatour Camera App
+### 5.3 App Videocamera Avatour
 
-Here are (1) the Top Level, (2) Settings and (3) Network Settings menus.
+Ecco (1) il Livello Principale, (2) Impostazioni e (3) i menu delle Impostazioni di Rete.
 
-![Avatour 360° Camera App - Three Menus](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-cam-app-3-menu-screens_nju8bt.png) *Avatour 360° Camera App - 3 Menus*
+![App Videocamera Avatour 360° - Tre Menu](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-cam-app-3-menu-screens_nju8bt.png) *App Videocamera Avatour 360° - 3 Menu*
 
-**Quick Capture** - For offline 360° video recording. - For a detailed description see [How do you record and upload 360 videos with the Avatour App?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app). We recommend using an external audio device (connected via bluetooth). N.B. You can also do standard 2D videos and pictures - simply change the mode between 360° and 2D in the bottom right corner once in the QC screen.
+**Quick Capture** - Per la registrazione video a 360° offline. - Per una descrizione dettagliata vedi [Come registri e carichi video a 360° con l'App Avatour?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app). Raccomandiamo l'uso di un dispositivo audio esterno (connesso via bluetooth). N.B. Puoi anche fare video e foto 2D standard - cambia semplicemente la modalità tra 360° e 2D nell'angolo in basso a destra una volta nella schermata QC.
 
-**Live Meeting** - For live 360° Video Conferencing. You will see your workspaces and clicking on one will initiate the live video stream from the 360° camera. Before you can join the meeting with your 360° cam you need to connect an audio device via bluetooth. For a detailed description see [How to start a Live Capture meeting with your Pilot camera?](https://avatour.com/support/how-to-start-a-live-capture-meeting-with-your-pilot-camera)
+**Live Meeting** - Per videoconferenze live a 360°. Vedrai i tuoi workspace e cliccando su uno di essi avvierai lo stream video live dalla videocamera a 360°. Prima di poter unirti al meeting con la tua videocamera a 360° devi connettere un dispositivo audio via bluetooth. Per una descrizione dettagliata vedi [Come avviare un meeting Live Capture con la tua videocamera Pilot?](https://avatour.com/support/how-to-start-a-live-capture-meeting-with-your-pilot-camera)
 
-> When hosting a Live Capture meeting with your 360 camera, you will have similar meeting tools available to you that mirror the web experience. Here is a link to our Knowledge Base article that explains these tools in more detail: [Operator App Tools](https://avatour.com/support/what-avatour-app-tools-are-available-to-labpano-pilot-camera-operators)
+> Quando ospiti un meeting Live Capture con la tua videocamera a 360°, avrai a disposizione strumenti di meeting simili che rispecchiano l'esperienza web. Ecco un link al nostro articolo della Knowledge Base che spiega questi strumenti in maggior dettaglio: [Strumenti App Operatore](https://avatour.com/support/what-avatour-app-tools-are-available-to-labpano-pilot-camera-operators)
 
-**Gallery** - Find here all your 360° videos and pictures for upload to the Avatour Web Console.
+**Galleria** - Qui trovi tutti i tuoi video e foto a 360° per il caricamento sulla Console Web Avatour.
 
-**Settings** - Within Settings, you have the following options:
+**Impostazioni** - All'interno di Impostazioni, hai le seguenti opzioni:
 
-- **Network**: This option allows you to change which WiFi network the camera is connected to or run a network connection test to view your streaming throughput
-- **Live Capture**: Adjust your Live Capture settings depending on available bandwidth, guest’s VR sensitivity, or if your camera’s protective lenses are installed:
-  - **Target Frame** **Rate**: Adjust the frame rate for your Live Capture video between 15 fps, 24 fps, and 30 fps. Higher frame rates produce a smoother video, but will require more upload bandwidth. Default: 15 fps
-  - **Target Bitrate**: Enables you to increase or decrease the maximum streaming bitrate for your Live Capture. You can set your target bitrate between 1 Mbps and 10 Mbps. Higher bitrates will result in higher video resolution, but will require more upload bandwidth. Default: 5 Mbps
-  - **Optimize Motion**: This will decrease the video frame rate, generating less load on your network's upload bandwidth, and increase your streaming bitrate. In addition, this option helps to reduce motion sickness for VR participants. Default: Off
-  - **Protective Lenses**: This will affect how the 360° video is stitched depending if protective lenses have been installed on your camera. If you do not have protective lenses, set this to “No”. If you received a Kit 3.0, you have pre-installed protective lenses on and should set this to “Yes”. Default: Yes
+- **Rete**: Questa opzione ti permette di cambiare la rete WiFi a cui è connessa la videocamera o eseguire un test di connessione di rete per visualizzare il throughput di streaming
+- **Live Capture**: Regola le tue impostazioni Live Capture in base alla larghezza di banda disponibile, alla sensibilità VR degli ospiti, o se sono installate le lenti protettive della videocamera:
+  - **Frame Rate Target**: Regola il frame rate per il tuo video Live Capture tra 15 fps, 24 fps e 30 fps. Frame rate più alti producono un video più fluido, ma richiederanno più larghezza di banda in upload. Predefinito: 15 fps
+  - **Bitrate Target**: Ti permette di aumentare o diminuire il bitrate massimo di streaming per il tuo Live Capture. Puoi impostare il tuo bitrate target tra 1 Mbps e 10 Mbps. Bitrate più alti risulteranno in una risoluzione video più alta, ma richiederanno più larghezza di banda in upload. Predefinito: 5 Mbps
+  - **Ottimizza Movimento**: Questo diminuirà il frame rate video, generando meno carico sulla larghezza di banda in upload della tua rete, e aumenterà il tuo bitrate di streaming. Inoltre, questa opzione aiuta a ridurre il motion sickness per i partecipanti VR. Predefinito: Disattivato
+  - **Lenti Protettive**: Questo influenzerà come il video a 360° viene unito a seconda che le lenti protettive siano state installate sulla tua videocamera. Se non hai lenti protettive, imposta su "No". Se hai ricevuto un Kit 3.0, hai lenti protettive preinstallate e dovresti impostare su "Sì". Predefinito: Sì
 
-- **Quick Capture**: Adjust your Quick Capture settings depending on your preferred video frame rate, available bandwidth for recorded video uploads, or if your camera’s protective lenses are installed. Quick Capture has a set resolution of 4k which usually strikes a good balance between video quality and file size. (For higher resolutions you can use the native camera apps, also on the PanoX V2, for details see [How do you record and upload 360 videos with the Avatour App?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)):
-  - **Target Frame Rate**: Adjust the frame rate for your Quick Capture video recordings between 15 fps, 24 fps, and 30 fps. Higher frame rates produce a smoother video, but will increase video file size and upload time. Recommended: 30 fps
-  - **Target Bitrate**: Set the target bitrate for Quick Capture uploads between 5 Mbps and 20 Mbps. Lower bitrates increase upload speeds, but will decrease video quality. Recommended: 20 Mbps
-  - **Protective Lenses**: *See Protective Lenses section for Live Capture above*
-- **About**: View device serial number and software version
+- **Quick Capture**: Regola le tue impostazioni Quick Capture in base al frame rate video preferito, alla larghezza di banda disponibile per i caricamenti video registrati, o se sono installate le lenti protettive della videocamera. Quick Capture ha una risoluzione fissa di 4k che di solito offre un buon equilibrio tra qualità video e dimensione del file. (Per risoluzioni più alte puoi usare le app native della videocamera, anche sulla PanoX V2, per dettagli vedi [Come registri e carichi video a 360° con l'App Avatour?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)):
+  - **Frame Rate Target**: Regola il frame rate per le tue registrazioni video Quick Capture tra 15 fps, 24 fps e 30 fps. Frame rate più alti producono un video più fluido, ma aumenteranno la dimensione del file video e il tempo di caricamento. Raccomandato: 30 fps
+  - **Bitrate Target**: Imposta il bitrate target per i caricamenti Quick Capture tra 5 Mbps e 20 Mbps. Bitrate più bassi aumentano la velocità di caricamento, ma diminuiranno la qualità video. Raccomandato: 20 Mbps
+  - **Lenti Protettive**: *Vedi sezione Lenti Protettive per Live Capture sopra*
+- **Info**: Visualizza il numero di serie del dispositivo e la versione del software
 
-**Account** - For login with your Avatour host or admin account.
+**Account** - Per l'accesso con il tuo account host o admin Avatour.## 6. Consigli sulle Migliori Pratiche {#best-practice-advice}
 
-## 6. Best Practice Advice {#best-practice-advice}
+### 6.1 Primi Utilizzi (informali) e Familiarizzazione
 
-### 6.1 First (informal) Uses and Getting Familiar
+Per i primi utilizzi e per familiarizzare con la Console Web Avatour e il Kit Chiavi in Mano Avatour raccomandiamo i seguenti passaggi:
 
-For your first uses and getting familiar with the Avatour Web Console and the Avatour Turnkey Kit we recommend the following steps:
+1. Porta il kit a casa e provalo con familiari e amici utilizzando la tua connessione internet domestica.
+2. Porta il kit in ufficio e connettiti a una rete aziendale (potrebbero emergere problematiche aziendali, ad es. firewall aziendali - ma sai dal primo passaggio che Avatour funziona e questo è un argomento da risolvere con il tuo team IT con l'aiuto di Avatour).
+3. Inizia a utilizzare Avatour sul campo (fuori dal tuo ufficio) nel luogo della riunione verso cui i partecipanti remoti dovrebbero normalmente viaggiare. Potrebbero emergere ulteriori problematiche di connettività. Avatour può aiutare in collaborazione con il tuo team IT.
+4. Inizia a utilizzarlo con partecipanti remoti interni ed esterni.
 
-1. Take the kit home and play with it with family and friends using your home internet connection.
-2. Take the kit to the office and connect to a corporate network (corporate issues might evolve, e.g. corporate firewalls - but you know from step one that Avatour is working and this is a topic to sort out by your IT team with the help of Avatour).
-3. Start to use Avatour onsite (outside your office) at the meeting location to which remote participants would usually need to travel to. More connectivity topics might evolve. Avatour to help in cooperation with your IT team.
-4. Start using with internal and external remote participants.
+### 6.2 Prima di una Riunione Live con Video a 360°
 
-### 6.2 Before a 360° Video Live Meeting
+- Raccomandiamo di effettuare un tour video a 360° registrato prima di qualsiasi tour live, se il tempo lo consente, per tre motivi: (1) Avere una soluzione di riserva per il tour live, (2) avere qualcosa per la documentazione e la revisione successiva (oltre al tour live registrato) e (3) iniziare a creare una libreria di video a 360° di tutti i tuoi siti che può essere utile per molti casi d'uso.
+- Tutti i componenti del kit devono essere caricati per almeno 90 minuti prima della riunione live. Raccomandiamo comunque di tenere tutti i dispositivi in carica continua quando non in uso. In questo modo tutti i dispositivi saranno sempre pronti, anche per riunioni improvvisate non pianificate.
+- Tieni il kit completamente assemblato (1. base del treppiede + 2. batteria Ulanzi + 3. asta estensibile + 4. cam a 360°).
 
-- We recommend to do a recorded 360° video tour before any live tour if time allows for three reasons: (1) Have a fallback solution for the live tour, (2) have something for documentation and later review (on top of the recorded live tour) and (3) start to create a library of 360° videos of all your sites which can be helpful for many use cases. 
-- All kit components charged for at least 90 minutes before the live meeting. We anyway recommend to have all devices on continuous charge when not in use. Like that all devices will always be ready, also for unplanned ad hoc meetings.
-- Have the kit fully assembled (1. tripod base + 2. Ulanzi battery + 3. extendable stick + 4. 360° cam).
+- Conferma che sia stato creato uno Spazio di Lavoro per ospitare una riunione live e includi tutte le Risorse pertinenti.
 
-- Confirm a Workspace is created for hosting a live meeting and include all relevant Assets.
+- Invita tutti i partecipanti alla riunione attraverso il tuo Spazio di Lavoro. Questo crea un invito nei calendari di tutti i partecipanti e include il link di invito alla riunione.
 
-- Invite all participants to the meeting through your Workspace. This creates an invite on all participants calendars, and includes the meeting invite link.
+- Associa e connetti le tue cuffie bluetooth o l'altoparlante che intendi utilizzare per il tour alla fotocamera.
 
-- Pair and connect your bluetooth headphones or speaker you plan to use for your tour to the camera.
+- Tutti gli utenti smartphone in loco dovrebbero connettersi da una rete diversa da quella della fotocamera. Questo ridurrà il carico sulla larghezza di banda della rete della fotocamera.
 
-- All onsite smartphone users should connect from a different network than the camera’s network. This will reduce the load on the camera’s network bandwidth.
+- Se sei solo come operatore della fotocamera, porta con te uno smartphone nel caso tu voglia condividere la fotocamera dello smartphone e mostrare dettagli fini.
 
-- If you are alone as a camera operator, take a smartphone with you in the case you want to smartphone camera-share and show fine details.
+- Conferma che la fotocamera a 360° possa connettersi al tuo WiFi locale.
 
-- Confirm the 360 camera can connect to your local WiFi.
+- Prima di una riunione Avatour, pianifica il percorso che farai attraverso la struttura. Fai una riunione Avatour di prova con la fotocamera e verifica che tutte le aree abbiano bitrate superiori a 1 Mbps di larghezza di banda. Questo può essere visualizzato sullo schermo della fotocamera stessa, o come partecipante remoto andando in Impostazioni e attivando Mostra Bitrate.
 
-- Prior to an Avatour meeting, plan out the route you will take through the facility. Do a test Avatour meeting with the camera, and check that all areas have bitrates above 1 Mbps bandwidth. This can be seen on the camera screen itself, or as a remote participant by going to Settings and activating Show Bitrate.
+- Se noti che alcune aree hanno poca o nessuna larghezza di banda, è meglio scattare immagini o effettuare una registrazione. Queste possono poi essere presentate durante la riunione per la revisione dei partecipanti remoti. Puoi seguire la guida qui che spiega la nostra Cattura Rapida per registrare e caricare video/immagini: [How do you record and upload 360 videos with the Avatour App?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)
 
-- If you notice some areas have little to no bandwidth, it is best to take images or a recording. These can then be presented during the meeting for remote participants to review. You can follow the guide here that explains our Quick Capture for recording and uploading videos/images: [How do you record and upload 360 videos with the Avatour App?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)
+- Se hai partecipanti remoti che si uniscono alla riunione e non hanno mai usato Avatour prima, fornisci loro un breve riepilogo della piattaforma, delle sue funzionalità (video live a 360°, risorse, istantanee, annotazioni, spotlight) e degli strumenti di riunione.
 
-- If you have remote participants joining the meeting who have not used Avatour before, provide them with a short summary of the platform, its functionality (360 live video, assets, snapshots, annotations, spotlight) and the meeting tools.
+- Puoi iniziare in un'altra soluzione di videoconferenza (ad es. Teams, Zoom, Google Meet) ma prima di passare ad Avatour, chiudi completamente l'altra applicazione di videoconferenza. In alcuni casi, queste altre applicazioni daranno priorità al microfono/altoparlanti/webcam del tuo dispositivo, causando la loro disabilitazione per Avatour. Inoltre, NON eseguire Avatour E un'altra videoconferenza contemporaneamente poiché questo ridurrà la larghezza di banda disponibile.
 
-- You can start in another video conferencing solution (e.g. Teams, Zoom, Google Meet) but before moving over to Avatour, completely close the other video conference application. In some cases, these other applications will prioritize your device’s microphone/speakers/webcam, causing them to be disabled for Avatour. Additionally, do NOT run Avatour AND another video conference at the same time as this will reduce available bandwidth.
+- Se hai intenzione di utilizzare la fotocamera a 360° in un ambiente ad alta temperatura, si raccomanda di utilizzare il modulo di raffreddamento (solo Pilot Pano). Questo aiuterà a ridurre le possibilità che la fotocamera si surriscaldi e si spenga automaticamente.
 
-- If you are planning to use the 360 camera in a high temperature environment, it’s recommended to use the cooling module (Pilot Pano only). This will help reduce the chances of the camera overheating and shutting down automatically.
+### 6.3 Durante l'Utilizzo della Cam in Loco per una Riunione Live con Video a 360°
 
-### 6.3 When Operating the Cam Onsite for a 360° Video Live Meeting
+- Quando utilizzi la fotocamera, assicurati di camminare lentamente. Questo aiuta con la qualità video e riduce qualsiasi potenziale interruzione video quando la connessione di rete della fotocamera passa tra i punti di accesso WiFi.
 
-- When operating the camera, make sure that you are walking slowly. This helps with the video quality and reduces any potential video downtime when the camera’s network connection switches between WiFi access points.
+- Tieni la fotocamera davanti a te e sopra il livello degli occhi. Questo permette a tutti i partecipanti remoti di vedere la maggior parte dell'area circostante.
 
-- Hold the camera out in front of you, and above eye level. This allows all remote participants to see the majority of your surrounding area.
+- Per le situazioni in cui la fotocamera deve rimanere stabile, usa il supporto treppiede ed estendi la fotocamera all'altezza corretta, preferibilmente al livello degli occhi.
 
-- For instances where the camera needs to remain stable, use the tripod stand and extend the camera to the correct height, best to eye-level.
+- Connetti sempre la fotocamera alla tua rete WiFi locale quando possibile. Per le aree senza accesso WiFi, usa l'hotspot fornito. L'hotspot ha una scheda SIM che si connetterà a una rete cellulare affidabile vicino a te. Tieni sempre l'hotspot spento quando non in uso all'interno poiché altrimenti la cam a 360° potrebbe connettersi all'hotspot, cosa che non vogliamo negli ambienti interni. Quando sei all'esterno, tieni l'hotspot vicino alla fotocamera a 360°.
 
-- Always connect the camera to your local WiFi network where possible. For areas without WiFi access, use the provided hotspot. The hotspot has a SIM card that will connect to a reliable cell network near you. Always keep the hotspot switched off when not in use indoors as otherwise the 360° cam could connect to the hotspot which we do not want indoors. When outdoors, keep the hotspot near the 360° camera.
+- Quando il bitrate sulla fotocamera inizia a scendere sotto i 2 Mbps, cammina più lentamente o fermati completamente finché il segnale non si stabilizza di nuovo. Questo accade solitamente quando passi da un Punto di Accesso WiFi a un altro.
 
-- When the on camera bitrate starts to drop below 2 Mbps, walk slower or stop completely until the signal stabilizes again. This usually happens when you change from one WiFi Access Point to another. 
+- Se sai che la connettività e il video si interromperanno quando ti sposti in una posizione specifica (Esempio: spostandoti da un'area di produzione interna a un'area esterna), avvisa i partecipanti remoti in anticipo.
 
-- If you know the connectivity and video will drop when moving to a specific location (Example: moving from an indoor production area to an outdoor area), let the remote participants know in advance.
+- Se hai bisogno di mostrare qualcosa in alta definizione o scritte piccole, usa il tuo smartphone o quello di un partecipante in loco per unirti alla riunione e presentare la fotocamera (posteriore) del tuo/loro telefono.
 
-- If needing to show something in high detail or small writing, use your own or an onsite participant's smartphone to join the meeting and present your / their phone’s (back-facing) camera.
+- Se possibile raccomandiamo che una persona aggiuntiva sia in loco per aiutare con la condivisione della fotocamera smartphone sopra descritta poiché questo spesso si rivela utile/necessario.
 
-- If possible we recommend that one additional person is onsite to help with the above described smartphone camera share as this often proves to be helpful / needed.
+- Idealmente gli utenti smartphone in loco dovrebbero unirsi alla riunione (1) in modalità in loco e (2) su una rete diversa da quella che sta usando la fotocamera per non sottrarre larghezza di banda di upload cruciale dalla cam a 360°.
 
-- Ideally onsite smartphone users should join the meeting (1) in onsite mode and (2) on a different network from that the camera is using to not take away crucial upload bandwidth from the 360° cam.
-
-- All onsite participants joining from their smartphone should be muted, unless actively speaking.
+- Tutti i partecipanti in loco che si uniscono dal loro smartphone dovrebbero essere silenziati, a meno che non stiano parlando attivamente.
