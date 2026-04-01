@@ -98,6 +98,43 @@ CRITICAL RULES:
     result = re.sub(r'===(?:START|END)===\n?', '', result)
     return result
 
+def translate_body_strict(body, target_language, api_key):
+    """Stricter translation for large sections — warns model about exact length."""
+    char_count = len(body)
+    payload = json.dumps({
+        "model": "claude-opus-4-5",
+        "max_tokens": 4096,
+        "messages": [{"role": "user", "content":
+            f"""Translate the following Markdown text to {target_language}.
+
+The input text is exactly {char_count} characters long.
+Your translation should be approximately the same length — do NOT add any extra content.
+Stop translating when the input text ends. Do not continue beyond it.
+
+RULES:
+- Return ONLY the translated text
+- Preserve ALL Markdown formatting
+- Never translate URLs, image paths, anchor IDs, or code
+- Do NOT add any content that is not in the original text below
+
+{body}"""}]
+    }).encode('utf-8')
+    req = urllib.request.Request(
+        'https://api.anthropic.com/v1/messages',
+        data=payload,
+        headers={
+            'Content-Type': 'application/json',
+            'x-api-key': api_key,
+            'anthropic-version': '2023-06-01',
+        }
+    )
+    with urllib.request.urlopen(req, timeout=120) as resp:
+        result = json.loads(resp.read())['content'][0]['text']
+    time.sleep(2)
+    result = re.sub(r'</?section>\n?', '', result)
+    result = re.sub(r'===(?:START|END)===\n?', '', result)
+    return result
+
 def translate_body(body, target_language, api_key):
     """Translate a section body, splitting on ### boundaries for large sections."""
     # Split on ### subsection boundaries to keep chunks manageable
@@ -141,6 +178,14 @@ def auto_translate_lang(en_sections, en_prev_dict, lang_path, lang_name, api_key
             # Translate heading and body separately to guarantee heading is preserved
             translated_heading = translate_heading(heading, lang_name, api_key)
             translated_body = translate_body(body, lang_name, api_key)
+            # Sanity check: translated body should not be more than 2x the EN body
+            # If it is, the API has bled into adjacent sections — reject and use EN body
+            if len(translated_body) > len(body) * 2.0:
+                print(f"      ⚠️ Translation oversized ({len(translated_body)} vs {len(body)} chars) — retrying with stricter prompt")
+                translated_body = translate_body_strict(body, lang_name, api_key)
+            if len(translated_body) > len(body) * 2.0:
+                print(f"      ❌ Still oversized after retry — keeping English body for this section")
+                translated_body = body
             lang_sections[heading] = (translated_heading, translated_body)
             label = heading.strip()[:60]
             print(f"      ✓ {label}")
