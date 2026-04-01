@@ -14,7 +14,7 @@ Requirements:
   pip install markdown pymdown-extensions python-frontmatter
 """
 
-import os, re, json
+import os, re, json, time
 import urllib.request
 import frontmatter
 import markdown
@@ -61,6 +61,7 @@ def translate_heading(heading, target_language, api_key):
     )
     with urllib.request.urlopen(req, timeout=60) as resp:
         translated_text = json.loads(resp.read())['content'][0]['text'].strip()
+    time.sleep(2)
     return f"{prefix}{translated_text}{anchor}\n"
 
 def translate_body(body, target_language, api_key):
@@ -89,7 +90,9 @@ Rules:
         }
     )
     with urllib.request.urlopen(req, timeout=120) as resp:
-        return json.loads(resp.read())['content'][0]['text']
+        result = json.loads(resp.read())['content'][0]['text']
+    time.sleep(2)
+    return result
 
 def auto_translate_lang(en_sections, en_prev_dict, lang_path, lang_name, api_key):
     """Translate changed EN sections into one language file."""
