@@ -44,7 +44,7 @@ def translate_heading(heading, target_language, api_key):
         return heading
     prefix, text, anchor = m.group(1), m.group(2), m.group(3) or ''
     payload = json.dumps({
-        "model": "claude-opus-4-5",
+        "model": "claude-haiku-4-5-20251001",
         "max_tokens": 256,
         "messages": [{"role": "user", "content":
             f"Translate this heading text to {target_language}. "
@@ -67,7 +67,7 @@ def translate_heading(heading, target_language, api_key):
 def translate_chunk(text, target_language, api_key):
     """Translate a single chunk of markdown body text."""
     payload = json.dumps({
-        "model": "claude-opus-4-5",
+        "model": "claude-haiku-4-5-20251001",
         "max_tokens": 4096,
         "messages": [{"role": "user", "content":
             f"""Translate the following Markdown text to {target_language}.
@@ -102,7 +102,7 @@ def translate_body_strict(body, target_language, api_key):
     """Stricter translation for large sections — warns model about exact length."""
     char_count = len(body)
     payload = json.dumps({
-        "model": "claude-opus-4-5",
+        "model": "claude-haiku-4-5-20251001",
         "max_tokens": 4096,
         "messages": [{"role": "user", "content":
             f"""Translate the following Markdown text to {target_language}.
