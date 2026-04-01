@@ -118,17 +118,17 @@ Workspace permissions define what a user can do **within a specific Workspace**.
 
 Avatour allows users to collaborate in two primary ways:
 
-- **Join a live meeting:**  
+- **Join an Avatour meeting (Synchronous Collaboration):**  
   You may receive a **calendar invitation** to join an Avatour meeting. During the meeting, participants can conduct a **live remote site visit** or synchronously review assets together.
 
-- **Visit a Workspace:**  
+- **Visit a Workspace (Asynchronous Collaboration):**  
   You may also be invited as a **collaborator to a Workspace** to review assets **asynchronously** (on your own schedule).
 
 ### 3.1 How to Join an Avatour Meeting and Visit an Avatour Workspace {#how-to-join-an-avatour-meeting-and-visit-an-avatour-workspace}
 #### 3.1.1 Any "Flat Screen" Device with a Web Browser {#any-flat-screen}
 You can join an Avatour meeting from **any desktop or laptop computer, smartphone, or tablet** using a web browser.  
 
-##### Joining a Meeting
+##### Joining an Avatour Meeting
 
 > **Note:** Joining an Avatour meeting requires that you **grant microphone permissions**. Please accept any permission prompts from your browser.
 
@@ -150,9 +150,9 @@ You can join an Avatour meeting from **any desktop or laptop computer, smartphon
 
 > **Tip 3:** Do **not** use the Avatour iOS or Android apps to join meetings. These apps are only required when **streaming a live meeting from an Insta360 camera**, since those cameras cannot run the Avatour 360° software directly and require a smartphone to assist.
 
-##### Visiting a Workspace Without Joining a Meeting
+##### Visiting an Avatour Workspace (without joining an Avatour Meeting)
 
-You can access a Workspace without joining a live meeting in the following ways:
+You can access a Workspace in the following ways:
 
 - **Public Workspace:**  
   If the Workspace is public, the link can be accessed directly—no login required.
@@ -164,9 +164,7 @@ You can access a Workspace without joining a live meeting in the following ways:
   2. Click the link in the email to open the Workspace. If you are not already logged in, you will be prompted to **log in or complete signup**.
   3. Once logged in, the Workspace will open automatically.
 
-  Alternatively, you can log in at  
-  https://avatour.live/login  
-  and access the Workspace from your **list of Workspaces**.
+  Alternatively, you can log in at [https://avatour.live/login](https://avatour.live/login) and access the Workspace from your **list of Workspaces**.
 
 #### 3.1.2 VR Headset {#vr-headset}
 You can join a meeting and visit a workspace from a range of compatible Meta and Pico headsets. To do this: 
