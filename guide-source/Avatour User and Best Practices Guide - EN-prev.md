@@ -143,7 +143,7 @@ You can join an Avatour meeting from **any desktop or laptop computer, smartphon
    - If the meeting is **password-protected**, enter the password provided by the host.  
    - If the meeting requires **authentication**, you will need to **log in with your Avatour account** before joining.
 
-> **Tip 1:** If your camera or microphone does not work, it may be in use by another application (for example, Microsoft Teams or Zoom). Close any apps that might be using your camera or microphone, then leave and rejoin the Avatour meeting.  
+> **Tip 1:** If your camera or microphone does not work, it may be in use by another application (for example Microsoft Teams or Zoom). Close any apps that might be using your camera or microphone, then leave and rejoin the Avatour meeting.  
 
 > **Tip 2:** If you are still unable to join the meeting, run this test: [https://avatour.live/test](https://avatour.live/test).  
 > The test can identify whether your **corporate firewall or network** is blocking access, and will provide information to guide discussions with your IT team.  
@@ -309,7 +309,7 @@ When you login to your Avatour User Account, you will access the **Web Console**
 
 ### 4.1 Web Console - Overview Main Menu {#web-console-overview-main-menu}
 
-On the left side, you will see the following menu items:
+On the left-hand side, you will see the following menu items:
 
 ![Avatour Web Console - Main Menu](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu_qwpthq.png) *Avatour Web Console - Main Menu*
 
