@@ -16,6 +16,7 @@ Requirements:
 
 import os, re, json, time
 import urllib.request
+import urllib.parse
 import frontmatter
 import markdown
 from markdown.extensions.toc import TocExtension
@@ -36,33 +37,79 @@ def split_sections(text):
     sections.append((heading, ''.join(lines)))
     return sections
 
-def translate_heading(heading, target_language, api_key):
-    """Translate just the heading text, preserving the ## prefix and anchor ID."""
-    # Extract: prefix (##), text, anchor ({#...})
-    m = re.match(r'^(#{1,6}\s+)(.*?)(\s*\{#[\w-]+\})?\s*$', heading.strip())
-    if not m:
-        return heading
-    prefix, text, anchor = m.group(1), m.group(2), m.group(3) or ''
-    payload = json.dumps({
-        "model": "claude-haiku-4-5-20251001",
-        "max_tokens": 256,
-        "messages": [{"role": "user", "content":
-            f"Translate this heading text to {target_language}. "
-            f"Return ONLY the translated text — no explanation, no punctuation changes, no quotes:\n{text}"}]
+def translate_with_deepl(text, target_lang, api_key):
+    """Translate text using DeepL API. target_lang is e.g. 'IT', 'ES', 'FR'."""
+    payload = urllib.parse.urlencode({
+        'text': text,
+        'target_lang': target_lang,
+        'tag_handling': 'off',
+        'preserve_formatting': '1',
     }).encode('utf-8')
     req = urllib.request.Request(
-        'https://api.anthropic.com/v1/messages',
+        'https://api-free.deepl.com/v2/translate',
         data=payload,
         headers={
-            'Content-Type': 'application/json',
-            'x-api-key': api_key,
-            'anthropic-version': '2023-06-01',
+            'Authorization': f'DeepL-Auth-Key {api_key}',
+            'Content-Type': 'application/x-www-form-urlencoded',
         }
     )
-    with urllib.request.urlopen(req, timeout=60) as resp:
-        translated_text = json.loads(resp.read())['content'][0]['text'].strip()
-    time.sleep(2)
-    return f"{prefix}{translated_text}{anchor}\n"
+    with urllib.request.urlopen(req, timeout=30) as resp:
+        result = json.loads(resp.read())
+    return result['translations'][0]['text']
+
+def auto_translate_lang(en_sections, en_prev_dict, lang_path, lang_name, lang_code, api_key):
+    """Translate changed EN sections into one language file using DeepL."""
+    # Load existing translated file by position (for unchanged sections only)
+    existing = []
+    if os.path.exists(lang_path):
+        with open(lang_path, 'r', encoding='utf-8') as f:
+            existing = split_sections(f.read())
+
+    changed = 0
+    parts = []
+
+    for i, (en_heading, en_body) in enumerate(en_sections):
+        # Always copy preamble as-is
+        if en_heading == '__preamble__':
+            parts.append(en_body)
+            continue
+
+        section_changed = en_prev_dict.get(en_heading, '') != en_body
+
+        if not section_changed and i < len(existing):
+            # Reuse existing translation if not oversized
+            ex_h, ex_b = existing[i]
+            if len(ex_b) <= len(en_body) * 2.0 and ex_h != '__preamble__':
+                parts.append(ex_h + ex_b)
+                continue
+
+        # Translate heading text only (DeepL gets plain text, no ##)
+        m = re.match(r'^(#{1,6}\s+)(.*?)(\s*\{#[\w-]+\})?\s*$', en_heading.strip())
+        if m:
+            prefix = m.group(1)
+            heading_text = m.group(2)
+            anchor = m.group(3) or ''
+            translated_text = translate_with_deepl(heading_text, lang_code, api_key)
+            translated_heading = f"{prefix}{translated_text.strip()}{anchor}\n"
+        else:
+            translated_heading = en_heading
+
+        # Translate body with DeepL
+        translated_body = translate_with_deepl(en_body, lang_code, api_key)
+
+        parts.append(translated_heading + translated_body)
+        label = en_heading.strip()[:60]
+        print(f"      ✓ {label}")
+        changed += 1
+
+    if changed == 0:
+        print(f"    [{lang_name}] No changes — skipping")
+        return False
+
+    with open(lang_path, 'w', encoding='utf-8') as f:
+        f.write(''.join(parts))
+    print(f"    [{lang_name}] ✓ Written to {lang_path}")
+    return True
 
 def translate_chunk(text, target_language, api_key):
     """Translate a single chunk of markdown body text."""
@@ -229,10 +276,10 @@ def auto_translate_lang(en_sections, en_prev_dict, lang_path, lang_name, api_key
     return True
 
 def run_auto_translate():
-    """Step 1: detect changed EN sections and translate to IT and ES."""
-    api_key = os.environ.get('ANTHROPIC_API_KEY', '')
+    """Step 1: detect changed EN sections and translate to IT, ES and FR using DeepL."""
+    api_key = os.environ.get('DEEPL_API_KEY', '')
     if not api_key:
-        print("  [TRANSLATE] No ANTHROPIC_API_KEY — skipping")
+        print("  [TRANSLATE] No DEEPL_API_KEY — skipping")
         return
 
     en_path      = "guide-source/Avatour User and Best Practices Guide.md"
@@ -260,10 +307,13 @@ def run_auto_translate():
         for lang in LANGUAGES:
             if lang["code"] == "en":
                 continue
-            lang_name = {"it": "Italian", "es": "Spanish", "fr": "French"}.get(lang["code"], lang["code"])
+            lang_codes = {"it": "IT", "es": "ES", "fr": "FR"}
+            lang_names = {"it": "Italian", "es": "Spanish", "fr": "French"}
+            lang_code = lang_codes.get(lang["code"], lang["code"].upper())
+            lang_name = lang_names.get(lang["code"], lang["code"])
             print(f"  [TRANSLATE] → {lang_name}")
             auto_translate_lang(en_sections, en_prev_dict,
-                lang["source"], lang_name, api_key)
+                lang["source"], lang_name, lang_code, api_key)
 
     # Save current EN as new EN-prev
     import shutil
