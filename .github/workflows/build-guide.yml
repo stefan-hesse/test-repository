@@ -28,7 +28,7 @@ jobs:
           fi
       - name: Run build (auto-translate + HTML generation)
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
         run: python guide-source/build.py
       - name: Debug guide-source contents
         run: |
