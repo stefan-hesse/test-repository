@@ -45,10 +45,10 @@ test-repository/
 | **MacDown** (Mac app) | Writing and editing the English guide source file |
 | **GitHub Desktop** (Mac app) | Committing and pushing changes to GitHub |
 | **GitHub** (github.com) | Stores the files, runs the automated build |
-| **GitHub Actions** | Auto-translates changed sections and builds all nine HTML outputs on every push |
+| **GitHub Actions** | Auto-translates changed sections and builds all twelve HTML outputs on every push |
 | **GitHub Pages** | Hosts the embed files so Webflow can load them via iframe |
 | **Cloudinary** | Hosts all screenshots used in the guide |
-| **Anthropic API** | Powers automatic IT and ES translation via Claude |
+| **DeepL API** | Powers automatic IT, ES and FR translation — free tier (500,000 chars/month) |
 
 ---
 
@@ -65,11 +65,11 @@ test-repository/
    - **pages build and deployment** — GitHub's own deployment process (ignore this one)
 8. Click the most recent **Build Avatour Guide** run — wait for the green checkmark
 9. Scroll to the bottom of the run page → **Artifacts** → click the zip file to download
-10. Unzip → you have all nine updated HTML files
+10. Unzip → you have all twelve updated HTML files
 
 **The Webflow pages update automatically** — no action needed in Webflow after the build completes.
 
-Total time from saving in MacDown to the website updating: about 2–7 minutes (longer when translation runs).
+Total time from saving in MacDown to the website updating: about 1–3 minutes (translation with DeepL is very fast).
 
 ---
 
@@ -79,16 +79,18 @@ Every time you push a change to the English source file, the build script automa
 
 1. Compares the current English file against `EN-prev.md` (a snapshot of the last build)
 2. Identifies which `##` sections have changed
-3. Sends only the changed sections to the Anthropic API for translation into Italian and Spanish
-4. Updates the IT and ES Markdown files with the new translations
-5. Rebuilds all nine HTML outputs from the updated source files
+3. Sends only the changed sections to the **DeepL API** for translation into Italian, Spanish and French
+4. Updates the IT, ES and FR Markdown files with the new translations
+5. Rebuilds all twelve HTML outputs from the updated source files
 6. Saves the current English file as the new `EN-prev.md` for next time
 
 **You never need to manually translate anything.** Just edit the English file and push.
 
-**Cost:** ~$0.01–0.30 per build run depending on how much changed. A full re-translation of the entire document costs around $0.30. Incremental changes to one or two sections cost a few cents.
+**Cost:** Free — DeepL's free tier includes 500,000 characters per month, which is far more than the guide requires even with frequent updates. A full re-translation of all three languages uses approximately 120,000 characters.
 
 **If translation is skipped:** The build log will show `[TRANSLATE] 0 section(s) changed` — this is normal if your push only changed `build.py` or other non-content files. The HTML is still rebuilt correctly.
+
+**DeepL API key:** Stored as a GitHub Actions secret named `DEEPL_API_KEY`. Managed at deepl.com under the Avatour company account.
 
 ---
 
@@ -101,7 +103,7 @@ Every time you push a change to the English source file, the build script automa
 | Spanish | `Avatour User and Best Practices Guide - ES.md` | `avatour.com/user-guide-es` |
 | French | `Avatour User and Best Practices Guide - FR.md` | `avatour.com/user-guide-fr` |
 
-The language switcher (EN / IT / ES buttons) is built into the header of every HTML output — it is part of the built files and switches between the three standalone HTML pages.
+The language switcher (EN / IT / ES / FR buttons) is built into the header of every HTML output — it is part of the built files and switches between the four standalone HTML pages.
 
 ---
 
@@ -126,11 +128,12 @@ For Italian use `avatour-guide-embed-it.html`, for Spanish use `avatour-guide-em
 
 > **Cache note:** Changes to guide **content** (the Markdown source files) are always picked up immediately — no action needed. However, if you update `build.py` itself and the changes don't appear on `avatour.com/user-guide` after the build completes, GitHub Pages may be serving a cached version of the embed file.
 >
-> **Fix:** Add or increment a `?v=` number in the iframe `src` on all three Webflow pages (EN, IT, ES), then publish Webflow:
+> **Fix:** Add or increment a `?v=` number in the iframe `src` on all four Webflow pages (EN, IT, ES, FR), then publish Webflow:
 > ```
 > avatour-guide-embed.html?v=2
 > avatour-guide-embed-it.html?v=2
 > avatour-guide-embed-es.html?v=2
+> avatour-guide-embed-fr.html?v=2
 > ```
 > Increment to `?v=3`, `?v=4` etc. on each subsequent `build.py` update. This is a rare operation — `build.py` changes are infrequent compared to content edits.
 >
@@ -362,7 +365,8 @@ Press **Cmd+P**, then set:
 | Sidebar link doesn't jump to section | Anchor mismatch | Check `{#anchor-id}` matches exactly |
 | Italian/Spanish page not loading | Wrong filename casing | Must be lowercase: `avatour-guide-embed-it.html` not `-IT.html` |
 | Translation skipped | No sections changed vs EN-prev | Normal if only `build.py` or non-content files were changed |
-| IT/ES content looks wrong after a build | Previous bad translation in IT/ES files | Delete `EN-prev.md` on GitHub and re-run — forces full re-translation |
+| IT/ES/FR content looks wrong after a build | Previous bad translation in files | Delete `EN-prev.md` on GitHub and re-run — forces full re-translation |
+| French page not loading in Webflow | iframe src not updated | Add `avatour-guide-embed-fr.html` to the Webflow FR page |
 
 ---
 
@@ -372,9 +376,9 @@ The current setup on Stefan's personal GitHub account (`test-repository`) is a t
 
 1. Create a repository in **Bitbucket** (Avatour's company standard)
 2. Convert `build-guide.yml` to a **Bitbucket Pipelines** file (`bitbucket-pipelines.yml`) — same logic, different syntax
-3. Add `ANTHROPIC_API_KEY` as a Bitbucket Pipelines secret (same as the GitHub Actions secret)
+3. Add `DEEPL_API_KEY` as a Bitbucket Pipelines secret (same key as in GitHub Actions)
 4. Host the embed files on **AWS S3** instead of GitHub Pages
-5. Update the three iframe `src` values in Webflow to point to the new S3 URLs
+5. Update the four iframe `src` values in Webflow to point to the new S3 URLs
 
 Everything else — the English MD source file, `build.py`, MacDown workflow, and Cloudinary screenshots — moves across unchanged.
 
