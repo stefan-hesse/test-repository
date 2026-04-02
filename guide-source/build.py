@@ -152,60 +152,76 @@ def translate_body(body, target_language, api_key):
     return ''.join(translated_chunks)
 
 def auto_translate_lang(en_sections, en_prev_dict, lang_path, lang_name, api_key):
-    """Translate changed EN sections into one language file."""
-    # Load existing translation sections matched by POSITION to EN headings.
-    # We cannot match by heading text because translated headings differ from EN.
-    lang_sections = {}  # keyed by EN heading
+    """Translate changed EN sections into one language file.
+    
+    Simple approach: build the complete output file from scratch every time.
+    For unchanged sections, copy from existing file by position if available.
+    For changed sections, translate fresh.
+    The ## heading is ALWAYS written explicitly by this code — never by the model.
+    """
+    # Load existing translated file by position (for unchanged sections only)
+    existing = []
     if os.path.exists(lang_path):
         with open(lang_path, 'r', encoding='utf-8') as f:
             raw = f.read()
-        # Clean up any leftover <section> tags from previous translation runs
         raw = re.sub(r'</?section>\n?', '', raw)
-        lang_list = split_sections(raw)
-        # Match by position: en_sections[i] corresponds to lang_list[i]
-        for i, (en_heading, _) in enumerate(en_sections):
-            if i < len(lang_list):
-                lang_h, lang_b = lang_list[i]
-                lang_sections[en_heading] = (lang_h, lang_b)
+        existing = split_sections(raw)
 
     changed = 0
-    for heading, body in en_sections:
-        # Never translate the preamble — copy it as-is
-        if heading == '__preamble__':
-            lang_sections[heading] = ('', body)
+    parts = []
+
+    for i, (en_heading, en_body) in enumerate(en_sections):
+        # Always copy preamble as-is
+        if en_heading == '__preamble__':
+            parts.append(en_body)
             continue
-        if en_prev_dict.get(heading, '') != body:
-            # Translate heading and body separately to guarantee heading is preserved
-            translated_heading = translate_heading(heading, lang_name, api_key)
-            translated_body = translate_body(body, lang_name, api_key)
-            # Sanity check: translated body should not be more than 2x the EN body
-            # If it is, the API has bled into adjacent sections — reject and use EN body
-            if len(translated_body) > len(body) * 2.0:
-                print(f"      ⚠️ Translation oversized ({len(translated_body)} vs {len(body)} chars) — retrying with stricter prompt")
-                translated_body = translate_body_strict(body, lang_name, api_key)
-            if len(translated_body) > len(body) * 2.0:
-                print(f"      ❌ Still oversized after retry — keeping English body for this section")
-                translated_body = body
-            lang_sections[heading] = (translated_heading, translated_body)
-            label = heading.strip()[:60]
-            print(f"      ✓ {label}")
-            changed += 1
+
+        section_changed = en_prev_dict.get(en_heading, '') != en_body
+
+        if not section_changed and i < len(existing):
+            # Use existing translation for this section
+            ex_h, ex_b = existing[i]
+            # Only use existing if it looks like a real translation (not oversized)
+            if len(ex_b) <= len(en_body) * 2.0 and ex_h != '__preamble__':
+                parts.append(ex_h + ex_b)
+                continue
+
+        # Translate this section fresh
+        # Step 1: Translate heading text only (model never sees ##)
+        m = re.match(r'^(#{1,6}\s+)(.*?)(\s*\{#[\w-]+\})?\s*$', en_heading.strip())
+        if m:
+            prefix = m.group(1)
+            text = m.group(2)
+            anchor = m.group(3) or ''
+            translated_text = translate_heading(en_heading, lang_name, api_key)
+            # Extract just the translated text from the full heading response
+            m2 = re.match(r'^#{1,6}\s+(.*?)(\s*\{#[\w-]+\})?\s*$', translated_text.strip())
+            if m2:
+                translated_text = m2.group(1)
+            translated_heading_line = f"{prefix}{translated_text}{anchor}\n"
+        else:
+            translated_heading_line = en_heading
+
+        # Step 2: Translate body in chunks, never sending ## headings to the model
+        translated_body = translate_body(en_body, lang_name, api_key)
+
+        # Step 3: Validate length — if oversized, retry once then fall back to EN
+        if len(translated_body) > len(en_body) * 2.0:
+            print(f"      ⚠️ Oversized ({len(translated_body)} vs {len(en_body)}) — retrying")
+            translated_body = translate_body_strict(en_body, lang_name, api_key)
+        if len(translated_body) > len(en_body) * 2.0:
+            print(f"      ❌ Still oversized — keeping English")
+            translated_body = en_body
+
+        # Step 4: Write heading (by code) + body
+        parts.append(translated_heading_line + translated_body)
+        label = en_heading.strip()[:60]
+        print(f"      ✓ {label}")
+        changed += 1
 
     if changed == 0:
         print(f"    [{lang_name}] No changes — skipping")
         return False
-
-    # Reassemble in EN order
-    parts = []
-    for heading, body in en_sections:
-        if heading in lang_sections:
-            val = lang_sections[heading]
-            if isinstance(val, tuple):
-                parts.append(val[0] + val[1])
-            else:
-                parts.append(heading + val)
-        else:
-            parts.append(heading + body)
 
     with open(lang_path, 'w', encoding='utf-8') as f:
         f.write(''.join(parts))
