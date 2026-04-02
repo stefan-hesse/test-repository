@@ -190,7 +190,7 @@ The Avatour interface is organized around three main areas:
 - **Right panel** – Contextual information, such as participants, meetings, or chat  
 
 Most interactions are initiated from the **bottom menu**.  
-Clicking a menu option opens a **side panel** on the left or right-hand side of the screen, while the **center canvas** remains the primary viewing area.
+Clicking a menu option opens a **side panel** on the left or right side of the screen, while the **center canvas** remains the primary viewing area.
 
 ---
 #### 3.2.2 Meeting View Example
@@ -305,7 +305,7 @@ When reviewing an asset in a workspace, the toolbar is similar but optimized for
 
 ## 4. For Host and Admin Users - Avatour Web Console {#for-host-and-admin-users-avatour-web-console}
 
-When you login to your Avatour User Account, you will access the **Web Console**.  
+When you log in to your Avatour User Account, you will access the **Web Console**.  
 
 ### 4.1 Web Console - Overview Main Menu {#web-console-overview-main-menu}
 
