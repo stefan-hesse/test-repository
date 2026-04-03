@@ -11,7 +11,7 @@ Answers to frequently asked questions.
 3. [Glossary](https://avatour.com/glossary)  
 Definitions of key Avatour terms and concepts frequently used.
 4. Website  
-Have a look especially at the [Avatour Features](https://avatour.com/features) page along with the dedicated Use Cases and Industries sections to learn how Avatour can support your specific needs.
+Have a look especially at [Avatour Features](https://avatour.com/features) along with the dedicated Use Cases and Industries sections to learn how Avatour can support your specific needs.
 
 ## 2. Avatour User Types  {#avatour-user-types}
 
