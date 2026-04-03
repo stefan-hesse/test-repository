@@ -230,8 +230,8 @@ def run_auto_translate():
         for lang in LANGUAGES:
             if lang["code"] == "en":
                 continue
-            lang_codes = {"it": "IT", "es": "ES", "fr": "FR"}
-            lang_names = {"it": "Italian", "es": "Spanish", "fr": "French"}
+            lang_codes = {"it": "IT", "es": "ES", "fr": "FR", "de": "DE"}
+            lang_names = {"it": "Italian", "es": "Spanish", "fr": "French", "de": "German"}
             lang_code = lang_codes.get(lang["code"], lang["code"].upper())
             lang_name = lang_names.get(lang["code"], lang["code"])
             print(f"  [TRANSLATE] → {lang_name}")
@@ -255,28 +255,35 @@ LANGUAGES = [
         "webflow": "https://avatour.com/user-guide",
         "title":   "Avatour User and Best Practices Guide",
     },
-    # Temporarily commented out during French initial translation run.
-    # Uncomment after FR file has been generated, then commit.
+    # Temporarily commented out during German initial translation run.
+    # Uncomment after DE file has been generated, then commit.
+    # {
+    #     "code":    "it",
+    #     "suffix":  "-it",
+    #     "source":  "guide-source/Avatour User and Best Practices Guide - IT.md",
+    #     "webflow": "https://avatour.com/user-guide-it",
+    #     "title":   "Guida Utente e Best Practice di Avatour",
+    # },
+    # {
+    #     "code":    "es",
+    #     "suffix":  "-es",
+    #     "source":  "guide-source/Avatour User and Best Practices Guide - ES.md",
+    #     "webflow": "https://avatour.com/user-guide-es",
+    #     "title":   "Guía del Usuario y Mejores Prácticas de Avatour",
+    # },
+    # {
+    #     "code":    "fr",
+    #     "suffix":  "-fr",
+    #     "source":  "guide-source/Avatour User and Best Practices Guide - FR.md",
+    #     "webflow": "https://avatour.com/user-guide-fr",
+    #     "title":   "Guide de l'Utilisateur et Meilleures Pratiques Avatour",
+    # },
     {
-        "code":    "it",
-        "suffix":  "-it",
-        "source":  "guide-source/Avatour User and Best Practices Guide - IT.md",
-        "webflow": "https://avatour.com/user-guide-it",
-        "title":   "Guida Utente e Best Practice di Avatour",
-    },
-    {
-        "code":    "es",
-        "suffix":  "-es",
-        "source":  "guide-source/Avatour User and Best Practices Guide - ES.md",
-        "webflow": "https://avatour.com/user-guide-es",
-        "title":   "Guía del Usuario y Mejores Prácticas de Avatour",
-    },
-    {
-        "code":    "fr",
-        "suffix":  "-fr",
-        "source":  "guide-source/Avatour User and Best Practices Guide - FR.md",
-        "webflow": "https://avatour.com/user-guide-fr",
-        "title":   "Guide de l'Utilisateur et Meilleures Pratiques Avatour",
+        "code":    "de",
+        "suffix":  "-de",
+        "source":  "guide-source/Avatour User and Best Practices Guide - DE.md",
+        "webflow": "https://avatour.com/user-guide-de",
+        "title":   "Avatour Benutzer- und Best-Practice-Leitfaden",
     },
 ]
 
