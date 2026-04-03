@@ -538,7 +538,11 @@ Here are (1) the Top Level, (2) Settings and (3) Network Settings menus.
   - **Target Frame Rate**: Adjust the frame rate for your Quick Capture video recordings between 15 fps, 24 fps, and 30 fps. Higher frame rates produce a smoother video, but will increase video file size and upload time. Recommended: 30 fps
   - **Target Bitrate**: Set the target bitrate for Quick Capture uploads between 5 Mbps and 20 Mbps. Lower bitrates increase upload speeds, but will decrease video quality. Recommended: 20 Mbps
   - **Protective Lenses**: *See Protective Lenses section for Live Capture above*
+
+  > See also our [Avatour 360° Video File Size Calculator](https://avatour.com/file-size-calculator) for further advice on the above settings and video file sizes.
+
 - **About**: View device serial number and software version
+
 
 **Account** - For login with your Avatour host or admin account.
 
@@ -583,7 +587,7 @@ For your first uses and getting familiar with the Avatour Web Console and the Av
 
 ### 6.3 When Operating the Cam Onsite for a 360° Video Live Meeting
 
-- When operating the camera, make sure that you are walking slowly. This helps with the video quality and reduces any potential video downtime when the camera’s network connection switches between WiFi access points.
+- When operating the camera, make sure that you **walk slowly** and **stop frequently setting the cam down on its tripot**. This helps with (1) video quality as you produce less video data by not moving the camera around unnecessarily and (2) reduces any potential video downtime when the camera’s network connection switches between WiFi access points.
 
 - Hold the camera out in front of you, and above eye level. This allows all remote participants to see the majority of your surrounding area.
 
