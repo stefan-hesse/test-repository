@@ -34,7 +34,12 @@ TARGET_LANG = "DE"
 SOURCE_LANG = "EN"
 
 WEBFLOW_BASE = "https://api.webflow.com/v2"
-DEEPL_URL    = "https://api.deepl.com/v2/translate"
+# Free DeepL keys end in :fx and require a different endpoint
+DEEPL_URL    = (
+    "https://api-free.deepl.com/v2/translate"
+    if DEEPL_API_KEY.endswith(":fx")
+    else "https://api.deepl.com/v2/translate"
+)
 
 WEBFLOW_HEADERS = {
     "Authorization": f"Bearer {WEBFLOW_API_TOKEN}",
