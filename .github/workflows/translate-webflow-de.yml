@@ -1,0 +1,47 @@
+name: Translate Webflow to German (DE)
+
+on:
+  workflow_dispatch:
+    inputs:
+      page_id:
+        description: 'Page ID to translate (leave blank for all pilot pages)'
+        required: false
+        default: ''
+      dry_run:
+        description: 'Dry run (translate but do not push to Webflow)'
+        required: false
+        default: 'false'
+        type: choice
+        options:
+          - 'false'
+          - 'true'
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run translation
+        env:
+          WEBFLOW_API_TOKEN: ${{ secrets.WEBFLOW_API_TOKEN }}
+          DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
+        run: |
+          ARGS=""
+          if [ -n "${{ github.event.inputs.page_id }}" ]; then
+            ARGS="--page ${{ github.event.inputs.page_id }}"
+          fi
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+            ARGS="$ARGS --dry-run"
+          fi
+          python translate_webflow_de.py $ARGS
