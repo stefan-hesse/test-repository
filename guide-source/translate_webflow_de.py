@@ -88,12 +88,11 @@ def push_translations(page_id: str, translated_nodes: list, dry_run: bool = Fals
         print(f"  [DRY RUN] Would push {len(translated_nodes)} nodes to Webflow")
         return
 
-    url = f"{WEBFLOW_BASE}/pages/{page_id}/dom"
-    payload = {
-        "localeId": LOCALE_ID,
-        "nodes": translated_nodes,
-    }
-    resp = requests.post(url, headers=WEBFLOW_HEADERS, json=payload)
+    # localeId must be passed as a query parameter, not in the body
+    url    = f"{WEBFLOW_BASE}/pages/{page_id}/dom"
+    params = {"localeId": LOCALE_ID}
+    payload = {"nodes": translated_nodes}
+    resp = requests.post(url, headers=WEBFLOW_HEADERS, params=params, json=payload)
     if resp.status_code in (200, 201, 204):
         print(f"  ✓ Pushed {len(translated_nodes)} translated nodes to Webflow DE locale")
     else:
