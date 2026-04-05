@@ -421,20 +421,20 @@ Verwendung des externen Akkus:
 
 1. Verlängert die Gesamtlaufzeit von ca. 40 Minuten (nur Kamera-Akku) auf ca. 3 Stunden.  
 2. Verleiht dem Kamera-Setup mehr Stabilität.  
-3. Trägt dazu bei, eine mögliche Überhitzung zu verhindern.  
+3. Hilft, eine mögliche Überhitzung zu verhindern.  
 
 > Wir empfehlen, den externen Akku von Anfang an zu verwenden, insbesondere bei Live-Meetings.
 
 #### Audio-Hinweise für Live-Meetings und Aufzeichnungen
 
-- **Lautstarke Umgebungen:** 
+- **Lauter Umgebung:** 
   Verwenden Sie die im Kit enthaltenen Shokz-Kopfhörer für eine klare Audioaufnahme.  
   - **Ein-/Ausschalten:** Halten Sie die Taste „+“ 3 Sekunden lang gedrückt (blaue LED = ein, rote LED = aus).  
   - **Bluetooth-Kopplungsmodus:** Halten Sie bei ausgeschaltetem Headset die Taste „+“ 5 Sekunden lang gedrückt (LED blinkt blau/rot).  
   - **Lautstärke:** Verwenden Sie die Tasten „+“ und „-“.  
 
 - **Leisere Umgebungen / mehrere Teilnehmer in der Nähe der Kamera:** 
-  Verwenden Sie den NoxGear-Clip-Lautsprecher. Er bietet zwar nicht die gleiche Klangqualität wie Konferenzlautsprecher (z. B. Jabra Speak), lässt sich aber einfach an Ihrem Hemd befestigen und erfasst Stimmen in der Nähe effektiv.  
+  Verwenden Sie den NoxGear-Aufstecklautsprecher. Er bietet zwar nicht die gleiche Klangqualität wie Konferenzlautsprecher (z. B. Jabra Speak), lässt sich aber einfach an Ihrem Hemd befestigen und erfasst Stimmen in der Nähe effektiv.  
   - **Ein-/Ausschalten:** Halten Sie die Wiedergabe-/Pause-Taste 2 Sekunden lang gedrückt.  
   - **Bluetooth-Kopplungsmodus:** Wechselt beim Einschalten automatisch in den Kopplungsmodus (LED blinkt blau/rot; leuchtet blau, wenn gekoppelt).  
   - **Lautstärke:** Verwenden Sie die Tasten „+“ und „-“.  
@@ -442,7 +442,7 @@ Verwendung des externen Akkus:
 - **Verwendung Ihres eigenen Geräts:** Wenn Sie eine Alternative bevorzugen (z. B. einen Konferenzlautsprecher oder ein persönliches Headset), können Sie diese über die Kamera koppeln: Einstellungen → Bluetooth.  
 
 #### Konnektivität, Konnektivität, Konnektivität
-**Bevor Sie beginnen:** Stellen Sie eine Internetverbindung sicher über:
+**Bevor Sie beginnen:** Stellen Sie eine Internetverbindung her über:
 
 - **Lokales WLAN** (bevorzugt)
 - **Mobilfunknetz** (außerhalb der WLAN-Reichweite)
@@ -461,9 +461,9 @@ Verwendung des externen Akkus:
 **Option A: Im Kit enthaltener Hotspot & SIM-Karte**  
 
 - Befestigen Sie den GlocalMe-Hotspot am Telesin-Akku-Stick (Magnet).  
-- Dies gewährleistet keine Störungen und hält die Verbindung aufrecht, wenn Sie sich von der Kamera entfernen.  
+- Stellt sicher, dass keine Störungen auftreten, und hält die Verbindung aufrecht, wenn Sie sich von der Kamera entfernen.  
 - Fehlerbehebung:
-  - Vergewissern Sie sich, dass die vorinstallierte SIM-Karte verwendet wird (nicht die Cloud-SIM).  
+  - Vergewissern Sie sich, dass die vorinstallierte SIM-Karte (nicht die Cloud-SIM) verwendet wird.  
   - Aktivieren Sie 5G im SIM-Karten-Manager.  
   - Überprüfen Sie den korrekten APN für Ihre Region ([APN-Einrichtungsanleitung](https://avatour.com/support/how-do-i-change-the-apn-on-my-glocalme-hotspot)).
 
@@ -473,16 +473,16 @@ Verwendung des externen Akkus:
 **Wichtiger Hinweis:**  
 > Lassen Sie den Hotspot ausgeschaltet, solange eine WLAN-Verbindung besteht; aktivieren Sie ihn nur, wenn Sie sich außerhalb der Reichweite befinden. Das Betriebssystem der Kamera wechselt je nach Signalstärke dynamisch zwischen WLAN-Netzwerken und wechselt möglicherweise versehentlich zum Hotspot, selbst wenn WLAN verfügbar ist.
 
-> Mobilfunknetze können die Bandbreite unerwartet drosseln. Erkundigen Sie sich bei Ihrem Mobilfunkanbieter nach den Grenzen Ihres Datentarifs oder wenden Sie sich an den Avatour-Support, wenn Sie unseren Hotspot und unsere SIM-Karte verwenden.
+> Mobilfunknetze können die Bandbreite unerwartet drosseln. Erkundigen Sie sich bei Ihrem Mobilfunkanbieter nach den Datenvolumen-Limits oder wenden Sie sich an den Avatour-Support, wenn Sie unseren Hotspot und unsere SIM-Karte nutzen.
 
 ##### Situationen mit geringer Bandbreite
 - Nehmen Sie Standortvideos vorab auf, um sie später abzuspielen ([Aufnahmeanleitung](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)).  
-- Teilen Sie den Live-Stream einer Smartphone-Kamera, um Bereiche mit geringer Bandbreite (0,1–0,3 Mbit/s Upload) zu ergänzen.
+- Teilen Sie den Stream einer Smartphone-Kamera, um Bereiche mit geringer Bandbreite (0,1–0,3 Mbit/s Upload) zu ergänzen.
 
 ##### Keine Verbindung
-- Es können nur vorab aufgezeichnete Videos verwendet werden ([Anleitung zur Aufzeichnung](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)).
+- Es können nur vorab aufgezeichnete Videos verwendet werden ([Aufnahmeanleitung](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)).
 
-#### Andere Teilnehmer vor Ort – Best Practices
+#### Weitere Teilnehmer vor Ort – Bewährte Vorgehensweisen
 
 Wenn mehrere Teilnehmer von demselben Standort wie die 360°-Kamera aus an einem Live-Avatour-Meeting teilnehmen, ist ein sorgfältiges Management von **Audio und Bandbreite** entscheidend:  
 
@@ -500,26 +500,26 @@ Befolgen Sie zur Bewältigung dieser Herausforderungen die folgenden **Best Prac
 
 - **Verwenden Sie kabelgebundene oder kabellose Kopfhörer:** Vorzugsweise mit Geräuschunterdrückung, um Echo und Rückkopplungen zu vermeiden.  
 - **Vor-Ort-Modus:** Nehmen Sie im Vor-Ort-Modus am Meeting teil, wenn Sie sich physisch in der Nähe der 360°-Kamera befinden.  
-  - Dieser Modus ist für die Nutzung vor Ort optimiert:  
-    - Schaltet das Mikrofon und den Lautsprecher des Teilnehmers standardmäßig stumm. 
+  - Dieser Modus ist für die Nutzung vor Ort optimiert: 
+ - Schaltet das Mikrofon und den Lautsprecher des Teilnehmers standardmäßig stumm. 
  - Sendet **nicht** das Kamerabild des Teilnehmers. 
- - Zeigt **nicht** das Bild der 360°-Kamera im Browser des Teilnehmers an. 
- - Schont die Netzwerkbandbreite und stellt sicher, dass die 360°-Kamera die maximal verfügbare Upload-Bandbreite für den Live-Stream nutzen kann.  
-    - Nützlich, wenn ein Nutzer bestimmte Details zeigen möchte; Sie **können Ihre Kamera zurückschalten**, um gezielte Ansichten zu ermöglichen.  
-- **Stummschalten, wenn Sie nicht aktiv sprechen:** Verhindert unerwünschte Audio-Rückkopplungen und Ablenkungen.  
+ - Zeigt **nicht** das Bild der 360°-Kamera im Browser des Teilnehmers an.  
+    - Schont die Netzwerkbandbreite und stellt sicher, dass der 360°-Kamera die maximal verfügbare Upload-Bandbreite für den Live-Stream zur Verfügung steht. 
+ - Nützlich, wenn ein Benutzer bestimmte Details teilen möchte; Sie **können Ihr Kamerabild zurücksenden**, um gezielte Ansichten zu ermöglichen.  
+- **Stummschalten, wenn Sie nicht aktiv sprechen:** Verhindert unerwünschte akustische Rückkopplungen und Ablenkungen.  
 - **Verwenden Sie nach Möglichkeit ein separates Netzwerk:** Verbinden Sie Ihr Smartphone mit einem anderen Netzwerk als dem der Kamera, um Interferenzen zu reduzieren.  
 
-Die Befolgung dieser Richtlinien gewährleistet eine reibungslose, qualitativ hochwertige Live-Tour sowohl für Teilnehmer vor Ort als auch für Fernteilnehmer.
+Die Befolgung dieser Richtlinien gewährleistet eine reibungslose, qualitativ hochwertige Live-Tour sowohl für Teilnehmer vor Ort als auch für Remote-Teilnehmer.
 
 ### 5.3 Avatour-Kamera-App
 
-Hier sind die Menüs (1) „Top Level“, (2) „Einstellungen“ und (3) „Netzwerkeinstellungen“.
+Hier sind (1) das Hauptmenü, (2) die Einstellungen und (3) das Netzwerk-Einstellungsmenü.
 
 ![Avatour 360°-Kamera-App – Drei Menüs](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-cam-app-3-menu-screens_nju8bt.png) *Avatour 360°-Kamera-App – 3 Menüs*
 
-**Schnellaufnahme** - Für die Offline-Aufnahme von 360°-Videos. - Eine detaillierte Beschreibung finden Sie unter [Wie nimmt man mit der Avatour-App 360°-Videos auf und lädt sie hoch?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app). Wir empfehlen die Verwendung eines externen Audiogeräts (verbunden über Bluetooth). Hinweis: Sie können auch normale 2D-Videos und Bilder aufnehmen – wechseln Sie dazu einfach im QC-Bildschirm in der unteren rechten Ecke zwischen dem 360°- und dem 2D-Modus.
+**Schnellaufnahme** – Für die Offline-Aufnahme von 360°-Videos. – Eine detaillierte Beschreibung finden Sie unter [Wie nimmt man 360°-Videos mit der Avatour-App auf und lädt sie hoch?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app). Wir empfehlen die Verwendung eines externen Audiogeräts (verbunden über Bluetooth). Hinweis: Sie können auch normale 2D-Videos und -Bilder aufnehmen – wechseln Sie dazu einfach im QC-Bildschirm in der unteren rechten Ecke zwischen dem 360°- und dem 2D-Modus.
 
-**Live-Meeting** – Für Live-360°-Videokonferenzen. Sie sehen Ihre Arbeitsbereiche; wenn Sie auf einen davon klicken, wird der Live-Videostream von der 360°-Kamera gestartet. Bevor Sie mit Ihrer 360°-Kamera an der Besprechung teilnehmen können, müssen Sie ein Audiogerät über Bluetooth verbinden. Eine detaillierte Beschreibung finden Sie unter [Wie starte ich eine Live Capture-Besprechung mit Ihrer Pilot-Kamera?](https://avatour.com/support/how-to-start-a-live-capture-meeting-with-your-pilot-camera)
+**Live-Meeting** – Für Live-360°-Videokonferenzen. Sie sehen Ihre Arbeitsbereiche; wenn Sie auf einen davon klicken, wird der Live-Videostream von der 360°-Kamera gestartet. Bevor Sie mit Ihrer 360°-Kamera an der Besprechung teilnehmen können, müssen Sie ein Audiogerät über Bluetooth verbinden. Eine detaillierte Beschreibung finden Sie unter [Wie starte ich eine Live-Capture-Besprechung mit Ihrer Pilot-Kamera?](https://avatour.com/support/how-to-start-a-live-capture-meeting-with-your-pilot-camera)
 
 > Wenn Sie ein Live-Capture-Meeting mit Ihrer 360°-Kamera veranstalten, stehen Ihnen ähnliche Meeting-Tools zur Verfügung, die das Web-Erlebnis widerspiegeln. Hier ist ein Link zu unserem Knowledge-Base-Artikel, der diese Tools näher erläutert: [Operator-App-Tools](https://avatour.com/support/what-avatour-app-tools-are-available-to-labpano-pilot-camera-operators)
 
@@ -531,14 +531,18 @@ Hier sind die Menüs (1) „Top Level“, (2) „Einstellungen“ und (3) „Net
 - **Live-Aufnahme**: Passen Sie Ihre Live-Aufnahme-Einstellungen je nach verfügbarer Bandbreite, der VR-Empfindlichkeit des Gastes oder dem Vorhandensein von Schutzgläsern an Ihrer Kamera an:
   - **Ziel-Bildrate**: Stellen Sie die Bildrate für Ihr Live-Aufnahme-Video zwischen 15 fps, 24 fps und 30 fps ein. Höhere Bildraten sorgen für ein flüssigeres Video, erfordern jedoch mehr Upload-Bandbreite. Standard: 15 fps
   - **Zielbitrate**: Ermöglicht es Ihnen, die maximale Streaming-Bitrate für Ihre Live-Aufnahme zu erhöhen oder zu verringern. Sie können Ihre Zielbitrate zwischen 1 Mbit/s und 10 Mbit/s einstellen. Höhere Bitraten führen zu einer höheren Videoauflösung, erfordern jedoch mehr Upload-Bandbreite. Standard: 5 Mbit/s
-  - **Bewegung optimieren**: Dies verringert die Videobildrate, wodurch die Upload-Bandbreite Ihres Netzwerks weniger belastet wird, und erhöht Ihre Streaming-Bitrate. Darüber hinaus hilft diese Option, Bewegungsübelkeit bei VR-Teilnehmern zu reduzieren. Standard: Aus
-  - **Schutzlinsen**: Dies beeinflusst, wie das 360°-Video zusammengefügt wird, je nachdem, ob Schutzlinsen an Ihrer Kamera installiert wurden. Wenn Sie keine Schutzlinsen haben, stellen Sie diese Option auf „Nein“. Wenn Sie ein Kit 3.0 erhalten haben, sind Schutzlinsen bereits vorinstalliert und Sie sollten diese Option auf „Ja“ stellen. Standard: Ja
+  - **Bewegung optimieren**: Dies verringert die Videobildrate, wodurch die Upload-Bandbreite Ihres Netzwerks weniger belastet wird, und erhöht Ihre Streaming-Bitrate. Darüber hinaus hilft diese Option, die Bewegungsübelkeit bei VR-Teilnehmern zu reduzieren. Standard: Aus
+  - **Schutzlinsen**: Dies beeinflusst, wie das 360°-Video zusammengefügt wird, je nachdem, ob Schutzlinsen an Ihrer Kamera installiert wurden. Wenn Sie keine Schutzlinsen haben, setzen Sie diese Option auf „Nein“. Wenn Sie ein Kit 3.0 erhalten haben, sind Schutzlinsen bereits vorinstalliert und Sie sollten diese Option auf „Ja“ setzen. Standard: Ja
 
 - **Schnellaufnahme**: Passen Sie Ihre Schnellaufnahme-Einstellungen an Ihre bevorzugte Videobildrate, die verfügbare Bandbreite für das Hochladen von aufgezeichneten Videos oder daran an, ob die Schutzgläser Ihrer Kamera installiert sind. Die Schnellaufnahme hat eine festgelegte Auflösung von 4k, was in der Regel ein gutes Gleichgewicht zwischen Videoqualität und Dateigröße bietet. (Für höhere Auflösungen können Sie die nativen Kamera-Apps verwenden, auch auf der PanoX V2; Details finden Sie unter [Wie nimmt man 360°-Videos mit der Avatour-App auf und lädt sie hoch?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)):
   - **Zielbildrate**: Passen Sie die Bildrate für Ihre Quick Capture-Videoaufnahmen zwischen 15 fps, 24 fps und 30 fps an. Höhere Bildraten sorgen für flüssigere Videos, erhöhen jedoch die Dateigröße und die Upload-Dauer. Empfohlen: 30 fps
-  - **Zielbitrate**: Stellen Sie die Zielbitrate für Quick Capture-Uploads zwischen 5 Mbps und 20 Mbps ein. Niedrigere Bitraten erhöhen die Upload-Geschwindigkeit, verringern jedoch die Videoqualität. Empfohlen: 20 Mbit/s
+  - **Zielbitrate**: Stellen Sie die Zielbitrate für Quick Capture-Uploads zwischen 5 Mbit/s und 20 Mbit/s ein. Niedrigere Bitraten erhöhen die Upload-Geschwindigkeit, verringern jedoch die Videoqualität. Empfohlen: 20 Mbit/s
   - **Schutzgläser**: *Siehe Abschnitt „Schutzgläser“ für Live Capture oben*
-- **Info**: Zeigt die Seriennummer des Geräts und die Softwareversion an
+
+  > Weitere Hinweise zu den oben genannten Einstellungen und Videodateigrößen finden Sie in unserem [Avatour 360°-Videodateigrößenrechner](https://avatour.com/file-size-calculator).
+
+- **Über**: Zeigt die Seriennummer des Geräts und die Softwareversion an
+
 
 **Konto** – Zum Anmelden mit Ihrem Avatour-Host- oder Admin-Konto.
 
@@ -550,14 +554,14 @@ Für Ihre ersten Schritte und zum Kennenlernen der Avatour-Webkonsole und des Av
 
 1. Nehmen Sie das Kit mit nach Hause und probieren Sie es gemeinsam mit Familie und Freunden über Ihre private Internetverbindung aus.
 2. Nehmen Sie das Kit mit ins Büro und verbinden Sie es mit dem Unternehmensnetzwerk (es können unternehmensspezifische Probleme auftreten, z. B. Unternehmensfirewalls – aber Sie wissen bereits aus Schritt 1, dass Avatour funktioniert, und dies ist ein Thema, das Ihr IT-Team mit Hilfe von Avatour klären kann).
-3. Beginnen Sie, Avatour vor Ort (außerhalb Ihres Büros) an dem Treffpunkt zu nutzen, zu dem Remote-Teilnehmer normalerweise anreisen müssten. Es könnten weitere Fragen zur Konnektivität auftauchen. Avatour hilft Ihnen dabei in Zusammenarbeit mit Ihrem IT-Team.
+3. Beginnen Sie, Avatour vor Ort (außerhalb Ihres Büros) an dem Treffpunkt zu nutzen, zu dem Remote-Teilnehmer normalerweise anreisen müssten. Es könnten weitere Verbindungsprobleme auftreten. Avatour hilft Ihnen dabei in Zusammenarbeit mit Ihrem IT-Team.
 4. Beginnen Sie mit der Nutzung mit internen und externen Remote-Teilnehmern.
 
 ### 6.2 Vor einem 360°-Video-Live-Meeting
 
 - Wir empfehlen, vor jeder Live-Tour eine aufgezeichnete 360°-Videotour durchzuführen, sofern es die Zeit erlaubt, und zwar aus drei Gründen: (1) Sie haben eine Ausweichlösung für die Live-Tour, (2) Sie verfügen über Material zur Dokumentation und späteren Nachbereitung (zusätzlich zur aufgezeichneten Live-Tour) und (3) Sie beginnen damit, eine Bibliothek mit 360°-Videos all Ihrer Standorte aufzubauen, die für viele Anwendungsfälle hilfreich sein kann. 
-- Laden Sie alle Komponenten des Kits mindestens 90 Minuten vor dem Live-Meeting auf. Wir empfehlen ohnehin, alle Geräte kontinuierlich aufzuladen, wenn sie nicht in Gebrauch sind. So sind alle Geräte immer einsatzbereit, auch für ungeplante Ad-hoc-Meetings.
-- Stellen Sie das Kit vollständig zusammen (1. Stativfuß + 2. Ulanzi-Akku + 3. ausziehbarer Stab + 4. 360°-Kamera).
+- Laden Sie alle Komponenten des Sets mindestens 90 Minuten vor dem Live-Meeting auf. Wir empfehlen ohnehin, alle Geräte kontinuierlich aufzuladen, wenn sie nicht in Gebrauch sind. So sind alle Geräte immer einsatzbereit, auch für ungeplante Ad-hoc-Meetings.
+- Stellen Sie das Set vollständig zusammen (1. Stativfuß + 2. Ulanzi-Akku + 3. ausziehbarer Stab + 4. 360°-Kamera).
 
 - Vergewissern Sie sich, dass ein Workspace für die Durchführung eines Live-Meetings erstellt wurde und alle relevanten Assets enthält.
 
@@ -583,13 +587,13 @@ Für Ihre ersten Schritte und zum Kennenlernen der Avatour-Webkonsole und des Av
 
 ### 6.3 Bei der Bedienung der Kamera vor Ort für ein 360°-Video-Live-Meeting
 
-- Achten Sie bei der Bedienung der Kamera darauf, langsam zu gehen. Dies verbessert die Videoqualität und verringert mögliche Unterbrechungen, wenn die Netzwerkverbindung der Kamera zwischen WLAN-Zugangspunkten wechselt.
+- Achten Sie beim Bedienen der Kamera darauf, **langsam zu gehen** und **häufig anzuhalten, um die Kamera auf ihrem Stativ abzustellen**. Dies trägt dazu bei, (1) die Videoqualität zu verbessern, da Sie weniger Videodaten erzeugen, wenn Sie die Kamera nicht unnötig bewegen, und (2) mögliche Videoausfälle zu reduzieren, wenn die Netzwerkverbindung der Kamera zwischen WLAN-Zugangspunkten wechselt.
 
 - Halten Sie die Kamera vor sich und über Augenhöhe. So können alle Remote-Teilnehmer den Großteil Ihrer Umgebung sehen.
 
 - Wenn die Kamera stabil stehen muss, verwenden Sie das Stativ und stellen Sie die Kamera auf die richtige Höhe ein, am besten auf Augenhöhe.
 
-- Verbinden Sie die Kamera nach Möglichkeit immer mit Ihrem lokalen WLAN-Netzwerk. In Bereichen ohne WLAN-Zugang nutzen Sie den mitgelieferten Hotspot. Der Hotspot verfügt über eine SIM-Karte, die eine Verbindung zu einem zuverlässigen Mobilfunknetz in Ihrer Nähe herstellt. Schalten Sie den Hotspot immer aus, wenn er in Innenräumen nicht genutzt wird, da sich die 360°-Kamera sonst mit dem Hotspot verbinden könnte, was in Innenräumen unerwünscht ist. Halten Sie den Hotspot im Freien in der Nähe der 360°-Kamera.
+- Verbinden Sie die Kamera nach Möglichkeit immer mit Ihrem lokalen WLAN-Netzwerk. In Bereichen ohne WLAN-Zugang nutzen Sie den mitgelieferten Hotspot. Der Hotspot verfügt über eine SIM-Karte, die eine Verbindung zu einem zuverlässigen Mobilfunknetz in Ihrer Nähe herstellt. Schalten Sie den Hotspot immer aus, wenn er in Innenräumen nicht genutzt wird, da sich die 360°-Kamera sonst mit dem Hotspot verbinden könnte, was in Innenräumen nicht erwünscht ist. Halten Sie den Hotspot im Freien in der Nähe der 360°-Kamera.
 
 - Wenn die Bitrate der Kamera unter 2 Mbit/s fällt, gehen Sie langsamer oder bleiben Sie ganz stehen, bis sich das Signal wieder stabilisiert hat. Dies geschieht in der Regel, wenn Sie von einem WLAN-Zugangspunkt zu einem anderen wechseln. 
 
@@ -599,6 +603,6 @@ Für Ihre ersten Schritte und zum Kennenlernen der Avatour-Webkonsole und des Av
 
 - Wenn möglich, empfehlen wir, dass eine weitere Person vor Ort ist, um bei der oben beschriebenen Smartphone-Kamerafreigabe zu helfen, da sich dies oft als hilfreich oder notwendig erweist.
 
-- Idealerweise sollten Smartphone-Nutzer vor Ort dem Meeting (1) im Vor-Ort-Modus und (2) über ein anderes Netzwerk als das der Kamera beitreten, um der 360°-Kamera keine wichtige Upload-Bandbreite wegzunehmen.
+- Idealerweise sollten Smartphone-Nutzer vor Ort (1) im Vor-Ort-Modus und (2) über ein anderes Netzwerk als das der Kamera am Meeting teilnehmen, um der 360°-Kamera keine wichtige Upload-Bandbreite wegzunehmen.
 
-- Alle Teilnehmer vor Ort, die über ihr Smartphone teilnehmen, sollten stummgeschaltet sein, sofern sie nicht gerade sprechen.
+- Alle Teilnehmer vor Ort, die über ihr Smartphone am Meeting teilnehmen, sollten stummgeschaltet sein, sofern sie nicht gerade aktiv sprechen.

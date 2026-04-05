@@ -405,22 +405,22 @@ Fornisce approfondimenti su riunioni, utilizzo degli spazi di lavoro e metriche 
 ### 5.1 Per iniziare
 [Guida rapida – Kit Avatour Turnkey 3.1 (Configurazione Pilot PanoX V2)](https://avatour.com/quickstart-panox-v2)
 
-Segui la guida per disimballare, assemblare e accendere la videocamera.
+Segui la guida per disimballare, assemblare e accendere la tua fotocamera.
 
 ---
 
 ### 5.2 Suggerimenti utili
 
-#### Batteria esterna – Riunioni più lunghe e migliori prestazioni termiche 
+#### Batteria esterna – Riunioni più lunghe e prestazioni termiche migliorate 
 
-- **Se il kit include una batteria Ulanzi:** fissala tra la base del treppiede e l'asta estensibile, quindi collega la batteria alla fotocamera tramite USB-C.  
+- **Se il tuo kit include una batteria Ulanzi:** fissala tra la base del treppiede e l'asta estensibile, quindi collega la batteria alla fotocamera tramite USB-C.  
 
-- **Se il kit include un'asta con batteria Telesin:** monta la fotocamera direttamente sull'asta estensibile con batteria Telesin e collegala tramite USB-C.  
+- **Se il kit include un'asta con batteria Telesin:** monta la videocamera direttamente sull'asta estensibile con batteria Telesin e collegala tramite USB-C.  
 
 Utilizzo della batteria esterna:
 
 1. Estende la durata totale della batteria da ~40 minuti (solo batteria della videocamera) a ~3 ore.  
-2. Aumenta la stabilità dell’assetto della videocamera.  
+2. Aggiunge stabilità alla configurazione della videocamera.  
 3. Aiuta a prevenire il potenziale surriscaldamento.  
 
 > Si consiglia di utilizzare sempre la batteria esterna fin dall’inizio, specialmente per le riunioni in diretta.
@@ -439,10 +439,10 @@ Utilizzo della batteria esterna:
   - **Modalità di accoppiamento Bluetooth:** Entra automaticamente in modalità di accoppiamento all'accensione (il LED lampeggia in blu/rosso; blu fisso quando accoppiato).  
   - **Volume:** Usa i pulsanti “+” e “-”.  
 
-- **Utilizzo del proprio dispositivo:** se si preferisce un'alternativa (ad es. un altoparlante da conferenza o un auricolare personale), è possibile accoppiarlo tramite la videocamera: Impostazioni → Bluetooth.  
+- **Utilizzo del proprio dispositivo:** Se si preferisce un'alternativa (ad es. un altoparlante da conferenza o un auricolare personale), è possibile accoppiarlo tramite la videocamera: Impostazioni → Bluetooth.  
 
 #### Connettività, connettività, connettività
-**Prima di iniziare:** assicurarsi della connessione a Internet tramite:
+**Prima di iniziare:** Assicurarsi della connessione a Internet tramite:
 
 - **WiFi locale** (preferibile)
 - **Rete mobile** (se fuori dalla portata del WiFi)
@@ -451,7 +451,7 @@ Utilizzo della batteria esterna:
 
 ##### Verifica della velocità di rete
 - **Test in un'unica posizione:** qualsiasi strumento di verifica della velocità che usi normalmente (ad es. [Speedtest](https://www.speedtest.net)) per verificare sia la larghezza di banda in upload  che in download.   
-- **Test camminando all'interno del sito:** dalla fotocamera: Impostazioni → Rete → Test di connessione. Cammina attraverso l'intero spazio per confermare la copertura e la larghezza di banda.
+- **Test camminando per il sito:** dalla fotocamera: Impostazioni → Rete → Test di connessione. Cammina attraverso l'intero spazio per confermare la copertura e la larghezza di banda.
 
 ##### Wi-Fi locale
 - Altamente raccomandato per connessioni stabili.  
@@ -494,7 +494,7 @@ Quando più partecipanti si uniscono a una riunione Avatour in diretta dalla ste
 Quando più partecipanti si uniscono a una riunione Avatour in diretta dalla stessa posizione della telecamera a 360°, è fondamentale gestire con attenzione **l'audio e la larghezza di banda**:  
 
 - Ogni smartphone, tablet o laptop connesso in loco consuma larghezza di banda di rete e può influire negativamente sul feed della telecamera a 360°.  
-- La presenza di più microfoni e altoparlanti nello stesso spazio può causare **un feedback audio**, rendendo l'esperienza della riunione sgradevole per tutti i partecipanti.
+- La presenza di più microfoni e altoparlanti nello stesso spazio può causare **un effetto feedback audio**, rendendo l'esperienza della riunione sgradevole per tutti i partecipanti.
 
 Per affrontare queste sfide, segui queste **migliori pratiche**:
 
@@ -519,7 +519,7 @@ Ecco i menu (1) Livello superiore, (2) Impostazioni e (3) Impostazioni di rete.
 
 **Acquisizione rapida** - Per la registrazione di video a 360° offline. - Per una descrizione dettagliata, consultare [Come si registrano e si caricano video a 360° con l'app Avatour?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app). Si consiglia di utilizzare un dispositivo audio esterno (collegato tramite Bluetooth). N.B. È possibile anche realizzare video e foto standard in 2D: basta cambiare la modalità tra 360° e 2D nell'angolo in basso a destra una volta nella schermata QC.
 
-**Live Meeting** - Per videoconferenze live a 360°. Vedrete i vostri spazi di lavoro e cliccando su uno di essi si avvierà lo streaming video live dalla fotocamera a 360°. Prima di poter partecipare alla riunione con la tua videocamera a 360°, devi collegare un dispositivo audio tramite Bluetooth. Per una descrizione dettagliata, consulta [Come avviare una riunione Live Capture con la tua videocamera Pilot?](https://avatour.com/support/how-to-start-a-live-capture-meeting-with-your-pilot-camera)
+**Live Meeting** - Per videoconferenze live a 360°. Vedrete i vostri spazi di lavoro e cliccando su uno di essi si avvierà lo streaming video live dalla fotocamera a 360°. Prima di poter partecipare alla riunione con la tua telecamera a 360°, devi collegare un dispositivo audio tramite Bluetooth. Per una descrizione dettagliata, consulta [Come avviare una riunione Live Capture con la tua telecamera Pilot?](https://avatour.com/support/how-to-start-a-live-capture-meeting-with-your-pilot-camera)
 
 > Quando si ospita una riunione Live Capture con la propria telecamera a 360°, si avranno a disposizione strumenti di riunione simili a quelli dell'esperienza web. Ecco un link al nostro articolo della Knowledge Base che spiega questi strumenti in modo più dettagliato: [Strumenti dell'app operatore](https://avatour.com/support/what-avatour-app-tools-are-available-to-labpano-pilot-camera-operators)
 
@@ -528,17 +528,21 @@ Ecco i menu (1) Livello superiore, (2) Impostazioni e (3) Impostazioni di rete.
 **Impostazioni** - All'interno delle Impostazioni, hai le seguenti opzioni:
 
 - **Rete**: questa opzione ti permette di cambiare la rete Wi-Fi a cui è connessa la fotocamera o di eseguire un test di connessione di rete per visualizzare la velocità di streaming
-- **Acquisizione live**: regola le impostazioni di acquisizione live in base alla larghezza di banda disponibile, alla sensibilità VR dell'ospite o alla presenza o meno delle lenti protettive della tua telecamera:
+- **Acquisizione live**: regola le impostazioni di acquisizione live in base alla larghezza di banda disponibile, alla sensibilità VR dell'ospite o all'eventuale presenza delle lenti protettive della tua telecamera:
   - **Frequenza fotogrammi** **target**: regola la frequenza fotogrammi per il tuo video in acquisizione live tra 15 fps, 24 fps e 30 fps. Frequenze fotogrammi più elevate producono un video più fluido, ma richiedono una maggiore larghezza di banda in upload. Impostazione predefinita: 15 fps
-  - **Bitrate target**: consente di aumentare o diminuire il bitrate massimo di streaming per la Live Capture. È possibile impostare il bitrate target tra 1 Mbps e 10 Mbps. Bitrate più elevati determineranno una risoluzione video più alta, ma richiederanno una maggiore larghezza di banda in upload. Impostazione predefinita: 5 Mbps
+  - **Bitrate target**: consente di aumentare o diminuire il bitrate massimo di streaming per la Live Capture. È possibile impostare il bitrate target tra 1 Mbps e 10 Mbps. Bitrate più elevati comporteranno una risoluzione video più alta, ma richiederanno una maggiore larghezza di banda in upload. Impostazione predefinita: 5 Mbps
   - **Ottimizza movimento**: Questa opzione riduce la frequenza dei fotogrammi del video, generando un carico minore sulla larghezza di banda in upload della tua rete e aumentando il bitrate di streaming. Inoltre, questa opzione aiuta a ridurre la cinetosi per i partecipanti in VR. Impostazione predefinita: Disattivato
   - **Lenti protettive**: questa opzione influisce sul modo in cui il video a 360° viene unito, a seconda che siano state installate o meno lenti protettive sulla tua videocamera. Se non disponi di lenti protettive, imposta questa opzione su “No”. Se hai ricevuto un Kit 3.0, hai le lenti protettive preinstallate e dovresti impostare questa opzione su “Sì”. Impostazione predefinita: Sì
 
 - **Acquisizione rapida**: Regola le impostazioni di Acquisizione rapida in base alla frequenza dei fotogrammi video che preferisci, alla larghezza di banda disponibile per il caricamento dei video registrati o alla presenza o meno delle lenti protettive installate sulla tua fotocamera. L’Acquisizione rapida ha una risoluzione predefinita di 4k che di solito offre un buon equilibrio tra qualità video e dimensione del file. (Per risoluzioni più elevate puoi utilizzare le app native della fotocamera, anche su PanoX V2; per i dettagli, consulta [Come si registrano e si caricano video a 360° con l’app Avatour?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)):
-  - **Frequenza fotogrammi target**: Regola la frequenza fotogrammi per le tue registrazioni video Quick Capture tra 15 fps, 24 fps e 30 fps. Frequenze fotogrammi più elevate producono un video più fluido, ma aumentano le dimensioni del file video e il tempo di caricamento. Consigliato: 30 fps
-  - **Bitrate target**: imposta il bitrate target per i caricamenti Quick Capture tra 5 Mbps e 20 Mbps. Bitrate più bassi aumentano la velocità di caricamento, ma riducono la qualità video. Consigliato: 20 Mbps
+  - **Frequenza fotogrammi target**: Regola la frequenza fotogrammi per le tue registrazioni video Quick Capture tra 15 fps, 24 fps e 30 fps. Frequenze fotogrammi più elevate producono un video più fluido, ma aumenteranno le dimensioni del file video e il tempo di caricamento. Consigliato: 30 fps
+  - **Bitrate target**: Imposta il bitrate target per i caricamenti Quick Capture tra 5 Mbps e 20 Mbps. Bitrate più bassi aumentano la velocità di caricamento, ma riducono la qualità del video. Consigliato: 20 Mbps
   - **Lenti protettive**: *Vedi la sezione Lenti protettive per Live Capture sopra*
+
+  > Consulta anche il nostro [Calcolatore delle dimensioni dei file video Avatour 360°](https://avatour.com/file-size-calculator) per ulteriori consigli sulle impostazioni di cui sopra e sulle dimensioni dei file video.
+
 - **Informazioni**: Visualizza il numero di serie del dispositivo e la versione del software
+
 
 **Account** - Per effettuare l'accesso con il tuo account host o amministratore Avatour.
 
@@ -548,9 +552,9 @@ Ecco i menu (1) Livello superiore, (2) Impostazioni e (3) Impostazioni di rete.
 
 Per i primi utilizzi e per familiarizzare con la console web di Avatour e il kit Avatour Turnkey, consigliamo di seguire questi passaggi:
 
-1. Portate il kit a casa e provatelo con familiari e amici utilizzando la vostra connessione Internet domestica.
-2. Portate il kit in ufficio e collegatevi alla rete aziendale (potrebbero sorgere alcune questioni relative all'azienda, ad esempio i firewall aziendali, ma sapete già dal primo passo che Avatour funziona e che questo è un argomento che il vostro team IT dovrà risolvere con l'aiuto di Avatour).
-3. Iniziate a utilizzare Avatour in loco (fuori dal vostro ufficio) presso la sede della riunione dove i partecipanti remoti dovrebbero normalmente recarsi. Potrebbero emergere ulteriori questioni relative alla connettività. Avatour vi aiuterà in collaborazione con il vostro team IT.
+1. Porta il kit a casa e provalo con familiari e amici utilizzando la tua connessione Internet domestica.
+2. Porta il kit in ufficio e collegati alla rete aziendale (potrebbero sorgere alcune questioni relative all'azienda, ad esempio i firewall aziendali, ma dal primo passo sai già che Avatour funziona e che questo è un argomento che il tuo team IT dovrà risolvere con l'aiuto di Avatour).
+3. Iniziate a utilizzare Avatour in loco (fuori dal vostro ufficio) nel luogo dell’incontro verso cui i partecipanti remoti dovrebbero normalmente recarsi. Potrebbero emergere ulteriori questioni relative alla connettività. Avatour vi aiuterà in collaborazione con il vostro team IT.
 4. Iniziate a utilizzarlo con partecipanti remoti interni ed esterni.
 
 ### 6.2 Prima di una riunione live con video a 360°
@@ -565,39 +569,39 @@ Per i primi utilizzi e per familiarizzare con la console web di Avatour e il kit
 
 - Accoppia e collega alla videocamera le cuffie o l'altoparlante Bluetooth che intendi utilizzare per il tour.
 
-- Tutti gli utenti di smartphone in loco dovrebbero connettersi da una rete diversa da quella della telecamera. Ciò ridurrà il carico sulla larghezza di banda della rete della telecamera.
+- Tutti gli utenti di smartphone in loco devono connettersi da una rete diversa da quella della telecamera. Ciò ridurrà il carico sulla larghezza di banda della rete della telecamera.
 
-- Se sei l'unico operatore di ripresa, porta con te uno smartphone nel caso in cui desideri condividere la visuale della fotocamera dello smartphone e mostrare i dettagli più piccoli.
+- Se sei l'unico operatore di ripresa, porta con te uno smartphone nel caso in cui desideri condividere le immagini della fotocamera dello smartphone e mostrare i dettagli più piccoli.
 
 - Verifica che la telecamera a 360° possa connettersi al tuo WiFi locale.
 
-- Prima di una riunione Avatour, pianifica il percorso che seguirai all'interno della struttura. Esegui una riunione Avatour di prova con la fotocamera e verifica che tutte le aree abbiano una larghezza di banda superiore a 1 Mbps. Questo dato è visibile sullo schermo della fotocamera stessa oppure, per i partecipanti remoti, andando su Impostazioni e attivando Mostra bitrate.
+- Prima di una riunione Avatour, pianifica il percorso che seguirai all'interno della struttura. Esegui una riunione Avatour di prova con la telecamera e verifica che tutte le aree abbiano una larghezza di banda superiore a 1 Mbps. Questo dato è visibile sullo schermo della telecamera stessa oppure, per i partecipanti remoti, andando su Impostazioni e attivando Mostra bitrate.
 
 - Se noti che alcune aree hanno una larghezza di banda scarsa o assente, è meglio scattare delle foto o effettuare una registrazione. Questi possono poi essere presentati durante la riunione affinché i partecipanti remoti possano esaminarli. Puoi seguire la guida qui che spiega la nostra funzione Quick Capture per la registrazione e il caricamento di video/immagini: [Come si registrano e si caricano video a 360° con l'app Avatour?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)
 
-- Se alla riunione partecipano persone da remoto che non hanno mai usato Avatour prima, fornisci loro una breve panoramica della piattaforma, delle sue funzionalità (video live a 360°, risorse, istantanee, annotazioni, spotlight) e degli strumenti per la riunione.
+- Se alla riunione partecipano persone da remoto che non hanno mai usato Avatour prima, dai loro una breve panoramica della piattaforma, delle sue funzionalità (video live a 360°, risorse, istantanee, annotazioni, spotlight) e degli strumenti per la riunione.
 
 - Puoi iniziare con un'altra soluzione di videoconferenza (ad es. Teams, Zoom, Google Meet), ma prima di passare ad Avatour, chiudi completamente l'altra applicazione di videoconferenza. In alcuni casi, queste altre applicazioni daranno la priorità al microfono/agli altoparlanti/alla webcam del tuo dispositivo, causandone la disattivazione per Avatour. Inoltre, NON eseguire Avatour E un'altra videoconferenza contemporaneamente, poiché ciò ridurrà la larghezza di banda disponibile.
 
-- Se si prevede di utilizzare la videocamera a 360° in un ambiente con temperature elevate, si consiglia di utilizzare il modulo di raffreddamento (solo Pilot Pano). Ciò contribuirà a ridurre il rischio che la videocamera si surriscaldi e si spenga automaticamente.
+- Se si prevede di utilizzare la fotocamera a 360° in un ambiente ad alta temperatura, si consiglia di utilizzare il modulo di raffreddamento (solo Pilot Pano). Ciò contribuirà a ridurre il rischio che la fotocamera si surriscaldi e si spenga automaticamente.
 
-### 6.3 Quando si utilizza la videocamera in loco per una riunione video live a 360°
+### 6.3 Quando si utilizza la fotocamera in loco per una riunione video live a 360°
 
-- Quando si utilizza la videocamera, assicurarsi di camminare lentamente. Ciò migliora la qualità video e riduce eventuali interruzioni del video quando la connessione di rete della telecamera passa da un punto di accesso Wi-Fi all'altro.
+- Durante l'utilizzo della telecamera, assicurati di **camminare lentamente** e di **fermarti spesso appoggiando la telecamera sul treppiede**. Questo aiuta (1) la qualità video, poiché si producono meno dati video evitando di muovere la telecamera inutilmente, e (2) riduce eventuali interruzioni video quando la connessione di rete della telecamera passa da un punto di accesso Wi-Fi all'altro.
 
-- Tenete la telecamera davanti a voi, al di sopra dell'altezza degli occhi. Ciò consentirà a tutti i partecipanti in remoto di vedere la maggior parte dell'area circostante.
+- Tenete la telecamera davanti a voi, sopra il livello degli occhi. Ciò consente a tutti i partecipanti in remoto di vedere la maggior parte dell'area circostante.
 
-- Nei casi in cui la telecamera debba rimanere stabile, utilizzate il treppiede e regolate la telecamera all'altezza corretta, preferibilmente all'altezza degli occhi.
+- Nei casi in cui la telecamera debba rimanere stabile, utilizzate il treppiede e regolate l'altezza della telecamera, preferibilmente all'altezza degli occhi.
 
-- Collegare sempre la videocamera alla rete Wi-Fi locale, ove possibile. Nelle aree prive di accesso Wi-Fi, utilizzare l'hotspot in dotazione. L'hotspot dispone di una scheda SIM che si connetterà a una rete cellulare affidabile nelle vicinanze. Tenere sempre l'hotspot spento quando non è in uso in ambienti interni, poiché altrimenti la videocamera a 360° potrebbe connettersi all'hotspot, cosa che non desideriamo in ambienti interni. Quando si è all'aperto, tenere l'hotspot vicino alla videocamera a 360°.
+- Collegare sempre la telecamera alla rete Wi-Fi locale, ove possibile. Nelle aree prive di accesso Wi-Fi, utilizzare l'hotspot in dotazione. L'hotspot è dotato di una scheda SIM che si connetterà a una rete cellulare affidabile nelle vicinanze. Tenere sempre l'hotspot spento quando non è in uso in ambienti interni, poiché altrimenti la telecamera a 360° potrebbe connettersi all'hotspot, cosa che non è auspicabile in ambienti interni. Quando ci si trova all'aperto, tenere l'hotspot vicino alla telecamera a 360°.
 
 - Quando la velocità di trasmissione della telecamera inizia a scendere sotto i 2 Mbps, cammina più lentamente o fermati completamente finché il segnale non si stabilizza di nuovo. Questo di solito succede quando passi da un punto di accesso Wi-Fi a un altro. 
 
 - Se sai che la connessione e il video si interromperanno quando ti sposti in un luogo specifico (ad esempio: passando da un'area di produzione interna a un'area esterna), avvisa in anticipo i partecipanti remoti.
 
-- Se è necessario mostrare qualcosa con un elevato livello di dettaglio o con caratteri piccoli, utilizzare il proprio smartphone o quello di un partecipante in loco per partecipare alla riunione e mostrare la fotocamera (posteriore) del proprio/loro telefono.
+- Se devi mostrare qualcosa con un alto livello di dettaglio o con caratteri piccoli, usa il tuo smartphone o quello di un partecipante in loco per collegarti alla riunione e mostrare la fotocamera (posteriore) del tuo/loro telefono.
 
-- Se possibile, si consiglia la presenza di una persona in più in loco per aiutare con la condivisione della fotocamera dello smartphone sopra descritta, poiché spesso si rivela utile/necessaria.
+- Se possibile, ti consigliamo di avere una persona in più in loco per aiutarti con la condivisione della fotocamera dello smartphone descritta sopra, poiché spesso si rivela utile o necessaria.
 
 - Idealmente, gli utenti di smartphone in loco dovrebbero partecipare alla riunione (1) in modalità in loco e (2) su una rete diversa da quella utilizzata dalla fotocamera, per non sottrarre larghezza di banda di upload fondamentale alla fotocamera a 360°.
 
