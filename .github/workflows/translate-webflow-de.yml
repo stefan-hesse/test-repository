@@ -44,4 +44,4 @@ jobs:
           if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
             ARGS="$ARGS --dry-run"
           fi
-          python translate_webflow_de.py $ARGS
+          python guide-source/translate_webflow_de.py $ARGS
