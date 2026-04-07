@@ -24,12 +24,16 @@ test-repository/
     avatour-guide-de.html           ← Standalone HTML — German
     avatour-guide-embed-de.html     ← Embedded on avatour.com/user-guide-de via iframe
     avatour-guide-print-de.html     ← PDF-ready — German
+    avatour-guide-pt.html           ← Standalone HTML — Portuguese (Brazil)
+    avatour-guide-embed-pt.html     ← Embedded on avatour.com/user-guide-pt via iframe
+    avatour-guide-print-pt.html     ← PDF-ready — Portuguese (Brazil)
   guide-source/
     Avatour User and Best Practices Guide.md          ← English source — edit this
     Avatour User and Best Practices Guide - IT.md     ← Italian — auto-generated, do not edit
     Avatour User and Best Practices Guide - ES.md     ← Spanish — auto-generated, do not edit
     Avatour User and Best Practices Guide - FR.md     ← French — auto-generated, do not edit
     Avatour User and Best Practices Guide - DE.md     ← German — auto-generated, do not edit
+    Avatour User and Best Practices Guide - PT.md     ← Portuguese (Brazil) — auto-generated, do not edit
     Avatour User and Best Practices Guide - EN-prev.md ← Auto-generated snapshot for change detection — do not edit
     GUIDE_README.md                 ← This document
     build.py                        ← Build script — do not edit unless needed
@@ -49,7 +53,7 @@ test-repository/
 | **MacDown** (Mac app) | Writing and editing the English guide source file |
 | **GitHub Desktop** (Mac app) | Committing and pushing changes to GitHub |
 | **GitHub** (github.com) | Stores the files, runs the automated build |
-| **GitHub Actions** | Auto-translates changed sections and builds all fifteen HTML outputs on every push |
+| **GitHub Actions** | Auto-translates changed sections and builds all eighteen HTML outputs on every push |
 | **GitHub Pages** | Hosts the embed files so Webflow can load them via iframe |
 | **Cloudinary** | Hosts all screenshots used in the guide |
 | **DeepL API** | Powers automatic IT, ES and FR translation — free tier (500,000 chars/month) |
@@ -83,7 +87,7 @@ Every time you push a change to the English source file, the build script automa
 
 1. Compares the current English file against `EN-prev.md` (a snapshot of the last build)
 2. Identifies which `##` sections have changed
-3. Sends only the changed sections to the **DeepL API** for translation into Italian, Spanish, French and German
+3. Sends only the changed sections to the **DeepL API** for translation into Italian, Spanish, French, German and Portuguese
 4. Updates the IT, ES and FR Markdown files with the new translations
 5. Rebuilds all twelve HTML outputs from the updated source files
 6. Saves the current English file as the new `EN-prev.md` for next time
@@ -107,8 +111,9 @@ Every time you push a change to the English source file, the build script automa
 | Spanish | `Avatour User and Best Practices Guide - ES.md` | `avatour.com/user-guide-es` |
 | French | `Avatour User and Best Practices Guide - FR.md` | `avatour.com/user-guide-fr` |
 | German | `Avatour User and Best Practices Guide - DE.md` | `avatour.com/user-guide-de` |
+| Portuguese (Brazil) | `Avatour User and Best Practices Guide - PT.md` | `avatour.com/user-guide-pt` |
 
-The language switcher (EN / IT / ES / FR / DE buttons) is built into the header of every HTML output — it is part of the built files and switches between the five standalone HTML pages.
+The language switcher (EN / IT / ES / FR / DE / PT buttons) is built into the header of every HTML output — it is part of the built files and switches between the six standalone HTML pages.
 
 ---
 
@@ -133,13 +138,14 @@ For Italian use `avatour-guide-embed-it.html`, for Spanish use `avatour-guide-em
 
 > **Cache note:** Changes to guide **content** (the Markdown source files) are always picked up immediately — no action needed. However, if you update `build.py` itself and the changes don't appear on `avatour.com/user-guide` after the build completes, GitHub Pages may be serving a cached version of the embed file.
 >
-> **Fix:** Add or increment a `?v=` number in the iframe `src` on all five Webflow pages (EN, IT, ES, FR, DE), then publish Webflow:
+> **Fix:** Add or increment a `?v=` number in the iframe `src` on all six Webflow pages (EN, IT, ES, FR, DE, PT), then publish Webflow:
 > ```
 > avatour-guide-embed.html?v=2
 > avatour-guide-embed-it.html?v=2
 > avatour-guide-embed-es.html?v=2
 > avatour-guide-embed-fr.html?v=2
 > avatour-guide-embed-de.html?v=2
+> avatour-guide-embed-pt.html?v=2
 > ```
 > Increment to `?v=3`, `?v=4` etc. on each subsequent `build.py` update. This is a rare operation — `build.py` changes are infrequent compared to content edits.
 >
@@ -334,7 +340,7 @@ If you use the regular Upload button, Cloudinary appends a random suffix (e.g. `
 | Re-upload a screenshot to Cloudinary | Use the Replace workflow — keeps the URL stable |
 | Manually edit the sidebar | It is auto-generated from your headings |
 | Edit files in `dist/` | They are rebuilt automatically — changes will be overwritten |
-| Edit the IT, ES, FR or DE Markdown files | They are auto-generated — changes will be overwritten on the next build |
+| Edit the IT, ES, FR, DE or PT Markdown files | They are auto-generated — changes will be overwritten on the next build |
 | Edit `EN-prev.md` | Auto-generated snapshot — do not touch |
 
 ---
@@ -384,7 +390,7 @@ The current setup on Stefan's personal GitHub account (`test-repository`) is a t
 2. Convert `build-guide.yml` to a **Bitbucket Pipelines** file (`bitbucket-pipelines.yml`) — same logic, different syntax
 3. Add `DEEPL_API_KEY` as a Bitbucket Pipelines secret (same key as in GitHub Actions)
 4. Host the embed files on **AWS S3** instead of GitHub Pages
-5. Update the five iframe `src` values in Webflow to point to the new S3 URLs
+5. Update the six iframe `src` values in Webflow to point to the new S3 URLs
 
 Everything else — the English MD source file, `build.py`, MacDown workflow, and Cloudinary screenshots — moves across unchanged.
 
