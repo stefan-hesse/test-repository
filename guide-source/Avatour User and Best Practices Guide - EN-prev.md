@@ -403,9 +403,12 @@ Provides insights into meetings, workspace usage, and ROI metrics.
 ## 5. Onsite - How to Use the Avatour Turnkey Kit {#onsite-how-to-use-the-avatour-turnkey-kit}
 
 ### 5.1 Getting Started
-[Quick Start Guide – Avatour Turnkey Kit 3.1 (Pilot PanoX V2 setup)](https://avatour.com/quickstart-panox-v2)
+Here you will find a very comprehensice online guide for your first steps with the Avatour Turnkey Kit: [Quick Start Guide – Avatour Turnkey Kit 3.1 (Pilot PanoX V2 setup)](https://avatour.com/quickstart-panox-v2)
 
-Follow the guide to unpack, assemble, and power on your camera.
+And here is also the picture with instructions you will find inside the lid of the 3.1 kit case.
+![Picture inside the lid of the Avatour Kit case](https://res.cloudinary.com/avatour/image/upload/v1775994773/avatour-turnkey-kit-3.1-inside-lid-picture_dq4ipl.png) *Picture inside the lid of the Avatour Kit case* 
+
+Follow the guide and instructions to unpack, assemble, and power on your camera.
 
 ---
 
