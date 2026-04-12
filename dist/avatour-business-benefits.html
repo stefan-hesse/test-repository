@@ -60,21 +60,107 @@
   .section-intro { font-family: 'Roboto', sans-serif; margin-top: 16px; font-size: 16px; font-weight: 400; color: #3d3d3d; line-height: 26px; max-width: 640px; }
 
   /* ─── FRAMEWORK STRIP ───────────────────────────── */
-  .framework { background: var(--navy); padding: 60px 6vw; }
-  .framework-inner { max-width: 1200px; margin: 0 auto; text-align: center; }
-  .framework-title { font-family: 'Titillium Web', sans-serif; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 36px; }
-  .framework-flow { display: flex; align-items: center; justify-content: center; gap: 0; flex-wrap: wrap; }
-  .framework-node { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; padding: 20px 28px; min-width: 180px; text-align: center; position: relative; }
-  .framework-node.highlight { background: var(--orange); border-color: var(--orange); }
-  .framework-node-icon { font-size: 24px; margin-bottom: 8px; }
-  .framework-node-title { font-family: 'Titillium Web', sans-serif; font-size: 14px; font-weight: 600; color: var(--white); line-height: 1.3; }
-  .framework-node-sub { font-family: 'Roboto', sans-serif; font-size: 11px; color: rgba(255,255,255,0.5); margin-top: 4px; }
-  .framework-node.highlight .framework-node-sub { color: rgba(255,255,255,0.8); }
-  .framework-arrow { font-size: 20px; color: var(--orange); padding: 0 8px; flex-shrink: 0; }
-  .framework-result { margin-top: 36px; display: inline-flex; align-items: center; gap: 12px; background: rgba(255,78,0,0.12); border: 1px solid rgba(255,78,0,0.3); border-radius: 100px; padding: 12px 28px; }
-  .framework-result-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--orange); flex-shrink: 0; }
-  .framework-result-text { font-family: 'Roboto', sans-serif; font-size: 16px; font-weight: 400; color: var(--white); }
-  .framework-result-text em { font-style: normal; color: var(--orange); }
+  .framework {
+    background: var(--navy);
+    padding: 72px 6vw;
+  }
+
+  .framework-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .framework-title {
+    font-size: 11px;
+    font-family: 'DM Mono', monospace;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 40px;
+  }
+
+  .framework-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    flex-wrap: wrap;
+  }
+
+  .framework-node {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 12px;
+    padding: 28px 36px;
+    min-width: 220px;
+    text-align: center;
+    position: relative;
+  }
+
+  .framework-node.highlight {
+    background: var(--orange);
+    border-color: var(--orange);
+  }
+
+  .framework-node-icon {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+
+  .framework-node-title {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1.3;
+  }
+
+  .framework-node-sub {
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
+    margin-top: 6px;
+    letter-spacing: 0.02em;
+  }
+
+  .framework-node.highlight .framework-node-sub {
+    color: rgba(255,255,255,0.8);
+  }
+
+  .framework-arrow {
+    font-size: 22px;
+    color: var(--orange);
+    padding: 0 12px;
+    flex-shrink: 0;
+  }
+
+  .framework-result {
+    margin-top: 40px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255,78,0,0.12);
+    border: 1px solid rgba(255,78,0,0.3);
+    border-radius: 100px;
+    padding: 14px 32px;
+  }
+
+  .framework-result-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--orange);
+    flex-shrink: 0;
+  }
+
+  .framework-result-text {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--white);
+  }
+
+  .framework-result-text em {
+    font-style: normal;
+    color: var(--orange);
+  }
 
   /* ─── USE CASE TABS ─────────────────────────────── */
   .use-case-tabs { background: var(--off-white); }
@@ -237,7 +323,6 @@
 <section class="hero">
   <div class="hero-grid">
     <div class="fade-in fade-in-1">
-      <div class="hero-eyebrow">Business Value Framework</div>
       <h1>Better Visibility.<br><em>Better Business.</em></h1>
       <p class="hero-sub">Avatour transforms how your organisation accesses and understands physical sites — delivering measurable financial returns, operational efficiency, and strategic advantage.</p>
     </div>
