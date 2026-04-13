@@ -55,6 +55,45 @@ LANGUAGES = {
     "DE": "German",
 }
 
+# -- Pre-translations ----------------------------------------------------------
+# These keys are set BEFORE DeepL runs, bypassing translation entirely.
+# Used for single words that DeepL consistently mistranslates.
+
+PRE_TRANSLATIONS = {
+    "DE": {
+        "volume":    "Lautstärke",
+        "assets":    "Assets",
+        "asset":     "Asset",
+        "history":   "Verlauf",
+        "exit":      "Beenden",
+        "play":      "Wiedergabe",
+        "cancel":    "Abbrechen",
+        "analytics": "Analysen",
+        "filters":   "Filter",
+        "host":      "Host",
+        "hosts":     "Hosts",
+        "meeting":   "Meeting",
+        "session":   "Meeting",
+        "change":    "Ändern",
+        "deactivate": "Deaktivieren",
+        "reactivate": "Reaktivieren",
+    },
+    "IT": {
+        "assets":    "asset",
+        "asset":     "asset",
+        "history":   "cronologia",
+        "host":      "host",
+        "hosts":     "host",
+        "exit":      "Esci",
+        "play":      "Riproduci",
+        "cancel":    "Annulla",
+        "change":    "Cambia",
+        "analytics": "analisi",
+        "filters":   "filtri",
+        "superfreeze": "SuperFreeze",
+    },
+}
+
 # -- Post-processing fixes -----------------------------------------------------
 # Applied after DeepL translation to correct known bad translations.
 # Each entry is (wrong_value, correct_value) — exact string match on the
@@ -250,6 +289,12 @@ def translate_batch(texts, target_lang):
 
 def translate_all(strings_dict, target_lang):
     """Translate all values, skipping pure $t() refs and protecting placeholders."""
+    # Apply pre-translations — these keys bypass DeepL entirely
+    pre = PRE_TRANSLATIONS.get(target_lang, {})
+    strings_dict = {k: pre[k] if k in pre else v
+                    for k, v in strings_dict.items()}
+    print(f"  Pre-translated {len(pre)} keys, bypassing DeepL.")
+
     keys   = list(strings_dict.keys())
     values = list(strings_dict.values())
 
@@ -341,7 +386,7 @@ def main():
         print(f"ERROR: Source file not found: {SOURCE_FILE}")
         sys.exit(1)
 
-    with open(SOURCE_FILE, encoding="utf-8") as f:
+    with open(SOURCE_FILE, encoding="utf-8-sig") as f:
         en_dict = json.load(f)
 
     print(f"Loaded {len(en_dict)} strings from en.json")
