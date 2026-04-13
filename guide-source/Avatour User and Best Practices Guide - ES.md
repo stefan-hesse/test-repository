@@ -437,7 +437,7 @@ Uso de la batería externa:
   - **Volumen:** Utilice los botones «+» y «-».  
 
 - **Entornos más silenciosos / varios participantes cerca de la cámara:** 
-  Utilice el altavoz con clip NoxGear. No ofrece la misma alta fidelidad que los altavoces de conferencia (por ejemplo, Jabra Speak), pero es fácil de enganchar a la camisa y capta eficazmente las voces cercanas.  
+  Utilice el altavoz con clip NoxGear. No ofrece la misma fidelidad que los altavoces de conferencia (por ejemplo, Jabra Speak), pero es fácil de enganchar a la camisa y capta eficazmente las voces cercanas.  
   - **Encendido/apagado:** Mantén pulsado el botón Reproducir/Pausa durante 2 segundos.  
   - **Modo de emparejamiento Bluetooth:** Entra automáticamente en modo de emparejamiento al encenderse (el LED parpadea en azul/rojo; azul fijo cuando está emparejado).  
   - **Volumen:** Utiliza los botones «+» y «-».  
@@ -450,9 +450,9 @@ Uso de la batería externa:
 - **WiFi local** (preferible)
 - **Red móvil** (si estás fuera del alcance del WiFi)
 
-**Ancho de banda recomendado:** 10 Mbps de subida/descarga para una transmisión completa en 360° (~5 Mbps). Un ancho de banda inferior (1–2 Mbps) solo funciona si se permanece quieto.
+**Ancho de banda recomendado:** 10 Mbps de subida/descarga para una transmisión completa en 360° (~5 Mbps). Un ancho de banda inferior (1–2 Mbps) solo funciona si te mantienes quieto.
 
-##### Prueba de velocidad de red
+##### Comprueba la velocidad de la red
 - **Prueba en una sola ubicación:** Utilice cualquier comprobador de velocidad que utilice habitualmente (por ejemplo, [Speedtest](https://www.speedtest.net)) para verificar tanto el ancho de banda de subida como el de bajada.   
 - **Prueba caminando por el recinto:** Desde la cámara: Ajustes → Red → Prueba de conexión. Recorra todo el espacio para confirmar la cobertura y el ancho de banda.
 
@@ -466,9 +466,9 @@ Uso de la batería externa:
 - Conecta el punto de acceso GlocalMe al stick de batería Telesin (imán).  
 - Garantiza que no haya interferencias y mantiene la conexión si te alejas de la cámara.  
 - Solución de problemas:
-  - Confirme que la SIM está preinstalada (no es una SIM en la nube).  
-  - Active el 5G en el Administrador de tarjetas SIM.  
-  - Verifique que el APN sea el correcto para su región ([Guía de configuración de APN](https://avatour.com/support/how-do-i-change-the-apn-on-my-glocalme-hotspot)).
+  - Comprueba que la SIM esté preinstalada (no una SIM en la nube).  
+  - Activa el 5G en el Administrador de tarjetas SIM.  
+  - Verifica que el APN sea el correcto para tu región ([Guía de configuración de APN](https://avatour.com/support/how-do-i-change-the-apn-on-my-glocalme-hotspot)).
 
 **Opción B: Punto de acceso personal / SIM**
 - Utilice su propio smartphone o un punto de acceso dedicado.  
@@ -476,13 +476,13 @@ Uso de la batería externa:
 **Nota importante:**  
 > Mantenga el punto de acceso desactivado mientras esté conectado a una red WiFi; actívelo solo cuando esté fuera de cobertura. El sistema operativo de la cámara cambia dinámicamente entre redes WiFi en función de la intensidad de la señal y puede cambiar inadvertidamente al punto de acceso incluso cuando haya WiFi disponible.
 
-> Las redes móviles pueden limitar el ancho de banda de forma inesperada. Consulta con tu operador los límites de tu plan de datos o ponte en contacto con el servicio de asistencia de Avatour si utilizas nuestro punto de acceso y nuestra tarjeta SIM.
+> Las redes móviles pueden limitar el ancho de banda de forma inesperada. Consulte con su operador los límites de su plan de datos o póngase en contacto con el servicio de asistencia de Avatour si utiliza nuestro punto de acceso y nuestra tarjeta SIM.
 
 ##### Situaciones de bajo ancho de banda
-- Graba vídeos de la ubicación con antelación para reproducirlos más tarde ([guía de grabación](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)).  
-- Comparte la transmisión de la cámara de un smartphone para complementar las zonas de bajo ancho de banda (0,1-0,3 Mbps de subida).
+- Grabe vídeos de la ubicación con antelación para reproducirlos más tarde ([guía de grabación](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)).  
+- Comparte la transmisión de la cámara de un smartphone para complementar las zonas con poco ancho de banda (0,1-0,3 Mbps de subida).
 
-##### Sin conexión
+##### Sin conectividad
 - Solo se pueden utilizar vídeos pregrabados ([guía de grabación](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)).
 
 #### Otros participantes in situ: prácticas recomendadas
@@ -499,55 +499,55 @@ Cuando varios participantes se unen a una reunión en directo de Avatour desde l
 - Cada smartphone, tableta u ordenador portátil conectado in situ consume ancho de banda de la red y puede afectar negativamente a la transmisión de la cámara de 360°.  
 - La presencia de varios micrófonos y altavoces en el mismo espacio puede provocar **retroalimentación de audio**, lo que hace que la experiencia de la reunión resulte desagradable para todos los participantes.
 
-Para hacer frente a estos retos, siga estas **buenas prácticas**:
+Para hacer frente a estos retos, siga estas **prácticas recomendadas**:
 
 - **Utilice auriculares con cable o inalámbricos:** preferiblemente con cancelación de ruido para evitar el eco y la retroalimentación.  
 - **Modo in situ:** únase a la reunión en modo in situ cuando se encuentre físicamente cerca de la cámara de 360°.  
-  - Este modo está optimizado para su uso in situ: 
- - Silencia el micrófono y el altavoz del participante de forma predeterminada. 
+  - Este modo está optimizado para su uso in situ:  
+    - Silencia el micrófono y el altavoz del participante de forma predeterminada. 
  - **No** envía la señal de la cámara del participante. 
- - **No** muestra la señal de la cámara de 360° en el navegador del participante.  
-    - Ahorra ancho de banda de red, garantizando que la cámara de 360° disponga del máximo ancho de banda de subida disponible para la retransmisión en directo. 
- - Resulta útil cuando un usuario desea compartir detalles específicos; **puede compartir a su vez la imagen de su cámara** para ofrecer vistas específicas.  
+ - **No** muestra la señal de la cámara de 360° en el navegador del participante. 
+ - Ahorra ancho de banda de red, lo que garantiza que la cámara de 360° disponga del máximo ancho de banda de subida disponible para la transmisión en directo.  
+    - Útil cuando un usuario desea compartir detalles específicos; **puede compartir su cámara** para ofrecer vistas específicas.  
 - **Silenciar cuando no se esté hablando activamente:** Evita la retroalimentación de audio no deseada y las distracciones.  
-- **Utiliza una red independiente si es posible:** conecta tu smartphone a una red diferente a la de la cámara para reducir las interferencias.  
+- **Utilizar una red independiente si es posible:** Conecte su smartphone a una red diferente a la de la cámara para reducir las interferencias.  
 
-Seguir estas directrices garantiza una visita en directo fluida y de alta calidad tanto para los participantes in situ como para los remotos.
+Seguir estas directrices garantiza una visita en directo fluida y de alta calidad tanto para los participantes in situ como para los que se conectan de forma remota.
 
-### 5.3 Aplicación Avatour Camera
+### 5.3 Aplicación de la cámara Avatour
 
-Aquí se muestran los menús (1) de Nivel superior, (2) de Ajustes y (3) de Ajustes de red.
+Aquí se muestran los menús (1) de nivel superior, (2) de ajustes y (3) de configuración de red.
 
 ![Aplicación Avatour 360° Camera - Tres menús](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-cam-app-3-menu-screens_nju8bt.png) *Aplicación Avatour 360° Camera - 3 menús*
 
-**Captura rápida**: para grabar vídeos de 360° sin conexión. Para obtener una descripción detallada, consulta [¿Cómo se graban y suben vídeos de 360° con la aplicación Avatour?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app). Recomendamos utilizar un dispositivo de audio externo (conectado por Bluetooth). Nota: También puede grabar vídeos 2D estándar y hacer fotos; solo tiene que cambiar el modo entre 360° y 2D en la esquina inferior derecha una vez que esté en la pantalla de captura rápida.
+**Captura rápida**: para grabar vídeos de 360° sin conexión. Para obtener una descripción detallada, consulta [¿Cómo se graban y suben vídeos de 360° con la aplicación Avatour?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app). Recomendamos utilizar un dispositivo de audio externo (conectado vía Bluetooth). Nota: También puede grabar vídeos y tomar fotos estándar en 2D; simplemente cambie el modo entre 360° y 2D en la esquina inferior derecha una vez que esté en la pantalla de captura rápida.
 
-**Reunión en directo** - Para videoconferencias en directo en 360°. Verá sus espacios de trabajo y, al hacer clic en uno de ellos, se iniciará la transmisión de vídeo en directo desde la cámara de 360°. Antes de poder unirte a la reunión con tu cámara de 360°, debes conectar un dispositivo de audio a través de Bluetooth. Para obtener una descripción detallada, consulta [¿Cómo iniciar una reunión de Live Capture con tu cámara Pilot?](https://avatour.com/support/how-to-start-a-live-capture-meeting-with-your-pilot-camera)
+**Reunión en directo**: para videoconferencias en directo a 360°. Verás tus espacios de trabajo y, al hacer clic en uno de ellos, se iniciará la transmisión de vídeo en directo desde la cámara de 360°. Antes de poder unirte a la reunión con tu cámara de 360°, debes conectar un dispositivo de audio a través de Bluetooth. Para obtener una descripción detallada, consulta [¿Cómo iniciar una reunión de Live Capture con tu cámara Pilot?](https://avatour.com/support/how-to-start-a-live-capture-meeting-with-your-pilot-camera)
 
-> Al organizar una reunión de Live Capture con su cámara de 360°, tendrá a su disposición herramientas de reunión similares a las de la experiencia web. Aquí tiene un enlace a nuestro artículo de la Base de conocimientos que explica estas herramientas con más detalle: [Herramientas de la aplicación del operador](https://avatour.com/support/what-avatour-app-tools-are-available-to-labpano-pilot-camera-operators)
+> Al organizar una reunión de Live Capture con tu cámara de 360°, tendrás a tu disposición herramientas de reunión similares que reflejan la experiencia web. Aquí tienes un enlace a nuestro artículo de la Base de conocimientos que explica estas herramientas con más detalle: [Herramientas de la aplicación del operador](https://avatour.com/support/what-avatour-app-tools-are-available-to-labpano-pilot-camera-operators)
 
-**Galería**: aquí encontrarás todos tus vídeos y fotos en 360° para subirlos a la consola web de Avatour.
+**Galería**: aquí encontrarás todos tus vídeos e imágenes de 360° para subirlos a la consola web de Avatour.
 
-**Configuración**: en Configuración, dispones de las siguientes opciones:
+**Configuración**: en Configuración, dispone de las siguientes opciones:
 
-- **Red**: esta opción te permite cambiar la red WiFi a la que está conectada la cámara o realizar una prueba de conexión de red para ver tu ancho de banda de transmisión
-- **Captura en directo**: Ajusta la configuración de la captura en directo en función del ancho de banda disponible, la sensibilidad a la realidad virtual del invitado o si las lentes protectoras de la cámara están instaladas:
-  - **Velocidad de fotogramas** **objetivo**: Ajusta la velocidad de fotogramas de tu vídeo de captura en directo entre 15 fps, 24 fps y 30 fps. Las velocidades de fotogramas más altas producen un vídeo más fluido, pero requerirán más ancho de banda de subida. Predeterminado: 15 fps
-  - **Velocidad de bits objetivo**: le permite aumentar o disminuir la velocidad de bits máxima de transmisión para su Captura en directo. Puede establecer su velocidad de bits objetivo entre 1 Mbps y 10 Mbps. Las velocidades de bits más altas darán como resultado una mayor resolución de vídeo, pero requerirán más ancho de banda de subida. Predeterminado: 5 Mbps
-  - **Optimizar movimiento**: Esto reducirá la velocidad de fotogramas del vídeo, generando menos carga en el ancho de banda de subida de tu red, y aumentará tu velocidad de bits de transmisión. Además, esta opción ayuda a reducir el mareo por movimiento en los participantes de realidad virtual. Predeterminado: Desactivado
-  - **Lentes protectoras**: Esto afectará a cómo se une el vídeo de 360° dependiendo de si se han instalado lentes protectoras en tu cámara. Si no tienes lentes protectoras, configura esto en «No». Si has recibido un Kit 3.0, ya tienes las lentes protectoras preinstaladas y debes configurar esta opción en «Sí». Predeterminado: Sí
+- **Red**: esta opción le permite cambiar la red WiFi a la que está conectada la cámara o realizar una prueba de conexión de red para ver su ancho de banda de transmisión
+- **Captura en directo**: ajuste la configuración de Captura en directo en función del ancho de banda disponible, la sensibilidad de realidad virtual del invitado o si las lentes protectoras de la cámara están instaladas:
+  - **Frecuencia de fotogramas** **objetivo**: Ajusta la frecuencia de fotogramas de tu vídeo de captura en directo entre 15 fps, 24 fps y 30 fps. Las frecuencias de fotogramas más altas producen un vídeo más fluido, pero requerirán más ancho de banda de subida. Predeterminado: 15 fps
+  - **Velocidad de bits objetivo**: Te permite aumentar o disminuir la velocidad de bits máxima de transmisión para tu captura en directo. Puedes establecer la velocidad de bits objetivo entre 1 Mbps y 10 Mbps. Las velocidades de bits más altas darán como resultado una mayor resolución de vídeo, pero requerirán más ancho de banda de subida. Predeterminado: 5 Mbps
+  - **Optimizar movimiento**: Esto reducirá la velocidad de fotogramas del vídeo, generando menos carga en el ancho de banda de subida de tu red, y aumentará la velocidad de bits de transmisión. Además, esta opción ayuda a reducir el mareo por movimiento en los participantes de realidad virtual. Predeterminado: Desactivado
+  - **Lentes protectoras**: Esto afectará a cómo se une el vídeo de 360° dependiendo de si se han instalado lentes protectoras en su cámara. Si no tiene lentes protectoras, establezca esto en «No». Si ha recibido un Kit 3.0, tiene lentes protectoras preinstaladas y debe establecer esto en «Sí». Predeterminado: Sí
 
-- **Captura rápida**: Ajusta la configuración de Captura rápida en función de la velocidad de fotogramas de vídeo que prefieras, el ancho de banda disponible para la subida de vídeos grabados o si las lentes protectoras de tu cámara están instaladas. La Captura rápida tiene una resolución fija de 4K, lo que suele ofrecer un buen equilibrio entre la calidad del vídeo y el tamaño del archivo. (Para resoluciones más altas, puedes utilizar las aplicaciones nativas de la cámara, también en la PanoX V2; para más detalles, consulta [¿Cómo se graban y suben vídeos de 360º con la aplicación Avatour?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)):
+- **Captura rápida**: Ajusta la configuración de Captura rápida en función de la velocidad de fotogramas de vídeo que prefieras, el ancho de banda disponible para la subida de vídeos grabados o si las lentes protectoras de tu cámara están instaladas. La Captura rápida tiene una resolución fija de 4K, lo que suele ofrecer un buen equilibrio entre la calidad del vídeo y el tamaño del archivo. (Para resoluciones más altas, puede utilizar las aplicaciones nativas de la cámara, también en la PanoX V2; para más detalles, consulte [¿Cómo se graban y suben vídeos de 360º con la aplicación Avatour?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)):
   - **Velocidad de fotogramas objetivo**: Ajusta la velocidad de fotogramas para tus grabaciones de vídeo de Captura rápida entre 15 fps, 24 fps y 30 fps. Las velocidades de fotogramas más altas producen un vídeo más fluido, pero aumentarán el tamaño del archivo de vídeo y el tiempo de subida. Recomendado: 30 fps
-  - **Velocidad de bits objetivo**: Establece la velocidad de bits objetivo para las subidas de Captura rápida entre 5 Mbps y 20 Mbps. Las velocidades de bits más bajas aumentan la velocidad de subida, pero reducirán la calidad del vídeo. Recomendado: 20 Mbps
-  - **Lentes protectoras**: *Consulte la sección Lentes protectoras para Captura en directo más arriba*
+  - **Velocidad de bits objetivo**: Establece la velocidad de bits objetivo para las subidas de Captura rápida entre 5 Mbps y 20 Mbps. Las velocidades de bits más bajas aumentan la velocidad de subida, pero reducen la calidad del vídeo. Recomendado: 20 Mbps
+  - **Lentes protectoras**: *Consulta la sección Lentes protectoras para Captura en directo más arriba*
 
-  > Consulte también nuestra [Calculadora de tamaño de archivos de vídeo Avatour 360°](https://avatour.com/file-size-calculator) para obtener más consejos sobre los ajustes anteriores y los tamaños de los archivos de vídeo.
+  > Consulte también nuestra [Calculadora de tamaño de archivos de vídeo Avatour 360°](https://avatour.com/support/avatour-360deg-video-file-size-calculator) para obtener más consejos sobre los ajustes anteriores y los tamaños de los archivos de vídeo.
 
 - **Acerca de**: Ver el número de serie del dispositivo y la versión del software
 
 
-**Cuenta**: Para iniciar sesión con su cuenta de administrador o de host de Avatour.
+**Cuenta**: Para iniciar sesión con tu cuenta de administrador o de host de Avatour.
 
 ## 6. Recomendaciones sobre buenas prácticas {#best-practice-advice}
 

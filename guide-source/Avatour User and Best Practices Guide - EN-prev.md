@@ -542,7 +542,7 @@ Here are (1) the Top Level, (2) Settings and (3) Network Settings menus.
   - **Target Bitrate**: Set the target bitrate for Quick Capture uploads between 5 Mbps and 20 Mbps. Lower bitrates increase upload speeds, but will decrease video quality. Recommended: 20 Mbps
   - **Protective Lenses**: *See Protective Lenses section for Live Capture above*
 
-  > See also our [Avatour 360° Video File Size Calculator](https://avatour.com/file-size-calculator) for further advice on the above settings and video file sizes.
+  > See also our [Avatour 360° Video File Size Calculator](https://avatour.com/support/avatour-360deg-video-file-size-calculator) for further advice on the above settings and video file sizes.
 
 - **About**: View device serial number and software version
 

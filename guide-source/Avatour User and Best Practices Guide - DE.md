@@ -418,26 +418,26 @@ Befolgen Sie die Anleitung und die Anweisungen zum Auspacken, Zusammenbauen und 
 
 - **Wenn Ihr Kit einen Ulanzi-Akku enthält:** Befestigen Sie ihn zwischen dem Stativfuß und dem ausziehbaren Stab und schließen Sie den Akku dann über USB-C an die Kamera an.  
 
-- **Wenn Ihr Kit einen Telesin-Akku-Stab enthält:** Befestigen Sie die Kamera direkt am Telesin-Akku-Stab und schließen Sie sie über USB-C an.  
+- **Wenn Ihr Kit einen Telesin-Akku-Stab enthält:** Befestigen Sie die Kamera direkt am ausziehbaren Telesin-Akku-Stab und schließen Sie sie über USB-C an.  
 
 Verwendung des externen Akkus:
 
-1. Verlängert die Gesamtakkulaufzeit von ~40 Minuten (nur Kamera-Akku) auf ~3 Stunden.  
-2. Verleiht dem Kamera-Setup mehr Stabilität.  
+1. Verlängert die Gesamtakkulaufzeit von ~40 Minuten (nur Kameraakku) auf ~3 Stunden.  
+2. Verleiht dem Kameraaufbau mehr Stabilität.  
 3. Hilft, eine mögliche Überhitzung zu verhindern.  
 
 > Wir empfehlen, den externen Akku immer von Anfang an zu verwenden, insbesondere bei Live-Meetings.
 
 #### Audio-Hinweise für Live-Meetings und Aufzeichnungen
 
-- **Lautstarke Umgebungen:** 
+- **Lauter Umgebung:** 
   Verwenden Sie die im Kit enthaltenen Shokz-Kopfhörer für eine klare Audioaufnahme.  
   - **Ein-/Ausschalten:** Halten Sie die Taste „+“ 3 Sekunden lang gedrückt (blaue LED = ein, rote LED = aus).  
   - **Bluetooth-Kopplungsmodus:** Halten Sie bei ausgeschaltetem Headset die Taste „+“ 5 Sekunden lang gedrückt (LED blinkt blau/rot).  
   - **Lautstärke:** Verwenden Sie die Tasten „+“ und „-“.  
 
 - **Ruhigere Umgebungen / mehrere Teilnehmer in der Nähe der Kamera:** 
-  Verwenden Sie den NoxGear-Clip-Lautsprecher. Er bietet zwar nicht die gleiche Klangqualität wie Konferenzlautsprecher (z. B. Jabra Speak), lässt sich aber einfach an Ihrem Hemd befestigen und nimmt Stimmen in der Nähe effektiv auf.  
+  Verwenden Sie den NoxGear-Aufstecklautsprecher. Er bietet zwar nicht die gleiche Klangqualität wie Konferenzlautsprecher (z. B. Jabra Speak), lässt sich aber leicht an Ihrem Hemd befestigen und nimmt Stimmen in der Nähe effektiv auf.  
   - **Ein-/Ausschalten:** Halten Sie die Wiedergabe-/Pause-Taste 2 Sekunden lang gedrückt.  
   - **Bluetooth-Kopplungsmodus:** Wechselt beim Einschalten automatisch in den Kopplungsmodus (LED blinkt blau/rot; leuchtet blau, wenn gekoppelt).  
   - **Lautstärke:** Verwenden Sie die Tasten „+“ und „-“.  
@@ -457,16 +457,16 @@ Verwendung des externen Akkus:
 - **Test beim Gehen durch den Standort:** Über die Kamera: Einstellungen → Netzwerk → Verbindungstest. Gehen Sie durch den gesamten Raum, um die Abdeckung und die Bandbreite zu überprüfen.
 
 ##### Lokales WLAN
-- Für stabile Verbindungen sehr zu empfehlen.  
+- Für stabile Verbindungen dringend empfohlen.  
 - Falls die IT-Abteilung eine Whitelist erfordert, finden Sie die MAC-Adresse unter: Einstellungen → Info → WLAN-Adresse.
 
 ##### Mobilfunknetz
 **Option A: Im Kit enthaltener Hotspot & SIM-Karte**  
 
 - Befestigen Sie den GlocalMe-Hotspot am Telesin-Akku-Stick (Magnet).  
-- Dies gewährleistet keine Störungen und hält die Verbindung aufrecht, wenn Sie sich von der Kamera entfernen.  
+- Stellt sicher, dass keine Störungen auftreten, und hält die Verbindung aufrecht, wenn Sie sich von der Kamera entfernen.  
 - Fehlerbehebung:
-  - Überprüfen Sie die vorinstallierte SIM-Karte (nicht die Cloud-SIM).  
+  - Vergewissern Sie sich, dass die vorinstallierte SIM-Karte verwendet wird (nicht die Cloud-SIM).  
   - Aktivieren Sie 5G im SIM-Karten-Manager.  
   - Überprüfen Sie den korrekten APN für Ihre Region ([APN-Einrichtungsanleitung](https://avatour.com/support/how-do-i-change-the-apn-on-my-glocalme-hotspot)).
 
@@ -480,16 +480,16 @@ Verwendung des externen Akkus:
 
 ##### Situationen mit geringer Bandbreite
 - Nehmen Sie Standortvideos vorab auf, um sie später abzuspielen ([Aufnahmeanleitung](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)).  
-- Teilen Sie den Live-Stream einer Smartphone-Kamera, um Bereiche mit geringer Bandbreite (0,1–0,3 Mbit/s Upload) zu ergänzen.
+- Teilen Sie den Stream einer Smartphone-Kamera, um Bereiche mit geringer Bandbreite (0,1–0,3 Mbit/s Upload) zu ergänzen.
 
 ##### Keine Verbindung
-- Es können nur vorab aufgezeichnete Videos verwendet werden ([Anleitung zur Aufzeichnung](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)).
+- Es können nur vorab aufgezeichnete Videos verwendet werden ([Aufnahmeanleitung](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)).
 
-#### Andere Teilnehmer vor Ort – Best Practices
+#### Weitere Teilnehmer vor Ort – Bewährte Vorgehensweisen
 
 Wenn mehrere Teilnehmer von demselben Standort wie die 360°-Kamera aus an einem Live-Avatour-Meeting teilnehmen, ist ein sorgfältiges Management von **Audio und Bandbreite** entscheidend:  
 
-- Jedes vor Ort verbundene Smartphone, Tablet oder Laptop beansprucht Netzwerkbandbreite und kann die Übertragung der 360°-Kamera beeinträchtigen.  
+- Jedes vor Ort verbundene Smartphone, Tablet oder Laptop verbraucht Netzwerkbandbreite und kann die Übertragung der 360°-Kamera beeinträchtigen.  
 - Mehrere Mikrofone und Lautsprecher im selben Raum können **Audio-Rückkopplungen** verursachen, was das Meeting-Erlebnis für alle Teilnehmer unangenehm macht.
 
 #### Weitere Teilnehmer vor Ort – Best Practices
@@ -499,7 +499,7 @@ Wenn mehrere Teilnehmer von demselben Standort wie die 360°-Kamera aus an einem
 - Jedes vor Ort verbundene Smartphone, Tablet oder Laptop beansprucht Netzwerkbandbreite und kann die Übertragung der 360°-Kamera beeinträchtigen.  
 - Mehrere Mikrofone und Lautsprecher im selben Raum können **Audio-Rückkopplungen** verursachen, was das Meeting-Erlebnis für alle Teilnehmer unangenehm macht.
 
-Befolgen Sie zur Bewältigung dieser Herausforderungen die folgenden **Best Practices**:
+Befolgen Sie diese **Best Practices**, um diese Herausforderungen zu bewältigen:
 
 - **Verwenden Sie kabelgebundene oder kabellose Kopfhörer:** Vorzugsweise mit Geräuschunterdrückung, um Echo und Rückkopplungen zu vermeiden.  
 - **Vor-Ort-Modus:** Nehmen Sie im Vor-Ort-Modus am Meeting teil, wenn Sie sich physisch in der Nähe der 360°-Kamera befinden.  
@@ -516,15 +516,15 @@ Die Befolgung dieser Richtlinien gewährleistet eine reibungslose, hochwertige L
 
 ### 5.3 Avatour-Kamera-App
 
-Hier sind (1) das Hauptmenü, (2) die Einstellungen und (3) die Netzwerkeinstellungen.
+Hier finden Sie (1) die Startseite, (2) die Einstellungen und (3) Netzwerk-Einstellungen.
 
 ![Avatour 360°-Kamera-App – Drei Menüs](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-cam-app-3-menu-screens_nju8bt.png) *Avatour 360°-Kamera-App – 3 Menüs*
 
-**Schnellaufnahme** – Für die Offline-Aufnahme von 360°-Videos. – Eine detaillierte Beschreibung finden Sie unter [Wie nimmt man 360°-Videos mit der Avatour-App auf und lädt sie hoch?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app). Wir empfehlen die Verwendung eines externen Audiogeräts (verbunden über Bluetooth). Hinweis: Sie können auch normale 2D-Videos und -Bilder aufnehmen – wechseln Sie dazu einfach im QC-Bildschirm in der unteren rechten Ecke zwischen dem 360°- und dem 2D-Modus.
+**Schnellaufnahme** – Für die Offline-Aufnahme von 360°-Videos. – Eine detaillierte Beschreibung finden Sie unter [Wie nimmt man 360°-Videos mit der Avatour-App auf und lädt sie hoch?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app). Wir empfehlen die Verwendung eines externen Audiogeräts (über Bluetooth verbunden). Hinweis: Sie können auch normale 2D-Videos und -Bilder aufnehmen – wechseln Sie dazu einfach im QC-Bildschirm in der unteren rechten Ecke zwischen dem 360°- und dem 2D-Modus.
 
-**Live-Meeting** – Für Live-360°-Videokonferenzen. Sie sehen Ihre Arbeitsbereiche und durch Klicken auf einen davon starten Sie den Live-Videostream von der 360°-Kamera. Bevor Sie mit Ihrer 360°-Kamera an der Besprechung teilnehmen können, müssen Sie ein Audiogerät über Bluetooth verbinden. Eine detaillierte Beschreibung finden Sie unter [Wie starte ich eine Live-Capture-Besprechung mit Ihrer Pilot-Kamera?](https://avatour.com/support/how-to-start-a-live-capture-meeting-with-your-pilot-camera)
+**Live-Meeting** – Für Live-360°-Videokonferenzen. Sie sehen Ihre Arbeitsbereiche und durch Anklicken eines davon wird der Live-Videostream von der 360°-Kamera gestartet. Bevor Sie mit Ihrer 360°-Kamera am Meeting teilnehmen können, müssen Sie ein Audiogerät über Bluetooth verbinden. Eine detaillierte Beschreibung finden Sie unter [Wie starte ich ein Live-Capture-Meeting mit meiner Pilot-Kamera?](https://avatour.com/support/how-to-start-a-live-capture-meeting-with-your-pilot-camera)
 
-> Wenn Sie ein Live Capture-Meeting mit Ihrer 360°-Kamera veranstalten, stehen Ihnen ähnliche Meeting-Tools zur Verfügung, die das Web-Erlebnis widerspiegeln. Hier ist ein Link zu unserem Knowledge-Base-Artikel, der diese Tools näher erläutert: [Operator-App-Tools](https://avatour.com/support/what-avatour-app-tools-are-available-to-labpano-pilot-camera-operators)
+> Wenn Sie ein Live-Capture-Meeting mit Ihrer 360°-Kamera veranstalten, stehen Ihnen ähnliche Meeting-Tools zur Verfügung, die das Web-Erlebnis widerspiegeln. Hier ist ein Link zu unserem Knowledge-Base-Artikel, der diese Tools näher erläutert: [Operator-App-Tools](https://avatour.com/support/what-avatour-app-tools-are-available-to-labpano-pilot-camera-operators)
 
 **Galerie** – Hier finden Sie alle Ihre 360°-Videos und -Bilder zum Hochladen in die Avatour-Webkonsole.
 
@@ -532,19 +532,19 @@ Hier sind (1) das Hauptmenü, (2) die Einstellungen und (3) die Netzwerkeinstell
 
 - **Netzwerk**: Mit dieser Option können Sie das WLAN-Netzwerk ändern, mit dem die Kamera verbunden ist, oder einen Netzwerkverbindungstest durchführen, um Ihren Streaming-Durchsatz anzuzeigen
 - **Live-Aufnahme**: Passen Sie Ihre Live-Aufnahme-Einstellungen je nach verfügbarer Bandbreite, der VR-Empfindlichkeit des Gastes oder dem Vorhandensein von Schutzgläsern an Ihrer Kamera an:
-  - **Ziel-Bildrate**: Passen Sie die Bildrate für Ihr Live-Aufnahme-Video zwischen 15 fps, 24 fps und 30 fps an. Höhere Bildraten sorgen für ein flüssigeres Video, erfordern jedoch mehr Upload-Bandbreite. Standard: 15 fps
-  - **Ziel-Bitrate**: Ermöglicht es Ihnen, die maximale Streaming-Bitrate für Ihre Live-Aufnahme zu erhöhen oder zu verringern. Sie können Ihre Zielbitrate zwischen 1 Mbit/s und 10 Mbit/s einstellen. Höhere Bitraten führen zu einer höheren Videoauflösung, erfordern jedoch mehr Upload-Bandbreite. Standard: 5 Mbit/s
-  - **Bewegung optimieren**: Dies verringert die Videobildrate, wodurch die Upload-Bandbreite Ihres Netzwerks weniger belastet wird, und erhöht Ihre Streaming-Bitrate. Außerdem hilft diese Option dabei, Bewegungsübelkeit bei VR-Teilnehmern zu reduzieren. Standard: Aus
-  - **Schutzlinsen**: Dies beeinflusst die Art und Weise, wie das 360°-Video zusammengefügt wird, je nachdem, ob Schutzlinsen an Ihrer Kamera installiert sind. Wenn Sie keine Schutzlinsen haben, setzen Sie diese Option auf „Nein“. Wenn Sie ein Kit 3.0 erhalten haben, sind Schutzlinsen bereits vorinstalliert und Sie sollten diese Option auf „Ja“ setzen. Standard: Ja
+  - **Ziel-Bildrate**: Stellen Sie die Bildrate für Ihr Live-Aufnahme-Video zwischen 15 fps, 24 fps und 30 fps ein. Höhere Bildraten sorgen für ein flüssigeres Video, erfordern jedoch mehr Upload-Bandbreite. Standard: 15 fps
+  - **Zielbitrate**: Ermöglicht es Ihnen, die maximale Streaming-Bitrate für Ihre Live-Aufnahme zu erhöhen oder zu verringern. Sie können Ihre Zielbitrate zwischen 1 Mbit/s und 10 Mbit/s einstellen. Höhere Bitraten führen zu einer höheren Videoauflösung, erfordern jedoch mehr Upload-Bandbreite. Standard: 5 Mbit/s
+  - **Bewegung optimieren**: Dies verringert die Videobildrate, wodurch die Upload-Bandbreite Ihres Netzwerks weniger belastet wird, und erhöht Ihre Streaming-Bitrate. Darüber hinaus hilft diese Option, Bewegungsübelkeit bei VR-Teilnehmern zu reduzieren. Standard: Aus
+  - **Schutzgläser**: Dies beeinflusst, wie das 360°-Video zusammengefügt wird, je nachdem, ob Schutzgläser an Ihrer Kamera angebracht wurden. Wenn Sie keine Schutzlinsen haben, stellen Sie diese Option auf „Nein“. Wenn Sie ein Kit 3.0 erhalten haben, sind Schutzlinsen bereits vorinstalliert und Sie sollten diese Option auf „Ja“ setzen. Standard: Ja
 
-- **Schnellaufnahme**: Passen Sie Ihre Schnellaufnahme-Einstellungen an Ihre bevorzugte Videobildrate, die verfügbare Bandbreite für den Upload der aufgezeichneten Videos oder daran an, ob die Schutzlinsen Ihrer Kamera installiert sind. Die Schnellaufnahme hat eine festgelegte Auflösung von 4k, was in der Regel ein gutes Gleichgewicht zwischen Videoqualität und Dateigröße bietet. (Für höhere Auflösungen können Sie die nativen Kamera-Apps verwenden, auch auf der PanoX V2; Details finden Sie unter [Wie nimmt man 360°-Videos mit der Avatour-App auf und lädt sie hoch?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)):
-  - **Zielbildrate**: Passen Sie die Bildrate für Ihre Quick Capture-Videoaufnahmen zwischen 15 fps, 24 fps und 30 fps an. Höhere Bildraten sorgen für flüssigere Videos, erhöhen jedoch die Dateigröße und die Upload-Dauer. Empfohlen: 30 fps
+- **Schnellaufnahme**: Passen Sie Ihre Schnellaufnahme-Einstellungen an Ihre bevorzugte Videobildrate, die verfügbare Bandbreite für den Upload der aufgezeichneten Videos oder daran an, ob die Schutzlinsen Ihrer Kamera installiert sind. „Schnellaufnahme“ hat eine festgelegte Auflösung von 4k, was in der Regel ein gutes Gleichgewicht zwischen Videoqualität und Dateigröße bietet. (Für höhere Auflösungen können Sie die nativen Kamera-Apps verwenden, auch auf dem PanoX V2; Details finden Sie unter [Wie nimmt man 360°-Videos mit der Avatour-App auf und lädt sie hoch?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)):
+  - **Zielbildrate**: Passen Sie die Bildrate für Ihre Quick Capture-Videoaufnahmen zwischen 15 fps, 24 fps und 30 fps an. Höhere Bildraten sorgen für flüssigere Videos, erhöhen jedoch die Videodateigröße und die Upload-Dauer. Empfohlen: 30 fps
   - **Zielbitrate**: Stellen Sie die Zielbitrate für Quick-Capture-Uploads zwischen 5 Mbit/s und 20 Mbit/s ein. Niedrigere Bitraten erhöhen die Upload-Geschwindigkeit, verringern jedoch die Videoqualität. Empfohlen: 20 Mbit/s
   - **Schutzgläser**: *Siehe Abschnitt „Schutzgläser“ für Live-Capture oben*
 
-  > Weitere Hinweise zu den oben genannten Einstellungen und Videodateigrößen finden Sie in unserem [Avatour 360°-Videodateigrößenrechner](https://avatour.com/file-size-calculator).
+  > Weitere Hinweise zu den oben genannten Einstellungen und Videodateigrößen finden Sie in unserem [Avatour 360°-Videodateigrößenrechner](https://avatour.com/support/avatour-360deg-video-file-size-calculator).
 
-- **Über**: Zeigt die Seriennummer des Geräts und die Softwareversion an
+- **Über**: Seriennummer des Geräts und Softwareversion anzeigen
 
 
 **Konto** – Zum Anmelden mit Ihrem Avatour-Host- oder Admin-Konto.
