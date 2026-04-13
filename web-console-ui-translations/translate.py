@@ -59,33 +59,30 @@ LANGUAGES = {
 }
 
 # -- Glossaries ----------------------------------------------------------------
-# Terms DeepL must translate in a specific way.
-# Keys are lowercase English source terms (DeepL matching is case-insensitive).
+# Terms DeepL must always translate in a specific way.
+# Keys are lowercase English source terms.
 # Values are the exact target-language strings to use.
 #
-# Product names / branded terms that must never be translated are listed in
-# PROTECTED_TERMS below and injected into every glossary automatically.
+# Product names that must never be translated are in PROTECTED_TERMS
+# and are injected into every glossary automatically.
 
 PROTECTED_TERMS = [
-    # These are kept identical in all languages
     "SuperFreeze",
     "Avatour",
 ]
 
 GLOSSARIES = {
     "DE": {
-        # Core UI vocabulary fixes
-        "asset":          "Asset",           # not "Vermögen" (financial asset)
-        "assets":         "Assets",          # not "Vermögenswerte"
-        "history":        "Verlauf",         # not "Geschichte" (world history)
-        "analytics":      "Analysen",        # not "Analytik"
-        "volume":         "Lautstärke",      # not "Band" (music band)
-        "exit":           "Beenden",         # not "Ausgang" (physical door)
-        "filters":        "Filter",          # not "filtert"
-        "play":           "Wiedergabe",      # not "Spielen" (play a game)
-        "cancel":         "Abbrechen",       # verb form for buttons
-        "change":         "Ändern",          # verb form for buttons
-        # Terms to keep in English
+        "asset":          "Asset",
+        "assets":         "Assets",
+        "history":        "Verlauf",
+        "analytics":      "Analysen",
+        "volume":         "Lautstärke",
+        "exit":           "Beenden",
+        "filters":        "Filter",
+        "play":           "Wiedergabe",
+        "cancel":         "Abbrechen",
+        "change":         "Ändern",
         "host":           "Host",
         "hosts":          "Hosts",
         "meeting":        "Meeting",
@@ -95,7 +92,6 @@ GLOSSARIES = {
         "feedback":       "Feedback",
         "layout":         "Layout",
         "account":        "Konto",
-        # Standard German UI terms
         "guest":          "Gast",
         "guests":         "Gäste",
         "workspace":      "Arbeitsbereich",
@@ -125,23 +121,20 @@ GLOSSARIES = {
         "devices":        "Geräte",
     },
     "IT": {
-        # Core UI vocabulary fixes
-        "asset":          "asset",           # not "attività" or "patrimonio"
-        "assets":         "asset",           # not "patrimonio"
-        "history":        "cronologia",      # not "storia" (world history)
-        "host":           "host",            # not "ospite" (same word as guest = confusion)
+        "asset":          "asset",
+        "assets":         "asset",
+        "history":        "cronologia",
+        "host":           "host",
         "hosts":          "host",
-        "exit":           "Esci",            # verb form, not "uscita" (noun/door)
-        "play":           "Riproduci",       # media player, not "giocare" (play a game)
-        "cancel":         "Annulla",         # verb form for buttons
-        "change":         "Cambia",          # verb form, not "Cambiamento" (noun)
-        "account":        "account",         # keep English (standard in Italian software)
-        # Terms to keep in English
+        "exit":           "Esci",
+        "play":           "Riproduci",
+        "cancel":         "Annulla",
+        "change":         "Cambia",
+        "account":        "account",
         "chat":           "chat",
         "desktop":        "desktop",
         "feedback":       "feedback",
         "layout":         "layout",
-        # Standard Italian UI terms
         "guest":          "ospite",
         "guests":         "ospiti",
         "workspace":      "area di lavoro",
@@ -173,45 +166,38 @@ GLOSSARIES = {
         "devices":        "dispositivi",
         "meeting":        "riunione",
         "meetings":       "riunioni",
+        "volume":         "volume",
     },
 }
 
 # -- Skip pattern --------------------------------------------------------------
-# Values that are pure $t() references — nothing to translate
 SKIP_TRANSLATION_PATTERN = re.compile(
     r"^\$t\([^)]+\)$"
     r"|^\$t\([^)]+\)\s+\$t\([^)]+\)$"
 )
 
 # -- Placeholder protection ----------------------------------------------------
-# Order matters: more specific patterns before general ones.
-# Numbered HTML-style tags are the main reordering risk — listed first.
 PLACEHOLDER_PATTERNS = [
-    re.compile(r"\$t\([^)]+\)"),                       # $t(key)
-    re.compile(r"\{\{[^}]+\}\}"),                      # {{variable}}
-    re.compile(r"<\d+>[^<]*</\d+>"),                   # <0>text</0>  full pair
-    re.compile(r"<\d+></\d+>"),                        # <1></1>      empty pair
-    re.compile(r"<\d+>"),                              # <0>          opening tag
-    re.compile(r"</\d+>"),                             # </0>         closing tag
-    re.compile(r"<[a-zA-Z]\w*>[^<]*</[a-zA-Z]\w*>"),  # <tag>text</tag>
-    re.compile(r"<[a-zA-Z]\w*>"),                      # <tag>
-    re.compile(r"</[a-zA-Z]\w*>"),                     # </tag>
-    re.compile(r"support@avatour\.live"),              # email address
-    re.compile(r"SuperFreeze"),                        # product name
+    re.compile(r"\$t\([^)]+\)"),
+    re.compile(r"\{\{[^}]+\}\}"),
+    re.compile(r"<\d+>[^<]*</\d+>"),
+    re.compile(r"<\d+></\d+>"),
+    re.compile(r"<\d+>"),
+    re.compile(r"</\d+>"),
+    re.compile(r"<[a-zA-Z]\w*>[^<]*</[a-zA-Z]\w*>"),
+    re.compile(r"<[a-zA-Z]\w*>"),
+    re.compile(r"</[a-zA-Z]\w*>"),
+    re.compile(r"support@avatour\.live"),
+    re.compile(r"SuperFreeze"),
 ]
 
 
 def mask_placeholders(text):
-    """
-    Replace all placeholder tokens with positional markers @@PH0@@, @@PH1@@...
-    Returns (masked_text, [original_placeholder_values]).
-    """
     matches = []
     for pattern in PLACEHOLDER_PATTERNS:
         for m in pattern.finditer(text):
             matches.append((m.start(), m.end(), m.group()))
 
-    # Sort by position; discard overlapping matches (keep first/longest)
     matches.sort(key=lambda x: x[0])
     non_overlapping = []
     last_end = -1
@@ -221,8 +207,6 @@ def mask_placeholders(text):
             last_end = end
 
     placeholders = [v for _, _, v in non_overlapping]
-
-    # Replace right-to-left so earlier positions stay valid
     masked = text
     for i, (start, end, _) in enumerate(reversed(non_overlapping)):
         idx = len(non_overlapping) - 1 - i
@@ -232,7 +216,6 @@ def mask_placeholders(text):
 
 
 def restore_placeholders(text, placeholders):
-    """Replace @@PHn@@ markers back with original placeholder values."""
     result = text
     for i, value in enumerate(placeholders):
         result = result.replace(f"@@PH{i}@@", value)
@@ -241,69 +224,84 @@ def restore_placeholders(text, placeholders):
 
 # -- DeepL Glossary API --------------------------------------------------------
 
-def build_glossary_entries(lang_code):
-    """
-    Combine language-specific terms with protected product names.
-    Returns a dict of { english_term: target_term }.
-    """
+def build_glossary_tsv(lang_code):
+    """Build TSV content for the glossary, including protected terms."""
     entries = dict(GLOSSARIES.get(lang_code, {}))
-    # Protected terms map to themselves (kept identical in all languages)
     for term in PROTECTED_TERMS:
         entries[term] = term
-    return entries
+    return "\n".join(f"{src}\t{tgt}" for src, tgt in entries.items()), len(entries)
 
 
 def create_glossary(lang_code):
     """
-    Create a DeepL glossary for lang_code. Returns glossary ID or None.
-    Deletes any pre-existing Avatour glossary for this language pair first.
+    Create a DeepL glossary using form-encoded data (required by v2 API).
+    Returns glossary ID or None on failure.
     """
     if not DEEPL_API_KEY:
         raise ValueError("DEEPL_API_KEY environment variable is not set.")
 
-    entries = build_glossary_entries(lang_code)
-    if not entries:
+    tsv_content, term_count = build_glossary_tsv(lang_code)
+    if not tsv_content:
         print(f"  No glossary entries for {lang_code}, skipping.")
         return None
 
-    headers = {
-        "Authorization": f"DeepL-Auth-Key {DEEPL_API_KEY}",
-        "Content-Type": "application/json",
-    }
-
-    # Remove any existing Avatour glossaries for this language pair
-    resp = requests.get(DEEPL_GLOSSARY_URL, headers=headers, timeout=15)
+    # Delete any existing Avatour glossaries for this language pair
+    auth_headers = {"Authorization": f"DeepL-Auth-Key {DEEPL_API_KEY}"}
+    resp = requests.get(DEEPL_GLOSSARY_URL, headers=auth_headers, timeout=15)
     if resp.status_code == 200:
         for g in resp.json().get("glossaries", []):
             if (g.get("name", "").startswith("avatour-ui-")
                     and g.get("target_lang", "").upper() == lang_code.upper()):
-                requests.delete(
+                del_resp = requests.delete(
                     f"{DEEPL_GLOSSARY_URL}/{g['glossary_id']}",
-                    headers=headers, timeout=15
+                    headers=auth_headers, timeout=15
                 )
-                print(f"  Deleted old glossary: {g['name']}")
+                print(f"  Deleted old glossary: {g['name']} "
+                      f"(status {del_resp.status_code})")
+    else:
+        print(f"  Warning: Could not list glossaries ({resp.status_code}): {resp.text}")
 
-    # Create new glossary
-    tsv_entries = "\n".join(f"{src}\t{tgt}" for src, tgt in entries.items())
-    payload = {
-        "name":           f"avatour-ui-{lang_code.lower()}",
-        "source_lang":    "EN",
-        "target_lang":    lang_code,
-        "entries":        tsv_entries,
-        "entries_format": "tsv",
-    }
+    # Create glossary using form-encoded data (NOT JSON — DeepL v2 requirement)
+    resp = requests.post(
+        DEEPL_GLOSSARY_URL,
+        headers=auth_headers,   # no Content-Type — requests sets it for data=
+        data={
+            "name":           f"avatour-ui-{lang_code.lower()}",
+            "source_lang":    "EN",
+            "target_lang":    lang_code,
+            "entries":        tsv_content,
+            "entries_format": "tsv",
+        },
+        timeout=15
+    )
 
-    resp = requests.post(DEEPL_GLOSSARY_URL, headers=headers,
-                         json=payload, timeout=15)
+    print(f"  Glossary create response: {resp.status_code}")
     if resp.status_code not in (200, 201):
-        print(f"  WARNING: Could not create glossary "
-              f"({resp.status_code}): {resp.text}")
+        print(f"  WARNING: Could not create glossary: {resp.text}")
         print(f"  Continuing without glossary — manual review recommended.")
         return None
 
-    glossary_id = resp.json()["glossary_id"]
+    result = resp.json()
+    glossary_id = result["glossary_id"]
+    ready = result.get("ready", False)
     print(f"  Glossary created: avatour-ui-{lang_code.lower()} "
-          f"({len(entries)} terms, id={glossary_id})")
+          f"({term_count} terms, id={glossary_id}, ready={ready})")
+
+    # Wait for glossary to be ready if needed
+    if not ready:
+        print("  Waiting for glossary to become ready...")
+        for _ in range(10):
+            time.sleep(2)
+            check = requests.get(
+                f"{DEEPL_GLOSSARY_URL}/{glossary_id}",
+                headers=auth_headers, timeout=15
+            )
+            if check.status_code == 200 and check.json().get("ready"):
+                print("  Glossary is ready.")
+                break
+        else:
+            print("  Warning: Glossary may not be ready yet, proceeding anyway.")
+
     return glossary_id
 
 
@@ -312,18 +310,17 @@ def delete_glossary(glossary_id):
     if not glossary_id:
         return
     headers = {"Authorization": f"DeepL-Auth-Key {DEEPL_API_KEY}"}
-    requests.delete(f"{DEEPL_GLOSSARY_URL}/{glossary_id}",
-                    headers=headers, timeout=15)
-    print(f"  Glossary deleted: {glossary_id}")
+    resp = requests.delete(
+        f"{DEEPL_GLOSSARY_URL}/{glossary_id}",
+        headers=headers, timeout=15
+    )
+    print(f"  Glossary deleted: {glossary_id} (status {resp.status_code})")
 
 
 # -- DeepL Translation API -----------------------------------------------------
 
 def translate_batch(texts, target_lang, glossary_id=None):
-    """
-    Translate a list of strings via DeepL.
-    Uses formal register (Sie / Lei) and attaches glossary when available.
-    """
+    """Translate a list of strings via DeepL with formal register."""
     if not DEEPL_API_KEY:
         raise ValueError("DEEPL_API_KEY environment variable is not set.")
 
@@ -331,7 +328,6 @@ def translate_batch(texts, target_lang, glossary_id=None):
         "Authorization": f"DeepL-Auth-Key {DEEPL_API_KEY}",
         "Content-Type": "application/json",
     }
-
     payload = {
         "text":                texts,
         "source_lang":         "EN",
@@ -352,10 +348,7 @@ def translate_batch(texts, target_lang, glossary_id=None):
 
 
 def translate_all(strings_dict, target_lang, glossary_id=None):
-    """
-    Translate all values in strings_dict to target_lang.
-    Pure $t() references are skipped. All placeholders are masked/restored.
-    """
+    """Translate all values, skipping pure $t() refs and protecting placeholders."""
     keys   = list(strings_dict.keys())
     values = list(strings_dict.values())
 
@@ -403,7 +396,7 @@ def write_excel(en_dict, translations, output_path):
     ws = wb.active
     ws.title = "Translations"
 
-    header_fill = PatternFill("solid", fgColor="132A39")  # Avatour navy
+    header_fill = PatternFill("solid", fgColor="132A39")
     header_font = Font(bold=True, color="FFFFFF")
     headers = ["Key", "English"] + [LANGUAGES[l] for l in translations]
 
@@ -419,7 +412,7 @@ def write_excel(en_dict, translations, output_path):
     for letter in ["C", "D", "E"]:
         ws.column_dimensions[letter].width = 50
 
-    alt_fill = PatternFill("solid", fgColor="F7F8F9")  # Avatour off-white
+    alt_fill = PatternFill("solid", fgColor="F7F8F9")
 
     for row_idx, key in enumerate(en_dict.keys(), 2):
         fill = alt_fill if row_idx % 2 == 0 else PatternFill()
@@ -461,6 +454,10 @@ def main():
 
         print("  Setting up glossary...")
         glossary_id = create_glossary(lang_code)
+        if glossary_id:
+            print(f"  Using glossary: {glossary_id}")
+        else:
+            print("  No glossary in use — terms may be inconsistent.")
 
         translated = translate_all(en_dict, lang_code, glossary_id)
         all_translations[lang_code] = translated
