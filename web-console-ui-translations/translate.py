@@ -46,7 +46,7 @@ except ImportError:
 # ── Configuration ─────────────────────────────────────────────────────────────
 
 DEEPL_API_KEY = os.environ.get("DEEPL_API_KEY", "")
-DEEPL_API_URL = "https://api.deepl.com/v2/translate"
+DEEPL_API_URL = "https://api-free.deepl.com/v2/translate"
 
 SOURCE_FILE = Path(__file__).parent / "en.json"
 DIST_DIR    = Path(__file__).parent / "dist"
