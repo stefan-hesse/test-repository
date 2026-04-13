@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Avatour ROI Calculator</title>
-<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
     --navy: #132A39;
@@ -14,34 +14,36 @@
     --orange-light: rgba(255,78,0,0.08);
     --orange-mid: rgba(255,78,0,0.15);
     --white: #ffffff;
-    --page-bg: #f7f8f9;
-    --text: #3d3d3d;
-    --text-muted: #667085;
+    --page-bg: #f5f7f9;
+    --text: #132A39;
+    --text-muted: #5a6e7a;
     --text-dim: #8a9eaa;
-    --border: #e4e7eb;
+    --border: #dde5ea;
     --border-light: #edf1f4;
     --card-bg: #ffffff;
     --card-hover: #f8fafc;
-    --input-bg: #f7f8f9;
+    --input-bg: #f5f7f9;
     --input-border: #ccd6dc;
     --green: #1a9e5c;
     --blue: #2272c3;
     --purple: #6d4fc2;
+    --font-d: 'Titillium Web', sans-serif;
+    --font-b: 'DM Sans', sans-serif;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { background: var(--page-bg); color: var(--text); font-family: 'Roboto', sans-serif; font-size: 16px; line-height: 26px; min-height: 100vh; }
+  body { background: var(--page-bg); color: var(--text); font-family: var(--font-b); font-size: 15px; line-height: 1.6; min-height: 100vh; }
 
   /* ── PAGE HEADER ── */
   .page-header { padding: 0; max-width: 100%; margin: 0; background: var(--navy); }
   .page-header-inner { padding: 52px 40px 48px; max-width: 1120px; margin: 0 auto; }
   .logo-row { margin-bottom: 44px; }
   .logo-img { height: 30px; }
-  .hero-label { font-family: 'Titillium Web', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--orange); margin-bottom: 12px; }
-  .hero-title { font-family: 'Titillium Web', sans-serif; font-size: 50px; font-weight: 600; line-height: 58px; margin-bottom: 16px; color: #ffffff; letter-spacing: 0; }
+  .hero-label { font-family: var(--font-d); font-size: 11px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--orange); margin-bottom: 12px; }
+  .hero-title { font-family: var(--font-d); font-size: clamp(30px,4.5vw,50px); font-weight: 700; line-height: 1.1; margin-bottom: 16px; color: #ffffff; }
   .hero-title em { font-style: normal; color: var(--orange); }
-  .hero-sub { font-family: 'Roboto', sans-serif; font-size: 22px; font-weight: 300; color: rgba(255,255,255,0.8); max-width: 580px; line-height: 28px; margin-bottom: 36px; }
+  .hero-sub { font-size: 15px; font-weight: 300; color: rgba(255,255,255,0.65); max-width: 580px; line-height: 1.75; margin-bottom: 36px; }
   .pillar-badges { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 44px; }
-  .pillar-badge { font-family: 'Roboto', sans-serif; display: flex; align-items: center; gap: 7px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); border-radius: 100px; padding: 5px 13px; font-size: 14px; color: rgba(255,255,255,0.75); font-weight: 400; }
+  .pillar-badge { display: flex; align-items: center; gap: 7px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); border-radius: 100px; padding: 5px 13px; font-size: 12px; color: rgba(255,255,255,0.65); font-weight: 500; }
   .pillar-badge .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--orange); flex-shrink: 0; }
 
   /* ── LAYOUT ── */
@@ -53,38 +55,38 @@
   .section-block:hover { border-color: #b8c8d4; box-shadow: 0 3px 12px rgba(19,42,57,0.09); }
   .section-header { display: flex; align-items: flex-start; gap: 13px; margin-bottom: 22px; }
   .section-icon { width: 40px; height: 40px; border-radius: 9px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: var(--orange-light); border: 1px solid rgba(255,78,0,.2); padding: 9px; }
-  .section-title { font-family: 'Titillium Web', sans-serif; font-size: 22px; line-height: 30px; font-weight: 600; margin-bottom: 3px; color: var(--navy); }
-  .section-desc { font-family: 'Roboto', sans-serif; font-size: 14px; line-height: 22px; color: var(--text-muted); }
-  .section-badge { display: inline-flex; align-items: center; gap: 5px; font-family: 'Titillium Web', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; background: var(--orange-light); border: 1px solid rgba(255,78,0,.2); color: var(--orange); border-radius: 100px; padding: 2px 9px; margin-top: 4px; }
+  .section-title { font-family: var(--font-d); font-size: 15px; font-weight: 700; margin-bottom: 3px; color: var(--navy); }
+  .section-desc { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+  .section-badge { display: inline-flex; align-items: center; gap: 5px; font-size: 10px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; background: var(--orange-light); border: 1px solid rgba(255,78,0,.2); color: var(--orange); border-radius: 100px; padding: 2px 9px; margin-top: 4px; }
 
   /* ── FORM ── */
   .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 13px; }
   .form-grid.cols-1 { grid-template-columns: 1fr; }
   .field { display: flex; flex-direction: column; gap: 5px; }
   .field.span-2 { grid-column: span 2; }
-  label { font-family: 'Titillium Web', sans-serif; font-size: 11px; font-weight: 600; color: var(--text-muted); letter-spacing: .04em; text-transform: uppercase; }
-  input[type="number"], input[type="text"], select { background: var(--input-bg); border: 1px solid var(--input-border); border-radius: 7px; padding: 8px 12px; color: var(--navy); font-family: 'Roboto', sans-serif; font-size: 16px; width: 100%; transition: border-color .2s; -moz-appearance: textfield; }
+  label { font-size: 11px; font-weight: 600; color: var(--text-muted); letter-spacing: .04em; text-transform: uppercase; }
+  input[type="number"], input[type="text"], select { background: var(--input-bg); border: 1px solid var(--input-border); border-radius: 7px; padding: 8px 12px; color: var(--text); font-family: var(--font-b); font-size: 13.5px; width: 100%; transition: border-color .2s; -moz-appearance: textfield; }
   input::-webkit-outer-spin-button, input::-webkit-inner-spin-button { -webkit-appearance: none; }
   input:focus, select:focus { outline: none; border-color: var(--orange); background: #ffffff; box-shadow: 0 0 0 3px rgba(255,78,0,.1); }
   select option { background: var(--navy-mid); }
-  .input-hint { font-family: 'Roboto', sans-serif; font-size: 14px; line-height: 22px; color: var(--text-muted); }
+  .input-hint { font-size: 10.5px; color: var(--text-muted); line-height: 1.4; }
   .divider { border: none; border-top: 1px solid var(--border-light); margin: 18px 0; }
 
   /* ── TRAVEL TABLE ── */
-  .travel-table { width: 100%; border-collapse: collapse; font-size: 14px; }
-  .travel-table th { font-family: 'Titillium Web', sans-serif; text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: .05em; color: var(--text-muted); font-weight: 600; padding: 0 8px 9px 0; border-bottom: 1px solid var(--border); }
+  .travel-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .travel-table th { text-align: left; font-size: 10.5px; text-transform: uppercase; letter-spacing: .05em; color: var(--text-muted); font-weight: 600; padding: 0 8px 9px 0; border-bottom: 1px solid var(--border); }
   .travel-table th:first-child { padding-left: 0; }
   .travel-table td { padding: 9px 8px 6px 0; vertical-align: middle; }
-  .travel-table td:first-child { font-family: 'Roboto', sans-serif; font-size: 14px; color: var(--text); font-weight: 500; white-space: nowrap; padding-left: 0; }
+  .travel-table td:first-child { font-size: 12px; color: var(--text); font-weight: 500; white-space: nowrap; padding-left: 0; }
   .travel-table input { width: 76px; text-align: right; padding: 7px 9px; }
 
   /* % check row */
   .pct-check-row { display: flex; justify-content: flex-end; align-items: center; gap: 8px; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); }
-  .pct-check-label { font-family: 'Roboto', sans-serif; font-size: 14px; color: var(--text-muted); font-weight: 500; }
-  .pct-total { font-family: 'Titillium Web', sans-serif; font-size: 16px; font-weight: 700; min-width: 50px; text-align: right; }
+  .pct-check-label { font-size: 11px; color: var(--text-muted); font-weight: 500; }
+  .pct-total { font-family: var(--font-d); font-size: 14px; font-weight: 700; min-width: 50px; text-align: right; }
   .pct-total.ok { color: var(--green); }
   .pct-total.bad { color: var(--red); }
-  .pct-hint { font-family: 'Roboto', sans-serif; font-size: 14px; color: var(--text-dim); }
+  .pct-hint { font-size: 10.5px; color: var(--text-dim); }
 
   /* ── USE CASES ── */
   .uc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 9px; }
@@ -93,69 +95,72 @@
   .uc-card.selected { border-color: var(--orange); background: var(--orange-light); }
   .uc-card input { display: none; }
   .uc-card-icon { width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; }
-  .uc-card-name { font-family: 'Titillium Web', sans-serif; font-size: 14px; font-weight: 600; line-height: 1.2; color: var(--navy); }
-  .uc-card-desc { font-family: 'Roboto', sans-serif; font-size: 12px; color: var(--text-muted); line-height: 1.35; }
+  .uc-card-name { font-family: var(--font-d); font-size: 12px; font-weight: 700; line-height: 1.2; color: var(--navy); }
+  .uc-card-desc { font-size: 10.5px; color: var(--text-muted); line-height: 1.35; }
   .uc-check { width: 14px; height: 14px; border-radius: 3px; border: 1.5px solid var(--input-border); background: transparent; margin-top: auto; display: flex; align-items: center; justify-content: center; transition: all .2s; font-size: 9px; }
   .uc-card.selected .uc-check { background: var(--orange); border-color: var(--orange); }
   .uc-card.selected .uc-check::after { content: '✓'; color: white; font-weight: 700; }
 
+  /* ── COST TOGGLE ── */
+
+
   /* ── CALC BTN ── */
-  .calc-btn { width: 100%; padding: 10px 20px; background: var(--orange); color: var(--white); font-family: 'Titillium Web', sans-serif; font-size: 18px; font-weight: 600; border: none; border-radius: 100px; cursor: pointer; transition: all .2s; margin-top: 6px; }
+  .calc-btn { width: 100%; padding: 15px; background: var(--orange); color: var(--white); font-family: var(--font-d); font-size: 15px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; border: none; border-radius: 9px; cursor: pointer; transition: all .2s; margin-top: 6px; }
   .calc-btn:hover { background: #e64400; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(255,78,0,.3); }
 
   /* ── STICKY RESULTS ── */
   .results-panel { position: sticky; top: 200px; align-self: start; }
   .results-card { background: var(--navy-light); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
   .results-header { background: var(--orange); padding: 18px 22px 16px; }
-  .results-header-label { font-family: 'Titillium Web', sans-serif; font-size: 10px; letter-spacing: .18em; text-transform: uppercase; opacity: .8; margin-bottom: 3px; }
-  .results-header-title { font-family: 'Titillium Web', sans-serif; font-size: 22px; font-weight: 600; line-height: 1.2; }
+  .results-header-label { font-family: var(--font-d); font-size: 10px; letter-spacing: .18em; text-transform: uppercase; opacity: .8; margin-bottom: 3px; }
+  .results-header-title { font-family: var(--font-d); font-size: 20px; font-weight: 700; line-height: 1.2; }
   .results-body { padding: 18px 22px; background: var(--navy); }
   .metric-row { display: flex; justify-content: space-between; align-items: baseline; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
   .metric-row:last-child { border-bottom: none; }
-  .metric-label { font-family: 'Roboto', sans-serif; font-size: 14px; color: rgba(255,255,255,0.65); }
-  .metric-value { font-family: 'Titillium Web', sans-serif; font-size: 16px; font-weight: 600; color: #ffffff; }
-  .metric-value.big { color: var(--orange); font-size: 22px; }
+  .metric-label { font-size: 12px; color: rgba(255,255,255,0.55); }
+  .metric-value { font-family: var(--font-d); font-size: 15px; font-weight: 700; color: #ffffff; }
+  .metric-value.big { color: var(--orange); font-size: 19px; }
   .metric-value.green { color: var(--orange); }
-  .metric-value.indent { font-family: 'Roboto', sans-serif; font-size: 14px; color: rgba(255,255,255,.7); }
+  .metric-value.indent { font-size: 13px; color: rgba(255,255,255,.7); }
 
   .breakdown-bar { margin: 14px 0 6px; }
-  .bar-label { font-family: 'Titillium Web', sans-serif; font-size: 10px; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 7px; }
+  .bar-label { font-size: 10.5px; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 7px; }
   .bar-track { height: 7px; border-radius: 100px; background: rgba(255,255,255,.12); overflow: hidden; display: flex; }
   .bar-seg { height: 100%; transition: width .6s cubic-bezier(.4,0,.2,1); }
   .bar-legend { display: flex; flex-wrap: wrap; gap: 7px 12px; margin-top: 8px; }
-  .bar-legend-item { font-family: 'Roboto', sans-serif; display: flex; align-items: center; gap: 5px; font-size: 12px; color: rgba(255,255,255,0.5); }
+  .bar-legend-item { display: flex; align-items: center; gap: 5px; font-size: 11px; color: rgba(255,255,255,0.5); }
   .legend-dot { width: 6px; height: 6px; border-radius: 50%; }
 
   .results-placeholder { padding: 28px 22px; text-align: center; }
   .results-placeholder-icon { font-size: 32px; opacity: .3; margin-bottom: 10px; }
-  .results-placeholder-text { font-family: 'Roboto', sans-serif; font-size: 14px; color: rgba(255,255,255,0.45); line-height: 22px; }
+  .results-placeholder-text { font-size: 12.5px; color: rgba(255,255,255,0.35); line-height: 1.6; }
 
   /* ── SLIDES SECTION ── */
   .slides-section { max-width: 1120px; margin: 0 auto; padding: 0 40px 60px; display: none; }
   .slides-section.visible { display: block; }
-  .slides-title { font-family: 'Titillium Web', sans-serif; font-size: 14px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 18px; display: flex; align-items: center; gap: 10px; }
+  .slides-title { font-family: var(--font-d); font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 18px; display: flex; align-items: center; gap: 10px; }
   .slides-section { background: #f0f4f7; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding-top: 48px !important; padding-bottom: 48px !important; }
   .slides-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
 
   /* Slide tabs */
   .slide-tabs { display: flex; gap: 8px; margin-bottom: 20px; }
-  .slide-tab { padding: 8px 18px; border-radius: 100px; border: 1px solid var(--border); background: #ffffff; color: var(--text-muted); font-family: 'Titillium Web', sans-serif; font-size: 14px; font-weight: 600; cursor: pointer; transition: all .2s; }
-  .slide-tab.active { border-color: var(--orange); background: var(--orange-light); color: var(--navy); }
+  .slide-tab { padding: 8px 18px; border-radius: 100px; border: 1px solid var(--border); background: #ffffff; color: var(--text-muted); font-family: var(--font-b); font-size: 12.5px; font-weight: 500; cursor: pointer; transition: all .2s; }
+  .slide-tab.active { border-color: var(--orange); background: var(--orange-light); color: var(--white); }
 
   /* Individual slide panels */
   .slide-panel { display: none; }
   .slide-panel.active { display: block; }
 
-  /* ── THE SLIDES — font-family updated only; sizes use clamp for scaling ── */
+  /* ── THE SLIDES ── */
   .roi-slide {
     background: #ffffff;
-    border: 1px solid #e4e7eb;
+    border: 1px solid #dde5ea;
     border-radius: 14px;
     overflow: hidden;
     position: relative;
     aspect-ratio: 16/9;
     max-height: 500px;
-    font-family: 'Titillium Web', sans-serif;
+    font-family: var(--font-d);
     box-shadow: 0 4px 24px rgba(19,42,57,0.10);
     display: flex;
     flex-direction: column;
@@ -169,38 +174,38 @@
   .slide-header-bar { display: flex; justify-content: space-between; align-items: center; background: var(--navy); padding: 2.5% 5.5%; flex-shrink: 0; z-index: 2; position: relative; }
   .slide-header-bar .sh-logo { height: clamp(14px,2vw,24px); }
   .slide-header-bar .sh-right { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; }
-  .slide-header-bar .sh-tag { font-family: 'Titillium Web', sans-serif; font-size: clamp(6px,.75vw,9px); font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--orange); }
-  .slide-header-bar .sh-company { font-family: 'Titillium Web', sans-serif; font-size: clamp(7px,.88vw,10.5px); font-weight: 600; color: rgba(255,255,255,0.85); letter-spacing: .02em; }
+  .slide-header-bar .sh-tag { font-size: clamp(6px,.75vw,9px); font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--orange); }
+  .slide-header-bar .sh-company { font-size: clamp(7px,.88vw,10.5px); font-weight: 600; color: rgba(255,255,255,0.85); letter-spacing: .02em; }
   .s1-top { display: flex; justify-content: space-between; align-items: flex-start; }
   .s1-logo { height: clamp(16px,2.2vw,27px); opacity: .9; }
-  .s1-tag { font-family: 'Titillium Web', sans-serif; font-size: clamp(7px,.9vw,11px); font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--orange); }
+  .s1-tag { font-size: clamp(7px,.9vw,11px); font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--orange); }
   .s1-mid { display: grid; grid-template-columns: 1fr 1fr; gap: 5%; align-items: start; flex: 1; margin: 3% 0 2%; }
-  .s1-left-title { font-family: 'Roboto', sans-serif; font-size: clamp(10px,1.4vw,16px); font-weight: 300; color: #667085; line-height: 1.4; margin-bottom: 5%; }
+  .s1-left-title { font-size: clamp(10px,1.4vw,16px); font-weight: 300; color: #5a6e7a; line-height: 1.4; margin-bottom: 5%; }
   .s1-left-title strong { font-weight: 700; color: var(--navy); }
   .s1-kpis { display: grid; grid-template-columns: 1fr 1fr; gap: 4% 6%; }
-  .s1-kpi .kpi-val { font-family: 'Titillium Web', sans-serif; font-size: clamp(20px,3.8vw,44px); font-weight: 700; line-height: 1; }
-  .s1-kpi .kpi-lab { font-family: 'Titillium Web', sans-serif; font-size: clamp(6px,.75vw,9px); font-weight: 600; letter-spacing: .11em; text-transform: uppercase; color: #8a9eaa; margin-top: 3px; }
+  .s1-kpi .kpi-val { font-size: clamp(20px,3.8vw,44px); font-weight: 700; line-height: 1; }
+  .s1-kpi .kpi-lab { font-size: clamp(6px,.75vw,9px); font-weight: 600; letter-spacing: .11em; text-transform: uppercase; color: #8a9eaa; margin-top: 3px; }
   .s1-soft { }
-  .s1-soft-title { font-family: 'Titillium Web', sans-serif; font-size: clamp(6px,.72vw,8.5px); font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #8a9eaa; margin-bottom: 6px; }
+  .s1-soft-title { font-size: clamp(6px,.72vw,8.5px); font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #8a9eaa; margin-bottom: 6px; }
   .s1-chips { display: flex; flex-wrap: wrap; gap: 4px; }
-  .s1-chip { font-family: 'Roboto', sans-serif; background: #f0f4f7; border: 1px solid #e4e7eb; border-radius: 100px; padding: 2px 8px; font-size: clamp(5.5px,.65vw,7.5px); color: #667085; font-weight: 500; }
+  .s1-chip { background: #f0f4f7; border: 1px solid #dde5ea; border-radius: 100px; padding: 2px 8px; font-size: clamp(5.5px,.65vw,7.5px); color: #5a6e7a; font-weight: 500; }
   .s1-chip.uc { background: var(--orange-light); border-color: rgba(255,78,0,.25); color: var(--orange); }
   .s1-bottom { display: flex; justify-content: space-between; align-items: flex-end; }
-  .s1-strapline { font-family: 'Roboto', sans-serif; font-size: clamp(7px,1vw,12px); font-weight: 300; color: #8a9eaa; }
+  .s1-strapline { font-size: clamp(7px,1vw,12px); font-weight: 300; color: #8a9eaa; }
   .s1-strapline em { font-style: normal; color: var(--orange); }
-  .s1-url { font-family: 'Roboto', sans-serif; font-size: clamp(5px,.65vw,8px); color: #aabbc6; margin-top: 2px; letter-spacing: .05em; }
-  .s1-company { font-family: 'Titillium Web', sans-serif; font-size: clamp(7px,.9vw,11px); font-weight: 600; color: var(--navy); text-align: right; letter-spacing: 0.03em; }
+  .s1-url { font-size: clamp(5px,.65vw,8px); color: #aabbc6; margin-top: 2px; letter-spacing: .05em; }
+  .s1-company { font-size: clamp(7px,.9vw,11px); font-weight: 600; color: var(--navy); text-align: right; letter-spacing: 0.03em; }
 
   /* Slide 2 — Financial Detail */
   .s2-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 3%; }
-  .s2-slide-title { font-family: 'Titillium Web', sans-serif; font-size: clamp(11px,1.5vw,18px); font-weight: 700; color: var(--navy); }
+  .s2-slide-title { font-size: clamp(11px,1.5vw,18px); font-weight: 700; color: var(--navy); }
   .s2-logo { height: clamp(14px,1.8vw,22px); opacity: .7; }
   .s2-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4% 5%; flex: 1; }
-  .s2-col-title { font-family: 'Titillium Web', sans-serif; font-size: clamp(7px,.85vw,10px); font-weight: 600; text-transform: uppercase; letter-spacing: .1em; color: #8a9eaa; margin-bottom: 4%; padding-bottom: 3%; border-bottom: 1px solid #edf1f4; }
+  .s2-col-title { font-size: clamp(7px,.85vw,10px); font-weight: 600; text-transform: uppercase; letter-spacing: .1em; color: #8a9eaa; margin-bottom: 4%; padding-bottom: 3%; border-bottom: 1px solid #edf1f4; }
   .s2-row { display: flex; justify-content: space-between; align-items: baseline; padding: 2.5% 0; border-bottom: 1px solid #f0f4f7; }
   .s2-row:last-child { border-bottom: none; }
-  .s2-row-label { font-family: 'Roboto', sans-serif; font-size: clamp(7px,.85vw,10px); color: #667085; }
-  .s2-row-val { font-family: 'Titillium Web', sans-serif; font-size: clamp(9px,1.1vw,13px); font-weight: 700; color: var(--navy); }
+  .s2-row-label { font-size: clamp(7px,.85vw,10px); color: #5a6e7a; }
+  .s2-row-val { font-size: clamp(9px,1.1vw,13px); font-weight: 700; color: var(--navy); }
   .s2-row-val.orange { color: var(--orange); }
   .s2-row-val.green { color: var(--orange); }
   .s2-row-val.blue { color: var(--navy); }
@@ -209,26 +214,26 @@
   .s2-bar-mini { height: 2px; background: #edf1f4; border-radius: 100px; overflow: hidden; margin-top: 2px; }
   .s2-bar-fill { height: 100%; border-radius: 100px; }
   .s2-total-row { display: flex; justify-content: space-between; align-items: center; margin-top: 4%; padding-top: 3%; border-top: 2px solid var(--orange); }
-  .s2-total-label { font-family: 'Titillium Web', sans-serif; font-size: clamp(7px,.85vw,10px); font-weight: 700; color: #667085; text-transform: uppercase; letter-spacing: .08em; }
-  .s2-total-val { font-family: 'Titillium Web', sans-serif; font-size: clamp(14px,2.2vw,26px); font-weight: 700; color: var(--orange); }
+  .s2-total-label { font-size: clamp(7px,.85vw,10px); font-weight: 700; color: #5a6e7a; text-transform: uppercase; letter-spacing: .08em; }
+  .s2-total-val { font-size: clamp(14px,2.2vw,26px); font-weight: 700; color: var(--orange); }
 
   /* Slide 3 — Soft Benefits */
   .s3-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 3%; }
-  .s3-slide-title { font-family: 'Titillium Web', sans-serif; font-size: clamp(11px,1.5vw,18px); font-weight: 700; color: var(--navy); }
+  .s3-slide-title { font-size: clamp(11px,1.5vw,18px); font-weight: 700; color: var(--navy); }
   .s3-logo { height: clamp(14px,1.8vw,22px); opacity: .7; }
-  .s3-sub { font-family: 'Roboto', sans-serif; font-size: clamp(7px,.88vw,10.5px); color: #667085; margin-bottom: 3.5%; font-weight: 400; line-height: 1.4; }
+  .s3-sub { font-size: clamp(7px,.88vw,10.5px); color: #5a6e7a; margin-bottom: 3.5%; font-weight: 400; line-height: 1.4; }
   .s3-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3%; flex: 1; }
-  .s3-card { background: #f7f8f9; border: 1px solid #e4e7eb; border-radius: 8px; padding: 4% 4.5%; display: flex; flex-direction: column; gap: 3%; transition: border-color .2s; }
+  .s3-card { background: #f5f7f9; border: 1px solid #dde5ea; border-radius: 8px; padding: 4% 4.5%; display: flex; flex-direction: column; gap: 3%; transition: border-color .2s; }
   .s3-card.uc-active { border-color: var(--orange); background: rgba(255,78,0,.06); }
   .s3-card-icon { width: clamp(16px,2vw,24px); height: clamp(16px,2vw,24px); display: flex; align-items: center; justify-content: center; }
-  .s3-card-title { font-family: 'Titillium Web', sans-serif; font-size: clamp(7px,.88vw,10.5px); font-weight: 700; line-height: 1.2; color: var(--navy); }
-  .s3-card-desc { font-family: 'Roboto', sans-serif; font-size: clamp(5.5px,.68vw,8px); color: #667085; line-height: 1.45; flex: 1; }
-  .s3-pill { font-family: 'Titillium Web', sans-serif; display: inline-flex; align-items: center; gap: 4px; background: rgba(255,78,0,.1); border: 1px solid rgba(255,78,0,.2); border-radius: 100px; padding: 1.5px 7px; font-size: clamp(5px,.6vw,7px); color: var(--orange); font-weight: 600; margin-top: auto; }
-  .s3-uc-badge { font-family: 'Titillium Web', sans-serif; font-size: clamp(5px,.58vw,6.5px); background: rgba(255,78,0,.12); border: 1px solid rgba(255,78,0,.2); color: var(--orange); padding: 1.5px 6px; border-radius: 100px; margin-top: 2px; display: inline-block; }
+  .s3-card-title { font-size: clamp(7px,.88vw,10.5px); font-weight: 700; line-height: 1.2; color: var(--navy); }
+  .s3-card-desc { font-size: clamp(5.5px,.68vw,8px); color: #5a6e7a; line-height: 1.45; flex: 1; }
+  .s3-pill { display: inline-flex; align-items: center; gap: 4px; background: rgba(255,78,0,.1); border: 1px solid rgba(255,78,0,.2); border-radius: 100px; padding: 1.5px 7px; font-size: clamp(5px,.6vw,7px); color: var(--orange); font-weight: 600; margin-top: auto; }
+  .s3-uc-badge { font-size: clamp(5px,.58vw,6.5px); background: rgba(255,78,0,.12); border: 1px solid rgba(255,78,0,.2); color: var(--orange); padding: 1.5px 6px; border-radius: 100px; margin-top: 2px; display: inline-block; }
 
   /* ── SLIDE ACTIONS ── */
   .slide-actions { display: flex; gap: 10px; margin-top: 14px; }
-  .action-btn { display: flex; align-items: center; gap: 6px; padding: 9px 16px; border-radius: 7px; border: 1px solid var(--border); background: #ffffff; color: var(--text-muted); font-family: 'Roboto', sans-serif; font-size: 14px; font-weight: 500; cursor: pointer; transition: all .2s; }
+  .action-btn { display: flex; align-items: center; gap: 6px; padding: 9px 16px; border-radius: 7px; border: 1px solid var(--border); background: #ffffff; color: var(--text-muted); font-family: var(--font-b); font-size: 12px; font-weight: 500; cursor: pointer; transition: all .2s; }
   .action-btn:hover { border-color: var(--orange); color: var(--orange); background: var(--orange-light); }
   .action-btn svg { width: 13px; height: 13px; flex-shrink: 0; }
 
@@ -236,44 +241,39 @@
   .soft-section { max-width: 100%; margin: 0; padding: 60px 0 80px; background: var(--navy); }
   .soft-section-inner { max-width: 1120px; margin: 0 auto; padding: 0 40px; }
   .soft-header { text-align: center; margin-bottom: 36px; }
-  .soft-eyebrow { font-family: 'Titillium Web', sans-serif; font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--orange); margin-bottom: 9px; }
-  .soft-title { font-family: 'Titillium Web', sans-serif; font-size: 40px; font-weight: 600; line-height: 50px; margin-bottom: 11px; color: #ffffff; letter-spacing: 0; }
-  .soft-subtitle { font-family: 'Roboto', sans-serif; font-size: 16px; color: rgba(255,255,255,0.75); max-width: 520px; margin: 0 auto; line-height: 26px; }
+  .soft-eyebrow { font-family: var(--font-d); font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--orange); margin-bottom: 9px; }
+  .soft-title { font-family: var(--font-d); font-size: clamp(20px,3.2vw,34px); font-weight: 700; line-height: 1.2; margin-bottom: 11px; color: #ffffff; }
+  .soft-subtitle { font-size: 14px; color: rgba(255,255,255,0.6); max-width: 520px; margin: 0 auto; line-height: 1.7; }
   .soft-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
   .soft-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 13px; padding: 22px; transition: all .25s; position: relative; overflow: hidden; }
   .soft-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--orange), transparent); opacity: 0; transition: opacity .25s; }
   .soft-card:hover { border-color: rgba(255,78,0,.4); transform: translateY(-2px); }
   .soft-card:hover::before { opacity: 1; }
   .soft-card-icon { width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; }
-  .soft-card-title { font-family: 'Titillium Web', sans-serif; font-size: 22px; font-weight: 600; line-height: 30px; margin-bottom: 7px; color: #ffffff; }
-  .soft-card-text { font-family: 'Roboto', sans-serif; font-size: 16px; color: rgba(255,255,255,0.7); line-height: 26px; }
-  .soft-card-indicator { font-family: 'Titillium Web', sans-serif; display: inline-flex; align-items: center; gap: 4px; margin-top: 11px; background: var(--orange-light); border: 1px solid rgba(255,78,0,.2); border-radius: 100px; padding: 2px 9px; font-size: 11px; font-weight: 600; color: var(--orange); letter-spacing: .04em; }
+  .soft-card-title { font-family: var(--font-d); font-size: 13.5px; font-weight: 700; margin-bottom: 7px; color: #ffffff; }
+  .soft-card-text { font-size: 12px; color: rgba(255,255,255,0.55); line-height: 1.6; }
+  .soft-card-indicator { display: inline-flex; align-items: center; gap: 4px; margin-top: 11px; background: var(--orange-light); border: 1px solid rgba(255,78,0,.2); border-radius: 100px; padding: 2px 9px; font-size: 10px; font-weight: 600; color: var(--orange); letter-spacing: .04em; }
 
   /* ── TOAST ── */
-  .toast { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%) translateY(8px); background: var(--orange); color: var(--white); font-family: 'Roboto', sans-serif; font-size: 14px; font-weight: 600; padding: 9px 20px; border-radius: 100px; opacity: 0; pointer-events: none; transition: all .3s; z-index: 200; }
+  .toast { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%) translateY(8px); background: var(--orange); color: var(--white); font-family: var(--font-b); font-size: 12.5px; font-weight: 600; padding: 9px 20px; border-radius: 100px; opacity: 0; pointer-events: none; transition: all .3s; z-index: 200; }
   .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
   /* Company name input row */
   .company-row { background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; padding: 18px 28px; margin-bottom: 18px; display: flex; align-items: center; gap: 16px; box-shadow: 0 1px 4px rgba(19,42,57,0.06); }
-  .company-row label { margin: 0; text-transform: none; font-family: 'Roboto', sans-serif; font-size: 16px; font-weight: 600; color: var(--navy); white-space: nowrap; }
+  .company-row label { margin: 0; text-transform: none; font-size: 13px; font-weight: 600; color: var(--text); white-space: nowrap; }
   .company-row input { max-width: 280px; }
 
   /* Responsive */
-  @media (max-width: 991px) {
+  @media (max-width: 860px) {
     .calc-layout, .calc-layout.has-results { display: block; padding: 0 20px 60px; }
     .page-header-inner { padding: 36px 20px 36px; }
-    .hero-title { font-size: 38px; line-height: 46px; }
-    .hero-sub { font-size: 18px; line-height: 26px; }
     .results-panel { position: static; }
     .uc-grid { grid-template-columns: repeat(2,1fr); }
     .soft-grid { grid-template-columns: 1fr 1fr; }
-    .soft-title { font-size: 32px; line-height: 42px; }
     .slides-section { padding: 36px 20px !important; }
     .soft-section-inner { padding: 0 20px; }
   }
-  @media (max-width: 767px) {
-    .hero-title { font-size: 28px; line-height: 36px; }
-    .soft-title { font-size: 24px; line-height: 32px; }
+  @media (max-width: 540px) {
     .form-grid { grid-template-columns: 1fr; }
     .form-grid .field.span-2 { grid-column: span 1; }
     .soft-grid { grid-template-columns: 1fr; }
@@ -291,18 +291,19 @@
   </div>
   <div class="hero-label">ROI Calculator</div>
   <h1 class="hero-title">Avatour pays <span style="color:#ffffff;">quickly</span> for itself.<br><em>Everything else is a bonus.</em></h1>
-  <p class="hero-sub">Enter your numbers below to see hard-dollar savings across all three Avatour pillars — live meetings, async collaboration, and AI-powered inspection reports.</p>
+  <p class="hero-sub">Enter your numbers below to see hard-dollar savings across all three Avatour pillars — live sessions, async collaboration, and AI-powered inspection reports.</p>
   <div class="pillar-badges">
-    <div class="pillar-badge"><span class="dot"></span>Pillar 1 — Live 360° Meetings</div>
+    <div class="pillar-badge"><span class="dot"></span>Pillar 1 — Live 360° Sessions</div>
     <div class="pillar-badge"><span class="dot"></span>Pillar 2 — Recorded Collaboration (Sync &amp; Async)</div>
     <div class="pillar-badge"><span class="dot"></span>Pillar 3 — AI Inspection Reports</div>
   </div>
-</div>
-</div>
+</div><!-- /page-header-inner -->
+</div><!-- /page-header -->
 
 <div class="calc-layout">
 <div class="calc-inputs">
 
+  <!-- Company name -->
   <div class="company-row">
     <label for="company_name">Prepared for:</label>
     <input type="text" id="company_name" placeholder="Your company name (optional — appears on slides)">
@@ -311,7 +312,7 @@
   <!-- USE CASES -->
   <div class="section-block">
     <div class="section-header">
-      <div class="section-icon"><img src="https://res.cloudinary.com/avatour/image/upload/icon-shake-hands_wlrkbm.svg" style="width:22px;height:22px;display:block;" alt=""></div>
+      <div class="section-icon"><img src="https://res.cloudinary.com/avatour/image/upload/trust_airkvi.svg" style="width:22px;height:22px;display:block;" alt=""></div>
       <div>
         <div class="section-title">Your Avatour Use Cases</div>
         <div class="section-desc">Select all that apply. Your selection shapes the soft benefit analysis on Slide 3.</div>
@@ -319,19 +320,19 @@
     </div>
     <div class="uc-grid">
       <label class="uc-card" onclick="toggleUC(this)">
-        <div class="uc-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/remote-inspection_atolbr.svg" style="width:24px;height:24px;display:block;" alt=""></div>
+        <div class="uc-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/ensure-quality_yyukw2.svg" style="width:24px;height:24px;display:block;" alt=""></div>
         <div class="uc-card-name">Remote Inspections &amp; Audits</div>
         <div class="uc-card-desc">Quality, supplier, compliance, safety</div>
         <div class="uc-check"></div>
       </label>
       <label class="uc-card" onclick="toggleUC(this)">
-        <div class="uc-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/improve-processes_jysb1x.svg" style="width:24px;height:24px;display:block;" alt=""></div>
+        <div class="uc-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/increase-frequency_ev24y4.svg" style="width:24px;height:24px;display:block;" alt=""></div>
         <div class="uc-card-name">Gemba &amp; Continuous Improvement</div>
         <div class="uc-card-desc">Lean walks, process reviews</div>
         <div class="uc-check"></div>
       </label>
       <label class="uc-card" onclick="toggleUC(this)">
-        <div class="uc-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/icon-shake-hands_wlrkbm.svg" style="width:24px;height:24px;display:block;" alt=""></div>
+        <div class="uc-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/trust_airkvi.svg" style="width:24px;height:24px;display:block;" alt=""></div>
         <div class="uc-card-name">Customer &amp; Sales Tours</div>
         <div class="uc-card-desc">Show capabilities, win contracts</div>
         <div class="uc-check"></div>
@@ -349,7 +350,7 @@
         <div class="uc-check"></div>
       </label>
       <label class="uc-card" onclick="toggleUC(this)">
-        <div class="uc-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/icon-timeline_vp8z17.svg" style="width:24px;height:24px;display:block;" alt=""></div>
+        <div class="uc-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/AEC_xlb42k.svg" style="width:24px;height:24px;display:block;" alt=""></div>
         <div class="uc-card-name">Architecture &amp; Construction</div>
         <div class="uc-card-desc">Progress reviews, handovers</div>
         <div class="uc-check"></div>
@@ -362,21 +363,43 @@
     <div class="section-header">
       <div class="section-icon"><img src="https://res.cloudinary.com/avatour/image/upload/icon-plane_oczrqp.svg" style="width:22px;height:22px;display:block;" alt=""></div>
       <div>
-        <div class="section-title">Pillar 1 — Live 360° Meetings</div>
+        <div class="section-title">Pillar 1 — Live 360° Sessions</div>
         <div class="section-badge">Replaces in-person site visits</div>
         <div class="section-desc" style="margin-top:6px;">Travel cost, productive time recovered, and CO₂ avoided. Calculation matches the Avatour ROI model.</div>
       </div>
     </div>
+
     <div class="form-grid">
-      <div class="field"><label>Number of Locations</label><input type="number" id="p1_sites" value="5" min="1"></div>
-      <div class="field"><label>Meetings per Year per Location</label><input type="number" id="p1_meetings" value="4" min="1"></div>
-      <div class="field"><label>Remote Attendees per Meeting</label><input type="number" id="p1_attendees" value="6" min="1"></div>
-      <div class="field"><label>Hourly Rate / Productivity Value (USD)</label><input type="number" id="p1_rate" value="100" min="1"></div>
-      <div class="field"><label>Per-diem Cost per Overnight (USD)</label><input type="number" id="p1_perdiem" value="200" min="0"></div>
-      <div class="field"><label>% of Air Travelers — Business Class</label><input type="number" id="p1_bizclass" value="25" min="0" max="100"></div>
+      <div class="field">
+        <label>Number of Locations</label>
+        <input type="number" id="p1_sites" value="5" min="1">
+      </div>
+      <div class="field">
+        <label>Sessions per Month per Location</label>
+        <input type="number" id="p1_sessions" value="4" min="1">
+      </div>
+      <div class="field">
+        <label>Remote Attendees per Session</label>
+        <input type="number" id="p1_attendees" value="6" min="1">
+      </div>
+      <div class="field">
+        <label>Hourly Rate / Productivity Value (USD)</label>
+        <input type="number" id="p1_rate" value="100" min="1">
+      </div>
+      <div class="field">
+        <label>Per-diem Cost per Overnight (USD)</label>
+        <input type="number" id="p1_perdiem" value="200" min="0">
+      </div>
+      <div class="field">
+        <label>% of Air Travelers — Business Class</label>
+        <input type="number" id="p1_bizclass" value="25" min="0" max="100">
+      </div>
     </div>
+
     <hr class="divider">
-    <div style="font-family:'Titillium Web',sans-serif;font-size:14px;font-weight:700;color:var(--text-muted);margin-bottom:12px;text-transform:uppercase;letter-spacing:.05em;">Travel Mix &amp; Distance</div>
+
+    <div style="font-family:var(--font-d); font-size:12.5px; font-weight:700; color:var(--text-muted); margin-bottom:12px; text-transform:uppercase; letter-spacing:.05em;">Travel Mix &amp; Distance</div>
+
     <table class="travel-table">
       <thead>
         <tr>
@@ -413,6 +436,7 @@
         </tr>
       </tbody>
     </table>
+
     <div class="pct-check-row">
       <span class="pct-check-label">% total:</span>
       <span class="pct-total ok" id="pct_total">100%</span>
@@ -427,9 +451,10 @@
       <div>
         <div class="section-title">Pillar 2 — Recorded Collaboration (Sync &amp; Async)</div>
         <div class="section-badge">Reviews of recorded 360° assets</div>
-        <div class="section-desc" style="margin-top:6px;">Every time your team reviews a recorded 360° asset together — whether in a live workspace meeting or solo async — it can replace what would otherwise have been an onsite visit. The calculator uses the same travel cost model as Pillar 1 to value each replaced visit, then applies your conversion factor to reflect how often that's actually the case.</div>
+        <div class="section-desc" style="margin-top:6px;">Covers both synchronous workspace meetings and solo async review of recorded 360° content. Same savings categories as Pillar 1, with a conversion factor for trips actually replaced.</div>
       </div>
     </div>
+
     <div class="form-grid">
       <div class="field">
         <label>Collaboration Events per Month</label>
@@ -443,7 +468,7 @@
       <div class="field span-2">
         <label>% of Events Replacing a Full Onsite Visit</label>
         <input type="number" id="p2_replace_pct" value="10" min="0" max="100">
-        <span class="input-hint">What fraction of these collaboration events genuinely replaces a trip that would otherwise have happened? 10% is a conservative starting point — raise it if your team regularly uses recorded meetings instead of travelling to site.</span>
+        <span class="input-hint">Conservative default: 10%. These events use the same travel cost model as Pillar 1 to calculate savings — travel mix, per-diem, and hourly rate above apply.</span>
       </div>
     </div>
   </div>
@@ -451,22 +476,32 @@
   <!-- PILLAR 3 -->
   <div class="section-block">
     <div class="section-header">
-      <div class="section-icon"><img src="https://res.cloudinary.com/avatour/image/upload/icon-pinned-note-2_quli8e.svg" style="width:22px;height:22px;display:block;" alt=""></div>
+      <div class="section-icon"><img src="https://res.cloudinary.com/avatour/image/upload/collaborate-annotate_eucxva.svg" style="width:22px;height:22px;display:block;" alt=""></div>
       <div>
         <div class="section-title">Pillar 3 — AI Inspection Report Generation</div>
         <div class="section-badge">New capability</div>
-        <div class="section-desc" style="margin-top:6px;">Avatour AI auto-generates structured inspection reports with findings linked directly to 360° video timestamps — eliminating hours of post-meeting report writing.</div>
+        <div class="section-desc" style="margin-top:6px;">Avatour AI auto-generates structured inspection reports with findings linked directly to 360° video timestamps — eliminating hours of post-session report writing.</div>
       </div>
     </div>
+
     <div class="form-grid">
-      <div class="field"><label>AI-Assisted Inspections per Month</label><input type="number" id="p3_inspections" value="8" min="0"></div>
-      <div class="field"><label>Hours Spent Writing Report (Before AI)</label><input type="number" id="p3_hours" value="3" min="0" step="0.5"></div>
+      <div class="field">
+        <label>AI-Assisted Inspections per Month</label>
+        <input type="number" id="p3_inspections" value="8" min="0">
+      </div>
+      <div class="field">
+        <label>Hours Spent Writing Report (Before AI)</label>
+        <input type="number" id="p3_hours" value="3" min="0" step="0.5">
+      </div>
       <div class="field">
         <label>% of Report Time Saved by AI</label>
         <input type="number" id="p3_pct" value="80" min="0" max="100">
         <span class="input-hint">AI handles transcription, template fill &amp; evidence linking</span>
       </div>
-      <div class="field"><label>Hourly Rate of Inspector / Auditor (USD)</label><input type="number" id="p3_rate" value="85" min="1"></div>
+      <div class="field">
+        <label>Hourly Rate of Inspector / Auditor (USD)</label>
+        <input type="number" id="p3_rate" value="85" min="1">
+      </div>
     </div>
   </div>
 
@@ -479,11 +514,13 @@
         <div class="section-desc">Used to calculate net ROI and payback period.</div>
       </div>
     </div>
+
+
     <div id="cost_custom_block">
       <div class="form-grid cols-1">
         <div class="field">
           <label>Your Annual Avatour Cost (USD)</label>
-          <input type="number" id="cost_cust_val" value="" min="0">
+          <input type="number" id="cost_cust_val" value="" min="0" >
           <span class="input-hint">Enter your actual annual subscription cost to calculate net ROI and payback period.</span>
         </div>
       </div>
@@ -521,26 +558,26 @@
     <button class="slide-tab" onclick="showSlide(3,this)">3 — Soft Benefits</button>
   </div>
 
-  <!-- SLIDE 1 -->
+  <!-- SLIDE 1: Overview -->
   <div class="slide-panel active" id="slide-panel-1">
     <div class="roi-slide" id="roi-slide-1">
       <div class="slide-deco1"></div><div class="slide-deco2"></div>
       <div class="slide-header-bar">
-        <img src="https://res.cloudinary.com/avatour/image/upload/v1772627126/avatour-name-logo-whiteontransparent_zwfsxa.svg" class="sh-logo" alt="Avatour">
-        <div class="sh-right">
-          <div class="sh-tag">Avatour ROI Analysis</div>
-          <div class="sh-company" id="sl1_company_hdr"></div>
+          <img src="https://res.cloudinary.com/avatour/image/upload/v1772627126/avatour-name-logo-whiteontransparent_zwfsxa.svg" class="sh-logo" alt="Avatour">
+          <div class="sh-right">
+            <div class="sh-tag">Avatour ROI Analysis</div>
+            <div class="sh-company" id="sl1_company_hdr"></div>
+          </div>
         </div>
-      </div>
       <div class="slide-content">
         <div class="s1-mid">
           <div>
-            <div class="s1-left-title" id="sl1_headline">Across <strong id="sl1_sites">—</strong> sites &amp; <strong id="sl1_meetings">—</strong> meetings/year,<br>Avatour delivers measurable returns.</div>
+            <div class="s1-left-title" id="sl1_headline">Across <strong id="sl1_sites">—</strong> sites &amp; <strong id="sl1_sessions">—</strong> sessions/month,<br>Avatour delivers measurable returns.</div>
             <div class="s1-kpis">
               <div class="s1-kpi"><div class="kpi-val" id="sl1_savings" style="color:var(--orange)">—</div><div class="kpi-lab">Annual Gross Savings</div></div>
               <div class="s1-kpi"><div class="kpi-val" id="sl1_roi" style="color:var(--navy)">—</div><div class="kpi-lab">Net ROI</div></div>
-              <div class="s1-kpi"><div class="kpi-val" id="sl1_payback" style="font-size:clamp(14px,2.2vw,26px);color:var(--navy)">—</div><div class="kpi-lab">Payback Period</div></div>
-              <div class="s1-kpi"><div class="kpi-val" id="sl1_co2" style="font-size:clamp(12px,1.8vw,22px);color:var(--orange)">—</div><div class="kpi-lab">CO₂ Avoided / yr</div></div>
+              <div class="s1-kpi"><div class="kpi-val" id="sl1_payback" style="font-size:clamp(14px,2.2vw,26px); color:var(--navy)">—</div><div class="kpi-lab">Payback Period</div></div>
+              <div class="s1-kpi"><div class="kpi-val" id="sl1_co2" style="font-size:clamp(12px,1.8vw,22px); color:var(--orange)">—</div><div class="kpi-lab">CO₂ Avoided / yr</div></div>
             </div>
           </div>
           <div class="s1-soft">
@@ -565,25 +602,26 @@
           </div>
           <div class="s1-company" id="sl1_company" style="display:none"></div>
         </div>
-      </div>
+      </div><!-- /slide-content -->
     </div>
   </div>
 
-  <!-- SLIDE 2 -->
+  <!-- SLIDE 2: Financial Detail -->
   <div class="slide-panel" id="slide-panel-2">
     <div class="roi-slide" id="roi-slide-2">
       <div class="slide-deco1"></div><div class="slide-deco2"></div>
       <div class="slide-header-bar">
-        <img src="https://res.cloudinary.com/avatour/image/upload/v1772627126/avatour-name-logo-whiteontransparent_zwfsxa.svg" class="sh-logo" alt="Avatour">
-        <div class="sh-right">
-          <div class="sh-tag">Financial Details</div>
-          <div class="sh-company" id="sl2_company_hdr"></div>
+          <img src="https://res.cloudinary.com/avatour/image/upload/v1772627126/avatour-name-logo-whiteontransparent_zwfsxa.svg" class="sh-logo" alt="Avatour">
+          <div class="sh-right">
+            <div class="sh-tag">Financial Details</div>
+            <div class="sh-company" id="sl2_company_hdr"></div>
+          </div>
         </div>
-      </div>
       <div class="slide-content">
         <div class="s2-grid">
+          <!-- P1 -->
           <div>
-            <div class="s2-col-title">Pillar 1 — Live Meetings</div>
+            <div class="s2-col-title">Pillar 1 — Live Sessions</div>
             <div class="s2-row"><span class="s2-row-label">Travel cost savings</span><span class="s2-row-val orange" id="sl2_p1_travel">—</span></div>
             <div class="s2-bar-mini"><div class="s2-bar-fill" id="sl2_bar_p1t" style="background:var(--orange);width:0%"></div></div>
             <div class="s2-row"><span class="s2-row-label">Productivity time recovered</span><span class="s2-row-val orange" id="sl2_p1_time">—</span></div>
@@ -591,46 +629,50 @@
             <div class="s2-row"><span class="s2-row-label">CO₂ avoided</span><span class="s2-row-val green" id="sl2_p1_co2">—</span></div>
             <div class="s2-total-row"><span class="s2-total-label">P1 Subtotal</span><span class="s2-total-val" id="sl2_p1_total">—</span></div>
           </div>
+          <!-- P2 + P3 + Cost -->
           <div>
             <div class="s2-col-title">Pillar 2 — Recorded Collaboration</div>
             <div class="s2-row"><span class="s2-row-label">Travel cost savings</span><span class="s2-row-val blue" id="sl2_p2_travel">—</span></div>
             <div class="s2-row"><span class="s2-row-label">Productivity time recovered</span><span class="s2-row-val blue" id="sl2_p2_time">—</span></div>
             <div class="s2-total-row" style="margin-bottom:6%;"><span class="s2-total-label">P2 Subtotal</span><span class="s2-total-val" style="color:var(--navy)" id="sl2_p2_total">—</span></div>
+
             <div class="s2-col-title">Pillar 3 — AI Reports</div>
             <div class="s2-row"><span class="s2-row-label">Report time saved / yr</span><span class="s2-row-val purple" id="sl2_p3_total">—</span></div>
             <div class="s2-total-row">
               <div>
                 <div class="s2-total-label">Total Gross / Net ROI</div>
-                <div style="font-size:clamp(5px,.65vw,8px);color:#8a9eaa;margin-top:1px;">after Avatour cost of <span id="sl2_cost">—</span>/yr</div>
+                <div style="font-size:clamp(5px,.65vw,8px); color:#8a9eaa; margin-top:1px;">after Avatour cost of <span id="sl2_cost">—</span>/yr</div>
               </div>
               <div style="text-align:right;">
                 <div class="s2-total-val" id="sl2_gross">—</div>
-                <div style="font-size:clamp(9px,1.4vw,17px);font-weight:700;color:var(--navy)" id="sl2_net">—</div>
+                <div style="font-size:clamp(9px,1.4vw,17px); font-weight:700; color:var(--navy)" id="sl2_net">—</div>
               </div>
             </div>
           </div>
         </div>
-        <div style="text-align:right;font-size:clamp(5px,.65vw,8px);color:#8a9eaa;font-weight:600;margin-top:2%;" id="sl2_company"></div>
-      </div>
+        <div style="text-align:right; font-size:clamp(5px,.65vw,8px); color:#8a9eaa; font-weight:600; margin-top:2%;" id="sl2_company"></div>
+      </div><!-- /slide-content -->
     </div>
   </div>
 
-  <!-- SLIDE 3 -->
+  <!-- SLIDE 3: Soft Benefits -->
   <div class="slide-panel" id="slide-panel-3">
     <div class="roi-slide" id="roi-slide-3">
       <div class="slide-deco1"></div><div class="slide-deco2"></div>
       <div class="slide-header-bar">
-        <img src="https://res.cloudinary.com/avatour/image/upload/v1772627126/avatour-name-logo-whiteontransparent_zwfsxa.svg" class="sh-logo" alt="Avatour">
-        <div class="sh-right">
-          <div class="sh-tag">What Comes For Free On Top</div>
-          <div class="sh-company" id="sl3_company_hdr"></div>
+          <img src="https://res.cloudinary.com/avatour/image/upload/v1772627126/avatour-name-logo-whiteontransparent_zwfsxa.svg" class="sh-logo" alt="Avatour">
+          <div class="sh-right">
+            <div class="sh-tag">What Comes For Free On Top</div>
+            <div class="sh-company" id="sl3_company_hdr"></div>
+          </div>
         </div>
-      </div>
       <div class="slide-content">
         <div class="s3-sub" id="sl3_sub">Strategic &amp; qualitative benefits beyond the financial ROI calculated above. Highlighted cards are particularly relevant to your selected use cases.</div>
-        <div class="s3-grid" id="sl3_grid"></div>
-        <div style="text-align:right;font-size:clamp(5px,.65vw,8px);color:#8a9eaa;font-weight:600;" id="sl3_company"></div>
-      </div>
+        <div class="s3-grid" id="sl3_grid">
+          <!-- populated by JS -->
+        </div>
+        <div style="text-align:right; font-size:clamp(5px,.65vw,8px); color:#8a9eaa; font-weight:600;" id="sl3_company"></div>
+      </div><!-- /slide-content -->
     </div>
   </div>
 
@@ -657,7 +699,7 @@
   </div>
   <div class="soft-grid">
     <div class="soft-card">
-      <div class="soft-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/icon-align-teams_vjcarc.svg" style="width:28px;height:28px;display:block;margin-bottom:10px;" alt=""></div>
+      <div class="soft-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/align-teams_ukfu5z.svg" style="width:28px;height:28px;display:block;margin-bottom:10px;" alt=""></div>
       <div class="soft-card-title">Better Decision Quality</div>
       <div class="soft-card-text">More experts join simultaneously — on-site specialists, remote managers, external consultants — increasing quality of findings and reducing costly rework cycles.</div>
       <div class="soft-card-indicator">High Impact</div>
@@ -665,7 +707,7 @@
     <div class="soft-card">
       <div class="soft-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/realtime-communication_ylphs5.svg" style="width:28px;height:28px;display:block;margin-bottom:10px;" alt=""></div>
       <div class="soft-card-title">Faster Corrective Action</div>
-      <div class="soft-card-text">Issues identified during an Avatour meeting are linked directly to 360° video evidence, allowing teams to act immediately rather than waiting for a follow-up visit.</div>
+      <div class="soft-card-text">Issues identified during an Avatour session are linked directly to 360° video evidence, allowing teams to act immediately rather than waiting for a follow-up visit.</div>
       <div class="soft-card-indicator">High Impact</div>
     </div>
     <div class="soft-card">
@@ -675,7 +717,7 @@
       <div class="soft-card-indicator">Very High Impact</div>
     </div>
     <div class="soft-card">
-      <div class="soft-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/virtual-tours_myn8xh.svg" style="width:28px;height:28px;display:block;margin-bottom:10px;" alt=""></div>
+      <div class="soft-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/expertise-anytime_anrxbg.svg" style="width:28px;height:28px;display:block;margin-bottom:10px;" alt=""></div>
       <div class="soft-card-title">Improved Work-Life Balance</div>
       <div class="soft-card-text">Fewer long-haul trips means less fatigue and burnout — especially for senior managers and quality engineers who travel most frequently.</div>
       <div class="soft-card-indicator">High Impact</div>
@@ -683,38 +725,47 @@
     <div class="soft-card">
       <div class="soft-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/reduce-downtime_wmba73.svg" style="width:28px;height:28px;display:block;margin-bottom:10px;" alt=""></div>
       <div class="soft-card-title">Less Site Disruption</div>
-      <div class="soft-card-text">A 360° meeting is far less disruptive than a physical delegation visit — reducing preparation effort and downtime for host teams.</div>
+      <div class="soft-card-text">A 360° session is far less disruptive than a physical delegation visit — reducing preparation effort and downtime for host teams.</div>
       <div class="soft-card-indicator">Medium Impact</div>
     </div>
     <div class="soft-card">
       <div class="soft-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/record-playback_z91edi.svg" style="width:28px;height:28px;display:block;margin-bottom:10px;" alt=""></div>
       <div class="soft-card-title">Permanent Visual Record</div>
-      <div class="soft-card-text">Every meeting creates a dated, searchable 360° video archive — invaluable for audits, training, project handovers, and compliance documentation.</div>
+      <div class="soft-card-text">Every session creates a dated, searchable 360° video archive — invaluable for audits, training, project handovers, and compliance documentation.</div>
       <div class="soft-card-indicator">Very High Impact</div>
     </div>
   </div>
-</div>
+</div><!-- /soft-section-inner -->
 
 <div class="toast" id="toast"></div>
 
 <script>
+// ───────────────────────────────────────────────
+// UTILITIES
+// ───────────────────────────────────────────────
 function v(id) { return parseFloat(document.getElementById(id).value) || 0; }
 function vs(id) { return document.getElementById(id).value.trim(); }
+
 function fmt(n) {
   if (n >= 1e6) return '$' + (n/1e6).toFixed(1) + 'M';
   if (n >= 1000) return '$' + Math.round(n/1000) + 'K';
   return '$' + Math.round(n).toLocaleString();
 }
 function fmtFull(n) { return '$' + Math.round(n).toLocaleString(); }
+
 function showToast(msg) {
   const t = document.getElementById('toast');
   t.textContent = msg;
   t.classList.add('show');
   setTimeout(() => t.classList.remove('show'), 3500);
 }
+
 function el(id) { return document.getElementById(id); }
 function setText(id, val) { const e = el(id); if(e) e.textContent = val; }
 
+// ───────────────────────────────────────────────
+// % CHECK
+// ───────────────────────────────────────────────
 function updatePctCheck() {
   const total = v('car_pct') + v('train_pct') + v('cont_pct') + v('inter_pct');
   const disp = el('pct_total');
@@ -732,13 +783,25 @@ function updatePctCheck() {
   }
 }
 
-function toggleUC(card) { card.classList.toggle('selected'); }
+// ───────────────────────────────────────────────
+// USE CASE TOGGLE
+// ───────────────────────────────────────────────
+function toggleUC(card) {
+  card.classList.toggle('selected');
+}
 
 function getSelectedUCs() {
   return Array.from(document.querySelectorAll('.uc-card.selected'))
     .map(c => ({ name: c.querySelector('.uc-card-name').textContent.trim(), icon: c.querySelector('.uc-card-icon').textContent.trim() }));
 }
 
+// ───────────────────────────────────────────────
+// COST MODE
+
+
+// ───────────────────────────────────────────────
+// SLIDE TABS
+// ───────────────────────────────────────────────
 function showSlide(n, btn) {
   document.querySelectorAll('.slide-panel').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.slide-tab').forEach(b => b.classList.remove('active'));
@@ -746,16 +809,62 @@ function showSlide(n, btn) {
   btn.classList.add('active');
 }
 
-const COST_PER_KM     = { car: 0.225, train: 0.241, airBusiness: 1.1, airCoach: 0.225 };
-const TIME_PER_100KM  = { car: 1.25, train: 1.0, air: 0.125 };
-const CO2_PER_KM      = { car: 0.192, train: 0.040, airBusiness: 0.300, airCoach: 0.150 };
+// ───────────────────────────────────────────────
+// TRAVEL COST MODEL — aligned to original Avatour ROI calculator
+//
+// Reverse-engineered from the live calculator at avatour.com/roi and
+// the methodology article at avatour.com/article/avatour-efficiency.
+//
+// COST: uniform rate $0.1524/km on ONE-WAY distance × 2 (round trip)
+//   Business class multiplier: cont ×2.0, inter ×2.5, applied to biz fraction only
+//   Overnight cost: user-supplied per-diem × user-supplied overnights per mode
+//   Source: CNET 2023 travel cost survey (~$0.245/mile converted to $/km)
+//
+// TIME: one-way distance ÷ mode speed (no airport overhead in calculator)
+//   Car: 80 km/h | Train: 100 km/h | All flights: 800 km/h
+//   (Article mentions 2.5h/flight overhead for in-platform efficiency estimates,
+//    but the standalone ROI calculator does not apply this.)
+//
+// CO₂: one-way distance × uniform air rate 0.1713 kg/km (all air modes)
+//   Car: 0.170 kg/km | Train: 0.041 kg/km | Air (all): 0.1713 kg/km
+//   Source: UK BEIS 2019 data via OurWorldInData (referenced in methodology article)
+// ───────────────────────────────────────────────
 
-function airCostRate(bizFrac) { return bizFrac * COST_PER_KM.airBusiness + (1 - bizFrac) * COST_PER_KM.airCoach; }
-function airCO2Rate(bizFrac)  { return bizFrac * CO2_PER_KM.airBusiness  + (1 - bizFrac) * CO2_PER_KM.airCoach; }
+const COST_RATE  = 0.1524;  // $/km base (round-trip, economy)
+const CO2_PER_KM = { car: 0.170, train: 0.041, cont: 0.1713, inter: 0.1713 };
 
-function getWeightedAverages() {
-  const bizFrac = v('p1_bizclass') / 100;
+function travelCostPerTrip(mode, km, nights) {
   const perdiem = v('p1_perdiem');
+  const bizFrac = v('p1_bizclass') / 100;
+  let cost = 0;
+  if (mode === 'car') {
+    cost = km * 2 * COST_RATE;                              // no biz class for car
+  } else if (mode === 'train') {
+    cost = km * 2 * COST_RATE;                              // no biz class for train
+  } else if (mode === 'cont') {
+    const econ = km * 2 * COST_RATE;
+    cost = econ * (1 - bizFrac) + econ * 2.0 * bizFrac;    // cont biz = 2×
+  } else if (mode === 'inter') {
+    const econ = km * 2 * COST_RATE;
+    cost = econ * (1 - bizFrac) + econ * 2.5 * bizFrac;    // inter biz = 2.5×
+  }
+  cost += nights * perdiem;
+  return cost;
+}
+
+function travelHoursPerTrip(mode, km) {
+  // One-way distance ÷ speed (matches original calculator behaviour)
+  if (mode === 'car')   return km / 80;
+  if (mode === 'train') return km / 100;
+  if (mode === 'cont')  return km / 800;
+  if (mode === 'inter') return km / 800;
+  return 0;
+}
+
+// ───────────────────────────────────────────────
+// WEIGHTED AVERAGES across travel mix (used for P2)
+// ───────────────────────────────────────────────
+function getWeightedAverages() {
   const modes = [
     { id: 'car',   pct: v('car_pct'),   km: v('car_km'),   nights: v('car_nights') },
     { id: 'train', pct: v('train_pct'), km: v('train_km'), nights: v('train_nights') },
@@ -766,69 +875,67 @@ function getWeightedAverages() {
   let avgCost = 0, avgHours = 0, avgCO2 = 0;
   modes.forEach(m => {
     const w = m.pct / totalPct;
-    const isAir = (m.id === 'cont' || m.id === 'inter');
-    const cr = isAir ? airCostRate(bizFrac) : COST_PER_KM[m.id];
-    const tr = isAir ? TIME_PER_100KM.air   : TIME_PER_100KM[m.id];
-    const co = isAir ? airCO2Rate(bizFrac)  : CO2_PER_KM[m.id];
-    avgCost  += w * (cr * m.km + m.nights * perdiem);
-    avgHours += w * (m.km / 100 * tr);
-    avgCO2   += w * co * m.km;
+    avgCost  += w * travelCostPerTrip(m.id, m.km, m.nights);
+    avgHours += w * travelHoursPerTrip(m.id, m.km);
+    avgCO2   += w * m.km * CO2_PER_KM[m.id];       // one-way distance (matches original)
   });
   return { avgCost, avgHours, avgCO2 };
 }
 
+// ───────────────────────────────────────────────
+// MAIN CALCULATION
+// ───────────────────────────────────────────────
 function calculate() {
+  // ── VALIDATE COST ──
   const costField = el('cost_cust_val');
   if (!costField.value || costField.value === '') {
     costField.style.borderColor = 'var(--orange)';
     costField.style.boxShadow = '0 0 0 3px rgba(255,78,0,0.2)';
     costField.focus();
+    // Show inline error message
     let errMsg = document.getElementById('cost_error_msg');
     if (!errMsg) {
       errMsg = document.createElement('span');
       errMsg.id = 'cost_error_msg';
-      errMsg.style.cssText = 'font-family:\'Roboto\',sans-serif;font-size:14px;color:var(--orange);font-weight:600;margin-top:4px;display:block;';
+      errMsg.style.cssText = 'font-size:11.5px; color:var(--orange); font-weight:600; margin-top:4px; display:block;';
       costField.parentNode.appendChild(errMsg);
     }
     errMsg.textContent = 'Please enter your annual Avatour cost to calculate ROI.';
     return;
   }
+  // Clear any previous error
   costField.style.borderColor = '';
   costField.style.boxShadow = '';
   const errMsg = document.getElementById('cost_error_msg');
   if (errMsg) errMsg.textContent = '';
 
-  const sites       = v('p1_sites');
-  const sessPerMonth = v('p1_meetings');
-  const attendees   = v('p1_attendees');
-  const rate        = v('p1_rate');
-  const bizFrac     = v('p1_bizclass') / 100;
-  const perdiem     = v('p1_perdiem');
+  // ── PILLAR 1 ──
+  const sites = v('p1_sites');
+  const sessPerMonth = v('p1_sessions');
+  const attendees = v('p1_attendees');
+  const rate = v('p1_rate');
+  const totalTripsPerYear = sites * sessPerMonth * 12 * attendees;
 
-  const modesData = [
-    { id: 'car',   pct: v('car_pct')/100,   km: v('car_km'),   nights: v('car_nights')   },
-    { id: 'train', pct: v('train_pct')/100, km: v('train_km'), nights: v('train_nights') },
-    { id: 'cont',  pct: v('cont_pct')/100,  km: v('cont_km'),  nights: v('cont_nights')  },
-    { id: 'inter', pct: v('inter_pct')/100, km: v('inter_km'), nights: v('inter_nights') },
+  const modes = [
+    { id: 'car',   pct: v('car_pct'),   km: v('car_km'),   nights: v('car_nights') },
+    { id: 'train', pct: v('train_pct'), km: v('train_km'), nights: v('train_nights') },
+    { id: 'cont',  pct: v('cont_pct'),  km: v('cont_km'),  nights: v('cont_nights') },
+    { id: 'inter', pct: v('inter_pct'), km: v('inter_km'), nights: v('inter_nights') },
   ];
+  const totalPct = modes.reduce((a,m) => a + m.pct, 0) || 100;
 
-  let costSum=0, timeSum=0, co2Sum=0, perDiemSum=0;
-  modesData.forEach(m => {
-    const isAir = (m.id === 'cont' || m.id === 'inter');
-    const cr = isAir ? airCostRate(bizFrac)  : COST_PER_KM[m.id];
-    const co = isAir ? airCO2Rate(bizFrac)   : CO2_PER_KM[m.id];
-    const tr = isAir ? TIME_PER_100KM.air    : TIME_PER_100KM[m.id];
-    costSum    += cr * m.km;
-    timeSum    += (m.km / 100 * tr) * attendees * m.pct;
-    co2Sum     += co * m.km;
-    perDiemSum += m.nights * perdiem * attendees * m.pct;
+  let p1_travel = 0, p1_time = 0, p1_co2_kg = 0;
+  modes.forEach(m => {
+    const frac = m.pct / totalPct;
+    const trips = totalTripsPerYear * frac;
+    p1_travel += trips * travelCostPerTrip(m.id, m.km, m.nights);
+    p1_time   += trips * travelHoursPerTrip(m.id, m.km) * rate;
+    p1_co2_kg += trips * m.km * CO2_PER_KM[m.id];       // one-way (matches original)
   });
+  const p1_total = p1_travel + p1_time;
 
-  const p1_travel  = (costSum + perDiemSum) * sessPerMonth * sites;
-  const p1_time    = timeSum * sessPerMonth * sites * rate;
-  const p1_co2_kg  = co2Sum  * sessPerMonth * sites;
-  const p1_total   = p1_travel + p1_time;
-
+  // ── PILLAR 2 ──
+  // Same travel model as P1, scaled by replacement %, events × participants
   const p2_events = v('p2_events');
   const p2_participants = v('p2_participants');
   const p2_replacePct = v('p2_replace_pct') / 100;
@@ -838,11 +945,13 @@ function calculate() {
   const p2_time   = p2_replaced_trips_per_year * avg.avgHours * rate;
   const p2_total  = p2_travel + p2_time;
 
+  // ── PILLAR 3 ──
   const p3_monthly = v('p3_inspections') * v('p3_hours') * (v('p3_pct') / 100) * v('p3_rate');
   const p3_total = p3_monthly * 12;
 
   const grossSavings = p1_total + p2_total + p3_total;
 
+  // ── COST ──
   const annualCostInput = v('cost_cust_val');
   const annualCost  = annualCostInput;
   const netSavings  = grossSavings - annualCost;
@@ -850,18 +959,20 @@ function calculate() {
   const paybackMo   = grossSavings > 0 ? (annualCost / (grossSavings / 12)) : 0;
   const co2_t       = p1_co2_kg / 1000;
 
+  // ── STORE ──
   window._R = { grossSavings, p1_total, p1_travel, p1_time, p2_total, p2_travel, p2_time, p3_total,
                 netSavings, roi, paybackMo, annualCost, co2_t, sites, sessPerMonth, monthlyCost: annualCostInput/12 };
 
+  // ── STICKY PANEL ──
   const roiStr = (roi >= 0 ? '+' : '') + Math.round(roi) + '% ROI';
   el('res_roi_title').textContent = roiStr;
   el('results-body').innerHTML = `
     <div class="metric-row"><span class="metric-label">Annual Gross Savings</span><span class="metric-value big">${fmtFull(grossSavings)}</span></div>
-    <div class="metric-row"><span class="metric-label" style="padding-left:10px">↳ Live Meetings (P1)</span><span class="metric-value indent">${fmtFull(p1_total)}</span></div>
+    <div class="metric-row"><span class="metric-label" style="padding-left:10px">↳ Live Sessions (P1)</span><span class="metric-value indent">${fmtFull(p1_total)}</span></div>
     <div class="metric-row"><span class="metric-label" style="padding-left:10px">↳ Recorded Collab (P2)</span><span class="metric-value indent">${fmtFull(p2_total)}</span></div>
     <div class="metric-row"><span class="metric-label" style="padding-left:10px">↳ AI Reports (P3)</span><span class="metric-value indent">${fmtFull(p3_total)}</span></div>
     <div class="metric-row"><span class="metric-label">Annual Avatour Cost</span><span class="metric-value" style="color:rgba(255,255,255,.45)">−${fmtFull(annualCost)}</span></div>
-    <div class="metric-row"><span class="metric-label">Net Annual Return</span><span class="metric-value">${fmtFull(netSavings)}</span></div>
+    <div class="metric-row"><span class="metric-label">Net Annual Return</span><span class="metric-value ">${fmtFull(netSavings)}</span></div>
     <div class="metric-row"><span class="metric-label">Payback Period</span><span class="metric-value">${paybackMo < 1 ? '<1 month' : paybackMo.toFixed(1) + ' months'}</span></div>
     <div class="breakdown-bar">
       <div class="bar-label">Savings mix</div>
@@ -881,6 +992,7 @@ function calculate() {
       <span class="metric-value" style="color:var(--orange)">${co2_t.toFixed(1)} t / yr</span>
     </div>`;
 
+  // ── UPDATE SLIDES ──
   updateSlides({ grossSavings, p1_total, p1_travel, p1_time, p2_total, p2_travel, p2_time, p3_total,
                  netSavings, roi, paybackMo, annualCost, co2_t, sites, sessPerMonth, monthlyCost: annualCostInput/12 });
 
@@ -890,12 +1002,16 @@ function calculate() {
   el('slides-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
+// ───────────────────────────────────────────────
+// UPDATE ALL SLIDES
+// ───────────────────────────────────────────────
 function updateSlides(r) {
   const company = vs('company_name');
   const ucs = getSelectedUCs();
 
+  // ── SLIDE 1 ──
   setText('sl1_sites', r.sites);
-  setText('sl1_meetings', Math.round(r.sites * r.sessPerMonth));
+  setText('sl1_sessions', Math.round(r.sites * r.sessPerMonth));
   setText('sl1_savings', fmt(r.grossSavings));
   setText('sl1_roi', (r.roi>=0?'+':'')+Math.round(r.roi)+'%');
   el('sl1_roi').style.color = 'var(--navy)';
@@ -907,6 +1023,7 @@ function updateSlides(r) {
     const e = el(id); if(e) e.textContent = hdrText;
   });
 
+  // UC chips on slide 1
   const ucChips = el('sl1_uc_chips');
   if (ucs.length === 0) {
     ucChips.innerHTML = '<span class="s1-chip">Not specified</span>';
@@ -914,6 +1031,7 @@ function updateSlides(r) {
     ucChips.innerHTML = ucs.map(u => `<span class="s1-chip uc">${u.icon} ${u.name.split('&')[0].trim()}</span>`).join('');
   }
 
+  // ── SLIDE 2 ──
   setText('sl2_p1_travel', fmt(r.p1_travel));
   setText('sl2_p1_time',   fmt(r.p1_time));
   setText('sl2_p1_co2',    r.co2_t.toFixed(1) + ' t CO₂');
@@ -925,13 +1043,15 @@ function updateSlides(r) {
   setText('sl2_gross',     fmt(r.grossSavings));
   setText('sl2_net',       (r.netSavings>=0?'+':'')+fmt(r.netSavings)+' net');
   setText('sl2_cost',      fmt(r.annualCost));
-  el('sl2_company').textContent = '';
+  el('sl2_company').textContent = '';  // now in header
 
+  // bar fills slide 2
   const maxP1 = r.p1_travel + r.p1_time || 1;
   pct2('sl2_bar_p1t', r.p1_travel / maxP1 * 100);
   pct2('sl2_bar_p1p', r.p1_time   / maxP1 * 100);
 
-  el('sl3_company').textContent = '';
+  // ── SLIDE 3 ──
+  el('sl3_company').textContent = '';  // now in header
   buildSoftSlide(ucs);
 }
 
@@ -939,13 +1059,16 @@ function pct2(id, pct) {
   const e = el(id); if(e) e.style.width = Math.min(100, Math.max(0, pct)) + '%';
 }
 
+// ───────────────────────────────────────────────
+// BUILD SOFT BENEFITS SLIDE (use-case aware)
+// ───────────────────────────────────────────────
 const SOFT_BENEFITS = [
-  { icon: '<img src="https://res.cloudinary.com/avatour/image/upload/icon-align-teams_vjcarc.svg" style="width:clamp(14px,1.8vw,22px);height:clamp(14px,1.8vw,22px);display:block;" alt="">', title: 'Better Decision Quality', desc: 'More experts participate simultaneously — increasing quality of findings and reducing costly rework cycles.', impact: 'High Impact', ucs: ['Remote Inspections', 'Gemba', 'Architecture'] },
+  { icon: '<img src="https://res.cloudinary.com/avatour/image/upload/align-teams_ukfu5z.svg" style="width:clamp(14px,1.8vw,22px);height:clamp(14px,1.8vw,22px);display:block;" alt="">', title: 'Better Decision Quality', desc: 'More experts participate simultaneously — increasing quality of findings and reducing costly rework cycles.', impact: 'High Impact', ucs: ['Remote Inspections', 'Gemba', 'Architecture'] },
   { icon: '<img src="https://res.cloudinary.com/avatour/image/upload/realtime-communication_ylphs5.svg" style="width:clamp(14px,1.8vw,22px);height:clamp(14px,1.8vw,22px);display:block;" alt="">', title: 'Faster Corrective Action', desc: 'Issues link directly to 360° evidence, enabling immediate action without waiting for a follow-up visit.', impact: 'High Impact', ucs: ['Remote Inspections', 'Gemba', 'Health, Safety'] },
   { icon: '<img src="https://res.cloudinary.com/avatour/image/upload/increase-safety_vm0bio.svg" style="width:clamp(14px,1.8vw,22px);height:clamp(14px,1.8vw,22px);display:block;" alt="">', title: 'Increased Site Safety', desc: 'Hazardous sites inspected remotely — fewer personnel physically exposed to risk.', impact: 'Very High', ucs: ['Health, Safety', 'Architecture', 'Remote Inspections'] },
-  { icon: '<img src="https://res.cloudinary.com/avatour/image/upload/virtual-tours_myn8xh.svg" style="width:clamp(14px,1.8vw,22px);height:clamp(14px,1.8vw,22px);display:block;" alt="">', title: 'Better Work-Life Balance', desc: 'Fewer long-haul trips reduces fatigue and burnout for managers and quality engineers.', impact: 'High Impact', ucs: [] },
-  { icon: '<img src="https://res.cloudinary.com/avatour/image/upload/reduce-downtime_wmba73.svg" style="width:clamp(14px,1.8vw,22px);height:clamp(14px,1.8vw,22px);display:block;" alt="">', title: 'Less Site Disruption', desc: 'A 360° meeting is far less disruptive to host operations than a physical delegation visit.', impact: 'Medium', ucs: ['Customer', 'Remote Inspections'] },
-  { icon: '<img src="https://res.cloudinary.com/avatour/image/upload/record-playback_z91edi.svg" style="width:clamp(14px,1.8vw,22px);height:clamp(14px,1.8vw,22px);display:block;" alt="">', title: 'Permanent Visual Record', desc: 'Every meeting creates a dated, searchable archive for audits, training, and compliance documentation.', impact: 'Very High', ucs: ['Training', 'Remote Inspections', 'Architecture'] },
+  { icon: '<img src="https://res.cloudinary.com/avatour/image/upload/expertise-anytime_anrxbg.svg" style="width:clamp(14px,1.8vw,22px);height:clamp(14px,1.8vw,22px);display:block;" alt="">', title: 'Better Work-Life Balance', desc: 'Fewer long-haul trips reduces fatigue and burnout for managers and quality engineers.', impact: 'High Impact', ucs: [] },
+  { icon: '<img src="https://res.cloudinary.com/avatour/image/upload/reduce-downtime_wmba73.svg" style="width:clamp(14px,1.8vw,22px);height:clamp(14px,1.8vw,22px);display:block;" alt="">', title: 'Less Site Disruption', desc: 'A 360° session is far less disruptive to host operations than a physical delegation visit.', impact: 'Medium', ucs: ['Customer', 'Remote Inspections'] },
+  { icon: '<img src="https://res.cloudinary.com/avatour/image/upload/record-playback_z91edi.svg" style="width:clamp(14px,1.8vw,22px);height:clamp(14px,1.8vw,22px);display:block;" alt="">', title: 'Permanent Visual Record', desc: 'Every session creates a dated, searchable archive for audits, training, and compliance documentation.', impact: 'Very High', ucs: ['Training', 'Remote Inspections', 'Architecture'] },
 ];
 
 function buildSoftSlide(ucs) {
@@ -964,6 +1087,7 @@ function buildSoftSlide(ucs) {
         ${matchedUCs.length > 0 ? `<div class="s3-uc-badge">Relevant to your use case</div>` : ''}
       </div>`;
   });
+  // update sub
   if (ucNames.length > 0) {
     el('sl3_sub').textContent = `Strategic & qualitative benefits beyond the financial ROI. Cards highlighted in orange are especially relevant to your selected use cases: ${ucNames.map(n=>n.split('&')[0].trim()).join(', ')}.`;
   } else {
@@ -971,6 +1095,9 @@ function buildSoftSlide(ucs) {
   }
 }
 
+// ───────────────────────────────────────────────
+// COPY NUMBERS
+// ───────────────────────────────────────────────
 function copyNumbers() {
   if (!window._R) { showToast('Calculate first!'); return; }
   const r = window._R;
@@ -980,7 +1107,7 @@ function copyNumbers() {
 `AVATOUR ROI SUMMARY${company ? ' — ' + company : ''}
 ${'─'.repeat(44)}
 Annual Gross Savings:       ${fmtFull(r.grossSavings)}
-  Pillar 1 – Live Meetings: ${fmtFull(r.p1_total)}
+  Pillar 1 – Live Sessions: ${fmtFull(r.p1_total)}
   Pillar 2 – Recorded Collab: ${fmtFull(r.p2_total)}
   Pillar 3 – AI Reports:    ${fmtFull(r.p3_total)}
 
@@ -998,8 +1125,10 @@ avatour.com  |  Be There. Without Being There.`;
     .catch(() => showToast('Copy failed — try manually.'));
 }
 
+// Init
 updatePctCheck();
 
+// Print styles
 const ps = document.createElement('style');
 ps.media = 'print';
 ps.textContent = `
