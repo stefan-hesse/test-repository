@@ -77,6 +77,7 @@ PRE_TRANSLATIONS = {
         "change":    "Ändern",
         "deactivate": "Deaktivieren",
         "reactivate": "Reaktivieren",
+        "new_meeting": "neues Meeting",
     },
     "IT": {
         "assets":    "asset",
@@ -304,6 +305,8 @@ def translate_all(strings_dict, target_lang):
 
     for i, value in enumerate(values):
         if SKIP_TRANSLATION_PATTERN.match(value):
+            continue
+        if keys[i] in pre:  # pre-translated — skip DeepL entirely
             continue
         masked, placeholders = mask_placeholders(value)
         to_translate_indices.append(i)
