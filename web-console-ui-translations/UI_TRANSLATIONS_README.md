@@ -2,7 +2,7 @@
 
 Automated translation pipeline for the Avatour web console UI strings.
 
-Translates `en.json` (English source) into Italian and German using the DeepL API,
+Translates `en.json` (English source) into Italian and German using the DeepL API Pro,
 with post-processing to correct known mistranslations and enforce Avatour terminology.
 
 ---
@@ -11,25 +11,40 @@ with post-processing to correct known mistranslations and enforce Avatour termin
 
 ```
 web-console-ui-translations/
-├── en.json          ← English source strings (from Prasad / Avatour app)
-├── translate.py     ← Translation script
-├── README.md        ← This file
+├── en.json                   ← English source strings (from Prasad / Avatour app)
+├── translate.py              ← Translation script
+├── UI_TRANSLATIONS_README.md ← This file
 └── dist/
-    ├── it.json      ← Italian output (auto-generated, do not edit manually)
-    ├── de.json      ← German output (auto-generated, do not edit manually)
-    └── translations.xlsx  ← Combined review file (EN / IT / DE)
+    ├── it.json               ← Italian output
+    ├── de.json               ← German output
+    ├── en-prev.json          ← English snapshot from last run (delta detection)
+    └── translations.xlsx     ← Combined review file (EN / IT / DE)
 ```
 
 ---
 
 ## How it works
 
-1. `translate.py` reads `en.json`
-2. For ~15 known problem keys per language, values are set directly via `PRE_TRANSLATIONS` — bypassing DeepL entirely
-3. All remaining strings are sent to the DeepL API in batches of 50
-4. Placeholders (`$t(key)`, `{{variable}}`, `<0>`, `</1>` etc.) are masked before translation and restored afterwards — so they are never translated or reordered
-5. Post-processing fixes (`FIXES` and `SUBSTRING_FIXES`) correct any remaining known mistranslations
-6. Output is written to `dist/it.json`, `dist/de.json`, and `dist/translations.xlsx`
+1. `translate.py` reads `en.json` and compares it against `dist/en-prev.json`
+   (the English snapshot from the previous run) to find which keys have changed
+2. Only changed or new keys are sent to DeepL — existing translations are preserved
+3. For ~15 known problem keys per language, values are set directly via
+   `PRE_TRANSLATIONS`, bypassing DeepL entirely
+4. A DeepL glossary enforces key terminology — notably `meeting → Meeting` and
+   `meetings → Meetings` in German, preventing incorrect pluralisation
+5. Placeholders (`$t(key)`, `{{variable}}`, `<0>`, `</1>` etc.) are masked before
+   translation and restored afterwards — so they are never translated or reordered
+6. Post-processing fixes (`FIXES` and `SUBSTRING_FIXES`) correct any remaining
+   known mistranslations, including removing stray `@` characters that DeepL
+   occasionally inserts after placeholder tags
+7. Output is merged with existing translations and written to `dist/it.json`,
+   `dist/de.json`, and `dist/translations.xlsx`
+8. `dist/en-prev.json` is updated as a snapshot for the next run
+
+**First run** (no `en-prev.json` exists): all keys are translated.
+**Subsequent runs**: only keys whose English value changed are re-translated.
+**Manual edits** to `it.json` or `de.json` are preserved as long as their
+corresponding English key has not changed.
 
 ---
 
@@ -47,15 +62,31 @@ To trigger manually:
 3. Click **Translate Web Console UI** in the left sidebar
 4. Click **Run workflow** → **Run workflow**
 
-### Important: clearing the cache
+### Forcing a full re-translation
 
-GitHub Actions only commits files that have changed. If the translations are
-identical to what is already in `dist/`, nothing gets committed. This can happen
-when only `translate.py` was updated (not `en.json`).
+Normally the script only translates changed keys. To force a complete
+re-translation of all strings (e.g. after a major script update):
 
-**To force a fresh run:** delete `dist/it.json`, `dist/de.json`, and
-`dist/translations.xlsx` from the `dist/` folder, commit the deletion, push,
-then trigger the workflow manually.
+Delete `dist/en-prev.json` from the `dist/` folder in Finder, commit the
+deletion in GitHub Desktop, push, then trigger the workflow manually.
+Without `en-prev.json` the script treats all keys as new and translates
+everything from scratch.
+
+---
+
+## Making manual corrections
+
+You can edit `dist/it.json` or `dist/de.json` directly in a text editor to fix
+any translation. Your edits will be preserved on future runs as long as the
+corresponding English key has not changed in `en.json`.
+
+**Workflow:**
+1. Open `dist/de.json` or `dist/it.json` in a text editor
+2. Find the key and correct the value
+3. Save, commit and push in GitHub Desktop
+
+The next time the workflow runs, your correction will be kept — only keys with
+new or changed English values will be re-translated by DeepL.
 
 ---
 
@@ -63,17 +94,19 @@ then trigger the workflow manually.
 
 | Variable | Where set | Description |
 |---|---|---|
-| `DEEPL_API_KEY` | GitHub repository secret | DeepL API key (free tier) |
+| `DEEPL_API_KEY` | GitHub repository secret | DeepL API Pro key (no `:fx` suffix) |
 
 ---
 
-## Adding or correcting a translation
+## Adding or correcting a translation at the source
+
+For systematic corrections (same term always wrong), fix it in `translate.py`
+rather than manually editing the output files each time.
 
 ### If DeepL produces a wrong single-word translation
 
-Add the key to `PRE_TRANSLATIONS` in `translate.py` for the relevant language.
-The key must match exactly the key in `en.json`. The value will be used directly,
-bypassing DeepL.
+Add the key to `PRE_TRANSLATIONS` in `translate.py`. The value will be used
+directly, bypassing DeepL entirely for that key.
 
 ```python
 PRE_TRANSLATIONS = {
@@ -112,7 +145,8 @@ For corrections within longer strings (not the full value), add to
 2. Add a `PRE_TRANSLATIONS["FR"]` dictionary with known problem terms
 3. Add a `FIXES["FR"]` list (can start empty)
 4. Add a `SUBSTRING_FIXES["FR"]` list (can start empty)
-5. Run the workflow — `dist/fr.json` will be produced automatically
+5. Delete `dist/en-prev.json`, commit, push, and trigger the workflow —
+   `dist/fr.json` will be produced automatically
 
 ---
 
@@ -122,25 +156,22 @@ After the workflow runs successfully:
 
 1. Pull the latest changes in GitHub Desktop to get the updated `dist/` files
 2. Share `dist/it.json` and `dist/de.json` with Prasad
-3. The `dist/translations.xlsx` file is for internal review only
-
-Ask Prasad to confirm the expected format (JSON key-value, same structure as
-`en.json`) and the target file locations in the app codebase.
+3. Ask Prasad to confirm the target file locations in the app codebase
+4. The `dist/translations.xlsx` file is for internal review only
 
 ---
 
 ## Known limitations
 
-- **DeepL free tier**: 500,000 characters/month. The full translation of `en.json`
-  (~498 strings) uses approximately 50,000–60,000 characters per language. Two
-  languages = ~120,000 characters per run. This leaves comfortable headroom for
-  monthly runs.
 - **Placeholder protection**: The `<1>`, `</0>` style tags used by i18next are
   masked before translation. This prevents DeepL from reordering them, but the
   surrounding text may still be reordered slightly in complex sentences. Review
   `roi_title` and similar multi-placeholder strings carefully.
 - **Formal register**: All translations use `formality: prefer_more` (formal Sie /
   Lei). If informal register is ever needed, change this in `translate_batch()`.
+- **DeepL glossary**: The German glossary enforces `meeting → Meeting` /
+  `meetings → Meetings`. Glossaries are immutable once created — to update,
+  the script deletes and recreates the glossary on each run automatically.
 
 ---
 
@@ -154,3 +185,4 @@ Ask Prasad to confirm the expected format (JSON key-value, same structure as
 | history | Verlauf | cronologia | Navigation/app history, not world history |
 | analytics | Analysen | analisi | Standard UI term |
 | SuperFreeze | SuperFreeze | SuperFreeze | Product name — never translated |
+| submit | einreichen | Invia | Italian pre-translated to avoid "Presente" (wrong) |
