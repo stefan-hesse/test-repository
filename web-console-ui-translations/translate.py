@@ -80,18 +80,19 @@ PRE_TRANSLATIONS = {
         "new_meeting": "neues Meeting",
     },
     "IT": {
-        "assets":    "asset",
-        "asset":     "asset",
-        "history":   "cronologia",
-        "host":      "host",
-        "hosts":     "host",
-        "exit":      "Esci",
-        "play":      "Riproduci",
-        "cancel":    "Annulla",
-        "change":    "Cambia",
-        "analytics": "analisi",
-        "filters":   "filtri",
+        "assets":      "asset",
+        "asset":       "asset",
+        "history":     "cronologia",
+        "host":        "host",
+        "hosts":       "host",
+        "exit":        "Esci",
+        "play":        "Riproduci",
+        "cancel":      "Annulla",
+        "change":      "Cambia",
+        "analytics":   "analisi",
+        "filters":     "filtri",
         "superfreeze": "SuperFreeze",
+        "submit":      "Invia",
     },
 }
 
@@ -139,28 +140,33 @@ FIXES = {
         ("patrimonio",   "asset"),          # assets
         ("attività",     "asset"),          # asset
         ("storia",       "cronologia"),     # history
-        ("ospite",       "host"),           # host (conflicts with guest=ospite)
         ("padroni di casa", "host"),        # hosts
         ("uscita",       "Esci"),           # exit
         ("giocare",      "Riproduci"),      # play
         ("annullamento", "Annulla"),        # cancel (noun→verb)
-        ("presentare",   "Presente"),       # present
+        ("presentare",   "Presente"),       # present (verb)
+        ("Tutti gli ospiti", "Tutti gli host"),  # all_hosts
         # Compound fixes
         ("Cambiamento",  "Cambia"),         # change (noun→verb)
         ("superGelo",    "SuperFreeze"),    # product name
         ("SuperCongelamento accettato", "SuperFreeze accettato"),
         ("Richiesta di supercongelamento rifiutata",
          "Richiesta SuperFreeze rifiutata"),
+        # SuperFreeze gender fix
+        ("la SuperFreeze", "il SuperFreeze"),
+        ("La SuperFreeze", "Il SuperFreeze"),
+        # waiting_for_guide
+        ("In attesa della guida...", "In attesa dell'host..."),
         # Asset-related strings
         ("NUMERO DI BENI",   "NUMERO DI ASSET"),
         ("Numero di Attività per tipo", "Numero di asset per tipo"),
         ("il curriculum è una risorsa", "riprende un asset"),
         ("Vuole mantenere il SuperFreeze come risorsa?",
          "Vuole mantenere il SuperFreeze come asset?"),
+        ("Desidera mantenere la SuperFreeze come risorsa?",
+         "Vuole mantenere il SuperFreeze come asset?"),
         ("Tutte le note associate a questo bene saranno cancellate quando il layout viene modificato",
          "Tutte le note associate a questo asset saranno cancellate quando il layout viene modificato"),
-        # host/guest confusion — fix strings where "host" was translated as "ospite"
-        # These are checked as substrings for longer strings
     ],
 }
 
@@ -174,8 +180,9 @@ SUBSTRING_FIXES = {
         ("Vermögenswert", "Asset"),        # asset within sentences
     ],
     "IT": [
-        # In longer strings, "ospite" used for host needs fixing contextually
-        # These are specific known strings
+        ("@", ""),                  # remove stray @ inserted by DeepL
+        # guest/host: in longer strings fix "ospite" when it refers to host role
+        # (only safe to do for specific known patterns)
     ],
 }
 
