@@ -247,7 +247,13 @@ def apply_fixes(translated_dict, lang_code):
 
         # Italian-specific fixes
         if lang_code == "IT":
-            # Remove stray @ DeepL inserts at end of strings (not part of email)
+            # Remove stray @ DeepL inserts — appears after restored placeholders
+            # e.g. "$t(avatour)@ account" or "</3>@ di" or "</1>@\n"
+            cleaned = re.sub(r'(\$t\([^)]+\)|</?\d+>|</?\w+>)@', r'\1', new_value)
+            if cleaned != new_value:
+                new_value = cleaned
+                fixed_count += 1
+            # Also catch trailing @ at end of string
             if new_value.endswith("@"):
                 new_value = new_value.rstrip("@").rstrip()
                 fixed_count += 1
