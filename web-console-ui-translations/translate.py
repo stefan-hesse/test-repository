@@ -44,8 +44,9 @@ except ImportError:
 
 # -- Configuration -------------------------------------------------------------
 
-DEEPL_API_KEY = os.environ.get("DEEPL_API_KEY", "")
-DEEPL_API_URL = "https://api.deepl.com/v2/translate"
+DEEPL_API_KEY      = os.environ.get("DEEPL_API_KEY", "")
+DEEPL_API_URL      = "https://api.deepl.com/v2/translate"
+DEEPL_GLOSSARY_URL = "https://api.deepl.com/v2/glossaries"
 
 SOURCE_FILE    = Path(__file__).parent / "en.json"
 PREV_FILE      = Path(__file__).parent / "dist" / "en-prev.json"
@@ -94,6 +95,24 @@ PRE_TRANSLATIONS = {
         "filters":     "filtri",
         "superfreeze": "SuperFreeze",
         "submit":      "Invia",
+    },
+}
+
+# -- Glossaries (DeepL Pro) ----------------------------------------------------
+# Used to enforce correct translations at the DeepL API level.
+# With Pro, glossaries work reliably via the API.
+
+GLOSSARIES = {
+    "DE": {
+        # Meeting pluralisation — DeepL incorrectly uses "Meetingen"
+        "meetings":  "Meetings",
+        "meeting":   "Meeting",
+        # Ensure consistent capitalisation
+        "Meeting":   "Meeting",
+        "Meetings":  "Meetings",
+    },
+    "IT": {
+        # No glossary entries needed currently
     },
 }
 
@@ -168,6 +187,10 @@ FIXES = {
          "Vuole mantenere il SuperFreeze come asset?"),
         ("Tutte le note associate a questo bene saranno cancellate quando il layout viene modificato",
          "Tutte le note associate a questo asset saranno cancellate quando il layout viene modificato"),
+        # Stray @ fixes — targeted replacements for known affected strings
+        ("In attesa che Host inizi la riunione...",
+         "In attesa che l'host inizi la riunione..."),
+        ("SuperFreeze ha richiesto", "SuperFreeze richiesto"),
     ],
 }
 
@@ -181,9 +204,8 @@ SUBSTRING_FIXES = {
         ("Vermögenswert", "Asset"),        # asset within sentences
     ],
     "IT": [
-        ("@", ""),                  # remove stray @ inserted by DeepL
-        # guest/host: in longer strings fix "ospite" when it refers to host role
-        # (only safe to do for specific known patterns)
+        # Note: stray @ removal is handled in apply_fixes() using regex
+        # to avoid stripping @ from email addresses like support@avatour.live
     ],
 }
 
@@ -191,7 +213,9 @@ SUBSTRING_FIXES = {
 def apply_fixes(translated_dict, lang_code):
     """
     Apply post-processing fixes to translated values.
-    First applies exact-match fixes, then substring fixes.
+    1. Exact-match fixes (full value match, case-insensitive)
+    2. Substring fixes
+    3. Language-specific regex fixes
     """
     exact_fixes = FIXES.get(lang_code, [])
     substr_fixes = SUBSTRING_FIXES.get(lang_code, [])
@@ -201,16 +225,38 @@ def apply_fixes(translated_dict, lang_code):
     for key, value in translated_dict.items():
         new_value = value
 
-        # Exact match fixes (case-insensitive comparison, preserve original case of fix)
+        # Exact match fixes (case-insensitive comparison)
         for wrong, correct in exact_fixes:
             if new_value.lower() == wrong.lower():
                 new_value = correct
                 fixed_count += 1
                 break
 
-        # Substring fixes (only applied if no exact fix was made)
+        # Substring fixes
         if new_value == value:
             for wrong, correct in substr_fixes:
+                if wrong in new_value:
+                    new_value = new_value.replace(wrong, correct)
+                    fixed_count += 1
+
+        # Post-restore fixes for all languages
+        # DeepL strips @ from email addresses even inside masked tags — restore them
+        if "supportavatour.live" in new_value:
+            new_value = new_value.replace("supportavatour.live", "support@avatour.live")
+            fixed_count += 1
+
+        # Italian-specific fixes
+        if lang_code == "IT":
+            # Remove stray @ DeepL inserts at end of strings (not part of email)
+            if new_value.endswith("@"):
+                new_value = new_value.rstrip("@").rstrip()
+                fixed_count += 1
+            # Sentence-level fixes
+            it_sentence_fixes = [
+                ("In attesa che Host inizi", "In attesa che l'host inizi"),
+                ("SuperFreeze ha richiesto", "SuperFreeze richiesto"),
+            ]
+            for wrong, correct in it_sentence_fixes:
                 if wrong in new_value:
                     new_value = new_value.replace(wrong, correct)
                     fixed_count += 1
@@ -273,9 +319,86 @@ def restore_placeholders(text, placeholders):
     return result
 
 
+# -- DeepL Glossary API (Pro) --------------------------------------------------
+
+def ensure_glossary(lang_code):
+    """
+    Create or retrieve a DeepL glossary for lang_code.
+    Returns glossary_id or None if no entries defined for this language.
+    """
+    entries = GLOSSARIES.get(lang_code, {})
+    if not entries:
+        return None
+
+    if not DEEPL_API_KEY:
+        return None
+
+    headers = {
+        "Authorization": f"DeepL-Auth-Key {DEEPL_API_KEY}",
+        "Content-Type": "application/json",
+    }
+
+    # Delete any existing Avatour UI glossary for this language
+    resp = requests.get(DEEPL_GLOSSARY_URL, headers=headers, timeout=15)
+    if resp.status_code == 200:
+        for g in resp.json().get("glossaries", []):
+            if (g.get("name", "").startswith("avatour-ui-")
+                    and g.get("target_lang", "").upper() == lang_code.upper()):
+                requests.delete(
+                    f"{DEEPL_GLOSSARY_URL}/{g['glossary_id']}",
+                    headers=headers, timeout=15
+                )
+
+    # Create glossary using form-encoded data (DeepL v2 requirement)
+    tsv = "\n".join(f"{k}\t{v}" for k, v in entries.items())
+    resp = requests.post(
+        DEEPL_GLOSSARY_URL,
+        headers={"Authorization": f"DeepL-Auth-Key {DEEPL_API_KEY}"},
+        data={
+            "name":           f"avatour-ui-{lang_code.lower()}",
+            "source_lang":    "EN",
+            "target_lang":    lang_code,
+            "entries":        tsv,
+            "entries_format": "tsv",
+        },
+        timeout=15
+    )
+
+    if resp.status_code not in (200, 201):
+        print(f"  Warning: glossary creation failed ({resp.status_code}) — continuing without glossary")
+        return None
+
+    glossary_id = resp.json().get("glossary_id")
+    print(f"  Glossary created for {lang_code}: {len(entries)} terms (id={glossary_id})")
+
+    # Wait for glossary to be ready
+    for _ in range(10):
+        time.sleep(1)
+        check = requests.get(
+            f"{DEEPL_GLOSSARY_URL}/{glossary_id}",
+            headers={"Authorization": f"DeepL-Auth-Key {DEEPL_API_KEY}"},
+            timeout=15
+        )
+        if check.status_code == 200 and check.json().get("ready"):
+            break
+
+    return glossary_id
+
+
+def delete_glossary(glossary_id):
+    """Remove a glossary from DeepL after use."""
+    if not glossary_id:
+        return
+    requests.delete(
+        f"{DEEPL_GLOSSARY_URL}/{glossary_id}",
+        headers={"Authorization": f"DeepL-Auth-Key {DEEPL_API_KEY}"},
+        timeout=15
+    )
+
+
 # -- DeepL Translation API -----------------------------------------------------
 
-def translate_batch(texts, target_lang):
+def translate_batch(texts, target_lang, glossary_id=None):
     """Translate a list of strings via DeepL with formal register."""
     if not DEEPL_API_KEY:
         raise ValueError("DEEPL_API_KEY environment variable is not set.")
@@ -291,6 +414,8 @@ def translate_batch(texts, target_lang):
         "formality":           "prefer_more",
         "preserve_formatting": True,
     }
+    if glossary_id:
+        payload["glossary_id"] = glossary_id
 
     response = requests.post(DEEPL_API_URL, headers=headers,
                              json=payload, timeout=30)
@@ -301,7 +426,7 @@ def translate_batch(texts, target_lang):
     return [t["text"] for t in response.json()["translations"]]
 
 
-def translate_all(strings_dict, target_lang):
+def translate_all(strings_dict, target_lang, glossary_id=None):
     """Translate all values, skipping pure $t() refs and protecting placeholders."""
     # Apply pre-translations — these keys bypass DeepL entirely
     pre = PRE_TRANSLATIONS.get(target_lang, {})
@@ -337,7 +462,7 @@ def translate_all(strings_dict, target_lang):
         batch_num     = batch_start // BATCH_SIZE + 1
         total_batches = (len(to_translate_masked) + BATCH_SIZE - 1) // BATCH_SIZE
         print(f"    Batch {batch_num}/{total_batches} ({len(batch)} strings)...")
-        translated_batch = translate_batch(batch, target_lang)
+        translated_batch = translate_batch(batch, target_lang, glossary_id)
         translated_masked.extend(translated_batch)
         if batch_start + BATCH_SIZE < len(to_translate_masked):
             time.sleep(0.2)
@@ -465,9 +590,15 @@ def main():
         # Build a subset dict of only the changed keys to translate
         changed_dict = {k: v for k, v in en_dict.items() if k in changed}
 
+        # Create glossary (Pro feature — enforces correct terminology)
+        glossary_id = ensure_glossary(lang_code)
+
         # Translate only the changed keys
-        new_translations = translate_all(changed_dict, lang_code)
+        new_translations = translate_all(changed_dict, lang_code, glossary_id)
         new_translations = apply_fixes(new_translations, lang_code)
+
+        # Clean up glossary
+        delete_glossary(glossary_id)
 
         # Merge: existing translations take the base, changed keys are overwritten
         merged = dict(existing)
