@@ -45,10 +45,11 @@ except ImportError:
 # -- Configuration -------------------------------------------------------------
 
 DEEPL_API_KEY = os.environ.get("DEEPL_API_KEY", "")
-DEEPL_API_URL = "https://api-free.deepl.com/v2/translate"
+DEEPL_API_URL = "https://api.deepl.com/v2/translate"
 
-SOURCE_FILE = Path(__file__).parent / "en.json"
-DIST_DIR    = Path(__file__).parent / "dist"
+SOURCE_FILE    = Path(__file__).parent / "en.json"
+PREV_FILE      = Path(__file__).parent / "dist" / "en-prev.json"
+DIST_DIR       = Path(__file__).parent / "dist"
 
 LANGUAGES = {
     "IT": "Italian",
@@ -393,6 +394,29 @@ def write_excel(en_dict, translations, output_path):
 
 # -- Main ----------------------------------------------------------------------
 
+def load_prev_english():
+    """Load en-prev.json if it exists, otherwise return empty dict."""
+    if PREV_FILE.exists():
+        with open(PREV_FILE, encoding="utf-8") as f:
+            return json.load(f)
+    return {}
+
+
+def find_changed_keys(en_dict, en_prev):
+    """
+    Return the set of keys whose English value has changed since the last run.
+    New keys (not in en-prev) are also included.
+    If en-prev does not exist, all keys are considered changed (full run).
+    """
+    if not en_prev:
+        return set(en_dict.keys())
+    changed = set()
+    for key, value in en_dict.items():
+        if en_prev.get(key) != value:
+            changed.add(key)
+    return changed
+
+
 def main():
     print("Avatour Web Console UI Translation")
     print("====================================")
@@ -407,18 +431,61 @@ def main():
     print(f"Loaded {len(en_dict)} strings from en.json")
     DIST_DIR.mkdir(exist_ok=True)
 
+    # Delta detection — only translate keys that changed since last run
+    en_prev   = load_prev_english()
+    changed   = find_changed_keys(en_dict, en_prev)
+    is_full   = not en_prev
+
+    if is_full:
+        print(f"No en-prev.json found — running full translation ({len(en_dict)} keys).")
+    else:
+        print(f"Delta detected: {len(changed)} of {len(en_dict)} keys changed since last run.")
+        if not changed:
+            print("Nothing to translate — en.json unchanged. Exiting.")
+            # Still update en-prev.json and exit cleanly
+            with open(PREV_FILE, "w", encoding="utf-8") as f:
+                json.dump(en_dict, f, ensure_ascii=False, indent=2)
+            return
+
     all_translations = {}
 
     for lang_code, lang_name in LANGUAGES.items():
         print(f"\nTranslating to {lang_name} ({lang_code})...")
-        translated = translate_all(en_dict, lang_code)
-        translated = apply_fixes(translated, lang_code)
-        all_translations[lang_code] = translated
 
         out_path = DIST_DIR / f"{lang_code.lower()}.json"
+
+        # Load existing translations to preserve manual edits
+        if out_path.exists() and not is_full:
+            with open(out_path, encoding="utf-8") as f:
+                existing = json.load(f)
+            print(f"  Loaded {len(existing)} existing translations from {out_path.name}")
+        else:
+            existing = {}
+
+        # Build a subset dict of only the changed keys to translate
+        changed_dict = {k: v for k, v in en_dict.items() if k in changed}
+
+        # Translate only the changed keys
+        new_translations = translate_all(changed_dict, lang_code)
+        new_translations = apply_fixes(new_translations, lang_code)
+
+        # Merge: existing translations take the base, changed keys are overwritten
+        merged = dict(existing)
+        merged.update(new_translations)
+
+        # Preserve key order from en.json
+        translated = {k: merged[k] for k in en_dict if k in merged}
+
+        all_translations[lang_code] = translated
+
         with open(out_path, "w", encoding="utf-8") as f:
             json.dump(translated, f, ensure_ascii=False, indent=2)
-        print(f"  JSON written: {out_path.name}")
+        print(f"  JSON written: {out_path.name} ({len(new_translations)} keys updated)")
+
+    # Save en-prev.json for next run
+    with open(PREV_FILE, "w", encoding="utf-8") as f:
+        json.dump(en_dict, f, ensure_ascii=False, indent=2)
+    print(f"\n  Snapshot saved: dist/en-prev.json")
 
     print("\nWriting Excel review file...")
     write_excel(en_dict, all_translations, DIST_DIR / "translations.xlsx")
@@ -426,6 +493,7 @@ def main():
     print("\nDone!")
     print("  dist/it.json           — Italian translations")
     print("  dist/de.json           — German translations")
+    print("  dist/en-prev.json      — English snapshot for delta detection")
     print("  dist/translations.xlsx — Combined review file (EN / IT / DE)")
 
 
