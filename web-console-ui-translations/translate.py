@@ -129,6 +129,10 @@ FIXES = {
          "Möchten Sie den SuperFreeze als Asset behalten?"),
         # Waiting for guide (Reiseführer = travel guide book)
         ("Warten auf den Reiseführer...", "Warten auf den Host..."),
+        # asset singular still being retranslated
+        ("Vermögenswert", "Asset"),
+        # new_meeting grammar
+        ("neue Meeting", "neues Meeting"),
     ],
     "IT": [
         # Single-word / short UI labels — exact value fixes
@@ -164,9 +168,10 @@ FIXES = {
 # Format: (substring_to_find, replacement) per language
 SUBSTRING_FIXES = {
     "DE": [
-        ("Gastgeber",  "Host"),        # host within sentences
-        ("Treffen",    "Meeting"),     # meeting within sentences
-        ("Sitzung",    "Meeting"),     # meeting (alt) within sentences
+        ("Gastgeber",    "Host"),          # host within sentences
+        ("Treffen",      "Meeting"),       # meeting within sentences
+        ("Sitzung",      "Meeting"),       # meeting (alt) within sentences
+        ("Vermögenswert", "Asset"),        # asset within sentences
     ],
     "IT": [
         # In longer strings, "ospite" used for host needs fixing contextually
