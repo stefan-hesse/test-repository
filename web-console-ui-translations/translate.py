@@ -267,6 +267,15 @@ def apply_fixes(translated_dict, lang_code):
                     new_value = new_value.replace(wrong, correct)
                     fixed_count += 1
 
+        # Capitalise first letter for DE and IT — German nouns require capitals,
+        # and Italian labels look more consistent capitalised.
+        # Only applies when the first character is a lowercase letter.
+        # Skips $t() references, strings starting with special chars, etc.
+        if lang_code in ("DE", "IT"):
+            if new_value and new_value[0].islower():
+                new_value = new_value[0].upper() + new_value[1:]
+                fixed_count += 1
+
         result[key] = new_value
 
     print(f"  Post-processing: {fixed_count} fixes applied.")
