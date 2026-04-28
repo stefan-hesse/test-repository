@@ -169,6 +169,13 @@ After the workflow runs successfully:
   `roi_title` and similar multi-placeholder strings carefully.
 - **Formal register**: All translations use `formality: prefer_more` (formal Sie /
   Lei). If informal register is ever needed, change this in `translate_batch()`.
+- **First-letter capitalisation**: All translated values have their first letter
+  capitalised for DE and IT. This ensures German nouns are correctly capitalised
+  and Italian labels look consistent. If the app applies CSS `text-transform` that
+  conflicts, this can be removed by deleting the capitalisation block in
+  `apply_fixes()`. Note that short words like conjunctions (`und`, `e`) and
+  prepositions also get capitalised — add exceptions to `PRE_TRANSLATIONS` if any
+  are problematic in context.
 - **DeepL glossary**: The German glossary enforces `meeting → Meeting` /
   `meetings → Meetings`. Glossaries are immutable once created — to update,
   the script deletes and recreates the glossary on each run automatically.
@@ -186,3 +193,23 @@ After the workflow runs successfully:
 | analytics | Analysen | analisi | Standard UI term |
 | SuperFreeze | SuperFreeze | SuperFreeze | Product name — never translated |
 | submit | einreichen | Invia | Italian pre-translated to avoid "Presente" (wrong) |
+
+---
+
+## Capitalisation
+
+All translated values have their first letter capitalised automatically for both
+DE and IT. German requires all nouns to be capitalised; Italian benefits from
+consistent title-style capitalisation for UI labels.
+
+The rule is simple: if the first character of a translated value is a lowercase
+letter, it is uppercased. This means:
+- Short labels: `passwort → Passwort`, `kamera → Kamera`, `filtri → Filtri`
+- Sentences already starting with a capital are unaffected
+- `$t()` references and `{{placeholders}}` starting with special characters are unaffected
+
+Known minor side effects for native speaker review:
+- Conjunctions (`und → Und`, `e → E`) and prepositions (`auf → Auf`, `su → Su`)
+  get capitalised — these are rarely standalone labels but worth checking in context
+- German `"on": "Auf"` was already a mistranslation (should be "Ein" for toggle);
+  Italian `"on": "Su"` similarly
