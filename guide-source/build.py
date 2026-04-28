@@ -46,7 +46,7 @@ def translate_with_deepl(text, target_lang, api_key):
         'preserve_formatting': '1',
     }).encode('utf-8')
     req = urllib.request.Request(
-        'https://api-free.deepl.com/v2/translate',
+        'https://api.deepl.com/v2/translate',
         data=payload,
         headers={
             'Authorization': f'DeepL-Auth-Key {api_key}',
