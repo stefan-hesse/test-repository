@@ -217,14 +217,14 @@
   .ai-feature-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--orange); flex-shrink: 0; }
   .ai-feature-text { font-family: 'Roboto', sans-serif; font-size: 16px; font-weight: 400; color: var(--white); }
 
-  /* ─── SOFT BENEFITS ─────────────────────────────── */
-  .soft-section { background: var(--off-white); }
-  .soft-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 48px; }
-  .soft-card { background: var(--white); border-radius: 14px; padding: 28px 24px; border: 1px solid var(--light-grey); transition: border-color 0.2s ease; }
-  .soft-card:hover { border-color: var(--orange); }
-  .soft-card-icon { font-size: 28px; margin-bottom: 14px; display: flex; align-items: center; }
-  .soft-card-title { font-family: 'Titillium Web', sans-serif; font-size: 22px; font-weight: 600; color: var(--navy); line-height: 30px; margin-bottom: 6px; }
-  .soft-card-text { font-family: 'Roboto', sans-serif; font-size: 16px; font-weight: 400; color: #3d3d3d; line-height: 26px; }
+  /* ─── QUALITATIVE BENEFITS ─────────────────────────────── */
+  .qualitative-section { background: var(--off-white); }
+  .qualitative-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 48px; }
+  .qualitative-card { background: var(--white); border-radius: 14px; padding: 28px 24px; border: 1px solid var(--light-grey); transition: border-color 0.2s ease; }
+  .qualitative-card:hover { border-color: var(--orange); }
+  .qualitative-card-icon { font-size: 28px; margin-bottom: 14px; display: flex; align-items: center; }
+  .qualitative-card-title { font-family: 'Titillium Web', sans-serif; font-size: 22px; font-weight: 600; color: var(--navy); line-height: 30px; margin-bottom: 6px; }
+  .qualitative-card-text { font-family: 'Roboto', sans-serif; font-size: 16px; font-weight: 400; color: #3d3d3d; line-height: 26px; }
 
   /* ─── STAKEHOLDER VIEW ──────────────────────────── */
   .stakeholder-section { background: var(--white); }
@@ -280,7 +280,7 @@
   .tab-btn.active img { filter: brightness(0) invert(1); }
 
   /* ─── AVATOUR ICON IMAGES ──────────────────────────────── */
-  .roi-card-icon img, .soft-card-icon img, .strategic-col-icon img, .framework-node-icon img, .uc-icon img { display: block; object-fit: contain; }
+  .roi-card-icon img, .qualitative-card-icon img, .strategic-col-icon img, .framework-node-icon img, .uc-icon img { display: block; object-fit: contain; }
   .sh-avatar img { display: block; object-fit: contain; filter: brightness(0) invert(1); }
 
   /* ─── ANIMATIONS ────────────────────────────────── */
@@ -299,7 +299,7 @@
     .hero-grid { grid-template-columns: 1fr; gap: 40px; }
     .use-case-card { grid-template-columns: 1fr; }
     .roi-grid { grid-template-columns: 1fr 1fr; }
-    .soft-grid { grid-template-columns: 1fr 1fr; }
+    .qualitative-grid { grid-template-columns: 1fr 1fr; }
     .stakeholder-grid { grid-template-columns: 1fr; }
     .strategic-columns { grid-template-columns: 1fr; }
     .proof-inner { grid-template-columns: 1fr; gap: 40px; }
@@ -309,7 +309,7 @@
     .hero h1 { font-size: 28px; line-height: 36px; }
     .section-title { font-size: 24px; line-height: 32px; }
     .roi-grid { grid-template-columns: 1fr; }
-    .soft-grid { grid-template-columns: 1fr; }
+    .qualitative-grid { grid-template-columns: 1fr; }
     .hero-stat-grid { grid-template-columns: 1fr 1fr; }
     .proof-stats { grid-template-columns: 1fr 1fr; }
     .framework-flow { flex-direction: column; gap: 8px; }
@@ -791,21 +791,21 @@
   </div>
 </section>
 
-<!-- ─── SOFT BENEFITS ─────────────────────────────────────────────── -->
-<section class="soft-section">
+<!-- ─── QUALITATIVE BENEFITS ─────────────────────────────────────────────── -->
+<section class="qualitative-section">
   <div class="section-inner">
     <div class="section-label">Beyond the Spreadsheet</div>
-    <h2 class="section-title">Strategic &amp; soft benefits<br>that compound over time</h2>
+    <h2 class="section-title">Strategic &amp; qualitative benefits<br>that compound over time</h2>
     <p class="section-intro">Not every benefit shows up immediately in a P&amp;L. These advantages grow in value the longer Avatour is embedded in your operations.</p>
-    <div class="soft-grid">
-      <div class="soft-card"><div class="soft-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/remote-facility-management_zwhopp.svg" style="width:32px;height:32px;object-fit:contain;" alt=""></div><div class="soft-card-title">Global Site Visibility</div><div class="soft-card-text">Give any site — however remote — the same visibility as your flagship facility. Overcome geography as a constraint on decision-making and oversight.</div></div>
-      <div class="soft-card"><div class="soft-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/record-playback_z91edi.svg" style="width:32px;height:32px;object-fit:contain;" alt=""></div><div class="soft-card-title">Replayable Institutional Knowledge</div><div class="soft-card-text">Every recorded session becomes a permanent, searchable reference. Review critical decisions, onboard new team members, and prevent knowledge loss when people leave.</div></div>
-      <div class="soft-card"><div class="soft-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/increase-frequency_ev24y4.svg" style="width:32px;height:32px;object-fit:contain;" alt=""></div><div class="soft-card-title">Innovation Brand Signal</div><div class="soft-card-text">Using Avatour signals to customers, partners, and talent that your organisation embraces forward-thinking technology — a differentiator in competitive markets.</div></div>
-      <div class="soft-card"><div class="soft-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/reduce-downtime_wmba73.svg" style="width:32px;height:32px;object-fit:contain;" alt=""></div><div class="soft-card-title">Reduced Operational Disruption</div><div class="soft-card-text">Virtual visitors reduce interference with live production schedules, minimise safety briefing overhead, and allow sites to maintain throughput during reviews.</div></div>
-      <div class="soft-card"><div class="soft-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/trust_airkvi.svg" style="width:32px;height:32px;object-fit:contain;" alt=""></div><div class="soft-card-title">Better Talent Attraction</div><div class="soft-card-text">Show candidates their future workplace virtually during recruitment. Particularly effective for remote, industrial, or specialist sites that are hard to visit.</div></div>
-      <div class="soft-card"><div class="soft-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/connect-place_ymmhfn.svg" style="width:32px;height:32px;object-fit:contain;" alt=""></div><div class="soft-card-title">Improved Work-Life Balance</div><div class="soft-card-text">Eliminating international travel improves wellbeing for employees and customer-side participants alike — a benefit that correlates with retention and engagement.</div></div>
-      <div class="soft-card"><div class="soft-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/increase-safety_vm0bio.svg" style="width:32px;height:32px;object-fit:contain;" alt=""></div><div class="soft-card-title">Reduced Safety Exposure</div><div class="soft-card-text">Hazardous facilities can be reviewed comprehensively by large expert teams — with zero additional physical presence and zero incremental risk.</div></div>
-      <div class="soft-card"><div class="soft-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/collaborate-annotate_eucxva.svg" style="width:32px;height:32px;object-fit:contain;" alt=""></div><div class="soft-card-title">Deeper Stakeholder Inclusion</div><div class="soft-card-text">Remove the participation bottleneck. Invite every relevant expert to every session, regardless of location — increasing both buy-in and the quality of outcomes.</div></div>
+    <div class="qualitative-grid">
+      <div class="qualitative-card"><div class="qualitative-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/remote-facility-management_zwhopp.svg" style="width:32px;height:32px;object-fit:contain;" alt=""></div><div class="qualitative-card-title">Global Site Visibility</div><div class="qualitative-card-text">Give any site — however remote — the same visibility as your flagship facility. Overcome geography as a constraint on decision-making and oversight.</div></div>
+      <div class="qualitative-card"><div class="qualitative-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/record-playback_z91edi.svg" style="width:32px;height:32px;object-fit:contain;" alt=""></div><div class="qualitative-card-title">Replayable Institutional Knowledge</div><div class="qualitative-card-text">Every recorded session becomes a permanent, searchable reference. Review critical decisions, onboard new team members, and prevent knowledge loss when people leave.</div></div>
+      <div class="qualitative-card"><div class="qualitative-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/increase-frequency_ev24y4.svg" style="width:32px;height:32px;object-fit:contain;" alt=""></div><div class="qualitative-card-title">Innovation Brand Signal</div><div class="qualitative-card-text">Using Avatour signals to customers, partners, and talent that your organisation embraces forward-thinking technology — a differentiator in competitive markets.</div></div>
+      <div class="qualitative-card"><div class="qualitative-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/reduce-downtime_wmba73.svg" style="width:32px;height:32px;object-fit:contain;" alt=""></div><div class="qualitative-card-title">Reduced Operational Disruption</div><div class="qualitative-card-text">Virtual visitors reduce interference with live production schedules, minimise safety briefing overhead, and allow sites to maintain throughput during reviews.</div></div>
+      <div class="qualitative-card"><div class="qualitative-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/trust_airkvi.svg" style="width:32px;height:32px;object-fit:contain;" alt=""></div><div class="qualitative-card-title">Better Talent Attraction</div><div class="qualitative-card-text">Show candidates their future workplace virtually during recruitment. Particularly effective for remote, industrial, or specialist sites that are hard to visit.</div></div>
+      <div class="qualitative-card"><div class="qualitative-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/connect-place_ymmhfn.svg" style="width:32px;height:32px;object-fit:contain;" alt=""></div><div class="qualitative-card-title">Improved Work-Life Balance</div><div class="qualitative-card-text">Eliminating international travel improves wellbeing for employees and customer-side participants alike — a benefit that correlates with retention and engagement.</div></div>
+      <div class="qualitative-card"><div class="qualitative-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/increase-safety_vm0bio.svg" style="width:32px;height:32px;object-fit:contain;" alt=""></div><div class="qualitative-card-title">Reduced Safety Exposure</div><div class="qualitative-card-text">Hazardous facilities can be reviewed comprehensively by large expert teams — with zero additional physical presence and zero incremental risk.</div></div>
+      <div class="qualitative-card"><div class="qualitative-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/collaborate-annotate_eucxva.svg" style="width:32px;height:32px;object-fit:contain;" alt=""></div><div class="qualitative-card-title">Deeper Stakeholder Inclusion</div><div class="qualitative-card-text">Remove the participation bottleneck. Invite every relevant expert to every session, regardless of location — increasing both buy-in and the quality of outcomes.</div></div>
     </div>
   </div>
 </section>
@@ -879,7 +879,7 @@
     });
   }, { threshold: 0.1 });
 
-  document.querySelectorAll('.roi-card, .soft-card, .sh-card, .strategic-col').forEach(el => {
+  document.querySelectorAll('.roi-card, .qualitative-card, .sh-card, .strategic-col').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
     el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
