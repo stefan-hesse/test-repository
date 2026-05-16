@@ -186,10 +186,10 @@
   .s1-kpi .kpi-val { font-size: clamp(20px,3.8vw,44px); font-weight: 700; line-height: 1; }
   .s1-kpi .kpi-lab { font-size: clamp(6px,.75vw,9px); font-weight: 600; letter-spacing: .11em; text-transform: uppercase; color: #8a9eaa; margin-top: 3px; }
   .s1-soft { }
-  .s1-soft-title { font-size: clamp(6px,.72vw,8.5px); font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #8a9eaa; margin-bottom: 6px; }
-  .s1-chips { display: flex; flex-wrap: wrap; gap: 4px; }
-  .s1-chip { background: #f0f4f7; border: 1px solid #dde5ea; border-radius: 100px; padding: 2px 8px; font-size: clamp(5.5px,.65vw,7.5px); color: #5a6e7a; font-weight: 500; }
-  .s1-chip.uc { background: var(--orange-light); border-color: rgba(255,78,0,.25); color: var(--orange); }
+  .s1-qualitative-title { font-size: clamp(6px,.72vw,8.5px); font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #8a9eaa; margin-bottom: 6px; }
+  .s1-qualitative-chips { display: flex; flex-wrap: wrap; gap: 4px; }
+  .s1-qualitative-chip { background: #f0f4f7; border: 1px solid #dde5ea; border-radius: 100px; padding: 2px 8px; font-size: clamp(5.5px,.65vw,7.5px); color: #5a6e7a; font-weight: 500; }
+  .s1-qualitative-chip.uc { background: var(--orange-light); border-color: rgba(255,78,0,.25); color: var(--orange); }
   .s1-bottom { display: flex; justify-content: space-between; align-items: flex-end; }
   .s1-strapline { font-size: clamp(7px,1vw,12px); font-weight: 300; color: #8a9eaa; }
   .s1-strapline em { font-style: normal; color: var(--orange); }
@@ -217,7 +217,7 @@
   .s2-total-label { font-size: clamp(7px,.85vw,10px); font-weight: 700; color: #5a6e7a; text-transform: uppercase; letter-spacing: .08em; }
   .s2-total-val { font-size: clamp(14px,2.2vw,26px); font-weight: 700; color: var(--orange); }
 
-  /* Slide 3 — Soft Benefits */
+  /* Slide 3 — Qualitative Benefits */
   .s3-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 3%; }
   .s3-slide-title { font-size: clamp(11px,1.5vw,18px); font-weight: 700; color: var(--navy); }
   .s3-logo { height: clamp(14px,1.8vw,22px); opacity: .7; }
@@ -238,21 +238,21 @@
   .action-btn svg { width: 13px; height: 13px; flex-shrink: 0; }
 
   /* ── SOFT BENEFITS ── */
-  .soft-section { max-width: 100%; margin: 0; padding: 60px 0 80px; background: var(--navy); }
-  .soft-section-inner { max-width: 1120px; margin: 0 auto; padding: 0 40px; }
-  .soft-header { text-align: center; margin-bottom: 36px; }
-  .soft-eyebrow { font-family: var(--font-d); font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--orange); margin-bottom: 9px; }
-  .soft-title { font-family: var(--font-d); font-size: clamp(20px,3.2vw,34px); font-weight: 700; line-height: 1.2; margin-bottom: 11px; color: #ffffff; }
-  .soft-subtitle { font-size: 14px; color: rgba(255,255,255,0.6); max-width: 520px; margin: 0 auto; line-height: 1.7; }
-  .soft-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
-  .soft-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 13px; padding: 22px; transition: all .25s; position: relative; overflow: hidden; }
-  .soft-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--orange), transparent); opacity: 0; transition: opacity .25s; }
-  .soft-card:hover { border-color: rgba(255,78,0,.4); transform: translateY(-2px); }
-  .soft-card:hover::before { opacity: 1; }
-  .soft-card-icon { width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; }
-  .soft-card-title { font-family: var(--font-d); font-size: 13.5px; font-weight: 700; margin-bottom: 7px; color: #ffffff; }
-  .soft-card-text { font-size: 12px; color: rgba(255,255,255,0.55); line-height: 1.6; }
-  .soft-card-indicator { display: inline-flex; align-items: center; gap: 4px; margin-top: 11px; background: var(--orange-light); border: 1px solid rgba(255,78,0,.2); border-radius: 100px; padding: 2px 9px; font-size: 10px; font-weight: 600; color: var(--orange); letter-spacing: .04em; }
+  .qualitative-section { max-width: 100%; margin: 0; padding: 60px 0 80px; background: var(--navy); }
+  .qualitative-section-inner { max-width: 1120px; margin: 0 auto; padding: 0 40px; }
+  .qualitative-header { text-align: center; margin-bottom: 36px; }
+  .qualitative-eyebrow { font-family: var(--font-d); font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--orange); margin-bottom: 9px; }
+  .qualitative-title { font-family: var(--font-d); font-size: clamp(20px,3.2vw,34px); font-weight: 700; line-height: 1.2; margin-bottom: 11px; color: #ffffff; }
+  .qualitative-subtitle { font-size: 14px; color: rgba(255,255,255,0.6); max-width: 520px; margin: 0 auto; line-height: 1.7; }
+  .qualitative-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .qualitative-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 13px; padding: 22px; transition: all .25s; position: relative; overflow: hidden; }
+  .qualitative-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--orange), transparent); opacity: 0; transition: opacity .25s; }
+  .qualitative-card:hover { border-color: rgba(255,78,0,.4); transform: translateY(-2px); }
+  .qualitative-card:hover::before { opacity: 1; }
+  .qualitative-card-icon { width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; }
+  .qualitative-card-title { font-family: var(--font-d); font-size: 13.5px; font-weight: 700; margin-bottom: 7px; color: #ffffff; }
+  .qualitative-card-text { font-size: 12px; color: rgba(255,255,255,0.55); line-height: 1.6; }
+  .qualitative-card-indicator { display: inline-flex; align-items: center; gap: 4px; margin-top: 11px; background: var(--orange-light); border: 1px solid rgba(255,78,0,.2); border-radius: 100px; padding: 2px 9px; font-size: 10px; font-weight: 600; color: var(--orange); letter-spacing: .04em; }
 
   /* ── TOAST ── */
   .toast { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%) translateY(8px); background: var(--orange); color: var(--white); font-family: var(--font-b); font-size: 12.5px; font-weight: 600; padding: 9px 20px; border-radius: 100px; opacity: 0; pointer-events: none; transition: all .3s; z-index: 200; }
@@ -269,14 +269,14 @@
     .page-header-inner { padding: 36px 20px 36px; }
     .results-panel { position: static; }
     .uc-grid { grid-template-columns: repeat(2,1fr); }
-    .soft-grid { grid-template-columns: 1fr 1fr; }
+    .qualitative-grid { grid-template-columns: 1fr 1fr; }
     .slides-section { padding: 36px 20px !important; }
-    .soft-section-inner { padding: 0 20px; }
+    .qualitative-section-inner { padding: 0 20px; }
   }
   @media (max-width: 540px) {
     .form-grid { grid-template-columns: 1fr; }
     .form-grid .field.span-2 { grid-column: span 1; }
-    .soft-grid { grid-template-columns: 1fr; }
+    .qualitative-grid { grid-template-columns: 1fr; }
     .uc-grid { grid-template-columns: 1fr 1fr; }
     .travel-table input { width: 62px; }
   }
@@ -315,7 +315,7 @@
       <div class="section-icon"><img src="https://res.cloudinary.com/avatour/image/upload/trust_airkvi.svg" style="width:22px;height:22px;display:block;" alt=""></div>
       <div>
         <div class="section-title">Your Avatour Use Cases</div>
-        <div class="section-desc">Select all that apply. Your selection shapes the soft benefit analysis on Slide 3.</div>
+        <div class="section-desc">Select all that apply. Your selection shapes the qualitative benefit analysis on Slide 3.</div>
       </div>
     </div>
     <div class="uc-grid">
@@ -555,7 +555,7 @@
   <div class="slide-tabs">
     <button class="slide-tab active" onclick="showSlide(1,this)">1 — Overview</button>
     <button class="slide-tab" onclick="showSlide(2,this)">2 — Financial Detail</button>
-    <button class="slide-tab" onclick="showSlide(3,this)">3 — Soft Benefits</button>
+    <button class="slide-tab" onclick="showSlide(3,this)">3 — Qualitative Benefits</button>
   </div>
 
   <!-- SLIDE 1: Overview -->
@@ -581,17 +581,17 @@
             </div>
           </div>
           <div class="s1-soft">
-            <div class="s1-soft-title">Use Cases Deployed</div>
-            <div class="s1-chips" id="sl1_uc_chips">—</div>
+            <div class="s1-qualitative-title">Use Cases Deployed</div>
+            <div class="s1-qualitative-chips" id="sl1_uc_chips">—</div>
             <div style="margin-top:4%;"></div>
-            <div class="s1-soft-title">Additional Benefits — Not Counted Above</div>
-            <div class="s1-chips" id="sl1_soft_chips">
-              <span class="s1-chip">Better decision quality</span>
-              <span class="s1-chip">Faster corrective action</span>
-              <span class="s1-chip">Improved work-life balance</span>
-              <span class="s1-chip">Increased site safety</span>
-              <span class="s1-chip">Reduced disruption</span>
-              <span class="s1-chip">Video evidence archive</span>
+            <div class="s1-qualitative-title">Qualitative Benefits — Not Counted Above</div>
+            <div class="s1-qualitative-chips" id="sl1_soft_chips">
+              <span class="s1-qualitative-chip">Better decision quality</span>
+              <span class="s1-qualitative-chip">Faster corrective action</span>
+              <span class="s1-qualitative-chip">Improved work-life balance</span>
+              <span class="s1-qualitative-chip">Increased site safety</span>
+              <span class="s1-qualitative-chip">Reduced disruption</span>
+              <span class="s1-qualitative-chip">Video evidence archive</span>
             </div>
           </div>
         </div>
@@ -662,7 +662,7 @@
       <div class="slide-header-bar">
           <img src="https://res.cloudinary.com/avatour/image/upload/v1772627126/avatour-name-logo-whiteontransparent_zwfsxa.svg" class="sh-logo" alt="Avatour">
           <div class="sh-right">
-            <div class="sh-tag">What Comes For Free On Top</div>
+            <div class="sh-tag">Qualitative Benefits</div>
             <div class="sh-company" id="sl3_company_hdr"></div>
           </div>
         </div>
@@ -690,52 +690,52 @@
 </div>
 
 <!-- SOFT BENEFITS SECTION -->
-<div class="soft-section">
-<div class="soft-section-inner">
-  <div class="soft-header">
-    <div class="soft-eyebrow">What comes for free on top</div>
-    <h2 class="soft-title">The benefits you can't put a price on<br>— but your business will feel.</h2>
-    <p class="soft-subtitle">Your ROI calculation above captures the hard savings. These additional benefits come included — no extra line on the invoice.</p>
+<div class="qualitative-section">
+<div class="qualitative-section-inner">
+  <div class="qualitative-header">
+    <div class="qualitative-eyebrow">Qualitative Benefits</div>
+    <h2 class="qualitative-title">The qualitative benefits<br>— your business will feel these too.</h2>
+    <p class="qualitative-subtitle">Your ROI calculation above captures the hard savings. These qualitative benefits come included — no extra line on the invoice.</p>
   </div>
-  <div class="soft-grid">
-    <div class="soft-card">
-      <div class="soft-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/align-teams_ukfu5z.svg" style="width:28px;height:28px;display:block;margin-bottom:10px;" alt=""></div>
-      <div class="soft-card-title">Better Decision Quality</div>
-      <div class="soft-card-text">More experts join simultaneously — on-site specialists, remote managers, external consultants — increasing quality of findings and reducing costly rework cycles.</div>
-      <div class="soft-card-indicator">High Impact</div>
+  <div class="qualitative-grid">
+    <div class="qualitative-card">
+      <div class="qualitative-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/align-teams_ukfu5z.svg" style="width:28px;height:28px;display:block;margin-bottom:10px;" alt=""></div>
+      <div class="qualitative-card-title">Better Decision Quality</div>
+      <div class="qualitative-card-text">More experts join simultaneously — on-site specialists, remote managers, external consultants — increasing quality of findings and reducing costly rework cycles.</div>
+      <div class="qualitative-card-indicator">High Impact</div>
     </div>
-    <div class="soft-card">
-      <div class="soft-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/realtime-communication_ylphs5.svg" style="width:28px;height:28px;display:block;margin-bottom:10px;" alt=""></div>
-      <div class="soft-card-title">Faster Corrective Action</div>
-      <div class="soft-card-text">Issues identified during an Avatour session are linked directly to 360° video evidence, allowing teams to act immediately rather than waiting for a follow-up visit.</div>
-      <div class="soft-card-indicator">High Impact</div>
+    <div class="qualitative-card">
+      <div class="qualitative-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/realtime-communication_ylphs5.svg" style="width:28px;height:28px;display:block;margin-bottom:10px;" alt=""></div>
+      <div class="qualitative-card-title">Faster Corrective Action</div>
+      <div class="qualitative-card-text">Issues identified during an Avatour session are linked directly to 360° video evidence, allowing teams to act immediately rather than waiting for a follow-up visit.</div>
+      <div class="qualitative-card-indicator">High Impact</div>
     </div>
-    <div class="soft-card">
-      <div class="soft-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/increase-safety_vm0bio.svg" style="width:28px;height:28px;display:block;margin-bottom:10px;" alt=""></div>
-      <div class="soft-card-title">Increased Site Safety</div>
-      <div class="soft-card-text">Hazardous environments — factory floors, construction sites, remote facilities — can be inspected remotely, reducing physical exposure to risk.</div>
-      <div class="soft-card-indicator">Very High Impact</div>
+    <div class="qualitative-card">
+      <div class="qualitative-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/increase-safety_vm0bio.svg" style="width:28px;height:28px;display:block;margin-bottom:10px;" alt=""></div>
+      <div class="qualitative-card-title">Increased Site Safety</div>
+      <div class="qualitative-card-text">Hazardous environments — factory floors, construction sites, remote facilities — can be inspected remotely, reducing physical exposure to risk.</div>
+      <div class="qualitative-card-indicator">Very High Impact</div>
     </div>
-    <div class="soft-card">
-      <div class="soft-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/expertise-anytime_anrxbg.svg" style="width:28px;height:28px;display:block;margin-bottom:10px;" alt=""></div>
-      <div class="soft-card-title">Improved Work-Life Balance</div>
-      <div class="soft-card-text">Fewer long-haul trips means less fatigue and burnout — especially for senior managers and quality engineers who travel most frequently.</div>
-      <div class="soft-card-indicator">High Impact</div>
+    <div class="qualitative-card">
+      <div class="qualitative-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/expertise-anytime_anrxbg.svg" style="width:28px;height:28px;display:block;margin-bottom:10px;" alt=""></div>
+      <div class="qualitative-card-title">Improved Work-Life Balance</div>
+      <div class="qualitative-card-text">Fewer long-haul trips means less fatigue and burnout — especially for senior managers and quality engineers who travel most frequently.</div>
+      <div class="qualitative-card-indicator">High Impact</div>
     </div>
-    <div class="soft-card">
-      <div class="soft-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/reduce-downtime_wmba73.svg" style="width:28px;height:28px;display:block;margin-bottom:10px;" alt=""></div>
-      <div class="soft-card-title">Less Site Disruption</div>
-      <div class="soft-card-text">A 360° session is far less disruptive than a physical delegation visit — reducing preparation effort and downtime for host teams.</div>
-      <div class="soft-card-indicator">Medium Impact</div>
+    <div class="qualitative-card">
+      <div class="qualitative-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/reduce-downtime_wmba73.svg" style="width:28px;height:28px;display:block;margin-bottom:10px;" alt=""></div>
+      <div class="qualitative-card-title">Less Site Disruption</div>
+      <div class="qualitative-card-text">A 360° session is far less disruptive than a physical delegation visit — reducing preparation effort and downtime for host teams.</div>
+      <div class="qualitative-card-indicator">Medium Impact</div>
     </div>
-    <div class="soft-card">
-      <div class="soft-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/record-playback_z91edi.svg" style="width:28px;height:28px;display:block;margin-bottom:10px;" alt=""></div>
-      <div class="soft-card-title">Permanent Visual Record</div>
-      <div class="soft-card-text">Every session creates a dated, searchable 360° video archive — invaluable for audits, training, project handovers, and compliance documentation.</div>
-      <div class="soft-card-indicator">Very High Impact</div>
+    <div class="qualitative-card">
+      <div class="qualitative-card-icon"><img src="https://res.cloudinary.com/avatour/image/upload/record-playback_z91edi.svg" style="width:28px;height:28px;display:block;margin-bottom:10px;" alt=""></div>
+      <div class="qualitative-card-title">Permanent Visual Record</div>
+      <div class="qualitative-card-text">Every session creates a dated, searchable 360° video archive — invaluable for audits, training, project handovers, and compliance documentation.</div>
+      <div class="qualitative-card-indicator">Very High Impact</div>
     </div>
   </div>
-</div><!-- /soft-section-inner -->
+</div><!-- /qualitative-section-inner -->
 
 <div class="toast" id="toast"></div>
 
@@ -1026,9 +1026,9 @@ function updateSlides(r) {
   // UC chips on slide 1
   const ucChips = el('sl1_uc_chips');
   if (ucs.length === 0) {
-    ucChips.innerHTML = '<span class="s1-chip">Not specified</span>';
+    ucChips.innerHTML = '<span class="s1-qualitative-chip">Not specified</span>';
   } else {
-    ucChips.innerHTML = ucs.map(u => `<span class="s1-chip uc">${u.icon} ${u.name.split('&')[0].trim()}</span>`).join('');
+    ucChips.innerHTML = ucs.map(u => `<span class="s1-qualitative-chip uc">${u.icon} ${u.name.split('&')[0].trim()}</span>`).join('');
   }
 
   // ── SLIDE 2 ──
@@ -1062,7 +1062,7 @@ function pct2(id, pct) {
 // ───────────────────────────────────────────────
 // BUILD SOFT BENEFITS SLIDE (use-case aware)
 // ───────────────────────────────────────────────
-const SOFT_BENEFITS = [
+const QUALITATIVE_BENEFITS = [
   { icon: '<img src="https://res.cloudinary.com/avatour/image/upload/align-teams_ukfu5z.svg" style="width:clamp(14px,1.8vw,22px);height:clamp(14px,1.8vw,22px);display:block;" alt="">', title: 'Better Decision Quality', desc: 'More experts participate simultaneously — increasing quality of findings and reducing costly rework cycles.', impact: 'High Impact', ucs: ['Remote Inspections', 'Gemba', 'Architecture'] },
   { icon: '<img src="https://res.cloudinary.com/avatour/image/upload/realtime-communication_ylphs5.svg" style="width:clamp(14px,1.8vw,22px);height:clamp(14px,1.8vw,22px);display:block;" alt="">', title: 'Faster Corrective Action', desc: 'Issues link directly to 360° evidence, enabling immediate action without waiting for a follow-up visit.', impact: 'High Impact', ucs: ['Remote Inspections', 'Gemba', 'Health, Safety'] },
   { icon: '<img src="https://res.cloudinary.com/avatour/image/upload/increase-safety_vm0bio.svg" style="width:clamp(14px,1.8vw,22px);height:clamp(14px,1.8vw,22px);display:block;" alt="">', title: 'Increased Site Safety', desc: 'Hazardous sites inspected remotely — fewer personnel physically exposed to risk.', impact: 'Very High', ucs: ['Health, Safety', 'Architecture', 'Remote Inspections'] },
@@ -1075,7 +1075,7 @@ function buildSoftSlide(ucs) {
   const ucNames = ucs.map(u => u.name);
   const grid = el('sl3_grid');
   grid.innerHTML = '';
-  SOFT_BENEFITS.forEach(b => {
+  QUALITATIVE_BENEFITS.forEach(b => {
     const isActive = ucNames.length === 0 || b.ucs.length === 0 || b.ucs.some(u => ucNames.some(n => n.includes(u)));
     const matchedUCs = ucNames.filter(n => b.ucs.some(u => n.includes(u)));
     grid.innerHTML += `
@@ -1091,7 +1091,7 @@ function buildSoftSlide(ucs) {
   if (ucNames.length > 0) {
     el('sl3_sub').textContent = `Strategic & qualitative benefits beyond the financial ROI. Cards highlighted in orange are especially relevant to your selected use cases: ${ucNames.map(n=>n.split('&')[0].trim()).join(', ')}.`;
   } else {
-    el('sl3_sub').textContent = 'Strategic & qualitative benefits beyond the financial ROI calculated above. Select your use cases above to highlight the most relevant benefits.';
+    el('sl3_sub').textContent = 'Qualitative benefits beyond the financial ROI calculated above. Select your use cases above to highlight the most relevant ones.';
   }
 }
 
@@ -1133,7 +1133,7 @@ const ps = document.createElement('style');
 ps.media = 'print';
 ps.textContent = `
   body { background: white !important; }
-  .page-header, .calc-layout, .slide-actions, .soft-section, .toast, .slide-tabs, .slides-title { display: none !important; }
+  .page-header, .calc-layout, .slide-actions, .qualitative-section, .toast, .slide-tabs, .slides-title { display: none !important; }
   .slides-section { display: block !important; padding: 0 !important; }
   .slide-panel { display: block !important; page-break-after: always; }
   .roi-slide { max-height: none !important; aspect-ratio: 16/9 !important; border: 1px solid #ccc !important; border-radius: 8px; margin-bottom: 20px; }
