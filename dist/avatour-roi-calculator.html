@@ -185,7 +185,7 @@
   .s1-kpis { display: grid; grid-template-columns: 1fr 1fr; gap: 4% 6%; }
   .s1-kpi .kpi-val { font-size: clamp(20px,3.8vw,44px); font-weight: 700; line-height: 1; }
   .s1-kpi .kpi-lab { font-size: clamp(6px,.75vw,9px); font-weight: 600; letter-spacing: .11em; text-transform: uppercase; color: #8a9eaa; margin-top: 3px; }
-  .s1-soft { }
+  .s1-qualitative { }
   .s1-qualitative-title { font-size: clamp(6px,.72vw,8.5px); font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #8a9eaa; margin-bottom: 6px; }
   .s1-qualitative-chips { display: flex; flex-wrap: wrap; gap: 4px; }
   .s1-qualitative-chip { background: #f0f4f7; border: 1px solid #dde5ea; border-radius: 100px; padding: 2px 8px; font-size: clamp(5.5px,.65vw,7.5px); color: #5a6e7a; font-weight: 500; }
@@ -237,7 +237,7 @@
   .action-btn:hover { border-color: var(--orange); color: var(--orange); background: var(--orange-light); }
   .action-btn svg { width: 13px; height: 13px; flex-shrink: 0; }
 
-  /* ── SOFT BENEFITS ── */
+  /* ── QUALITATIVE BENEFITS ── */
   .qualitative-section { max-width: 100%; margin: 0; padding: 60px 0 80px; background: var(--navy); }
   .qualitative-section-inner { max-width: 1120px; margin: 0 auto; padding: 0 40px; }
   .qualitative-header { text-align: center; margin-bottom: 36px; }
@@ -580,12 +580,12 @@
               <div class="s1-kpi"><div class="kpi-val" id="sl1_co2" style="font-size:clamp(12px,1.8vw,22px); color:var(--orange)">—</div><div class="kpi-lab">CO₂ Avoided / yr</div></div>
             </div>
           </div>
-          <div class="s1-soft">
+          <div class="s1-qualitative">
             <div class="s1-qualitative-title">Use Cases Deployed</div>
             <div class="s1-qualitative-chips" id="sl1_uc_chips">—</div>
             <div style="margin-top:4%;"></div>
             <div class="s1-qualitative-title">Qualitative Benefits — Not Counted Above</div>
-            <div class="s1-qualitative-chips" id="sl1_soft_chips">
+            <div class="s1-qualitative-chips" id="sl1_qualitative_chips">
               <span class="s1-qualitative-chip">Better decision quality</span>
               <span class="s1-qualitative-chip">Faster corrective action</span>
               <span class="s1-qualitative-chip">Improved work-life balance</span>
@@ -1052,7 +1052,7 @@ function updateSlides(r) {
 
   // ── SLIDE 3 ──
   el('sl3_company').textContent = '';  // now in header
-  buildSoftSlide(ucs);
+  buildQualitativeSlide(ucs);
 }
 
 function pct2(id, pct) {
@@ -1060,7 +1060,7 @@ function pct2(id, pct) {
 }
 
 // ───────────────────────────────────────────────
-// BUILD SOFT BENEFITS SLIDE (use-case aware)
+// BUILD QUALITATIVE BENEFITS SLIDE (use-case aware)
 // ───────────────────────────────────────────────
 const QUALITATIVE_BENEFITS = [
   { icon: '<img src="https://res.cloudinary.com/avatour/image/upload/align-teams_ukfu5z.svg" style="width:clamp(14px,1.8vw,22px);height:clamp(14px,1.8vw,22px);display:block;" alt="">', title: 'Better Decision Quality', desc: 'More experts participate simultaneously — increasing quality of findings and reducing costly rework cycles.', impact: 'High Impact', ucs: ['Remote Inspections', 'Gemba', 'Architecture'] },
@@ -1071,7 +1071,7 @@ const QUALITATIVE_BENEFITS = [
   { icon: '<img src="https://res.cloudinary.com/avatour/image/upload/record-playback_z91edi.svg" style="width:clamp(14px,1.8vw,22px);height:clamp(14px,1.8vw,22px);display:block;" alt="">', title: 'Permanent Visual Record', desc: 'Every session creates a dated, searchable archive for audits, training, and compliance documentation.', impact: 'Very High', ucs: ['Training', 'Remote Inspections', 'Architecture'] },
 ];
 
-function buildSoftSlide(ucs) {
+function buildQualitativeSlide(ucs) {
   const ucNames = ucs.map(u => u.name);
   const grid = el('sl3_grid');
   grid.innerHTML = '';
