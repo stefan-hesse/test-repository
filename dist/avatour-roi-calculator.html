@@ -221,9 +221,9 @@
   .s3-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 3%; }
   .s3-slide-title { font-size: clamp(11px,1.5vw,18px); font-weight: 700; color: var(--navy); }
   .s3-logo { height: clamp(14px,1.8vw,22px); opacity: .7; }
-  .s3-sub { font-size: clamp(10px,1.1vw,13px); color: #5a6e7a; margin-bottom: 3.5%; font-weight: 400; line-height: 1.5; }
-  .s3-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3%; flex: 1; }
-  .s3-card { background: #f5f7f9; border: 1px solid #dde5ea; border-radius: 8px; padding: 4% 4.5%; display: flex; flex-direction: column; gap: 3%; transition: border-color .2s; }
+  .s3-sub { font-size: clamp(10px,1.1vw,13px); color: #5a6e7a; margin-bottom: 2%; font-weight: 400; line-height: 1.4; }
+  .s3-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2%; flex: 1; min-height: 0; }
+  .s3-card { background: #f5f7f9; border: 1px solid #dde5ea; border-radius: 8px; padding: 2.5% 3.5%; display: flex; flex-direction: column; gap: 2%; transition: border-color .2s; overflow: hidden; }
   .s3-card.uc-active { border-color: var(--orange); background: rgba(255,78,0,.06); }
   .s3-card-icon { width: clamp(20px,2.5vw,30px); height: clamp(20px,2.5vw,30px); display: flex; align-items: center; justify-content: center; }
   .s3-card-title { font-size: clamp(11px,1.2vw,14px); font-weight: 700; line-height: 1.2; color: var(--navy); }
@@ -617,7 +617,7 @@
             <div class="sh-company" id="sl2_company_hdr"></div>
           </div>
         </div>
-      <div class="slide-content">
+      <div class="slide-content" style="padding-bottom:9%;">
         <div class="s2-grid">
           <!-- P1 -->
           <div>
@@ -666,7 +666,7 @@
             <div class="sh-company" id="sl3_company_hdr"></div>
           </div>
         </div>
-      <div class="slide-content">
+      <div class="slide-content" style="padding-top:2.5%; padding-bottom:4%;">
         <div class="s3-sub" id="sl3_sub">Strategic &amp; qualitative benefits beyond the financial ROI calculated above. Highlighted cards are particularly relevant to your selected use cases.</div>
         <div class="s3-grid" id="sl3_grid">
           <!-- populated by JS -->
