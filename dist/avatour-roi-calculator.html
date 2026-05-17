@@ -200,9 +200,9 @@
   .s2-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 3%; }
   .s2-slide-title { font-size: clamp(11px,1.5vw,18px); font-weight: 700; color: var(--navy); }
   .s2-logo { height: clamp(14px,1.8vw,22px); opacity: .7; }
-  .s2-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4% 5%; flex: 1; }
-  .s2-col-title { font-size: clamp(9px,1vw,12px); font-weight: 600; text-transform: uppercase; letter-spacing: .1em; color: #8a9eaa; margin-bottom: 4%; padding-bottom: 3%; border-bottom: 1px solid #edf1f4; }
-  .s2-row { display: flex; justify-content: space-between; align-items: baseline; padding: 2.5% 0; border-bottom: 1px solid #f0f4f7; }
+  .s2-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1% 5%; flex: 1; min-height: 0; }
+  .s2-col-title { font-size: clamp(9px,1vw,12px); font-weight: 600; text-transform: uppercase; letter-spacing: .1em; color: #8a9eaa; margin-bottom: 1.5%; padding-bottom: 1.5%; border-bottom: 1px solid #edf1f4; }
+  .s2-row { display: flex; justify-content: space-between; align-items: baseline; padding: 0.6% 0; border-bottom: 1px solid #f0f4f7; }
   .s2-row:last-child { border-bottom: none; }
   .s2-row-label { font-size: clamp(10px,1.1vw,13px); color: #5a6e7a; }
   .s2-row-val { font-size: clamp(11px,1.3vw,15px); font-weight: 700; color: var(--navy); }
@@ -211,11 +211,11 @@
   .s2-row-val.blue { color: var(--navy); }
   .s2-row-val.purple { color: var(--orange); }
   .s2-row-val.dim { color: #aabbc6; }
-  .s2-bar-mini { height: 2px; background: #edf1f4; border-radius: 100px; overflow: hidden; margin-top: 2px; }
+  .s2-bar-mini { height: 2px; background: #edf1f4; border-radius: 100px; overflow: hidden; margin-top: 1px; }
   .s2-bar-fill { height: 100%; border-radius: 100px; }
-  .s2-total-row { display: flex; justify-content: space-between; align-items: center; margin-top: 4%; padding-top: 3%; border-top: 2px solid var(--orange); }
+  .s2-total-row { display: flex; justify-content: space-between; align-items: center; margin-top: 1.5%; padding-top: 1.5%; border-top: 2px solid var(--orange); }
   .s2-total-label { font-size: clamp(9px,1vw,12px); font-weight: 700; color: #5a6e7a; text-transform: uppercase; letter-spacing: .08em; }
-  .s2-total-val { font-size: clamp(16px,2.5vw,30px); font-weight: 700; color: var(--orange); }
+  .s2-total-val { font-size: clamp(14px,2vw,24px); font-weight: 700; color: var(--orange); }
 
   /* Slide 3 — Qualitative Benefits */
   .s3-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 3%; }
@@ -225,7 +225,8 @@
   .s3-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2%; flex: 1; min-height: 0; }
   .s3-card { background: #f5f7f9; border: 1px solid #dde5ea; border-radius: 8px; padding: 2.5% 3.5%; display: flex; flex-direction: column; gap: 2%; transition: border-color .2s; overflow: hidden; }
   .s3-card.uc-active { border-color: var(--orange); background: rgba(255,78,0,.06); }
-  .s3-card-icon { width: clamp(20px,2.5vw,30px); height: clamp(20px,2.5vw,30px); display: flex; align-items: center; justify-content: center; }
+  .s3-card-header { display: flex; align-items: center; gap: 6px; margin-bottom: 0; }
+  .s3-card-icon { width: clamp(16px,2vw,22px); height: clamp(16px,2vw,22px); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
   .s3-card-title { font-size: clamp(11px,1.2vw,14px); font-weight: 700; line-height: 1.2; color: var(--navy); }
   .s3-card-desc { font-size: clamp(9px,1vw,12px); color: #5a6e7a; line-height: 1.5; flex: 1; }
   .s3-pill { display: inline-flex; align-items: center; gap: 4px; background: rgba(255,78,0,.1); border: 1px solid rgba(255,78,0,.2); border-radius: 100px; padding: 3px 10px; font-size: clamp(8px,.85vw,10px); color: var(--orange); font-weight: 600; margin-top: auto; }
@@ -617,7 +618,7 @@
             <div class="sh-company" id="sl2_company_hdr"></div>
           </div>
         </div>
-      <div class="slide-content" style="padding-bottom:9%;">
+      <div class="slide-content" style="padding-bottom:5%;">
         <div class="s2-grid">
           <!-- P1 -->
           <div>
@@ -1078,8 +1079,7 @@ function buildQualitativeSlide(ucs) {
     const matchedUCs = ucNames.filter(n => b.ucs.some(u => n.includes(u)));
     grid.innerHTML += `
       <div class="s3-card ${isActive && ucNames.length > 0 ? 'uc-active' : ''}">
-        <div class="s3-card-icon">${b.icon}</div>
-        <div class="s3-card-title">${b.title}</div>
+        <div class="s3-card-header"><div class="s3-card-icon">${b.icon}</div><div class="s3-card-title">${b.title}</div></div>
         <div class="s3-card-desc">${b.desc}</div>
         <div class="s3-pill">${b.impact}</div>
         ${matchedUCs.length > 0 ? `<div class="s3-uc-badge">Relevant to your use case</div>` : ''}
