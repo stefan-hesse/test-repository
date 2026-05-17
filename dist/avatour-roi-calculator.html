@@ -1093,30 +1093,6 @@ function buildQualitativeSlide(ucs) {
   }
 }
 
-  const r = window._R;
-  const company = vs('company_name');
-  const ucs = getSelectedUCs().map(u=>u.name).join(', ') || 'Not specified';
-  const text =
-`AVATOUR ROI SUMMARY${company ? ' — ' + company : ''}
-${'─'.repeat(44)}
-Annual Gross Savings:       ${fmtFull(r.grossSavings)}
-  Pillar 1 – Live Sessions: ${fmtFull(r.p1_total)}
-  Pillar 2 – Recorded Collab: ${fmtFull(r.p2_total)}
-  Pillar 3 – AI Reports:    ${fmtFull(r.p3_total)}
-
-Annual Avatour Cost:       −${fmtFull(r.annualCost)}
-Net Annual Return:          ${fmtFull(r.netSavings)}
-ROI:                        ${(r.roi>=0?'+':'')+Math.round(r.roi)}%
-Payback Period:             ${r.paybackMo < 1 ? '<1 month' : r.paybackMo.toFixed(1) + ' months'}
-CO₂ Avoided (Pillar 1):    ${r.co2_t.toFixed(1)} tonnes / year
-
-Use Cases: ${ucs}
-
-avatour.com  |  Be There. Without Being There.`;
-  navigator.clipboard.writeText(text)
-    .then(() => showToast('Numbers copied to clipboard!'))
-    .catch(() => showToast('Copy failed — try manually.'));
-}
 
 // Init
 updatePctCheck();
