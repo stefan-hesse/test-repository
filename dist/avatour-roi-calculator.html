@@ -238,6 +238,48 @@
   .action-btn:hover { border-color: var(--orange); color: var(--orange); background: var(--orange-light); }
   .action-btn svg { width: 13px; height: 13px; flex-shrink: 0; }
 
+
+  /* ── INPUT REVIEW MODAL ── */
+  .modal-overlay { position: fixed; inset: 0; background: rgba(19,42,57,0.7); z-index: 500; display: flex; align-items: center; justify-content: center; padding: 20px; opacity: 0; pointer-events: none; transition: opacity .25s; }
+  .modal-overlay.visible { opacity: 1; pointer-events: all; }
+  .modal { background: #ffffff; border-radius: 16px; max-width: 620px; width: 100%; max-height: 85vh; overflow-y: auto; box-shadow: 0 24px 64px rgba(19,42,57,0.25); font-family: var(--font-b); }
+  .modal-header { padding: 24px 28px 20px; border-bottom: 1px solid var(--border); }
+  .modal-header h2 { font-family: var(--font-d); font-size: 20px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+  .modal-header p { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+  .modal-summary { display: flex; gap: 16px; margin-top: 14px; flex-wrap: wrap; }
+  .modal-summary-pill { display: flex; align-items: center; gap: 6px; padding: 4px 12px; border-radius: 100px; font-size: 12px; font-weight: 600; }
+  .modal-summary-pill.ok { background: rgba(26,158,92,0.1); color: #1a9e5c; }
+  .modal-summary-pill.warn { background: rgba(255,78,0,0.1); color: var(--orange); }
+  .modal-summary-pill.bad { background: rgba(220,50,50,0.1); color: #dc3232; }
+  .modal-body { padding: 20px 28px; }
+  .modal-pillar { margin-bottom: 20px; }
+  .modal-pillar-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; padding-bottom: 8px; border-bottom: 1px solid var(--border-light); }
+  .modal-pillar-title { font-family: var(--font-d); font-size: 13px; font-weight: 700; color: var(--navy); text-transform: uppercase; letter-spacing: .06em; }
+  .modal-pillar-status { font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 100px; }
+  .modal-pillar-status.ok { background: rgba(26,158,92,0.1); color: #1a9e5c; }
+  .modal-pillar-status.warn { background: rgba(255,78,0,0.1); color: var(--orange); }
+  .modal-pillar-status.bad { background: rgba(220,50,50,0.1); color: #dc3232; }
+  .modal-pillar-status.skip { background: rgba(19,42,57,0.08); color: var(--text-muted); }
+  .modal-field-list { display: flex; flex-direction: column; gap: 5px; }
+  .modal-field { display: flex; align-items: center; gap: 10px; padding: 6px 10px; border-radius: 7px; font-size: 12.5px; }
+  .modal-field.ok { background: rgba(26,158,92,0.05); }
+  .modal-field.warn { background: rgba(255,78,0,0.06); }
+  .modal-field.bad { background: rgba(220,50,50,0.06); }
+  .modal-field-icon { font-size: 13px; flex-shrink: 0; width: 18px; text-align: center; }
+  .modal-field-label { flex: 1; color: var(--text); }
+  .modal-field-value { font-weight: 600; color: var(--text-muted); font-size: 12px; }
+  .modal-field.warn .modal-field-value { color: var(--orange); }
+  .modal-field.bad .modal-field-label { color: #dc3232; }
+  .modal-warn-note { font-size: 11px; color: var(--orange); font-style: italic; margin-left: 4px; }
+  .modal-dep-note { font-size: 11.5px; color: var(--text-muted); padding: 8px 10px; background: var(--page-bg); border-radius: 7px; margin-top: 6px; }
+  .modal-footer { padding: 18px 28px 22px; border-top: 1px solid var(--border); display: flex; gap: 12px; align-items: center; justify-content: flex-end; }
+  .modal-btn { padding: 10px 22px; border-radius: 8px; font-family: var(--font-b); font-size: 13.5px; font-weight: 600; cursor: pointer; transition: all .2s; border: none; }
+  .modal-btn.secondary { background: var(--page-bg); color: var(--text-muted); border: 1px solid var(--border); }
+  .modal-btn.secondary:hover { border-color: var(--navy); color: var(--navy); }
+  .modal-btn.primary { background: var(--orange); color: #ffffff; }
+  .modal-btn.primary:hover { background: #e64400; }
+  .modal-btn.primary:disabled { background: #ccc; cursor: not-allowed; }
+  .modal-proceed-note { font-size: 11.5px; color: var(--text-muted); flex: 1; }
   /* ── QUALITATIVE BENEFITS ── */
   .qualitative-section { max-width: 100%; margin: 0; padding: 60px 0 80px; background: var(--navy); }
   .qualitative-section-inner { max-width: 1120px; margin: 0 auto; padding: 0 40px; }
@@ -292,7 +334,7 @@
   </div>
   <div class="hero-label">ROI Calculator</div>
   <h1 class="hero-title">Avatour pays <span style="color:#ffffff;">quickly</span> for itself.<br><em>Everything else is a bonus.</em></h1>
-  <p class="hero-sub">Enter your numbers below to see hard-dollar savings across all three Avatour pillars — live sessions, async collaboration, and AI-powered inspection reports.</p>
+  <p class="hero-sub">Enter your numbers below to see hard cash savings across all three Avatour pillars — live sessions, async collaboration, and AI-powered inspection reports.</p>
   <div class="pillar-badges">
     <div class="pillar-badge"><span class="dot"></span>Pillar 1 — Live 360° Sessions</div>
     <div class="pillar-badge"><span class="dot"></span>Pillar 2 — Recorded Collaboration (Sync &amp; Async)</div>
@@ -366,7 +408,7 @@
       <div>
         <div class="section-title">Pillar 1 — Live 360° Sessions</div>
         <div class="section-badge">Replaces in-person site visits</div>
-        <div class="section-desc" style="margin-top:6px;">Travel cost, productive time recovered, and CO₂ avoided. Calculation matches the Avatour ROI model.</div>
+        <div class="section-desc" style="margin-top:6px;">Travel cost, productive time recovered, and CO₂ avoided. </div>
       </div>
     </div>
 
@@ -528,7 +570,7 @@
     </div>
   </div>
 
-  <button class="calc-btn" onclick="calculate()">Calculate My ROI →</button>
+  <button class="calc-btn" onclick="openReviewModal()">Calculate My ROI →</button>
 </div>
 
 <!-- STICKY RESULTS -->
@@ -736,6 +778,23 @@
   </div>
 </div><!-- /qualitative-section-inner -->
 
+
+<!-- ── INPUT REVIEW MODAL ── -->
+<div class="modal-overlay" id="review-modal">
+  <div class="modal">
+    <div class="modal-header">
+      <h2>Review Your Inputs</h2>
+      <p>Please check your values before calculating. Fields still at their example defaults are flagged — confirm they reflect your organisation.</p>
+      <div class="modal-summary" id="modal-summary"></div>
+    </div>
+    <div class="modal-body" id="modal-body"></div>
+    <div class="modal-footer">
+      <div class="modal-proceed-note" id="modal-proceed-note"></div>
+      <button class="modal-btn secondary" onclick="closeModal()">Go Back &amp; Edit</button>
+      <button class="modal-btn primary" id="modal-calc-btn" onclick="proceedCalculate()">Calculate ROI</button>
+    </div>
+  </div>
+</div>
 <div class="toast" id="toast"></div>
 
 <script>
@@ -885,29 +944,6 @@ function getWeightedAverages() {
 // MAIN CALCULATION
 // ───────────────────────────────────────────────
 function calculate() {
-  // ── VALIDATE COST ──
-  const costField = el('cost_cust_val');
-  if (!costField.value || costField.value === '') {
-    costField.style.borderColor = 'var(--orange)';
-    costField.style.boxShadow = '0 0 0 3px rgba(255,78,0,0.2)';
-    costField.focus();
-    // Show inline error message
-    let errMsg = document.getElementById('cost_error_msg');
-    if (!errMsg) {
-      errMsg = document.createElement('span');
-      errMsg.id = 'cost_error_msg';
-      errMsg.style.cssText = 'font-size:11.5px; color:var(--orange); font-weight:600; margin-top:4px; display:block;';
-      costField.parentNode.appendChild(errMsg);
-    }
-    errMsg.textContent = 'Please enter your annual Avatour cost to calculate ROI.';
-    return;
-  }
-  // Clear any previous error
-  costField.style.borderColor = '';
-  costField.style.boxShadow = '';
-  const errMsg = document.getElementById('cost_error_msg');
-  if (errMsg) errMsg.textContent = '';
-
   // ── PILLAR 1 ──
   const sites = v('p1_sites');
   const sessPerMonth = v('p1_sessions');
@@ -924,6 +960,7 @@ function calculate() {
   const totalPct = modes.reduce((a,m) => a + m.pct, 0) || 100;
 
   let p1_travel = 0, p1_time = 0, p1_co2_kg = 0;
+  if (!window._skipP1) {
   modes.forEach(m => {
     const frac = m.pct / totalPct;
     const trips = totalTripsPerYear * frac;
@@ -931,6 +968,7 @@ function calculate() {
     p1_time   += trips * travelHoursPerTrip(m.id, m.km) * rate;
     p1_co2_kg += trips * m.km * CO2_PER_KM[m.id];       // one-way (matches original)
   });
+  }
   const p1_total = p1_travel + p1_time;
 
   // ── PILLAR 2 ──
@@ -939,14 +977,14 @@ function calculate() {
   const p2_participants = v('p2_participants');
   const p2_replacePct = v('p2_replace_pct') / 100;
   const avg = getWeightedAverages();
-  const p2_replaced_trips_per_year = p2_events * 12 * p2_participants * p2_replacePct;
+  const p2_replaced_trips_per_year = (window._skipP2 ? 0 : p2_events * 12 * p2_participants * p2_replacePct);
   const p2_travel = p2_replaced_trips_per_year * avg.avgCost;
   const p2_time   = p2_replaced_trips_per_year * avg.avgHours * rate;
   const p2_total  = p2_travel + p2_time;
 
   // ── PILLAR 3 ──
   const p3_monthly = v('p3_inspections') * v('p3_hours') * (v('p3_pct') / 100) * v('p3_rate');
-  const p3_total = p3_monthly * 12;
+  const p3_total = (window._skipP3 ? 0 : p3_monthly * 12);
 
   const grossSavings = p1_total + p2_total + p3_total;
 
@@ -1093,6 +1131,217 @@ function buildQualitativeSlide(ucs) {
   }
 }
 
+
+
+// ───────────────────────────────────────────────
+// DEFAULT VALUES (for comparison)
+// ───────────────────────────────────────────────
+const DEFAULTS = {
+  p1_sites: 5, p1_sessions: 4, p1_attendees: 6, p1_rate: 100,
+  p1_perdiem: 200, p1_bizclass: 25,
+  car_pct: 45, car_km: 200, car_nights: 0,
+  train_pct: 10, train_km: 500, train_nights: 0,
+  cont_pct: 30, cont_km: 1000, cont_nights: 1,
+  inter_pct: 15, inter_km: 5000, inter_nights: 3,
+  p2_events: 10, p2_participants: 4, p2_replace_pct: 10,
+  p3_inspections: 8, p3_hours: 3, p3_pct: 80, p3_rate: 85,
+};
+
+function fieldState(id) {
+  const el_f = document.getElementById(id);
+  if (!el_f) return { state: 'ok', val: 0 };
+  const raw = el_f.value;
+  if (raw === '' || raw === null) return { state: 'missing', val: null };
+  const num = parseFloat(raw);
+  if (isNaN(num)) return { state: 'missing', val: null };
+  if (DEFAULTS[id] !== undefined && num === DEFAULTS[id]) return { state: 'default', val: num };
+  return { state: 'ok', val: num };
+}
+
+function openReviewModal() {
+  // Validate cost field first
+  const costField = el('cost_cust_val');
+  if (!costField.value || costField.value === '') {
+    costField.style.borderColor = 'var(--orange)';
+    costField.style.boxShadow = '0 0 0 3px rgba(255,78,0,.2)';
+    costField.focus();
+    let errMsg = document.getElementById('cost_error_msg');
+    if (!errMsg) {
+      errMsg = document.createElement('span');
+      errMsg.id = 'cost_error_msg';
+      errMsg.style.cssText = 'font-size:11.5px; color:var(--orange); font-weight:600; margin-top:4px; display:block;';
+      costField.parentNode.appendChild(errMsg);
+    }
+    errMsg.textContent = 'Please enter your annual Avatour cost to calculate ROI.';
+    return;
+  }
+  costField.style.borderColor = '';
+  costField.style.boxShadow = '';
+  const errMsg = document.getElementById('cost_error_msg');
+  if (errMsg) errMsg.textContent = '';
+
+  buildModal();
+  el('review-modal').classList.add('visible');
+}
+
+function closeModal() {
+  el('review-modal').classList.remove('visible');
+}
+
+// Close on overlay click
+document.addEventListener('click', function(e) {
+  if (e.target === el('review-modal')) closeModal();
+});
+
+function buildModal() {
+  const pillars = [
+    {
+      id: 'p1',
+      title: 'Pillar 1 — Live 360° Sessions',
+      fields: [
+        { id: 'p1_sites',     label: 'Number of locations' },
+        { id: 'p1_sessions',  label: 'Sessions per month per location' },
+        { id: 'p1_attendees', label: 'Remote attendees per session' },
+        { id: 'p1_rate',      label: 'Hourly rate / productivity value (USD)' },
+        { id: 'p1_perdiem',   label: 'Per-diem cost per overnight (USD)' },
+        { id: 'p1_bizclass',  label: '% air travelers in business class' },
+        { id: 'car_pct',      label: 'Car — % of trips' },
+        { id: 'car_km',       label: 'Car — avg distance (km)' },
+        { id: 'train_pct',    label: 'Train — % of trips' },
+        { id: 'train_km',     label: 'Train — avg distance (km)' },
+        { id: 'cont_pct',     label: 'Continental flight — % of trips' },
+        { id: 'cont_km',      label: 'Continental flight — avg distance (km)' },
+        { id: 'inter_pct',    label: 'Intercontinental — % of trips' },
+        { id: 'inter_km',     label: 'Intercontinental — avg distance (km)' },
+      ],
+      dep: null,
+    },
+    {
+      id: 'p2',
+      title: 'Pillar 2 — Recorded Collaboration',
+      fields: [
+        { id: 'p2_events',       label: 'Collaboration events per month' },
+        { id: 'p2_participants', label: 'Avg participants per event' },
+        { id: 'p2_replace_pct',  label: '% of events replacing a full onsite visit' },
+      ],
+      dep: 'p1',
+      depNote: 'Pillar 2 uses the travel model from Pillar 1 — Pillar 1 must be complete.',
+    },
+    {
+      id: 'p3',
+      title: 'Pillar 3 — AI Inspection Reports',
+      fields: [
+        { id: 'p3_inspections', label: 'AI-assisted inspections per month' },
+        { id: 'p3_hours',       label: 'Hours spent writing report (before AI)' },
+        { id: 'p3_pct',         label: '% of report time saved by AI' },
+        { id: 'p3_rate',        label: 'Hourly rate of inspector (USD)' },
+      ],
+      dep: null,
+    },
+  ];
+
+  // Evaluate each pillar
+  const pillarResults = {};
+  pillars.forEach(p => {
+    const fields = p.fields.map(f => ({ ...f, ...fieldState(f.id) }));
+    const missing = fields.filter(f => f.state === 'missing');
+    const defaults = fields.filter(f => f.state === 'default');
+    const ok = fields.filter(f => f.state === 'ok');
+    let status = 'ok';
+    if (missing.length > 0) status = 'bad';
+    else if (defaults.length > 0) status = 'warn';
+    pillarResults[p.id] = { fields, missing, defaults, ok, status };
+  });
+
+  // P2 is blocked if P1 is bad
+  if (pillarResults['p1'].status === 'bad') {
+    pillarResults['p2'].blocked = true;
+  }
+
+  // Check if any pillar can be calculated
+  const p1ok = pillarResults['p1'].status !== 'bad';
+  const p3ok = pillarResults['p3'].status !== 'bad';
+  const anyCalculable = p1ok || p3ok;
+
+  // Summary pills
+  const allFields = Object.values(pillarResults).flatMap(p => p.fields);
+  const totalMissing = allFields.filter(f => f.state === 'missing').length;
+  const totalDefault = allFields.filter(f => f.state === 'default').length;
+  const totalOk = allFields.filter(f => f.state === 'ok').length;
+
+  el('modal-summary').innerHTML = `
+    <div class="modal-summary-pill ok">✅ ${totalOk} confirmed</div>
+    ${totalDefault > 0 ? `<div class="modal-summary-pill warn">⚠️ ${totalDefault} at example default</div>` : ''}
+    ${totalMissing > 0 ? `<div class="modal-summary-pill bad">❌ ${totalMissing} missing</div>` : ''}
+  `;
+
+  // Build body
+  let bodyHtml = '';
+  pillars.forEach(p => {
+    const pr = pillarResults[p.id];
+    const blocked = pr.blocked;
+    let statusLabel, statusClass;
+    if (blocked) { statusLabel = 'Blocked — fill Pillar 1 first'; statusClass = 'skip'; }
+    else if (pr.status === 'bad') { statusLabel = 'Missing values — cannot calculate'; statusClass = 'bad'; }
+    else if (pr.status === 'warn') { statusLabel = 'Using example defaults'; statusClass = 'warn'; }
+    else { statusLabel = 'Ready'; statusClass = 'ok'; }
+
+    bodyHtml += `<div class="modal-pillar">
+      <div class="modal-pillar-header">
+        <div class="modal-pillar-title">${p.title}</div>
+        <div class="modal-pillar-status ${statusClass}">${statusLabel}</div>
+      </div>`;
+
+    if (blocked) {
+      bodyHtml += `<div class="modal-dep-note">⚠️ ${p.depNote}</div>`;
+    } else {
+      bodyHtml += '<div class="modal-field-list">';
+      pr.fields.forEach(f => {
+        const icon = f.state === 'ok' ? '✅' : f.state === 'default' ? '⚠️' : '❌';
+        const warnNote = f.state === 'default' ? '<span class="modal-warn-note">example default — is this right for your organisation?</span>' : '';
+        const valDisplay = f.val !== null ? f.val : '—';
+        bodyHtml += `<div class="modal-field ${f.state}">
+          <span class="modal-field-icon">${icon}</span>
+          <span class="modal-field-label">${f.label}${warnNote}</span>
+          <span class="modal-field-value">${f.state !== 'missing' ? valDisplay : 'not entered'}</span>
+        </div>`;
+      });
+      bodyHtml += '</div>';
+    }
+    bodyHtml += '</div>';
+  });
+
+  el('modal-body').innerHTML = bodyHtml;
+
+  // Footer note and button state
+  const calcBtn = el('modal-calc-btn');
+  if (!anyCalculable) {
+    el('modal-proceed-note').textContent = 'Please fill in at least Pillar 1 or Pillar 3 to calculate.';
+    calcBtn.disabled = true;
+  } else if (totalDefault > 0) {
+    el('modal-proceed-note').textContent = 'Some fields use example defaults. You can proceed or go back to update them.';
+    calcBtn.disabled = false;
+    calcBtn.textContent = 'Proceed with these values';
+  } else if (totalMissing > 0) {
+    el('modal-proceed-note').textContent = 'Missing values in a pillar will exclude that pillar from the calculation.';
+    calcBtn.disabled = false;
+    calcBtn.textContent = 'Calculate available pillars';
+  } else {
+    el('modal-proceed-note').textContent = 'All values confirmed — ready to calculate.';
+    calcBtn.disabled = false;
+    calcBtn.textContent = 'Calculate ROI';
+  }
+
+  // Store which pillars to skip
+  window._skipP2 = pillarResults['p2'].blocked || pillarResults['p2'].status === 'bad';
+  window._skipP3 = pillarResults['p3'].status === 'bad';
+  window._skipP1 = pillarResults['p1'].status === 'bad';
+}
+
+function proceedCalculate() {
+  closeModal();
+  calculate();
+}
 
 // Init
 updatePctCheck();
