@@ -230,8 +230,8 @@ def run_auto_translate():
         for lang in LANGUAGES:
             if lang["code"] == "en":
                 continue
-            lang_codes = {"it": "IT", "es": "ES", "fr": "FR", "de": "DE", "pt": "PT-BR"}
-            lang_names = {"it": "Italian", "es": "Spanish", "fr": "French", "de": "German", "pt": "Portuguese (Brazil)"}
+            lang_codes = {"it": "IT", "es": "ES", "fr": "FR", "de": "DE", "pt": "PT-BR", "th": "TH"}
+            lang_names = {"it": "Italian", "es": "Spanish", "fr": "French", "de": "German", "pt": "Portuguese (Brazil)", "th": "Thai"}
             lang_code = lang_codes.get(lang["code"], lang["code"].upper())
             lang_name = lang_names.get(lang["code"], lang["code"])
             print(f"  [TRANSLATE] → {lang_name}")
@@ -255,40 +255,47 @@ LANGUAGES = [
         "webflow": "https://avatour.com/user-guide",
         "title":   "Avatour User and Best Practices Guide",
     },
+    # {
+    #     "code":    "it",
+    #     "suffix":  "-it",
+    #     "source":  "guide-source/Avatour User and Best Practices Guide - IT.md",
+    #     "webflow": "https://avatour.com/user-guide-it",
+    #     "title":   "Guida Utente e Best Practice di Avatour",
+    # },
+    # {
+    #     "code":    "es",
+    #     "suffix":  "-es",
+    #     "source":  "guide-source/Avatour User and Best Practices Guide - ES.md",
+    #     "webflow": "https://avatour.com/user-guide-es",
+    #     "title":   "Guía del Usuario y Mejores Prácticas de Avatour",
+    # },
+    # {
+    #     "code":    "fr",
+    #     "suffix":  "-fr",
+    #     "source":  "guide-source/Avatour User and Best Practices Guide - FR.md",
+    #     "webflow": "https://avatour.com/user-guide-fr",
+    #     "title":   "Guide de l'Utilisateur et Meilleures Pratiques Avatour",
+    # },
+    # {
+    #     "code":    "de",
+    #     "suffix":  "-de",
+    #     "source":  "guide-source/Avatour User and Best Practices Guide - DE.md",
+    #     "webflow": "https://avatour.com/user-guide-de",
+    #     "title":   "Avatour Benutzer- und Best-Practice-Leitfaden",
+    # },
+    # {
+    #     "code":    "pt",
+    #     "suffix":  "-pt",
+    #     "source":  "guide-source/Avatour User and Best Practices Guide - PT.md",
+    #     "webflow": "https://avatour.com/user-guide-pt",
+    #     "title":   "Guia do Usuário e Melhores Práticas do Avatour",
+    # },
     {
-        "code":    "it",
-        "suffix":  "-it",
-        "source":  "guide-source/Avatour User and Best Practices Guide - IT.md",
-        "webflow": "https://avatour.com/user-guide-it",
-        "title":   "Guida Utente e Best Practice di Avatour",
-    },
-    {
-        "code":    "es",
-        "suffix":  "-es",
-        "source":  "guide-source/Avatour User and Best Practices Guide - ES.md",
-        "webflow": "https://avatour.com/user-guide-es",
-        "title":   "Guía del Usuario y Mejores Prácticas de Avatour",
-    },
-    {
-        "code":    "fr",
-        "suffix":  "-fr",
-        "source":  "guide-source/Avatour User and Best Practices Guide - FR.md",
-        "webflow": "https://avatour.com/user-guide-fr",
-        "title":   "Guide de l'Utilisateur et Meilleures Pratiques Avatour",
-    },
-    {
-        "code":    "de",
-        "suffix":  "-de",
-        "source":  "guide-source/Avatour User and Best Practices Guide - DE.md",
-        "webflow": "https://avatour.com/user-guide-de",
-        "title":   "Avatour Benutzer- und Best-Practice-Leitfaden",
-    },
-    {
-        "code":    "pt",
-        "suffix":  "-pt",
-        "source":  "guide-source/Avatour User and Best Practices Guide - PT.md",
-        "webflow": "https://avatour.com/user-guide-pt",
-        "title":   "Guia do Usuário e Melhores Práticas do Avatour",
+        "code":    "th",
+        "suffix":  "-th",
+        "source":  "guide-source/Avatour User and Best Practices Guide - TH.md",
+        "webflow": "https://avatour.com/user-guide-th",
+        "title":   "คู่มือผู้ใช้และแนวปฏิบัติที่ดีของ Avatour",
     },
 ]
 
@@ -296,7 +303,7 @@ LANGUAGES = [
 
 # ── CSS ───────────────────────────────────────────────────────────────────
 CSS = """
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&family=Roboto:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&family=Roboto:wght@300;400;500&family=Sarabun:wght@300;400;500;600;700&display=swap');
 
 :root {
   --blue:   #132A39;
@@ -315,7 +322,7 @@ CSS = """
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', 'Sarabun', sans-serif;
   font-size: 15px; line-height: 1.8;
   color: var(--text); background: #fff;
 }
@@ -370,7 +377,7 @@ body {
   overflow-y: auto; padding: 20px 0 40px;
 }
 .sidenav-section {
-  font-family: 'Titillium Web', sans-serif;
+  font-family: 'Titillium Web', 'Sarabun', sans-serif;
   font-size: 10px; font-weight: 700; letter-spacing: .12em;
   text-transform: uppercase; color: var(--muted);
   padding: 0 16px; margin: 20px 0 5px;
@@ -415,7 +422,7 @@ body {
 
 /* TITLE */
 .guide-article h1 {
-  font-family: 'Titillium Web', sans-serif;
+  font-family: 'Titillium Web', 'Sarabun', sans-serif;
   font-size: 28px; font-weight: 700; color: var(--blue);
   margin-bottom: 6px; line-height: 1.2;
 }
@@ -427,20 +434,20 @@ body {
 
 /* HEADINGS */
 .guide-article h2 {
-  font-family: 'Titillium Web', sans-serif;
+  font-family: 'Titillium Web', 'Sarabun', sans-serif;
   font-size: 20px; font-weight: 700; color: var(--blue);
   margin: 40px 0 12px; padding-top: 8px;
   border-top: 2px solid var(--border);
   scroll-margin-top: calc(var(--header-h) + 16px);
 }
 .guide-article h3 {
-  font-family: 'Titillium Web', sans-serif;
+  font-family: 'Titillium Web', 'Sarabun', sans-serif;
   font-size: 16px; font-weight: 700; color: var(--blue);
   margin: 28px 0 10px;
   scroll-margin-top: calc(var(--header-h) + 16px);
 }
 .guide-article h4 {
-  font-family: 'Titillium Web', sans-serif;
+  font-family: 'Titillium Web', 'Sarabun', sans-serif;
   font-size: 15px; font-weight: 700; color: var(--slate);
   text-transform: none; letter-spacing: 0;
   margin: 20px 0 8px;
@@ -466,7 +473,7 @@ body {
 }
 .guide-article th {
   background: var(--blue); color: #fff;
-  font-family: 'Titillium Web', sans-serif;
+  font-family: 'Titillium Web', 'Sarabun', sans-serif;
   font-size: 12px; font-weight: 700;
   letter-spacing: .07em; text-transform: uppercase;
   padding: 9px 14px; text-align: left;
@@ -514,7 +521,7 @@ body {
   overflow-y: auto;
 }
 .toc-label {
-  font-family: 'Titillium Web', sans-serif;
+  font-family: 'Titillium Web', 'Sarabun', sans-serif;
   font-size: 10px; font-weight: 700; letter-spacing: .12em;
   text-transform: uppercase; color: var(--muted); margin-bottom: 10px;
 }
@@ -573,17 +580,17 @@ body.print-mode .guide-article blockquote { font-size: 10pt; padding: 8px 12px; 
   margin: 20mm 18mm 22mm 18mm;
   @top-center {
     content: "Avatour User and Best Practices Guide";
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Titillium Web', 'Sarabun', sans-serif;
     font-size: 9pt; color: #7A8A95;
   }
   @bottom-left {
     content: "avatour.com";
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Titillium Web', 'Sarabun', sans-serif;
     font-size: 9pt; color: #7A8A95;
   }
   @bottom-right {
     content: "Page " counter(page) " of " counter(pages);
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Titillium Web', 'Sarabun', sans-serif;
     font-size: 9pt; color: #7A8A95;
   }
 }
