@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>คู่มือผู้ใช้และแนวปฏิบัติที่ดีของ Avatour — Avatour</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&family=Roboto:wght@300;400;500&family=Sarabun:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --blue:   #132A39;
+  --orange: #FF4E00;
+  --slate:  #5A6875;
+  --light:  #E8EEF2;
+  --border: #DDE5EA;
+  --text:   #1A2A34;
+  --muted:  #7A8A95;
+  --sidebar-w: 240px;
+  --toc-w:     220px;
+  --header-h:  60px;
+  --content-max: 680px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Roboto', 'Sarabun', sans-serif;
+  font-size: 15px; line-height: 1.8;
+  color: var(--text); background: #fff;
+}
+
+/* HEADER */
+.guide-header {
+  position: fixed; top: 0; left: 0; right: 0;
+  height: var(--header-h);
+  background: var(--blue);
+  display: flex; align-items: center;
+  padding: 0 24px; z-index: 200; gap: 16px;
+}
+.guide-logo {
+  display: flex; align-items: center; gap: 10px;
+  text-decoration: none; flex-shrink: 0;
+}
+.hd { width:1px; height:20px; background:rgba(255,255,255,.2); flex-shrink:0; }
+.hlabel {
+  font-family:'Titillium Web',sans-serif; font-size:12px; font-weight:600;
+  color:rgba(255,255,255,.5); letter-spacing:.09em; text-transform:uppercase;
+}
+.hright { margin-left:auto; display:flex; gap:12px; align-items:center; }
+.lang-switcher { display:flex; gap:4px; align-items:center; }
+.lang-btn {
+  font-family:'Titillium Web',sans-serif; font-size:11px; font-weight:700;
+  letter-spacing:.06em; padding:4px 8px; border-radius:4px;
+  border:1px solid rgba(255,255,255,.25); background:transparent;
+  color:rgba(255,255,255,.6); cursor:pointer; text-decoration:none; transition:all .15s;
+}
+.lang-btn:hover { background:rgba(255,255,255,.1); color:#fff; }
+.lang-btn.active { background:var(--orange); border-color:var(--orange); color:#fff; }
+.hbtn {
+  font-family:'Titillium Web',sans-serif; font-size:12px; font-weight:700;
+  color:var(--blue); background:var(--orange);
+  padding:6px 16px; border-radius:4px; text-decoration:none; flex-shrink:0;
+}
+.hversion {
+  font-size:11px; color:rgba(255,255,255,.4);
+  font-family:'Titillium Web',sans-serif; letter-spacing:.05em;
+}
+
+/* LAYOUT */
+.guide-layout {
+  display: flex; padding-top: var(--header-h); min-height: 100vh;
+}
+
+/* LEFT NAV */
+.guide-sidenav {
+  width: var(--sidebar-w); flex-shrink: 0;
+  position: fixed; top: var(--header-h); left: 0; bottom: 0;
+  background: #fafbfc; border-right: 1px solid var(--border);
+  overflow-y: auto; padding: 20px 0 40px;
+}
+.sidenav-section {
+  font-family: 'Titillium Web', 'Sarabun', sans-serif;
+  font-size: 10px; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--muted);
+  padding: 0 16px; margin: 20px 0 5px;
+}
+.sidenav-section:first-child { margin-top: 0; }
+.guide-sidenav a {
+  display: block; padding: 6px 16px;
+  font-size: 13px; color: var(--slate);
+  text-decoration: none; border-left: 3px solid transparent;
+  transition: all .1s; line-height: 1.4;
+}
+.guide-sidenav a.sub { padding-left: 28px; font-size: 12.5px; }
+.guide-sidenav a:hover,
+.guide-sidenav a.active {
+  color: var(--blue); background: var(--light);
+  border-left-color: var(--orange);
+}
+.guide-sidenav a.active { font-weight: 500; }
+
+/* MAIN WRAPPER */
+.guide-main {
+  margin-left: var(--sidebar-w); flex: 1;
+  display: flex; justify-content: center;
+  padding-right: var(--toc-w);
+}
+
+/* ARTICLE */
+.guide-article {
+  width: 100%; max-width: var(--content-max);
+  padding: 44px 40px 80px;
+}
+
+/* BREADCRUMB */
+.guide-bc {
+  font-size: 12px; color: var(--muted);
+  margin-bottom: 10px;
+  display: flex; align-items: center; gap: 6px;
+}
+.guide-bc a { color: var(--muted); text-decoration: none; }
+.guide-bc a:hover { color: var(--orange); }
+.guide-bc span { opacity: .5; }
+
+/* TITLE */
+.guide-article h1 {
+  font-family: 'Titillium Web', 'Sarabun', sans-serif;
+  font-size: 28px; font-weight: 700; color: var(--blue);
+  margin-bottom: 6px; line-height: 1.2;
+}
+.guide-meta {
+  font-size: 12px; color: var(--muted);
+  margin-bottom: 28px; padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* HEADINGS */
+.guide-article h2 {
+  font-family: 'Titillium Web', 'Sarabun', sans-serif;
+  font-size: 20px; font-weight: 700; color: var(--blue);
+  margin: 40px 0 12px; padding-top: 8px;
+  border-top: 2px solid var(--border);
+  scroll-margin-top: calc(var(--header-h) + 16px);
+}
+.guide-article h3 {
+  font-family: 'Titillium Web', 'Sarabun', sans-serif;
+  font-size: 16px; font-weight: 700; color: var(--blue);
+  margin: 28px 0 10px;
+  scroll-margin-top: calc(var(--header-h) + 16px);
+}
+.guide-article h4 {
+  font-family: 'Titillium Web', 'Sarabun', sans-serif;
+  font-size: 15px; font-weight: 700; color: var(--slate);
+  text-transform: none; letter-spacing: 0;
+  margin: 20px 0 8px;
+}
+
+/* BODY */
+.guide-article p { margin-bottom: 14px; }
+.guide-article a { color: var(--orange); text-decoration: none; }
+.guide-article a:hover { text-decoration: underline; }
+.guide-article ul, .guide-article ol {
+  padding-left: 22px; margin-bottom: 16px;
+}
+.guide-article li { margin-bottom: 6px; }
+.guide-article li strong { color: var(--blue); }
+.guide-article strong { color: var(--blue); }
+
+/* TABLES */
+.guide-article table {
+  width: 100%; border-collapse: collapse;
+  margin: 16px 0 20px; font-size: 13.5px;
+  border: 1px solid var(--border); border-radius: 6px;
+  overflow: hidden;
+}
+.guide-article th {
+  background: var(--blue); color: #fff;
+  font-family: 'Titillium Web', 'Sarabun', sans-serif;
+  font-size: 12px; font-weight: 700;
+  letter-spacing: .07em; text-transform: uppercase;
+  padding: 9px 14px; text-align: left;
+}
+.guide-article td {
+  padding: 9px 14px; border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+.guide-article tr:last-child td { border-bottom: none; }
+.guide-article tr:nth-child(even) td { background: #f9fbfc; }
+
+/* BLOCKQUOTES */
+.guide-article blockquote {
+  border-left: 3px solid var(--orange);
+  background: #fff8f5;
+  margin: 16px 0; padding: 11px 16px;
+  border-radius: 0 6px 6px 0; font-size: 13.5px;
+}
+.guide-article blockquote p { margin-bottom: 0; color: #2a3a44; }
+.guide-article blockquote strong { color: var(--orange); }
+
+/* SCREENSHOTS */
+.guide-article img {
+  width: 100%; display: block;
+  border: 1px solid var(--border);
+  border-radius: 6px; margin: 20px 0 4px;
+}
+.guide-article img + em {
+  display: block; font-size: 12px;
+  color: var(--muted); text-align: center;
+  margin-bottom: 20px; font-style: italic;
+}
+
+/* DIVIDER */
+.guide-article hr {
+  border: none; border-top: 1px solid var(--border); margin: 40px 0;
+}
+
+/* RIGHT TOC */
+.guide-toc {
+  width: var(--toc-w); flex-shrink: 0;
+  position: fixed; top: calc(var(--header-h) + 44px); right: 0;
+  padding: 0 20px;
+  max-height: calc(100vh - var(--header-h) - 44px);
+  overflow-y: auto;
+}
+.toc-label {
+  font-family: 'Titillium Web', 'Sarabun', sans-serif;
+  font-size: 10px; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--muted); margin-bottom: 10px;
+}
+.guide-toc ul { list-style: none; padding: 0; border-left: 2px solid var(--border); }
+.guide-toc li a {
+  display: block; padding: 4px 0 4px 12px;
+  font-size: 12.5px; color: var(--slate); text-decoration: none;
+  line-height: 1.4; border-left: 2px solid transparent; margin-left: -2px;
+  transition: all .1s;
+}
+.guide-toc li a:hover { color: var(--blue); }
+.guide-toc li a.active { color: var(--orange); border-left-color: var(--orange); font-weight: 500; }
+.guide-toc li.toc2 a { padding-left: 22px; font-size: 12px; }
+
+/* PRINT STYLES */
+@media print {
+  .guide-header, .guide-sidenav, .guide-toc { display: none !important; }
+  .guide-main { margin-left: 0; padding-right: 0; }
+  .guide-article { padding: 0; max-width: 100%; }
+  .guide-article img { max-width: 80%; margin: 12px auto; }
+}
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+  .guide-toc { display: none; }
+  .guide-main { padding-right: 0; }
+}
+@media (max-width: 780px) {
+  .guide-sidenav { display: none; }
+  .guide-main { margin-left: 0; }
+  .guide-article { padding: 28px 20px 60px; }
+}
+
+/* PDF / PRINT MODE */
+body.print-mode .guide-header,
+body.print-mode .guide-sidenav,
+body.print-mode .guide-toc { display: none; }
+body.print-mode { background: white; }
+body.print-mode .guide-layout { padding-top: 0; }
+body.print-mode .guide-main { margin-left: 0; padding-right: 0; }
+body.print-mode .guide-article {
+  max-width: 100%; padding: 0; margin: 0;
+  font-size: 10.5pt; line-height: 1.5;
+}
+body.print-mode .guide-article p { margin-bottom: 8px; }
+body.print-mode .guide-article h1 { font-size: 20pt; margin-bottom: 6px; }
+body.print-mode .guide-article h2 { font-size: 14pt; margin: 20px 0 8px; }
+body.print-mode .guide-article h3 { font-size: 12pt; margin: 14px 0 6px; }
+body.print-mode .guide-article h4 { font-size: 10pt; margin: 10px 0 4px; }
+body.print-mode .guide-article li { margin-bottom: 3px; }
+body.print-mode .guide-article table { font-size: 9.5pt; }
+body.print-mode .guide-article blockquote { font-size: 10pt; padding: 8px 12px; margin: 10px 0; }
+
+@page {
+  size: A4;
+  margin: 20mm 18mm 22mm 18mm;
+  @top-center {
+    content: "Avatour User and Best Practices Guide";
+    font-family: 'Titillium Web', 'Sarabun', sans-serif;
+    font-size: 9pt; color: #7A8A95;
+  }
+  @bottom-left {
+    content: "avatour.com";
+    font-family: 'Titillium Web', 'Sarabun', sans-serif;
+    font-size: 9pt; color: #7A8A95;
+  }
+  @bottom-right {
+    content: "Page " counter(page) " of " counter(pages);
+    font-family: 'Titillium Web', 'Sarabun', sans-serif;
+    font-size: 9pt; color: #7A8A95;
+  }
+}
+
+body.print-mode .guide-article li,
+body.print-mode .guide-article p,
+body.print-mode .guide-article blockquote,
+body.print-mode .guide-article tr { page-break-inside: avoid; }
+body.print-mode .guide-article h2,
+body.print-mode .guide-article h3,
+body.print-mode .guide-article h4 { page-break-after: avoid; }
+body.print-mode .guide-article h2 ~ h2 { page-break-before: always; }
+body.print-mode .guide-article img {
+  max-width: 90%; display: block;
+  margin: 12px auto; page-break-inside: avoid;
+}
+body.print-mode .guide-article table { page-break-inside: avoid; }
+</style>
+</head>
+<body>
+
+<header class="guide-header">
+  <a class="guide-logo" href="https://avatour.com" target="_blank" rel="noopener">
+    <img src="https://res.cloudinary.com/avatour/image/upload/v1772627129/avatour-name-logo-whiteontransparent_zwfsxa.svg" alt="Avatour" style="height:22px; width:auto; display:block;">
+  </a>
+  <div class="hd"></div>
+  <span class="hlabel">User Guide</span>
+  <div class="hright">
+    <div class="lang-switcher"><a class="lang-btn" href="avatour-guide.html">EN</a><a class="lang-btn active" href="avatour-guide-th.html">TH</a></div>
+    <span class="hversion">v2.0 · Updated 2026</span>
+    <a class="hbtn" href="https://avatour.live">Log in to Avatour</a>
+  </div>
+</header>
+
+<div class="guide-layout">
+  <nav class="guide-sidenav">
+    <div class="sidenav-section">Guide sections</div>
+<a href="#for-all-avatour-users">1. สำหรับผู้ใช้ Avatour ทุกท่าน</a>
+<a href="#avatour-user-types">2. ประเภทผู้ใช้ Avatour</a>
+<a href="#21-ผเขารวมประชม-ไมตองมบญช" class="sub">2.1 ผู้เข้าร่วมประชุม (ไม่ต้องมีบัญชี)</a>
+<a href="#22-ผใชทลงทะเบยนแลว" class="sub">2.2 ผู้ใช้ที่ลงทะเบียนแล้ว</a>
+<a href="#for-remote-meeting-participants-and-workspace-visitors">3. สำหรับผู้เข้าร่วมประชุมทางไกลและผู้เยี่ยมชมพื้นที่ทำงาน</a>
+<a href="#31-วธการเขารวมการประชม-avatour-และเยยมชมพนททำงาน-avatour-วธการเขารวมการประชม-avatour-และเยยมชมพนททำงาน-avatour" class="sub">3.1 วิธีการเข้าร่วมการประชุม Avatour และเยี่ยมชมพื้นที่ทำงาน Avatour {#วิธีการเข้าร่วมการประชุม Avatour และเยี่ยมชมพื้นที่ทำงาน Avatour}</a>
+<a href="#32-เครองมอสำหรบการประชมและการทำงานรวมกนในพนท-เครองมอการประชม" class="sub">3.2 เครื่องมือสำหรับการประชุมและการทำงานร่วมกันในพื้นที่ {#เครื่องมือการประชุม}</a>
+<a href="#for-host-and-admin-users-avatour-web-console">4. สำหรับผู้ใช้โฮสต์และผู้ดูแลระบบ - แผงควบคุมเว็บ Avatour</a>
+<a href="#web-console-overview-main-menu" class="sub">4.1 เว็บคอนโซล - เมนูหลัก</a>
+<a href="#web-console-details-by-menu-item" class="sub">4.2 เว็บคอนโซล - รายละเอียดตามรายการเมนู (พร้อมภาพประกอบ)</a>
+<a href="#onsite-how-to-use-the-avatour-turnkey-kit">5. ที่สถานที่ - วิธีการใช้ชุดเครื่องมือ Avatour Turnkey</a>
+<a href="#51-การเรมตน" class="sub">5.1 การเริ่มต้น</a>
+<a href="#52-คำแนะนำทเปนประโยชน" class="sub">5.2 คำแนะนำที่เป็นประโยชน์</a>
+<a href="#53-แอปกลอง-avatour" class="sub">5.3 แอปกล้อง Avatour</a>
+<a href="#best-practice-advice">6. คำแนะนำแนวปฏิบัติที่ดีที่สุด</a>
+<a href="#61-การใชงานครงแรก-ไมเปนทางการ-และการทำความคนเคย" class="sub">6.1 การใช้งานครั้งแรก (ไม่เป็นทางการ) และการทำความคุ้นเคย</a>
+<a href="#62-กอนการประชมวดโอสดแบบ-360" class="sub">6.2 ก่อนการประชุมวิดีโอสดแบบ 360°</a>
+<a href="#63-การใชงานกลองในสถานทสำหรบการประชมวดโอสดแบบ-360" class="sub">6.3 การใช้งานกล้องในสถานที่สำหรับการประชุมวิดีโอสดแบบ 360°</a>
+<div class="sidenav-section">Reference</div>
+<a href="https://avatour.com/glossary" target="_blank" rel="noopener">Glossary ↗</a>
+<a href="https://avatour.com/faqs" target="_blank" rel="noopener">FAQs ↗</a>
+<a href="https://avatour.live/test" target="_blank" rel="noopener">Network Test ↗</a>
+<a href="mailto:support@avatour.live">Open Support Ticket ↗</a>
+
+  </nav>
+  <div class="guide-main">
+    <article class="guide-article">
+      <div class="guide-bc">
+        <a href="#">User Guide</a>
+        <span>›</span>
+        คู่มือผู้ใช้และแนวปฏิบัติที่ดีของ Avatour
+      </div>
+      <h1 id="คมอผใชและแนวปฏบตทดของ-avatour">คู่มือผู้ใช้และแนวปฏิบัติที่ดีของ Avatour</h1>
+<h2 id="for-all-avatour-users">1. สำหรับผู้ใช้ Avatour ทุกท่าน</h2>
+<p>หากคุณเป็นผู้ใช้ใหม่ของ Avatour ทรัพยากรต่อไปนี้จะช่วยให้คุณเข้าใจแพลตฟอร์มและความสามารถของมันได้ดีขึ้น:</p>
+<ol>
+<li><a href="https://avatour.com/how-it-works" target="_blank" rel="noopener">วิดีโอวิธีการทำงานของ Avatour</a><br />
+ภาพรวมสั้น ๆ ของคุณสมบัติหลักของ Avatour และวิธีที่แพลตฟอร์มช่วยให้สามารถทำงานร่วมกันทางไกลได้อย่างสมจริง</li>
+<li><a href="https://avatour.com/faqs" target="_blank" rel="noopener">คำถามที่พบบ่อย</a><br />
+คำตอบสำหรับคำถามที่พบบ่อย</li>
+<li><a href="https://avatour.com/glossary" target="_blank" rel="noopener">อภิธานศัพท์</a><br />
+คำจำกัดความของคำศัพท์และแนวคิดสำคัญที่ใช้บ่อยใน Avatour</li>
+<li>เว็บไซต์<br />
+กรุณาดูที่ <a href="https://avatour.com/features" target="_blank" rel="noopener">คุณสมบัติของ Avatour</a> โดยเฉพาะ รวมถึงส่วนกรณีการใช้งานและอุตสาหกรรมเฉพาะทาง เพื่อเรียนรู้ว่า Avatour สามารถสนับสนุนความต้องการเฉพาะของคุณได้อย่างไร</li>
+</ol>
+<h2 id="avatour-user-types">2. ประเภทผู้ใช้ Avatour</h2>
+<h3 id="21-ผเขารวมประชม-ไมตองมบญช">2.1 ผู้เข้าร่วมประชุม (ไม่ต้องมีบัญชี)</h3>
+<p>ผู้ใช้สามารถเข้าร่วมการประชุมได้โดยไม่ต้องลงทะเบียนบัญชี Avatour
+ข้อยกเว้น: หากผู้เป็นเจ้าภาพได้จำกัดการประชุมไว้เฉพาะผู้ใช้ที่ลงทะเบียนแล้ว — ตัวอย่างเช่น อนุญาตให้เฉพาะพนักงานภายในองค์กรที่เข้าสู่ระบบด้วย Single Sign-On (SSO) เท่านั้น — คำเชิญในปฏิทินจะระบุว่าผู้เข้าร่วมต้องเข้าสู่ระบบเพื่อยืนยันตัวตน</p>
+<p>ผู้ใช้สามารถเข้าถึงการประชุมได้ดังนี้:</p>
+<ul>
+<li>รับคำเชิญในปฏิทินจากผู้เป็นเจ้าภาพ</li>
+<li>ใช้ลิงก์การประชุมในคำเชิญเพื่อเข้าร่วม</li>
+<li>ป้อนรหัสผ่านการประชุมหากผู้จัดได้เปิดใช้งานไว้</li>
+<li>ผู้เข้าร่วมสามารถเข้าร่วมได้โดยไม่ต้องมีบัญชี Avatour เว้นแต่การประชุมจะถูกจำกัดและต้องการการเข้าสู่ระบบเพื่อยืนยันตัวตน</li>
+</ul>
+<h4 id="211-ผเขารวม">2.1.1 ผู้เข้าร่วม</h4>
+<ul>
+<li>สามารถเข้าร่วมและมีปฏิสัมพันธ์ได้อย่างเต็มที่ (เว็บแคม, ไมโครโฟน, แชท, และฟังก์ชันการนำเสนอ)</li>
+<li>ผู้เข้าร่วมที่มีปฏิสัมพันธ์ได้สูงสุด 20 คนต่อการประชุม</li>
+</ul>
+<h4 id="212-ผชม">2.1.2 ผู้ชม</h4>
+<ul>
+<li>สามารถดูการประชุมและมีส่วนร่วมได้เฉพาะทางแชทเท่านั้น</li>
+<li>ไม่สามารถแชร์วิดีโอ, ใช้ไมโครโฟน, นำเสนอ, เล่น/หยุดชั่วคราวสินทรัพย์, หรือจับภาพสแนปช็อตได้</li>
+<li>ผู้ชมสูงสุด 10 คนต่อการประชุม</li>
+<li>รวมกับผู้เข้าร่วมประชุม, การประชุมสามารถรองรับผู้เข้าร่วมได้สูงสุด 30 คน</li>
+</ul>
+<h3 id="22-ผใชทลงทะเบยนแลว">2.2 ผู้ใช้ที่ลงทะเบียนแล้ว</h3>
+<p>ผู้ใช้ที่ลงทะเบียนแล้วจะมีบัญชี Avatour บัญชีจะถูกสร้างขึ้นในหนึ่งในวิธีต่อไปนี้:</p>
+<ul>
+<li><strong>ได้รับเชิญจากผู้ดูแลระบบ:</strong> ในระหว่างการเริ่มต้นใช้งาน Avatour จะตั้งค่า <strong>ผู้เช่าเฉพาะ</strong> สำหรับองค์กรและสร้าง <strong>บัญชีผู้ดูแลระบบ</strong> หนึ่งบัญชีหรือมากกว่านั้น ผู้ดูแลระบบสามารถ <strong>เชิญผู้ใช้</strong> ภายในองค์กรและกำหนดให้พวกเขาอยู่ใน <strong>กลุ่ม</strong> ซึ่งกำหนดบทบาทของพวกเขาบนแพลตฟอร์ม (ผู้เยี่ยมชม, ผู้โฮสต์, หรือผู้ดูแลระบบ) ผู้ใช้ที่ได้รับเชิญจะได้รับ <strong>ลิงก์ลงทะเบียน</strong> เพื่อทำการตั้งค่าบัญชีให้เสร็จสมบูรณ์และตั้งรหัสผ่าน </li>
+<li><strong>ผู้โฮสต์เชิญ:</strong> โฮสต์สามารถเพิ่มผู้ใช้เป็น <strong>ผู้ร่วมงานแบบผู้แก้ไข</strong> ใน Workspace ได้ ซึ่งจะใช้ <strong>ไลเซนส์โฮสต์</strong> และทำให้ผู้ใช้มีสิทธิ์เข้าถึงในระดับโฮสต์ </li>
+<li><strong>การตั้งค่า SSO อัตโนมัติ (เฉพาะระดับองค์กร/ธุรกิจ):</strong> สามารถสร้างบัญชีผู้ใช้ได้โดยอัตโนมัติผ่าน IdP โดยค่าเริ่มต้น บัญชีผู้ใช้ที่จัดเตรียมผ่าน SSO จะถูกเพิ่มไปยัง <strong>กลุ่มผู้เยี่ยมชม</strong> ยกเว้นมีการเปลี่ยนแปลงผ่าน <strong>การจับคู่กลุ่ม SAML</strong> ผู้ดูแลระบบยังสามารถเชิญผู้ใช้และกำหนดสมาชิกกลุ่มได้โดยตรงแม้ว่าจะเปิดใช้งาน SSO แล้วก็ตาม</li>
+</ul>
+<p><strong>สรุป:</strong>  </p>
+<p>ผู้ใช้ที่ลงทะเบียนและสมาชิกกลุ่มของพวกเขาสามารถจัดการได้หลายวิธี:</p>
+<ul>
+<li><strong>การจัดการโดยผู้ดูแลระบบ:</strong> ผู้ดูแลระบบในคอนโซล Avatour สามารถสร้างผู้ใช้และกำหนดให้พวกเขาอยู่ในกลุ่ม ซึ่งกำหนดบทบาทบนแพลตฟอร์มของพวกเขา (ผู้เข้าชม, ผู้จัดงาน, หรือผู้ดูแลระบบ)  </li>
+<li><strong>การกำหนดสิทธิ์ SSO:</strong> สำหรับลูกค้าในระดับองค์กรหรือธุรกิจที่มีการเปิดใช้งาน SSO ระบบ IdP สามารถกำหนดสิทธิ์บัญชีผู้ใช้และกำหนดสมาชิกกลุ่มได้โดยอัตโนมัติ ซึ่งจะกำหนดบทบาทของผู้ใช้บนแพลตฟอร์ม  </li>
+<li><strong>ผู้ใช้ที่ได้รับเชิญจากโฮสต์:</strong> โฮสต์สามารถเชิญผู้ใช้รายอื่นให้เป็นผู้ร่วมงานในฐานะบรรณาธิการสำหรับ Workspace เฉพาะได้ การกำหนดบทบาทผู้ร่วมงานบรรณาธิการจะใช้ไลเซนส์ของโฮสต์หนึ่งรายการ</li>
+</ul>
+<p><strong>แนวทางปฏิบัติที่แนะนำ (สำหรับลูกค้าองค์กร):</strong><br />
+สำหรับองค์กรที่คาดว่าจะมีผู้ใช้จำนวนมากที่ต้องการเข้าถึง Avatour ขอแนะนำให้ <strong>ผสานระบบ Single Sign-On (SSO)</strong> และจัดการผู้ใช้รวมถึงสมาชิกกลุ่มจาก <strong>IdP</strong> วิธีนี้จะช่วยให้การจัดการบัญชี การกำหนดกลุ่ม และการจัดการใบอนุญาตเป็นไปอย่างราบรื่น ลดภาระงานด้านการบริหาร และรับประกันการควบคุมการเข้าถึงที่สอดคล้องกัน</p>
+<h4 id="221-ผใชแบบแขก">2.2.1 ผู้ใช้แบบแขก</h4>
+<ul>
+<li>ถูกเพิ่มเข้าไปในกลุ่ม <strong>กลุ่มแขก</strong>.  </li>
+<li>สามารถ <strong>ดูสินทรัพย์</strong> ภายใน Workspaces ที่พวกเขาถูกเพิ่มเข้าไปเป็นผู้ร่วมงานแบบ <strong>ผู้ชม</strong>.  </li>
+<li>ไม่สามารถสร้าง Workspaces, จัดการประชุม หรืออัปโหลดเนื้อหาได้.  </li>
+<li>บัญชีผู้ใช้สำหรับแขกที่จัดเตรียมโดย SSO <strong>ยืนยันตัวตนผ่าน IdP</strong>; ไม่จำเป็นต้องใช้รหัสผ่านที่จัดการโดย Avatour</li>
+</ul>
+<hr />
+<h4 id="222-ผใชทมใบอนญาต-การเขาถงเวบคอนโซล">2.2.2 ผู้ใช้ที่มีใบอนุญาต (การเข้าถึงเว็บคอนโซล)</h4>
+<h5 id="ผใชโฮสต-กลม-โฮสต">ผู้ใช้โฮสต์ (กลุ่ม: โฮสต์)</h5>
+<ul>
+<li>สามารถสร้าง/จัดการ Workspace, เชิญผู้ร่วมงานเข้าร่วม Workspace, <strong>จัดประชุมสด</strong>, อัปโหลด <strong>Quick Captures</strong>.  </li>
+<li>มีสิทธิ์เข้าถึง <strong>Host Dashboard</strong> และ <strong>Operator App</strong> บนกล้อง 360° ที่รองรับ.  </li>
+</ul>
+<h5 id="ผดแลระบบ-กลม-ผดแลระบบ">ผู้ดูแลระบบ (กลุ่ม: ผู้ดูแลระบบ)</h5>
+<ul>
+<li>รวมความสามารถของโฮสต์ทั้งหมดพร้อมกับการจัดการบัญชีอย่างเต็มรูปแบบ</li>
+</ul>
+<p><strong>สิทธิ์เพิ่มเติมของผู้ดูแลระบบ:</strong></p>
+<p><strong>การจัดการบัญชี</strong>  </p>
+<ul>
+<li>สร้างผู้ใช้ใหม่และกำหนดกลุ่มให้พวกเขา</li>
+<li>รีเซ็ตรหัสผ่านเมื่อจัดการโดย Avatour (ไม่สามารถใช้ได้เมื่อเปิดใช้งาน SSO) </li>
+<li>อัปเกรดผู้ใช้ Guest เป็น Host </li>
+<li>ยกเลิกการใช้งานผู้ใช้ (บัญชีผู้ดูแลระบบต้องถูกเปลี่ยนเป็น Host ก่อนการลบ) </li>
+<li>โอนย้ายสินทรัพย์จากผู้ใช้ Host หนึ่งไปยังอีกคนหนึ่งระหว่างการลบ</li>
+</ul>
+<p><strong>การตั้งค่า</strong> </p>
+<ul>
+<li>กำหนดค่า <strong>การตั้งค่าความปลอดภัยทั่วทั้งองค์กร</strong> สำหรับสินทรัพย์ พื้นที่ทำงาน และการประชุมที่จัดขึ้นบนแพลตฟอร์ม (เช่น ผู้จัดต้องอยู่ด้วยเพื่อเริ่มการประชุมหรือไม่ ควรเบลอใบหน้าในวิดีโอที่อัปโหลดทั้งหมดบนแพลตฟอร์มหรือไม่)  </li>
+<li>เปิดใช้งานหรือปิดใช้งาน <strong>ฟีเจอร์ AI</strong> หรือ <strong>การบันทึก</strong> </li>
+<li>ใช้แบรนด์ของบริษัทอย่างสม่ำเสมอทั่วทั้งแพลตฟอร์มหากมีการกำหนด <strong>โดเมนที่กำหนดเอง</strong></li>
+</ul>
+<p><strong>สินทรัพย์และการวิเคราะห์</strong> </p>
+<ul>
+<li>ดูสินทรัพย์ทั้งหมดที่อัปโหลดโดยผู้ใช้ใด ๆ ในองค์กร  </li>
+<li>ตรวจสอบการใช้งานแพลตฟอร์มทั่วทั้งองค์กร</li>
+</ul>
+<hr />
+<h4 id="223-สทธผรวมงานในพนททำงาน">2.2.3 สิทธิ์ผู้ร่วมงานในพื้นที่ทำงาน</h4>
+<p>สิทธิ์ในพื้นที่ทำงานกำหนดว่าผู้ใช้สามารถทำอะไรได้ <strong>ภายในพื้นที่ทำงานเฉพาะ</strong> สิทธิ์เหล่านี้แยกต่างหากจากการเป็นสมาชิกกลุ่มในระดับแพลตฟอร์ม (แขก, เจ้าของ, ผู้ดูแลระบบ)</p>
+<ul>
+<li><strong>ผู้ร่วมงานของบรรณาธิการ:</strong> ผู้ใช้ที่มีสิทธิ์นี้สามารถ:<ul>
+<li>จัดการสินทรัพย์ (อัปโหลด, ลบ, ปกปิดใบหน้า, สร้างสรุป)  </li>
+<li>จัดการการตั้งค่าการประชุม (เปิด/ปิดการบันทึก, อนุญาตหรือลบผู้เข้าร่วม) </li>
+</ul>
+</li>
+<li>กำหนดเวลาและจัดการประชุมสด </li>
+<li>สร้างรายงานตามแม่แบบที่กำหนดไว้ล่วงหน้า </li>
+<li>
+<p>เพิ่มหรือลบผู้ร่วมงานจาก Workspace  </p>
+</li>
+<li>
+<p><strong>ผู้ร่วมงานของผู้ชม:</strong> ผู้ใช้ที่มีสิทธิ์นี้จะสามารถเข้าถึงทรัพยากรใน Workspace ได้เฉพาะการอ่านเท่านั้น พวกเขา <strong>ไม่สามารถแก้ไขทรัพยากร จัดการประชุม หรือจัดการผู้ร่วมงาน</strong> ได้ แต่พวกเขา <strong>สามารถสร้างบันทึกบนทรัพยากรได้</strong> </p>
+</li>
+</ul>
+<h2 id="for-remote-meeting-participants-and-workspace-visitors">3. สำหรับผู้เข้าร่วมประชุมทางไกลและผู้เยี่ยมชมพื้นที่ทำงาน</h2>
+<p>Avatour ช่วยให้ผู้ใช้สามารถทำงานร่วมกันได้สองวิธีหลัก:</p>
+<ul>
+<li>
+<p><strong>เข้าร่วมการประชุม Avatour (การทำงานร่วมกันแบบเรียลไทม์):</strong><br />
+  คุณอาจได้รับ <strong>คำเชิญในปฏิทิน</strong> เพื่อเข้าร่วมการประชุม Avatour ระหว่างการประชุม ผู้เข้าร่วมสามารถดำเนินการ <strong>เยี่ยมชมสถานที่จริงแบบเรียลไทม์</strong> หรือตรวจสอบทรัพยากรร่วมกันแบบเรียลไทม์ได้</p>
+</li>
+<li>
+<p><strong>เยี่ยมชมพื้นที่ทำงาน (การทำงานร่วมกันแบบอะซิงโครนัส):</strong><br />
+  คุณอาจได้รับเชิญให้เป็นผู้ร่วม <strong>ทำงานในพื้นที่ทำงาน</strong> เพื่อตรวจสอบทรัพยากร <strong>แบบอะซิงโครนัส</strong> (ตามเวลาที่คุณสะดวก)</p>
+</li>
+</ul>
+<h3 Avatour="Avatour" id="วิธีการเข้าร่วมการประชุม" และเยี่ยมชมพื้นที่ทำงาน="และเยี่ยมชมพื้นที่ทำงาน">3.1 วิธีการเข้าร่วมการประชุม Avatour และเยี่ยมชมพื้นที่ทำงาน Avatour</h3>
+<h4 id="any-flat-screen">3.1.1 อุปกรณ์ "จอแบน" ใด ๆ ที่มีเว็บเบราว์เซอร์</h4>
+<p>คุณสามารถเข้าร่วมการประชุม Avatour ได้จาก <strong>คอมพิวเตอร์เดสก์ท็อปหรือแล็ปท็อป สมาร์ทโฟน หรือแท็บเล็ตใด ๆ</strong> โดยใช้เว็บเบราว์เซอร์ </p>
+<h5 id="การเขารวมการประชม-avatour">การเข้าร่วมการประชุม Avatour</h5>
+<blockquote>
+<p><strong>หมายเหตุ:</strong> การเข้าร่วมการประชุม Avatour จำเป็นต้อง <strong>อนุญาตไมโครโฟน</strong> กรุณายอมรับคำขออนุญาตใด ๆ จากเบราว์เซอร์ของคุณ</p>
+</blockquote>
+<ol>
+<li>
+<p><strong>ผ่านคำเชิญในปฏิทิน (แนะนำ):</strong> 
+  - คุณจะได้รับ <strong>คำเชิญในปฏิทิน</strong> พร้อม <strong>ลิงก์เข้าร่วมโดยตรง</strong> (ตัวอย่างเช่น: <code>https://avatour.live/join?s=xxxxx</code>)  </p>
+<ul>
+<li>การคลิกที่ลิงก์จะทำการกรอก <strong>รหัสประชุม 5 ตัวอักษร</strong> โดยอัตโนมัติและนำคุณไปยังการประชุม</li>
+<li><strong>ต้องการการยืนยันตัวตน:</strong> การประชุมบางรายการถูกจำกัดเฉพาะผู้ใช้ที่ลงทะเบียนเท่านั้น ในกรณีนี้ คำเชิญจะระบุว่าคุณจำเป็นต้อง <strong>เข้าสู่ระบบเพื่อเข้าถึงการประชุม</strong> </li>
+<li><strong>การประชุมที่มีการป้องกันด้วยรหัสผ่าน:</strong> การประชุมบางรายการอาจต้องใช้รหัสผ่าน ในกรณีนั้น คำเชิญจะมีรหัสผ่านที่คุณต้องป้อนเพื่อเข้าร่วม</li>
+</ul>
+</li>
+<li>
+<p><strong>ผ่านรหัสการประชุม:</strong> 
+  - หากผู้เป็นเจ้าภาพแชร์ <strong>รหัสการประชุม 5 ตัวอักษร</strong> แยกต่างหาก ให้ไปที่ <a href="https://avatour.live/join" target="_blank" rel="noopener">https://avatour.live/join</a> ป้อน <strong>ชื่อของคุณ</strong> และ <strong>รหัสการประชุม</strong> แล้วเข้าร่วมการประชุม  </p>
+<ul>
+<li>หากการประชุม <strong>มีการป้องกันด้วยรหัสผ่าน</strong> กรุณากรอกรหัสผ่านที่ได้รับจากผู้จัดประชุม </li>
+<li>หากการประชุมต้องการ <strong>การยืนยันตัวตน</strong> คุณจะต้อง <strong>เข้าสู่ระบบด้วยบัญชี Avatour ของคุณ</strong> ก่อนเข้าร่วม</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p><strong>เคล็ดลับ 1:</strong> หากกล้องหรือไมโครโฟนของคุณไม่ทำงาน อาจกำลังถูกใช้งานโดยแอปพลิเคชันอื่น (เช่น Microsoft Teams หรือ Zoom) ปิดแอปที่อาจกำลังใช้กล้องหรือไมโครโฟนของคุณ จากนั้นออกจากและเข้าร่วมการประชุม Avatour อีกครั้ง </p>
+<p><strong>เคล็ดลับที่ 2:</strong> หากคุณยังไม่สามารถเข้าร่วมการประชุมได้ ให้ทำการทดสอบนี้: <a href="https://avatour.live/test" target="_blank" rel="noopener">https://avatour.live/test</a>.<br />
+การทดสอบสามารถระบุได้ว่า <strong>ไฟร์วอลล์หรือเครือข่ายขององค์กร</strong> ของคุณกำลังบล็อกการเข้าถึงหรือไม่ และจะให้ข้อมูลเพื่อช่วยในการหารือกับทีมไอทีของคุณ  </p>
+</blockquote>
+<p><strong>คำแนะนำที่ 3:</strong> <strong>ห้าม</strong> ใช้แอป Avatour บน iOS หรือ Android เพื่อเข้าร่วมการประชุม แอปเหล่านี้จำเป็นต้องใช้เฉพาะเมื่อ <strong>สตรีมการประชุมสดจากกล้อง Insta360 เท่านั้น</strong> เนื่องจากกล้องเหล่านั้นไม่สามารถรันซอฟต์แวร์ Avatour 360° ได้โดยตรงและต้องใช้สมาร์ทโฟนในการช่วยเหลือ</p>
+<h5 id="การเยยมชมพนททำงานของ-avatour-โดยไมเขารวมการประชม-avatour">การเยี่ยมชมพื้นที่ทำงานของ Avatour (โดยไม่เข้าร่วมการประชุม Avatour)</h5>
+<p>คุณสามารถเข้าถึงพื้นที่ทำงานได้หลายวิธีดังนี้:</p>
+<ul>
+<li>
+<p><strong>พื้นที่ทำงานสาธารณะ:</strong><br />
+  หากพื้นที่ทำงานเป็นสาธารณะ คุณสามารถเข้าถึงลิงก์ได้โดยตรง — ไม่จำเป็นต้องเข้าสู่ระบบ</p>
+</li>
+<li>
+<p><strong>พื้นที่ทำงานที่ถูกจำกัด:</strong><br />
+  หากพื้นที่ทำงานถูกจำกัด คุณจะต้องถูกเพิ่มเป็นผู้ร่วมงาน (collaborator) พร้อมสิทธิ์ <strong>ผู้แก้ไข</strong> หรือ <strong>ผู้ชม</strong></p>
+<ol>
+<li>เมื่อคุณถูกเพิ่มเป็นผู้ร่วมงาน คุณจะได้รับ <strong>การแจ้งเตือนทางอีเมล</strong> พร้อมลิงก์ไปยัง Workspace</li>
+<li>คลิกลิงก์ในอีเมลเพื่อเปิด Workspace หากคุณยังไม่ได้เข้าสู่ระบบ คุณจะได้รับแจ้งให้ <strong>เข้าสู่ระบบหรือลงทะเบียน</strong></li>
+<li>เมื่อเข้าสู่ระบบแล้ว Workspace จะเปิดโดยอัตโนมัติ</li>
+</ol>
+</li>
+</ul>
+<p>หรือคุณสามารถเข้าสู่ระบบได้ที่ <a href="https://avatour.live/login" target="_blank" rel="noopener">https://avatour.live/login</a> และเข้าถึง Workspace จาก <strong>รายการ Workspace ของคุณ</strong></p>
+<h4 id="vr-headset">3.1.2 ชุดหูฟัง VR</h4>
+<p>คุณสามารถเข้าร่วมการประชุมและเยี่ยมชมพื้นที่ทำงานได้จากชุดหูฟัง Meta และ Pico ที่รองรับหลากหลายรุ่น เพื่อดำเนินการนี้: </p>
+<ol>
+<li>ติดตั้งแอป Avatour ของเราจากแอปสโตร์ VR ของคุณ: <a href="https://avatour.com/support/which-vr-headsets-can-i-use-with-avatour" target="_blank" rel="noopener">วิธีติดตั้งแอป Avatour VR</a></li>
+<li>ดาวน์โหลดแอปของเราและป้อนรหัสการประชุมหรือเลือก Workspace เพื่อเข้าร่วมการประชุม สำหรับข้อมูลเพิ่มเติมเกี่ยวกับวิธีการใช้แอป VR ของเรา โปรดดูบทความในฐานความรู้ของเรา <a href="https://avatour.com/support/what-features-are-available-to-vr-guests" target="_blank" rel="noopener">ที่นี่</a></li>
+</ol>
+<h3 id="เครื่องมือการประชุม">3.2 เครื่องมือสำหรับการประชุมและการทำงานร่วมกันในพื้นที่</h3>
+<p>Avatour ช่วยให้สามารถทำงานร่วมกันได้สองบริบทหลัก:</p>
+<ol>
+<li><strong>การประชุม (แบบซิงโครนัส):</strong> ร่วมมือกันแบบเรียลไทม์กับผู้เข้าร่วมคนอื่น ๆ รวมถึงการเยี่ยมชมสถานที่แบบสดหรือการทบทวนสินทรัพย์ที่บันทึกไว้ร่วมกัน </li>
+<li><strong>พื้นที่ทำงาน (แบบอะซิงโครนัส):</strong> ทบทวนและมีปฏิสัมพันธ์กับสินทรัพย์ตามตารางเวลาของคุณเองได้ตลอด 24/7</li>
+</ol>
+<p><strong>เครื่องมือการทำงานร่วมกันมีความคล้ายคลึงกันเป็นส่วนใหญ่</strong> ระหว่างการประชุมและพื้นที่ทำงาน โดยมีบางความแตกต่างเนื่องจากบริบทของการทำงานแบบซิงโครนัสและอะซิงโครนัส</p>
+<h4 id="321-รปแบบอนเทอรเฟซ">3.2.1 รูปแบบอินเทอร์เฟซ</h4>
+<p>อินเทอร์เฟซของ Avatour ถูกจัดระเบียบโดยแบ่งออกเป็นสามส่วนหลัก:</p>
+<ul>
+<li><strong>แผงด้านซ้าย</strong> – ทรัพยากรในพื้นที่ทำงานและเครื่องมือสนับสนุน </li>
+<li><strong>ผืนผ้าใบตรงกลาง</strong> – พื้นที่หลักสำหรับการดูวิดีโอสดหรือทรัพยากร </li>
+<li><strong>แผงด้านขวา</strong> – ข้อมูลตามบริบท เช่น ผู้เข้าร่วม การประชุม หรือการแชท </li>
+</ul>
+<p>การโต้ตอบส่วนใหญ่เริ่มต้นจาก <strong>เมนูด้านล่าง</strong>.<br />
+การคลิกตัวเลือกเมนูจะเปิด <strong>แผงด้านข้าง</strong> ทางด้านซ้ายหรือขวาของหน้าจอ ในขณะที่ <strong>พื้นที่ทำงานหลัก</strong> จะยังคงเป็นพื้นที่แสดงผลหลัก</p>
+<hr />
+<h4 id="322-ตวอยางมมมองการประชม">3.2.2 ตัวอย่างมุมมองการประชุม</h4>
+<p>นี่คือตัวอย่างมุมมองในการประชุม Avatour:</p>
+<p><img alt="หน้า UI การประชุม Avatour พร้อมแผงสินทรัพย์ แผงผืนผ้าใบว่างเปล่า และแผงผู้เข้าร่วม" src="https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-meeting-assets-blank-participants_pugprq.png" /><br />
+<em>การประชุม Avatour กับคณะกรรมการสินทรัพย์ (ซ้าย), Canvas (กลาง), และคณะกรรมการผู้เข้าร่วม (ขวา)</em></p>
+<hr />
+<h4 id="323-ตวอยางมมมองของ-workspace">3.2.3 ตัวอย่างมุมมองของ Workspace</h4>
+<p>นี่คือตัวอย่างของมุมมองของ Workspace:</p>
+<p><img alt="Avatour Workspace พร้อมแผงควบคุมสินทรัพย์, แคนวาสว่าง และแผงการประชุม" src="https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-workspace-assets-blank-meetings_qeumpl.png" /><br />
+<em>Avatour Workspace พร้อมแผงสินทรัพย์ (ซ้าย), แผ่นงาน (กลาง), และแผงการประชุม (ขวา)</em></p>
+<hr />
+<h4 id="324-ภาพรวมเมนดานลาง">3.2.4 ภาพรวมเมนูด้านล่าง</h4>
+<p>เมนูด้านล่างให้การเข้าถึงการควบคุมและแผงหลักของอินเตอร์เฟซ:</p>
+<p><strong>เมนูด้านล่างสำหรับการประชุม</strong>  </p>
+<p><img alt="เมนูด้านล่างสำหรับการประชุม Avatour" src="https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-meeting-bottom-menu_bflaor.png" /><br />
+<em>เมนูด้านล่างสำหรับการประชุม Avatour</em></p>
+<ul>
+<li><strong>สินทรัพย์</strong> – ตรวจสอบไฟล์ในพื้นที่ทำงาน รวมถึงวิดีโอที่บันทึกไว้ รูปภาพ ภาพหน้าจอ และไฟล์ PDF </li>
+<li><strong>แชท</strong> – ส่งข้อความถึงผู้เข้าร่วมประชุมทุกคน </li>
+<li><strong>กล้อง</strong> – เปิดหรือปิดเว็บแคมของคุณ </li>
+<li><strong>ไมโครโฟน</strong> – ปิดเสียงหรือเปิดเสียงตัวเอง </li>
+<li><strong>นำเสนอ</strong> – นำเสนอสินทรัพย์ เดสก์ท็อป หรือฟีดเว็บแคม (ดูส่วนการนำเสนอด้านล่าง) </li>
+<li><strong>เครื่องมือสำหรับผู้จัดงาน</strong> (เฉพาะผู้จัดงาน): <ul>
+<li><strong>ล็อคโฟกัส</strong> – ล็อกมุมมองสำหรับผู้เข้าร่วมทุกคน </li>
+</ul>
+</li>
+<li><strong>ปิดเสียงทั้งหมด</strong> – ปิดเสียงผู้เข้าร่วมทุกคน </li>
+<li><strong>เปิดใช้งานเต็มหน้าจอ</strong> – ทำให้แท็บการประชุมเต็มหน้าจอ </li>
+<li><strong>ออกจากประชุม</strong> – ออกจากประชุม </li>
+<li><strong>เริ่มบันทึก</strong> – ใช้ปุ่มนี้เพื่อเริ่มและหยุดการบันทึกด้วยตนเองระหว่างการประชุม หรือสามารถบันทึกการประชุมโดยอัตโนมัติหากเปิดใช้งาน <strong>การบันทึกอัตโนมัติ</strong> ในตั้งค่าของพื้นที่ทำงาน ในทั้งสองกรณี การบันทึกจะถูกบันทึกไว้ในสินทรัพย์ของพื้นที่ทำงาน</li>
+<li><strong>แผนที่</strong> – เปิดหรือปิดแผงแผนที่สำหรับสินทรัพย์ที่มีเส้นทาง GPS การคลิกตำแหน่งจะนำคุณไปยังจุดที่แน่นอนในวิดีโอ แผนที่จะอัปเดตแบบเรียลไทม์ขณะที่วิดีโอเล่น</li>
+<li><strong>ผู้เข้าร่วม</strong> – เปิดหรือปิดแผงผู้เข้าร่วม </li>
+<li><strong>ข้อมูลการประชุม</strong> – ดูรหัสการประชุม ลิงก์เชิญ และเข้าถึงบทช่วยสอนที่เกี่ยวข้อง  </li>
+</ul>
+<p><img alt="ข้อมูลการประชุม Avatour" src="https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-meeting-info-side-pane_nx7dp4.png" /><br />
+<em>ข้อมูลการประชุม Avatour ด้านข้าง</em></p>
+<ul>
+<li><strong>การตั้งค่า</strong> – ปรับการตั้งค่าภาษา, เสียง, และวิดีโอ สำหรับการประชุมวิดีโอแบบสด 360° ให้ใช้ <strong>แสดงบิตเรต</strong> เพื่อตรวจสอบสถิติการเชื่อมต่อ</li>
+</ul>
+<blockquote>
+<p>คำแนะนำ: ส่งลิงก์การประชุมหรือเพิ่มลงในรายการปฏิทินเพื่อเชิญผู้เข้าร่วม</p>
+</blockquote>
+<hr />
+<h5 id="เมนการนำเสนอ">เมนูการนำเสนอ</h5>
+<p><strong>ตัวเลือก</strong> <strong>ปัจจุบัน</strong> ในเมนูด้านล่างของการประชุมช่วยให้คุณสามารถแชร์เนื้อหาให้กับผู้เข้าร่วมทุกคนได้</p>
+<ul>
+<li><strong>กล้อง</strong> – แชร์กล้องของสมาร์ทโฟน/แท็บเล็ตของคุณ สามารถใช้ได้ระหว่างการประชุมวิดีโอแบบสด 360° เพื่อซ้อนทับมุมมองรองสำหรับการซูมใกล้หรือรายละเอียดเฉพาะ </li>
+<li><strong>เดสก์ท็อป</strong> – แชร์หน้าจอเดสก์ท็อปของคุณกับผู้เข้าร่วมทุกคน </li>
+<li><strong>สินทรัพย์</strong> – นำเสนอสินทรัพย์จากพื้นที่ทำงาน การเลือกสินทรัพย์จะเปิด <strong>แถบเครื่องมือสินทรัพย์</strong> ซึ่งให้การควบคุมการเล่นและเครื่องมือการทำงานร่วมกันที่เฉพาะเจาะจงกับสินทรัพย์ที่กำลังนำเสนอ</li>
+</ul>
+<h5 id="แถบเครองมอสนทรพย-การประชม">แถบเครื่องมือสินทรัพย์ (การประชุม)</h5>
+<p>เมื่อนำเสนอสินทรัพย์ในการประชุม แถบเครื่องมือสินทรัพย์ จะปรากฏขึ้นเหนือผืนผ้าใบ นี่คือเครื่องมือและรายการเมนูที่มีให้ใช้เมื่อ <u>นำเสนอสินทรัพย์ในการประชุม</u> - อธิบายจากซ้ายไปขวา</p>
+<p><img alt="เมนู Avatour ขณะนำเสนอสินทรัพย์ในการประชุม" src="https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting_oflsr5.png" /> <em>เมนู Avatour ขณะนำเสนอสินทรัพย์ในการประชุม</em></p>
+<ul>
+<li><strong>ไทม์ไลน์วิดีโอ / แถบความคืบหน้า</strong> – แสดงความคืบหน้าของวิดีโอพร้อมบันทึกย่อและหัวข้อสำคัญที่สกัดจากเสียง คลิกที่บันทึกย่อหรือหัวข้อเพื่อไปยังช่วงเวลานั้นและเปิดบันทึกย่อ รวมถึงการควบคุม <strong>เล่น / หยุดชั่วคราว</strong>   </li>
+<li><strong>ภาพสแนปช็อต</strong> – ถ่ายภาพ 360° หรือภาพ 2 มิติจากสินทรัพย์  </li>
+<li><strong>สปอตไลท์</strong> – เน้นพื้นที่เฉพาะสำหรับผู้เข้าร่วมทุกคนในระหว่างการประชุมสด  </li>
+<li><strong>แสดง/ซ่อนมุมมอง (POV)</strong> – แสดงตำแหน่งที่ผู้เข้าร่วมแต่ละคนกำลังมองในวิดีโอ 360°  </li>
+<li><strong>หมายเหตุ</strong> – สร้างหมายเหตุที่แนบกับช่วงเวลาเฉพาะในสินทรัพย์ หมายเหตุสามารถจัดหมวดหมู่ได้ (การสังเกต, ปัญหา, การดำเนินการ, ข้อเสนอแนะ) ติดตามสถานะได้ (เปิด → กำลังดำเนินการ → แก้ไขแล้ว) และแชร์ผ่านลิงก์โดยตรง  </li>
+</ul>
+<p><img alt="บันทึก Avatour และตัวกรองบันทึก" src="https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-note-and-filters_g181oc.png" /> <em>หมายเหตุของ Avatour และตัวกรองหมายเหตุ</em></p>
+<ul>
+<li><strong>บันทึกคำสั่งเสียง</strong> – สิ่งเหล่านี้เป็นตัวแทนที่ถูกสร้างขึ้นโดยอัตโนมัติเมื่อการบันทึกตรวจพบการกล่าวถึงเช่น "แทรกบันทึก," "บันทึก," หรือ "ทำบันทึก" บันทึกเหล่านี้จะปรากฏบนไทม์ไลน์และจำเป็นต้อง <strong>จัดตำแหน่งและสรุป</strong> โดยผู้ใช้ </li>
+</ul>
+<p><img alt="บันทึกของ Avatour - สร้างจากคำสั่งเสียง" src="https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-notes-voice-command-generated_ic5cu4.png" /> <em>บันทึกของ Avatour - สร้างจากคำสั่งเสียง</em></p>
+<ul>
+<li><strong>แผงบันทึกและสรุป</strong> – เปิดแผงด้านข้างที่แสดงบันทึกทั้งหมด หัวข้อสำคัญ และสรุปโดยย่อสำหรับสินทรัพย์นั้น เมื่อคลิกที่รายการใด จะนำคุณไปยังช่วงเวลาดังกล่าวในวิดีโอ  </li>
+</ul>
+<p><img alt="สรุปสินทรัพย์ Avatour" src="https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-exec-summary_cqpqbs.png" /> <em>สรุปผู้บริหารของ Avatour ขณะนำเสนอสินทรัพย์ในการประชุม</em></p>
+<p><img alt="หัวข้อ Avatour" src="https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-topics_duuq1a.png" /> <em>หัวข้อ Avatour ขณะนำเสนอสินทรัพย์ในการประชุม</em></p>
+<p>จาก <strong>แผงด้านข้าง</strong> คุณสามารถ <strong>พิมพ์รายงานสินทรัพย์</strong> หรือ <strong>ดาวน์โหลดเป็น TXT หรือ CSV</strong> รายงานสามารถรวมบันทึก หัวข้อที่สร้างโดย AI และการถอดความทั้งหมดได้ คุณยังสามารถ <strong>เลือกองค์ประกอบที่ต้องการรวม</strong> ก่อนการส่งออกได้อีกด้วย  </p>
+<p><img alt="เมนูการพิมพ์รายงานสินทรัพย์ Avatour" src="https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-asset-report-print-menus_kn0syn.png" /><br />
+<em>เมนูการพิมพ์/ดาวน์โหลดรายงานสินทรัพย์ Avatour</em> </p>
+<p><img alt="เลือกองค์ประกอบสำหรับพิมพ์รายงานสินทรัพย์ Avatour" src="https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-asset-report-element-selection_ud8c5k.png" /><br />
+<em>เมนูการเลือกองค์ประกอบรายงานสินทรัพย์ของ Avatour</em></p>
+<ul>
+<li><strong>แชร์ลิงก์</strong> – แชร์ลิงก์ไปยังบันทึกหรือฉากเฉพาะในสินทรัพย์ </li>
+<li><strong>คำบรรยายปิด (CC)</strong> – แสดงข้อความถอดเสียงบนหน้าจอระหว่างการเล่นวิดีโอ</li>
+</ul>
+<h5 id="แถบเครองมอของสนทรพย-พนททำงาน">แถบเครื่องมือของสินทรัพย์ (พื้นที่ทำงาน)</h5>
+<p>เมื่อตรวจสอบสินทรัพย์ในพื้นที่ทำงาน แถบเครื่องมือจะคล้ายกันแต่ได้รับการปรับให้เหมาะสมสำหรับการใช้งานส่วนบุคคล:</p>
+<p><img alt="เมนู Avatour ขณะนำเสนอสินทรัพย์นอกการประชุม เช่น เมื่อเยี่ยมชมพื้นที่ทำงาน" src="https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-workspace_iri8gc.png" /> <em>เมนู Avatour เมื่อนำเสนอสินทรัพย์ในพื้นที่ทำงาน</em></p>
+<ul>
+<li><strong>ไทม์ไลน์วิดีโอ / แถบความคืบหน้า</strong> – แสดงความคืบหน้าของวิดีโอพร้อมบันทึกและหัวข้อสำคัญที่สกัดจากแทร็กเสียง คลิกที่ใดก็ได้บนไทม์ไลน์เพื่อเลื่อนดูวิดีโออย่างรวดเร็ว คลิกที่บันทึกหรือหัวข้อเพื่อไปยังช่วงเวลานั้นและเปิดบันทึก รวมถึงการควบคุม <strong>เล่น / หยุดชั่วคราว</strong>. </li>
+<li><strong>ภาพหน้าจอ, บันทึก, บันทึกและสรุป, แชร์ลิงก์, คำบรรยายปิด</strong>  </li>
+<li>ไม่พร้อมใช้งาน: <strong>สปอตไลท์, มุมมอง</strong> (เหล่านี้ต้องการผู้เข้าร่วมสด)  </li>
+<li>การควบคุมเพิ่มเติม:<ul>
+<li><strong>ขั้นตอน 10 วินาที</strong> – ข้ามไปข้างหน้า/ย้อนกลับ  </li>
+<li><strong>ความเร็วการเล่น</strong> – ปรับความเร็ว (0.5×–2×)  </li>
+<li><strong>ตัดต่อวิดีโอ</strong> – ตัดส่วนเริ่มต้นหรือส่วนท้ายของสื่อ</li>
+</ul>
+</li>
+</ul>
+<h2 id="for-host-and-admin-users-avatour-web-console">4. สำหรับผู้ใช้โฮสต์และผู้ดูแลระบบ - แผงควบคุมเว็บ Avatour</h2>
+<p>เมื่อคุณเข้าสู่ระบบบัญชีผู้ใช้ Avatour ของคุณ คุณจะเข้าถึง <strong>เว็บคอนโซล</strong> </p>
+<h3 id="web-console-overview-main-menu">4.1 เว็บคอนโซล - เมนูหลัก</h3>
+<p>ทางด้านซ้าย คุณจะเห็นรายการเมนูต่อไปนี้:</p>
+<p><img alt="Avatour Web Console - เมนูหลัก" src="https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu_qwpthq.png" /> <em>Avatour Web Console - เมนูหลัก</em></p>
+<ul>
+<li><strong>พื้นที่ทำงาน</strong> – จัดระเบียบเนื้อหาของคุณอย่างมีประสิทธิภาพ แต่ละพื้นที่ทำงานประกอบด้วย <strong>ทรัพยากร</strong>, <strong>ผู้ร่วมงาน</strong>, <strong>การประชุม</strong>, และ <strong>การตั้งค่า</strong>  </li>
+<li><strong>สินทรัพย์</strong> – เข้าถึงและจัดการสินทรัพย์ทั้งหมดของคุณ (วิดีโอ, รูปภาพ, PDF) ผู้ดูแลระบบสามารถดูสินทรัพย์ทั้งหมดของบัญชีได้ และสินทรัพย์ที่แชร์จะมองเห็นได้สำหรับผู้ใช้ทุกคน </li>
+<li><strong>โปรไฟล์</strong> – จัดการภาษาและรหัสผ่านของคุณ  </li>
+<li><strong>การวิเคราะห์</strong> – ติดตามกิจกรรมเซสชัน, การใช้พื้นที่ทำงาน, และตัวชี้วัดผลตอบแทนจากการลงทุน. </li>
+<li><strong>การตั้งค่า</strong> <em>(เฉพาะผู้ดูแลระบบ)</em> – กำหนดค่าเริ่มต้นสำหรับพื้นที่ทำงาน, การประชุม, และสินทรัพย์ทั่วทั้งองค์กร. ผู้ดูแลระบบยังสามารถปรับแต่งแบรนด์ (โลโก้, สี, พื้นหลัง) ได้อีกด้วย.  </li>
+<li><strong>บัญชี</strong> <em>(เฉพาะผู้ดูแลระบบ)</em> – จัดการผู้ใช้ที่ลงทะเบียนและกล้อง 360° </li>
+<li><strong>เข้าสู่ระบบอุปกรณ์</strong> – ป้อนรหัสที่แสดงบนกล้อง 360° ของคุณเพื่อจับคู่กับบัญชีของคุณ  </li>
+<li><strong>บทเรียน</strong> – เข้าถึงบทเรียนที่มีคำแนะนำ </li>
+<li><strong>ออกจากระบบ</strong> – ออกจากระบบคอนโซล</li>
+</ul>
+<blockquote>
+<p>ส่วนต่างๆ เช่น โปรไฟล์, การเข้าสู่ระบบด้วยอุปกรณ์, บทเรียน, และออกจากระบบ มีความชัดเจนในตัวเองและไม่จำเป็นต้องมีหัวข้อย่อยที่ละเอียด</p>
+</blockquote>
+<hr />
+<h3 id="web-console-details-by-menu-item">4.2 เว็บคอนโซล - รายละเอียดตามรายการเมนู (พร้อมภาพประกอบ)</h3>
+<h4 id="421-พนททำงาน">4.2.1 พื้นที่ทำงาน</h4>
+<p>พื้นที่ทำงานเป็นหน่วยการจัดระเบียบที่ยืดหยุ่นซึ่งช่วยให้คุณจัดการสินทรัพย์ ผู้ร่วมงาน และการประชุมในที่เดียว คุณสามารถสร้างพื้นที่ทำงานใหม่ได้โดยใช้ปุ่ม <strong>พื้นที่ทำงานใหม่</strong> ที่มุมขวาบน</p>
+<p><img alt="Avatour Web Console - รายการเมนูหลัก พื้นที่ทำงาน" src="https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-workspaces_hnhkjj.png" /> <em>Avatour Web Console - รายการเมนูหลัก พื้นที่ทำงาน</em></p>
+<p>คลิกที่ไอคอนรูปกระดิ่งเพื่อดูสรุปกิจกรรมในพื้นที่ทำงานในช่วง 7 วันที่ผ่านมา</p>
+<p><img alt="Avatour Web Console - กิจกรรมล่าสุดในพื้นที่ทำงาน" src="https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-workspace-recent-activities_gby1ws.png" /> <em>กิจกรรมล่าสุดในพื้นที่ทำงาน</em></p>
+<p>ภายในพื้นที่ทำงาน:</p>
+<p><img alt="พื้นที่ทำงาน Avatour พร้อมแผงควบคุมสินทรัพย์ แผ่นงานว่าง และแผงการประชุม" src="https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-workspace-assets-blank-meetings_qeumpl.png" /> <em>พื้นที่ทำงานพร้อมสินทรัพย์ (ซ้าย), แคนวาส (กลาง), การประชุม (ขวา)</em></p>
+<ul>
+<li><strong>สินทรัพย์</strong> – จัดการไฟล์ที่จัดสรรให้กับพื้นที่ทำงานนี้ </li>
+<li><strong>ผู้ร่วมงาน</strong> – 
+  ควบคุมการเข้าถึงพื้นที่ทำงานโดย <ul>
+<li><strong>ผู้ชม</strong> – สามารถดูทรัพยากรได้ การเชิญจะสร้างผู้ใช้แบบ Guest หากจำเป็น </li>
+<li><strong>ผู้แก้ไข</strong> – ควบคุมพื้นที่ทำงานได้อย่างเต็มที่ มีสิทธิ์เช่นเดียวกับเจ้าของ การอัปเกรดคำเชิญจะเพิ่มสิทธิ์ผู้ใช้เป็นเจ้าภาพหากจำเป็น <blockquote>
+<p>ผู้ใช้หลายคนสามารถเข้าถึงพื้นที่ทำงานพร้อมกันได้โดยไม่ต้องมีการประชุม การตั้งค่าการเข้าถึงพื้นที่ทำงานสาธารณะและการเข้าถึงการประชุมให้ทางเลือกในการเข้าถึง </p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><strong>รายงาน</strong> – สร้างรายงานโดยใช้แม่แบบรายการตรวจสอบบนสินทรัพย์พื้นที่ทำงานที่เลือก  </li>
+</ul>
+<p><img alt="รายงานพื้นที่ทำงาน Avatour และการเลือกสินทรัพย์" src="https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-asset-selection-and-workspace-report_itjt8f.png" /> <em>รายงานพื้นที่ทำงานและการเลือกสินทรัพย์</em></p>
+<ul>
+<li><strong>แผนที่</strong> – แสดงตำแหน่งของสินทรัพย์ที่รองรับ GPS บนแผนที่ </li>
+<li><strong>การประชุม</strong> – จัดการประชุมในพื้นที่ทำงาน </li>
+<li><strong>การตั้งค่า</strong> – กำหนดค่าเริ่มต้นสำหรับพื้นที่ทำงานและการประชุม:</li>
+</ul>
+<p><img alt="การตั้งค่า Avatour - มุมมองพื้นที่ทำงาน" src="https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-workspace-settings_llcei3.png" /> <em>การตั้งค่าพื้นที่ทำงาน</em></p>
+<p><strong>การตั้งค่าพื้นที่ทำงาน</strong></p>
+<ul>
+<li><strong>เทมเพลตรายงาน</strong> – เลือกเทมเพลตแบบฟอร์มสำหรับรายงาน AI </li>
+<li><strong>เปิดใช้งานการแจ้งเตือน</strong> – อีเมลสรุปประจำวันสำหรับการเปลี่ยนแปลงสถานะบันทึก  </li>
+</ul>
+<p><img alt="การแจ้งเตือนทางอีเมล - ตัวอย่าง" src="https://res.cloudinary.com/avatour/image/upload/c_crop,h_600,w_600,x_170,y_60/Screenshot_2026-03-05_140654_bjk0xk.png" /> <em>ตัวอย่างการแจ้งเตือนทางอีเมล</em></p>
+<ul>
+<li><strong>พื้นที่ทำงานสาธารณะ</strong> – ทุกคนที่มีลิงก์สามารถดูสินทรัพย์ได้โดยตรง</li>
+</ul>
+<p><strong>การตั้งค่าการประชุม</strong></p>
+<ul>
+<li><strong>ต้องการการยืนยันตัวตน</strong> – ผู้เข้าร่วมต้องลงชื่อเข้าใช้ </li>
+<li><strong>อนุญาตให้ผู้เยี่ยมชมเข้าถึง</strong> – อนุญาตให้ผู้ใช้ที่ไม่ได้ลงทะเบียนสามารถดูทรัพยากรได้  </li>
+<li><strong>เริ่มบันทึกอัตโนมัติ / เริ่มด้วยตนเอง</strong> – เลือกให้บันทึกการประชุมโดยอัตโนมัติหรือเริ่มด้วยตนเอง </li>
+<li><strong>ต้องการผู้ดำเนินรายการ</strong> – ผู้ดำเนินรายการต้องอนุญาตให้ผู้เข้าร่วมเข้าร่วม; การประชุมจะสิ้นสุดเมื่อผู้ดำเนินรายการออกจากห้อง </li>
+<li><strong>อนุญาตให้ผู้ชมเข้าร่วม</strong> – เข้าร่วมโดยไม่มีไมโครโฟนหรือกล้อง; สื่อสารผ่านแชท  </li>
+<li><strong>การประชุมที่มีการป้องกันด้วยรหัสผ่าน</strong> – ต้องใช้รหัสผ่านในการเข้าร่วม  </li>
+<li><strong>แสดงคำถามเกี่ยวกับการประหยัดการเดินทาง</strong> – ถามผู้เข้าร่วมว่าการประชุมนี้ช่วยลดการเดินทางหรือไม่  </li>
+</ul>
+<blockquote>
+<p>การตั้งค่าสามารถรวมกันได้ (เช่น ไม่ต้องมีผู้ดูแลแต่ต้องใช้รหัสผ่าน)</p>
+</blockquote>
+<hr />
+<h4 id="422-สนทรพย">4.2.2 สินทรัพย์</h4>
+<p>จัดการวิดีโอ 360°/2D, รูปภาพ และไฟล์ PDF ทั้งหมด อัปโหลด/ดาวน์โหลดสินทรัพย์ จัดสรรไปยังพื้นที่ทำงาน แชร์กับผู้ใช้รายอื่น เปลี่ยนชื่อ พิมพ์/ดาวน์โหลดรายงาน เปิดใช้งานการเบลอใบหน้า และการสรุปด้วย AI</p>
+<p><img alt="Avatour Web Console - รายการเมนูหลัก สินทรัพย์" src="https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-assets_ky5emz.png" /> <em>รายการเมนูหลัก สินทรัพย์</em></p>
+<hr />
+<h4 id="423-การวเคราะห">4.2.3 การวิเคราะห์</h4>
+<p>ให้ข้อมูลเชิงลึกเกี่ยวกับการประชุม การใช้พื้นที่ทำงาน และตัวชี้วัดผลตอบแทนจากการลงทุน</p>
+<p><img alt="Avatour Web Console - รายการเมนูหลัก การวิเคราะห์ (1 จาก 3)" src="https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-analytics-1-of-3_ds3epe.png" /> <em>ภาพรวมการวิเคราะห์</em></p>
+<p><img alt="Avatour Web Console - รายการวิเคราะห์เมนูหลัก (2 จาก 3)" src="https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-analytics-2-of-3_vpcsme.png" /> <em>กิจกรรมการประชุมและการใช้พื้นที่ทำงาน</em></p>
+<p><img alt="Avatour Web Console - รายการวิเคราะห์เมนูหลัก (3 จาก 3)" src="https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-analytics-3-of-3_hn2pmr.png" /> <em>การใช้งานใบอนุญาตอุปกรณ์และผลตอบแทนจากการลงทุน</em> </p>
+<h2 id="onsite-how-to-use-the-avatour-turnkey-kit">5. ที่สถานที่ - วิธีการใช้ชุดเครื่องมือ Avatour Turnkey</h2>
+<h3 id="51-การเรมตน">5.1 การเริ่มต้น</h3>
+<p>ที่นี่คุณจะพบคู่มือออนไลน์ที่ครอบคลุมมากสำหรับขั้นตอนแรกของคุณกับ Avatour Turnkey Kit: <a href="https://avatour.com/quickstart-panox-v2" target="_blank" rel="noopener">คู่มือเริ่มต้นอย่างรวดเร็ว – Avatour Turnkey Kit 3.1 (การตั้งค่า Pilot PanoX V2)</a></p>
+<p>และนี่คือรูปภาพพร้อมคำแนะนำที่คุณจะพบอยู่ภายในฝาของกล่องชุด 3.1
+<img alt="รูปภาพภายในฝาของกล่อง Avatour Kit" src="https://res.cloudinary.com/avatour/image/upload/v1775994773/avatour-turnkey-kit-3.1-inside-lid-picture_dq4ipl.png" /> <em>รูปภาพภายในฝาปิดของกล่อง Avatour Kit</em> </p>
+<p>ทำตามคู่มือและคำแนะนำเพื่อแกะกล่อง, ประกอบ, และเปิดใช้งานกล้องของคุณ</p>
+<hr />
+<h3 id="52-คำแนะนำทเปนประโยชน">5.2 คำแนะนำที่เป็นประโยชน์</h3>
+<h4 id="แบตเตอรภายนอก--การประชมทยาวนานขนและระบบระบายความรอนทดขน">แบตเตอรี่ภายนอก – การประชุมที่ยาวนานขึ้นและระบบระบายความร้อนที่ดีขึ้น</h4>
+<ul>
+<li>
+<p><strong>หากชุดของคุณมีแบตเตอรี่ Ulanzi:</strong> ติดตั้งแบตเตอรี่ระหว่างฐานขาตั้งกล้องกับก้านยืดได้ จากนั้นเชื่อมต่อแบตเตอรี่กับกล้องผ่าน USB-C  </p>
+</li>
+<li>
+<p><strong>หากชุดของคุณมีแท่งแบตเตอรี่ Telesin:</strong> ติดตั้งกล้องโดยตรงเข้ากับแท่งแบตเตอรี่ Telesin ที่ยืดได้ และเชื่อมต่อผ่าน USB-C. </p>
+</li>
+</ul>
+<p>การใช้แบตเตอรี่ภายนอก:</p>
+<ol>
+<li>เพิ่มระยะเวลาการใช้งานแบตเตอรี่รวมจาก ~40 นาที (แบตเตอรี่กล้องเท่านั้น) เป็น ~3 ชั่วโมง. </li>
+<li>เพิ่มความเสถียรให้กับการตั้งค่ากล้อง </li>
+<li>ช่วยป้องกันการเกิดความร้อนสูงเกินไป </li>
+</ol>
+<blockquote>
+<p>เราแนะนำให้ใช้แบตเตอรี่ภายนอกตั้งแต่เริ่มต้น โดยเฉพาะสำหรับการประชุมสด</p>
+</blockquote>
+<h4 id="ขอควรพจารณาดานเสยงสำหรบการประชมสดและการบนทก">ข้อควรพิจารณาด้านเสียงสำหรับการประชุมสดและการบันทึก</h4>
+<ul>
+<li><strong>สภาพแวดล้อมที่มีเสียงดัง:</strong> 
+  ใช้หูฟัง Shokz ที่รวมอยู่ในชุดของคุณเพื่อการบันทึกเสียงที่ชัดเจน <ul>
+<li><strong>เปิด/ปิดเครื่อง:</strong> กดปุ่ม "+" ค้างไว้ 3 วินาที (ไฟ LED สีน้ำเงิน = เปิด, ไฟ LED สีแดง = ปิด)  </li>
+<li><strong>โหมดจับคู่บลูทูธ:</strong> ในขณะที่หูฟังปิดอยู่ ให้กดปุ่ม "+" ค้างไว้ 5 วินาที (ไฟ LED จะกระพริบสีน้ำเงิน/แดง) </li>
+</ul>
+</li>
+<li>
+<p><strong>ระดับเสียง:</strong> ใช้ปุ่ม "+" และ "-"  </p>
+</li>
+<li>
+<p><strong>สภาพแวดล้อมที่เงียบกว่า / ผู้เข้าร่วมหลายคนใกล้กล้อง:</strong> 
+  ใช้ลำโพงแบบหนีบของ NoxGear ลำโพงนี้อาจไม่มีความคมชัดสูงเท่าลำโพงสำหรับการประชุม (เช่น Jabra Speak) แต่สามารถหนีบติดกับเสื้อได้ง่ายและจับเสียงพูดใกล้เคียงได้อย่างมีประสิทธิภาพ  </p>
+<ul>
+<li><strong>เปิด/ปิดเครื่อง:</strong> กดปุ่มเล่น/หยุดชั่วคราวค้างไว้ 2 วินาที </li>
+</ul>
+</li>
+<li>
+<p><strong>โหมดจับคู่ Bluetooth:</strong> เข้าสู่โหมดจับคู่โดยอัตโนมัติเมื่อเปิดเครื่อง (ไฟ LED กระพริบสีน้ำเงิน/แดง; ไฟสีน้ำเงินคงที่เมื่อจับคู่แล้ว)  </p>
+<ul>
+<li><strong>ระดับเสียง:</strong> ใช้ปุ่ม "+" และ "-" </li>
+</ul>
+</li>
+<li>
+<p><strong>การใช้เครื่องของคุณเอง:</strong> หากคุณต้องการใช้อุปกรณ์อื่น (เช่น ลำโพงประชุมหรือหูฟังส่วนตัว) คุณสามารถจับคู่ผ่านกล้องได้: การตั้งค่า → บลูทูธ  </p>
+</li>
+</ul>
+<h4 id="การเชอมตอ-การเชอมตอ-การเชอมตอ">การเชื่อมต่อ, การเชื่อมต่อ, การเชื่อมต่อ</h4>
+<p><strong>ก่อนเริ่มต้น:</strong> ตรวจสอบการเชื่อมต่ออินเทอร์เน็ตผ่าน:</p>
+<ul>
+<li><strong>WiFi ภายใน</strong> (แนะนำ)</li>
+<li><strong>เครือข่ายมือถือ</strong> (หากอยู่นอกระยะ WiFi)</li>
+</ul>
+<p><strong>แนะนำแบนด์วิดท์:</strong> อัปโหลด/ดาวน์โหลด 10 Mbps สำหรับการสตรีมแบบ 360° เต็มรูปแบบ (~5 Mbps) แบนด์วิดท์ที่ต่ำกว่า (1–2 Mbps) จะใช้งานได้เฉพาะเมื่ออยู่นิ่งเท่านั้น</p>
+<h5 id="ทดสอบความเรวเครอขาย">ทดสอบความเร็วเครือข่าย</h5>
+<ul>
+<li><strong>การทดสอบที่ตำแหน่งเดียว:</strong> ใช้เครื่องมือตรวจสอบความเร็วที่คุณใช้เป็นประจำ (เช่น <a href="https://www.speedtest.net" target="_blank" rel="noopener">Speedtest</a>) เพื่อตรวจสอบทั้งแบนด์วิดท์การอัปโหลด </li>
+<li><strong>การทดสอบโดยการเดินข้ามไซต์:</strong> จากกล้อง: การตั้งค่า → เครือข่าย → ทดสอบการเชื่อมต่อ เดินตรวจสอบพื้นที่ทั้งหมดเพื่อยืนยันการครอบคลุมและความเร็วของแบนด์วิดท์</li>
+</ul>
+<h5 id="wifi-ภายใน">WiFi ภายใน</h5>
+<ul>
+<li>แนะนำอย่างยิ่งสำหรับการเชื่อมต่อที่เสถียร </li>
+<li>หากฝ่ายไอทีต้องการการอนุญาตเฉพาะ (whitelisting) ให้ค้นหาที่อยู่ MAC: การตั้งค่า → เกี่ยวกับ → ที่อยู่ WiFi</li>
+</ul>
+<h5 id="เครอขายมอถอ">เครือข่ายมือถือ</h5>
+<p><strong>ตัวเลือกที่ 1: ฮอตสปอตและซิมการ์ดที่ให้มาในชุด</strong>  </p>
+<ul>
+<li>ติดตั้งฮอตสปอต GlocalMe เข้ากับแท่งแบตเตอรี่ Telesin (แม่เหล็ก)  </li>
+<li>รับประกันว่าไม่มีการรบกวนและรักษาการเชื่อมต่อหากเคลื่อนที่ออกจากกล้อง  </li>
+<li>การแก้ไขปัญหา:<ul>
+<li>ยืนยันว่าซิมการ์ดที่ติดตั้งไว้ล่วงหน้า (ไม่ใช่ Cloud SIM)  </li>
+<li>เปิดใช้งาน 5G ในตัวจัดการซิมการ์ด </li>
+</ul>
+</li>
+<li>ตรวจสอบ APN ที่ถูกต้องสำหรับภูมิภาคของคุณ (<a href="https://avatour.com/support/how-do-i-change-the-apn-on-my-glocalme-hotspot" target="_blank" rel="noopener">คู่มือการตั้งค่า APN</a>)</li>
+</ul>
+<p><strong>ตัวเลือก B: ฮอตสปอตส่วนตัว / ซิมการ์ด</strong>
+- ใช้สมาร์ทโฟนของคุณเองหรือฮอตสปอตเฉพาะ </p>
+<p><strong>หมายเหตุสำคัญ:</strong>  </p>
+<blockquote>
+<p>ปิดฮอตสปอตเมื่อเชื่อมต่อกับ WiFi; เปิดใช้งานเฉพาะเมื่ออยู่นอกระยะเท่านั้น ระบบปฏิบัติการของกล้องจะสลับเครือข่าย WiFi โดยอัตโนมัติตามความแรงของสัญญาณ และอาจสลับไปยังฮอตสปอตโดยไม่ตั้งใจแม้ว่าจะมี WiFi พร้อมใช้งานอยู่ก็ตาม</p>
+<p>เครือข่ายมือถืออาจจำกัดแบนด์วิดท์โดยไม่แจ้งให้ทราบล่วงหน้า กรุณาตรวจสอบขีดจำกัดของแพ็กเกจข้อมูลกับผู้ให้บริการเครือข่ายของท่าน หรือติดต่อฝ่ายสนับสนุนของ Avatour หากใช้ฮอตสปอตและซิมของเรา</p>
+</blockquote>
+<h5 id="สถานการณทมแบนดวดทตำ">สถานการณ์ที่มีแบนด์วิดท์ต่ำ</h5>
+<ul>
+<li>บันทึกวิดีโอสถานที่ล่วงหน้าเพื่อเล่นในภายหลัง (<a href="https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app" target="_blank" rel="noopener">คู่มือการบันทึก</a>).  </li>
+<li>แชร์สตรีมกล้องจากสมาร์ทโฟนเพื่อเสริมในพื้นที่ที่มีแบนด์วิดท์ต่ำ (อัปโหลด 0.1–0.3 Mbps)</li>
+</ul>
+<h5 id="ไมมการเชอมตอ">ไม่มีการเชื่อมต่อ</h5>
+<ul>
+<li>สามารถใช้ได้เฉพาะวิดีโอที่บันทึกไว้ล่วงหน้าเท่านั้น (<a href="https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app" target="_blank" rel="noopener">คู่มือการบันทึก</a>)</li>
+</ul>
+<h4 id="ผเขารวมอน-ๆ-ในสถานท--แนวทางปฏบตทดทสด">ผู้เข้าร่วมอื่น ๆ ในสถานที่ – แนวทางปฏิบัติที่ดีที่สุด</h4>
+<p>เมื่อมีผู้เข้าร่วมหลายคนเข้าร่วมการประชุม Avatour แบบสดจากสถานที่เดียวกันกับกล้อง 360° การจัดการ <strong>เสียงและแบนด์วิดท์</strong> อย่างระมัดระวังเป็นสิ่งสำคัญ:  </p>
+<ul>
+<li>สมาร์ทโฟน แท็บเล็ต หรือแล็ปท็อปแต่ละเครื่องที่เชื่อมต่อในสถานที่จะใช้แบนด์วิดท์ของเครือข่ายและอาจส่งผลเสียต่อการรับสัญญาณภาพจากกล้อง 360° </li>
+<li>ไมโครโฟนและลำโพงหลายตัวในพื้นที่เดียวกันอาจทำให้เกิด <strong>เสียงสะท้อน</strong> ซึ่งทำให้ประสบการณ์การประชุมไม่น่าพึงพอใจสำหรับผู้เข้าร่วมทุกคน</li>
+</ul>
+<h4 id="ผเขารวมในสถานทอน--แนวทางปฏบตทดทสด">ผู้เข้าร่วมในสถานที่อื่น – แนวทางปฏิบัติที่ดีที่สุด</h4>
+<p>เมื่อมีผู้เข้าร่วมหลายคนเข้าร่วมการประชุม Avatour แบบสดจากสถานที่เดียวกับกล้อง 360° การจัดการ <strong>เสียงและแบนด์วิดท์</strong> อย่างระมัดระวังเป็นสิ่งสำคัญ: </p>
+<ul>
+<li>สมาร์ทโฟน แท็บเล็ต หรือแล็ปท็อปแต่ละเครื่องที่เชื่อมต่อในสถานที่นั้นจะใช้แบนด์วิดท์ของเครือข่ายและอาจส่งผลกระทบในทางลบต่อการถ่ายทอดสดของกล้อง 360°  </li>
+<li>ไมโครโฟนและลำโพงหลายตัวในพื้นที่เดียวกันอาจทำให้เกิด <strong>เสียงสะท้อน</strong> ซึ่งทำให้ประสบการณ์การประชุมไม่ดีสำหรับผู้เข้าร่วมทุกคน</li>
+</ul>
+<p>เพื่อแก้ไขปัญหาเหล่านี้ ให้ปฏิบัติตาม <strong>แนวทางปฏิบัติที่ดีที่สุด</strong> เหล่านี้:</p>
+<ul>
+<li><strong>ใช้หูฟังแบบมีสายหรือไร้สาย:</strong> ควรเป็นแบบตัดเสียงรบกวนเพื่อป้องกันการเกิดเสียงสะท้อนและเสียงก้อง  </li>
+<li><strong>โหมดใช้งานในสถานที่:</strong> เข้าร่วมการประชุมในโหมดใช้งานในสถานที่เมื่ออยู่ในบริเวณใกล้กับกล้อง 360°  <ul>
+<li>โหมดนี้ได้รับการปรับแต่งให้เหมาะสมกับการใช้งานในสถานที่:  <ul>
+<li>ปิดเสียงไมโครโฟนและลำโพงของผู้เข้าร่วมโดยอัตโนมัติ </li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>ไม่</strong> ส่งภาพจากกล้องของผู้เข้าร่วม </li>
+<li><strong>ไม่</strong> แสดงภาพจากกล้อง 360° ในเบราว์เซอร์ของผู้เข้าร่วม<br />
+        - ช่วยประหยัดแบนด์วิดท์ของเครือข่าย เพื่อให้กล้อง 360° มีการอัปโหลดสูงสุดสำหรับการถ่ายทอดสด </li>
+<li>มีประโยชน์เมื่อผู้ใช้ต้องการแชร์รายละเอียดเฉพาะ คุณสามารถ <strong>แชร์ภาพจากกล้องของคุณ</strong> เพื่อการรับชมที่ตรงเป้าหมาย  </li>
+<li><strong>ปิดเสียงเมื่อไม่ได้พูด:</strong> ป้องกันเสียงสะท้อนที่ไม่ต้องการและสิ่งรบกวน  </li>
+<li><strong>ใช้เครือข่ายแยกหากเป็นไปได้:</strong> เชื่อมต่อสมาร์ทโฟนของคุณกับเครือข่ายที่แตกต่างจากเครือข่ายของกล้องเพื่อลดการรบกวน  </li>
+</ul>
+<p>การปฏิบัติตามแนวทางเหล่านี้จะช่วยให้การทัวร์สดเป็นไปอย่างราบรื่นและมีคุณภาพสูงสำหรับผู้เข้าร่วมทั้งในสถานที่และทางไกล</p>
+<h3 id="53-แอปกลอง-avatour">5.3 แอปกล้อง Avatour</h3>
+<p>นี่คือ (1) เมนูระดับบนสุด, (2) การตั้งค่า และ (3) การตั้งค่าเครือข่าย</p>
+<p><img alt="แอปกล้อง Avatour 360° - สามเมนู" src="https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-cam-app-3-menu-screens_nju8bt.png" /> <em>แอปกล้อง Avatour 360° - เมนู 3 รายการ</em></p>
+<p><strong>การบันทึกอย่างรวดเร็ว</strong> - สำหรับการบันทึกวิดีโอ 360° แบบออฟไลน์ - สำหรับคำอธิบายโดยละเอียด โปรดดูที่ <a href="https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app" target="_blank" rel="noopener">คุณจะบันทึกและอัปโหลดวิดีโอ 360 องศาด้วยแอป Avatour ได้อย่างไร?</a>. เราขอแนะนำให้ใช้อุปกรณ์เสียงภายนอก (เชื่อมต่อผ่านบลูทูธ) หมายเหตุ: คุณสามารถทำวิดีโอและรูปภาพแบบ 2D มาตรฐานได้เช่นกัน - เพียงแค่เปลี่ยนโหมดระหว่าง 360° และ 2D ที่มุมขวาล่างเมื่ออยู่ในหน้าจอ QC</p>
+<p><strong>การประชุมสด</strong> - สำหรับการประชุมทางวิดีโอแบบ 360° แบบสด คุณจะเห็นพื้นที่ทำงานของคุณ และเมื่อคุณคลิกที่พื้นที่ใด ๆ จะเริ่มการสตรีมวิดีโอสดจากกล้อง 360° ทันที ก่อนที่คุณจะสามารถเข้าร่วมการประชุมด้วยกล้อง 360° ของคุณได้ คุณจำเป็นต้องเชื่อมต่ออุปกรณ์เสียงผ่านบลูทูธ สำหรับคำอธิบายอย่างละเอียด โปรดดูที่ <a href="https://avatour.com/support/how-to-start-a-live-capture-meeting-with-your-pilot-camera" target="_blank" rel="noopener">วิธีเริ่มการประชุม Live Capture กับกล้อง Pilot ของคุณ</a></p>
+<blockquote>
+<p>เมื่อคุณจัดประชุมแบบ Live Capture ด้วยกล้อง 360 องศาของคุณ คุณจะมีเครื่องมือสำหรับการประชุมที่คล้ายคลึงกับประสบการณ์บนเว็บให้คุณใช้งาน นี่คือลิงก์ไปยังบทความในฐานความรู้ของเราที่อธิบายเครื่องมือเหล่านี้โดยละเอียด: <a href="https://avatour.com/support/what-avatour-app-tools-are-available-to-labpano-pilot-camera-operators" target="_blank" rel="noopener">เครื่องมือแอปผู้ดำเนินการ</a></p>
+</blockquote>
+<p><strong>แกลเลอรี</strong> - ที่นี่คุณจะพบวิดีโอและรูปภาพ 360° ทั้งหมดของคุณสำหรับอัปโหลดไปยัง Avatour Web Console</p>
+<p><strong>การตั้งค่า</strong> - ภายใน การตั้งค่า คุณมีตัวเลือกดังต่อไปนี้:</p>
+<ul>
+<li><strong>เครือข่าย</strong>: ตัวเลือกนี้ช่วยให้คุณเปลี่ยนเครือข่าย WiFi ที่กล้องเชื่อมต่ออยู่หรือทดสอบการเชื่อมต่อเครือข่ายเพื่อดูปริมาณการสตรีมของคุณ</li>
+<li>
+<p><strong>การจับภาพสด</strong>: ปรับการตั้งค่าการจับภาพสดของคุณตามแบนด์วิดท์ที่มีอยู่ ความไว VR ของแขก หรือหากเลนส์ป้องกันของกล้องของคุณติดตั้งอยู่:</p>
+<ul>
+<li><strong>เป้าหมายเฟรม</strong> <strong>อัตรา</strong>: ปรับอัตราเฟรมสำหรับวิดีโอ Live Capture ของคุณระหว่าง 15 fps, 24 fps, และ 30 fps อัตราเฟรมที่สูงขึ้นจะทำให้วิดีโอมีความลื่นไหลมากขึ้น แต่จะต้องใช้แบนด์วิดท์ในการอัปโหลดมากขึ้น ค่าเริ่มต้น: 15 fps</li>
+<li><strong>เป้าหมายบิตเรต</strong>: เปิดใช้งานเพื่อเพิ่มหรือลดบิตเรตสูงสุดสำหรับการสตรีมสดของคุณ คุณสามารถตั้งค่าเป้าหมายบิตเรตได้ระหว่าง 1 Mbps ถึง 10 Mbps บิตเรตที่สูงขึ้นจะส่งผลให้มีความละเอียดวิดีโอที่สูงขึ้น แต่จะต้องใช้แบนด์วิดท์การอัปโหลดมากขึ้น ค่าเริ่มต้น: 5 Mbps</li>
+<li><strong>เพิ่มประสิทธิภาพการเคลื่อนไหว</strong>: จะลดอัตราเฟรมของวิดีโอ ทำให้โหลดแบนด์วิดท์การอัปโหลดของเครือข่ายน้อยลง และเพิ่มบิตเรตการสตรีม นอกจากนี้ ตัวเลือกนี้ยังช่วยลดอาการเมารถสำหรับผู้เข้าร่วม VR ค่าเริ่มต้น: ปิด</li>
+<li><strong>เลนส์ป้องกัน</strong>: สิ่งนี้จะส่งผลต่อวิธีการเชื่อมต่อวิดีโอ 360° ขึ้นอยู่กับการติดตั้งเลนส์ป้องกันบนกล้องของคุณ หากคุณไม่มีเลนส์ป้องกัน ให้ตั้งค่าเป็น "ไม่มี" หากคุณได้รับชุด Kit 3.0 คุณมีเลนส์ป้องกันติดตั้งไว้ล่วงหน้าแล้วและควรตั้งค่าเป็น "มี" ค่าเริ่มต้น: มี</li>
+</ul>
+</li>
+<li>
+<p><strong>การจับภาพอย่างรวดเร็ว</strong>: ปรับการตั้งค่าการจับภาพอย่างรวดเร็วของคุณตามอัตราเฟรมวิดีโอที่คุณต้องการ, แบนด์วิดท์ที่มีสำหรับการอัปโหลดวิดีโอที่บันทึกไว้, หรือหากเลนส์ป้องกันของกล้องของคุณได้ติดตั้งไว้แล้ว การจับภาพอย่างรวดเร็วมีความละเอียดที่กำหนดไว้ที่ 4k ซึ่งโดยทั่วไปจะให้ความสมดุลที่ดีระหว่างคุณภาพวิดีโอและขนาดไฟล์ (สำหรับความละเอียดที่สูงขึ้น คุณสามารถใช้แอปกล้องดั้งเดิมได้เช่นกันบน PanoX V2 สำหรับรายละเอียดเพิ่มเติม ดูที่ <a href="https://avatour.com/support/วิธีบันทึกและอัปโหลดวิดีโอ 360 องศาด้วยแอป Avatour" target="_blank" rel="noopener">วิธีบันทึกและอัปโหลดวิดีโอ 360 องศาด้วยแอป Avatour</a>):</p>
+</li>
+<li><strong>อัตราเฟรมเป้าหมาย</strong>: ปรับอัตราเฟรมสำหรับการบันทึกวิดีโอ Quick Capture ของคุณระหว่าง 15 fps, 24 fps และ 30 fps อัตราเฟรมที่สูงขึ้นจะทำให้วิดีโอมีความลื่นไหลมากขึ้น แต่จะเพิ่มขนาดไฟล์วิดีโอและเวลาในการอัปโหลด แนะนำ: 30 fps<ul>
+<li><strong>เป้าหมายบิตเรต</strong>: ตั้งค่าเป้าหมายบิตเรตสำหรับการอัปโหลด Quick Capture ระหว่าง 5 Mbps ถึง 20 Mbps บิตเรตที่ต่ำกว่าจะเพิ่มความเร็วในการอัปโหลด แต่จะลดคุณภาพของวิดีโอ แนะนำ: 20 Mbps</li>
+</ul>
+</li>
+<li><strong>เลนส์ป้องกัน</strong>: <em>ดูส่วนเลนส์ป้องกันสำหรับการจับภาพสดด้านบน</em></li>
+</ul>
+<blockquote>
+<p>ดูเพิ่มเติมได้ที่ <a href="https://avatour.com/support/avatour-360deg-video-file-size-calculator" target="_blank" rel="noopener">เครื่องคำนวณขนาดไฟล์วิดีโอ Avatour 360°</a> สำหรับคำแนะนำเพิ่มเติมเกี่ยวกับการตั้งค่าข้างต้นและขนาดไฟล์วิดีโอ</p>
+</blockquote>
+<ul>
+<li><strong>เกี่ยวกับ</strong>: ดูหมายเลขซีเรียลของอุปกรณ์และเวอร์ชันซอฟต์แวร์</li>
+</ul>
+<p><strong>บัญชี</strong> - สำหรับเข้าสู่ระบบด้วยบัญชีโฮสต์หรือบัญชีผู้ดูแลระบบ Avatour ของคุณ</p>
+<h2 id="best-practice-advice">6. คำแนะนำแนวปฏิบัติที่ดีที่สุด</h2>
+<h3 id="61-การใชงานครงแรก-ไมเปนทางการ-และการทำความคนเคย">6.1 การใช้งานครั้งแรก (ไม่เป็นทางการ) และการทำความคุ้นเคย</h3>
+<p>สำหรับการใช้งานครั้งแรกและการทำความคุ้นเคยกับ Avatour Web Console และ Avatour Turnkey Kit เราขอแนะนำขั้นตอนดังต่อไปนี้:</p>
+<ol>
+<li>นำชุดอุปกรณ์กลับบ้านและทดลองใช้งานร่วมกับครอบครัวและเพื่อน ๆ โดยใช้การเชื่อมต่ออินเทอร์เน็ตที่บ้านของคุณ</li>
+<li>นำชุดอุปกรณ์ไปยังสำนักงานและเชื่อมต่อกับเครือข่ายของบริษัท (ปัญหาขององค์กรอาจเปลี่ยนแปลงได้ เช่น ไฟร์วอลล์ของบริษัท - แต่คุณทราบจากขั้นตอนแรกว่า Avatour ทำงานได้และนี่เป็นหัวข้อที่ทีมไอทีของคุณจะต้องจัดการร่วมกับ Avatour)</li>
+<li>เริ่มใช้งาน Avatour ในสถานที่จริง (นอกสำนักงานของคุณ) ณ สถานที่ประชุมที่ผู้เข้าร่วมจากระยะไกลมักจะต้องเดินทางไปยังสถานที่นั้น โดยปกติแล้วผู้เข้าร่วมจากระยะไกลจะต้องเดินทางไปยังสถานที่นั้น. อาจมีหัวข้อเกี่ยวกับการเชื่อมต่อเพิ่มเติมที่อาจเกิดขึ้น. Avatour จะช่วยเหลือร่วมกับทีมไอทีของคุณ.</li>
+<li>เริ่มใช้งานกับผู้เข้าร่วมจากระยะไกลทั้งภายในและภายนอก.</li>
+</ol>
+<h3 id="62-กอนการประชมวดโอสดแบบ-360">6.2 ก่อนการประชุมวิดีโอสดแบบ 360°</h3>
+<ul>
+<li>เราขอแนะนำให้ทำการบันทึกวิดีโอทัวร์แบบ 360° ก่อนการทัวร์สดหากมีเวลาเพียงพอ ด้วยเหตุผลสามประการ: (1) มีแผนสำรองสำหรับการทัวร์สด (2) มีบางสิ่งสำหรับเอกสารและทบทวนในภายหลัง (นอกเหนือจากการบันทึกทัวร์สด) และ (3) เริ่มสร้างคลังวิดีโอ 360° ของทุกไซต์ของคุณซึ่งสามารถเป็นประโยชน์สำหรับกรณีการใช้งานหลายกรณี </li>
+<li>อุปกรณ์ทั้งหมดในชุดได้รับการชาร์จอย่างน้อย 90 นาทีก่อนการประชุมสด เราขอแนะนำให้ชาร์จอุปกรณ์ทั้งหมดอย่างต่อเนื่องเมื่อไม่ได้ใช้งาน ด้วยวิธีนี้ อุปกรณ์ทั้งหมดจะพร้อมใช้งานเสมอ รวมถึงการประชุมที่ไม่คาดคิด</li>
+<li>
+<p>ติดตั้งชุดอุปกรณ์ให้สมบูรณ์ (1. ฐานขาตั้งกล้อง + 2. แบตเตอรี่ Ulanzi + 3. ไม้ยืดได้ + 4. กล้อง 360°)</p>
+</li>
+<li>
+<p>ยืนยันว่าได้สร้าง Workspace สำหรับการประชุมสดแล้วและได้รวมสินทรัพย์ที่เกี่ยวข้องทั้งหมดไว้แล้ว</p>
+</li>
+<li>
+<p>เชิญผู้เข้าร่วมทุกคนเข้าร่วมการประชุมผ่าน Workspace ของคุณ ซึ่งจะสร้างคำเชิญในปฏิทินของผู้เข้าร่วมทุกคน และรวมลิงก์คำเชิญการประชุมไว้ด้วย</p>
+</li>
+<li>
+<p>จับคู่และเชื่อมต่อหูฟังบลูทูธหรือลำโพงที่คุณวางแผนจะใช้สำหรับการทัวร์กับกล้อง</p>
+</li>
+<li>
+<p>ผู้ใช้สมาร์ทโฟนทุกคนที่อยู่ในสถานที่ควรเชื่อมต่อจากเครือข่ายที่แตกต่างจากเครือข่ายของกล้อง นี่จะช่วยลดภาระของแบนด์วิดท์เครือข่ายของกล้อง</p>
+</li>
+<li>
+<p>หากคุณเป็นผู้ควบคุมกล้องเพียงคนเดียว ให้พกสมาร์ทโฟนไปด้วยในกรณีที่คุณต้องการแชร์กล้องผ่านสมาร์ทโฟนและแสดงรายละเอียดที่ชัดเจน</p>
+</li>
+<li>
+<p>ตรวจสอบให้แน่ใจว่ากล้อง 360 สามารถเชื่อมต่อกับ WiFi ในพื้นที่ของคุณได้</p>
+</li>
+<li>
+<p>ก่อนการประชุม Avatour ให้วางแผนเส้นทางที่คุณจะเดินทางผ่านสถานที่นั้น ทำทดสอบการประชุม Avatour ด้วยกล้อง และตรวจสอบว่าทุกพื้นที่มีความเร็วแบนด์วิดท์ (bitrate) มากกว่า 1 Mbps สามารถตรวจสอบได้บนหน้าจอของกล้องเอง หรือในฐานะผู้เข้าร่วมประชุมทางไกลโดยไปที่การตั้งค่า (Settings) และเปิดใช้งานการแสดงค่าบิตเรต (Show Bitrate)</p>
+</li>
+<li>
+<p>หากคุณสังเกตเห็นว่าบางพื้นที่มีความเร็วแบนด์วิดท์ต่ำหรือไม่มีเลย ขอแนะนำให้ถ่ายภาพหรือบันทึกวิดีโอไว้ จากนั้นสามารถนำเสนอในระหว่างการประชุมเพื่อให้ผู้เข้าร่วมทางไกลได้ตรวจสอบ คุณสามารถทำตามคู่มือที่นี่ซึ่งอธิบายวิธีการบันทึกและอัปโหลดวิดีโอ/ภาพด้วย Quick Capture ของเรา: <a href="https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app" target="_blank" rel="noopener">คุณจะบันทึกและอัปโหลดวิดีโอ 360 องศาด้วยแอป Avatour ได้อย่างไร?</a></p>
+</li>
+<li>
+<p>หากคุณมีผู้เข้าร่วมประชุมทางไกลที่ยังไม่เคยใช้ Avatour มาก่อน กรุณาให้ข้อมูลสรุปสั้น ๆ เกี่ยวกับแพลตฟอร์มนี้ รวมถึงฟังก์ชันการทำงานต่าง ๆ (วิดีโอสด 360 องศา, ไฟล์สื่อ, ภาพนิ่ง, ข้อความอธิบาย, จุดเด่น) และเครื่องมือสำหรับการประชุม</p>
+</li>
+<li>
+<p>คุณสามารถเริ่มต้นในโซลูชันการประชุมทางวิดีโออื่น (เช่น Teams, Zoom, Google Meet) ได้ แต่ก่อนย้ายไปยัง Avatour กรุณาปิดแอปพลิเคชันการประชุมทางวิดีโออื่นทั้งหมดให้เรียบร้อย ในบางกรณี แอปพลิเคชันอื่น ๆ อาจให้ความสำคัญกับไมโครโฟน/ลำโพง/เว็บแคมของอุปกรณ์ของคุณ ทำให้ไม่สามารถใช้งานได้กับ Avatour นอกจากนี้ ห้ามใช้งาน Avatour พร้อมกับการประชุมทางวิดีโออื่น ๆ ในเวลาเดียวกัน เนื่องจากจะทำให้แบนด์วิดท์ที่มีอยู่ลดลง</p>
+</li>
+<li>
+<p>หากคุณวางแผนที่จะใช้กล้อง 360 ในสภาพแวดล้อมที่มีอุณหภูมิสูง แนะนำให้ใช้โมดูลระบายความร้อน (เฉพาะรุ่น Pilot Pano) ซึ่งจะช่วยให้ลดโอกาสที่กล้องจะร้อนเกินไปและปิดตัวเองโดยอัตโนมัติ</p>
+</li>
+</ul>
+<h3 id="63-การใชงานกลองในสถานทสำหรบการประชมวดโอสดแบบ-360">6.3 การใช้งานกล้องในสถานที่สำหรับการประชุมวิดีโอสดแบบ 360°</h3>
+<ul>
+<li>
+<p>ขณะใช้งานกล้อง โปรด <strong>เดินช้าๆ</strong> และ <strong>หยุดวางกล้องบนขาตั้งบ่อยๆ</strong> นี่ช่วยในเรื่อง (1) คุณภาพของวิดีโอ เนื่องจากคุณผลิตข้อมูลวิดีโอได้น้อยลงโดยไม่เคลื่อนกล้องไปมาโดยไม่จำเป็น และ (2) ลดเวลาที่อาจเกิดการหยุดชะงักของวิดีโอเมื่อการเชื่อมต่อเครือข่ายของกล้องสลับระหว่างจุดเชื่อมต่อ WiFi</p>
+</li>
+<li>
+<p>ถือกล้องไว้ด้านหน้าของคุณ และให้อยู่เหนือระดับสายตา สิ่งนี้ช่วยให้ผู้เข้าร่วมทางไกลทุกคนสามารถเห็นพื้นที่โดยรอบของคุณได้เป็นส่วนใหญ่</p>
+</li>
+<li>
+<p>ในกรณีที่ต้องการให้กล้องคงที่ ให้ใช้ขาตั้งกล้องและปรับกล้องให้อยู่ในระดับความสูงที่เหมาะสม โดยให้อยู่ในระดับสายตา</p>
+</li>
+<li>
+<p>ควรเชื่อมต่อกล้องเข้ากับเครือข่าย WiFi ในพื้นที่ของคุณเสมอหากเป็นไปได้ สำหรับพื้นที่ที่ไม่มีสัญญาณ WiFi ให้ใช้ฮอตสปอตที่จัดเตรียมไว้ให้ ฮอตสปอตมีซิมการ์ดที่เชื่อมต่อกับเครือข่ายมือถือที่เชื่อถือได้ใกล้คุณ ควรปิดฮอตสปอตเมื่อไม่ได้ใช้งานภายในอาคารเสมอ เนื่องจากกล้อง 360° อาจเชื่อมต่อกับฮอตสปอตได้ ซึ่งเราไม่ต้องการให้เกิดขึ้นภายในอาคาร เมื่อใช้งานภายนอกอาคาร ให้เก็บฮอตสปอตไว้ใกล้กับกล้อง 360°</p>
+</li>
+<li>
+<p>เมื่อบิตเรตขณะบันทึกวิดีโอเริ่มลดลงต่ำกว่า 2 Mbps ให้เดินช้าลงหรือหยุดเดินจนกว่าสัญญาณจะคงที่อีกครั้ง โดยปกติแล้วจะเกิดขึ้นเมื่อคุณเปลี่ยนจากจุดเชื่อมต่อ WiFi จุดหนึ่งไปยังอีกจุดหนึ่ง </p>
+</li>
+<li>
+<p>หากคุณทราบว่าการเชื่อมต่อและวิดีโอจะหยุดทำงานเมื่อย้ายไปยังตำแหน่งที่เฉพาะเจาะจง (ตัวอย่าง: ย้ายจากพื้นที่การผลิตในร่มไปยังพื้นที่กลางแจ้ง) ให้แจ้งผู้เข้าร่วมทางไกลทราบล่วงหน้า</p>
+</li>
+<li>
+<p>หากจำเป็นต้องแสดงรายละเอียดที่ชัดเจนหรือตัวอักษรขนาดเล็ก ให้ใช้สมาร์ทโฟนของคุณเองหรือของผู้เข้าร่วมที่อยู่ในสถานที่เพื่อเข้าร่วมการประชุมและนำเสนอผ่านกล้อง (ด้านหลัง) ของโทรศัพท์ของคุณหรือของพวกเขา</p>
+</li>
+<li>
+<p>หากเป็นไปได้ เราขอแนะนำให้เพิ่มบุคคลอีกหนึ่งท่านที่อยู่ในสถานที่เพื่อช่วยในการแชร์กล้องสมาร์ทโฟนตามที่อธิบายไว้ข้างต้น เนื่องจากมักจะเป็นประโยชน์หรือมีความจำเป็น</p>
+</li>
+<li>
+<p>ผู้ใช้สมาร์ทโฟนที่อยู่ในสถานที่ควรเข้าร่วมการประชุม (1) ในโหมดออนไซต์ และ (2) บนเครือข่ายที่แตกต่างจากเครือข่ายที่กล้องกำลังใช้งาน เพื่อไม่ให้แบนด์วิดท์การอัปโหลดที่สำคัญถูกใช้โดยกล้อง 360°</p>
+</li>
+<li>
+<p>ผู้เข้าร่วมทุกคนที่อยู่ในสถานที่และเข้าร่วมจากสมาร์ทโฟนควรปิดเสียง ยกเว้นเมื่อกำลังพูดอยู่</p>
+</li>
+</ul>
+    </article>
+    <aside class="guide-toc">
+      <div class="toc-label">On this page</div>
+<ul>
+  <li><a href="#for-all-avatour-users">1. สำหรับผู้ใช้ Avatour ทุกท่าน</a></li>
+  <li><a href="#avatour-user-types">2. ประเภทผู้ใช้ Avatour</a></li>
+  <li class="toc2"><a href="#21-ผเขารวมประชม-ไมตองมบญช">2.1 ผู้เข้าร่วมประชุม (ไม่ต้องมีบัญชี)</a></li>
+  <li class="toc2"><a href="#22-ผใชทลงทะเบยนแลว">2.2 ผู้ใช้ที่ลงทะเบียนแล้ว</a></li>
+  <li><a href="#for-remote-meeting-participants-and-workspace-visitors">3. สำหรับผู้เข้าร่วมประชุมทางไกลและผู้เยี่ยมชมพื้นที่ทำงาน</a></li>
+  <li class="toc2"><a href="#31-วธการเขารวมการประชม-avatour-และเยยมชมพนททำงาน-avatour-วธการเขารวมการประชม-avatour-และเยยมชมพนททำงาน-avatour">3.1 วิธีการเข้าร่วมการประชุม Avatour และเยี่ยมชมพื้นที่ทำงาน Avatour {#วิธีการเข้าร่วมการประชุม Avatour และเยี่ยมชมพื้นที่ทำงาน Avatour}</a></li>
+  <li class="toc2"><a href="#32-เครองมอสำหรบการประชมและการทำงานรวมกนในพนท-เครองมอการประชม">3.2 เครื่องมือสำหรับการประชุมและการทำงานร่วมกันในพื้นที่ {#เครื่องมือการประชุม}</a></li>
+  <li><a href="#for-host-and-admin-users-avatour-web-console">4. สำหรับผู้ใช้โฮสต์และผู้ดูแลระบบ - แผงควบคุมเว็บ Avatour</a></li>
+  <li class="toc2"><a href="#web-console-overview-main-menu">4.1 เว็บคอนโซล - เมนูหลัก</a></li>
+  <li class="toc2"><a href="#web-console-details-by-menu-item">4.2 เว็บคอนโซล - รายละเอียดตามรายการเมนู (พร้อมภาพประกอบ)</a></li>
+  <li><a href="#onsite-how-to-use-the-avatour-turnkey-kit">5. ที่สถานที่ - วิธีการใช้ชุดเครื่องมือ Avatour Turnkey</a></li>
+  <li class="toc2"><a href="#51-การเรมตน">5.1 การเริ่มต้น</a></li>
+  <li class="toc2"><a href="#52-คำแนะนำทเปนประโยชน">5.2 คำแนะนำที่เป็นประโยชน์</a></li>
+  <li class="toc2"><a href="#53-แอปกลอง-avatour">5.3 แอปกล้อง Avatour</a></li>
+  <li><a href="#best-practice-advice">6. คำแนะนำแนวปฏิบัติที่ดีที่สุด</a></li>
+  <li class="toc2"><a href="#61-การใชงานครงแรก-ไมเปนทางการ-และการทำความคนเคย">6.1 การใช้งานครั้งแรก (ไม่เป็นทางการ) และการทำความคุ้นเคย</a></li>
+  <li class="toc2"><a href="#62-กอนการประชมวดโอสดแบบ-360">6.2 ก่อนการประชุมวิดีโอสดแบบ 360°</a></li>
+  <li class="toc2"><a href="#63-การใชงานกลองในสถานทสำหรบการประชมวดโอสดแบบ-360">6.3 การใช้งานกล้องในสถานที่สำหรับการประชุมวิดีโอสดแบบ 360°</a></li>
+</ul>
+    </aside>
+  </div>
+</div>
+
+<script>
+// Active TOC highlighting
+const headings = document.querySelectorAll('.guide-article h2, .guide-article h3');
+const tocLinks = document.querySelectorAll('.guide-toc a');
+if (headings.length && tocLinks.length) {
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('active'));
+        const a = document.querySelector(`.guide-toc a[href="#${e.target.id}"]`);
+        if (a) a.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-10% 0px -80% 0px' });
+  headings.forEach(h => { if (h.id) obs.observe(h); });
+}
+
+// Active sidenav highlighting
+const sideLinks = document.querySelectorAll('.guide-sidenav a');
+const allH = document.querySelectorAll('.guide-article h2, .guide-article h3');
+if (allH.length && sideLinks.length) {
+  const obs2 = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        sideLinks.forEach(l => l.classList.remove('active'));
+        const a = document.querySelector(`.guide-sidenav a[href="#${e.target.id}"]`);
+        if (a) a.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-10% 0px -80% 0px' });
+  allH.forEach(h => { if (h.id) obs2.observe(h); });
+}
+</script>
+</body>
+</html>
