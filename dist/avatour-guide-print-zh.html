@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Avatour 用户指南与最佳实践 — Avatour</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&family=Roboto:wght@300;400;500&family=Sarabun:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --blue:   #132A39;
+  --orange: #FF4E00;
+  --slate:  #5A6875;
+  --light:  #E8EEF2;
+  --border: #DDE5EA;
+  --text:   #1A2A34;
+  --muted:  #7A8A95;
+  --sidebar-w: 240px;
+  --toc-w:     220px;
+  --header-h:  60px;
+  --content-max: 680px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Roboto', 'Sarabun', 'Noto Sans SC', sans-serif;
+  font-size: 15px; line-height: 1.8;
+  color: var(--text); background: #fff;
+}
+
+/* HEADER */
+.guide-header {
+  position: fixed; top: 0; left: 0; right: 0;
+  height: var(--header-h);
+  background: var(--blue);
+  display: flex; align-items: center;
+  padding: 0 24px; z-index: 200; gap: 16px;
+}
+.guide-logo {
+  display: flex; align-items: center; gap: 10px;
+  text-decoration: none; flex-shrink: 0;
+}
+.hd { width:1px; height:20px; background:rgba(255,255,255,.2); flex-shrink:0; }
+.hlabel {
+  font-family:'Titillium Web',sans-serif; font-size:12px; font-weight:600;
+  color:rgba(255,255,255,.5); letter-spacing:.09em; text-transform:uppercase;
+}
+.hright { margin-left:auto; display:flex; gap:12px; align-items:center; }
+.lang-switcher { display:flex; gap:4px; align-items:center; }
+.lang-btn {
+  font-family:'Titillium Web',sans-serif; font-size:11px; font-weight:700;
+  letter-spacing:.06em; padding:4px 8px; border-radius:4px;
+  border:1px solid rgba(255,255,255,.25); background:transparent;
+  color:rgba(255,255,255,.6); cursor:pointer; text-decoration:none; transition:all .15s;
+}
+.lang-btn:hover { background:rgba(255,255,255,.1); color:#fff; }
+.lang-btn.active { background:var(--orange); border-color:var(--orange); color:#fff; }
+.hbtn {
+  font-family:'Titillium Web',sans-serif; font-size:12px; font-weight:700;
+  color:var(--blue); background:var(--orange);
+  padding:6px 16px; border-radius:4px; text-decoration:none; flex-shrink:0;
+}
+.hversion {
+  font-size:11px; color:rgba(255,255,255,.4);
+  font-family:'Titillium Web',sans-serif; letter-spacing:.05em;
+}
+
+/* LAYOUT */
+.guide-layout {
+  display: flex; padding-top: var(--header-h); min-height: 100vh;
+}
+
+/* LEFT NAV */
+.guide-sidenav {
+  width: var(--sidebar-w); flex-shrink: 0;
+  position: fixed; top: var(--header-h); left: 0; bottom: 0;
+  background: #fafbfc; border-right: 1px solid var(--border);
+  overflow-y: auto; padding: 20px 0 40px;
+}
+.sidenav-section {
+  font-family: 'Titillium Web', 'Sarabun', 'Noto Sans SC', sans-serif;
+  font-size: 10px; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--muted);
+  padding: 0 16px; margin: 20px 0 5px;
+}
+.sidenav-section:first-child { margin-top: 0; }
+.guide-sidenav a {
+  display: block; padding: 6px 16px;
+  font-size: 13px; color: var(--slate);
+  text-decoration: none; border-left: 3px solid transparent;
+  transition: all .1s; line-height: 1.4;
+}
+.guide-sidenav a.sub { padding-left: 28px; font-size: 12.5px; }
+.guide-sidenav a:hover,
+.guide-sidenav a.active {
+  color: var(--blue); background: var(--light);
+  border-left-color: var(--orange);
+}
+.guide-sidenav a.active { font-weight: 500; }
+
+/* MAIN WRAPPER */
+.guide-main {
+  margin-left: var(--sidebar-w); flex: 1;
+  display: flex; justify-content: center;
+  padding-right: var(--toc-w);
+}
+
+/* ARTICLE */
+.guide-article {
+  width: 100%; max-width: var(--content-max);
+  padding: 44px 40px 80px;
+}
+
+/* BREADCRUMB */
+.guide-bc {
+  font-size: 12px; color: var(--muted);
+  margin-bottom: 10px;
+  display: flex; align-items: center; gap: 6px;
+}
+.guide-bc a { color: var(--muted); text-decoration: none; }
+.guide-bc a:hover { color: var(--orange); }
+.guide-bc span { opacity: .5; }
+
+/* TITLE */
+.guide-article h1 {
+  font-family: 'Titillium Web', 'Sarabun', 'Noto Sans SC', sans-serif;
+  font-size: 28px; font-weight: 700; color: var(--blue);
+  margin-bottom: 6px; line-height: 1.2;
+}
+.guide-meta {
+  font-size: 12px; color: var(--muted);
+  margin-bottom: 28px; padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* HEADINGS */
+.guide-article h2 {
+  font-family: 'Titillium Web', 'Sarabun', 'Noto Sans SC', sans-serif;
+  font-size: 20px; font-weight: 700; color: var(--blue);
+  margin: 40px 0 12px; padding-top: 8px;
+  border-top: 2px solid var(--border);
+  scroll-margin-top: calc(var(--header-h) + 16px);
+}
+.guide-article h3 {
+  font-family: 'Titillium Web', 'Sarabun', 'Noto Sans SC', sans-serif;
+  font-size: 16px; font-weight: 700; color: var(--blue);
+  margin: 28px 0 10px;
+  scroll-margin-top: calc(var(--header-h) + 16px);
+}
+.guide-article h4 {
+  font-family: 'Titillium Web', 'Sarabun', 'Noto Sans SC', sans-serif;
+  font-size: 15px; font-weight: 700; color: var(--slate);
+  text-transform: none; letter-spacing: 0;
+  margin: 20px 0 8px;
+}
+
+/* BODY */
+.guide-article p { margin-bottom: 14px; }
+.guide-article a { color: var(--orange); text-decoration: none; }
+.guide-article a:hover { text-decoration: underline; }
+.guide-article ul, .guide-article ol {
+  padding-left: 22px; margin-bottom: 16px;
+}
+.guide-article li { margin-bottom: 6px; }
+.guide-article li strong { color: var(--blue); }
+.guide-article strong { color: var(--blue); }
+
+/* TABLES */
+.guide-article table {
+  width: 100%; border-collapse: collapse;
+  margin: 16px 0 20px; font-size: 13.5px;
+  border: 1px solid var(--border); border-radius: 6px;
+  overflow: hidden;
+}
+.guide-article th {
+  background: var(--blue); color: #fff;
+  font-family: 'Titillium Web', 'Sarabun', 'Noto Sans SC', sans-serif;
+  font-size: 12px; font-weight: 700;
+  letter-spacing: .07em; text-transform: uppercase;
+  padding: 9px 14px; text-align: left;
+}
+.guide-article td {
+  padding: 9px 14px; border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+.guide-article tr:last-child td { border-bottom: none; }
+.guide-article tr:nth-child(even) td { background: #f9fbfc; }
+
+/* BLOCKQUOTES */
+.guide-article blockquote {
+  border-left: 3px solid var(--orange);
+  background: #fff8f5;
+  margin: 16px 0; padding: 11px 16px;
+  border-radius: 0 6px 6px 0; font-size: 13.5px;
+}
+.guide-article blockquote p { margin-bottom: 0; color: #2a3a44; }
+.guide-article blockquote strong { color: var(--orange); }
+
+/* SCREENSHOTS */
+.guide-article img {
+  width: 100%; display: block;
+  border: 1px solid var(--border);
+  border-radius: 6px; margin: 20px 0 4px;
+}
+.guide-article img + em {
+  display: block; font-size: 12px;
+  color: var(--muted); text-align: center;
+  margin-bottom: 20px; font-style: italic;
+}
+
+/* DIVIDER */
+.guide-article hr {
+  border: none; border-top: 1px solid var(--border); margin: 40px 0;
+}
+
+/* RIGHT TOC */
+.guide-toc {
+  width: var(--toc-w); flex-shrink: 0;
+  position: fixed; top: calc(var(--header-h) + 44px); right: 0;
+  padding: 0 20px;
+  max-height: calc(100vh - var(--header-h) - 44px);
+  overflow-y: auto;
+}
+.toc-label {
+  font-family: 'Titillium Web', 'Sarabun', 'Noto Sans SC', sans-serif;
+  font-size: 10px; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--muted); margin-bottom: 10px;
+}
+.guide-toc ul { list-style: none; padding: 0; border-left: 2px solid var(--border); }
+.guide-toc li a {
+  display: block; padding: 4px 0 4px 12px;
+  font-size: 12.5px; color: var(--slate); text-decoration: none;
+  line-height: 1.4; border-left: 2px solid transparent; margin-left: -2px;
+  transition: all .1s;
+}
+.guide-toc li a:hover { color: var(--blue); }
+.guide-toc li a.active { color: var(--orange); border-left-color: var(--orange); font-weight: 500; }
+.guide-toc li.toc2 a { padding-left: 22px; font-size: 12px; }
+
+/* PRINT STYLES */
+@media print {
+  .guide-header, .guide-sidenav, .guide-toc { display: none !important; }
+  .guide-main { margin-left: 0; padding-right: 0; }
+  .guide-article { padding: 0; max-width: 100%; }
+  .guide-article img { max-width: 80%; margin: 12px auto; }
+}
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+  .guide-toc { display: none; }
+  .guide-main { padding-right: 0; }
+}
+@media (max-width: 780px) {
+  .guide-sidenav { display: none; }
+  .guide-main { margin-left: 0; }
+  .guide-article { padding: 28px 20px 60px; }
+}
+
+/* PDF / PRINT MODE */
+body.print-mode .guide-header,
+body.print-mode .guide-sidenav,
+body.print-mode .guide-toc { display: none; }
+body.print-mode { background: white; }
+body.print-mode .guide-layout { padding-top: 0; }
+body.print-mode .guide-main { margin-left: 0; padding-right: 0; }
+body.print-mode .guide-article {
+  max-width: 100%; padding: 0; margin: 0;
+  font-size: 10.5pt; line-height: 1.5;
+}
+body.print-mode .guide-article p { margin-bottom: 8px; }
+body.print-mode .guide-article h1 { font-size: 20pt; margin-bottom: 6px; }
+body.print-mode .guide-article h2 { font-size: 14pt; margin: 20px 0 8px; }
+body.print-mode .guide-article h3 { font-size: 12pt; margin: 14px 0 6px; }
+body.print-mode .guide-article h4 { font-size: 10pt; margin: 10px 0 4px; }
+body.print-mode .guide-article li { margin-bottom: 3px; }
+body.print-mode .guide-article table { font-size: 9.5pt; }
+body.print-mode .guide-article blockquote { font-size: 10pt; padding: 8px 12px; margin: 10px 0; }
+
+@page {
+  size: A4;
+  margin: 20mm 18mm 22mm 18mm;
+  @top-center {
+    content: "Avatour User and Best Practices Guide";
+    font-family: 'Titillium Web', 'Sarabun', 'Noto Sans SC', sans-serif;
+    font-size: 9pt; color: #7A8A95;
+  }
+  @bottom-left {
+    content: "avatour.com";
+    font-family: 'Titillium Web', 'Sarabun', 'Noto Sans SC', sans-serif;
+    font-size: 9pt; color: #7A8A95;
+  }
+  @bottom-right {
+    content: "Page " counter(page) " of " counter(pages);
+    font-family: 'Titillium Web', 'Sarabun', 'Noto Sans SC', sans-serif;
+    font-size: 9pt; color: #7A8A95;
+  }
+}
+
+body.print-mode .guide-article li,
+body.print-mode .guide-article p,
+body.print-mode .guide-article blockquote,
+body.print-mode .guide-article tr { page-break-inside: avoid; }
+body.print-mode .guide-article h2,
+body.print-mode .guide-article h3,
+body.print-mode .guide-article h4 { page-break-after: avoid; }
+body.print-mode .guide-article h2 ~ h2 { page-break-before: always; }
+body.print-mode .guide-article img {
+  max-width: 90%; display: block;
+  margin: 12px auto; page-break-inside: avoid;
+}
+body.print-mode .guide-article table { page-break-inside: avoid; }
+</style>
+</head>
+<body class="print-mode">
+
+<header class="guide-header">
+  <a class="guide-logo" href="https://avatour.com" target="_blank" rel="noopener">
+    <img src="https://res.cloudinary.com/avatour/image/upload/v1772627129/avatour-name-logo-whiteontransparent_zwfsxa.svg" alt="Avatour" style="height:22px; width:auto; display:block;">
+  </a>
+  <div class="hd"></div>
+  <span class="hlabel">User Guide</span>
+  <div class="hright">
+    <div class="lang-switcher"><a class="lang-btn" href="avatour-guide.html">EN</a><a class="lang-btn" href="avatour-guide-vi.html">VI</a><a class="lang-btn active" href="avatour-guide-zh.html">ZH</a></div>
+    <span class="hversion">v2.0 · Updated 2026</span>
+    <a class="hbtn" href="https://avatour.live">Log in to Avatour</a>
+  </div>
+</header>
+
+<div class="guide-layout">
+  <nav class="guide-sidenav">
+    <div class="sidenav-section">Guide sections</div>
+<a href="#for-all-avatour-users">1. 致所有Avatour用户</a>
+<a href="#avatour-user-types">2. Avatour 用户类型</a>
+<a href="#21-会议参与者无需账户" class="sub">2.1 会议参与者（无需账户）</a>
+<a href="#22-注册用户" class="sub">2.2 注册用户</a>
+<a href="#for-remote-meeting-participants-and-workspace-visitors">3. 针对远程会议参与者和工作区访客</a>
+<a href="#how-to-join-an-avatour-meeting-and-visit-an-avatour-workspace" class="sub">3.1 如何加入 Avatour 会议并访问 Avatour 工作区</a>
+<a href="#meeting-tools" class="sub">3.2 会议与工作区协作工具</a>
+<a href="#for-host-and-admin-users-avatour-web-console">4. 面向主机和管理员用户——Avatour Web 控制台</a>
+<a href="#web-console-overview-main-menu" class="sub">4.1 Web 控制台 - 概述 主菜单</a>
+<a href="#web-console-details-by-menu-item" class="sub">4.2 Web 控制台 - 按菜单项详细说明（附图）</a>
+<a href="#onsite-how-to-use-the-avatour-turnkey-kit">5. 现场操作——如何使用 Avatour 整套解决方案</a>
+<a href="#51-入门指南" class="sub">5.1 入门指南</a>
+<a href="#52-实用提示" class="sub">5.2 实用提示</a>
+<a href="#53-avatour-相机应用" class="sub">5.3 Avatour 相机应用</a>
+<a href="#best-practice-advice">6. 最佳实践建议</a>
+<a href="#61-首次非正式使用与熟悉操作" class="sub">6.1 首次（非正式）使用与熟悉操作</a>
+<a href="#62-360视频直播会议前" class="sub">6.2 360°视频直播会议前</a>
+<a href="#63-在现场操作-360-视频直播会议相机时" class="sub">6.3 在现场操作 360° 视频直播会议相机时</a>
+<div class="sidenav-section">Reference</div>
+<a href="https://avatour.com/glossary" target="_blank" rel="noopener">Glossary ↗</a>
+<a href="https://avatour.com/faqs" target="_blank" rel="noopener">FAQs ↗</a>
+<a href="https://avatour.live/test" target="_blank" rel="noopener">Network Test ↗</a>
+<a href="mailto:support@avatour.live">Open Support Ticket ↗</a>
+
+  </nav>
+  <div class="guide-main">
+    <article class="guide-article">
+      <div class="guide-bc">
+        <a href="#">User Guide</a>
+        <span>›</span>
+        Avatour 用户指南与最佳实践
+      </div>
+      <h1 id="avatour-用户指南与最佳实践">Avatour 用户指南与最佳实践</h1>
+<h2 id="for-all-avatour-users">1. 致所有Avatour用户</h2>
+<p>如果您是首次使用 Avatour，以下资源将为您提供有关该平台及其功能的实用介绍：</p>
+<ol>
+<li><a href="https://avatour.com/how-it-works" target="_blank" rel="noopener">Avatour 工作原理视频</a><br />
+简要概述了 Avatour 的主要功能，以及该平台如何实现沉浸式的远程协作。</li>
+<li><a href="https://avatour.com/faqs" target="_blank" rel="noopener">常见问题解答</a><br />
+针对常见问题的解答。</li>
+<li><a href="https://avatour.com/glossary" target="_blank" rel="noopener">术语表</a><br />
+Avatour中常用关键术语和概念的定义。</li>
+<li>网站<br />
+请特别关注 <a href="https://avatour.com/features" target="_blank" rel="noopener">Avatour 功能</a>，并查阅专门的“应用场景”和“行业”板块，了解 Avatour 如何满足您的具体需求。</li>
+</ol>
+<h2 id="avatour-user-types">2. Avatour 用户类型</h2>
+<h3 id="21-会议参与者无需账户">2.1 会议参与者（无需账户）</h3>
+<p>用户无需注册 Avatour 账户即可加入会议。
+例外情况：如果主持人将会议限制为仅限注册用户参加——例如，仅允许内部员工通过单点登录（SSO）加入——日历邀请中将注明参与者必须登录以进行身份验证。</p>
+<p>用户可通过以下方式加入会议：</p>
+<ul>
+<li>接收来自主持人的日历邀请。</li>
+<li>点击邀请中的会议链接加入。</li>
+<li>若主持人设置了会议密码，请输入密码。</li>
+<li>除非会议受限且需要登录验证，否则参与者无需 Avatour 账户即可加入。</li>
+</ul>
+<h4 id="211-参与者">2.1.1 参与者</h4>
+<ul>
+<li>可以加入会议并进行全面互动（网络摄像头、麦克风、聊天和演示功能）。</li>
+<li>每场会议最多支持 20 名互动参与者。</li>
+</ul>
+<h4 id="212-旁听者">2.1.2 旁听者</h4>
+<ul>
+<li>仅可观看会议并通过聊天参与。</li>
+<li>无法共享视频、使用麦克风、进行演示、播放/暂停资源，也无法拍摄快照。</li>
+<li>每次会议最多支持 10 名旁听者。</li>
+<li>包括参与者在内，每次会议最多可容纳 30 名与会者。</li>
+</ul>
+<h3 id="22-注册用户">2.2 注册用户</h3>
+<p>注册用户拥有 Avatour 账户。账户可通过以下任一方式创建：</p>
+<ul>
+<li><strong>管理员邀请：</strong> 在入职过程中，Avatour 会为该组织设置一个 <strong>专用租户</strong>，并创建一个或多个 <strong>管理员账户</strong>。 随后，管理员可以<strong>邀请组织内的用户</strong>，并将他们分配到<strong>组</strong>中，从而定义其平台角色（访客、主持人或管理员）。被邀请的用户将收到一个<strong>注册链接</strong>，用于完成账户设置并设置密码。  </li>
+<li><strong>主持人邀请：</strong> 主持人可以将用户作为 <strong>编辑协作者</strong> 添加到工作区中。此操作将消耗一个 <strong>主持人许可证</strong>，并确保该用户拥有主持人级别的访问权限。  </li>
+<li><strong>单点登录 (SSO) 自动配置（仅限企业版/商业版）：</strong> 账户可由身份提供商 (IdP) 自动创建。 默认情况下，通过 SSO 配置的账户将被添加到 <strong>访客组</strong>，除非通过 <strong>SAML 组映射</strong> 进行覆盖。即使启用了 SSO，管理员仍可直接邀请用户并分配组成员身份。</li>
+</ul>
+<p><strong>总结：</strong>  </p>
+<p>注册用户及其组成员身份可通过多种方式进行管理：</p>
+<ul>
+<li><strong>管理员管理：</strong> Avatour 控制台中的管理员可以创建用户并将其分配到组中，这些组定义了用户的平台角色（访客、主持人或管理员）。  </li>
+<li><strong>SSO 配置：</strong> 对于已启用 SSO 的企业级或商业级客户，身份提供商 (IdP) 可自动配置账户并分配组成员身份，从而定义用户的平台角色。  </li>
+<li><strong>主持人邀请的用户：</strong> 主持人可以邀请其他用户作为“编辑”协作者加入特定的工作区。分配“编辑”协作者角色将消耗一个主持人许可证。</li>
+</ul>
+<p><strong>推荐的最佳实践（企业级客户）：</strong><br />
+对于预计会有大量用户需要访问 Avatour 的组织，建议<strong>集成单点登录（SSO）</strong>，并通过<strong>身份提供商（IdP）</strong>管理用户和组成员身份。此方法可简化账户配置、组分配和许可证管理，从而降低管理开销并确保访问控制的一致性。</p>
+<h4 id="221-访客用户">2.2.1 访客用户</h4>
+<ul>
+<li>被添加到 <strong>访客组</strong> 中。  </li>
+<li>可在其被添加为 <strong>查看者协作者</strong> 的工作区内 <strong>查看资产</strong>。  </li>
+<li>无法创建工作区、主持会议或上传内容。  </li>
+<li>通过 SSO 分配的访客账户 <strong>通过 IdP 进行身份验证</strong>；无需 Avatour 管理的密码。</li>
+</ul>
+<hr />
+<h4 id="222-授权用户web-控制台访问">2.2.2 授权用户（Web 控制台访问）</h4>
+<h5 id="主持人用户组主持人">主持人用户（组：主持人）</h5>
+<ul>
+<li>可以创建/管理工作区、邀请协作者加入工作区、<strong>主持实时会议</strong>、上传<strong>快速截图</strong>。  </li>
+<li>可在支持的 360° 摄像头上访问<strong>主持人仪表盘</strong>和<strong>操作员应用</strong>。  </li>
+</ul>
+<h5 id="管理员用户组admin">管理员用户（组：Admin）</h5>
+<ul>
+<li>包含所有主持人权限，并具备完整的账户管理权限。</li>
+</ul>
+<p><strong>其他管理员权限包括：</strong></p>
+<p><strong>账户管理</strong>  </p>
+<ul>
+<li>创建新用户并将其分配到组中。</li>
+<li>当由 Avatour 管理时重置密码（启用 SSO 时不适用）。</li>
+<li>将访客用户升级为主持人。  </li>
+<li>停用用户（管理员账户在删除前必须先转换为主持人）。  </li>
+<li>在删除过程中将资产从一位主持人用户转移至另一位。</li>
+</ul>
+<p><strong>设置</strong>  </p>
+<ul>
+<li>为平台上托管的资产、工作区和会议配置<strong>全组织范围的安全设置</strong>（例如，主持人是否必须在场才能开始会议，上传至平台的所有视频中是否应模糊人脸）。  </li>
+<li>启用或禁用 <strong>AI 功能</strong> 或 <strong>录制</strong>。  </li>
+<li>如果配置了 <strong>自定义域名</strong>，则在整个平台上统一应用公司品牌标识。</li>
+</ul>
+<p><strong>资产与分析</strong> </p>
+<ul>
+<li>查看组织内任何用户上传的所有资产。  </li>
+<li>查看整个组织内平台的使用情况。</li>
+</ul>
+<hr />
+<h4 id="223-工作区协作者权限">2.2.3 工作区协作者权限</h4>
+<p>工作区权限定义了用户<strong>在特定工作区内</strong>可以执行的操作。这些权限与平台级别的组成员身份（访客、主持人、管理员）是分开的。</p>
+<ul>
+<li>
+<p><strong>编辑者协作者：</strong> 拥有此权限的用户可以：</p>
+<ul>
+<li>管理资源（上传、删除、模糊人脸、生成摘要）  </li>
+<li>管理会议设置（启用/禁用录制、允许或移除参与者）  </li>
+<li>安排并主持实时会议  </li>
+<li>基于预定义模板生成报告  </li>
+<li>在工作区中添加或移除协作者  </li>
+</ul>
+</li>
+<li>
+<p><strong>查看者协作者：</strong> 拥有此权限的用户对工作区资产具有只读访问权限。他们 <strong>无法修改资产、管理会议或管理协作者</strong>，但 <strong>可以在资产上创建笔记</strong>。 </p>
+</li>
+</ul>
+<h2 id="for-remote-meeting-participants-and-workspace-visitors">3. 针对远程会议参与者和工作区访客</h2>
+<p>Avatour 主要通过以下两种方式支持用户协作：</p>
+<ul>
+<li>
+<p><strong>加入 Avatour 会议（同步协作）：</strong><br />
+  您可能会收到一份 <strong>日历邀请</strong>，邀请您加入 Avatour 会议。在会议期间，参与者可以进行 <strong>实时远程实地考察</strong>，或同步共同审阅资产。</p>
+</li>
+<li>
+<p><strong>访问工作区（异步协作）：</strong><br />
+  您还可能被邀请作为 <strong>工作区的协作者</strong>，以便 <strong>异步</strong>（按您自己的时间安排）审阅资产。</p>
+</li>
+</ul>
+<h3 id="how-to-join-an-avatour-meeting-and-visit-an-avatour-workspace">3.1 如何加入 Avatour 会议并访问 Avatour 工作区</h3>
+<h4 id="any-flat-screen">3.1.1 任何配备网页浏览器的“平板屏幕”设备</h4>
+<p>您可以通过网页浏览器，使用<strong>任何台式机、笔记本电脑、智能手机或平板电脑</strong>加入 Avatour 会议。  </p>
+<h5 id="加入-avatour-会议">加入 Avatour 会议</h5>
+<blockquote>
+<p><strong>注意：</strong>加入 Avatour 会议需要您 <strong>授予麦克风权限</strong>。请接受浏览器弹出的任何权限提示。</p>
+</blockquote>
+<ol>
+<li>
+<p><strong>通过日历邀请（推荐）：</strong> 
+  - 您通常会收到一封包含<strong>直接加入链接</strong>的<strong>日历邀请</strong>（例如：<code>https://avatour.live/join?s=xxxxx</code>）。  </p>
+<ul>
+<li>点击该链接后，系统会自动填入 <strong>5 位会议代码</strong> 并带您进入会议。</li>
+<li><strong>需要身份验证：</strong> 部分会议仅限注册用户参加。这种情况下，邀请中会注明您需要 <strong>登录才能加入会议</strong>。  </li>
+<li><strong>密码保护的会议：</strong> 某些会议可能需要密码。这种情况下，邀请中会包含您必须输入的密码才能加入。</li>
+</ul>
+</li>
+<li>
+<p><strong>通过会议代码：</strong>  </p>
+<ul>
+<li>如果主持人另行分享了 <strong>5 位数的会议代码</strong>，请访问 <a href="https://avatour.live/join" target="_blank" rel="noopener">https://avatour.live/join</a>，输入您的 <strong>姓名</strong> 和 <strong>会议代码</strong>，即可加入会议。  </li>
+<li>如果会议是<strong>密码保护的</strong>，请输入主持人提供的密码。</li>
+<li>如果会议需要<strong>身份验证</strong>，您需要在加入前<strong>使用您的 Avatour 账户登录</strong>。</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p><strong>提示 1：</strong> 如果您的摄像头或麦克风无法正常工作，可能是因为它们正被其他应用程序（例如 Microsoft Teams 或 Zoom）占用。 请关闭所有可能正在使用摄像头或麦克风的应用程序，然后退出并重新加入 Avatour 会议。  </p>
+<p><strong>提示 2：</strong> 如果您仍然无法加入会议，请运行此测试：<a href="https://avatour.live/test" target="_blank" rel="noopener">https://avatour.live/test</a>。<br />
+该测试可识别您的<strong>企业防火墙或网络</strong>是否正在阻止访问，并提供相关信息以指导您与 IT 团队的沟通。  </p>
+<p><strong>提示 3：</strong> <strong>请勿</strong>使用 Avatour iOS 或 Android 应用加入会议。仅当<strong>通过 Insta360 相机直播会议</strong>时才需要这些应用，因为该类相机无法直接运行 Avatour 360° 软件，需要智能手机协助。</p>
+</blockquote>
+<h5 id="访问-avatour-工作区无需加入-avatour-会议">访问 Avatour 工作区（无需加入 Avatour 会议）</h5>
+<p>您可以通过以下方式访问工作区：</p>
+<ul>
+<li>
+<p><strong>公共工作区：</strong><br />
+  如果工作区是公开的，可直接点击链接访问——无需登录。</p>
+</li>
+<li>
+<p><strong>受限工作区：</strong><br />
+  如果工作区受限，您必须被添加为具有 <strong>编辑者</strong> 或 <strong>查看者</strong> 权限的 <strong>协作者</strong>。</p>
+<ol>
+<li>当您被添加为协作者时，您将收到一封包含工作区链接的<strong>电子邮件通知</strong>。</li>
+<li>点击邮件中的链接打开工作区。如果您尚未登录，系统将提示您<strong>登录或完成注册</strong>。</li>
+<li>登录后，工作区将自动打开。</li>
+</ol>
+</li>
+</ul>
+<p>此外，您还可以访问 <a href="https://avatour.live/login" target="_blank" rel="noopener">https://avatour.live/login</a> 登录，并从您的 <strong>工作区列表</strong> 中进入该工作区。</p>
+<h4 id="vr-headset">3.1.2 VR头显</h4>
+<p>您可以通过多种兼容的Meta和Pico头显加入会议并访问工作区。操作步骤如下： </p>
+<ol>
+<li>从您所在平台的 VR 应用商店安装我们的 Avatour 应用：<a href="https://avatour.com/support/which-vr-headsets-can-i-use-with-avatour" target="_blank" rel="noopener">如何安装 Avatour VR 应用</a></li>
+<li>启动应用，输入会议代码或选择一个工作区以加入会议。有关如何使用我们 VR 应用的更多信息，请参阅我们的知识库文章 <a href="https://avatour.com/support/what-features-are-available-to-vr-guests" target="_blank" rel="noopener">此处</a>。</li>
+</ol>
+<h3 id="meeting-tools">3.2 会议与工作区协作工具</h3>
+<p>Avatour 支持两种主要协作场景：</p>
+<ol>
+<li><strong>会议（同步）：</strong> 与其他参与者进行实时协作，包括现场实地考察或共同查看录制的素材。  </li>
+<li><strong>工作区（异步）：</strong> 您可以根据自己的时间安排，全天候（24/7）查看资产并与之互动。</li>
+</ol>
+<p>会议和工作区之间的<strong>协作工具大多相似</strong>，但因同步与异步场景的不同而存在一些差异。</p>
+<h4 id="321-界面布局">3.2.1 界面布局</h4>
+<p>Avatour 界面主要由三个区域组成：</p>
+<ul>
+<li><strong>左侧面板</strong> – 工作区资源及辅助工具  </li>
+<li><strong>中央画布</strong> – 实时视频或资源的主显示区域  </li>
+<li><strong>右侧面板</strong> – 上下文信息，例如参与者、会议或聊天  </li>
+</ul>
+<p>大多数交互操作均通过<strong>底部菜单</strong>发起。<br />
+点击菜单选项会在屏幕左侧或右侧打开一个<strong>侧边面板</strong>，而<strong>中央画布</strong>仍保持为主视图区域。</p>
+<hr />
+<h4 id="322-会议视图示例">3.2.2 会议视图示例</h4>
+<p>以下是 Avatour 会议中视图的一个示例：</p>
+<p><img alt="带资源面板、空白画布和参与者面板的 Avatour 会议界面" src="https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-meeting-assets-blank-participants_pugprq.png" /><br />
+<em>Avatour 会议界面，包含资源面板（左侧）、画布（中央）和参与者面板（右侧）</em></p>
+<hr />
+<h4 id="323-工作区视图示例">3.2.3 工作区视图示例</h4>
+<p>以下是一个工作区视图的示例：</p>
+<p><img alt="带资源面板、空白画布和会议面板的 Avatour 工作区" src="https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-workspace-assets-blank-meetings_qeumpl.png" /><br />
+<em>Avatour 工作区，包含资源面板（左）、画布（中）和会议面板（右）</em></p>
+<hr />
+<h4 id="324-底部菜单概述">3.2.4 底部菜单概述</h4>
+<p>底部菜单提供对主界面控件和面板的访问：</p>
+<p><strong>会议底部菜单</strong>  </p>
+<p><img alt="Avatour 会议底部菜单" src="https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-meeting-bottom-menu_bflaor.png" /><br />
+<em>Avatour 会议底部菜单</em></p>
+<ul>
+<li><strong>资源</strong> – 查看工作区文件，包括录制的视频、图片、快照和 PDF 文件。</li>
+<li><strong>聊天</strong> – 向所有会议参与者发送消息。  </li>
+<li><strong>摄像头</strong> – 打开或关闭网络摄像头。  </li>
+<li><strong>麦克风</strong> – 静音或取消静音。  </li>
+<li><strong>演示</strong> – 演示资源、桌面或网络摄像头画面（参见下文“演示”部分）。  </li>
+<li><strong>主持人工具</strong>（仅限主持人）：  <ul>
+<li><strong>锁定视图</strong> – 锁定所有参与者的视图。  </li>
+<li><strong>静音所有</strong> – 将所有参与者静音。  </li>
+</ul>
+</li>
+<li><strong>启用全屏</strong> – 将会议标签页设为全屏。  </li>
+<li><strong>退出会议</strong> – 离开会议。  </li>
+<li><strong>开始录制</strong> – 会议期间，可使用此按钮手动开始和停止录制。此外，如果在工作区设置中启用了<strong>自动开始录制</strong>，会议也可自动录制。无论哪种情况，录制内容都会保存到工作区资源中。</li>
+<li><strong>地图</strong> – 打开或关闭带有 GPS 轨迹的资源的地图面板。 点击某个位置可跳转至视频中的精确点。地图会随着视频播放实时更新。</li>
+<li><strong>参与者</strong> – 展开或收起参与者面板。  </li>
+<li><strong>会议信息</strong> – 查看会议代码、邀请链接，并访问相关教程。  </li>
+</ul>
+<p><img alt="Avatour 会议信息" src="https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-meeting-info-side-pane_nx7dp4.png" /><br />
+<em>Avatour 会议信息侧边栏</em></p>
+<ul>
+<li><strong>设置</strong> – 调整语言、音频和视频设置。对于实时 360° 视频会议，请使用 <strong>显示码率</strong> 来监控网络连接状态。</li>
+</ul>
+<blockquote>
+<p>提示：发送会议链接或将其添加到日历事件中，即可邀请参与者。</p>
+</blockquote>
+<hr />
+<h5 id="演示菜单">演示菜单</h5>
+<p>会议底部菜单中的 <strong>演示</strong> 选项可让您与所有参与者共享内容。</p>
+<ul>
+<li><strong>摄像头</strong> – 共享您的智能手机/平板电脑摄像头。在实时 360° 视频会议中，此功能还可用于叠加次要视图，以展示特写镜头或特定细节。 </li>
+<li><strong>桌面</strong> – 与所有参与者共享您的桌面屏幕。  </li>
+<li><strong>素材</strong> – 展示工作区中的素材。选择素材后将打开<strong>素材工具栏</strong>，其中提供针对当前展示素材的播放控制和协作工具。</li>
+</ul>
+<h5 id="资源工具栏会议">资源工具栏（会议）</h5>
+<p>在会议中展示资源时，<strong>资源工具栏</strong>会显示在画布上方。以下是在 <u>会议中展示资源</u> 时可用的工具和菜单项——按从左到右的顺序说明。</p>
+<p><img alt="在会议中展示资产时的 Avatour 菜单" src="https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting_oflsr5.png" /> <em>在会议中展示资产时的 Avatour 菜单</em></p>
+<ul>
+<li><strong>视频时间轴 / 进度条</strong> – 显示视频进度，并附有从音频中提取的笔记和关键主题。点击笔记或主题可跳转至该时刻并打开笔记。包含 <strong>播放 / 暂停</strong> 控制按钮。   </li>
+<li><strong>快照</strong> – 从素材中截取 360° 或 2D 图像。  </li>
+<li><strong>聚光灯</strong> – 在实时会议中为所有参与者突出显示特定区域。  </li>
+<li><strong>显示/隐藏视角 (POV)</strong> – 在 360° 视频中显示每位参与者的视线方向。  </li>
+<li><strong>笔记</strong> – 创建锚定在素材中特定时刻的笔记。笔记可按类别（观察、问题、行动、建议）进行分类，按状态（待处理 → 进行中 → 已解决）进行跟踪，并通过直接链接分享。  </li>
+</ul>
+<p><img alt="Avatour 笔记和笔记筛选器" src="https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-note-and-filters_g181oc.png" /> <em>Avatour 笔记与笔记筛选器</em></p>
+<ul>
+<li><strong>语音命令笔记</strong> – 当录音检测到“插入笔记”、“记录笔记”或“创建笔记”等提示词时，系统会自动生成这些占位符。这些笔记会显示在时间轴上，需要用户进行<strong>定位和最终确认</strong>。 </li>
+</ul>
+<p><img alt="Avatour 笔记 - 语音命令生成" src="https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-notes-voice-command-generated_ic5cu4.png" /> <em>Avatour 笔记 - 语音命令生成</em></p>
+<ul>
+<li><strong>笔记与摘要面板</strong> – 打开一个侧边面板，显示该素材的所有笔记、关键主题以及执行摘要。点击某项内容即可跳转至视频中的相应时刻。 </li>
+</ul>
+<p><img alt="Avatour 素材执行摘要" src="https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-exec-summary_cqpqbs.png" /> <em>在会议中展示素材时的 Avatour 执行摘要</em></p>
+<p><img alt="Avatour 主题" src="https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-topics_duuq1a.png" /> <em>在会议中展示资产时的 Avatour 主题</em></p>
+<p>在<strong>侧边栏</strong>中，您可以<strong>打印资产报告</strong>或<strong>将其下载为 TXT 或 CSV 格式</strong>。报告可包含笔记、AI 生成的主题以及完整转录内容。您还可以在导出前<strong>选择要包含的元素</strong>。  </p>
+<p><img alt="Avatour 资产报告打印菜单" src="https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-asset-report-print-menus_kn0syn.png" /><br />
+<em>Avatour 资产报告打印/下载菜单</em>  </p>
+<p><img alt="Avatour 打印资产报告元素选择" src="https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-asset-report-element-selection_ud8c5k.png" /><br />
+<em>Avatour 资产报告元素选择菜单</em></p>
+<ul>
+<li><strong>分享链接</strong> – 分享资产中特定笔记或场景的链接。  </li>
+<li><strong>字幕 (CC)</strong> – 在视频播放时显示屏幕文字转录内容。</li>
+</ul>
+<h5 id="资源工具栏工作区">资源工具栏（工作区）</h5>
+<p>在工作区中查看资源时，工具栏与上述类似，但针对个人使用进行了优化：</p>
+<p><img alt="在会议外展示资产时的 Avatour 菜单，例如访问工作区时" src="https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-workspace_iri8gc.png" /> <em>在工作区中展示资产时的 Avatour 菜单</em></p>
+<ul>
+<li><strong>视频时间轴 / 进度条</strong> – 显示视频进度，并附有从音频轨道中提取的笔记和关键主题。点击时间轴上的任意位置可快进或快退视频。点击笔记或主题可跳转至该时刻并打开笔记。 包含 <strong>播放 / 暂停</strong> 控制按钮。  </li>
+<li><strong>快照、笔记、笔记与摘要面板、分享链接、隐藏式字幕</strong>  </li>
+<li>不可用：<strong>聚光灯、视角</strong>（这些功能需要实时参与者）  </li>
+<li>其他控制选项：<ul>
+<li><strong>10 秒步长</strong> – 向前/向后跳转  </li>
+<li><strong>播放速度</strong> – 调整速度（0.5×–2×）  </li>
+<li><strong>裁剪视频</strong> – 裁剪素材的开头或结尾</li>
+</ul>
+</li>
+</ul>
+<h2 id="for-host-and-admin-users-avatour-web-console">4. 面向主机和管理员用户——Avatour Web 控制台</h2>
+<p>登录您的 Avatour 用户账户后，您将进入 <strong>Web 控制台</strong>。  </p>
+<h3 id="web-console-overview-main-menu">4.1 Web 控制台 - 概述 主菜单</h3>
+<p>在左侧，您将看到以下菜单项：</p>
+<p><img alt="Avatour Web Console - 主菜单" src="https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu_qwpthq.png" /> <em>Avatour Web Console - 主菜单</em></p>
+<ul>
+<li><strong>工作区</strong> – 高效组织您的内容。每个工作区包含 <strong>资源</strong>、<strong>协作者</strong>、<strong>会议</strong> 和 <strong>设置</strong>。  </li>
+<li><strong>资源</strong> – 访问并管理所有资源（视频、图片、PDF）。管理员可查看所有账户资源，共享资源对所有用户可见。  </li>
+<li><strong>个人资料</strong> – 管理您的语言和密码。  </li>
+<li><strong>分析</strong> – 跟踪会话活动、工作区使用情况和投资回报率（ROI）指标。  </li>
+<li><strong>设置</strong> <em>（仅限管理员）</em> – 配置整个组织的工作区、会议和资源默认设置。管理员还可以自定义品牌标识（徽标、颜色、背景）。  </li>
+<li><strong>账户</strong> <em>（仅限管理员）</em> – 管理已注册用户和 360° 摄像头。  </li>
+<li><strong>设备登录</strong> – 输入 360° 摄像头上显示的代码，将其与您的账户配对。  </li>
+<li><strong>教程</strong> – 访问分步指导教程。  </li>
+<li><strong>注销</strong> – 退出控制台。</li>
+</ul>
+<blockquote>
+<p>“个人资料”、“设备登录”、“教程”和“注销”等部分不言自明，没有详细的子部分。</p>
+</blockquote>
+<hr />
+<h3 id="web-console-details-by-menu-item">4.2 Web 控制台 - 按菜单项详细说明（附图）</h3>
+<h4 id="421-工作区">4.2.1 工作区</h4>
+<p>工作区是灵活的组织单元，可让您在一个地方管理资产、协作者和会议。您可以通过右上角的 <strong>新建工作区</strong> 按钮创建新的工作区。</p>
+<p><img alt="Avatour Web 控制台 - 主菜单项“工作区”" src="https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-workspaces_hnhkjj.png" /> <em>Avatour Web 控制台 - 主菜单项“工作区”</em></p>
+<p>点击铃铛图标，即可查看过去 7 天内工作区的活动摘要。</p>
+<p><img alt="Avatour Web 控制台 - 工作区近期活动" src="https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-workspace-recent-activities_gby1ws.png" /> <em>工作区近期活动</em></p>
+<p>在工作区内部：</p>
+<p><img alt="带有资源面板、空白画布和会议面板的 Avatour 工作区" src="https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-workspace-assets-blank-meetings_qeumpl.png" /> <em>包含资源（左侧）、画布（中间）和会议（右侧）的工作区</em></p>
+<ul>
+<li><strong>资源</strong> – 管理分配给此工作区的文件。  </li>
+<li><strong>协作者</strong> – 
+  通过以下权限控制工作区的访问权限：<ul>
+<li><strong>查看者</strong> – 可查看资源。系统会在需要时通过邀请创建“访客”用户。  </li>
+<li><strong>编辑者</strong> – 拥有工作区的完全控制权，权限与“主持人”相同。 如有需要，系统会通过邀请将用户升级为主持人。  <blockquote>
+<p>多个用户可在不召开会议的情况下同时访问工作区。公共工作区和会议访问设置提供了其他访问方式。  </p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><strong>报告</strong> – 使用检查清单模板，针对选定工作区资源生成报告。  </li>
+</ul>
+<p><img alt="Avatour 工作区报告与资产选择" src="https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-asset-selection-and-workspace-report_itjt8f.png" /> <em>工作区报告与资产选择</em></p>
+<ul>
+<li><strong>地图</strong> – 在地图上显示支持 GPS 的资产位置。  </li>
+<li><strong>会议</strong> – 在工作空间中组织会议。  </li>
+<li><strong>设置</strong> – 配置工作空间和会议的默认设置：</li>
+</ul>
+<p><img alt="Avatour 设置 - 工作区视图" src="https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-workspace-settings_llcei3.png" /> <em>工作区设置</em></p>
+<p><strong>工作区设置</strong></p>
+<ul>
+<li><strong>报告模板</strong> – 选择用于 AI 报告的检查清单模板。  </li>
+<li><strong>启用通知</strong> – 针对笔记状态变更发送每日汇总邮件。  </li>
+</ul>
+<p><img alt="邮件通知 - 示例" src="https://res.cloudinary.com/avatour/image/upload/c_crop,h_600,w_600,x_170,y_60/Screenshot_2026-03-05_140654_bjk0xk.png" /> <em>邮件通知示例</em></p>
+<ul>
+<li><strong>公开工作区</strong> – 任何拥有链接的人均可直接查看资产。</li>
+</ul>
+<p><strong>会议设置</strong></p>
+<ul>
+<li><strong>需要身份验证</strong> – 参与者必须登录。  </li>
+<li><strong>允许访客访问</strong> – 允许未注册用户查看资源。  </li>
+<li><strong>自动开始录制 / 手动开始</strong> – 选择会议是自动录制还是手动开始。  </li>
+<li><strong>需要主持人</strong> – 主持人必须批准参与者加入；主持人离开时会议结束。  </li>
+<li><strong>允许旁听</strong> – 加入时不启用麦克风或摄像头；通过聊天进行交流。  </li>
+<li><strong>密码保护会议</strong> – 加入会议需输入密码。  </li>
+<li><strong>显示差旅节省问题</strong> – 询问参与者本次会议是否减少了差旅。  </li>
+</ul>
+<blockquote>
+<p>设置可组合使用（例如：无需主持人但设置密码保护）。</p>
+</blockquote>
+<hr />
+<h4 id="422-资源">4.2.2 资源</h4>
+<p>管理所有 360°/2D 视频、图片和 PDF 文件。上传/下载资源、分配到工作区、与其他用户共享、重命名、打印/下载报告、启用面部模糊以及 AI 摘要功能。</p>
+<p><img alt="Avatour Web 控制台 - 主菜单项“资源”" src="https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-assets_ky5emz.png" /> <em>主菜单项“资源”</em></p>
+<hr />
+<h4 id="423-分析">4.2.3 分析</h4>
+<p>提供有关会议、工作区使用情况及投资回报率（ROI）指标的深入分析。</p>
+<p><img alt="Avatour Web 控制台 - 主菜单项“分析”（1/3）" src="https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-analytics-1-of-3_ds3epe.png" /> <em>分析概览</em></p>
+<p><img alt="Avatour Web 控制台 - 主菜单项“分析”（第 2 页，共 3 页）" src="https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-analytics-2-of-3_vpcsme.png" /> <em>会议活动与工作区使用情况</em></p>
+<p><img alt="Avatour Web 控制台 - 主菜单项“分析”（第 3 页，共 3 页）" src="https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-analytics-3-of-3_hn2pmr.png" /> <em>设备许可证使用情况与投资回报率</em> </p>
+<h2 id="onsite-how-to-use-the-avatour-turnkey-kit">5. 现场操作——如何使用 Avatour 整套解决方案</h2>
+<h3 id="51-入门指南">5.1 入门指南</h3>
+<p>您可以在这里找到一份非常全面的在线指南，帮助您开始使用 Avatour 交钥匙套件：<a href="https://avatour.com/quickstart-panox-v2" target="_blank" rel="noopener">快速入门指南 – Avatour 交钥匙套件 3.1（Pilot PanoX V2 设置）</a></p>
+<p>此外，这里还附有您将在 3.1 套件箱盖内侧找到的带说明的图片。
+<img alt="Avatour 套件箱盖内侧的图片" src="https://res.cloudinary.com/avatour/image/upload/v1775994773/avatour-turnkey-kit-3.1-inside-lid-picture_dq4ipl.png" /> <em>Avatour套件盒盖内侧图片</em> </p>
+<p>请按照指南和说明进行拆箱、组装并开启相机电源。</p>
+<hr />
+<h3 id="52-实用提示">5.2 实用提示</h3>
+<h4 id="外接电池延长直播会议时长并改善散热效果">外接电池——延长直播会议时长并改善散热效果</h4>
+<ul>
+<li>
+<p><strong>如果您的套件包含 Ulanzi 电池：</strong> 将其安装在三脚架底座与伸缩杆之间，然后通过 USB-C 接口将电池连接至摄像机。  </p>
+</li>
+<li>
+<p><strong>如果您的套件包含 Telesin 电池杆：</strong> 将摄像机直接安装在 Telesin 可伸缩电池杆上，并通过 USB-C 接口连接。  </p>
+</li>
+</ul>
+<p>使用外接电池：</p>
+<ol>
+<li>将总续航时间从约 40 分钟（仅靠摄像机电池）延长至约 3 小时。  </li>
+<li>增强了摄像头的稳定性。  </li>
+<li>有助于防止潜在的过热问题。  </li>
+</ol>
+<blockquote>
+<p>我们建议从一开始就始终使用外接电池，尤其是在进行实时会议时。</p>
+</blockquote>
+<h4 id="实时会议和录制时的音频注意事项">实时会议和录制时的音频注意事项</h4>
+<ul>
+<li>
+<p><strong>嘈杂环境：</strong> 
+  请使用套件中随附的 Shokz 耳机，以确保音频录制清晰。  </p>
+<ul>
+<li><strong>开机/关机：</strong> 长按“+”按钮 3 秒（蓝色 LED 亮表示开机，红色 LED 亮表示关机）。  </li>
+<li><strong>蓝牙配对模式：</strong> 在耳机关闭状态下，长按“+”键 5 秒（LED 灯交替闪烁蓝光/红光）。  </li>
+<li><strong>音量调节：</strong> 使用“+”和“-”键。  </li>
+</ul>
+</li>
+<li>
+<p><strong>较安静的环境 / 摄像头附近有多名参与者：</strong> 
+  请使用 NoxGear 夹式麦克风。虽然其音质不如会议专用麦克风（例如 Jabra Speak）高保真，但可轻松夹在衬衫上，并能有效拾取附近的声音。  </p>
+<ul>
+<li><strong>开/关机：</strong> 长按“播放/暂停”按钮 2 秒。  </li>
+<li><strong>蓝牙配对模式：</strong> 开机后自动进入配对模式（LED 指示灯蓝红交替闪烁；配对成功后显示蓝灯常亮）。  </li>
+<li><strong>音量：</strong> 使用“+”和“-”按钮。  </li>
+</ul>
+</li>
+<li>
+<p><strong>使用自有设备：</strong> 如果您更倾向于使用其他设备（例如会议扬声器或个人耳机），可通过摄像机进行配对：设置 → 蓝牙。  </p>
+</li>
+</ul>
+<h4 id="网络连接网络连接网络连接">网络连接、网络连接、网络连接</h4>
+<p><strong>开始前：</strong> 请通过以下方式确保网络连接：</p>
+<ul>
+<li><strong>本地 Wi-Fi</strong>（首选）</li>
+<li><strong>移动网络</strong>（若处于 Wi-Fi 覆盖范围外）</li>
+</ul>
+<p><strong>推荐带宽：</strong> 10 Mbps 上行/下行带宽可实现完整的 360° 流媒体传输（约 5 Mbps）。较低的带宽（1–2 Mbps）仅在静止时有效。</p>
+<h5 id="测试网络速度">测试网络速度</h5>
+<ul>
+<li><strong>单点测试：</strong> 使用您常用的任何网速测试工具（例如 <a href="https://www.speedtest.net" target="_blank" rel="noopener">Speedtest</a>）来验证上传和下载带宽。   </li>
+<li><strong>现场行走测试：</strong> 在摄像头端：设置 → 网络 → 连接测试。在整个空间内走动，以确认信号覆盖范围和带宽。</li>
+</ul>
+<h5 id="本地-wi-fi">本地 Wi-Fi</h5>
+<ul>
+<li>强烈推荐用于保持稳定连接。  </li>
+<li>如果 IT 部门要求加入白名单，请查找 MAC 地址：设置 → 关于 → Wi-Fi 地址。</li>
+</ul>
+<h5 id="移动网络">移动网络</h5>
+<p><strong>方案 A： 套件提供的热点及SIM卡</strong>  </p>
+<ul>
+<li>将GlocalMe热点连接至Telesin电池棒（磁吸式）。  </li>
+<li>确保无信号干扰，并在远离摄像头时保持连接。  </li>
+<li>故障排除：<ul>
+<li>确认预装SIM卡（非云SIM卡）。  </li>
+<li>在 SIM 卡管理器中启用 5G。  </li>
+<li>确认您所在地区的 APN 设置正确（<a href="https://avatour.com/support/how-do-i-change-the-apn-on-my-glocalme-hotspot" target="_blank" rel="noopener">APN 设置指南</a>）。</li>
+</ul>
+</li>
+</ul>
+<p><strong>方案 B：个人热点 / SIM 卡</strong>
+- 使用您自己的智能手机或专用热点设备。  </p>
+<p><strong>重要提示：</strong>  </p>
+<blockquote>
+<p>连接 Wi-Fi 时请保持热点关闭；仅在超出 Wi-Fi 覆盖范围时才开启。 相机的操作系统会根据信号强度在不同 Wi-Fi 网络之间动态切换，即使有 Wi-Fi 可用，也可能无意中切换到热点。</p>
+<p>移动网络可能会意外限制带宽。请向您的运营商咨询数据套餐的限额，或者如果您使用的是我们的热点和 SIM 卡，请联系 Avatour 支持团队。</p>
+</blockquote>
+<h5 id="带宽较低的情况">带宽较低的情况</h5>
+<ul>
+<li>预先录制位置视频以便稍后播放（<a href="https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app" target="_blank" rel="noopener">录制指南</a>）。  </li>
+<li>共享智能手机摄像头画面，以弥补带宽较低的区域（上传速度 0.1–0.3 Mbps）。</li>
+</ul>
+<h5 id="无法连接网络">无法连接网络</h5>
+<ul>
+<li>仅可使用预先录制的视频（<a href="https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app" target="_blank" rel="noopener">录制指南</a>）。</li>
+</ul>
+<h4 id="其他现场参与者最佳实践">其他现场参与者——最佳实践</h4>
+<p>当多名参与者从与 360° 摄像头相同的地点加入 Avatour 实时会议时，对 <strong>音频和带宽</strong> 的谨慎管理至关重要：  </p>
+<ul>
+<li>现场连接的每部智能手机、平板电脑或笔记本电脑都会消耗网络带宽，并可能对 360° 摄像头的视频传输造成负面影响。  </li>
+<li>同一空间内存在多个麦克风和扬声器可能会导致 <strong>音频反馈</strong>，使所有参与者的会议体验大打折扣。</li>
+</ul>
+<h4 id="其他现场参与者最佳实践_1">其他现场参与者——最佳实践</h4>
+<p>当多名参与者从与 360° 摄像头相同的地点加入 Avatour 实时会议时，谨慎管理 <strong>音频和带宽</strong> 至关重要：  </p>
+<ul>
+<li>现场连接的每部智能手机、平板电脑或笔记本电脑都会消耗网络带宽，并可能对 360° 摄像头的视频传输产生负面影响。  </li>
+<li>同一空间内存在多个麦克风和扬声器可能会导致 <strong>音频反馈</strong>，使所有参与者的会议体验不佳。</li>
+</ul>
+<p>为应对这些挑战，请遵循以下 <strong>最佳实践</strong>：</p>
+<ul>
+<li><strong>使用有线或无线耳机：</strong> 最好选择带降噪功能的耳机，以防止回声和反馈。  </li>
+<li><strong>现场模式：</strong> 当您实际位于 360° 摄像机附近时，请以“现场模式”加入会议。  <ul>
+<li>此模式针对现场使用进行了优化：  <ul>
+<li>默认静音参与者的麦克风和扬声器。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>不会</strong>发送参与者的摄像头画面。</li>
+<li><strong>不会</strong>在参与者的浏览器中显示 360° 摄像头的画面。<br />
+        - 节省网络带宽，确保 360° 摄像头拥有最大可用上传带宽用于实时流媒体传输。</li>
+<li>当用户希望分享特定细节时非常有用；您<strong>可以反向分享您的摄像头画面</strong>，以提供针对性的视角。  </li>
+<li><strong>不主动发言时保持静音：</strong> 防止出现不必要的音频反馈和干扰。  </li>
+<li><strong>如有可能，请使用独立网络：</strong> 将智能手机连接到与摄像头不同的网络，以减少干扰。  </li>
+</ul>
+<p>遵循这些指南，可确保现场和远程参与者都能享受流畅、高质量的实时导览。</p>
+<h3 id="53-avatour-相机应用">5.3 Avatour 相机应用</h3>
+<p>以下是 (1) 主菜单、(2) 设置和 (3) 网络设置菜单。</p>
+<p><img alt="Avatour 360° 相机应用 - 三个菜单" src="https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-cam-app-3-menu-screens_nju8bt.png" /> <em>Avatour 360° 相机应用 - 3 个菜单</em></p>
+<p><strong>快速拍摄</strong> - 用于离线录制 360° 视频。 - 详细说明请参阅 <a href="https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app" target="_blank" rel="noopener">如何使用 Avatour 应用录制并上传 360° 视频？</a>。 建议使用外接音频设备（通过蓝牙连接）。注意：您也可以拍摄标准的2D视频和照片——只需在“快速拍摄”界面中，点击右下角的切换按钮，在360°和2D模式之间切换即可。</p>
+<p><strong>实时会议</strong>——用于实时 360° 视频会议。您将看到您的工作区，点击其中一个即可启动 360° 摄像头的实时视频流。在使用 360° 摄像头加入会议之前，您需要通过蓝牙连接一个音频设备。 详细说明请参阅 <a href="https://avatour.com/support/how-to-start-a-live-capture-meeting-with-your-pilot-camera" target="_blank" rel="noopener">如何使用 Pilot 摄像头启动 Live Capture 会议？</a></p>
+<blockquote>
+<p>当您使用 360° 摄像头主持 Live Capture 会议时，可使用的会议工具与网页端体验相似。 以下是我们知识库文章的链接，其中对这些工具进行了更详细的说明：<a href="https://avatour.com/support/what-avatour-app-tools-are-available-to-labpano-pilot-camera-operators" target="_blank" rel="noopener">操作员应用工具</a></p>
+</blockquote>
+<p><strong>图库</strong> - 您可以在此处找到所有待上传至 Avatour Web Console 的 360° 视频和图片。</p>
+<p><strong>设置</strong> - 在“设置”中，您可进行以下操作：</p>
+<ul>
+<li><strong>网络</strong>：此选项允许您更改相机连接的 Wi-Fi 网络，或运行网络连接测试以查看流媒体吞吐量</li>
+<li>
+<p><strong>实时拍摄</strong>：根据可用带宽、访客的 VR 敏感度，或相机是否安装了保护镜片，调整您的实时拍摄设置：</p>
+<ul>
+<li><strong>目标帧率</strong>：将实时录制视频的帧率在 15 fps、24 fps 和 30 fps 之间进行调整。更高的帧率能带来更流畅的视频效果，但会消耗更多的上传带宽。默认值：15 fps</li>
+<li><strong>目标码率</strong>：可让您增加或减少实时录制视频的最大流媒体码率。目标码率可在 1 Mbps 至 10 Mbps 之间设置。更高的码率将带来更高的视频分辨率，但会消耗更多的上传带宽。默认值：5 Mbps</li>
+<li><strong>优化运动</strong>：此选项将降低视频帧率，从而减轻网络上传带宽的负载，并提高流媒体比特率。此外，此选项还有助于减轻 VR 参与者的晕动感。默认值：关闭</li>
+<li><strong>保护镜片</strong>： 此选项会根据相机是否安装了保护镜片，影响 360° 视频的拼接方式。若未安装保护镜片，请将此选项设为“否”。若您收到的是 Kit 3.0 套件，则相机已预装保护镜片，应将此选项设为“是”。 默认：是</li>
+</ul>
+</li>
+<li>
+<p><strong>快速拍摄</strong>：请根据您偏好的视频帧率、用于上传录制视频的可用带宽，或相机是否安装了保护镜片来调整“快速拍摄”设置。“快速拍摄”的分辨率固定为 4K，通常能在视频质量和文件大小之间取得良好的平衡。 （如需更高分辨率，可使用原生相机应用，PanoX V2 同样支持，详情请参阅 <a href="https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app" target="_blank" rel="noopener">如何使用 Avatour 应用录制并上传 360 度视频？</a>):</p>
+<ul>
+<li><strong>目标帧率</strong>：将“快速拍摄”视频录制的帧率调整为 15 fps、24 fps 或 30 fps。 更高的帧率能使视频更流畅，但会增加视频文件大小和上传时间。推荐：30 fps</li>
+<li><strong>目标码率</strong>：将“快速录制”上传的目标码率设置在 5 Mbps 至 20 Mbps 之间。较低的码率可加快上传速度，但会降低视频质量。 推荐值：20 Mbps</li>
+<li><strong>保护镜片</strong>：<em>请参阅上文“实时捕捉”中的“保护镜片”部分</em></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>有关上述设置和视频文件大小的更多建议，请参阅我们的 <a href="https://avatour.com/support/avatour-360deg-video-file-size-calculator" target="_blank" rel="noopener">Avatour 360° 视频文件大小计算器</a>。</p>
+</blockquote>
+<ul>
+<li><strong>关于</strong>：查看设备序列号和软件版本</li>
+</ul>
+<p><strong>账户</strong> - 用于使用您的 Avatour 主机或管理员账户登录。</p>
+<h2 id="best-practice-advice">6. 最佳实践建议</h2>
+<h3 id="61-首次非正式使用与熟悉操作">6.1 首次（非正式）使用与熟悉操作</h3>
+<p>为了帮助您首次使用并熟悉 Avatour Web 控制台和 Avatour 即用型套件，我们建议您按照以下步骤操作：</p>
+<ol>
+<li>将套件带回家，利用家中的互联网连接与家人和朋友一起试用。</li>
+<li>将套件带到办公室，连接到企业网络（可能会遇到企业层面的问题，例如企业防火墙——但您已经通过第一步确认 Avatour 能够正常运行，这些问题可由您的 IT 团队在 Avatour 的协助下解决）。</li>
+<li>开始在现场（办公室外）使用 Avatour，地点应为远程参与者通常需要前往的会议地点。此时可能会出现更多网络连接相关的问题，Avatour 将与您的 IT 团队通力合作予以解决。</li>
+<li>开始与内部及外部远程参与者共同使用该系统。</li>
+</ol>
+<h3 id="62-360视频直播会议前">6.2 360°视频直播会议前</h3>
+<ul>
+<li>如果时间允许，我们建议在任何直播导览之前先进行一次录制的360°视频导览，原因有三： (1) 为实时导览提供备用方案；(2) 留存记录资料以便后续回顾（作为实时导览录像的补充）；(3) 着手建立涵盖所有场地的 360° 视频库，这将对多种使用场景大有裨益。 </li>
+<li>直播会议开始前，请确保所有设备组件已充电至少90分钟。无论如何，我们建议在不使用时让所有设备保持持续充电状态。这样，所有设备都能随时待命，即使面对计划外的临时会议也能从容应对。</li>
+<li>
+<p>请将设备套件完全组装好（1. 三脚架底座 + 2. Ulanzi 电池 + 3. 伸缩杆 + 4. 360° 相机）。</p>
+</li>
+<li>
+<p>确认已创建用于举办实时会议的工作区，并包含所有相关资源。</p>
+</li>
+<li>
+<p>通过您的工作区邀请所有参与者加入会议。这将在所有参与者的日历中生成会议邀请，并包含会议邀请链接。</p>
+</li>
+<li>
+<p>将您计划用于导览的蓝牙耳机或扬声器与摄像机配对并连接。</p>
+</li>
+<li>
+<p>所有现场智能手机用户应连接到与摄像机网络不同的网络。 这将减轻摄像头的网络带宽负担。</p>
+</li>
+<li>
+<p>如果您是独自担任摄像师，请随身携带一部智能手机，以便在需要时通过手机共享画面并展示细节。</p>
+</li>
+<li>
+<p>确认 360 度摄像头能够连接到您的本地 Wi-Fi。</p>
+</li>
+<li>
+<p>在举行 Avatour 会议之前，请规划好您在场馆内的行进路线。使用相机进行一次 Avatour 测试会议，并检查所有区域的带宽是否均高于 1 Mbps。您可以在相机屏幕上直接查看该信息，或者作为远程参与者进入“设置”并启用“显示比特率”功能进行查看。</p>
+</li>
+<li>
+<p>若发现某些区域带宽极低或几乎为零，建议拍摄照片或录制视频。这些素材可在会议期间展示，供远程参与者查看。您可以参考此处的指南，了解如何使用“快速捕捉”功能录制并上传视频/图片： <a href="https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app" target="_blank" rel="noopener">如何使用 Avatour 应用录制并上传 360 度视频？</a></p>
+</li>
+<li>
+<p>若有首次使用 Avatour 的远程参会者加入会议，请向他们简要介绍该平台及其功能（360 度实时视频、素材、快照、标注、聚光灯）以及会议工具。</p>
+</li>
+<li>
+<p>您可以在其他视频会议解决方案（例如 Teams、Zoom、Google Meet）中开始会议，但在切换到 Avatour 之前，请完全关闭其他视频会议应用程序。 在某些情况下，这些其他应用程序会优先使用您设备的麦克风/扬声器/网络摄像头，导致 Avatour 无法使用这些设备。此外，请勿同时运行 Avatour 和其他视频会议软件，否则会占用可用带宽。</p>
+</li>
+<li>
+<p>如果您计划在高温环境下使用 360 度相机，建议使用散热模块（仅限 Pilot Pano）。这有助于降低相机过热并自动关机的可能性。</p>
+</li>
+</ul>
+<h3 id="63-在现场操作-360-视频直播会议相机时">6.3 在现场操作 360° 视频直播会议相机时</h3>
+<ul>
+<li>
+<p>操作相机时，请确保您<strong>缓慢行走</strong>并<strong>频繁停下，将相机放置在三脚架上</strong>。 这样做有助于：(1) 提升视频质量——避免不必要的移动可减少视频数据量；(2) 减少因相机网络连接在不同 Wi-Fi 接入点之间切换而导致的潜在视频中断。</p>
+</li>
+<li>
+<p>将相机举在身前，并保持在视线以上高度。 这样，所有远程参与者都能看到您周围的大部分区域。</p>
+</li>
+<li>
+<p>如果需要保持摄像机稳定，请使用三脚架并将摄像机调整到合适的高度，最好与视线齐平。</p>
+</li>
+<li>
+<p>尽可能将摄像机连接到本地 Wi-Fi 网络。在没有 Wi-Fi 信号的区域，请使用随附的热点。 该热点内置 SIM 卡，可连接您附近的可靠蜂窝网络。在室内不使用时，请务必关闭热点，否则 360° 相机可能会连接到热点，而我们在室内并不希望发生这种情况。在室外时，请将热点放在 360° 相机附近。</p>
+</li>
+<li>
+<p>当摄像头上的比特率开始降至 2 Mbps 以下时，请放慢脚步或完全停下，直到信号再次稳定。这种情况通常发生在您从一个 Wi-Fi 接入点切换到另一个接入点时。 </p>
+</li>
+<li>
+<p>若您知道移动到特定位置时（例如：从室内制作区移动到室外区域）会出现连接中断或视频卡顿的情况，请提前告知远程参会者。</p>
+</li>
+<li>
+<p>若需展示高细节内容或小字内容，请使用您自己的或现场参与者的智能手机加入会议，并开启手机的（后置）摄像头进行演示。</p>
+</li>
+<li>
+<p>如条件允许，建议现场安排一名额外人员协助进行上述智能手机摄像头共享操作，因为这通常会非常有用或必不可少。</p>
+</li>
+<li>
+<p>理想情况下，现场智能手机用户应（1）以“现场”模式加入会议，并（2）使用与摄像头不同的网络连接，以免占用360°摄像头所需的關鍵上传带宽。</p>
+</li>
+<li>
+<p>所有通过智能手机加入会议的现场参与者应保持静音，除非正在发言。</p>
+</li>
+</ul>
+    </article>
+    <aside class="guide-toc">
+      <div class="toc-label">On this page</div>
+<ul>
+  <li><a href="#for-all-avatour-users">1. 致所有Avatour用户</a></li>
+  <li><a href="#avatour-user-types">2. Avatour 用户类型</a></li>
+  <li class="toc2"><a href="#21-会议参与者无需账户">2.1 会议参与者（无需账户）</a></li>
+  <li class="toc2"><a href="#22-注册用户">2.2 注册用户</a></li>
+  <li><a href="#for-remote-meeting-participants-and-workspace-visitors">3. 针对远程会议参与者和工作区访客</a></li>
+  <li class="toc2"><a href="#how-to-join-an-avatour-meeting-and-visit-an-avatour-workspace">3.1 如何加入 Avatour 会议并访问 Avatour 工作区</a></li>
+  <li class="toc2"><a href="#meeting-tools">3.2 会议与工作区协作工具</a></li>
+  <li><a href="#for-host-and-admin-users-avatour-web-console">4. 面向主机和管理员用户——Avatour Web 控制台</a></li>
+  <li class="toc2"><a href="#web-console-overview-main-menu">4.1 Web 控制台 - 概述 主菜单</a></li>
+  <li class="toc2"><a href="#web-console-details-by-menu-item">4.2 Web 控制台 - 按菜单项详细说明（附图）</a></li>
+  <li><a href="#onsite-how-to-use-the-avatour-turnkey-kit">5. 现场操作——如何使用 Avatour 整套解决方案</a></li>
+  <li class="toc2"><a href="#51-入门指南">5.1 入门指南</a></li>
+  <li class="toc2"><a href="#52-实用提示">5.2 实用提示</a></li>
+  <li class="toc2"><a href="#53-avatour-相机应用">5.3 Avatour 相机应用</a></li>
+  <li><a href="#best-practice-advice">6. 最佳实践建议</a></li>
+  <li class="toc2"><a href="#61-首次非正式使用与熟悉操作">6.1 首次（非正式）使用与熟悉操作</a></li>
+  <li class="toc2"><a href="#62-360视频直播会议前">6.2 360°视频直播会议前</a></li>
+  <li class="toc2"><a href="#63-在现场操作-360-视频直播会议相机时">6.3 在现场操作 360° 视频直播会议相机时</a></li>
+</ul>
+    </aside>
+  </div>
+</div>
+
+<script>
+// Active TOC highlighting
+const headings = document.querySelectorAll('.guide-article h2, .guide-article h3');
+const tocLinks = document.querySelectorAll('.guide-toc a');
+if (headings.length && tocLinks.length) {
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('active'));
+        const a = document.querySelector(`.guide-toc a[href="#${e.target.id}"]`);
+        if (a) a.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-10% 0px -80% 0px' });
+  headings.forEach(h => { if (h.id) obs.observe(h); });
+}
+
+// Active sidenav highlighting
+const sideLinks = document.querySelectorAll('.guide-sidenav a');
+const allH = document.querySelectorAll('.guide-article h2, .guide-article h3');
+if (allH.length && sideLinks.length) {
+  const obs2 = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        sideLinks.forEach(l => l.classList.remove('active'));
+        const a = document.querySelector(`.guide-sidenav a[href="#${e.target.id}"]`);
+        if (a) a.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-10% 0px -80% 0px' });
+  allH.forEach(h => { if (h.id) obs2.observe(h); });
+}
+</script>
+</body>
+</html>
