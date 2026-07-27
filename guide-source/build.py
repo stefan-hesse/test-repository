@@ -714,6 +714,28 @@ def build_sidenav_html(md_text):
     return html
 
 
+# ── CLOUDINARY IMAGE OPTIMIZATION ─────────────────────────────────────────
+CLOUDINARY_UPLOAD_RE = re.compile(
+    r'(https://res\.cloudinary\.com/avatour/image/upload/)'
+    r'((?:[a-z]{1,3}_[a-z0-9]+(?:,[a-z]{1,3}_[a-z0-9]+)*/)?)'
+    r'(v\d+/)?'
+    r'([^\s"\')]+)'
+)
+
+def optimize_cloudinary_urls(html):
+    """Ensure every Cloudinary delivery URL uses f_auto,q_auto for format/quality optimization."""
+    def repl(m):
+        base, transform, version, rest = m.groups()
+        if transform and 'f_auto' in transform:
+            new_transform = transform
+        elif transform:
+            new_transform = transform[:-1] + ',f_auto,q_auto/'
+        else:
+            new_transform = 'f_auto,q_auto/'
+        return f'{base}{new_transform}{version or ""}{rest}'
+    return CLOUDINARY_UPLOAD_RE.sub(repl, html)
+
+
 # ── MARKDOWN → HTML ───────────────────────────────────────────────────────
 def md_to_html(md_text):
     """Convert Markdown to HTML. Normalises 2-space list indent to 4-space."""
@@ -735,7 +757,7 @@ def md_to_html(md_text):
         TocExtension(slugify=lambda value, separator: re.sub(r'[^\w-]', '', value.lower().replace(' ', separator))),
         'tables', 'fenced_code', 'attr_list', 'md_in_html', 'sane_lists',
     ])
-    return md.convert(md_text)
+    return optimize_cloudinary_urls(md.convert(md_text))
 
 
 # ── OPEN LINKS IN NEW TAB ─────────────────────────────────────────────────
