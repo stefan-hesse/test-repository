@@ -581,7 +581,7 @@ Dưới đây là các menu (1) Màn hình chính, (2) Cài đặt và (3) Cài 
 
 Để bắt đầu sử dụng và làm quen với Avatour Web Console và Avatour Turnkey Kit, chúng tôi khuyên bạn nên thực hiện các bước sau:
 
-1. Mang bộ kit về nhà và thử nghiệm cùng gia đình và bạn bè bằng kết nối internet tại nhà.
+1. Mang bộ sản phẩm về nhà và thử nghiệm cùng gia đình và bạn bè bằng kết nối internet tại nhà.
 2. Mang bộ sản phẩm đến văn phòng và kết nối với mạng công ty (có thể phát sinh các vấn đề liên quan đến công ty, ví dụ như tường lửa công ty – nhưng từ bước 1, bạn đã biết rằng Avatour hoạt động tốt và đây là vấn đề mà đội ngũ CNTT của bạn cần giải quyết với sự hỗ trợ từ Avatour).
 3. Bắt đầu sử dụng Avatour tại hiện trường (ngoài văn phòng) tại địa điểm họp mà các thành viên tham gia từ xa thường phải di chuyển đến. Có thể phát sinh thêm các vấn đề về kết nối. Avatour sẽ hỗ trợ phối hợp cùng đội ngũ CNTT của bạn.
 4. Bắt đầu sử dụng với các thành viên tham gia từ xa cả nội bộ lẫn bên ngoài.
@@ -590,15 +590,15 @@ Dưới đây là các menu (1) Màn hình chính, (2) Cài đặt và (3) Cài 
 
 - Chúng tôi khuyến nghị thực hiện một chuyến tham quan video 360° được ghi lại trước bất kỳ chuyến tham quan trực tiếp nào nếu thời gian cho phép, vì ba lý do sau: (1) Có giải pháp dự phòng cho buổi tham quan trực tiếp, (2) có tài liệu để lưu trữ và xem lại sau này (bên cạnh bản ghi lại buổi tham quan trực tiếp) và (3) bắt đầu xây dựng thư viện video 360° của tất cả các địa điểm của quý vị, điều này có thể hữu ích cho nhiều trường hợp sử dụng. 
 
-- Sạc đầy đủ tất cả các thành phần bộ thiết bị trong ít nhất 90 phút trước cuộc họp trực tiếp. Dù sao, chúng tôi cũng khuyến nghị nên để tất cả các thiết bị sạc liên tục khi không sử dụng. Như vậy, tất cả các thiết bị sẽ luôn sẵn sàng, kể cả cho các cuộc họp đột xuất không theo kế hoạch.
+- Sạc đầy đủ tất cả các thành phần bộ thiết bị trong ít nhất 90 phút trước cuộc họp trực tiếp. Chúng tôi khuyến nghị nên để tất cả các thiết bị ở chế độ sạc liên tục khi không sử dụng. Nhờ đó, mọi thiết bị sẽ luôn sẵn sàng, kể cả cho các cuộc họp đột xuất không theo kế hoạch.
 
-- Lắp ráp đầy đủ bộ kit (1. chân đế tripod + 2. pin Ulanzi + 3. gậy kéo dài + 4. camera 360°).
+- Lắp ráp đầy đủ bộ thiết bị (1. chân đế tripod + 2. pin Ulanzi + 3. gậy kéo dài + 4. camera 360°).
 
 - Xác nhận đã tạo Workspace để tổ chức cuộc họp trực tiếp và bao gồm tất cả các tài nguyên liên quan.
 
 - Mời tất cả người tham gia vào cuộc họp thông qua Không gian làm việc của bạn. Thao tác này sẽ tạo lời mời trên lịch của tất cả người tham gia và bao gồm liên kết mời tham gia cuộc họp.
 
-- Ghép nối và kết nối tai nghe Bluetooth hoặc loa mà bạn dự định sử dụng cho chuyến tham quan với camera.
+- Ghép nối và kết nối tai nghe Bluetooth hoặc loa mà bạn dự định sử dụng cho buổi tham quan với camera.
 
 - Tất cả người dùng điện thoại thông minh tại hiện trường nên kết nối từ một mạng khác với mạng của camera. Điều này sẽ giảm tải cho băng thông mạng của camera.
 
@@ -610,27 +610,27 @@ Dưới đây là các menu (1) Màn hình chính, (2) Cài đặt và (3) Cài 
 
 - Nếu phát hiện một số khu vực có băng thông thấp hoặc không có băng thông, tốt nhất bạn nên chụp ảnh hoặc quay video. Những tài liệu này sau đó có thể được trình chiếu trong cuộc họp để người tham gia từ xa xem xét. Bạn có thể tham khảo hướng dẫn ở trên giải thích về tính năng “Quick Capture” để ghi hình và tải lên video/hình ảnh ngoại tuyến.
 
-- Nếu có người tham gia từ xa tham gia cuộc họp mà trước đây chưa từng sử dụng Avatour, hãy cung cấp cho họ một bản tóm tắt ngắn gọn về nền tảng này, các tính năng của nó (video trực tiếp 360 độ, tài nguyên, ảnh chụp nhanh, chú thích, tính năng Spotlight) và các công cụ hỗ trợ cuộc họp.
+- Nếu có người tham gia từ xa tham gia cuộc họp mà chưa từng sử dụng Avatour trước đây, hãy cung cấp cho họ một bản tóm tắt ngắn gọn về nền tảng này, các tính năng của nó (video trực tiếp 360 độ, tài nguyên, ảnh chụp nhanh, chú thích, tính năng Spotlight) và các công cụ hỗ trợ cuộc họp.
 
-- Bạn có thể bắt đầu bằng một giải pháp hội nghị video khác (ví dụ: Teams, Zoom, Google Meet), nhưng trước khi chuyển sang Avatour, hãy đóng hoàn toàn ứng dụng hội nghị video kia. Trong một số trường hợp, các ứng dụng khác này sẽ ưu tiên sử dụng micrô/loa/webcam của thiết bị, dẫn đến việc các thiết bị này bị vô hiệu hóa đối với Avatour. Ngoài ra, KHÔNG nên chạy Avatour VÀ một ứng dụng hội nghị video khác cùng lúc vì điều này sẽ làm giảm băng thông khả dụng.
+- Bạn có thể bắt đầu bằng một giải pháp hội nghị video khác (ví dụ: Teams, Zoom, Google Meet), nhưng trước khi chuyển sang Avatour, hãy đóng hoàn toàn ứng dụng hội nghị video kia. Trong một số trường hợp, các ứng dụng khác này sẽ ưu tiên sử dụng micrô/loa/webcam của thiết bị, dẫn đến việc các thiết bị này bị vô hiệu hóa khi sử dụng Avatour. Ngoài ra, KHÔNG nên chạy Avatour VÀ một ứng dụng hội nghị video khác cùng lúc vì điều này sẽ làm giảm băng thông khả dụng.
 
 - Nếu bạn dự định sử dụng camera 360° trong môi trường có nhiệt độ cao, nên sử dụng mô-đun làm mát (chỉ dành cho Pilot Pano). Điều này sẽ giúp giảm nguy cơ camera quá nhiệt và tự động tắt nguồn.
 
-### 6.3 Khi vận hành camera tại hiện trường cho cuộc họp trực tiếp video 360°
+### 6.3 Khi vận hành camera tại hiện trường cho cuộc họp video trực tiếp 360°
 
-- Khi vận hành camera, hãy đảm bảo rằng bạn **đi chậm** và **thường xuyên dừng lại để đặt camera xuống chân máy**. Điều này giúp (1) cải thiện chất lượng video do bạn tạo ra ít dữ liệu video hơn khi không di chuyển máy ảnh một cách không cần thiết và (2) giảm thiểu thời gian gián đoạn video tiềm ẩn khi kết nối mạng của máy ảnh chuyển đổi giữa các điểm truy cập Wi-Fi.
+- Khi vận hành camera, hãy đảm bảo rằng bạn **đi chậm** và **thường xuyên dừng lại để đặt camera xuống chân máy**. Điều này giúp (1) cải thiện chất lượng video vì bạn sẽ tạo ra ít dữ liệu video hơn do không di chuyển máy ảnh một cách không cần thiết và (2) giảm thiểu thời gian gián đoạn video tiềm ẩn khi kết nối mạng của máy ảnh chuyển đổi giữa các điểm truy cập Wi-Fi.
 
 - Giữ máy ảnh trước mặt bạn và cao hơn tầm mắt. Điều này giúp tất cả người tham gia từ xa có thể quan sát được phần lớn khu vực xung quanh bạn.
 
-- Trong trường hợp cần giữ máy quay ổn định, hãy sử dụng chân máy và điều chỉnh độ cao phù hợp, tốt nhất là ngang tầm mắt.
+- Trong trường hợp cần giữ máy quay ổn định, hãy sử dụng chân máy và điều chỉnh máy quay lên độ cao phù hợp, tốt nhất là ngang tầm mắt.
 
-- Luôn kết nối máy quay với mạng WiFi địa phương khi có thể. Đối với khu vực không có kết nối WiFi, hãy sử dụng điểm phát sóng (hotspot) được cung cấp. Điểm phát sóng này có thẻ SIM sẽ kết nối với mạng di động đáng tin cậy gần bạn. Luôn tắt điểm phát sóng khi không sử dụng trong nhà, vì nếu không, camera 360° có thể kết nối với điểm phát sóng – điều mà chúng ta không mong muốn khi ở trong nhà. Khi ở ngoài trời, hãy để điểm phát sóng gần camera 360°.
+- Luôn kết nối máy quay với mạng WiFi cục bộ khi có thể. Đối với những khu vực không có kết nối WiFi, hãy sử dụng điểm phát sóng (hotspot) được cung cấp. Điểm phát sóng này có thẻ SIM sẽ kết nối với mạng di động đáng tin cậy gần bạn. Luôn tắt điểm phát sóng khi không sử dụng trong nhà, vì nếu không, camera 360° có thể kết nối với điểm phát sóng – điều mà chúng ta không mong muốn khi ở trong nhà. Khi ở ngoài trời, hãy giữ điểm phát sóng gần camera 360°.
 
 - Khi tốc độ truyền dữ liệu của camera bắt đầu giảm xuống dưới 2 Mbps, hãy đi chậm lại hoặc dừng hẳn cho đến khi tín hiệu ổn định trở lại. Điều này thường xảy ra khi bạn chuyển từ điểm truy cập Wi-Fi này sang điểm truy cập khác. 
 
 - Nếu bạn biết kết nối và video sẽ bị gián đoạn khi di chuyển đến một vị trí cụ thể (Ví dụ: di chuyển từ khu vực sản xuất trong nhà sang khu vực ngoài trời), hãy thông báo trước cho những người tham gia từ xa.
 
-- Nếu cần trình chiếu nội dung có chi tiết cao hoặc chữ viết nhỏ, bạn có thể tiến lại rất gần với camera 360° và cũng có thể sử dụng điện thoại thông minh của chính mình hoặc của một người tham gia tại hiện trường để tham gia cuộc họp và chia sẻ camera phía sau của điện thoại đó.
+- Nếu cần trình chiếu nội dung có chi tiết cao hoặc chữ viết nhỏ, bạn có thể tiến lại rất gần với camera 360° và cũng có thể sử dụng điện thoại thông minh của chính mình hoặc của một người tham gia tại hiện trường để tham gia cuộc họp và chia sẻ camera (mặt sau) của điện thoại đó.
 
 - Nếu có thể, chúng tôi khuyến nghị nên có thêm một người tại hiện trường để hỗ trợ việc chia sẻ camera điện thoại thông minh như đã mô tả ở trên, vì điều này thường rất hữu ích và cần thiết.
 
@@ -648,9 +648,9 @@ Dưới đây là các menu (1) Màn hình chính, (2) Cài đặt và (3) Cài 
 
 - Dự đoán những gì người xem muốn thấy, ví dụ: các chi tiết, hãy đưa camera 360° lại rất gần và chờ một lúc.
 
-- Đặt máy quay xuống và hướng về những đối tượng bạn muốn làm nổi bật. Nếu bạn đặt chế độ Khóa Hướng thành "Không", bạn thậm chí có thể dùng camera 360° để chỉ vào một vật thể nào đó (ví dụ: sử dụng ống kính phía trước).  
+- Đặt máy quay xuống và hướng về những đối tượng bạn muốn làm nổi bật. Nếu bạn thiết lập "Khóa hướng" thành "Không", bạn thậm chí có thể dùng camera 360° để chỉ vào một vật thể (ví dụ: sử dụng ống kính phía trước).  
 
-- Nếu bạn đang quay để tạo báo cáo do AI sinh ra và cũng sử dụng lệnh thoại, hãy nói to và rõ ràng. Để giúp AI xác định vị trí, số đo, các vấn đề và điền vào các mẫu kiểm tra của bạn, hãy đề cập rõ ràng đến những thông tin đó và sử dụng cùng thuật ngữ như trong mẫu của bạn.
+- Nếu bạn đang ghi hình để tạo báo cáo do AI sinh ra và cũng sử dụng lệnh giọng nói, hãy nói to và rõ ràng. Để giúp AI nhận diện vị trí, số đo, vấn đề và điền vào các mẫu kiểm tra của bạn, hãy đề cập rõ ràng đến những yếu tố này và sử dụng cùng thuật ngữ như trong mẫu của bạn.
 
 
 > Lưu ý: Hầu hết các tính năng của Avatour cũng có sẵn cho video 2D.

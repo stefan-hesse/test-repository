@@ -590,7 +590,7 @@ For your first uses and getting familiar with the Avatour Web Console and the Av
 
 - We recommend to do a recorded 360° video tour before any live tour if time allows for three reasons: (1) Have a fallback solution for the live tour, (2) have something for documentation and later review (on top of the recorded live tour) and (3) start to create a library of 360° videos of all your sites which can be helpful for many use cases. 
 
-- All kit components charged for at least 90 minutes before the live meeting. We anyway recommend to have all devices on continuous charge when not in use. Like that all devices will always be ready, also for unplanned ad hoc meetings.
+- All kit components charged for at least 90 minutes before the live meeting. We recommend to have all devices on continuous charge when not in use. Like that all devices will always be ready, also for unplanned ad hoc meetings.
 
 - Have the kit fully assembled (1. tripod base + 2. Ulanzi battery + 3. extendable stick + 4. 360° cam).
 
@@ -618,7 +618,7 @@ For your first uses and getting familiar with the Avatour Web Console and the Av
 
 ### 6.3 When Operating the Cam Onsite for a 360° Video Live Meeting
 
-- When operating the camera, make sure that you **walk slowly** and **stop frequently setting the cam down on its tripot**. This helps with (1) video quality as you produce less video data by not moving the camera around unnecessarily and (2) reduces any potential video downtime when the camera’s network connection switches between WiFi access points.
+- When operating the camera, make sure that you **walk slowly** and **stop frequently setting the cam down on its tripod**. This helps with (1) video quality as you produce less video data by not moving the camera around unnecessarily and (2) reduces any potential video downtime when the camera’s network connection switches between WiFi access points.
 
 - Hold the camera out in front of you, and above eye level. This allows all remote participants to see the majority of your surrounding area.
 
@@ -640,7 +640,7 @@ For your first uses and getting familiar with the Avatour Web Console and the Av
 
 ### 6.4 When Operating the Cam Onsite for Quick Capture (offline 360° video recording)
 
-- The non-connectivity related advices above in general also apply to offline recording (e.g. go slowly)
+- The non-connectivity related advice above in general also apply to offline recording (e.g. go slowly)
 
 - Always use an external bluetooth audio headset.
 
@@ -650,7 +650,7 @@ For your first uses and getting familiar with the Avatour Web Console and the Av
 
 - Set the camera down and point to things you want to highlight. If you set Direction Lock to No you can even point to something with the 360° cam (e.g. using the front lens).  
 
-- If you are recording to have an AI generated report and you also use voice commands speak loud and clear. To help AI identify locations, measures, issues and to fill your inspection templates mention those explcicitly and use the same terminology as is used in your template.
+- If you are recording to have an AI generated report and you also use voice commands speak loud and clear. To help AI identify locations, measures, issues and to fill your inspection templates mention those explicitly and use the same terminology as is used in your template.
 
 
 > N.B.: Most Avatour features are equally available for 2D videos.

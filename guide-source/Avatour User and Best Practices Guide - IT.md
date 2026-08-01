@@ -579,22 +579,22 @@ Ecco i menu (1) Livello superiore, (2) Impostazioni e (3) Impostazioni di rete.
 
 ### 6.1 Primi utilizzi (informali) e familiarizzazione
 
-Per i primi utilizzi e per familiarizzare con la console web di Avatour e il kit Avatour Turnkey, consigliamo di seguire questi passaggi:
+Per i primi utilizzi e per familiarizzare con la console web di Avatour e con il kit Avatour Turnkey, consigliamo di seguire questi passaggi:
 
 1. Portate il kit a casa e provatelo con familiari e amici utilizzando la vostra connessione Internet domestica.
-2. Portate il kit in ufficio e collegatelo alla rete aziendale (potrebbero sorgere alcune problematiche aziendali, ad esempio i firewall aziendali, ma sapete già dal primo passo che Avatour funziona e che si tratta di un aspetto che il vostro team IT dovrà risolvere con l’aiuto di Avatour).
-3. Iniziate a utilizzare Avatour in loco (al di fuori del vostro ufficio) presso la sede della riunione verso cui i partecipanti remoti dovrebbero normalmente recarsi. Potrebbero emergere ulteriori questioni relative alla connettività; Avatour vi aiuterà in collaborazione con il vostro team IT.
+2. Portate il kit in ufficio e collegatelo alla rete aziendale (potrebbero presentarsi alcune problematiche aziendali, ad esempio i firewall aziendali, ma sapete già dal primo passo che Avatour funziona e che si tratta di un aspetto che il vostro team IT dovrà risolvere con l’aiuto di Avatour).
+3. Iniziate a utilizzare Avatour in loco (fuori dal vostro ufficio) presso la sede della riunione verso cui i partecipanti remoti dovrebbero normalmente recarsi. Potrebbero emergere ulteriori questioni relative alla connettività; Avatour vi aiuterà in collaborazione con il vostro team IT.
 4. Iniziate a utilizzarlo con partecipanti remoti interni ed esterni.
 
 ### 6.2 Prima di una riunione live con video a 360°
 
-- Se il tempo lo consente, vi consigliamo di realizzare un tour video a 360° registrato prima di qualsiasi tour live, per tre motivi: (1) Disporre di una soluzione di riserva per il tour in diretta, (2) avere materiale per la documentazione e la revisione successiva (oltre al tour in diretta registrato) e (3) iniziare a creare una libreria di video a 360° di tutte le vostre sedi, che potrà rivelarsi utile in molti casi d’uso. 
+- Se il tempo lo consente, vi consigliamo di realizzare un tour video a 360° registrato prima di qualsiasi tour live, per tre motivi: (1) Disporre di una soluzione di riserva per il tour in diretta, (2) avere materiale di documentazione e per una revisione successiva (oltre al tour in diretta registrato) e (3) iniziare a creare una libreria di video a 360° di tutte le vostre sedi, che potrà rivelarsi utile in molti casi d’uso. 
 
-- Caricare tutti i componenti del kit per almeno 90 minuti prima della riunione in diretta. Raccomandiamo comunque di tenere tutti i dispositivi in carica continua quando non sono in uso. In questo modo tutti i dispositivi saranno sempre pronti, anche per riunioni ad hoc non programmate.
+- Caricare tutti i componenti del kit per almeno 90 minuti prima della riunione in diretta. Si consiglia di tenere tutti i dispositivi in ricarica continua quando non sono in uso. In questo modo tutti i dispositivi saranno sempre pronti, anche per riunioni ad hoc non programmate.
 
-- Assicuratevi che il kit sia completamente assemblato (1. base del treppiede + 2. batteria Ulanzi + 3. asta estensibile + 4. videocamera a 360°).
+- Assicurarsi che il kit sia completamente assemblato (1. base del treppiede + 2. batteria Ulanzi + 3. asta estensibile + 4. videocamera a 360°).
 
-- Verificate che sia stato creato uno spazio di lavoro per ospitare una riunione in diretta e includete tutte le risorse pertinenti.
+- Verificare che sia stato creato uno spazio di lavoro per ospitare una riunione in diretta e includere tutte le risorse pertinenti.
 
 - Invita tutti i partecipanti alla riunione tramite il tuo Workspace. In questo modo verrà creato un invito sui calendari di tutti i partecipanti, che includerà il link di invito alla riunione.
 
@@ -612,13 +612,13 @@ Per i primi utilizzi e per familiarizzare con la console web di Avatour e il kit
 
 - Se alla riunione partecipano persone da remoto che non hanno mai utilizzato Avatour prima d’ora, fornite loro una breve panoramica della piattaforma, delle sue funzionalità (video live a 360°, risorse, istantanee, annotazioni, spotlight) e degli strumenti di riunione.
 
-- È possibile iniziare utilizzando un’altra soluzione di videoconferenza (ad es. Teams, Zoom, Google Meet), ma prima di passare ad Avatour è necessario chiudere completamente l’altra applicazione di videoconferenza. In alcuni casi, queste altre applicazioni daranno la priorità al microfono, agli altoparlanti o alla webcam del tuo dispositivo, causandone la disattivazione per Avatour. Inoltre, NON eseguire Avatour E un’altra videoconferenza contemporaneamente, poiché ciò ridurrà la larghezza di banda disponibile.
+- È possibile iniziare utilizzando un’altra soluzione di videoconferenza (ad es. Teams, Zoom, Google Meet), ma prima di passare ad Avatour è necessario chiudere completamente l’altra applicazione di videoconferenza. In alcuni casi, queste altre applicazioni daranno la priorità al microfono, agli altoparlanti o alla webcam del dispositivo, causandone la disattivazione per Avatour. Inoltre, NON eseguire Avatour E un’altra videoconferenza contemporaneamente, poiché ciò ridurrà la larghezza di banda disponibile.
 
 - Se si prevede di utilizzare la videocamera a 360° in un ambiente con temperature elevate, si consiglia di utilizzare il modulo di raffreddamento (solo Pilot Pano). Ciò contribuirà a ridurre il rischio che la videocamera si surriscaldi e si spenga automaticamente.
 
 ### 6.3 Quando si utilizza la fotocamera in loco per una riunione video live a 360°
 
-- Durante l’utilizzo della fotocamera, assicurati di **camminare lentamente** e di **fermarti spesso per appoggiare la fotocamera sul treppiede**. Ciò contribuisce a (1) migliorare la qualità video, poiché si generano meno dati video evitando di spostare inutilmente la fotocamera, e (2) ridurre eventuali interruzioni del video quando la connessione di rete della fotocamera passa da un punto di accesso Wi-Fi all’altro.
+- Durante l’utilizzo della fotocamera, assicurati di **camminare lentamente** e di **fermarti spesso per appoggiare la fotocamera sul treppiede**. Ciò contribuisce a (1) migliorare la qualità video, poiché si generano meno dati video evitando di spostare inutilmente la fotocamera, e (2) ridurre eventuali interruzioni video quando la connessione di rete della fotocamera passa da un punto di accesso Wi-Fi all’altro.
 
 - Tenete la fotocamera davanti a voi, al di sopra dell’altezza degli occhi. In questo modo tutti i partecipanti in remoto potranno vedere la maggior parte dell’area circostante.
 
@@ -628,13 +628,13 @@ Per i primi utilizzi e per familiarizzare con la console web di Avatour e il kit
 
 - Quando la velocità di trasmissione della telecamera inizia a scendere al di sotto dei 2 Mbps, cammina più lentamente o fermati completamente finché il segnale non si stabilizza nuovamente. Questo di solito accade quando si passa da un punto di accesso Wi-Fi a un altro. 
 
-- Se sai che la connessione e il video subiranno un calo quando ti sposterai in una determinata posizione (ad esempio: passando da un’area di produzione al chiuso a un’area all’aperto), avvisa in anticipo i partecipanti remoti.
+- Se sai che la connessione e il video subiranno un calo quando ti sposterai in una posizione specifica (ad esempio: passando da un’area di produzione al chiuso a un’area all’aperto), avvisa in anticipo i partecipanti remoti.
 
-- Se è necessario mostrare qualcosa con un elevato livello di dettaglio o con caratteri piccoli, è possibile avvicinarsi molto con la telecamera a 360°; in alternativa, è possibile utilizzare il proprio smartphone o quello di un partecipante in loco per collegarsi alla riunione e mostrare la fotocamera (posteriore) del proprio o del loro telefono.
+- Se è necessario mostrare qualcosa con un elevato livello di dettaglio o con caratteri piccoli, è possibile avvicinarsi molto con la telecamera a 360°; in alternativa, è possibile utilizzare il proprio smartphone o quello di un partecipante in loco per collegarsi alla riunione e mostrare l’immagine ripresa dalla fotocamera (posteriore) del proprio o del suo telefono.
 
 - Se possibile, consigliamo la presenza di una persona in più in loco per assistere nella condivisione della fotocamera dello smartphone descritta sopra, poiché spesso ciò si rivela utile o necessario.
 
-- Idealmente, gli utenti di smartphone presenti in loco dovrebbero partecipare alla riunione (1) in modalità in loco e (2) su una rete diversa da quella utilizzata dalla telecamera, per non sottrarre alla telecamera a 360° la larghezza di banda di upload necessaria.
+- Idealmente, gli utenti di smartphone presenti in loco dovrebbero partecipare alla riunione (1) in modalità in loco e (2) su una rete diversa da quella utilizzata dalla videocamera, per non sottrarre larghezza di banda di upload fondamentale alla videocamera a 360°.
 
 - Tutti i partecipanti in loco che si collegano dal proprio smartphone dovrebbero avere l’audio disattivato, a meno che non stiano parlando attivamente.
 
@@ -648,9 +648,9 @@ Per i primi utilizzi e per familiarizzare con la console web di Avatour e il kit
 
 - Anticipare ciò che gli spettatori vorranno vedere, ad esempio i dettagli: avvicinarsi molto con la telecamera a 360° e attendere qualche istante.
 
-- Appoggia la videocamera e puntala verso gli elementi che desideri mettere in evidenza. Se imposti il Blocco direzione su No, puoi persino puntare verso qualcosa con la videocamera a 360° (ad es. utilizzando l’obiettivo frontale).  
+- Appoggia la videocamera e punta verso gli elementi che desideri mettere in evidenza. Se imposti il Blocco direzione su No, puoi persino puntare verso qualcosa con la videocamera a 360° (ad es. utilizzando l’obiettivo frontale).  
 
-- Se stai registrando per ottenere un report generato dall’IA e utilizzi anche i comandi vocali, parla ad alta voce e in modo chiaro. Per aiutare l’IA a identificare luoghi, misure, problemi e a compilare i vostri modelli di ispezione, menzionateli esplicitamente e utilizzate la stessa terminologia impiegata nel vostro modello.
+- Se stai registrando per ottenere un rapporto generato dall’IA e utilizzi anche i comandi vocali, parla ad alta voce e in modo chiaro. Per aiutare l’IA a identificare luoghi, misure, problemi e a compilare i modelli di ispezione, menzionateli esplicitamente e utilizzate la stessa terminologia impiegata nel modello.
 
 
 > N.B.: La maggior parte delle funzionalità di Avatour è disponibile anche per i video 2D.
