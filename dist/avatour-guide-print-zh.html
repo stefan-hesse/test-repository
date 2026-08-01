@@ -340,7 +340,7 @@ body.print-mode .guide-article table { page-break-inside: avoid; }
 <a href="#for-host-and-admin-users-avatour-web-console">4. 面向主机和管理员用户——Avatour Web 控制台</a>
 <a href="#web-console-overview-main-menu" class="sub">4.1 Web 控制台 - 概述 主菜单</a>
 <a href="#web-console-details-by-menu-item" class="sub">4.2 Web 控制台 - 按菜单项详细说明（附图）</a>
-<a href="#onsite-how-to-use-the-avatour-turnkey-kit">5. 现场操作——如何使用 Avatour 整套解决方案</a>
+<a href="#onsite-how-to-use-the-avatour-turnkey-kit">5. 现场操作——如何使用 Avatour 交钥匙套件</a>
 <a href="#51-入门指南" class="sub">5.1 入门指南</a>
 <a href="#52-实用提示" class="sub">5.2 实用提示</a>
 <a href="#53-avatour-相机应用" class="sub">5.3 Avatour 相机应用</a>
@@ -348,6 +348,7 @@ body.print-mode .guide-article table { page-break-inside: avoid; }
 <a href="#61-首次非正式使用与熟悉操作" class="sub">6.1 首次（非正式）使用与熟悉操作</a>
 <a href="#62-360视频直播会议前" class="sub">6.2 360°视频直播会议前</a>
 <a href="#63-在现场操作-360-视频直播会议相机时" class="sub">6.3 在现场操作 360° 视频直播会议相机时</a>
+<a href="#64-现场操作相机进行快速拍摄离线-360-视频录制" class="sub">6.4 现场操作相机进行快速拍摄（离线 360° 视频录制）</a>
 <div class="sidenav-section">Reference</div>
 <a href="https://avatour.com/glossary" target="_blank" rel="noopener">Glossary ↗</a>
 <a href="https://avatour.com/faqs" target="_blank" rel="noopener">FAQs ↗</a>
@@ -495,7 +496,7 @@ Avatour中常用关键术语和概念的定义。</li>
   - 您通常会收到一封包含<strong>直接加入链接</strong>的<strong>日历邀请</strong>（例如：<code>https://avatour.live/join?s=xxxxx</code>）。  </p>
 <ul>
 <li>点击该链接后，系统会自动填入 <strong>5 位会议代码</strong> 并带您进入会议。</li>
-<li><strong>需要身份验证：</strong> 部分会议仅限注册用户参加。这种情况下，邀请中会注明您需要 <strong>登录才能加入会议</strong>。  </li>
+<li><strong>需要身份验证：</strong> 部分会议仅限注册用户参加。 此时，邀请中会注明您需要 <strong>登录才能加入会议</strong>。</li>
 <li><strong>密码保护的会议：</strong> 某些会议可能需要密码。这种情况下，邀请中会包含您必须输入的密码才能加入。</li>
 </ul>
 </li>
@@ -509,10 +510,10 @@ Avatour中常用关键术语和概念的定义。</li>
 </li>
 </ol>
 <blockquote>
-<p><strong>提示 1：</strong> 如果您的摄像头或麦克风无法正常工作，可能是因为它们正被其他应用程序（例如 Microsoft Teams 或 Zoom）占用。 请关闭所有可能正在使用摄像头或麦克风的应用程序，然后退出并重新加入 Avatour 会议。  </p>
+<p><strong>提示 1：</strong> 如果您的摄像头或麦克风无法正常工作，可能是因为它们正被其他应用程序（例如 Microsoft Teams 或 Zoom）占用。请关闭所有可能正在使用您的摄像头或麦克风的应用程序，然后退出并重新加入 Avatour 会议。  </p>
 <p><strong>提示 2：</strong> 如果您仍然无法加入会议，请运行此测试：<a href="https://avatour.live/test" target="_blank" rel="noopener">https://avatour.live/test</a>。<br />
-该测试可识别您的<strong>企业防火墙或网络</strong>是否正在阻止访问，并提供相关信息以指导您与 IT 团队的沟通。  </p>
-<p><strong>提示 3：</strong> <strong>请勿</strong>使用 Avatour iOS 或 Android 应用加入会议。仅当<strong>通过 Insta360 相机直播会议</strong>时才需要这些应用，因为该类相机无法直接运行 Avatour 360° 软件，需要智能手机协助。</p>
+该测试可识别您的<strong>企业防火墙或网络</strong>是否正在阻断访问，并提供相关信息以供您与IT团队沟通时参考。  </p>
+<p><strong>提示 3：</strong> <strong>请勿</strong>使用 Avatour 的 iOS 或 Android 应用加入会议。 仅当<strong>通过 Insta360 相机直播会议</strong>时才需要使用这些应用，因为这些相机无法直接运行 Avatour 360° 软件，需要智能手机协助。</p>
 </blockquote>
 <h5 id="访问-avatour-工作区无需加入-avatour-会议">访问 Avatour 工作区（无需加入 Avatour 会议）</h5>
 <p>您可以通过以下方式访问工作区：</p>
@@ -531,32 +532,32 @@ Avatour中常用关键术语和概念的定义。</li>
 </ol>
 </li>
 </ul>
-<p>此外，您还可以访问 <a href="https://avatour.live/login" target="_blank" rel="noopener">https://avatour.live/login</a> 登录，并从您的 <strong>工作区列表</strong> 中进入该工作区。</p>
-<h4 id="vr-headset">3.1.2 VR头显</h4>
-<p>您可以通过多种兼容的Meta和Pico头显加入会议并访问工作区。操作步骤如下： </p>
+<p>此外，您也可以访问 <a href="https://avatour.live/login" target="_blank" rel="noopener">https://avatour.live/login</a> 登录，并从您的 <strong>工作区列表</strong> 中进入该工作区。</p>
+<h4 id="vr-headset">3.1.2 VR 头显</h4>
+<p>您可以通过多种兼容的 Meta 和 Pico 头显加入会议并访问工作区。操作步骤如下： </p>
 <ol>
 <li>从您所在平台的 VR 应用商店安装我们的 Avatour 应用：<a href="https://avatour.com/support/which-vr-headsets-can-i-use-with-avatour" target="_blank" rel="noopener">如何安装 Avatour VR 应用</a></li>
-<li>启动应用，输入会议代码或选择一个工作区以加入会议。有关如何使用我们 VR 应用的更多信息，请参阅我们的知识库文章 <a href="https://avatour.com/support/what-features-are-available-to-vr-guests" target="_blank" rel="noopener">此处</a>。</li>
+<li>打开应用，输入会议代码或选择一个工作区以加入会议。有关如何使用我们 VR 应用的更多信息，请参阅我们的知识库文章 <a href="https://avatour.com/support/what-features-are-available-to-vr-guests" target="_blank" rel="noopener">此处</a>。</li>
 </ol>
 <h3 id="meeting-tools">3.2 会议与工作区协作工具</h3>
-<p>Avatour 支持两种主要协作场景：</p>
+<p>Avatour 支持在以下两种主要场景中进行协作：</p>
 <ol>
-<li><strong>会议（同步）：</strong> 与其他参与者进行实时协作，包括现场实地考察或共同查看录制的素材。  </li>
-<li><strong>工作区（异步）：</strong> 您可以根据自己的时间安排，全天候（24/7）查看资产并与之互动。</li>
+<li><strong>会议（同步）：</strong> 与其他参与者进行实时协作，包括现场实地考察或共同审阅录制的资产。  </li>
+<li><strong>工作区（异步）：</strong> 根据您的日程安排，全天候（24/7）审阅资产并进行交互。</li>
 </ol>
-<p>会议和工作区之间的<strong>协作工具大多相似</strong>，但因同步与异步场景的不同而存在一些差异。</p>
+<p>会议和工作空间之间的<strong>协作工具基本相似</strong>，但因同步与异步场景的不同而存在一些差异。</p>
 <h4 id="321-界面布局">3.2.1 界面布局</h4>
 <p>Avatour 界面主要由三个区域组成：</p>
 <ul>
-<li><strong>左侧面板</strong> – 工作区资源及辅助工具  </li>
-<li><strong>中央画布</strong> – 实时视频或资源的主显示区域  </li>
+<li><strong>左侧面板</strong> – 工作区资产及辅助工具  </li>
+<li><strong>中央画布</strong> – 实时视频或资产的主显示区域  </li>
 <li><strong>右侧面板</strong> – 上下文信息，例如参与者、会议或聊天  </li>
 </ul>
-<p>大多数交互操作均通过<strong>底部菜单</strong>发起。<br />
+<p>大多数交互操作均从<strong>底部菜单</strong>发起。<br />
 点击菜单选项会在屏幕左侧或右侧打开一个<strong>侧边面板</strong>，而<strong>中央画布</strong>仍保持为主视图区域。</p>
 <hr />
 <h4 id="322-会议视图示例">3.2.2 会议视图示例</h4>
-<p>以下是 Avatour 会议中视图的一个示例：</p>
+<p>以下是 Avatour 会议视图的一个示例：</p>
 <p><img alt="带资源面板、空白画布和参与者面板的 Avatour 会议界面" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-meeting-assets-blank-participants_pugprq.png" /><br />
 <em>Avatour 会议界面，包含资源面板（左侧）、画布（中央）和参与者面板（右侧）</em></p>
 <hr />
@@ -571,11 +572,11 @@ Avatour中常用关键术语和概念的定义。</li>
 <p><img alt="Avatour 会议底部菜单" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-meeting-bottom-menu_bflaor.png" /><br />
 <em>Avatour 会议底部菜单</em></p>
 <ul>
-<li><strong>资源</strong> – 查看工作区文件，包括录制的视频、图片、快照和 PDF 文件。</li>
+<li><strong>资源</strong> – 查看工作区文件，包括录制的视频、图片、快照和 PDF 文件。 </li>
 <li><strong>聊天</strong> – 向所有会议参与者发送消息。  </li>
 <li><strong>摄像头</strong> – 打开或关闭网络摄像头。  </li>
 <li><strong>麦克风</strong> – 静音或取消静音。  </li>
-<li><strong>演示</strong> – 演示资源、桌面或网络摄像头画面（参见下文“演示”部分）。  </li>
+<li><strong>演示</strong> – 演示素材、桌面或网络摄像头画面（参见下文“演示”部分）。  </li>
 <li><strong>主持人工具</strong>（仅限主持人）：  <ul>
 <li><strong>锁定视图</strong> – 锁定所有参与者的视图。  </li>
 <li><strong>静音所有</strong> – 将所有参与者静音。  </li>
@@ -583,8 +584,8 @@ Avatour中常用关键术语和概念的定义。</li>
 </li>
 <li><strong>启用全屏</strong> – 将会议标签页设为全屏。  </li>
 <li><strong>退出会议</strong> – 离开会议。  </li>
-<li><strong>开始录制</strong> – 会议期间，可使用此按钮手动开始和停止录制。此外，如果在工作区设置中启用了<strong>自动开始录制</strong>，会议也可自动录制。无论哪种情况，录制内容都会保存到工作区资源中。</li>
-<li><strong>地图</strong> – 打开或关闭带有 GPS 轨迹的资源的地图面板。 点击某个位置可跳转至视频中的精确点。地图会随着视频播放实时更新。</li>
+<li><strong>开始录制</strong> – 会议期间使用此按钮手动开始和停止录制。 此外，如果在工作区设置中启用了<strong>自动开始录制</strong>，会议也可自动录制。无论哪种情况，录制内容都会保存到工作区资源中。</li>
+<li><strong>地图</strong> – 打开或关闭地图面板，以查看带有 GPS 轨迹的资源的摄像头移动轨迹。 点击某个位置可跳转至视频中的精确点。地图会随着视频播放实时更新。地图上还会显示笔记。</li>
 <li><strong>参与者</strong> – 展开或收起参与者面板。  </li>
 <li><strong>会议信息</strong> – 查看会议代码、邀请链接，并访问相关教程。  </li>
 </ul>
@@ -600,19 +601,19 @@ Avatour中常用关键术语和概念的定义。</li>
 <h5 id="演示菜单">演示菜单</h5>
 <p>会议底部菜单中的 <strong>演示</strong> 选项可让您与所有参与者共享内容。</p>
 <ul>
-<li><strong>摄像头</strong> – 共享您的智能手机/平板电脑摄像头。在实时 360° 视频会议中，此功能还可用于叠加次要视图，以展示特写镜头或特定细节。 </li>
+<li><strong>摄像头</strong> – 共享您的设备摄像头（笔记本电脑、智能手机等）。在实时 360° 视频会议中，此功能还可用于叠加次视图，以展示特写镜头或特定细节。 共享智能手机摄像头（前置或后置）时，远程会议参与者可以使用智能手机的变焦功能，还可以打开或关闭手电筒。</li>
 <li><strong>桌面</strong> – 与所有参与者共享您的桌面屏幕。  </li>
-<li><strong>素材</strong> – 展示工作区中的素材。选择素材后将打开<strong>素材工具栏</strong>，其中提供针对当前展示素材的播放控制和协作工具。</li>
+<li><strong>资源</strong> – 展示工作区中的资源。选择资源后将打开<strong>资源工具栏</strong>，其中提供针对当前展示资源的播放控制和协作工具。</li>
 </ul>
 <h5 id="资源工具栏会议">资源工具栏（会议）</h5>
 <p>在会议中展示资源时，<strong>资源工具栏</strong>会显示在画布上方。以下是在 <u>会议中展示资源</u> 时可用的工具和菜单项——按从左到右的顺序说明。</p>
-<p><img alt="在会议中展示资产时的 Avatour 菜单" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-present-asset-menu-meeting_oflsr5.png" /> <em>在会议中展示资产时的 Avatour 菜单</em></p>
+<p><img alt="会议中展示资产时的 Avatour 菜单" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-present-asset-menu-meeting_oflsr5.png" /> <em>会议中展示资产时的 Avatour 菜单</em></p>
 <ul>
-<li><strong>视频时间轴 / 进度条</strong> – 显示视频进度，并附有从音频中提取的笔记和关键主题。点击笔记或主题可跳转至该时刻并打开笔记。包含 <strong>播放 / 暂停</strong> 控制按钮。   </li>
+<li><strong>视频时间轴/进度条</strong> – 显示视频进度，并附有从音频中提取的笔记和关键主题。点击笔记或主题可跳转至该时刻并打开笔记。包含 <strong>播放/暂停</strong> 控制按钮。   </li>
 <li><strong>快照</strong> – 从素材中截取 360° 或 2D 图像。  </li>
-<li><strong>聚光灯</strong> – 在实时会议中为所有参与者突出显示特定区域。  </li>
+<li><strong>聚光灯</strong> – 在实时会议中为所有参与者突出显示特定区域。</li>
 <li><strong>显示/隐藏视角 (POV)</strong> – 在 360° 视频中显示每位参与者的视线方向。  </li>
-<li><strong>笔记</strong> – 创建锚定在素材中特定时刻的笔记。笔记可按类别（观察、问题、行动、建议）进行分类，按状态（待处理 → 进行中 → 已解决）进行跟踪，并通过直接链接分享。  </li>
+<li><strong>笔记</strong> – 创建锚定在素材中特定时刻的笔记。笔记可按类别（观察、问题、行动、建议）进行分类，按状态（待处理 → 进行中 → 已解决）进行跟踪，并通过直接链接分享。如果素材包含 GPS 轨迹，笔记还会显示 GPS 坐标。 </li>
 </ul>
 <p><img alt="Avatour 笔记和笔记筛选器" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-present-asset-menu-meeting-showing-note-and-filters_g181oc.png" /> <em>Avatour 笔记与笔记筛选器</em></p>
 <ul>
@@ -620,11 +621,11 @@ Avatour中常用关键术语和概念的定义。</li>
 </ul>
 <p><img alt="Avatour 笔记 - 语音命令生成" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-notes-voice-command-generated_ic5cu4.png" /> <em>Avatour 笔记 - 语音命令生成</em></p>
 <ul>
-<li><strong>笔记与摘要面板</strong> – 打开一个侧边面板，显示该素材的所有笔记、关键主题以及执行摘要。点击某项内容即可跳转至视频中的相应时刻。 </li>
+<li><strong>笔记与摘要面板</strong> – 打开一个侧边面板，显示该素材的所有笔记、关键主题以及执行摘要。点击某项内容即可跳转至视频中的相应时刻。  </li>
 </ul>
-<p><img alt="Avatour 素材执行摘要" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-present-asset-menu-meeting-showing-exec-summary_cqpqbs.png" /> <em>在会议中展示素材时的 Avatour 执行摘要</em></p>
+<p><img alt="Avatour 素材执行摘要" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-present-asset-menu-meeting-showing-exec-summary_cqpqbs.png" /> <em>在会议中演示资产时的 Avatour 执行摘要</em></p>
 <p><img alt="Avatour 主题" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-present-asset-menu-meeting-showing-topics_duuq1a.png" /> <em>在会议中展示资产时的 Avatour 主题</em></p>
-<p>在<strong>侧边栏</strong>中，您可以<strong>打印资产报告</strong>或<strong>将其下载为 TXT 或 CSV 格式</strong>。报告可包含笔记、AI 生成的主题以及完整转录内容。您还可以在导出前<strong>选择要包含的元素</strong>。  </p>
+<p>在 <strong>侧边栏</strong> 中，您可以 <strong>打印资产报告</strong> 或 <strong>将其下载为 TXT 或 CSV 文件</strong>。报告可包含多个元素，您可以在 <strong>导出前</strong> 进行选择。 </p>
 <p><img alt="Avatour 资产报告打印菜单" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-asset-report-print-menus_kn0syn.png" /><br />
 <em>Avatour 资产报告打印/下载菜单</em>  </p>
 <p><img alt="Avatour 打印资产报告元素选择" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-asset-report-element-selection_ud8c5k.png" /><br />
@@ -637,10 +638,10 @@ Avatour中常用关键术语和概念的定义。</li>
 <p>在工作区中查看资源时，工具栏与上述类似，但针对个人使用进行了优化：</p>
 <p><img alt="在会议外展示资产时的 Avatour 菜单，例如访问工作区时" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-present-asset-menu-workspace_iri8gc.png" /> <em>在工作区中展示资产时的 Avatour 菜单</em></p>
 <ul>
-<li><strong>视频时间轴 / 进度条</strong> – 显示视频进度，并附有从音频轨道中提取的笔记和关键主题。点击时间轴上的任意位置可快进或快退视频。点击笔记或主题可跳转至该时刻并打开笔记。 包含 <strong>播放 / 暂停</strong> 控制按钮。  </li>
+<li><strong>视频时间轴 / 进度条</strong> – 显示视频进度，并附有从音频轨道中提取的笔记和关键主题。 点击时间轴上的任意位置可快进或快退视频。点击笔记或主题可跳转至该时刻并打开笔记。包含 <strong>播放/暂停</strong> 控制按钮。  </li>
 <li><strong>快照、笔记、笔记与摘要面板、分享链接、隐藏式字幕</strong>  </li>
 <li>不可用：<strong>聚光灯、视角</strong>（这些功能需要实时参与者）  </li>
-<li>其他控制选项：<ul>
+<li>其他控制：<ul>
 <li><strong>10 秒步长</strong> – 向前/向后跳转  </li>
 <li><strong>播放速度</strong> – 调整速度（0.5×–2×）  </li>
 <li><strong>裁剪视频</strong> – 裁剪素材的开头或结尾</li>
@@ -674,30 +675,32 @@ Avatour中常用关键术语和概念的定义。</li>
 <p>点击铃铛图标，即可查看过去 7 天内工作区的活动摘要。</p>
 <p><img alt="Avatour Web 控制台 - 工作区近期活动" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-main-menu-workspace-recent-activities_gby1ws.png" /> <em>工作区近期活动</em></p>
 <p>在工作区内部：</p>
-<p><img alt="带有资源面板、空白画布和会议面板的 Avatour 工作区" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-workspace-assets-blank-meetings_qeumpl.png" /> <em>包含资源（左侧）、画布（中间）和会议（右侧）的工作区</em></p>
+<p><img alt="带有资源面板、空白画布和会议面板的 Avatour 工作区" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/v1785425098/Capture_d_%C3%A9cran_2026-07-28_153353_udkvkl.png" /> <em>包含资产的工作区（左侧）、工作区仪表盘（中间）、会议（右侧）</em></p>
+<p>中间是工作区仪表盘，为您提供该工作区所分配资产中所有笔记的概览，并配有多个下拉菜单，可按各种笔记属性进行筛选。</p>
+<p>在底部菜单中，您将看到：</p>
 <ul>
 <li><strong>资源</strong> – 管理分配给此工作区的文件。  </li>
 <li><strong>协作者</strong> – 
-  通过以下权限控制工作区的访问权限：<ul>
-<li><strong>查看者</strong> – 可查看资源。系统会在需要时通过邀请创建“访客”用户。  </li>
-<li><strong>编辑者</strong> – 拥有工作区的完全控制权，权限与“主持人”相同。 如有需要，系统会通过邀请将用户升级为主持人。  <blockquote>
-<p>多个用户可在不召开会议的情况下同时访问工作区。公共工作区和会议访问设置提供了其他访问方式。  </p>
+  通过以下角色控制对工作区的访问权限：<ul>
+<li><strong>查看者</strong> – 可查看资源。 若需邀请，系统将创建“访客”用户。  </li>
+<li><strong>编辑者</strong> – 拥有工作区完全控制权，权限与“主持人”相同。若需邀请，系统将把用户升级为“主持人”。  <blockquote>
+<p>多个用户可在不召开会议的情况下同时访问工作区。 公共工作区和会议访问设置提供了其他访问方式。  </p>
 </blockquote>
 </li>
 </ul>
 </li>
-<li><strong>报告</strong> – 使用检查清单模板，针对选定工作区资源生成报告。  </li>
+<li><strong>报告</strong> – 使用检查模板针对选定工作区资产生成报告。AI 会根据所选视频中的音频轨道生成响应。  </li>
 </ul>
 <p><img alt="Avatour 工作区报告与资产选择" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-asset-selection-and-workspace-report_itjt8f.png" /> <em>工作区报告与资产选择</em></p>
 <ul>
-<li><strong>地图</strong> – 在地图上显示支持 GPS 的资产位置。  </li>
-<li><strong>会议</strong> – 在工作空间中组织会议。  </li>
-<li><strong>设置</strong> – 配置工作空间和会议的默认设置：</li>
+<li><strong>地图</strong> – 如上文关于会议的说明，在地图上显示支持 GPS 的资产位置。</li>
+<li><strong>会议</strong> – 在工作区中组织会议。  </li>
+<li><strong>设置</strong> – 配置工作区和会议的默认设置：</li>
 </ul>
 <p><img alt="Avatour 设置 - 工作区视图" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-workspace-settings_llcei3.png" /> <em>工作区设置</em></p>
 <p><strong>工作区设置</strong></p>
 <ul>
-<li><strong>报告模板</strong> – 选择用于 AI 报告的检查清单模板。  </li>
+<li><strong>报告模板</strong> – 选择用于 AI 生成报告的检查模板。您可以在“账户”中上传这些模板（见下文）。  </li>
 <li><strong>启用通知</strong> – 针对笔记状态变更发送每日汇总邮件。  </li>
 </ul>
 <p><img alt="邮件通知 - 示例" src="https://res.cloudinary.com/avatour/image/upload/c_crop,h_600,w_600,x_170,y_60,f_auto,q_auto/Screenshot_2026-03-05_140654_bjk0xk.png" /> <em>邮件通知示例</em></p>
@@ -719,39 +722,47 @@ Avatour中常用关键术语和概念的定义。</li>
 </blockquote>
 <hr />
 <h4 id="422-资源">4.2.2 资源</h4>
-<p>管理所有 360°/2D 视频、图片和 PDF 文件。上传/下载资源、分配到工作区、与其他用户共享、重命名、打印/下载报告、启用面部模糊以及 AI 摘要功能。</p>
-<p><img alt="Avatour Web 控制台 - 主菜单项“资源”" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-main-menu-assets_ky5emz.png" /> <em>主菜单项“资源”</em></p>
-<hr />
-<h4 id="423-分析">4.2.3 分析</h4>
-<p>提供有关会议、工作区使用情况及投资回报率（ROI）指标的深入分析。</p>
+<p>管理所有 360°/2D 视频、图片和 PDF 文件。上传/下载资源、分配到工作区、与其他用户共享、重命名、打印/下载报告、启用人脸模糊以及 AI 摘要功能。</p>
+<p><img alt="Avatour 网页控制台 - 主菜单项“资源”" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-main-menu-assets_ky5emz.png" /> <em>主菜单项“资源”</em></p>
+<p>您还可以生成 HTML 代码，以便将资产公开嵌入（例如在您的网站上）。只需勾选“启用公开嵌入”复选框，然后点击保存即可获取代码。</p>
+<p><img alt="Avatour Web 控制台 - 主菜单项“资源”" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/v1777898836/Capture_d_%C3%A9cran_2026-04-29_115840_mtau8g.png" /> <em>主菜单项资源</em></p>
+<h4 id="423-设置">4.2.3 设置</h4>
+<p>管理员用户可访问此菜单，集中管理整个 Avatour 平台的设置。每个设置项均可勾选或取消勾选，以将其设为整个平台的默认设置。 每个设置项还可以被锁定，这意味着平台的其他用户无法更改该默认设置。在此处，您还可以针对品牌形象（徽标、颜色等）进行营销定制。</p>
+<p><img alt="Avatour 网络控制台 - 主菜单项设置" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/v1781172727/avatour-screenshot-main-menu-settings-1-of-2_fsaatf.jpg" /> <em>“设置”部分</em></p>
+<h4 id="424-账户">4.2.4 账户</h4>
+<p>在此处，您可以查看账户详情、管理已注册用户，以及上传检查模板以生成工作区报告（参见上文）。</p>
+<p><img alt="Avatour Web 控制台 - 主菜单项“账户”" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/v1781172273/avatour-screenshot-main-menu-account-1-of-2_oq5amr.jpg" /> <em>账户概览</em></p>
+<h4 id="425-分析">4.2.5 分析</h4>
+<p>提供有关会议、工作区使用情况以及投资回报率（ROI）指标的深入分析。</p>
 <p><img alt="Avatour Web 控制台 - 主菜单项“分析”（1/3）" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-main-menu-analytics-1-of-3_ds3epe.png" /> <em>分析概览</em></p>
 <p><img alt="Avatour Web 控制台 - 主菜单项“分析”（第 2 页，共 3 页）" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-main-menu-analytics-2-of-3_vpcsme.png" /> <em>会议活动与工作区使用情况</em></p>
-<p><img alt="Avatour Web 控制台 - 主菜单项“分析”（第 3 页，共 3 页）" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-main-menu-analytics-3-of-3_hn2pmr.png" /> <em>设备许可证使用情况与投资回报率</em> </p>
-<h2 id="onsite-how-to-use-the-avatour-turnkey-kit">5. 现场操作——如何使用 Avatour 整套解决方案</h2>
+<p><img alt="Avatour Web 控制台 - 主菜单项“分析”（第 3 页，共 3 页）" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-main-menu-analytics-3-of-3_hn2pmr.png" /> <em>成本节约与设备许可证使用情况</em> </p>
+<h2 id="onsite-how-to-use-the-avatour-turnkey-kit">5. 现场操作——如何使用 Avatour 交钥匙套件</h2>
 <h3 id="51-入门指南">5.1 入门指南</h3>
-<p>您可以在这里找到一份非常全面的在线指南，帮助您开始使用 Avatour 交钥匙套件：<a href="https://avatour.com/quickstart-panox-v2" target="_blank" rel="noopener">快速入门指南 – Avatour 交钥匙套件 3.1（Pilot PanoX V2 设置）</a></p>
-<p>此外，这里还附有您将在 3.1 套件箱盖内侧找到的带说明的图片。
+<p>您可以在此找到一份非常全面的在线指南，帮助您开始使用 Avatour 交钥匙套件：<a href="https://avatour.com/quickstart-panox-v2" target="_blank" rel="noopener">快速入门指南 – Avatour 交钥匙套件 3.1（Pilot PanoX V2 设置）</a></p>
+<p>此外，这里还附有您在 3.1 套件箱盖内侧看到的带说明的图片。
 <img alt="Avatour 套件箱盖内侧的图片" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/v1775994773/avatour-turnkey-kit-3.1-inside-lid-picture_dq4ipl.png" /> <em>Avatour套件盒盖内侧图片</em> </p>
 <p>请按照指南和说明进行拆箱、组装并开启相机电源。</p>
 <hr />
 <h3 id="52-实用提示">5.2 实用提示</h3>
-<h4 id="外接电池延长直播会议时长并改善散热效果">外接电池——延长直播会议时长并改善散热效果</h4>
+<h4 id="外接电池延长直播时长并改善散热效果">外接电池——延长直播时长并改善散热效果</h4>
+<p>相机内置电池续航时间约为 30-45 分钟。当电量不足时，系统会发出提示。使用外接电池可延长运行时间，甚至实现无限续航，因为您可以在运行过程中更换电池。</p>
 <ul>
 <li>
-<p><strong>如果您的套件包含 Ulanzi 电池：</strong> 将其安装在三脚架底座与伸缩杆之间，然后通过 USB-C 接口将电池连接至摄像机。  </p>
+<p><strong>如果您的套装包含 Ulanzi 电池：</strong> 将其安装在三脚架底座与伸缩杆之间，然后通过 USB-C 接口将电池连接至相机。  </p>
 </li>
 <li>
-<p><strong>如果您的套件包含 Telesin 电池杆：</strong> 将摄像机直接安装在 Telesin 可伸缩电池杆上，并通过 USB-C 接口连接。  </p>
+<p><strong>如果您的套装包含 Telesin 电池杆：</strong> 将相机直接安装在 Telesin 可伸缩电池杆上，并通过 USB-C 接口连接。  </p>
 </li>
 </ul>
 <p>使用外接电池：</p>
 <ol>
-<li>将总续航时间从约 40 分钟（仅靠摄像机电池）延长至约 3 小时。  </li>
-<li>增强了摄像头的稳定性。  </li>
+<li>将总续航时间从约 40 分钟（仅靠相机电池）延长至约 3 小时。  </li>
+<li>增强摄像机系统的稳定性。  </li>
 <li>有助于防止潜在的过热问题。  </li>
 </ol>
 <blockquote>
-<p>我们建议从一开始就始终使用外接电池，尤其是在进行实时会议时。</p>
+<p>我们建议从一开始就始终使用外置电池，尤其是在进行实时会议时。</p>
 </blockquote>
 <h4 id="实时会议和录制时的音频注意事项">实时会议和录制时的音频注意事项</h4>
 <ul>
@@ -760,34 +771,34 @@ Avatour中常用关键术语和概念的定义。</li>
   请使用套件中随附的 Shokz 耳机，以确保音频录制清晰。  </p>
 <ul>
 <li><strong>开机/关机：</strong> 长按“+”按钮 3 秒（蓝色 LED 亮表示开机，红色 LED 亮表示关机）。  </li>
-<li><strong>蓝牙配对模式：</strong> 在耳机关闭状态下，长按“+”键 5 秒（LED 灯交替闪烁蓝光/红光）。  </li>
-<li><strong>音量调节：</strong> 使用“+”和“-”键。  </li>
+<li><strong>蓝牙配对模式：</strong> 头戴式耳机处于关闭状态时，长按“+”按钮 5 秒（LED 灯交替闪烁蓝光/红光）。  </li>
+<li><strong>音量调节：</strong> 使用“+”和“-”按钮。  </li>
 </ul>
 </li>
 <li>
-<p><strong>较安静的环境 / 摄像头附近有多名参与者：</strong> 
+<p><strong>安静环境 / 摄像头附近有多名参与者：</strong> 
   请使用 NoxGear 夹式麦克风。虽然其音质不如会议专用麦克风（例如 Jabra Speak）高保真，但可轻松夹在衬衫上，并能有效拾取附近的声音。  </p>
 <ul>
 <li><strong>开/关机：</strong> 长按“播放/暂停”按钮 2 秒。  </li>
-<li><strong>蓝牙配对模式：</strong> 开机后自动进入配对模式（LED 指示灯蓝红交替闪烁；配对成功后显示蓝灯常亮）。  </li>
-<li><strong>音量：</strong> 使用“+”和“-”按钮。  </li>
+<li><strong>蓝牙配对模式：</strong> 开机后自动进入配对模式（LED 灯蓝红交替闪烁；配对成功后 LED 灯持续亮蓝）。  </li>
+<li><strong>音量调节：</strong> 使用“+”和“-”按钮。  </li>
 </ul>
 </li>
 <li>
-<p><strong>使用自有设备：</strong> 如果您更倾向于使用其他设备（例如会议扬声器或个人耳机），可通过摄像机进行配对：设置 → 蓝牙。  </p>
+<p><strong>使用自有设备：</strong> 如果您更倾向于使用其他设备（例如会议扬声器或个人耳机），可通过相机进行配对：设置 → 蓝牙。  </p>
 </li>
 </ul>
-<h4 id="网络连接网络连接网络连接">网络连接、网络连接、网络连接</h4>
-<p><strong>开始前：</strong> 请通过以下方式确保网络连接：</p>
+<h4 id="连接">连接</h4>
+<p><strong>开始前：</strong>请确保通过以下方式连接互联网：</p>
 <ul>
-<li><strong>本地 Wi-Fi</strong>（首选）</li>
+<li><strong>本地 Wi-Fi</strong>（推荐）</li>
 <li><strong>移动网络</strong>（若处于 Wi-Fi 覆盖范围外）</li>
 </ul>
-<p><strong>推荐带宽：</strong> 10 Mbps 上行/下行带宽可实现完整的 360° 流媒体传输（约 5 Mbps）。较低的带宽（1–2 Mbps）仅在静止时有效。</p>
+<p><strong>推荐带宽：</strong> 10 Mbps 上行/下行带宽可实现完整的 360° 流媒体传输（约 5 Mbps）。较低的带宽（1–2 Mbps）仅在静止状态下有效。</p>
 <h5 id="测试网络速度">测试网络速度</h5>
 <ul>
 <li><strong>单点测试：</strong> 使用您常用的任何网速测试工具（例如 <a href="https://www.speedtest.net" target="_blank" rel="noopener">Speedtest</a>）来验证上传和下载带宽。   </li>
-<li><strong>现场行走测试：</strong> 在摄像头端：设置 → 网络 → 连接测试。在整个空间内走动，以确认信号覆盖范围和带宽。</li>
+<li><strong>现场移动测试：</strong> 在摄像头中：设置 → 网络 → 连接测试。 在整个空间内走动，以确认覆盖范围和带宽。</li>
 </ul>
 <h5 id="本地-wi-fi">本地 Wi-Fi</h5>
 <ul>
@@ -795,12 +806,12 @@ Avatour中常用关键术语和概念的定义。</li>
 <li>如果 IT 部门要求加入白名单，请查找 MAC 地址：设置 → 关于 → Wi-Fi 地址。</li>
 </ul>
 <h5 id="移动网络">移动网络</h5>
-<p><strong>方案 A： 套件提供的热点及SIM卡</strong>  </p>
+<p><strong>方案 A：套件提供的热点和 SIM 卡</strong>  </p>
 <ul>
-<li>将GlocalMe热点连接至Telesin电池棒（磁吸式）。  </li>
-<li>确保无信号干扰，并在远离摄像头时保持连接。  </li>
+<li>将 GlocalMe 热点连接至 Telesin 电池棒（磁吸式）。  </li>
+<li>可确保无信号干扰，并在远离摄像头时保持连接。  </li>
 <li>故障排除：<ul>
-<li>确认预装SIM卡（非云SIM卡）。  </li>
+<li>确认预装的 SIM 卡（非云 SIM 卡）。  </li>
 <li>在 SIM 卡管理器中启用 5G。  </li>
 <li>确认您所在地区的 APN 设置正确（<a href="https://avatour.com/support/how-do-i-change-the-apn-on-my-glocalme-hotspot" target="_blank" rel="noopener">APN 设置指南</a>）。</li>
 </ul>
@@ -823,7 +834,7 @@ Avatour中常用关键术语和概念的定义。</li>
 <li>仅可使用预先录制的视频（<a href="https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app" target="_blank" rel="noopener">录制指南</a>）。</li>
 </ul>
 <h4 id="其他现场参与者最佳实践">其他现场参与者——最佳实践</h4>
-<p>当多名参与者从与 360° 摄像头相同的地点加入 Avatour 实时会议时，对 <strong>音频和带宽</strong> 的谨慎管理至关重要：  </p>
+<p>当多名参与者从与 360° 摄像头相同的地点加入 Avatour 实时会议时，谨慎管理 <strong>音频和带宽</strong> 至关重要：  </p>
 <ul>
 <li>现场连接的每部智能手机、平板电脑或笔记本电脑都会消耗网络带宽，并可能对 360° 摄像头的视频传输造成负面影响。  </li>
 <li>同一空间内存在多个麦克风和扬声器可能会导致 <strong>音频反馈</strong>，使所有参与者的会议体验大打折扣。</li>
@@ -846,44 +857,54 @@ Avatour中常用关键术语和概念的定义。</li>
 </li>
 <li><strong>不会</strong>发送参与者的摄像头画面。</li>
 <li><strong>不会</strong>在参与者的浏览器中显示 360° 摄像头的画面。<br />
-        - 节省网络带宽，确保 360° 摄像头拥有最大可用上传带宽用于实时流媒体传输。</li>
-<li>当用户希望分享特定细节时非常有用；您<strong>可以反向分享您的摄像头画面</strong>，以提供针对性的视角。  </li>
-<li><strong>不主动发言时保持静音：</strong> 防止出现不必要的音频反馈和干扰。  </li>
-<li><strong>如有可能，请使用独立网络：</strong> 将智能手机连接到与摄像头不同的网络，以减少干扰。  </li>
+        - 节省网络带宽，确保 360° 摄像头拥有最大可用上传带宽进行实时流媒体传输。</li>
+<li>当用户希望分享特定细节时非常有用；您可以<strong>反向分享您的摄像头画面</strong>以提供针对性视角。  </li>
+<li><strong>不主动发言时保持静音：</strong> 可防止不必要的音频反馈和干扰。  </li>
+<li><strong>如条件允许，请使用独立网络：</strong>将智能手机连接到与摄像头不同的网络，以减少干扰。  </li>
 </ul>
-<p>遵循这些指南，可确保现场和远程参与者都能享受流畅、高质量的实时导览。</p>
+<p>遵循这些指南可确保现场和远程参与者都能享受流畅、高质量的直播导览。</p>
 <h3 id="53-avatour-相机应用">5.3 Avatour 相机应用</h3>
 <p>以下是 (1) 主菜单、(2) 设置和 (3) 网络设置菜单。</p>
 <p><img alt="Avatour 360° 相机应用 - 三个菜单" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-cam-app-3-menu-screens_nju8bt.png" /> <em>Avatour 360° 相机应用 - 3 个菜单</em></p>
-<p><strong>快速拍摄</strong> - 用于离线录制 360° 视频。 - 详细说明请参阅 <a href="https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app" target="_blank" rel="noopener">如何使用 Avatour 应用录制并上传 360° 视频？</a>。 建议使用外接音频设备（通过蓝牙连接）。注意：您也可以拍摄标准的2D视频和照片——只需在“快速拍摄”界面中，点击右下角的切换按钮，在360°和2D模式之间切换即可。</p>
-<p><strong>实时会议</strong>——用于实时 360° 视频会议。您将看到您的工作区，点击其中一个即可启动 360° 摄像头的实时视频流。在使用 360° 摄像头加入会议之前，您需要通过蓝牙连接一个音频设备。 详细说明请参阅 <a href="https://avatour.com/support/how-to-start-a-live-capture-meeting-with-your-pilot-camera" target="_blank" rel="noopener">如何使用 Pilot 摄像头启动 Live Capture 会议？</a></p>
+<p><strong>快速拍摄</strong> - 用于将 360° 视频离线录制到 360 度相机中的 SD 存储卡上。 - 详细说明请参阅 <a href="https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app" target="_blank" rel="noopener">如何使用 Avatour 应用录制并上传 360° 视频？</a>。 建议使用外部音频设备（通过蓝牙连接）。注意：您还可以将视频视角从360°调整为270°、 180°以及标准2D视频和图片——例如用于聚焦或遮挡机密区域——只需在快速拍摄（QC）屏幕的右下角切换模式即可（<em>但仅当在“设置”中为快速拍摄选择了4K分辨率时才可操作——详见下文</em>）</p>
+<p><strong>实时会议</strong>——用于实时 360° 视频会议。您将看到您的工作区，点击其中一个即可启动 360° 摄像头的实时视频流。在通过 360° 摄像头加入会议之前，您需要通过蓝牙连接一个音频设备。 详细说明请参阅 <a href="https://avatour.com/support/how-to-start-a-live-capture-meeting-with-your-pilot-camera" target="_blank" rel="noopener">如何使用 Pilot 摄像头启动实时捕捉会议？</a></p>
 <blockquote>
 <p>当您使用 360° 摄像头主持 Live Capture 会议时，可使用的会议工具与网页端体验相似。 以下是我们知识库文章的链接，其中对这些工具进行了更详细的说明：<a href="https://avatour.com/support/what-avatour-app-tools-are-available-to-labpano-pilot-camera-operators" target="_blank" rel="noopener">操作员应用工具</a></p>
 </blockquote>
-<p><strong>图库</strong> - 您可以在此处找到所有待上传至 Avatour Web Console 的 360° 视频和图片。</p>
-<p><strong>设置</strong> - 在“设置”中，您可进行以下操作：</p>
+<p><strong>图库</strong> - 您可以在这里找到所有待上传至 Avatour Web Console 的 360° 视频和图片。 您可以批量上传和删除素材——点击屏幕顶部的“选择”。上传前，您可以选择多种处理步骤，例如“模糊面部”、生成“AI摘要”以及优化音频信号“增强语音”。 您甚至可以选择将素材分配到特定工作区——当然，这些素材也会同时出现在 Web 控制台的“通用素材”部分中。</p>
+<p><strong>设置</strong> - 在“设置”中，您有以下选项：</p>
 <ul>
-<li><strong>网络</strong>：此选项允许您更改相机连接的 Wi-Fi 网络，或运行网络连接测试以查看流媒体吞吐量</li>
+<li><strong>网络</strong>：此选项允许您更改相机连接的 Wi-Fi 网络，或运行网络连接测试以查看您的流媒体吞吐量</li>
 <li>
-<p><strong>实时拍摄</strong>：根据可用带宽、访客的 VR 敏感度，或相机是否安装了保护镜片，调整您的实时拍摄设置：</p>
+<p><strong>实时捕捉</strong>： 请根据可用带宽、访客的VR敏感度，或摄像头是否安装了保护镜片来调整实时捕捉设置：</p>
 <ul>
-<li><strong>目标帧率</strong>：将实时录制视频的帧率在 15 fps、24 fps 和 30 fps 之间进行调整。更高的帧率能带来更流畅的视频效果，但会消耗更多的上传带宽。默认值：15 fps</li>
-<li><strong>目标码率</strong>：可让您增加或减少实时录制视频的最大流媒体码率。目标码率可在 1 Mbps 至 10 Mbps 之间设置。更高的码率将带来更高的视频分辨率，但会消耗更多的上传带宽。默认值：5 Mbps</li>
-<li><strong>优化运动</strong>：此选项将降低视频帧率，从而减轻网络上传带宽的负载，并提高流媒体比特率。此外，此选项还有助于减轻 VR 参与者的晕动感。默认值：关闭</li>
-<li><strong>保护镜片</strong>： 此选项会根据相机是否安装了保护镜片，影响 360° 视频的拼接方式。若未安装保护镜片，请将此选项设为“否”。若您收到的是 Kit 3.0 套件，则相机已预装保护镜片，应将此选项设为“是”。 默认：是</li>
+<li><strong>目标帧率（可选）</strong>：将实时捕捉视频的帧率调整为15 fps、24 fps或30 fps。 更高的帧率可带来更流畅的视频效果，但需要更多的上传带宽。默认值：15 fps</li>
+<li><strong>目标码率</strong>：允许您增加或减少实时录制的最大流媒体码率。目标码率可在 1 Mbps 至 10 Mbps 之间设置。 更高的比特率将带来更高的视频分辨率，但会消耗更多的上传带宽。默认值：5 Mbps</li>
+<li><strong>优化运动</strong>：此选项将降低视频帧率，从而减轻网络上传带宽的负载，并提高流媒体比特率。此外，此选项还有助于减轻 VR 参与者的晕动感。 默认：关闭</li>
+<li><strong>方向锁定</strong>：无论您如何移动 360° 摄像机，此选项都会“锁定” 360° 视角。 如果您希望 360° 视频随摄像机移动而移动（例如，您想用前镜头“指向”某个物体），请将“方向锁定”设置为“否”。此时，摄像机将像传统摄像机一样工作，这对于导览可能更为实用。默认值：是</li>
+<li><strong>初始方向</strong>：当您将“方向锁定”设为“否”时，可选择在开始直播时哪一镜头（前置或后置）作为初始方向。默认：面向操作者，因为这是开始直播会议最自然的方式（即后置镜头）。 “快速拍摄”模式则有所不同（默认初始方向为前置镜头——详见下文）。</li>
 </ul>
 </li>
 <li>
-<p><strong>快速拍摄</strong>：请根据您偏好的视频帧率、用于上传录制视频的可用带宽，或相机是否安装了保护镜片来调整“快速拍摄”设置。“快速拍摄”的分辨率固定为 4K，通常能在视频质量和文件大小之间取得良好的平衡。 （如需更高分辨率，可使用原生相机应用，PanoX V2 同样支持，详情请参阅 <a href="https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app" target="_blank" rel="noopener">如何使用 Avatour 应用录制并上传 360 度视频？</a>):</p>
+<p><strong>快速拍摄</strong>：请根据您偏好的视频帧率、录制视频上传的可用带宽及其他偏好调整“快速拍摄”设置。如上所述，当接收到 GPS 信号且原生相机设置中的定位功能已启用时，即可使用相关地图功能（例如地图视图、地图注释） （通常默认开启）。“快速拍摄”界面右上角的位置/GPS图标应显示为绿色。接收GPS信号并建立连接可能需要片刻时间。</p>
 <ul>
-<li><strong>目标帧率</strong>：将“快速拍摄”视频录制的帧率调整为 15 fps、24 fps 或 30 fps。 更高的帧率能使视频更流畅，但会增加视频文件大小和上传时间。推荐：30 fps</li>
-<li><strong>目标码率</strong>：将“快速录制”上传的目标码率设置在 5 Mbps 至 20 Mbps 之间。较低的码率可加快上传速度，但会降低视频质量。 推荐值：20 Mbps</li>
-<li><strong>保护镜片</strong>：<em>请参阅上文“实时捕捉”中的“保护镜片”部分</em></li>
+<li><strong>分辨率</strong>：此处可更改分辨率。 <em>（6k分辨率处于试验阶段，在上传至Avatour Web Console之前，需在图库中手动进行拼接。）</em><ul>
+<li><strong>4k</strong> - 这是标准分辨率，在视频质量和文件大小之间保持了良好的平衡。</li>
+</ul>
+</li>
+<li><strong>6k @ 30 fps</strong></li>
+<li><strong>6k @ 10 fps</strong> - 当平滑运动并非首要考虑因素，且希望将文件大小控制在低于 30 fps 设置时，此选项非常实用。<ul>
+<li>对于其他分辨率，您也可以使用原生相机应用（包括在 PanoX V2 上），详情请参阅 <a href="https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app" target="_blank" rel="noopener">如何使用 Avatour 应用录制并上传 360 度视频？</a></li>
+</ul>
+</li>
+<li><strong>目标帧率</strong>：将“快速拍摄”视频录制的帧率调整为 15 fps、24 fps 或 30 fps 之一。较高的帧率能产生更流畅的视频，但会增加视频文件大小和上传时间。推荐：30 fps</li>
+<li><strong>目标码率</strong>：将“快速录制”上传的目标码率设置在 5 Mbps 至 20 Mbps 之间。较低的码率可加快上传速度，但会降低视频质量。推荐值：20 Mbps</li>
+<li><strong>方向锁定</strong>：与上述“实时录制”中的设置相同。 默认的“初始方向”始终为前置镜头。</li>
 </ul>
 </li>
 </ul>
 <blockquote>
-<p>有关上述设置和视频文件大小的更多建议，请参阅我们的 <a href="https://avatour.com/support/avatour-360deg-video-file-size-calculator" target="_blank" rel="noopener">Avatour 360° 视频文件大小计算器</a>。</p>
+<p>有关上述设置和视频文件大小的更多建议，请参阅我们的 <a href="https://avatour.com/support/avatour-360deg-video-file-size-calculator" target="_blank" rel="noopener">Avatour 360° 视频文件大小计算器</a>。 为防止存储空间不足，系统会发出警报，以便您停止录制并释放存储空间（例如，将图库中的视频上传至 Avatour Web Console Assets）。</p>
 </blockquote>
 <ul>
 <li><strong>关于</strong>：查看设备序列号和软件版本</li>
@@ -893,20 +914,24 @@ Avatour中常用关键术语和概念的定义。</li>
 <h3 id="61-首次非正式使用与熟悉操作">6.1 首次（非正式）使用与熟悉操作</h3>
 <p>为了帮助您首次使用并熟悉 Avatour Web 控制台和 Avatour 即用型套件，我们建议您按照以下步骤操作：</p>
 <ol>
-<li>将套件带回家，利用家中的互联网连接与家人和朋友一起试用。</li>
+<li>将套件带回家，利用家里的网络连接与家人和朋友一起试用。</li>
 <li>将套件带到办公室，连接到企业网络（可能会遇到企业层面的问题，例如企业防火墙——但您已经通过第一步确认 Avatour 能够正常运行，这些问题可由您的 IT 团队在 Avatour 的协助下解决）。</li>
 <li>开始在现场（办公室外）使用 Avatour，地点应为远程参与者通常需要前往的会议地点。此时可能会出现更多网络连接相关的问题，Avatour 将与您的 IT 团队通力合作予以解决。</li>
-<li>开始与内部及外部远程参与者共同使用该系统。</li>
+<li>开始与内部及外部远程参与者进行协作。</li>
 </ol>
 <h3 id="62-360视频直播会议前">6.2 360°视频直播会议前</h3>
 <ul>
-<li>如果时间允许，我们建议在任何直播导览之前先进行一次录制的360°视频导览，原因有三： (1) 为实时导览提供备用方案；(2) 留存记录资料以便后续回顾（作为实时导览录像的补充）；(3) 着手建立涵盖所有场地的 360° 视频库，这将对多种使用场景大有裨益。 </li>
-<li>直播会议开始前，请确保所有设备组件已充电至少90分钟。无论如何，我们建议在不使用时让所有设备保持持续充电状态。这样，所有设备都能随时待命，即使面对计划外的临时会议也能从容应对。</li>
 <li>
-<p>请将设备套件完全组装好（1. 三脚架底座 + 2. Ulanzi 电池 + 3. 伸缩杆 + 4. 360° 相机）。</p>
+<p>如果时间允许，我们建议在任何直播导览之前先进行一次录制的360°视频导览，原因有三： (1) 为实时导览提供备用方案；(2) 留存记录资料以便后续回顾（作为实时导览录像的补充）；(3) 着手建立涵盖所有场地的 360° 视频库，这将对多种使用场景大有裨益。 </p>
 </li>
 <li>
-<p>确认已创建用于举办实时会议的工作区，并包含所有相关资源。</p>
+<p>直播会议开始前，请确保所有设备组件已充电至少90分钟。无论如何，我们建议在不使用时让所有设备保持持续充电状态。这样，所有设备将始终处于待机状态，即使面对计划外的临时会议也能随时应对。</p>
+</li>
+<li>
+<p>请将设备套件完全组装好（1. 三脚架底座 + 2. Ulanzi 电池 + 3. 伸缩杆 + 4. 360° 摄像机）。</p>
+</li>
+<li>
+<p>请确认已创建用于举办实时会议的工作区，并包含所有相关资源。</p>
 </li>
 <li>
 <p>通过您的工作区邀请所有参与者加入会议。这将在所有参与者的日历中生成会议邀请，并包含会议邀请链接。</p>
@@ -924,16 +949,16 @@ Avatour中常用关键术语和概念的定义。</li>
 <p>确认 360 度摄像头能够连接到您的本地 Wi-Fi。</p>
 </li>
 <li>
-<p>在举行 Avatour 会议之前，请规划好您在场馆内的行进路线。使用相机进行一次 Avatour 测试会议，并检查所有区域的带宽是否均高于 1 Mbps。您可以在相机屏幕上直接查看该信息，或者作为远程参与者进入“设置”并启用“显示比特率”功能进行查看。</p>
+<p>在举行 Avatour 会议之前，请规划好您在场馆内的行进路线。使用相机进行一次 Avatour 测试会议，并检查所有区域的带宽是否均高于 1 Mbps。您可以在相机屏幕上直接查看，或者作为远程参与者进入“设置”并启用“显示比特率”功能进行查看。</p>
 </li>
 <li>
-<p>若发现某些区域带宽极低或几乎为零，建议拍摄照片或录制视频。这些素材可在会议期间展示，供远程参与者查看。您可以参考此处的指南，了解如何使用“快速捕捉”功能录制并上传视频/图片： <a href="https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app" target="_blank" rel="noopener">如何使用 Avatour 应用录制并上传 360 度视频？</a></p>
+<p>若发现某些区域带宽极低或几乎为零，建议拍摄照片或录制视频。这些内容可在会议期间展示给远程参与者查看。您可以参考上文指南，了解如何使用“快速捕捉”功能进行离线录制并上传视频/图片。</p>
 </li>
 <li>
-<p>若有首次使用 Avatour 的远程参会者加入会议，请向他们简要介绍该平台及其功能（360 度实时视频、素材、快照、标注、聚光灯）以及会议工具。</p>
+<p>若有首次使用 Avatour 的远程参会者加入会议，请向其简要介绍该平台及其功能（360 度实时视频、素材、快照、标注、聚光灯）以及会议工具。</p>
 </li>
 <li>
-<p>您可以在其他视频会议解决方案（例如 Teams、Zoom、Google Meet）中开始会议，但在切换到 Avatour 之前，请完全关闭其他视频会议应用程序。 在某些情况下，这些其他应用程序会优先使用您设备的麦克风/扬声器/网络摄像头，导致 Avatour 无法使用这些设备。此外，请勿同时运行 Avatour 和其他视频会议软件，否则会占用可用带宽。</p>
+<p>您可以在其他视频会议解决方案（例如 Teams、Zoom、Google Meet）中开始会议，但在切换到 Avatour 之前，请完全关闭其他视频会议应用程序。 在某些情况下，这些其他应用程序会优先占用您设备的麦克风/扬声器/网络摄像头，导致 Avatour 无法使用这些设备。此外，请勿同时运行 Avatour 和其他视频会议软件，否则会降低可用带宽。</p>
 </li>
 <li>
 <p>如果您计划在高温环境下使用 360 度相机，建议使用散热模块（仅限 Pilot Pano）。这有助于降低相机过热并自动关机的可能性。</p>
@@ -945,7 +970,7 @@ Avatour中常用关键术语和概念的定义。</li>
 <p>操作相机时，请确保您<strong>缓慢行走</strong>并<strong>频繁停下，将相机放置在三脚架上</strong>。 这样做有助于：(1) 提升视频质量——避免不必要的移动可减少视频数据量；(2) 减少因相机网络连接在不同 Wi-Fi 接入点之间切换而导致的潜在视频中断。</p>
 </li>
 <li>
-<p>将相机举在身前，并保持在视线以上高度。 这样，所有远程参与者都能看到您周围的大部分区域。</p>
+<p>将相机举在身前，并保持高于视线高度。 这样，所有远程参与者都能看到您周围的大部分区域。</p>
 </li>
 <li>
 <p>如果需要保持摄像机稳定，请使用三脚架并将摄像机调整到合适的高度，最好与视线齐平。</p>
@@ -954,24 +979,48 @@ Avatour中常用关键术语和概念的定义。</li>
 <p>尽可能将摄像机连接到本地 Wi-Fi 网络。在没有 Wi-Fi 信号的区域，请使用随附的热点。 该热点内置 SIM 卡，可连接您附近的可靠蜂窝网络。在室内不使用时，请务必关闭热点，否则 360° 相机可能会连接到热点，而我们在室内并不希望发生这种情况。在室外时，请将热点放在 360° 相机附近。</p>
 </li>
 <li>
-<p>当摄像头上的比特率开始降至 2 Mbps 以下时，请放慢脚步或完全停下，直到信号再次稳定。这种情况通常发生在您从一个 Wi-Fi 接入点切换到另一个接入点时。 </p>
+<p>当摄像头比特率开始降至 2 Mbps 以下时，请放慢脚步或完全停下，直到信号再次稳定。这种情况通常发生在您从一个 Wi-Fi 接入点切换到另一个接入点时。 </p>
 </li>
 <li>
-<p>若您知道移动到特定位置时（例如：从室内制作区移动到室外区域）会出现连接中断或视频卡顿的情况，请提前告知远程参会者。</p>
+<p>若您知道移动到特定位置时（例如：从室内制作区移动到室外区域）网络连接和视频会中断，请提前告知远程参与者。</p>
 </li>
 <li>
-<p>若需展示高细节内容或小字内容，请使用您自己的或现场参与者的智能手机加入会议，并开启手机的（后置）摄像头进行演示。</p>
+<p>若需展示高细节内容或小字内容，您可以将360°摄像机移至非常近的距离，也可以使用您自己的或现场参与者的智能手机加入会议，并展示您/他们的手机（后置）摄像头。</p>
 </li>
 <li>
-<p>如条件允许，建议现场安排一名额外人员协助进行上述智能手机摄像头共享操作，因为这通常会非常有用或必不可少。</p>
+<p>如条件允许，建议现场安排一名额外人员协助上述智能手机摄像头共享操作，因为这通常非常有用且必要。</p>
 </li>
 <li>
-<p>理想情况下，现场智能手机用户应（1）以“现场”模式加入会议，并（2）使用与摄像头不同的网络连接，以免占用360°摄像头所需的關鍵上传带宽。</p>
+<p>理想情况下，现场智能手机用户应（1）以“现场”模式加入会议，并（2）使用与摄像头不同的网络连接，以免占用 360° 摄像头关键的上传带宽。</p>
 </li>
 <li>
 <p>所有通过智能手机加入会议的现场参与者应保持静音，除非正在发言。</p>
 </li>
 </ul>
+<h3 id="64-现场操作相机进行快速拍摄离线-360-视频录制">6.4 现场操作相机进行快速拍摄（离线 360° 视频录制）</h3>
+<ul>
+<li>
+<p>上述与网络连接无关的建议通常也适用于离线录制（例如：动作要慢）</p>
+</li>
+<li>
+<p>务必使用外接蓝牙耳机。</p>
+</li>
+<li>
+<p>必要时请确认 GPS 是否正常工作。</p>
+</li>
+<li>
+<p>预判观众希望看到的内容（例如细节），将 360° 相机移至非常近的位置并稍作停留。</p>
+</li>
+<li>
+<p>将相机放置好，对准您想要突出的物体。如果将“方向锁定”设置为“否”，您甚至可以使用360°相机指向某个物体（例如使用前置镜头）。  </p>
+</li>
+<li>
+<p>如果您是为了生成AI报告而进行录制，并且还使用语音命令，请大声且清晰地说话。 为了帮助 AI 识别位置、尺寸、问题，并填写您的检查模板，请明确提及这些内容，并使用与模板中相同的术语。</p>
+</li>
+</ul>
+<blockquote>
+<p>注意：Avatour 的大多数功能同样适用于 2D 视频。</p>
+</blockquote>
     </article>
     <aside class="guide-toc">
       <div class="toc-label">On this page</div>
@@ -986,7 +1035,7 @@ Avatour中常用关键术语和概念的定义。</li>
   <li><a href="#for-host-and-admin-users-avatour-web-console">4. 面向主机和管理员用户——Avatour Web 控制台</a></li>
   <li class="toc2"><a href="#web-console-overview-main-menu">4.1 Web 控制台 - 概述 主菜单</a></li>
   <li class="toc2"><a href="#web-console-details-by-menu-item">4.2 Web 控制台 - 按菜单项详细说明（附图）</a></li>
-  <li><a href="#onsite-how-to-use-the-avatour-turnkey-kit">5. 现场操作——如何使用 Avatour 整套解决方案</a></li>
+  <li><a href="#onsite-how-to-use-the-avatour-turnkey-kit">5. 现场操作——如何使用 Avatour 交钥匙套件</a></li>
   <li class="toc2"><a href="#51-入门指南">5.1 入门指南</a></li>
   <li class="toc2"><a href="#52-实用提示">5.2 实用提示</a></li>
   <li class="toc2"><a href="#53-avatour-相机应用">5.3 Avatour 相机应用</a></li>
@@ -994,6 +1043,7 @@ Avatour中常用关键术语和概念的定义。</li>
   <li class="toc2"><a href="#61-首次非正式使用与熟悉操作">6.1 首次（非正式）使用与熟悉操作</a></li>
   <li class="toc2"><a href="#62-360视频直播会议前">6.2 360°视频直播会议前</a></li>
   <li class="toc2"><a href="#63-在现场操作-360-视频直播会议相机时">6.3 在现场操作 360° 视频直播会议相机时</a></li>
+  <li class="toc2"><a href="#64-现场操作相机进行快速拍摄离线-360-视频录制">6.4 现场操作相机进行快速拍摄（离线 360° 视频录制）</a></li>
 </ul>
     </aside>
   </div>
