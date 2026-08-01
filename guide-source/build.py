@@ -662,6 +662,13 @@ if (allH.length && sideLinks.length) {
 # ── LOGO ──────────────────────────────────────────────────────────────────
 LOGO_IMG = '<img src="https://res.cloudinary.com/avatour/image/upload/v1772627129/avatour-name-logo-whiteontransparent_zwfsxa.svg" alt="Avatour" style="height:22px; width:auto; display:block;">'
 
+# Preview image for link unfurling (Apple Mail, Slack, iMessage, social shares).
+# Without this, unfurl bots fall back to scanning the page and grabbing the
+# largest embedded image — which is what was driving repeated Cloudinary
+# bandwidth spikes on the guide's screenshots. Reusing an image already
+# confirmed working as an og:image elsewhere on avatour.com.
+OG_IMAGE = "https://cdn.prod.website-files.com/6578f6bdfadb289687b7a7ad/65c18a48553050a59b5658f9_Avatour%20Operator%20with%20Participants%20191.jpg"
+
 
 # ── HEADING EXTRACTION ────────────────────────────────────────────────────
 def extract_headings(md_text):
@@ -807,6 +814,13 @@ def build_full_html(article_html, toc_html, sidenav_html, meta, body_class=""):
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{meta['title']} — Avatour</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="{meta['title']} — Avatour">
+<meta property="og:description" content="Avatour User Guide and Best Practices">
+<meta property="og:image" content="{OG_IMAGE}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{meta['title']} — Avatour">
+<meta name="twitter:image" content="{OG_IMAGE}">
 <style>{CSS}</style>
 </head>
 <body{' class="' + body_class + '"' if body_class else ''}>
@@ -920,6 +934,13 @@ if (headings.length) {
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{meta['title']} — Avatour</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="{meta['title']} — Avatour">
+<meta property="og:description" content="Avatour User Guide and Best Practices">
+<meta property="og:image" content="{OG_IMAGE}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{meta['title']} — Avatour">
+<meta name="twitter:image" content="{OG_IMAGE}">
 <style>
 {embed_css}
 {EMBED_EXTRA_CSS}
