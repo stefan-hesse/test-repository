@@ -345,6 +345,8 @@ If you use the regular Upload button, Cloudinary appends a random suffix (e.g. `
 
 **Refresh MacDown after replacing:** Press **Cmd+R** to reload — if that doesn't work, close and reopen the file.
 
+**Image delivery is optimized automatically — no action needed:** paste plain Cloudinary URLs exactly as Cloudinary gives them (no transformation flags). `build.py` automatically rewrites every `res.cloudinary.com/avatour/image/upload/...` URL to add `f_auto,q_auto` (auto format + auto quality) when it generates the HTML in `dist/`. This typically shrinks a 1–3MB screenshot PNG down to well under 200KB with no visible quality loss, and applies across all languages and all three output formats (standalone, embed, print) every time the guide is built. You never need to add these flags yourself — doing so manually would just be redundant, since the build script skips URLs that already have `f_auto` set.
+
 ---
 
 ## What NOT to do

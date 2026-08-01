@@ -231,7 +231,7 @@ The bottom menu provides access to the main interface controls and panels:
 - **Enable Full Screen** – Make the meeting tab full screen.  
 - **Exit Meeting** – Leave the meeting.  
 - **Start Recording** – Use this button to start and stop recording manually during a meeting. Alternatively, meetings can be recorded automatically if **auto-start recording** is enabled in the workspace settings. In both cases, recordings are saved to the workspace assets.
-- **Map** – Open or close the map panel for assets with a GPS track. Clicking a location jumps to the exact point in the video. The map updates live as the video plays.
+- **Map** – Open or close the map panel to see the camera movement for assets with a GPS track. Clicking a location jumps to the exact point in the video. The map updates live as the video plays. Notes are also shown on the map.
 - **Participants** – Open or close the participants panel.  
 - **Meeting Info** – View the meeting code, invite link, and access related tutorials.  
 
@@ -248,7 +248,7 @@ The bottom menu provides access to the main interface controls and panels:
 
 The **Present** option in the meeting bottom menu allows you to share content with all participants.
 
-- **Camera** – Share your smartphone/tablet camera. This can also be used during a live 360° video meeting to overlay a secondary view for close-ups or specific details. 
+- **Camera** – Share your device camera (laptop, smartphone etc.). This can also be used during a live 360° video meeting to overlay a secondary view for close-ups or specific details. When sharing a smartphone camera (front or back) remote meeting participants can use the smartphone zoom and also switch on and off the torch.
 - **Desktop** – Share your desktop screen with all participants.  
 - **Asset** – Present an asset from the workspace. Selecting an asset opens the **Asset toolbar**, which provides playback controls and collaboration tools specific to the asset being presented.
 
@@ -263,7 +263,7 @@ When presenting an asset in a meeting, the **Asset Toolbar** appears above the c
 - **Snapshot** – Capture a 360° or 2D image from the asset.  
 - **Spotlight** – Highlight a specific area for all participants during live sessions.  
 - **Show/Hide Point-of-View (POV)** – Display where each participant is looking in the 360° video.  
-- **Notes** – Create notes anchored to specific moments in the asset. Notes can be categorized (Observation, Issue, Action, Recommendation), tracked by status (Open → In Progress → Resolved), and shared via direct links.  
+- **Notes** – Create notes anchored to specific moments in the asset. Notes can be categorized (Observation, Issue, Action, Recommendation), tracked by status (Open → In Progress → Resolved), and shared via direct links. If the asset has a GPS track notes are also showing the GPS coordinates. 
 
   ![Avatour Note and Notes Filter](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-note-and-filters_g181oc.png) *Avatour Note and Note Filters*
 
@@ -277,7 +277,7 @@ When presenting an asset in a meeting, the **Asset Toolbar** appears above the c
 
   ![Avatour Topics](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-topics_duuq1a.png) *Avatour Topics while presenting an Asset in a Meeting*
 
-  From the **Side Panel**, you can **print an asset report** or **download it as TXT or CSV**. Reports can include notes, AI-generated topics, and full transcriptions. You can also **choose which elements to include** before exporting.  
+  From the **side panel**, you can **print an asset report** or **download it as TXT or CSV file**. Reports can include several elements which you can **choose before exporting**. 
 
   ![Avatour Asset Report Print Menus](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-asset-report-print-menus_kn0syn.png)  
   *Avatour Asset Report Print / Download Menus*  
@@ -341,7 +341,11 @@ Click the bell icon to see a summary of workspace activity over the last 7 days.
 
 Inside a workspace:
 
-![Avatour Workspace with Assets Panel, blank Canvas and Meetings Panel](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-workspace-assets-blank-meetings_qeumpl.png) *Workspace with Assets (left), Canvas (center), Meetings (right)*
+![Avatour Workspace with Assets Panel, blank Canvas and Meetings Panel](https://res.cloudinary.com/avatour/image/upload/v1785425098/Capture_d_%C3%A9cran_2026-07-28_153353_udkvkl.png) *Workspace with Assets (left), Workspace Dashboard (center), Meetings (right)*
+
+In the center you see the workspace dashboard giving you an overview of all notes in the assets allocated to that workspace with several drop down menus to select by various notes attributes.
+
+In the bottom menus you will find:
 
 - **Assets** – Manage files allocated to this workspace.  
 - **Collaborators** – 
@@ -349,11 +353,11 @@ Inside a workspace:
   - **Viewer** – Can view assets. Invitation creates a Guest user if needed.  
   - **Editor** – Full workspace control, same rights as Host. Invitation upgrades user to Host if needed.  
 > Multiple users can access a workspace simultaneously without a meeting. Public workspaces and meeting access settings provide alternative access.  
-- **Report** – Generate a report using a checklist template on selected workspace assets.  
+- **Report** – Generate a report using an Inspection Template on selected workspace assets. Responses are generated by AI based on the audio track(s) in the video(s) selected.  
 
 ![Avatour Workspace Report and Asset Selection](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-asset-selection-and-workspace-report_itjt8f.png) *Workspace Report and Asset Selection*
 
-- **Map** – Display GPS-enabled asset locations on a map.  
+- **Map** – Display GPS-enabled asset locations on a map as described above for meetings. 
 - **Meetings** – Organize meetings in the workspace.  
 - **Settings** – Configure workspace and meeting defaults:
 
@@ -361,7 +365,7 @@ Inside a workspace:
 
 **Workspace Settings**
 
-- **Report Template** – Select checklist template for AI reporting.  
+- **Report Template** – Select an Inspection Template for AI generated reporting. You can upload those in Account (see below).  
 - **Enable Notifications** – Daily digest emails for note status changes.  
 
 ![Email Notifications - Example](https://res.cloudinary.com/avatour/image/upload/c_crop,h_600,w_600,x_170,y_60/Screenshot_2026-03-05_140654_bjk0xk.png) *Email Notifications Example*
@@ -388,9 +392,23 @@ Manage all 360°/2D videos, pictures, and PDFs. Upload/download assets, allocate
 
 ![Avatour Web Console - Main Menu Item Assets](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-assets_ky5emz.png) *Main Menu Item Assets*
 
----
+You can also generate the HTML code to enable a public embed of an asset, e.g. on your website. Simply click the "Enable public embed" check box and then click save to get the code.
 
-#### 4.2.3 Analytics
+![Avatour Web Console - Main Menu Item Assets](https://res.cloudinary.com/avatour/image/upload/v1777898836/Capture_d_%C3%A9cran_2026-04-29_115840_mtau8g.png) *Main Menu Item Assets*
+
+#### 4.2.3 Settings
+
+Admin Users have access to this menu to manage Settings centrally for the entire Avatour platform. Each setting can be ticked or unticked to become the default setting across the entire platform. Each setting can also be locked, meaning that the default setting can not be changed by other users of the platform. Here you can also do marketing customization regarding your branding (logo, colours etc.).
+
+![Avatour Web Console - Main Menu Item Settings](https://res.cloudinary.com/avatour/image/upload/v1781172727/avatour-screenshot-main-menu-settings-1-of-2_fsaatf.jpg) *Settings Section*
+
+#### 4.2.4 Account
+
+Here you can see details of your account and manage registered users as well as upload inspection templates to generate workspace reports (see above).
+
+![Avatour Web Console - Main Menu Item Account](https://res.cloudinary.com/avatour/image/upload/v1781172273/avatour-screenshot-main-menu-account-1-of-2_oq5amr.jpg) *Account Overview*
+
+#### 4.2.5 Analytics
 
 Provides insights into meetings, workspace usage, and ROI metrics.
 
@@ -398,7 +416,7 @@ Provides insights into meetings, workspace usage, and ROI metrics.
 
 ![Avatour Web Console - Main Menu Item Analytics (2 of 3)](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-analytics-2-of-3_vpcsme.png) *Meeting Activity & Workspace Usage*
 
-![Avatour Web Console - Main Menu Item Analytics (3 of 3)](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-analytics-3-of-3_hn2pmr.png) *Device License Usage & ROI* 
+![Avatour Web Console - Main Menu Item Analytics (3 of 3)](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-analytics-3-of-3_hn2pmr.png) *Savings and Device License Usage* 
 
 ## 5. Onsite - How to Use the Avatour Turnkey Kit {#onsite-how-to-use-the-avatour-turnkey-kit}
 
@@ -415,6 +433,8 @@ Follow the guide and instructions to unpack, assemble, and power on your camera.
 ### 5.2 Useful Tips
 
 #### External Battery – Longer Live Meetings & Improved Thermals 
+
+The camera's internal battery lasts ca. 30-45 minutes. There will be an alert when the battery is running low. With an external battery you can extend the operating time and even make it infinite as you can swap batteries during operation.
 
 - **If your kit includes a Ulanzi battery:** Attach it between the tripod base and the extendable stick, then connect the battery to the camera via USB-C.  
 
@@ -444,7 +464,7 @@ Using the external battery:
 
 - **Using your own device:** If you prefer an alternative (e.g., a conference speaker or personal headset), you can pair it via the camera: Settings → Bluetooth.  
 
-#### Connectivity, Connectivity, Connectivity
+#### Connectivity
 **Before you start:** Ensure internet connection via:
 
 - **Local WiFi** (preferred)
@@ -520,29 +540,35 @@ Here are (1) the Top Level, (2) Settings and (3) Network Settings menus.
 
 ![Avatour 360° Camera App - Three Menus](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-cam-app-3-menu-screens_nju8bt.png) *Avatour 360° Camera App - 3 Menus*
 
-**Quick Capture** - For offline 360° video recording. - For a detailed description see [How do you record and upload 360 videos with the Avatour App?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app). We recommend using an external audio device (connected via bluetooth). N.B. You can also do standard 2D videos and pictures - simply change the mode between 360° and 2D in the bottom right corner once in the QC screen.
+**Quick Capture** - For offline 360° video recording onto the SD storage card in the 360 cam. - For a detailed description see [How do you record and upload 360 videos with the Avatour App?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app). We recommend using an external audio device (connected via bluetooth). N.B. You can also change the video degree from 360° to 270°, 180° and standard 2D videos and pictures, e.g. for focus or blanking out confidential areas - simply change the modes in the bottom right corner once in the QC screen (*only possible however with a 4k resolution chosen in Settings for Quick Capture - see below*)
 
 **Live Meeting** - For live 360° Video Conferencing. You will see your workspaces and clicking on one will initiate the live video stream from the 360° camera. Before you can join the meeting with your 360° cam you need to connect an audio device via bluetooth. For a detailed description see [How to start a Live Capture meeting with your Pilot camera?](https://avatour.com/support/how-to-start-a-live-capture-meeting-with-your-pilot-camera)
 
 > When hosting a Live Capture meeting with your 360 camera, you will have similar meeting tools available to you that mirror the web experience. Here is a link to our Knowledge Base article that explains these tools in more detail: [Operator App Tools](https://avatour.com/support/what-avatour-app-tools-are-available-to-labpano-pilot-camera-operators)
 
-**Gallery** - Find here all your 360° videos and pictures for upload to the Avatour Web Console.
+**Gallery** - Find here all your 360° videos and pictures for upload to the Avatour Web Console. You can upload and delete assets in bulk - touch "Select" at the top of the screen. Before uploading you can choose several processing steps like "Blur faces", generate "AI summarization" and optimize the audio signal "Enhance Speech". You can even choose a workspace to allocate the asset to - it will of course also be in the general asset section in the Web Console.
 
 **Settings** - Within Settings, you have the following options:
 
 - **Network**: This option allows you to change which WiFi network the camera is connected to or run a network connection test to view your streaming throughput
 - **Live Capture**: Adjust your Live Capture settings depending on available bandwidth, guest’s VR sensitivity, or if your camera’s protective lenses are installed:
-  - **Target Frame** **Rate**: Adjust the frame rate for your Live Capture video between 15 fps, 24 fps, and 30 fps. Higher frame rates produce a smoother video, but will require more upload bandwidth. Default: 15 fps
+  - **Target Frame Rate (optional)**: Adjust the frame rate for your Live Capture video between 15 fps, 24 fps, and 30 fps. Higher frame rates produce a smoother video, but will require more upload bandwidth. Default: 15 fps
   - **Target Bitrate**: Enables you to increase or decrease the maximum streaming bitrate for your Live Capture. You can set your target bitrate between 1 Mbps and 10 Mbps. Higher bitrates will result in higher video resolution, but will require more upload bandwidth. Default: 5 Mbps
   - **Optimize Motion**: This will decrease the video frame rate, generating less load on your network's upload bandwidth, and increase your streaming bitrate. In addition, this option helps to reduce motion sickness for VR participants. Default: Off
-  - **Protective Lenses**: This will affect how the 360° video is stitched depending if protective lenses have been installed on your camera. If you do not have protective lenses, set this to “No”. If you received a Kit 3.0, you have pre-installed protective lenses on and should set this to “Yes”. Default: Yes
+  - **Direction Lock**: This will "lock" the 360° no matter how you move the 360° cam. If you want the 360° video to move with the camera movement, e.g. you want to "point" with the front lens to something the set Direction Lock to No. Then the camera will behave like a traditional camera and it might be more useful for guided tours. Default: Yes
+  - **Initial Orientation**: When you set Direction Lock to No then you can choose which lens (front or back) should be the initial orientation when you start the live video. Default: Looking at Operator as this is the most natural way to start a live meeting (= back lens). Quick Capture is different (front lens is Initial Orientation by default - see below).
 
-- **Quick Capture**: Adjust your Quick Capture settings depending on your preferred video frame rate, available bandwidth for recorded video uploads, or if your camera’s protective lenses are installed. Quick Capture has a set resolution of 4k which usually strikes a good balance between video quality and file size. (For higher resolutions you can use the native camera apps, also on the PanoX V2, for details see [How do you record and upload 360 videos with the Avatour App?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)):
+- **Quick Capture**: Adjust your Quick Capture settings depending on your preferred video frame rate, available bandwidth for recorded video uploads and other preferences. Map related features as explained above (e.g. map view, notes in a map) are possible when a GPS signal is received and the location setting in the native camera settings is enabled (should be by default). The location / GPS icon in the top right corner of the Quick Capture should be green. It might take some moments to receive the GPS signal and establish the connection.
+  - **Resolution**: Here you can change the resolution. *(The 6k resolutions are experimental and need a manual stitching step in the Gallery before upload to the Avatour Web Console.)*
+	  - **4k** - This is the standard and maintains a good balance between video quality and file size.
+	  - **6k @ 30 fps**
+	  - **6k @ 10 fps** - This is useful if you want to keep file size lower than with the 30 fps when smooth motion is less important.
+	  - For other resolutions you can also use the native camera apps, also on the PanoX V2, for details see [How do you record and upload 360 videos with the Avatour App?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)
   - **Target Frame Rate**: Adjust the frame rate for your Quick Capture video recordings between 15 fps, 24 fps, and 30 fps. Higher frame rates produce a smoother video, but will increase video file size and upload time. Recommended: 30 fps
   - **Target Bitrate**: Set the target bitrate for Quick Capture uploads between 5 Mbps and 20 Mbps. Lower bitrates increase upload speeds, but will decrease video quality. Recommended: 20 Mbps
-  - **Protective Lenses**: *See Protective Lenses section for Live Capture above*
+  - **Direction Lock**: Same as above under Live Capture. The default Initial Orientation is always the front lens.
 
-  > See also our [Avatour 360° Video File Size Calculator](https://avatour.com/support/avatour-360deg-video-file-size-calculator) for further advice on the above settings and video file sizes.
+  > See also our [Avatour 360° Video File Size Calculator](https://avatour.com/support/avatour-360deg-video-file-size-calculator) for further advice on the above settings and video file sizes. To prevent running out of data storage there will be an alert so that you can stop recording and free up storage (e.g. by uploading videos from the Gallery to the Avatour Web Console Assets).
 
 - **About**: View device serial number and software version
 
@@ -563,7 +589,9 @@ For your first uses and getting familiar with the Avatour Web Console and the Av
 ### 6.2 Before a 360° Video Live Meeting
 
 - We recommend to do a recorded 360° video tour before any live tour if time allows for three reasons: (1) Have a fallback solution for the live tour, (2) have something for documentation and later review (on top of the recorded live tour) and (3) start to create a library of 360° videos of all your sites which can be helpful for many use cases. 
+
 - All kit components charged for at least 90 minutes before the live meeting. We anyway recommend to have all devices on continuous charge when not in use. Like that all devices will always be ready, also for unplanned ad hoc meetings.
+
 - Have the kit fully assembled (1. tripod base + 2. Ulanzi battery + 3. extendable stick + 4. 360° cam).
 
 - Confirm a Workspace is created for hosting a live meeting and include all relevant Assets.
@@ -580,7 +608,7 @@ For your first uses and getting familiar with the Avatour Web Console and the Av
 
 - Prior to an Avatour meeting, plan out the route you will take through the facility. Do a test Avatour meeting with the camera, and check that all areas have bitrates above 1 Mbps bandwidth. This can be seen on the camera screen itself, or as a remote participant by going to Settings and activating Show Bitrate.
 
-- If you notice some areas have little to no bandwidth, it is best to take images or a recording. These can then be presented during the meeting for remote participants to review. You can follow the guide here that explains our Quick Capture for recording and uploading videos/images: [How do you record and upload 360 videos with the Avatour App?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)
+- If you notice some areas have little to no bandwidth, it is best to take images or a recording. These can then be presented during the meeting for remote participants to review. You can follow the guide above that explains our Quick Capture for offline recording and uploading videos/images.
 
 - If you have remote participants joining the meeting who have not used Avatour before, provide them with a short summary of the platform, its functionality (360 live video, assets, snapshots, annotations, spotlight) and the meeting tools.
 
@@ -598,14 +626,31 @@ For your first uses and getting familiar with the Avatour Web Console and the Av
 
 - Always connect the camera to your local WiFi network where possible. For areas without WiFi access, use the provided hotspot. The hotspot has a SIM card that will connect to a reliable cell network near you. Always keep the hotspot switched off when not in use indoors as otherwise the 360° cam could connect to the hotspot which we do not want indoors. When outdoors, keep the hotspot near the 360° camera.
 
-- When the on camera bitrate starts to drop below 2 Mbps, walk slower or stop completely until the signal stabilizes again. This usually happens when you change from one WiFi Access Point to another. 
+- When the camera bitrate starts to drop below 2 Mbps, walk slower or stop completely until the signal stabilizes again. This usually happens when you change from one WiFi Access Point to another. 
 
 - If you know the connectivity and video will drop when moving to a specific location (Example: moving from an indoor production area to an outdoor area), let the remote participants know in advance.
 
-- If needing to show something in high detail or small writing, use your own or an onsite participant's smartphone to join the meeting and present your / their phone’s (back-facing) camera.
+- If needing to show something in high detail or small writing, you can go very close with the 360° cam and you can also use your own or an onsite participant's smartphone to join the meeting and present your / their phone’s (back-facing) camera.
 
 - If possible we recommend that one additional person is onsite to help with the above described smartphone camera share as this often proves to be helpful / needed.
 
 - Ideally onsite smartphone users should join the meeting (1) in onsite mode and (2) on a different network from that the camera is using to not take away crucial upload bandwidth from the 360° cam.
 
 - All onsite participants joining from their smartphone should be muted, unless actively speaking.
+
+### 6.4 When Operating the Cam Onsite for Quick Capture (offline 360° video recording)
+
+- The non-connectivity related advices above in general also apply to offline recording (e.g. go slowly)
+
+- Always use an external bluetooth audio headset.
+
+- Check that GPS is working when required.
+
+- Anticipate what viewers will want to see, e.g. details, go very close with the 360° cam and wait for a few moments.
+
+- Set the camera down and point to things you want to highlight. If you set Direction Lock to No you can even point to something with the 360° cam (e.g. using the front lens).  
+
+- If you are recording to have an AI generated report and you also use voice commands speak loud and clear. To help AI identify locations, measures, issues and to fill your inspection templates mention those explcicitly and use the same terminology as is used in your template.
+
+
+> N.B.: Most Avatour features are equally available for 2D videos.
