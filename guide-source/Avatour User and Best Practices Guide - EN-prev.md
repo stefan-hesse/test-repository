@@ -394,7 +394,7 @@ Manage all 360°/2D videos, pictures, and PDFs. Upload/download assets, allocate
 
 You can also generate the HTML code to enable a public embed of an asset, e.g. on your website. Simply click the "Enable public embed" check box and then click save to get the code.
 
-![Avatour Web Console - Main Menu Item Assets](https://res.cloudinary.com/avatour/image/upload/v1777898836/Capture_d_%C3%A9cran_2026-04-29_115840_mtau8g.png) *Main Menu Item Assets*
+![Avatour Web Console - Main Menu Item Assets](https://res.cloudinary.com/avatour/image/upload/v1785921604/avatour-screenshot-main-menu-assets-embed-code_mtau8g.png) *Main Menu Item Assets*
 
 #### 4.2.3 Settings
 

@@ -349,7 +349,7 @@ Trong các menu phía dưới, bạn sẽ tìm thấy:
 
 - **Tài nguyên** – Quản lý các tệp được phân bổ cho không gian làm việc này.  
 - **Người cộng tác** – 
-  Kiểm soát quyền truy cập vào không gian làm việc bằng cách 
+  Kiểm soát quyền truy cập vào không gian làm việc thông qua 
   - **Người xem** – Có thể xem tài nguyên. Lời mời sẽ tạo một người dùng Khách nếu cần.  
   - **Người chỉnh sửa** – Quyền kiểm soát không gian làm việc đầy đủ, có quyền tương tự như Chủ trì. Lời mời sẽ nâng cấp người dùng lên Chủ trì nếu cần.  
 > Nhiều người dùng có thể truy cập cùng lúc vào một không gian làm việc mà không cần tổ chức cuộc họp. Các không gian làm việc công khai và cài đặt quyền truy cập cuộc họp cung cấp các phương thức truy cập thay thế.  
@@ -394,11 +394,11 @@ Quản lý tất cả video 360°/2D, hình ảnh và tệp PDF. Tải lên/tả
 
 Bạn cũng có thể tạo mã HTML để cho phép nhúng công khai một tài nguyên, ví dụ như trên trang web của bạn. Chỉ cần nhấp vào ô chọn "Cho phép nhúng công khai" rồi nhấp vào "Lưu" để lấy mã.
 
-![Avatour Web Console - Mục Tài sản trong Menu Chính](https://res.cloudinary.com/avatour/image/upload/v1777898836/Capture_d_%C3%A9cran_2026-04-29_115840_mtau8g.png) *Tài nguyên mục menu chính*
+![Bảng điều khiển web Avatour - Mục menu chính: Tài sản](https://res.cloudinary.com/avatour/image/upload/v1785921604/avatour-screenshot-main-menu-assets-embed-code_mtau8g.png) *Tài nguyên mục menu chính*
 
 #### 4.2.3 Cài đặt
 
-Người dùng quản trị có quyền truy cập vào menu này để quản lý Cài đặt tập trung cho toàn bộ nền tảng Avatour. Mỗi cài đặt có thể được chọn hoặc bỏ chọn để trở thành cài đặt mặc định trên toàn bộ nền tảng. Mỗi cài đặt cũng có thể được khóa, nghĩa là cài đặt mặc định không thể bị thay đổi bởi các người dùng khác trên nền tảng. Tại đây, bạn cũng có thể thực hiện tùy chỉnh tiếp thị liên quan đến thương hiệu của mình (logo, màu sắc, v.v.).
+Người dùng quản trị có quyền truy cập vào menu này để quản lý Cài đặt tập trung cho toàn bộ nền tảng Avatour. Mỗi cài đặt có thể được chọn hoặc bỏ chọn để trở thành cài đặt mặc định trên toàn bộ nền tảng. Mỗi tùy chọn cũng có thể được khóa, nghĩa là thiết lập mặc định sẽ không thể bị thay đổi bởi các người dùng khác trên nền tảng. Tại đây, bạn cũng có thể thực hiện tùy chỉnh tiếp thị liên quan đến thương hiệu của mình (logo, màu sắc, v.v.).
 
 ![Bảng điều khiển web Avatour - Cài đặt mục menu chính](https://res.cloudinary.com/avatour/image/upload/v1781172727/avatour-screenshot-main-menu-settings-1-of-2_fsaatf.jpg) *Phần Cài đặt*
 

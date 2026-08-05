@@ -382,29 +382,29 @@ Avatour 界面主要由三个区域组成：
 * **密码保护会议** – 加入会议需输入密码。  
 * **显示差旅节省问题** – 询问参与者本次会议是否减少了差旅。  
 
-> 设置可组合使用（例如：无需主持人但设置密码保护）。
+> 设置可组合使用（例如：无需主持人但需密码保护）。
 
 ---
 
 #### 4.2.2 资源
 
-管理所有 360°/2D 视频、图片和 PDF 文件。上传/下载资源、分配到工作区、与其他用户共享、重命名、打印/下载报告、启用人脸模糊以及 AI 摘要功能。
+管理所有 360°/2D 视频、图片和 PDF 文件。上传/下载资源、分配到工作区、与其他用户共享、重命名、打印/下载报告、启用面部模糊以及 AI 摘要功能。
 
 ![Avatour 网页控制台 - 主菜单项“资源”](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-assets_ky5emz.png) *主菜单项“资源”*
 
-您还可以生成 HTML 代码，以便将资产公开嵌入（例如在您的网站上）。只需勾选“启用公开嵌入”复选框，然后点击保存即可获取代码。
+您还可以生成 HTML 代码，以便将资产公开嵌入（例如在您的网站上）。只需勾选“启用公开嵌入”复选框，然后点击“保存”即可获取代码。
 
-![Avatour Web 控制台 - 主菜单项“资源”](https://res.cloudinary.com/avatour/image/upload/v1777898836/Capture_d_%C3%A9cran_2026-04-29_115840_mtau8g.png) *主菜单项资源*
+![Avatour Web 控制台 - 主菜单项“资源”](https://res.cloudinary.com/avatour/image/upload/v1785921604/avatour-screenshot-main-menu-assets-embed-code_mtau8g.png) *主菜单项资源*
 
 #### 4.2.3 设置
 
-管理员用户可访问此菜单，集中管理整个 Avatour 平台的设置。每个设置项均可勾选或取消勾选，以将其设为整个平台的默认设置。 每个设置项还可以被锁定，这意味着平台的其他用户无法更改该默认设置。在此处，您还可以针对品牌形象（徽标、颜色等）进行营销定制。
+管理员用户可通过此菜单集中管理整个 Avatour 平台的设置。勾选或取消勾选每个设置选项，即可将其设为整个平台的默认设置。 每个设置项还可以被锁定，这意味着平台的其他用户无法更改该默认设置。在此处，您还可以针对品牌形象（徽标、颜色等）进行营销定制。
 
 ![Avatour 网络控制台 - 主菜单项设置](https://res.cloudinary.com/avatour/image/upload/v1781172727/avatour-screenshot-main-menu-settings-1-of-2_fsaatf.jpg) *“设置”部分*
 
 #### 4.2.4 账户
 
-在此处，您可以查看账户详情、管理已注册用户，以及上传检查模板以生成工作区报告（参见上文）。
+在此处，您可以查看账户详细信息、管理已注册用户，以及上传检查模板以生成工作区报告（参见上文）。
 
 ![Avatour Web 控制台 - 主菜单项“账户”](https://res.cloudinary.com/avatour/image/upload/v1781172273/avatour-screenshot-main-menu-account-1-of-2_oq5amr.jpg) *账户概览*
 

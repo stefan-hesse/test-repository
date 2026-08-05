@@ -320,7 +320,7 @@ Auf der linken Seite sehen Sie die folgenden Menüpunkte:
 - **Einstellungen** *(nur für Administratoren)* – Konfigurieren Sie die Standardwerte für Arbeitsbereiche, Besprechungen und Assets unternehmensweit. Administratoren können außerdem das Branding (Logo, Farben, Hintergründe) anpassen.  
 - **Konto** *(nur für Administratoren)* – Verwalten Sie registrierte Benutzer und 360°-Kameras.  
 - **Geräteanmeldung** – Geben Sie den auf Ihrer 360°-Kamera angezeigten Code ein, um sie mit Ihrem Konto zu koppeln.  
-- **Tutorials** – Greifen Sie auf angeleitete Tutorials zu.  
+- **Anleitungen** – Greifen Sie auf geführte Anleitungen zu.  
 - **Abmelden** – Melden Sie sich von der Konsole ab.
 
 > Bereiche wie „Profil“, „Geräteanmeldung“, „Anleitungen“ und „Abmelden“ sind selbsterklärend und weisen keine detaillierten Unterabschnitte auf.
@@ -331,7 +331,7 @@ Auf der linken Seite sehen Sie die folgenden Menüpunkte:
 
 #### 4.2.1 Arbeitsbereiche
 
-Arbeitsbereiche sind flexible Organisationseinheiten, mit denen Sie Assets, Mitwirkende und Besprechungen an einem Ort verwalten können. Über die Schaltfläche **„Neuer Arbeitsbereich“** in der oberen rechten Ecke können Sie einen neuen Arbeitsbereich erstellen.
+Arbeitsbereiche sind flexible Organisationseinheiten, mit denen Sie Assets, Mitwirkende und Besprechungen an einem Ort verwalten können. Über die Schaltfläche **Neuer Arbeitsbereich** in der oberen rechten Ecke können Sie einen neuen Arbeitsbereich erstellen.
 
 ![Avatour-Webkonsole – Hauptmenüpunkt „Arbeitsbereiche“](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-workspaces_hnhkjj.png) *Avatour-Webkonsole – Hauptmenüpunkt „Arbeitsbereiche“*
 
@@ -353,7 +353,7 @@ In den Menüs unten finden Sie:
   - **Betrachter** – Kann Assets anzeigen. Bei einer Einladung wird bei Bedarf ein Gastbenutzer angelegt.  
   - **Bearbeiter** – Vollständige Kontrolle über den Arbeitsbereich, gleiche Rechte wie der Gastgeber. Bei einer Einladung wird der Benutzer bei Bedarf zum Gastgeber hochgestuft.  
 > Mehrere Benutzer können gleichzeitig ohne Besprechung auf einen Arbeitsbereich zugreifen. Öffentliche Arbeitsbereiche und Zugriffseinstellungen für Besprechungen bieten alternative Zugriffsmöglichkeiten.  
-- **Bericht** – Erstellen Sie mithilfe einer Inspektionsvorlage einen Bericht zu ausgewählten Assets des Arbeitsbereichs. Die Antworten werden von einer KI auf der Grundlage der Audiospuren in den ausgewählten Videos generiert.  
+- **Bericht** – Erstellen Sie mithilfe einer Inspektionsvorlage einen Bericht zu ausgewählten Assets des Arbeitsbereichs. Die Antworten werden von der KI auf der Grundlage der Audiospuren in den ausgewählten Videos generiert.  
 
 ![Avatour-Arbeitsbereichsbericht und Objekt-Auswahl](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-asset-selection-and-workspace-report_itjt8f.png) *Arbeitsbereichsbericht und Objekt-Auswahl*
 
@@ -363,7 +363,7 @@ In den Menüs unten finden Sie:
 
 ![Avatour-Einstellungen – Arbeitsbereichsansicht](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-workspace-settings_llcei3.png) *Arbeitsbereichseinstellungen*
 
-**Arbeitsbereichseinstellungen**
+**Arbeitsbereich-Einstellungen**
 
 - **Berichtsvorlage** – Wählen Sie eine Inspektionsvorlage für KI-generierte Berichte aus. Diese können Sie im Konto hochladen (siehe unten).  
 - **Benachrichtigungen aktivieren** – Tägliche E-Mail-Zusammenfassungen zu Statusänderungen bei Notizen.  
@@ -380,7 +380,7 @@ In den Menüs unten finden Sie:
 * **Moderator erforderlich** – Der Moderator muss Teilnehmer zulassen; die Besprechung endet, wenn der Moderator die Besprechung verlässt.  
 * **Zugang für Zuschauer zulassen** – Teilnahme ohne Mikrofon oder Kamera; Kommunikation über den Chat.  
 * **Passwortgeschützte Besprechungen** – Für die Teilnahme ist ein Passwort erforderlich.  
-* **Frage zu Reiseeinsparungen anzeigen** – Fragen Sie die Teilnehmer, ob die Besprechung zu Reiseeinsparungen geführt hat.  
+* **Frage zu Reiseeinsparungen anzeigen** – Fragen Sie die Teilnehmer, ob die Besprechung Reisekosten eingespart hat.  
 
 > Einstellungen können kombiniert werden (z. B. kein Gastgeber erforderlich, aber passwortgeschützt).
 
@@ -392,13 +392,13 @@ Verwalten Sie alle 360°-/2D-Videos, Bilder und PDFs. Laden Sie Assets hoch bzw.
 
 ![Avatour-Webkonsole – Hauptmenüpunkt „Assets“](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-assets_ky5emz.png) *Hauptmenüpunkt „Assets“*
 
-Sie können auch den HTML-Code generieren, um eine öffentliche Einbettung eines Assets zu ermöglichen, z. B. auf Ihrer Website. Aktivieren Sie dazu einfach das Kontrollkästchen „Öffentliche Einbettung aktivieren“ und klicken Sie anschließend auf „Speichern“, um den Code zu erhalten.
+Sie können auch den HTML-Code generieren, um eine öffentliche Einbettung eines Assets zu ermöglichen, z. B. auf Ihrer Website. Aktivieren Sie einfach das Kontrollkästchen „Öffentliche Einbettung aktivieren“ und klicken Sie anschließend auf „Speichern“, um den Code zu erhalten.
 
-![Avatour-Webkonsole – Hauptmenüpunkt „Assets“](https://res.cloudinary.com/avatour/image/upload/v1777898836/Capture_d_%C3%A9cran_2026-04-29_115840_mtau8g.png) *Hauptmenüpunkt „Assets“*
+![Avatour-Webkonsole – Hauptmenüpunkt „Assets“](https://res.cloudinary.com/avatour/image/upload/v1785921604/avatour-screenshot-main-menu-assets-embed-code_mtau8g.png) *Hauptmenüpunkt „Assets“*
 
 #### 4.2.3 Einstellungen
 
-Admin-Benutzer haben Zugriff auf dieses Menü, um die Einstellungen für die gesamte Avatour-Plattform zentral zu verwalten. Jede Einstellung kann aktiviert oder deaktiviert werden, um als Standardeinstellung für die gesamte Plattform festgelegt zu werden. Jede Einstellung kann außerdem gesperrt werden, was bedeutet, dass die Standardeinstellung von anderen Nutzern der Plattform nicht geändert werden kann. Hier können Sie auch Marketing-Anpassungen hinsichtlich Ihres Brandings (Logo, Farben usw.) vornehmen.
+Admin-Benutzer haben Zugriff auf dieses Menü, um die Einstellungen für die gesamte Avatour-Plattform zentral zu verwalten. Jede Einstellung kann aktiviert oder deaktiviert werden, um als Standardeinstellung für die gesamte Plattform festgelegt zu werden. Jede Einstellung kann zudem gesperrt werden, was bedeutet, dass die Standardeinstellung von anderen Nutzern der Plattform nicht geändert werden kann. Hier können Sie auch Marketing-Anpassungen hinsichtlich Ihres Brandings (Logo, Farben usw.) vornehmen.
 
 ![Avatour-Webkonsole – Hauptmenüpunkt „Einstellungen“](https://res.cloudinary.com/avatour/image/upload/v1781172727/avatour-screenshot-main-menu-settings-1-of-2_fsaatf.jpg) *Bereich „Einstellungen“*
 
