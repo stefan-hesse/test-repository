@@ -319,11 +319,11 @@ Auf der linken Seite sehen Sie die folgenden Menüpunkte:
 - **Analysen** – Verfolgen Sie Sitzungsaktivitäten, die Nutzung von Arbeitsbereichen und ROI-Kennzahlen.  
 - **Einstellungen** *(nur für Administratoren)* – Konfigurieren Sie die Standardwerte für Arbeitsbereiche, Besprechungen und Assets unternehmensweit. Administratoren können außerdem das Branding (Logo, Farben, Hintergründe) anpassen.  
 - **Konto** *(nur für Administratoren)* – Verwalten Sie registrierte Benutzer und 360°-Kameras.  
-- **Geräteanmeldung** – Geben Sie den auf Ihrer 360°-Kamera angezeigten Code ein, um sie mit Ihrem Konto zu koppeln.  
-- **Anleitungen** – Greifen Sie auf geführte Anleitungen zu.  
+- **Geräteanmeldung** – Geben Sie den auf Ihrer 360°-Kamera angezeigten Code ein, um die Kamera mit Ihrem Konto zu koppeln.  
+- **Tutorials** – Greifen Sie auf angeleitete Tutorials zu.  
 - **Abmelden** – Melden Sie sich von der Konsole ab.
 
-> Bereiche wie „Profil“, „Geräteanmeldung“, „Anleitungen“ und „Abmelden“ sind selbsterklärend und weisen keine detaillierten Unterabschnitte auf.
+> Bereiche wie „Profil“, „Geräteanmeldung“, „Tutorials“ und „Abmelden“ sind selbsterklärend und weisen keine detaillierten Unterabschnitte auf.
 
 ---
 
@@ -331,17 +331,17 @@ Auf der linken Seite sehen Sie die folgenden Menüpunkte:
 
 #### 4.2.1 Arbeitsbereiche
 
-Arbeitsbereiche sind flexible Organisationseinheiten, mit denen Sie Assets, Mitwirkende und Besprechungen an einem Ort verwalten können. Über die Schaltfläche **Neuer Arbeitsbereich** in der oberen rechten Ecke können Sie einen neuen Arbeitsbereich erstellen.
+Arbeitsbereiche sind flexible Organisationseinheiten, mit denen Sie Assets, Mitwirkende und Besprechungen an einem Ort verwalten können. Über die Schaltfläche **„Neuer Arbeitsbereich“** in der oberen rechten Ecke können Sie einen neuen Arbeitsbereich erstellen.
 
 ![Avatour-Webkonsole – Hauptmenüpunkt „Arbeitsbereiche“](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-workspaces_hnhkjj.png) *Avatour-Webkonsole – Hauptmenüpunkt „Arbeitsbereiche“*
 
 Klicken Sie auf das Glockensymbol, um eine Übersicht über die Aktivitäten im Arbeitsbereich der letzten 7 Tage anzuzeigen.
 
-![Avatour-Webkonsole – Letzte Aktivitäten im Arbeitsbereich](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-workspace-recent-activities_gby1ws.png) *Letzte Aktivitäten im Arbeitsbereich*
+![Avatour-Webkonsole – Aktuelle Aktivitäten im Arbeitsbereich](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-workspace-recent-activities_gby1ws.png) *Aktuelle Aktivitäten im Arbeitsbereich*
 
 Innerhalb eines Arbeitsbereichs:
 
-![Avatour-Arbeitsbereich mit Asset-Panel, leerer Arbeitsfläche und Meeting-Panel](https://res.cloudinary.com/avatour/image/upload/v1785425098/Capture_d_%C3%A9cran_2026-07-28_153353_udkvkl.png) *Arbeitsbereich mit Assets (links), Arbeitsbereich-Dashboard (Mitte), Meetings (rechts)*
+![Avatour-Arbeitsbereich mit Asset-Panel, Dashboard und Meeting-Panel](https://res.cloudinary.com/avatour/image/upload/v1785929001/avatour-screenshot-workspace-dashboard_dqp5ff.png) *Arbeitsbereich mit Assets (links), Arbeitsbereich-Dashboard (Mitte), Meetings (rechts)*
 
 In der Mitte sehen Sie das Arbeitsbereich-Dashboard, das Ihnen einen Überblick über alle Notizen in den diesem Arbeitsbereich zugewiesenen Assets bietet, mit mehreren Dropdown-Menüs zur Auswahl nach verschiedenen Notizen-Attributen.
 
@@ -353,7 +353,7 @@ In den Menüs unten finden Sie:
   - **Betrachter** – Kann Assets anzeigen. Bei einer Einladung wird bei Bedarf ein Gastbenutzer angelegt.  
   - **Bearbeiter** – Vollständige Kontrolle über den Arbeitsbereich, gleiche Rechte wie der Gastgeber. Bei einer Einladung wird der Benutzer bei Bedarf zum Gastgeber hochgestuft.  
 > Mehrere Benutzer können gleichzeitig ohne Besprechung auf einen Arbeitsbereich zugreifen. Öffentliche Arbeitsbereiche und Zugriffseinstellungen für Besprechungen bieten alternative Zugriffsmöglichkeiten.  
-- **Bericht** – Erstellen Sie mithilfe einer Inspektionsvorlage einen Bericht zu ausgewählten Assets des Arbeitsbereichs. Die Antworten werden von der KI auf der Grundlage der Audiospuren in den ausgewählten Videos generiert.  
+- **Bericht** – Erstellen Sie mithilfe einer Inspektionsvorlage einen Bericht zu ausgewählten Assets des Arbeitsbereichs. Die Antworten werden von einer KI auf der Grundlage der Audiospuren in den ausgewählten Videos generiert.  
 
 ![Avatour-Arbeitsbereichsbericht und Objekt-Auswahl](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-asset-selection-and-workspace-report_itjt8f.png) *Arbeitsbereichsbericht und Objekt-Auswahl*
 
@@ -363,7 +363,7 @@ In den Menüs unten finden Sie:
 
 ![Avatour-Einstellungen – Arbeitsbereichsansicht](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-workspace-settings_llcei3.png) *Arbeitsbereichseinstellungen*
 
-**Arbeitsbereich-Einstellungen**
+**Arbeitsbereichseinstellungen**
 
 - **Berichtsvorlage** – Wählen Sie eine Inspektionsvorlage für KI-generierte Berichte aus. Diese können Sie im Konto hochladen (siehe unten).  
 - **Benachrichtigungen aktivieren** – Tägliche E-Mail-Zusammenfassungen zu Statusänderungen bei Notizen.  
@@ -375,12 +375,12 @@ In den Menüs unten finden Sie:
 **Besprechungseinstellungen**
   
 * **Authentifizierung erforderlich** – Teilnehmer müssen sich anmelden.  
-* **Gastzugang zulassen** – Nicht registrierten Benutzern wird das Anzeigen von Assets gestattet.  
+* **Gastzugang zulassen** – Nicht registrierten Benutzern wird die Anzeige von Assets gestattet.  
 * **Aufzeichnung automatisch starten / Manuell starten** – Wählen Sie aus, ob Besprechungen automatisch aufgezeichnet oder manuell gestartet werden sollen.  
 * **Moderator erforderlich** – Der Moderator muss Teilnehmer zulassen; die Besprechung endet, wenn der Moderator die Besprechung verlässt.  
 * **Zugang für Zuschauer zulassen** – Teilnahme ohne Mikrofon oder Kamera; Kommunikation über den Chat.  
 * **Passwortgeschützte Besprechungen** – Für die Teilnahme ist ein Passwort erforderlich.  
-* **Frage zu Reiseeinsparungen anzeigen** – Fragen Sie die Teilnehmer, ob die Besprechung Reisekosten eingespart hat.  
+* **Frage zu Reiseeinsparungen anzeigen** – Fragen Sie die Teilnehmer, ob die Besprechung zu Reiseeinsparungen geführt hat.  
 
 > Einstellungen können kombiniert werden (z. B. kein Gastgeber erforderlich, aber passwortgeschützt).
 

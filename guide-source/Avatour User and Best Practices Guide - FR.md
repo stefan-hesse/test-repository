@@ -321,7 +321,7 @@ Sur le côté gauche, vous verrez les éléments de menu suivants :
 - **Compte** *(administrateurs uniquement)* – Gérez les utilisateurs enregistrés et les caméras à 360°.  
 - **Connexion de l'appareil** – Saisissez le code affiché sur votre caméra à 360° pour l'associer à votre compte.  
 - **Tutoriels** – Accédez à des tutoriels guidés.  
-- **Déconnexion** – Déconnectez-vous de la console.
+- **Se déconnecter** – Déconnectez-vous de la console.
 
 > Les sections telles que Profil, Connexion de l’appareil, Tutoriels et Déconnexion sont intuitives et ne comportent pas de sous-sections détaillées.
 
@@ -335,13 +335,13 @@ Les espaces de travail sont des unités organisationnelles flexibles qui vous pe
 
 ![Console Web Avatour - Rubrique du menu principal « Espaces de travail »](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-workspaces_hnhkjj.png) *Console Web Avatour - Rubrique du menu principal « Espaces de travail »*
 
-Cliquez sur l'icône en forme de cloche pour afficher un récapitulatif de l'activité de l'espace de travail au cours des 7 derniers jours.
+Cliquez sur l'icône en forme de cloche pour afficher un résumé de l'activité de l'espace de travail au cours des 7 derniers jours.
 
 ![Console Web Avatour - Activités récentes de l'espace de travail](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-workspace-recent-activities_gby1ws.png) *Activités récentes de l'espace de travail*
 
 À l'intérieur d'un espace de travail :
 
-![Espace de travail Avatour avec le panneau « Ressources », le canevas vierge et le panneau « Réunions »](https://res.cloudinary.com/avatour/image/upload/v1785425098/Capture_d_%C3%A9cran_2026-07-28_153353_udkvkl.png) *Espace de travail avec les ressources (à gauche), tableau de bord de l'espace de travail (au centre), réunions (à droite)*
+![Espace de travail Avatour avec le panneau des ressources, le tableau de bord et le panneau des réunions](https://res.cloudinary.com/avatour/image/upload/v1785929001/avatour-screenshot-workspace-dashboard_dqp5ff.png) *Espace de travail avec les ressources (à gauche), tableau de bord de l’espace de travail (au centre), réunions (à droite)*
 
 Au centre, vous voyez le tableau de bord de l’espace de travail qui vous offre une vue d’ensemble de toutes les notes contenues dans les ressources attribuées à cet espace de travail, avec plusieurs menus déroulants permettant de filtrer les notes selon divers attributs.
 
@@ -352,7 +352,7 @@ Dans les menus du bas, vous trouverez :
   Contrôler l’accès aux espaces de travail via 
   - **Lecteur** – Peut consulter les ressources. L’invitation crée un utilisateur « Invité » si nécessaire.  
   - **Éditeur** – Contrôle total de l’espace de travail, mêmes droits que l’Hôte. L’invitation fait passer l’utilisateur au statut d’Hôte si nécessaire.  
-> Plusieurs utilisateurs peuvent accéder simultanément à un espace de travail sans avoir à créer de réunion. Les espaces de travail publics et les paramètres d’accès aux réunions offrent d’autres possibilités d’accès.  
+> Plusieurs utilisateurs peuvent accéder simultanément à un espace de travail sans passer par une réunion. Les espaces de travail publics et les paramètres d’accès aux réunions offrent d’autres possibilités d’accès.  
 - **Rapport** – Génère un rapport à l’aide d’un modèle d’inspection sur les ressources sélectionnées de l’espace de travail. Les réponses sont générées par l’IA à partir des pistes audio des vidéos sélectionnées.  
 
 ![Rapport d’espace de travail Avatour et sélection des éléments](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-asset-selection-and-workspace-report_itjt8f.png) *Rapport d’espace de travail et sélection des éléments*
@@ -416,7 +416,7 @@ Fournit des informations sur les réunions, l'utilisation de l'espace de travail
 
 ![Console Web Avatour - Rubrique « Analytics » du menu principal (2 sur 3)](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-analytics-2-of-3_vpcsme.png) *Activité des réunions et utilisation de l'espace de travail*
 
-![Console Web Avatour - Rubrique « Analytics » du menu principal (3 sur 3)](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-analytics-3-of-3_hn2pmr.png) *Économies et utilisation des licences d'appareils* 
+![Console Web Avatour - Rubrique « Analytics » du menu principal (3 sur 3)](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-analytics-3-of-3_hn2pmr.png) *Économies et utilisation des licences des appareils* 
 
 ## 5. Sur place - Comment utiliser le kit clé en main Avatour {#onsite-how-to-use-the-avatour-turnkey-kit}
 

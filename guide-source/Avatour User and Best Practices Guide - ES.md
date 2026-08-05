@@ -307,7 +307,7 @@ Al revisar un recurso en un espacio de trabajo, la barra de herramientas es simi
 
 Al iniciar sesión en tu cuenta de usuario de Avatour, accederás a la **Consola web**.  
 
-### 4.1 Consola web: descripción general del menú principal {#web-console-overview-main-menu}
+### 4.1 Consola web - Descripción general del menú principal {#web-console-overview-main-menu}
 
 En la parte izquierda, verás los siguientes elementos del menú:
 
@@ -341,11 +341,11 @@ Haz clic en el icono de la campana para ver un resumen de la actividad del espac
 
 Dentro de un espacio de trabajo:
 
-![Espacio de trabajo de Avatour con el panel de recursos, lienzo en blanco y panel de reuniones](https://res.cloudinary.com/avatour/image/upload/v1785425098/Capture_d_%C3%A9cran_2026-07-28_153353_udkvkl.png) *Espacio de trabajo con activos (izquierda), panel de control del espacio de trabajo (centro) y reuniones (derecha)*
+![Espacio de trabajo de Avatour con panel de recursos, panel de control y panel de reuniones](https://res.cloudinary.com/avatour/image/upload/v1785929001/avatour-screenshot-workspace-dashboard_dqp5ff.png) *Espacio de trabajo con activos (izquierda), panel de control del espacio de trabajo (centro) y reuniones (derecha)*
 
-En el centro se ve el panel de control del espacio de trabajo, que ofrece una visión general de todas las notas de los recursos asignados a ese espacio de trabajo, con varios menús desplegables para seleccionar según distintos atributos de las notas.
+En el centro se encuentra el panel de control del espacio de trabajo, que ofrece una visión general de todas las notas de los activos asignados a dicho espacio de trabajo, con varios menús desplegables para seleccionar según distintos atributos de las notas.
 
-En los menús inferiores encontrará:
+En los menús inferiores encontrarás:
 
 - **Recursos**: gestiona los archivos asignados a este espacio de trabajo.  
 - **Colaboradores**: 
@@ -382,7 +382,7 @@ En los menús inferiores encontrará:
 * **Reuniones protegidas con contraseña**: se requiere una contraseña para unirse.  
 * **Mostrar pregunta sobre ahorro en desplazamientos**: pregunta a los participantes si la reunión ha reducido los desplazamientos.  
 
-> Las opciones de configuración se pueden combinar (por ejemplo, no se requiere anfitrión pero sí protección con contraseña).
+> Las opciones de configuración se pueden combinar (por ejemplo, no se requiere anfitrión, pero la reunión está protegida con contraseña).
 
 ---
 
@@ -412,7 +412,7 @@ Aquí puedes consultar los detalles de tu cuenta y gestionar los usuarios regist
 
 Ofrece información detallada sobre las reuniones, el uso del espacio de trabajo y las métricas de retorno de la inversión (ROI).
 
-![Consola web de Avatour - Opción del menú principal «Análisis» (1 de 3)](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-analytics-1-of-3_ds3epe.png) *Resumen de análisis*
+![Consola web de Avatour - Elemento del menú principal «Análisis» (1 de 3)](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-analytics-1-of-3_ds3epe.png) *Resumen de análisis*
 
 ![Consola web de Avatour - Elemento del menú principal «Análisis» (2 de 3)](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-analytics-2-of-3_vpcsme.png) *Actividad de las reuniones y uso del espacio de trabajo*
 
