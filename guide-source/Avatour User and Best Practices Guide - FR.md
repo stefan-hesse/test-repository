@@ -321,7 +321,7 @@ Sur le côté gauche, vous verrez les éléments de menu suivants :
 - **Compte** *(administrateurs uniquement)* – Gérez les utilisateurs enregistrés et les caméras à 360°.  
 - **Connexion de l'appareil** – Saisissez le code affiché sur votre caméra à 360° pour l'associer à votre compte.  
 - **Tutoriels** – Accédez à des tutoriels guidés.  
-- **Se déconnecter** – Déconnectez-vous de la console.
+- **Déconnexion** – Déconnectez-vous de la console.
 
 > Les sections telles que Profil, Connexion de l’appareil, Tutoriels et Déconnexion sont intuitives et ne comportent pas de sous-sections détaillées.
 
@@ -335,7 +335,7 @@ Les espaces de travail sont des unités organisationnelles flexibles qui vous pe
 
 ![Console Web Avatour - Rubrique du menu principal « Espaces de travail »](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-workspaces_hnhkjj.png) *Console Web Avatour - Rubrique du menu principal « Espaces de travail »*
 
-Cliquez sur l'icône en forme de cloche pour afficher un résumé de l'activité de l'espace de travail au cours des 7 derniers jours.
+Cliquez sur l'icône en forme de cloche pour afficher un récapitulatif de l'activité de l'espace de travail au cours des 7 derniers jours.
 
 ![Console Web Avatour - Activités récentes de l'espace de travail](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-workspace-recent-activities_gby1ws.png) *Activités récentes de l'espace de travail*
 
@@ -394,13 +394,13 @@ Gérez toutes les vidéos à 360°/2D, les images et les fichiers PDF. Télécha
 
 Vous pouvez également générer le code HTML permettant l’intégration publique d’un élément, par exemple sur votre site web. Il suffit de cocher la case « Activer l’intégration publique », puis de cliquer sur « Enregistrer » pour obtenir le code.
 
-![Console Web Avatour - Élément du menu principal « Ressources »](https://res.cloudinary.com/avatour/image/upload/v1777898836/Capture_d_%C3%A9cran_2026-04-29_115840_mtau8g.png) *Ressources des éléments du menu principal*
+![Console Web Avatour - Élément du menu principal « Ressources »](https://res.cloudinary.com/avatour/image/upload/v1785921604/avatour-screenshot-main-menu-assets-embed-code_mtau8g.png) *Éléments du menu principal : Ressources*
 
 #### 4.2.3 Paramètres
 
-Les utilisateurs administrateurs ont accès à ce menu pour gérer de manière centralisée les paramètres de l’ensemble de la plateforme Avatour. Chaque paramètre peut être coché ou décoché pour devenir le paramètre par défaut sur l’ensemble de la plateforme. Chaque paramètre peut également être verrouillé, ce qui signifie que la valeur par défaut ne peut pas être modifiée par les autres utilisateurs de la plateforme. Vous pouvez également y effectuer des personnalisations marketing concernant votre image de marque (logo, couleurs, etc.).
+Les utilisateurs administrateurs ont accès à ce menu pour gérer de manière centralisée les paramètres de l’ensemble de la plateforme Avatour. Chaque paramètre peut être coché ou décoché pour devenir le paramètre par défaut sur l’ensemble de la plateforme. Chaque paramètre peut également être verrouillé, ce qui signifie que le paramètre par défaut ne peut pas être modifié par les autres utilisateurs de la plateforme. Vous pouvez également y effectuer des personnalisations marketing concernant votre image de marque (logo, couleurs, etc.).
 
-![Console Web Avatour - Paramètres du menu principal](https://res.cloudinary.com/avatour/image/upload/v1781172727/avatour-screenshot-main-menu-settings-1-of-2_fsaatf.jpg) *Section « Paramètres »*
+![Console Web Avatour - Paramètres des éléments du menu principal](https://res.cloudinary.com/avatour/image/upload/v1781172727/avatour-screenshot-main-menu-settings-1-of-2_fsaatf.jpg) *Section Paramètres*
 
 #### 4.2.4 Compte
 
@@ -416,7 +416,7 @@ Fournit des informations sur les réunions, l'utilisation de l'espace de travail
 
 ![Console Web Avatour - Rubrique « Analytics » du menu principal (2 sur 3)](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-analytics-2-of-3_vpcsme.png) *Activité des réunions et utilisation de l'espace de travail*
 
-![Console Web Avatour - Rubrique « Analytics » du menu principal (3 sur 3)](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-analytics-3-of-3_hn2pmr.png) *Économies et utilisation des licences des appareils* 
+![Console Web Avatour - Rubrique « Analytics » du menu principal (3 sur 3)](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-analytics-3-of-3_hn2pmr.png) *Économies et utilisation des licences d'appareils* 
 
 ## 5. Sur place - Comment utiliser le kit clé en main Avatour {#onsite-how-to-use-the-avatour-turnkey-kit}
 

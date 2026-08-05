@@ -307,7 +307,7 @@ Al revisar un recurso en un espacio de trabajo, la barra de herramientas es simi
 
 Al iniciar sesión en tu cuenta de usuario de Avatour, accederás a la **Consola web**.  
 
-### 4.1 Consola web - Descripción general del menú principal {#web-console-overview-main-menu}
+### 4.1 Consola web: descripción general del menú principal {#web-console-overview-main-menu}
 
 En la parte izquierda, verás los siguientes elementos del menú:
 
@@ -341,7 +341,7 @@ Haz clic en el icono de la campana para ver un resumen de la actividad del espac
 
 Dentro de un espacio de trabajo:
 
-![Espacio de trabajo de Avatour con el panel de recursos, el lienzo en blanco y el panel de reuniones](https://res.cloudinary.com/avatour/image/upload/v1785425098/Capture_d_%C3%A9cran_2026-07-28_153353_udkvkl.png) *Espacio de trabajo con activos (izquierda), panel de control del espacio de trabajo (centro) y reuniones (derecha)*
+![Espacio de trabajo de Avatour con el panel de recursos, lienzo en blanco y panel de reuniones](https://res.cloudinary.com/avatour/image/upload/v1785425098/Capture_d_%C3%A9cran_2026-07-28_153353_udkvkl.png) *Espacio de trabajo con activos (izquierda), panel de control del espacio de trabajo (centro) y reuniones (derecha)*
 
 En el centro se ve el panel de control del espacio de trabajo, que ofrece una visión general de todas las notas de los recursos asignados a ese espacio de trabajo, con varios menús desplegables para seleccionar según distintos atributos de las notas.
 
@@ -382,19 +382,19 @@ En los menús inferiores encontrará:
 * **Reuniones protegidas con contraseña**: se requiere una contraseña para unirse.  
 * **Mostrar pregunta sobre ahorro en desplazamientos**: pregunta a los participantes si la reunión ha reducido los desplazamientos.  
 
-> Las opciones de configuración se pueden combinar (por ejemplo, no se requiere anfitrión, pero la reunión está protegida con contraseña).
+> Las opciones de configuración se pueden combinar (por ejemplo, no se requiere anfitrión pero sí protección con contraseña).
 
 ---
 
 #### 4.2.2 Recursos
 
-Gestiona todos los vídeos en 360° y 2D, imágenes y archivos PDF. Sube y descarga recursos, asígnalos a espacios de trabajo, compártelos con otros usuarios, cámbiales el nombre, imprime o descarga informes, activa el desenfoque de rostros y el resumen mediante IA.
+Gestiona todos los vídeos en 360° y 2D, imágenes y archivos PDF. Sube y descarga recursos, asígnalos a espacios de trabajo, compártelos con otros usuarios, cámbiales el nombre, imprime o descarga informes, activa el desenfoque facial y el resumen mediante IA.
 
 ![Consola web de Avatour - Elemento del menú principal «Recursos»](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-assets_ky5emz.png) *Elemento del menú principal «Recursos»*
 
-También puedes generar el código HTML para permitir la incrustación pública de un recurso, por ejemplo, en tu sitio web. Solo tienes que marcar la casilla «Habilitar incrustación pública» y, a continuación, hacer clic en «Guardar» para obtener el código.
+También puedes generar el código HTML para permitir la incrustación pública de un recurso, por ejemplo, en tu página web. Solo tienes que marcar la casilla «Habilitar incrustación pública» y, a continuación, hacer clic en «Guardar» para obtener el código.
 
-![Consola web de Avatour - Elemento del menú principal «Recursos»](https://res.cloudinary.com/avatour/image/upload/v1777898836/Capture_d_%C3%A9cran_2026-04-29_115840_mtau8g.png) *Recursos de los elementos del menú principal*
+![Consola web de Avatour - Elemento del menú principal «Activos»](https://res.cloudinary.com/avatour/image/upload/v1785921604/avatour-screenshot-main-menu-assets-embed-code_mtau8g.png) *Elementos del menú principal: Recursos*
 
 #### 4.2.3 Configuración
 

@@ -317,7 +317,7 @@ No lado esquerdo, você verá os seguintes itens do menu:
 - **Recursos** – Acesse e gerencie todos os seus recursos (vídeos, imagens, PDFs). Os administradores podem visualizar todos os recursos da conta, e os recursos compartilhados ficam visíveis para todos os usuários.  
 - **Perfil** – Gerencie seu idioma e senha.  
 - **Análises** – Acompanhe a atividade das sessões, o uso do espaço de trabalho e as métricas de ROI.  
-- **Configurações** *(somente para administradores)* – Configure as configurações padrão do espaço de trabalho, das reuniões e dos ativos em toda a organização. Os administradores também podem personalizar a identidade visual (logotipo, cores, planos de fundo).  
+- **Configurações** *(Somente para administradores)* – Configure as configurações padrão do espaço de trabalho, das reuniões e dos ativos em toda a organização. Os administradores também podem personalizar a identidade visual (logotipo, cores, planos de fundo).  
 - **Conta** *(somente para administradores)* – Gerencie usuários registrados e câmeras 360°.  
 - **Login do dispositivo** – Digite o código exibido na sua câmera 360° para emparelhá-la com sua conta.  
 - **Tutoriais** – Acesse tutoriais guiados.  
@@ -347,12 +347,12 @@ No centro, você vê o painel do espaço de trabalho, que oferece uma visão ger
 
 Nos menus inferiores, você encontrará:
 
-- **Recursos** – Gerencie os arquivos alocados a este espaço de trabalho.  
+- **Recursos** – Gerencie os arquivos atribuídos a este espaço de trabalho.  
 - **Colaboradores** – 
   Controle o acesso aos espaços de trabalho por meio de 
   - **Visualizador** – Pode visualizar os recursos. O convite cria um usuário Convidado, se necessário.  
   - **Editor** – Controle total do espaço de trabalho, com os mesmos direitos que o Anfitrião. O convite eleva o usuário à função de Anfitrião, se necessário.  
-> Vários usuários podem acessar um espaço de trabalho simultaneamente sem a necessidade de uma reunião. Os espaços de trabalho públicos e as configurações de acesso à reunião oferecem alternativas de acesso.  
+> Vários usuários podem acessar um espaço de trabalho simultaneamente sem a necessidade de uma reunião. Os espaços de trabalho públicos e as configurações de acesso à reunião oferecem formas alternativas de acesso.  
 - **Relatório** – Gere um relatório usando um modelo de inspeção nos ativos selecionados do espaço de trabalho. As respostas são geradas por IA com base nas faixas de áudio dos vídeos selecionados.  
 
 ![Relatório do Espaço de Trabalho Avatour e Seleção de Ativos](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-asset-selection-and-workspace-report_itjt8f.png) *Relatório do Espaço de Trabalho e Seleção de Ativos*
@@ -379,8 +379,8 @@ Nos menus inferiores, você encontrará:
 * **Início automático da gravação / Início manual** – Escolha se as reuniões serão gravadas automaticamente ou iniciadas manualmente.  
 * **Exigir anfitrião** – O anfitrião deve admitir os participantes; a reunião termina quando o anfitrião sai.  
 * **Permitir acesso de espectadores** – Participar sem microfone ou câmera; comunicar-se por chat.  
-* **Reuniões protegidas por senha** – Exija uma senha para participar.  
-* **Mostrar pergunta sobre economia de deslocamento** – Pergunte aos participantes se a reunião reduziu a necessidade de deslocamento.  
+* **Reuniões protegidas por senha** – Exigir uma senha para participar.  
+* **Mostrar pergunta sobre economia de deslocamento** – Perguntar aos participantes se a reunião reduziu a necessidade de deslocamento.  
 
 > As configurações podem ser combinadas (por exemplo, sem necessidade de anfitrião, mas protegidas por senha).
 
@@ -388,13 +388,13 @@ Nos menus inferiores, você encontrará:
 
 #### 4.2.2 Recursos
 
-Gerencie todos os vídeos em 360°/2D, imagens e PDFs. Faça upload/download de recursos, aloque-os a espaços de trabalho, compartilhe com outros usuários, renomeie, imprima/baixe relatórios, ative o desfoque de rosto e a síntese por IA.
+Gerencie todos os vídeos em 360°/2D, imagens e PDFs. Faça upload/download de recursos, aloque-os a espaços de trabalho, compartilhe com outros usuários, renomeie, imprima/baixe relatórios, ative o desfoque de rosto e o resumo por IA.
 
 ![Console da Web do Avatour – Item do menu principal “Recursos”](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-assets_ky5emz.png) *Item do menu principal “Recursos”*
 
 Você também pode gerar o código HTML para habilitar a incorporação pública de um recurso, por exemplo, em seu site. Basta marcar a caixa de seleção “Habilitar incorporação pública” e, em seguida, clicar em “Salvar” para obter o código.
 
-![Console da Web do Avatour - Item do menu principal “Ativos”](https://res.cloudinary.com/avatour/image/upload/v1777898836/Capture_d_%C3%A9cran_2026-04-29_115840_mtau8g.png) *Recursos do Menu Principal*
+![Console da Web do Avatour - Item do menu principal “Ativos”](https://res.cloudinary.com/avatour/image/upload/v1785921604/avatour-screenshot-main-menu-assets-embed-code_mtau8g.png) *Recursos dos itens do menu principal*
 
 #### 4.2.3 Configurações
 
