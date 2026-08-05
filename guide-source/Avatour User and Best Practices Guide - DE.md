@@ -575,40 +575,40 @@ Hier sind (1) das Hauptmenü, (2) die Einstellungen und (3) die Netzwerkeinstell
 
 **Konto** – Zum Anmelden mit Ihrem Avatour-Host- oder Admin-Konto.
 
-## 6. Empfehlungen zu bewährten Verfahren {#best-practice-advice}
+## 6. Empfehlungen zu bewährten Vorgehensweisen {#best-practice-advice}
 
 ### 6.1 Erste (informelle) Nutzung und Einarbeitung
 
 Für Ihre ersten Schritte und zum Kennenlernen der Avatour-Webkonsole und des Avatour-Turnkey-Kits empfehlen wir folgende Vorgehensweise:
 
 1. Nehmen Sie das Kit mit nach Hause und probieren Sie es gemeinsam mit Familie und Freunden über Ihre private Internetverbindung aus.
-2. Nehmen Sie das Kit mit ins Büro und verbinden Sie es mit einem Unternehmensnetzwerk (hier können unternehmensspezifische Probleme auftreten, z. B. Unternehmensfirewalls – aber Sie wissen bereits aus Schritt 1, dass Avatour funktioniert, und dies ist ein Thema, das Ihr IT-Team mit Hilfe von Avatour klären kann).
-3. Beginnen Sie, Avatour vor Ort (außerhalb Ihres Büros) an dem Tagungsort zu nutzen, zu dem Remote-Teilnehmer normalerweise anreisen müssten. Dabei können weitere Fragen zur Konnektivität auftauchen. Avatour hilft Ihnen dabei in Zusammenarbeit mit Ihrem IT-Team.
+2. Nehmen Sie das Kit mit ins Büro und verbinden Sie es mit einem Unternehmensnetzwerk (hier können unternehmensspezifische Probleme auftreten, z. B. Unternehmens-Firewalls – aber Sie wissen bereits aus Schritt 1, dass Avatour funktioniert, und dies ist ein Thema, das Ihr IT-Team mit Hilfe von Avatour klären kann).
+3. Beginnen Sie damit, Avatour vor Ort (außerhalb Ihres Büros) an dem Tagungsort zu nutzen, zu dem Remote-Teilnehmer normalerweise anreisen müssten. Dabei könnten weitere Fragen zur Konnektivität auftauchen. Avatour hilft Ihnen dabei in Zusammenarbeit mit Ihrem IT-Team.
 4. Beginnen Sie mit der Nutzung mit internen und externen Remote-Teilnehmern.
 
 ### 6.2 Vor einem 360°-Video-Live-Meeting
 
 - Wir empfehlen, vor jeder Live-Tour – sofern es die Zeit erlaubt – eine aufgezeichnete 360°-Videotour durchzuführen, und zwar aus drei Gründen: (1) Sie haben eine Ausweichlösung für die Live-Tour, (2) Sie verfügen über Material zur Dokumentation und späteren Nachbereitung (zusätzlich zur aufgezeichneten Live-Tour) und (3) Sie beginnen damit, eine Bibliothek mit 360°-Videos all Ihrer Standorte aufzubauen, die für viele Anwendungsfälle hilfreich sein kann. 
 
-- Laden Sie alle Komponenten des Sets mindestens 90 Minuten vor dem Live-Meeting auf. Wir empfehlen ohnehin, alle Geräte kontinuierlich aufzuladen, wenn sie nicht in Gebrauch sind. So sind alle Geräte stets einsatzbereit, auch für ungeplante Ad-hoc-Meetings.
+- Laden Sie alle Komponenten des Sets vor dem Live-Meeting mindestens 90 Minuten lang auf. Wir empfehlen, alle Geräte kontinuierlich aufzuladen, wenn sie nicht in Gebrauch sind. So sind alle Geräte stets einsatzbereit, auch für ungeplante Ad-hoc-Meetings.
 
-- Stellen Sie sicher, dass das Kit vollständig zusammengebaut ist (1. Stativfuß + 2. Ulanzi-Akku + 3. ausziehbarer Stab + 4. 360°-Kamera).
+- Stellen Sie sicher, dass das Kit vollständig zusammengebaut ist (1. Stativsockel + 2. Ulanzi-Akku + 3. ausziehbarer Stab + 4. 360°-Kamera).
 
 - Vergewissern Sie sich, dass ein Workspace für die Durchführung eines Live-Meetings erstellt wurde und fügen Sie alle relevanten Assets hinzu.
 
-- Laden Sie alle Teilnehmer über Ihren Workspace zum Meeting ein. Dadurch wird in den Kalendern aller Teilnehmer eine Einladung erstellt, die den Link zur Meeting-Einladung enthält.
+- Laden Sie alle Teilnehmer über Ihren Workspace zur Besprechung ein. Dadurch wird in den Kalendern aller Teilnehmer eine Einladung erstellt, die den Link zur Besprechung enthält.
 
-- Koppeln und verbinden Sie Ihre Bluetooth-Kopfhörer oder den Lautsprecher, den Sie für Ihre Tour verwenden möchten, mit der Kamera.
+- Koppeln und verbinden Sie Ihre Bluetooth-Kopfhörer oder den Lautsprecher, den Sie für Ihre Führung verwenden möchten, mit der Kamera.
 
 - Alle Smartphone-Nutzer vor Ort sollten sich über ein anderes Netzwerk als das der Kamera verbinden. Dadurch wird die Belastung der Netzwerkbandbreite der Kamera verringert.
 
-- Wenn Sie als Kameramann allein sind, nehmen Sie ein Smartphone mit, falls Sie die Smartphone-Kamera freigeben und feine Details zeigen möchten.
+- Wenn Sie als Kameramann allein sind, nehmen Sie ein Smartphone mit, falls Sie die Smartphone-Kamera teilen und feine Details zeigen möchten.
 
 - Vergewissern Sie sich, dass die 360°-Kamera eine Verbindung zu Ihrem lokalen WLAN herstellen kann.
 
 - Planen Sie vor einem Avatour-Meeting die Route, die Sie durch die Einrichtung nehmen werden. Führen Sie ein Test-Avatour-Meeting mit der Kamera durch und überprüfen Sie, ob alle Bereiche eine Bandbreite von über 1 Mbit/s aufweisen. Dies können Sie auf dem Kamerabildschirm selbst sehen oder als Remote-Teilnehmer, indem Sie in den Einstellungen die Option „Bitrate anzeigen“ aktivieren.
 
-- Sollten Sie feststellen, dass in einigen Bereichen nur wenig oder gar keine Bandbreite zur Verfügung steht, empfiehlt es sich, Fotos oder eine Videoaufnahme zu machen. Diese können dann während des Meetings den Remote-Teilnehmern zur Ansicht präsentiert werden. Befolgen Sie dazu die obige Anleitung, in der unsere „Quick Capture“-Funktion für Offline-Aufnahmen und das Hochladen von Videos/Bildern erläutert wird.
+- Sollten Sie feststellen, dass in einigen Bereichen nur wenig oder gar keine Bandbreite zur Verfügung steht, sollten Sie am besten Fotos oder eine Aufzeichnung machen. Diese können dann während des Meetings den Remote-Teilnehmern zur Ansicht präsentiert werden. Befolgen Sie dazu die obige Anleitung, in der unsere „Quick Capture“-Funktion für Offline-Aufnahmen und das Hochladen von Videos/Bildern erläutert wird.
 
 - Wenn Remote-Teilnehmer an der Besprechung teilnehmen, die Avatour noch nicht zuvor genutzt haben, geben Sie ihnen eine kurze Übersicht über die Plattform, ihre Funktionen (360°-Live-Video, Assets, Schnappschüsse, Anmerkungen, Spotlight) und die Besprechungstools.
 
@@ -618,7 +618,7 @@ Für Ihre ersten Schritte und zum Kennenlernen der Avatour-Webkonsole und des Av
 
 ### 6.3 Bei der Bedienung der Kamera vor Ort für ein 360°-Video-Live-Meeting
 
-- Achten Sie bei der Bedienung der Kamera darauf, **langsam zu gehen** und **häufig anzuhalten, um die Kamera auf ihrem Stativ abzustellen**. Dies trägt (1) zur Videoqualität bei, da Sie weniger Videodaten erzeugen, wenn Sie die Kamera nicht unnötig bewegen, und (2) verringert mögliche Videoausfälle, wenn die Netzwerkverbindung der Kamera zwischen WLAN-Zugangspunkten wechselt.
+- Achten Sie bei der Bedienung der Kamera darauf, **langsam zu gehen** und **häufig anzuhalten, um die Kamera auf ihrem Stativ abzustellen**. Dies trägt dazu bei, (1) die Videoqualität zu verbessern, da durch den Verzicht auf unnötige Kamerabewegungen weniger Videodaten erzeugt werden, und (2) mögliche Videoausfälle zu verringern, wenn die Netzwerkverbindung der Kamera zwischen WLAN-Zugangspunkten wechselt.
 
 - Halten Sie die Kamera vor sich und über Augenhöhe. So können alle Remote-Teilnehmer den Großteil Ihrer Umgebung sehen.
 
@@ -626,11 +626,11 @@ Für Ihre ersten Schritte und zum Kennenlernen der Avatour-Webkonsole und des Av
 
 - Verbinden Sie die Kamera nach Möglichkeit immer mit Ihrem lokalen WLAN-Netzwerk. In Bereichen ohne WLAN-Zugang nutzen Sie den mitgelieferten Hotspot. Der Hotspot verfügt über eine SIM-Karte, die eine Verbindung zu einem zuverlässigen Mobilfunknetz in Ihrer Nähe herstellt. Schalten Sie den Hotspot immer aus, wenn er in Innenräumen nicht genutzt wird, da sich die 360°-Kamera sonst mit dem Hotspot verbinden könnte, was in Innenräumen nicht erwünscht ist. Halten Sie den Hotspot im Freien in der Nähe der 360°-Kamera.
 
-- Wenn die Bitrate der Kamera unter 2 Mbit/s fällt, gehen Sie langsamer oder halten Sie ganz an, bis sich das Signal wieder stabilisiert hat. Dies geschieht in der Regel, wenn Sie von einem WLAN-Zugangspunkt zu einem anderen wechseln. 
+- Wenn die Bitrate der Kamera unter 2 Mbit/s fällt, gehen Sie langsamer oder bleiben Sie ganz stehen, bis sich das Signal wieder stabilisiert hat. Dies geschieht in der Regel, wenn Sie von einem WLAN-Zugangspunkt zu einem anderen wechseln. 
 
 - Wenn Sie wissen, dass die Verbindung und die Videoqualität beim Wechsel zu einem bestimmten Ort abfallen (Beispiel: beim Wechsel von einem Produktionsbereich in Innenräumen zu einem Außenbereich), informieren Sie die Remote-Teilnehmer bitte im Voraus darüber.
 
-- Wenn Sie etwas sehr detailliert oder mit kleiner Schrift zeigen müssen, können Sie mit der 360°-Kamera ganz nah herangehen; außerdem können Sie Ihr eigenes Smartphone oder das eines Teilnehmers vor Ort nutzen, um an der Besprechung teilzunehmen und die (Rück-)Kamera Ihres bzw. dessen Smartphones einzublenden.
+- Wenn Sie etwas sehr detailliert oder mit kleiner Schrift zeigen müssen, können Sie mit der 360°-Kamera ganz nah herangehen. Sie können auch Ihr eigenes Smartphone oder das eines Teilnehmers vor Ort nutzen, um an der Besprechung teilzunehmen und die (Rück-)Kamera Ihres bzw. dessen Smartphones einzublenden.
 
 - Wenn möglich, empfehlen wir, dass eine weitere Person vor Ort ist, um bei der oben beschriebenen Freigabe der Smartphone-Kamera zu helfen, da sich dies oft als hilfreich oder notwendig erweist.
 
@@ -650,7 +650,7 @@ Für Ihre ersten Schritte und zum Kennenlernen der Avatour-Webkonsole und des Av
 
 - Stellen Sie die Kamera ab und richten Sie sie auf Dinge, die Sie hervorheben möchten. Wenn Sie die Richtungssperre auf „Nein“ setzen, können Sie mit der 360°-Kamera sogar auf etwas zeigen (z. B. mit dem vorderen Objektiv).  
 
-- Wenn Sie aufnehmen, um einen KI-generierten Bericht zu erhalten, und zudem Sprachbefehle verwenden, sprechen Sie laut und deutlich. Um der KI dabei zu helfen, Orte, Maße und Probleme zu identifizieren und Ihre Inspektionsvorlagen auszufüllen, nennen Sie diese ausdrücklich und verwenden Sie dabei dieselbe Terminologie, die in Ihrer Vorlage verwendet wird.
+- Wenn Sie aufnehmen, um einen KI-generierten Bericht zu erhalten, und dabei auch Sprachbefehle verwenden, sprechen Sie laut und deutlich. Um der KI dabei zu helfen, Orte, Maße und Probleme zu identifizieren und Ihre Inspektionsvorlagen auszufüllen, nennen Sie diese ausdrücklich und verwenden Sie dabei dieselbe Terminologie, die in Ihrer Vorlage verwendet wird.
 
 
 > Hinweis: Die meisten Avatour-Funktionen sind auch für 2D-Videos verfügbar.

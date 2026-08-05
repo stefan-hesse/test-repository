@@ -590,7 +590,7 @@ Para tus primeros usos y para familiarizarte con la consola web de Avatour y el 
 
 - Recomendamos realizar un recorrido en vídeo de 360° grabado antes de cualquier recorrido en directo, si el tiempo lo permite, por tres razones: (1) Disponer de una solución alternativa para el recorrido en directo; (2) contar con material para la documentación y su revisión posterior (además del recorrido en directo grabado); y (3) empezar a crear una biblioteca de vídeos de 360° de todas sus instalaciones, lo cual puede resultar útil para muchos casos de uso. 
 
-- Carga todos los componentes del kit durante al menos 90 minutos antes de la reunión en directo. De todos modos, recomendamos mantener todos los dispositivos en carga continua cuando no se utilicen. De este modo, todos los dispositivos estarán siempre listos, incluso para reuniones improvisadas no planificadas.
+- Carga todos los componentes del kit durante al menos 90 minutos antes de la reunión en directo. Recomendamos mantener todos los dispositivos en carga continua cuando no se utilicen. De este modo, todos los dispositivos estarán siempre listos, incluso para reuniones improvisadas no planificadas.
 
 - Asegúrate de que el kit esté completamente montado (1. base del trípode + 2. batería Ulanzi + 3. palo extensible + 4. cámara de 360°).
 
@@ -598,23 +598,23 @@ Para tus primeros usos y para familiarizarte con la consola web de Avatour y el 
 
 - Invita a todos los participantes a la reunión a través de tu espacio de trabajo. De este modo, se creará una invitación en los calendarios de todos los participantes, que incluirá el enlace de invitación a la reunión.
 
-- Empareja y conecta a la cámara los auriculares o el altavoz Bluetooth que tengas previsto utilizar para la visita.
+- Empareja y conecta a la cámara los auriculares o el altavoz Bluetooth que tengas previsto utilizar para la visita guiada.
 
-- Todos los usuarios de smartphones presentes en el lugar deben conectarse a una red diferente a la de la cámara. Esto reducirá la carga sobre el ancho de banda de la red de la cámara.
+- Todos los usuarios de smartphones que se encuentren en las instalaciones deben conectarse a una red diferente a la de la cámara. Esto reducirá la carga sobre el ancho de banda de la red de la cámara.
 
 - Si eres el único operador de cámara, llévate un smartphone por si quieres compartir la pantalla de tu móvil y mostrar detalles precisos.
 
 - Comprueba que la cámara de 360° pueda conectarse a tu red Wi-Fi local.
 
-- Antes de una reunión de Avatour, planifica la ruta que vas a seguir por las instalaciones. Realiza una reunión de prueba de Avatour con la cámara y comprueba que todas las zonas tengan velocidades de transmisión superiores a 1 Mbps. Esto se puede ver en la propia pantalla de la cámara o, si eres un participante remoto, yendo a «Ajustes» y activando «Mostrar velocidad de transmisión».
+- Antes de una reunión de Avatour, planifica la ruta que vas a seguir por las instalaciones. Realiza una reunión de prueba de Avatour con la cámara y comprueba que todas las zonas tengan velocidades de transmisión superiores a 1 Mbps. Esto se puede ver en la propia pantalla de la cámara o, si eres un participante remoto, accediendo a «Ajustes» y activando «Mostrar velocidad de transmisión».
 
-- Si observas que algunas zonas tienen poco o ningún ancho de banda, lo mejor es tomar imágenes o realizar una grabación. Estas se pueden presentar durante la reunión para que los participantes remotos las revisen. Puedes seguir la guía anterior que explica nuestra función «Captura rápida» para grabar sin conexión y subir vídeos o imágenes.
+- Si observas que algunas zonas tienen poco o ningún ancho de banda, lo mejor es tomar imágenes o realizar una grabación. Estas se pueden presentar durante la reunión para que los participantes remotos las revisen. Puedes seguir la guía anterior que explica nuestra función «Captura rápida» para grabar y subir vídeos o imágenes sin conexión.
 
 - Si hay participantes remotos que se unen a la reunión y que no han utilizado Avatour anteriormente, ofréceles un breve resumen de la plataforma, sus funcionalidades (vídeo en directo en 360°, recursos, instantáneas, anotaciones, foco de atención) y las herramientas de la reunión.
 
 - Puedes comenzar en otra solución de videoconferencia (por ejemplo, Teams, Zoom o Google Meet), pero antes de pasar a Avatour, cierra completamente la otra aplicación de videoconferencia. En algunos casos, estas otras aplicaciones darán prioridad al micrófono, los altavoces o la cámara web de tu dispositivo, lo que provocará que queden desactivados para Avatour. Además, NO ejecutes Avatour Y otra videoconferencia al mismo tiempo, ya que esto reducirá el ancho de banda disponible.
 
-- Si tiene previsto utilizar la cámara de 360° en un entorno con temperaturas elevadas, se recomienda utilizar el módulo de refrigeración (solo Pilot Pano). Esto ayudará a reducir las posibilidades de que la cámara se sobrecaliente y se apague automáticamente.
+- Si tiene previsto utilizar la cámara 360 en un entorno con temperaturas elevadas, se recomienda utilizar el módulo de refrigeración (solo Pilot Pano). Esto ayudará a reducir las posibilidades de que la cámara se sobrecaliente y se apague automáticamente.
 
 ### 6.3 Al manejar la cámara in situ para una reunión en directo con vídeo de 360°
 
@@ -646,9 +646,9 @@ Para tus primeros usos y para familiarizarte con la consola web de Avatour y el 
 
 - Comprueba que el GPS funcione cuando sea necesario.
 
-- Anticipa lo que los espectadores querrán ver; por ejemplo, detalles: acércate mucho con la cámara de 360° y espera unos instantes.
+- Anticipa lo que los espectadores querrán ver; por ejemplo, si se trata de detalles, acércate mucho con la cámara de 360° y espera unos instantes.
 
-- Coloca la cámara en el suelo y apúntala hacia los elementos que quieras destacar. Si configuras el «Bloqueo de dirección» en «No», incluso puedes apuntar a algo con la cámara de 360° (por ejemplo, utilizando la lente frontal).  
+- Coloca la cámara en el suelo y apúntala hacia los elementos que quieras destacar. Si configuras el «Bloqueo de dirección» en «No», incluso puedes señalar algo con la cámara de 360° (por ejemplo, utilizando la lente frontal).  
 
 - Si estás grabando para obtener un informe generado por IA y también utilizas comandos de voz, habla alto y claro. Para ayudar a la IA a identificar ubicaciones, medidas y problemas, y para completar tus plantillas de inspección, menciónalos explícitamente y utiliza la misma terminología que se emplea en tu plantilla.
 
