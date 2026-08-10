@@ -263,13 +263,15 @@ When presenting an asset in a meeting, the **Asset Toolbar** appears above the c
 - **Snapshot** – Capture a 360° or 2D image from the asset.  
 - **Spotlight** – Highlight a specific area for all participants during live sessions.  
 - **Show/Hide Point-of-View (POV)** – Display where each participant is looking in the 360° video.  
-- **Notes** – Create notes anchored to specific moments in the asset. Notes can be categorized (Observation, Issue, Action, Recommendation), tracked by status (Open → In Progress → Resolved), and shared via direct links. If the asset has a GPS track notes are also showing the GPS coordinates. 
+- **Notes** – Create notes anchored to specific moments in the asset. Each note has an author and can be categorized (Observation, Issue, Action, Recommendation), tracked by status (Open → In Progress → Resolved), allocated to an Assignee, and shared via direct links. If the asset has a GPS track notes are also showing the GPS coordinates. 
 
   ![Avatour Note and Notes Filter](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-note-and-filters_g181oc.png) *Avatour Note and Note Filters*
 
 - **Voice Command Notes** – These are automatically generated placeholders when the recording detects mentions like “insert note,” “take a note,” or “make a note.” These notes appear on the timeline and need to be **positioned and finalized** by the user. 
 
   ![Avatour Notes - Voice Command Generated](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-notes-voice-command-generated_ic5cu4.png) *Avatour Notes - Voice Command Generated*
+
+- **AI Generated Notes** – These are automatically generated placeholders when the recording detects mentions in the audio track of the video which sound like issues which need to be captured for follow up. AI Generated Notes first need to be approved by the note owner (see Workspace Dashboard below). Once approved these are ike Voice Command Notes as they appear on the timeline and need to be **positioned and finalized** by the user. 
 
 - **Notes and Summary Panel** – Opens a side panel that displays all notes, key topics, and an executive summary for the asset. Clicking an item brings you to that moment in the video.  
 
@@ -343,7 +345,7 @@ Inside a workspace:
 
 ![Avatour Workspace with Assets Panel, Dashboard and Meetings Panel](https://res.cloudinary.com/avatour/image/upload/v1785929001/avatour-screenshot-workspace-dashboard_dqp5ff.png) *Workspace with Assets (left), Workspace Dashboard (center), Meetings (right)*
 
-In the center you see the workspace dashboard giving you an overview of all notes in the assets allocated to that workspace with several drop down menus to select by various notes attributes.
+In the center you see the workspace dashboard giving you an overview of all notes in the assets allocated to that workspace with several drop down menus to select by various notes attributes. You can also export all notes from this view.
 
 In the bottom menus you will find:
 
@@ -404,9 +406,11 @@ Admin Users have access to this menu to manage Settings centrally for the entire
 
 #### 4.2.4 Account
 
-Here you can see details of your account and manage registered users as well as upload inspection templates to generate workspace reports (see above).
+Here you can see details of your account and manage registered user accounts including their workspace access as well as upload inspection templates to generate workspace reports (see above).
 
-![Avatour Web Console - Main Menu Item Account](https://res.cloudinary.com/avatour/image/upload/v1781172273/avatour-screenshot-main-menu-account-1-of-2_oq5amr.jpg) *Account Overview*
+![Avatour Web Console - Main Menu Item Account](https://res.cloudinary.com/avatour/image/upload/v1786103904/avatour-screenshot-main-menu-account-1-of-2_oq5amr.png) *Account Overview - Upper sections*
+
+![Avatour Web Console - Main Menu Item Account](https://res.cloudinary.com/avatour/image/upload/v1772360316/avatour-screenshot-main-menu-account-2-of-2_udgyjz.png) *Account Overview - Lower section*
 
 #### 4.2.5 Analytics
 

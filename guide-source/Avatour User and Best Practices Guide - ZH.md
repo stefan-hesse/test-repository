@@ -132,23 +132,23 @@ Avatour 主要通过以下两种方式支持用户协作：
 
 > **注意：**加入 Avatour 会议需要您 **授予麦克风权限**。请接受浏览器弹出的任何权限提示。
 
-1. **通过日历邀请（推荐）：** 
- - 您通常会收到一封包含**直接加入链接**的**日历邀请**（例如：`https://avatour.live/join?s=xxxxx`）。  
-   - 点击该链接后，系统会自动填入 **5 位会议代码** 并带您进入会议。
-   - **需要身份验证：** 部分会议仅限注册用户参加。 此时，邀请中会注明您需要 **登录才能加入会议**。
- - **密码保护的会议：** 某些会议可能需要密码。这种情况下，邀请中会包含您必须输入的密码才能加入。
+1. **通过日历邀请（推荐）：**  
+   - 您通常会收到一封包含 **直接加入链接** 的 **日历邀请**（例如：`https://avatour.live/join?s=xxxxx`）。
+ - 点击该链接后，系统会自动填入 **5 位会议代码** 并带您进入会议。
+   - **需要身份验证：** 部分会议仅限注册用户参加。这种情况下，邀请中会注明您需要 **登录才能进入会议**。
+ - **密码保护的会议：** 部分会议可能需要密码。 此时，邀请中会包含您必须输入的密码才能加入会议。
 
 2. **通过会议代码：**  
    - 如果主持人另行分享了 **5 位数的会议代码**，请访问 [https://avatour.live/join](https://avatour.live/join)，输入您的 **姓名** 和 **会议代码**，即可加入会议。  
    - 如果会议是**密码保护的**，请输入主持人提供的密码。
  - 如果会议需要**身份验证**，您需要在加入前**使用您的 Avatour 账户登录**。
 
-> **提示 1：** 如果您的摄像头或麦克风无法正常工作，可能是因为它们正被其他应用程序（例如 Microsoft Teams 或 Zoom）占用。请关闭所有可能正在使用您的摄像头或麦克风的应用程序，然后退出并重新加入 Avatour 会议。  
+> **提示 1：** 如果您的摄像头或麦克风无法正常工作，可能是因为它们正被其他应用程序（例如 Microsoft Teams 或 Zoom）占用。 请关闭所有可能正在使用摄像头或麦克风的应用程序，然后退出并重新加入 Avatour 会议。  
 
 > **提示 2：** 如果您仍然无法加入会议，请运行此测试：[https://avatour.live/test](https://avatour.live/test)。  
-> 该测试可识别您的**企业防火墙或网络**是否正在阻断访问，并提供相关信息以供您与IT团队沟通时参考。  
+> 该测试可识别您的**企业防火墙或网络**是否正在阻止访问，并提供相关信息以指导您与IT团队的沟通。  
 
-> **提示 3：** **请勿**使用 Avatour 的 iOS 或 Android 应用加入会议。 仅当**通过 Insta360 相机直播会议**时才需要使用这些应用，因为这些相机无法直接运行 Avatour 360° 软件，需要智能手机协助。
+> **提示 3：** **请勿**使用 Avatour iOS 或 Android 应用加入会议。仅当**通过 Insta360 相机直播会议**时才需要这些应用，因为该类相机无法直接运行 Avatour 360° 软件，需要智能手机辅助。
 
 ##### 访问 Avatour 工作区（无需加入 Avatour 会议）
 
@@ -170,16 +170,16 @@ Avatour 主要通过以下两种方式支持用户协作：
 您可以通过多种兼容的 Meta 和 Pico 头显加入会议并访问工作区。操作步骤如下： 
 
 1. 从您所在平台的 VR 应用商店安装我们的 Avatour 应用：[如何安装 Avatour VR 应用](https://avatour.com/support/which-vr-headsets-can-i-use-with-avatour)
-2. 打开应用，输入会议代码或选择一个工作区以加入会议。有关如何使用我们 VR 应用的更多信息，请参阅我们的知识库文章 [此处](https://avatour.com/support/what-features-are-available-to-vr-guests)。
+2. 启动应用，输入会议代码或选择一个工作区以加入会议。有关如何使用我们的 VR 应用的更多信息，请参阅我们的知识库文章 [此处](https://avatour.com/support/what-features-are-available-to-vr-guests)。
 
 ### 3.2 会议与工作区协作工具 {#meeting-tools}
 
-Avatour 支持在以下两种主要场景中进行协作：
+Avatour 支持在两种主要场景下进行协作：
 
-1. **会议（同步）：** 与其他参与者进行实时协作，包括现场实地考察或共同审阅录制的资产。  
-2. **工作区（异步）：** 根据您的日程安排，全天候（24/7）审阅资产并进行交互。
+1. **会议（同步）：** 与其他参与者实时协作，包括现场实时参观或共同查看录制的素材。  
+2. **工作区（异步）：** 您可以根据自己的时间安排，全天候随时查看资产并与之互动。
 
-会议和工作空间之间的**协作工具基本相似**，但因同步与异步场景的不同而存在一些差异。
+会议和工作区之间的**协作工具基本相似**，但因同步与异步场景的不同而存在一些差异。
 
 #### 3.2.1 界面布局
 
@@ -189,13 +189,13 @@ Avatour 界面主要由三个区域组成：
 - **中央画布** – 实时视频或资产的主显示区域  
 - **右侧面板** – 上下文信息，例如参与者、会议或聊天  
 
-大多数交互操作均从**底部菜单**发起。  
+大多数交互操作均通过**底部菜单**发起。  
 点击菜单选项会在屏幕左侧或右侧打开一个**侧边面板**，而**中央画布**仍保持为主视图区域。
 
 ---
 #### 3.2.2 会议视图示例
 
-以下是 Avatour 会议视图的一个示例：
+以下是 Avatour 会议中的一种视图示例：
 
 ![带资源面板、空白画布和参与者面板的 Avatour 会议界面](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-meeting-assets-blank-participants_pugprq.png)  
 *Avatour 会议界面，包含资源面板（左侧）、画布（中央）和参与者面板（右侧）*
@@ -207,7 +207,7 @@ Avatour 界面主要由三个区域组成：
 以下是一个工作区视图的示例：
 
 ![带资源面板、空白画布和会议面板的 Avatour 工作区](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-workspace-assets-blank-meetings_qeumpl.png)  
-*Avatour 工作区，包含资源面板（左）、画布（中）和会议面板（右）*
+*Avatour 工作区，包含资源面板（左侧）、画布（中间）和会议面板（右侧）*
 
 ---
 
@@ -220,7 +220,7 @@ Avatour 界面主要由三个区域组成：
 ![Avatour 会议底部菜单](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-meeting-bottom-menu_bflaor.png)  
 *Avatour 会议底部菜单*
 
-- **资源** – 查看工作区文件，包括录制的视频、图片、快照和 PDF 文件。 
+- **资源** – 查看工作区文件，包括录制的视频、图片、快照和 PDF 文件。
 - **聊天** – 向所有会议参与者发送消息。  
 - **摄像头** – 打开或关闭网络摄像头。  
 - **麦克风** – 静音或取消静音。  
@@ -230,8 +230,8 @@ Avatour 界面主要由三个区域组成：
   - **静音所有** – 将所有参与者静音。  
 - **启用全屏** – 将会议标签页设为全屏。  
 - **退出会议** – 离开会议。  
-- **开始录制** – 会议期间使用此按钮手动开始和停止录制。 此外，如果在工作区设置中启用了**自动开始录制**，会议也可自动录制。无论哪种情况，录制内容都会保存到工作区资源中。
-- **地图** – 打开或关闭地图面板，以查看带有 GPS 轨迹的资源的摄像头移动轨迹。 点击某个位置可跳转至视频中的精确点。地图会随着视频播放实时更新。地图上还会显示笔记。
+- **开始录制** – 会议期间使用此按钮手动开始和停止录制。此外，如果在工作区设置中启用了 **自动开始录制**，会议也可自动录制。无论哪种情况，录制内容都会保存到工作区资源中。
+- **地图** – 打开或关闭地图面板，以查看带有 GPS 轨迹的资产的摄像头移动轨迹。点击某个位置可跳转至视频中的确切点。视频播放时，地图会实时更新。地图上还会显示笔记。
 - **参与者** – 展开或收起参与者面板。  
 - **会议信息** – 查看会议代码、邀请链接，并访问相关教程。  
 
@@ -261,9 +261,9 @@ Avatour 界面主要由三个区域组成：
 
 - **视频时间轴/进度条** – 显示视频进度，并附有从音频中提取的笔记和关键主题。点击笔记或主题可跳转至该时刻并打开笔记。包含 **播放/暂停** 控制按钮。   
 - **快照** – 从素材中截取 360° 或 2D 图像。  
-- **聚光灯** – 在实时会议中为所有参与者突出显示特定区域。
+- **聚光灯** – 在实时会议中为所有参与者突出显示特定区域。  
 - **显示/隐藏视角 (POV)** – 在 360° 视频中显示每位参与者的视线方向。  
-- **笔记** – 创建锚定在素材中特定时刻的笔记。笔记可按类别（观察、问题、行动、建议）进行分类，按状态（待处理 → 进行中 → 已解决）进行跟踪，并通过直接链接分享。如果素材包含 GPS 轨迹，笔记还会显示 GPS 坐标。 
+- **笔记** – 创建锚定在素材中特定时刻的笔记。每条笔记都有作者，可进行分类（观察、问题、 行动、建议)进行分类，按状态（待处理 → 进行中 → 已解决）进行跟踪，分配给负责人，并通过直接链接共享。如果素材包含GPS轨迹，笔记中还会显示GPS坐标。 
 
   ![Avatour 笔记和笔记筛选器](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-note-and-filters_g181oc.png) *Avatour 笔记与笔记筛选器*
 
@@ -271,13 +271,15 @@ Avatour 界面主要由三个区域组成：
 
   ![Avatour 笔记 - 语音命令生成](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-notes-voice-command-generated_ic5cu4.png) *Avatour 笔记 - 语音命令生成*
 
-- **笔记与摘要面板** – 打开一个侧边面板，显示该素材的所有笔记、关键主题以及执行摘要。点击某项内容即可跳转至视频中的相应时刻。  
+- **AI 生成的笔记** – 当录制系统检测到视频音频轨中出现类似需要记录以便后续跟进的问题时，系统会自动生成这些占位符。AI 生成的笔记首先需要由笔记所有者 （参见下方的“工作区仪表盘”）。一旦批准，这些备注便与“语音命令备注”类似，会显示在时间轴上，需要用户进行**定位和最终确认**。 
 
-  ![Avatour 素材执行摘要](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-exec-summary_cqpqbs.png) *在会议中演示资产时的 Avatour 执行摘要*
+- **笔记和摘要面板** – 打开一个侧边面板，显示该素材的所有笔记、关键主题以及执行摘要。点击某项内容即可跳转至视频中的相应时刻。  
+
+  ![Avatour 素材执行摘要](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-exec-summary_cqpqbs.png) *在会议中展示资产时的 Avatour 执行摘要*
 
   ![Avatour 主题](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-topics_duuq1a.png) *在会议中展示资产时的 Avatour 主题*
 
-  在 **侧边栏** 中，您可以 **打印资产报告** 或 **将其下载为 TXT 或 CSV 文件**。报告可包含多个元素，您可以在 **导出前** 进行选择。 
+  在**侧边栏**中，您可以**打印资产报告**或**将其下载为 TXT 或 CSV 文件**。报告可包含多个元素，您可在**导出前进行选择**。 
 
   ![Avatour 资产报告打印菜单](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-asset-report-print-menus_kn0syn.png)  
   *Avatour 资产报告打印/下载菜单*  
@@ -294,10 +296,10 @@ Avatour 界面主要由三个区域组成：
 
 ![在会议外展示资产时的 Avatour 菜单，例如访问工作区时](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-workspace_iri8gc.png) *在工作区中展示资产时的 Avatour 菜单*
 
-- **视频时间轴 / 进度条** – 显示视频进度，并附有从音频轨道中提取的笔记和关键主题。 点击时间轴上的任意位置可快进或快退视频。点击笔记或主题可跳转至该时刻并打开笔记。包含 **播放/暂停** 控制按钮。  
-- **快照、笔记、笔记与摘要面板、分享链接、隐藏式字幕**  
+- **视频时间轴 / 进度条** – 显示视频进度，并附有从音频轨道中提取的笔记和关键主题。点击时间轴上的任意位置即可快进或快退视频。 点击笔记或主题可跳转至该时刻并打开笔记。包含 **播放 / 暂停** 控制按钮。  
+- **快照、笔记、笔记与摘要面板、分享链接、字幕**  
 - 不可用：**聚光灯、视角**（这些功能需要实时参与者）  
-- 其他控制：
+- 其他控制功能：
   - **10 秒步长** – 向前/向后跳转  
   - **播放速度** – 调整速度（0.5×–2×）  
   - **裁剪视频** – 裁剪素材的开头或结尾
@@ -311,12 +313,12 @@ Avatour 界面主要由三个区域组成：
 
 在左侧，您将看到以下菜单项：
 
-![Avatour Web Console - 主菜单](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu_qwpthq.png) *Avatour Web Console - 主菜单*
+![Avatour Web 控制台 - 主菜单](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu_qwpthq.png) *Avatour Web 控制台 - 主菜单*
 
 - **工作区** – 高效组织您的内容。每个工作区包含 **资源**、**协作者**、**会议** 和 **设置**。  
 - **资源** – 访问并管理所有资源（视频、图片、PDF）。管理员可查看所有账户资源，共享资源对所有用户可见。  
 - **个人资料** – 管理您的语言和密码。  
-- **分析** – 跟踪会话活动、工作区使用情况以及投资回报率（ROI）指标。  
+- **分析** – 跟踪会话活动、工作区使用情况和投资回报率（ROI）指标。  
 - **设置** *（仅限管理员）* – 配置整个组织的工作区、会议和资源默认设置。管理员还可以自定义品牌标识（徽标、颜色、背景）。  
 - **账户** *（仅限管理员）* – 管理已注册用户和 360° 摄像头。  
 - **设备登录** – 输入 360° 摄像头上显示的代码，将其与您的账户配对。  
@@ -339,21 +341,21 @@ Avatour 界面主要由三个区域组成：
 
 ![Avatour Web 控制台 - 工作区近期活动](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-workspace-recent-activities_gby1ws.png) *工作区近期活动*
 
-在工作区内部：
+在工作区内：
 
 ![包含资产面板、仪表盘和会议面板的 Avatour 工作区](https://res.cloudinary.com/avatour/image/upload/v1785929001/avatour-screenshot-workspace-dashboard_dqp5ff.png) *包含资产的工作区（左）、工作区仪表盘（中）、会议（右）*
 
-中间是工作区仪表盘，它为您提供了分配给该工作区的所有笔记的概览，并配有多个下拉菜单，供您根据各种笔记属性进行筛选。
+中间是工作区仪表盘，它为您提供了分配给该工作区的所有笔记的概览，并配有多个下拉菜单，供您按各种笔记属性进行筛选。您还可以从该视图中导出所有笔记。
 
 在底部菜单中，您将看到：
 
 - **资产** – 管理分配给此工作区的文件。  
 - **协作者** – 
   通过以下角色控制对工作区的访问权限：
-  - **查看者** – 可查看资产。 若需邀请，系统将自动创建“访客”用户。  
-  - **编辑者** – 拥有工作区的完全控制权，权限与“主持人”相同。若需邀请，系统将自动将用户升级为“主持人”。  
-> 多个用户可在不召开会议的情况下同时访问同一工作区。 公共工作区和会议访问设置提供了其他访问方式。  
-- **报告** – 使用检查模板针对选定工作区资产生成报告。AI 会根据所选视频中的音频轨道生成响应。  
+  - **查看者** – 可查看资产。 若需邀请，系统将创建“访客”用户。  
+  - **编辑者** – 拥有工作区的完全控制权，权限与“主持人”相同。若需邀请，系统将把用户升级为“主持人”。  
+> 多个用户无需召开会议即可同时访问工作区。 公共工作区和会议访问设置提供了其他访问方式。  
+- **报告** – 使用检查模板针对选定工作区资产生成报告。AI 将根据所选视频中的音频轨道生成响应。  
 
 ![Avatour 工作区报告与资产选择](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-asset-selection-and-workspace-report_itjt8f.png) *工作区报告与资产选择*
 
@@ -388,7 +390,7 @@ Avatour 界面主要由三个区域组成：
 
 #### 4.2.2 资源
 
-管理所有 360°/2D 视频、图片和 PDF 文件。上传/下载资源、分配到工作区、与其他用户共享、重命名、打印/下载报告、启用面部模糊以及 AI 摘要功能。
+管理所有 360°/2D 视频、图片和 PDF 文件。上传/下载资源、分配到工作区、与其他用户共享、重命名、打印/下载报告、启用人脸模糊以及 AI 摘要功能。
 
 ![Avatour 网页控制台 - 主菜单项“资源”](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-assets_ky5emz.png) *主菜单项“资源”*
 
@@ -398,15 +400,17 @@ Avatour 界面主要由三个区域组成：
 
 #### 4.2.3 设置
 
-管理员用户可通过此菜单集中管理整个 Avatour 平台的设置。勾选或取消勾选每个设置选项，即可将其设为整个平台的默认设置。 每个设置项还可以被锁定，这意味着平台的其他用户无法更改该默认设置。在此处，您还可以针对品牌形象（徽标、颜色等）进行营销定制。
+管理员用户可通过此菜单集中管理整个 Avatour 平台的设置。勾选或取消勾选每项设置，即可将其设为整个平台的默认设置。 每个设置项还可以被锁定，这意味着平台的其他用户无法更改该默认设置。在此处，您还可以针对品牌形象（徽标、颜色等）进行营销定制。
 
-![Avatour 网络控制台 - 主菜单项设置](https://res.cloudinary.com/avatour/image/upload/v1781172727/avatour-screenshot-main-menu-settings-1-of-2_fsaatf.jpg) *“设置”部分*
+![Avatour 网页控制台 - 主菜单项设置](https://res.cloudinary.com/avatour/image/upload/v1781172727/avatour-screenshot-main-menu-settings-1-of-2_fsaatf.jpg) *“设置”部分*
 
 #### 4.2.4 账户
 
-在此处，您可以查看账户详情、管理已注册用户，以及上传检查模板以生成工作区报告（参见上文）。
+在此处，您可以查看账户详细信息，管理已注册用户账户（包括其工作区访问权限），并上传检查模板以生成工作区报告（参见上文）。
 
-![Avatour Web 控制台 - 主菜单项“账户”](https://res.cloudinary.com/avatour/image/upload/v1781172273/avatour-screenshot-main-menu-account-1-of-2_oq5amr.jpg) *账户概览*
+![Avatour Web 控制台 - 主菜单项“账户”](https://res.cloudinary.com/avatour/image/upload/v1786103904/avatour-screenshot-main-menu-account-1-of-2_oq5amr.png) *账户概览 - 上部区域*
+
+![Avatour Web 控制台 - 主菜单项“账户”](https://res.cloudinary.com/avatour/image/upload/v1772360316/avatour-screenshot-main-menu-account-2-of-2_udgyjz.png) *账户概览 - 下部区域*
 
 #### 4.2.5 分析
 
