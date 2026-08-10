@@ -317,7 +317,7 @@ No lado esquerdo, você verá os seguintes itens do menu:
 - **Recursos** – Acesse e gerencie todos os seus recursos (vídeos, imagens, PDFs). Os administradores podem visualizar todos os recursos da conta, e os recursos compartilhados ficam visíveis para todos os usuários.  
 - **Perfil** – Gerencie seu idioma e senha.  
 - **Análises** – Acompanhe a atividade das sessões, o uso do espaço de trabalho e as métricas de ROI.  
-- **Configurações** *(Somente para administradores)* – Configure as configurações padrão do espaço de trabalho, das reuniões e dos ativos em toda a organização. Os administradores também podem personalizar a identidade visual (logotipo, cores, planos de fundo).  
+- **Configurações** *(somente para administradores)* – Configure as configurações padrão do espaço de trabalho, das reuniões e dos ativos em toda a organização. Os administradores também podem personalizar a identidade visual (logotipo, cores, planos de fundo).  
 - **Conta** *(somente para administradores)* – Gerencie usuários registrados e câmeras 360°.  
 - **Login do dispositivo** – Digite o código exibido na sua câmera 360° para emparelhá-la com sua conta.  
 - **Tutoriais** – Acesse tutoriais guiados.  
@@ -341,18 +341,18 @@ Clique no ícone de sino para ver um resumo das atividades do espaço de trabalh
 
 Dentro de um espaço de trabalho:
 
-![Espaço de trabalho do Avatour com painel de ativos, tela em branco e painel de reuniões](https://res.cloudinary.com/avatour/image/upload/v1785425098/Capture_d_%C3%A9cran_2026-07-28_153353_udkvkl.png) *Espaço de trabalho com ativos (à esquerda), painel de controle do espaço de trabalho (ao centro), reuniões (à direita)*
+![Espaço de Trabalho do Avatour com Painel de Ativos, Painel de Controle e Painel de Reuniões](https://res.cloudinary.com/avatour/image/upload/v1785929001/avatour-screenshot-workspace-dashboard_dqp5ff.png) *Espaço de trabalho com ativos (à esquerda), painel de controle do espaço de trabalho (ao centro), reuniões (à direita)*
 
-No centro, você vê o painel do espaço de trabalho, que oferece uma visão geral de todas as notas nos ativos alocados a esse espaço de trabalho, com vários menus suspensos para selecionar por diversos atributos das notas.
+No centro, você vê o painel de controle do espaço de trabalho, que oferece uma visão geral de todas as notas nos ativos alocados a esse espaço de trabalho, com vários menus suspensos para selecionar por diversos atributos das notas.
 
 Nos menus inferiores, você encontrará:
 
-- **Recursos** – Gerencie os arquivos atribuídos a este espaço de trabalho.  
+- **Ativos** – Gerencie os arquivos alocados a este espaço de trabalho.  
 - **Colaboradores** – 
   Controle o acesso aos espaços de trabalho por meio de 
-  - **Visualizador** – Pode visualizar os recursos. O convite cria um usuário Convidado, se necessário.  
+  - **Visualizador** – Pode visualizar os ativos. O convite cria um usuário Convidado, se necessário.  
   - **Editor** – Controle total do espaço de trabalho, com os mesmos direitos que o Anfitrião. O convite eleva o usuário à função de Anfitrião, se necessário.  
-> Vários usuários podem acessar um espaço de trabalho simultaneamente sem a necessidade de uma reunião. Os espaços de trabalho públicos e as configurações de acesso à reunião oferecem formas alternativas de acesso.  
+> Vários usuários podem acessar um espaço de trabalho simultaneamente sem a necessidade de uma reunião. Os espaços de trabalho públicos e as configurações de acesso à reunião oferecem alternativas de acesso.  
 - **Relatório** – Gere um relatório usando um modelo de inspeção nos ativos selecionados do espaço de trabalho. As respostas são geradas por IA com base nas faixas de áudio dos vídeos selecionados.  
 
 ![Relatório do Espaço de Trabalho Avatour e Seleção de Ativos](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-asset-selection-and-workspace-report_itjt8f.png) *Relatório do Espaço de Trabalho e Seleção de Ativos*
@@ -379,8 +379,8 @@ Nos menus inferiores, você encontrará:
 * **Início automático da gravação / Início manual** – Escolha se as reuniões serão gravadas automaticamente ou iniciadas manualmente.  
 * **Exigir anfitrião** – O anfitrião deve admitir os participantes; a reunião termina quando o anfitrião sai.  
 * **Permitir acesso de espectadores** – Participar sem microfone ou câmera; comunicar-se por chat.  
-* **Reuniões protegidas por senha** – Exigir uma senha para participar.  
-* **Mostrar pergunta sobre economia de deslocamento** – Perguntar aos participantes se a reunião reduziu a necessidade de deslocamento.  
+* **Reuniões protegidas por senha** – Exija uma senha para participar.  
+* **Mostrar pergunta sobre economia de deslocamento** – Pergunte aos participantes se a reunião reduziu a necessidade de deslocamento.  
 
 > As configurações podem ser combinadas (por exemplo, sem necessidade de anfitrião, mas protegidas por senha).
 
@@ -388,7 +388,7 @@ Nos menus inferiores, você encontrará:
 
 #### 4.2.2 Recursos
 
-Gerencie todos os vídeos em 360°/2D, imagens e PDFs. Faça upload/download de recursos, aloque-os a espaços de trabalho, compartilhe com outros usuários, renomeie, imprima/baixe relatórios, ative o desfoque de rosto e o resumo por IA.
+Gerencie todos os vídeos em 360°/2D, imagens e PDFs. Faça upload/download de recursos, aloque-os a espaços de trabalho, compartilhe com outros usuários, renomeie, imprima/baixe relatórios, ative o desfoque de rosto e a síntese por IA.
 
 ![Console da Web do Avatour – Item do menu principal “Recursos”](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-assets_ky5emz.png) *Item do menu principal “Recursos”*
 

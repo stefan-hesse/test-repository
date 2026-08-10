@@ -317,7 +317,7 @@ Sul lato sinistro vedrai le seguenti voci di menu:
 - **Risorse** – Accedi e gestisci tutte le tue risorse (video, immagini, PDF). Gli amministratori possono visualizzare tutte le risorse dell’account, mentre quelle condivise sono visibili a tutti gli utenti.  
 - **Profilo** – Gestisci la lingua e la password.  
 - **Analisi** – Tieni traccia dell’attività delle sessioni, dell’utilizzo degli spazi di lavoro e delle metriche relative al ROI.  
-- **Impostazioni** *(solo amministratori)* – Configura le impostazioni predefinite relative a spazi di lavoro, riunioni e risorse a livello dell’organizzazione. Gli amministratori possono anche personalizzare il branding (logo, colori, sfondi).  
+- **Impostazioni** *(solo amministratori)* – Configura le impostazioni predefinite relative a spazi di lavoro, riunioni e risorse a livello dell’organizzazione. Gli amministratori possono anche personalizzare l’immagine aziendale (logo, colori, sfondi).  
 - **Account** *(solo amministratori)* – Gestisci gli utenti registrati e le telecamere a 360°.  
 - **Accesso dal dispositivo** – Inserisci il codice visualizzato sulla tua telecamera a 360° per associarla al tuo account.  
 - **Tutorial** – Accedi ai tutorial guidati.  
@@ -337,11 +337,11 @@ Gli spazi di lavoro sono unità organizzative flessibili che consentono di gesti
 
 Fai clic sull’icona a forma di campana per visualizzare un riepilogo delle attività dello spazio di lavoro degli ultimi 7 giorni.
 
-![Console web di Avatour - Attività recenti nell’area di lavoro](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-workspace-recent-activities_gby1ws.png) *Attività recenti nell’area di lavoro*
+![Console web di Avatour - Attività recenti dell’area di lavoro](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-workspace-recent-activities_gby1ws.png) *Attività recenti dell’area di lavoro*
 
 All’interno di un’area di lavoro:
 
-![Area di lavoro Avatour con pannello delle risorse, tela vuota e pannello delle riunioni](https://res.cloudinary.com/avatour/image/upload/v1785425098/Capture_d_%C3%A9cran_2026-07-28_153353_udkvkl.png) *Area di lavoro con risorse (a sinistra), dashboard dell’area di lavoro (al centro), riunioni (a destra)*
+![Area di lavoro Avatour con pannello delle risorse, dashboard e pannello delle riunioni](https://res.cloudinary.com/avatour/image/upload/v1785929001/avatour-screenshot-workspace-dashboard_dqp5ff.png) *Area di lavoro con risorse (a sinistra), dashboard dell’area di lavoro (al centro), riunioni (a destra)*
 
 Al centro è visibile la dashboard dell’area di lavoro, che offre una panoramica di tutte le note presenti nelle risorse assegnate a quell’area di lavoro, con diversi menu a tendina per la selezione in base a vari attributi delle note.
 
@@ -365,7 +365,7 @@ Nei menu in basso troverete:
 
 **Impostazioni dell’area di lavoro**
 
-- **Modello di report** – Seleziona un modello di ispezione per i report generati dall’IA. Puoi caricarli dall’account (vedi sotto).  
+- **Modello di report** – Seleziona un modello di ispezione per la generazione automatica di report tramite IA. Puoi caricarli dall’account (vedi sotto).  
 - **Abilita notifiche** – Email di riepilogo giornaliere relative alle modifiche dello stato delle note.  
 
 ![Notifiche via email - Esempio](https://res.cloudinary.com/avatour/image/upload/c_crop,h_600,w_600,x_170,y_60/Screenshot_2026-03-05_140654_bjk0xk.png) *Esempio di notifiche via e-mail*
@@ -380,7 +380,7 @@ Nei menu in basso troverete:
 * **Richiedi organizzatore** – L’organizzatore deve ammettere i partecipanti; la riunione termina quando l’organizzatore esce.  
 * **Consenti accesso come spettatore** – Partecipa senza microfono o videocamera; comunica tramite chat.  
 * **Riunioni protette da password** – Richiedi una password per partecipare.  
-* **Mostra domanda sul risparmio sui viaggi** – Chiedi ai partecipanti se la riunione ha ridotto i viaggi.  
+* **Mostra domanda sul risparmio sui viaggi** – Chiedi ai partecipanti se la riunione ha ridotto gli spostamenti.  
 
 > Le impostazioni possono essere combinate (ad es., nessun organizzatore richiesto ma protezione con password).
 
@@ -392,13 +392,13 @@ Gestisci tutti i video a 360°/2D, le immagini e i PDF. Carica/scarica risorse, 
 
 ![Console web Avatour - Voce del menu principale “Risorse”](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-assets_ky5emz.png) *Voce del menu principale “Risorse”*
 
-È inoltre possibile generare il codice HTML per abilitare l’incorporamento pubblico di una risorsa, ad esempio sul proprio sito web. È sufficiente selezionare la casella di controllo “Abilita incorporamento pubblico” e quindi fare clic su “Salva” per ottenere il codice.
+È inoltre possibile generare il codice HTML per abilitare l’incorporamento pubblico di una risorsa, ad esempio sul proprio sito web. È sufficiente selezionare la casella di controllo “Abilita incorporamento pubblico” e quindi fare clic su Salva per ottenere il codice.
 
 ![Console web Avatour - Voce del menu principale "Risorse"](https://res.cloudinary.com/avatour/image/upload/v1785921604/avatour-screenshot-main-menu-assets-embed-code_mtau8g.png) *Risorse delle voci del menu principale*
 
 #### 4.2.3 Impostazioni
 
-Gli utenti amministratori hanno accesso a questo menu per gestire centralmente le impostazioni dell’intera piattaforma Avatour. È possibile selezionare o deselezionare ciascuna impostazione per renderla predefinita su tutta la piattaforma. Ogni impostazione può anche essere bloccata, il che significa che l’impostazione predefinita non potrà essere modificata dagli altri utenti della piattaforma. Qui è inoltre possibile effettuare personalizzazioni di marketing relative al proprio marchio (logo, colori, ecc.).
+Gli utenti amministratori hanno accesso a questo menu per gestire centralmente le impostazioni dell’intera piattaforma Avatour. È possibile selezionare o deselezionare ciascuna impostazione per renderla predefinita su tutta la piattaforma. Ogni impostazione può anche essere bloccata, il che significa che l’impostazione predefinita non può essere modificata dagli altri utenti della piattaforma. Qui è inoltre possibile effettuare personalizzazioni di marketing relative al proprio marchio (logo, colori ecc.).
 
 ![Console web di Avatour - Impostazioni delle voci del menu principale](https://res.cloudinary.com/avatour/image/upload/v1781172727/avatour-screenshot-main-menu-settings-1-of-2_fsaatf.jpg) *Sezione Impostazioni*
 
@@ -412,7 +412,7 @@ Qui è possibile visualizzare i dettagli del proprio account, gestire gli utenti
 
 Fornisce approfondimenti su riunioni, utilizzo dell’area di lavoro e metriche relative al ROI.
 
-![Console web di Avatour - Voce del menu principale "Analisi" (1 di 3)](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-analytics-1-of-3_ds3epe.png) *Panoramica delle analisi*
+![Console web di Avatour - Voce di menu principale "Analisi" (1 di 3)](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-analytics-1-of-3_ds3epe.png) *Panoramica delle analisi*
 
 ![Console web Avatour - Voce del menu principale "Analisi" (2 di 3)](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-analytics-2-of-3_vpcsme.png) *Attività delle riunioni e utilizzo dell’area di lavoro*
 

@@ -339,19 +339,19 @@ Nhấp vào biểu tượng chuông để xem tóm tắt hoạt động của kh
 
 ![Avatour Web Console - Hoạt động gần đây trong không gian làm việc](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-workspace-recent-activities_gby1ws.png) *Hoạt động gần đây trong không gian làm việc*
 
-Bên trong không gian làm việc:
+Bên trong một không gian làm việc:
 
-![Không gian làm việc Avatour với Bảng tài sản, Bảng vẽ trống và Bảng cuộc họp](https://res.cloudinary.com/avatour/image/upload/v1785425098/Capture_d_%C3%A9cran_2026-07-28_153353_udkvkl.png) *Không gian làm việc với Tài sản (bên trái), Bảng điều khiển không gian làm việc (giữa), Cuộc họp (bên phải)*
+![Không gian làm việc Avatour với Bảng tài sản, Bảng điều khiển và Bảng cuộc họp](https://res.cloudinary.com/avatour/image/upload/v1785929001/avatour-screenshot-workspace-dashboard_dqp5ff.png) *Không gian làm việc với Tài sản (bên trái), Bảng điều khiển không gian làm việc (giữa), Cuộc họp (bên phải)*
 
-Ở giữa, bạn sẽ thấy bảng điều khiển không gian làm việc cung cấp tổng quan về tất cả các ghi chú trong tài nguyên được phân bổ cho không gian làm việc đó, kèm theo một số menu thả xuống để lựa chọn theo các thuộc tính khác nhau của ghi chú.
+Ở giữa, bạn sẽ thấy bảng điều khiển không gian làm việc cung cấp tổng quan về tất cả các ghi chú trong các tài sản được phân bổ cho không gian làm việc đó, kèm theo một số menu thả xuống để lựa chọn theo các thuộc tính khác nhau của ghi chú.
 
 Trong các menu phía dưới, bạn sẽ tìm thấy:
 
-- **Tài nguyên** – Quản lý các tệp được phân bổ cho không gian làm việc này.  
+- **Tài sản** – Quản lý các tệp được phân bổ cho không gian làm việc này.  
 - **Người cộng tác** – 
   Kiểm soát quyền truy cập vào không gian làm việc thông qua 
-  - **Người xem** – Có thể xem tài nguyên. Lời mời sẽ tạo một người dùng Khách nếu cần.  
-  - **Người chỉnh sửa** – Quyền kiểm soát không gian làm việc đầy đủ, có quyền tương tự như Chủ trì. Lời mời sẽ nâng cấp người dùng lên Chủ trì nếu cần.  
+  - **Người xem** – Có thể xem tài sản. Lời mời sẽ tạo người dùng Khách nếu cần.  
+  - **Người chỉnh sửa** – Quyền kiểm soát toàn bộ không gian làm việc, có quyền tương tự như Chủ trì. Lời mời sẽ nâng cấp người dùng lên Chủ trì nếu cần.  
 > Nhiều người dùng có thể truy cập cùng lúc vào một không gian làm việc mà không cần tổ chức cuộc họp. Các không gian làm việc công khai và cài đặt quyền truy cập cuộc họp cung cấp các phương thức truy cập thay thế.  
 - **Báo cáo** – Tạo báo cáo bằng cách sử dụng Mẫu Kiểm tra trên các tài nguyên được chọn trong không gian làm việc. Các phản hồi được tạo ra bởi AI dựa trên các bản ghi âm trong video đã chọn.  
 
@@ -359,7 +359,7 @@ Trong các menu phía dưới, bạn sẽ tìm thấy:
 
 - **Bản đồ** – Hiển thị vị trí các tài sản được kích hoạt GPS trên bản đồ như đã mô tả ở trên cho các cuộc họp. 
 - **Cuộc họp** – Tổ chức các cuộc họp trong không gian làm việc.  
-- **Cài đặt** – Định cấu hình các thiết lập mặc định cho không gian làm việc và cuộc họp:
+- **Cài đặt** – Cấu hình các thiết lập mặc định cho không gian làm việc và cuộc họp:
 
 ![Cài đặt Avatour - Chế độ xem không gian làm việc](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-workspace-settings_llcei3.png) *Cài đặt không gian làm việc*
 
@@ -394,7 +394,7 @@ Quản lý tất cả video 360°/2D, hình ảnh và tệp PDF. Tải lên/tả
 
 Bạn cũng có thể tạo mã HTML để cho phép nhúng công khai một tài nguyên, ví dụ như trên trang web của bạn. Chỉ cần nhấp vào ô chọn "Cho phép nhúng công khai" rồi nhấp vào "Lưu" để lấy mã.
 
-![Bảng điều khiển web Avatour - Mục menu chính: Tài sản](https://res.cloudinary.com/avatour/image/upload/v1785921604/avatour-screenshot-main-menu-assets-embed-code_mtau8g.png) *Tài nguyên mục menu chính*
+![Bảng điều khiển web Avatour - Mục menu chính Tài sản](https://res.cloudinary.com/avatour/image/upload/v1785921604/avatour-screenshot-main-menu-assets-embed-code_mtau8g.png) *Tài nguyên mục menu chính*
 
 #### 4.2.3 Cài đặt
 
@@ -406,7 +406,7 @@ Người dùng quản trị có quyền truy cập vào menu này để quản l
 
 Tại đây, bạn có thể xem chi tiết tài khoản của mình, quản lý người dùng đã đăng ký cũng như tải lên các mẫu kiểm tra để tạo báo cáo không gian làm việc (xem phần trên).
 
-![Avatour Web Console - Mục menu chính Tài khoản](https://res.cloudinary.com/avatour/image/upload/v1781172273/avatour-screenshot-main-menu-account-1-of-2_oq5amr.jpg) *Tổng quan về tài khoản*
+![Avatour Web Console - Mục menu chính "Tài khoản"](https://res.cloudinary.com/avatour/image/upload/v1781172273/avatour-screenshot-main-menu-account-1-of-2_oq5amr.jpg) *Tổng quan về tài khoản*
 
 #### 4.2.5 Phân tích
 

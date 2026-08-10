@@ -341,7 +341,7 @@ Click the bell icon to see a summary of workspace activity over the last 7 days.
 
 Inside a workspace:
 
-![Avatour Workspace with Assets Panel, blank Canvas and Meetings Panel](https://res.cloudinary.com/avatour/image/upload/v1785425098/Capture_d_%C3%A9cran_2026-07-28_153353_udkvkl.png) *Workspace with Assets (left), Workspace Dashboard (center), Meetings (right)*
+![Avatour Workspace with Assets Panel, Dashboard and Meetings Panel](https://res.cloudinary.com/avatour/image/upload/v1785929001/avatour-screenshot-workspace-dashboard_dqp5ff.png) *Workspace with Assets (left), Workspace Dashboard (center), Meetings (right)*
 
 In the center you see the workspace dashboard giving you an overview of all notes in the assets allocated to that workspace with several drop down menus to select by various notes attributes.
 
