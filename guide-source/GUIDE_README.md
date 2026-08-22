@@ -347,6 +347,21 @@ If you use the regular Upload button, Cloudinary appends a random suffix (e.g. `
 
 **Image delivery is optimized automatically — no action needed:** paste plain Cloudinary URLs exactly as Cloudinary gives them (no transformation flags). `build.py` automatically rewrites every `res.cloudinary.com/avatour/image/upload/...` URL to add `f_auto,q_auto` (auto format + auto quality) when it generates the HTML in `dist/`. This typically shrinks a 1–3MB screenshot PNG down to well under 200KB with no visible quality loss, and applies across all languages and all three output formats (standalone, embed, print) every time the guide is built. You never need to add these flags yourself — doing so manually would just be redundant, since the build script skips URLs that already have `f_auto` set.
 
+**Resizing or cropping one specific screenshot:** most screenshots should stay as plain `![alt](url) *caption*` markdown — they render full-width automatically. But some screenshots (e.g. a narrow floating toolbar/pill, captured at a much taller aspect ratio than the surrounding full-width toolbar screenshots) look oversized or out of proportion at full width. For those, use a raw HTML `<img>` tag instead, with an inline `style` matching the guide's standard look:
+
+```html
+<img src="https://res.cloudinary.com/avatour/image/upload/c_fill,g_auto,w_480,h_120/avatour-screenshot-example_xxxxx.png" alt="Description of the screenshot" style="width:50%; display:block; border:1px solid #DDE5EA; border-radius:6px; margin:20px 0 4px;"> *Description of the screenshot*
+```
+
+Adjustable parts:
+- `c_fill,g_auto,w_480,h_120` *(optional)* — Cloudinary crop/resize. `c_fill` crops+resizes to exactly fill `w`×`h`; `g_auto` lets Cloudinary's AI pick the important content to keep. Omit this whole segment (just use the plain URL) if you don't need to crop, only resize the display.
+- `width:50%` — display size as a % of the article column. This is what controls the rendered height relative to other images — lower the % to shrink it further, raise it to make it bigger.
+- `border`, `border-radius`, `margin` — copy these as-is; they match the guide's standard screenshot styling (`--border` color, 6px corners, standard spacing). Use `margin:20px 0 4px` (no `auto`) to keep it left-aligned like a normal paragraph, or `margin:20px auto 4px` to center it instead.
+
+**Test any new Cloudinary transformation URL directly in a browser tab first** (paste just the image URL on its own), before adding it to the guide — this confirms the crop/resize actually works and looks right, and shows you Cloudinary's own error directly if something's invalid, rather than debugging through a full guide rebuild.
+
+**Why raw HTML instead of Markdown + `{: .class }`:** Python-Markdown supports an `attr_list` extension that lets you attach a CSS class or style to a markdown image (e.g. `![alt](url){: .some-class }`), and `build.py` does have this extension enabled. But MacDown's own live preview uses a different, simpler Markdown engine that doesn't understand this syntax — it just prints `{: .some-class }` as literal text instead of applying it, even though the final built guide renders it correctly. Plain raw HTML (as above) is understood by every Markdown renderer, including MacDown's preview, so it gives accurate WYSIWYG feedback while editing *and* works identically in the final build. Stick to raw HTML for any one-off styling like this rather than `{: ... }` attribute lists.
+
 ---
 
 ## What NOT to do
