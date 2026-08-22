@@ -511,9 +511,10 @@ body {
 
 /* SCREENSHOTS */
 .guide-article img {
-  width: 100%; display: block;
+  width: 100%; max-height: 450px; height: auto;
+  object-fit: contain; display: block;
   border: 1px solid var(--border);
-  border-radius: 6px; margin: 20px 0 4px;
+  border-radius: 6px; margin: 20px auto 4px;
 }
 .guide-article img + em {
   display: block; font-size: 12px;
