@@ -186,7 +186,7 @@ The **collaboration tools are mostly similar** between meetings and workspaces, 
 The Avatour interface is organized around three main areas:
 
 - **Left panel** – Workspace assets and supporting tools  
-- **Center canvas** – Main viewing area for live video or assets  
+- **Center canvas** – Main viewing area for live video, assets and the workspace dashboard  
 - **Right panel** – Contextual information, such as participants, meetings, or chat  
 
 Most interactions are initiated from the **bottom menu**.  
@@ -252,26 +252,31 @@ The **Present** option in the meeting bottom menu allows you to share content wi
 - **Desktop** – Share your desktop screen with all participants.  
 - **Asset** – Present an asset from the workspace. Selecting an asset opens the **Asset toolbar**, which provides playback controls and collaboration tools specific to the asset being presented.
 
-##### Asset Toolbar (Meeting)
+##### Asset and Live 360° Toolbars in Meetings
 
 When presenting an asset in a meeting, the **Asset Toolbar** appears above the canvas. Here are the tools and menu items available when <u>presenting an Asset in a Meeting</u> - explained from left to right.
 
 ![Avatour Menu while Presenting an Asset in a Meeting](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting_oflsr5.png) *Avatour Menu when presenting an Asset in a Meeting*
 
+When a live 360° video is streaming into a meeting, this menu shows at the bottom of the canvas.
+
+<img src="https://res.cloudinary.com/avatour/image/upload/c_fill,g_auto,w_480,h_120/avatour-screenshot-live360video-menu-meeting_cguwzb.png" alt="Avatour Menu with Live 360° Video in a Meeting" style="width:50%; display:block; border:1px solid #DDE5EA; border-radius:6px; margin:20px 0 4px;"> *Avatour Menu with Live 360° Video in a Meeting*
+
+Here is a description of all the elements shown in the menus above.
 
 - **Video Timeline / Progress Bar** – Shows video progress with notes and key topics extracted from audio. Click a note or topic to jump to that moment and open the note. Includes **Play / Pause** controls.   
 - **Snapshot** – Capture a 360° or 2D image from the asset.  
 - **Spotlight** – Highlight a specific area for all participants during live sessions.  
 - **Show/Hide Point-of-View (POV)** – Display where each participant is looking in the 360° video.  
-- **Notes** – Create notes anchored to specific moments in the asset. Each note has an author and can be categorized (Observation, Issue, Action, Recommendation), tracked by status (Open → In Progress → Resolved), allocated to an Assignee, and shared via direct links. If the asset has a GPS track notes are also showing the GPS coordinates. 
+- **Notes** – Create notes anchored to specific moments in an asset or during a live video stream. (N.B.: When in a live stream an asset = snapshot will automatically be created to capture the note). Each note has an author and can be categorized (Observation, Issue, Action, Recommendation), tracked by status (Open → In Progress → Resolved), allocated to an Assignee, and shared via direct links. If the asset has a GPS track notes are also showing the GPS coordinates. Notes can also be moved to another position (drag around to change the position) and moved in the timeline (move forward or backward in the timeline).
 
-  ![Avatour Note and Notes Filter](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-note-and-filters_g181oc.png) *Avatour Note and Note Filters*
+  ![Avatour Note and Notes Filter](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-notes-and-filters_g181oc.png) *Avatour Notes and Notes Filters*
 
-- **Voice Command Notes** – These are automatically generated placeholders when the recording detects mentions like “insert note,” “take a note,” or “make a note.” These notes appear on the timeline and need to be **positioned and finalized** by the user. 
+- **Voice Command Notes** – These are automatically generated placeholders when in a recorded video mentions like “insert note,” “take a note,” or “make a note” are detected. These notes appear on the timeline and need to be **positioned and finalized** by the user. 
 
   ![Avatour Notes - Voice Command Generated](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-notes-voice-command-generated_ic5cu4.png) *Avatour Notes - Voice Command Generated*
 
-- **AI Generated Notes** – These are automatically generated placeholders when the recording detects mentions in the audio track of the video which sound like issues which need to be captured for follow up. AI Generated Notes first need to be approved by the note owner (see Workspace Dashboard below). Once approved these are ike Voice Command Notes as they appear on the timeline and need to be **positioned and finalized** by the user. 
+- **AI Generated Notes** – These are automatically generated placeholders when the recording detects mentions in the audio track of the video which sound like issues which need to be captured for follow up. AI Generated Notes first need to be approved by the note owner (see Workspace Dashboard below). Once approved these are like Voice Command Notes as they appear on the timeline and need to be **positioned and finalized** by the user. 
 
 - **Notes and Summary Panel** – Opens a side panel that displays all notes, key topics, and an executive summary for the asset. Clicking an item brings you to that moment in the video.  
 
@@ -345,7 +350,7 @@ Inside a workspace:
 
 ![Avatour Workspace with Assets Panel, Dashboard and Meetings Panel](https://res.cloudinary.com/avatour/image/upload/v1785929001/avatour-screenshot-workspace-dashboard_dqp5ff.png) *Workspace with Assets (left), Workspace Dashboard (center), Meetings (right)*
 
-In the center you see the workspace dashboard giving you an overview of all notes in the assets allocated to that workspace with several drop down menus to select by various notes attributes. You can also export all notes from this view.
+In the center you see the workspace dashboard giving you an overview of all notes in the assets allocated to that workspace with several drop down menus to select by various notes attributes. Here you can also accept or delete the notes suggested by AI. You can also export all notes from this view.
 
 In the bottom menus you will find:
 
@@ -406,11 +411,13 @@ Admin Users have access to this menu to manage Settings centrally for the entire
 
 #### 4.2.4 Account
 
-Here you can see details of your account and manage registered user accounts including their workspace access as well as upload inspection templates to generate workspace reports (see above).
+Here you can see details of your account and manage registered user accounts (Host, Admin, Guest) including their workspace access as well as upload inspection templates to generate workspace reports (see above).
 
-![Avatour Web Console - Main Menu Item Account](https://res.cloudinary.com/avatour/image/upload/v1786103904/avatour-screenshot-main-menu-account-1-of-2_oq5amr.png) *Account Overview - Upper sections*
+![Avatour Web Console - Main Menu Item Account](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-account-1-of-3_oq5amr.png) *Account Overview - Upper sections*
 
-![Avatour Web Console - Main Menu Item Account](https://res.cloudinary.com/avatour/image/upload/v1772360316/avatour-screenshot-main-menu-account-2-of-2_udgyjz.png) *Account Overview - Lower section*
+![Avatour Web Console - Main Menu Item Account](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-account-2-of-3_oq5amr.png) *Account Overview - Workspace Access Management*
+
+![Avatour Web Console - Main Menu Item Account](https://res.cloudinary.com/avatour/image/upload/v1772360316/avatour-screenshot-main-menu-account-3-of-3_udgyjz.png) *Account Overview - Lower sections*
 
 #### 4.2.5 Analytics
 

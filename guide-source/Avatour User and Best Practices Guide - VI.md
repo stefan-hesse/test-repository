@@ -114,14 +114,14 @@ Quyền trong không gian làm việc xác định những việc người dùng
 
 - **Người cộng tác ở vai trò Người xem:** Người dùng có quyền này chỉ có quyền truy cập đọc đối với Tài sản trong Không gian làm việc. Họ **không thể chỉnh sửa Tài sản, quản lý cuộc họp hoặc quản lý người cộng tác**, nhưng họ **có thể tạo Ghi chú trên Tài sản**. 
   
-## 3. Đối với người tham gia cuộc họp từ xa và khách đến thăm không gian làm việc {#for-remote-meeting-participants-and-workspace-visitors}
+## 3. Đối với người tham gia cuộc họp từ xa và khách đến thăm khu làm việc {#for-remote-meeting-participants-and-workspace-visitors}
 
-Avatour cho phép người dùng hợp tác theo hai hình thức chính:
+Avatour cho phép người dùng hợp tác theo hai cách chính:
 
 - **Tham gia cuộc họp Avatour (Hợp tác đồng bộ):**  
   Bạn có thể nhận được **lời mời lịch** để tham gia cuộc họp Avatour. Trong cuộc họp, các thành viên có thể thực hiện **chuyến tham quan địa điểm từ xa trực tiếp** hoặc cùng nhau xem xét các tài sản một cách đồng bộ.
 
-- **Truy cập Không gian làm việc (Cộng tác không đồng bộ):**  
+- **Truy cập Không gian làm việc (Hợp tác không đồng bộ):**  
   Bạn cũng có thể được mời với tư cách là **người cộng tác trong Không gian làm việc** để xem xét các tài sản **theo cách không đồng bộ** (theo lịch trình của riêng bạn).
 
 ### 3.1 Cách tham gia cuộc họp Avatour và tham quan Không gian làm việc Avatour {#how-to-join-an-avatour-meeting-and-visit-an-avatour-workspace}
@@ -130,22 +130,22 @@ Bạn có thể tham gia cuộc họp Avatour từ **bất kỳ máy tính để
 
 ##### Tham gia cuộc họp Avatour
 
-> **Lưu ý:** Để tham gia cuộc họp Avatour, bạn cần **cấp quyền sử dụng micrô**. Vui lòng chấp nhận mọi yêu cầu cấp quyền từ trình duyệt của bạn.
+> **Lưu ý:** Để tham gia cuộc họp Avatour, bạn cần **cấp quyền sử dụng micrô**. Vui lòng chấp nhận mọi lời nhắc yêu cầu quyền từ trình duyệt của bạn.
 
 1. **Qua lời mời lịch (được khuyến nghị):** 
- - Thông thường, bạn sẽ nhận được một **lời mời lịch** kèm theo **liên kết tham gia trực tiếp** (ví dụ: `https://avatour.live/join?s=xxxxx`).  
-   - Nhấp vào liên kết sẽ tự động điền **mã cuộc họp gồm 5 ký tự** và đưa bạn đến cuộc họp.
-   - **Yêu cầu xác thực:** Một số cuộc họp chỉ dành cho người dùng đã đăng ký. Trong trường hợp này, lời mời sẽ thông báo rằng bạn cần **đăng nhập để truy cập cuộc họp**.  
-   - **Cuộc họp được bảo vệ bằng mật khẩu:** Một số cuộc họp có thể yêu cầu mật khẩu. Trong trường hợp đó, lời mời sẽ bao gồm mật khẩu mà bạn phải nhập để tham gia.
+ - Thông thường, bạn sẽ nhận được một **lời mời lịch** kèm theo **liên kết tham gia trực tiếp** (ví dụ: `https://avatour.live/join?s=xxxxx`). 
+ - Nhấp vào liên kết này sẽ tự động điền **mã cuộc họp gồm 5 ký tự** và đưa bạn vào cuộc họp.
+   - **Yêu cầu xác thực:** Một số cuộc họp chỉ dành cho người dùng đã đăng ký. Trong trường hợp này, lời mời sẽ thông báo rằng bạn cần **đăng nhập để truy cập cuộc họp**. 
+ - **Cuộc họp được bảo vệ bằng mật khẩu:** Một số cuộc họp có thể yêu cầu mật khẩu. Trong trường hợp đó, lời mời sẽ bao gồm mật khẩu mà bạn phải nhập để tham gia.
 
-2. **Qua mã cuộc họp:** 
- - Nếu người chủ trì chia sẻ riêng một **mã cuộc họp gồm 5 ký tự**, hãy truy cập [https://avatour.live/join](https://avatour.live/join), nhập **tên** và **mã cuộc họp** của bạn, và tham gia cuộc họp. 
- - Nếu cuộc họp được **bảo vệ bằng mật khẩu**, hãy nhập mật khẩu do người tổ chức cung cấp. 
+2. **Qua mã cuộc họp:**  
+   - Nếu người tổ chức chia sẻ riêng một **mã cuộc họp gồm 5 ký tự**, hãy truy cập [https://avatour.live/join](https://avatour.live/join), nhập **tên** và **mã cuộc họp** của bạn, rồi tham gia cuộc họp.  
+   - Nếu cuộc họp được **bảo vệ bằng mật khẩu**, hãy nhập mật khẩu do người chủ trì cung cấp. 
  - Nếu cuộc họp yêu cầu **xác thực**, bạn sẽ cần **đăng nhập bằng tài khoản Avatour của mình** trước khi tham gia.
 
 > **Mẹo 1:** Nếu camera hoặc micrô của bạn không hoạt động, có thể chúng đang được ứng dụng khác sử dụng (ví dụ: Microsoft Teams hoặc Zoom). Hãy đóng tất cả các ứng dụng có thể đang sử dụng camera hoặc micrô của bạn, sau đó rời khỏi và tham gia lại cuộc họp Avatour.  
 
-> **Mẹo 2:** Nếu bạn vẫn không thể tham gia cuộc họp, hãy thực hiện bài kiểm tra này: [https://avatour.live/test](https://avatour.live/test).  
+> **Mẹo 2:** Nếu bạn vẫn không thể tham gia cuộc họp, hãy thực hiện kiểm tra này: [https://avatour.live/test](https://avatour.live/test).  
 > Bài kiểm tra này có thể xác định xem **tường lửa hoặc mạng công ty** của bạn có đang chặn truy cập hay không, đồng thời cung cấp thông tin để hướng dẫn các cuộc thảo luận với đội ngũ CNTT của bạn.  
 
 > **Mẹo 3:** **Không** sử dụng ứng dụng Avatour trên iOS hoặc Android để tham gia cuộc họp. Các ứng dụng này chỉ cần thiết khi **phát trực tiếp cuộc họp từ camera Insta360**, vì những camera này không thể chạy phần mềm Avatour 360° trực tiếp và cần có điện thoại thông minh để hỗ trợ.
@@ -167,7 +167,7 @@ Bạn có thể truy cập Không gian làm việc theo các cách sau:
   Ngoài ra, bạn có thể đăng nhập tại [https://avatour.live/login](https://avatour.live/login) và truy cập Không gian làm việc từ **danh sách Không gian làm việc** của mình.
 
 #### 3.1.2 Kính thực tế ảo {#vr-headset}
-Bạn có thể tham gia cuộc họp và truy cập Workspace từ nhiều loại kính thực tế ảo tương thích của Meta và Pico. Để thực hiện việc này: 
+Bạn có thể tham gia cuộc họp và truy cập Workspace từ nhiều loại kính thực tế ảo tương thích của Meta và Pico. Để thực hiện điều này: 
 
 1. Cài đặt ứng dụng Avatour của chúng tôi từ cửa hàng ứng dụng VR tương ứng: [Cách cài đặt ứng dụng Avatour VR](https://avatour.com/support/which-vr-headsets-can-i-use-with-avatour)
 2. Mở ứng dụng của chúng tôi và nhập mã cuộc họp hoặc chọn một Không gian làm việc để tham gia cuộc họp. Để biết thêm thông tin về cách sử dụng ứng dụng VR của chúng tôi, hãy xem bài viết trong Cơ sở kiến thức [tại đây](https://avatour.com/support/what-features-are-available-to-vr-guests).
@@ -177,25 +177,25 @@ Bạn có thể tham gia cuộc họp và truy cập Workspace từ nhiều lo�
 Avatour cho phép hợp tác trong hai bối cảnh chính:
 
 1. **Cuộc họp (đồng bộ):** Hợp tác theo thời gian thực với những người tham gia khác, bao gồm tham quan địa điểm trực tiếp hoặc cùng nhau xem lại các tài sản đã ghi lại.  
-2. **Không gian làm việc (không đồng bộ):** Xem xét và tương tác với các tài liệu theo lịch trình của riêng bạn, 24/7.
+2. **Không gian làm việc (không đồng bộ):** Xem lại và tương tác với các tài sản theo lịch trình của riêng bạn, 24/7.
 
-Các **công cụ hợp tác chủ yếu tương tự nhau** giữa các cuộc họp và không gian làm việc, với một số khác biệt do bối cảnh đồng bộ so với không đồng bộ.
+Các **công cụ hợp tác phần lớn tương tự nhau** giữa các cuộc họp và không gian làm việc, với một số khác biệt do bối cảnh đồng bộ so với không đồng bộ.
 
 #### 3.2.1 Bố cục giao diện
 
 Giao diện Avatour được tổ chức xoay quanh ba khu vực chính:
 
 - **Bảng điều khiển bên trái** – Tài nguyên không gian làm việc và các công cụ hỗ trợ  
-- **Khung chính giữa** – Khu vực xem chính cho video trực tiếp hoặc tài nguyên  
-- **Bảng điều khiển bên phải** – Thông tin bối cảnh, chẳng hạn như người tham gia, cuộc họp hoặc trò chuyện  
+- **Vùng trung tâm** – Khu vực xem chính dành cho video trực tiếp, tài nguyên và bảng điều khiển không gian làm việc  
+- **Bảng bên phải** – Thông tin bối cảnh, chẳng hạn như người tham gia, cuộc họp hoặc trò chuyện  
 
 Hầu hết các tương tác đều được khởi tạo từ **menu dưới cùng**.  
-Khi nhấp vào một tùy chọn trong menu, một **bảng bên** sẽ mở ra ở phía trái hoặc phải của màn hình, trong khi **khung trung tâm** vẫn là khu vực xem chính.
+Khi nhấp vào một tùy chọn trong menu, một **bảng bên** sẽ mở ra ở bên trái hoặc bên phải màn hình, trong khi **khung trung tâm** vẫn là khu vực hiển thị chính.
 
 ---
 #### 3.2.2 Ví dụ về giao diện cuộc họp
 
-Dưới đây là một ví dụ về giao diện trong một cuộc họp Avatour:
+Dưới đây là một ví dụ về giao diện trong cuộc họp Avatour:
 
 ![Giao diện người dùng cuộc họp Avatour với Bảng tài nguyên, Khu vực chính trống và Bảng người tham gia](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-meeting-assets-blank-participants_pugprq.png)  
 *Cuộc họp Avatour với Bảng tài nguyên (bên trái), Bảng vẽ (giữa) và Bảng người tham gia (bên phải)*
@@ -213,25 +213,25 @@ Dưới đây là ví dụ về giao diện Không gian làm việc:
 
 #### 3.2.4 Tổng quan về menu dưới cùng
 
-Menu dưới cùng cung cấp quyền truy cập vào các điều khiển và bảng chính của giao diện:
+Menu dưới cùng cung cấp quyền truy cập vào các điều khiển và bảng điều khiển chính của giao diện:
 
-**Menu dưới cùng của cuộc họp**  
+**Menu dưới cùng của Cuộc họp**  
 
-![Menu dưới cùng của cuộc họp Avatour](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-meeting-bottom-menu_bflaor.png)  
+![Menu dưới cùng của Cuộc họp Avatour](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-meeting-bottom-menu_bflaor.png)  
 *Menu dưới cùng của cuộc họp Avatour*
 
 - **Tài nguyên** – Xem lại các tệp trong không gian làm việc, bao gồm video đã ghi, hình ảnh, ảnh chụp màn hình và tệp PDF. 
 - **Trò chuyện** – Gửi tin nhắn cho tất cả người tham gia cuộc họp.  
-- **Camera** – Bật hoặc tắt webcam của bạn.  
+- **Camera** – Bật hoặc tắt webcam.  
 - **Micro** – Tắt tiếng hoặc bật tiếng cho chính mình.  
-- **Trình chiếu** – Trình chiếu tài liệu, màn hình máy tính hoặc hình ảnh từ webcam (xem phần Trình chiếu bên dưới).  
+- **Trình chiếu** – Trình chiếu một tài liệu, màn hình máy tính hoặc luồng hình ảnh từ webcam (xem phần Trình chiếu bên dưới).  
 - **Công cụ chủ cuộc họp** (chỉ dành cho chủ cuộc họp):  
   - **Khóa chế độ xem** – Khóa chế độ xem cho tất cả người tham gia.  
   - **Tắt tiếng tất cả** – Tắt tiếng tất cả người tham gia.  
-- **Chuyển sang toàn màn hình** – Chuyển tab cuộc họp sang chế độ toàn màn hình.  
+- **Chuyển sang chế độ toàn màn hình** – Chuyển tab cuộc họp sang chế độ toàn màn hình.  
 - **Rời cuộc họp** – Rời khỏi cuộc họp.  
-- **Bắt đầu ghi hình** – Sử dụng nút này để bắt đầu và dừng ghi hình thủ công trong cuộc họp. Ngoài ra, cuộc họp có thể được ghi hình tự động nếu tính năng **tự động bắt đầu ghi hình** được bật trong cài đặt không gian làm việc. Trong cả hai trường hợp, các bản ghi sẽ được lưu vào tài nguyên của không gian làm việc.
-- **Bản đồ** – Mở hoặc đóng bảng điều khiển bản đồ để xem chuyển động của camera đối với các tài nguyên có dữ liệu theo dõi GPS. Nhấp vào một vị trí sẽ chuyển ngay đến điểm chính xác đó trong video. Bản đồ được cập nhật trực tiếp khi video phát. Các ghi chú cũng được hiển thị trên bản đồ.
+- **Bắt đầu ghi hình** – Sử dụng nút này để bắt đầu và dừng ghi hình thủ công trong cuộc họp. Ngoài ra, cuộc họp có thể được ghi hình tự động nếu tùy chọn **tự động bắt đầu ghi hình** được bật trong cài đặt không gian làm việc. Trong cả hai trường hợp, các bản ghi sẽ được lưu vào tài nguyên của không gian làm việc.
+- **Bản đồ** – Mở hoặc đóng bảng điều khiển bản đồ để xem chuyển động của camera đối với các tài nguyên có theo dõi GPS. Nhấp vào một vị trí sẽ chuyển đến điểm chính xác đó trong video. Bản đồ được cập nhật trực tiếp khi video phát. Các ghi chú cũng được hiển thị trên bản đồ.
 - **Người tham gia** – Mở hoặc đóng bảng điều khiển người tham gia.  
 - **Thông tin cuộc họp** – Xem mã cuộc họp, liên kết mời và truy cập các hướng dẫn liên quan.  
 
@@ -240,44 +240,49 @@ Menu dưới cùng cung cấp quyền truy cập vào các điều khiển và b
 
 - **Cài đặt** – Điều chỉnh cài đặt ngôn ngữ, âm thanh và video. Đối với các cuộc họp video 360° trực tiếp, hãy sử dụng **Hiển thị tốc độ bit** để theo dõi thống kê kết nối.
 
-> Mẹo: Gửi liên kết cuộc họp hoặc thêm liên kết đó vào mục lịch để mời người tham gia.
+> Mẹo: Gửi liên kết cuộc họp hoặc thêm vào mục lịch để mời người tham gia.
 
 ---
 
-##### Menu Trình chiếu
+##### Menu **Trình chiếu**
 
 Tùy chọn **Trình chiếu** trong menu dưới cùng của cuộc họp cho phép bạn chia sẻ nội dung với tất cả người tham gia.
 
-- **Camera** – Chia sẻ camera của thiết bị (máy tính xách tay, điện thoại thông minh, v.v.). Tính năng này cũng có thể được sử dụng trong cuộc họp video 360° trực tiếp để hiển thị lớp phủ hình ảnh thứ hai cho các cảnh cận cảnh hoặc chi tiết cụ thể. Khi chia sẻ camera điện thoại thông minh (trước hoặc sau), người tham gia cuộc họp từ xa có thể sử dụng tính năng zoom của điện thoại và bật/tắt đèn pin.
+- **Camera** – Chia sẻ camera của thiết bị (máy tính xách tay, điện thoại thông minh, v.v.). Tính năng này cũng có thể được sử dụng trong cuộc họp video 360° trực tiếp để hiển thị lớp phủ hình ảnh thứ hai nhằm chụp cận cảnh hoặc các chi tiết cụ thể. Khi chia sẻ camera điện thoại thông minh (trước hoặc sau), người tham gia cuộc họp từ xa có thể sử dụng tính năng zoom của điện thoại và bật/tắt đèn pin.
 - **Màn hình máy tính** – Chia sẻ màn hình máy tính của bạn với tất cả người tham gia.  
-- **Tài nguyên** – Trình bày một tài nguyên từ không gian làm việc. Khi chọn một tài nguyên, thanh công cụ **Tài nguyên** sẽ mở ra, cung cấp các điều khiển phát lại và công cụ cộng tác dành riêng cho tài nguyên đang được trình bày.
+- **Tài nguyên** – Trình chiếu một tài nguyên từ không gian làm việc. Khi chọn một tài nguyên, thanh công cụ **Tài nguyên** sẽ mở ra, cung cấp các điều khiển phát lại và công cụ cộng tác dành riêng cho tài nguyên đang được trình chiếu.
 
-##### Thanh công cụ Tài nguyên (Cuộc họp)
+##### Thanh công cụ Tài nguyên và Live 360° trong cuộc họp
 
-Khi trình chiếu một tài nguyên trong cuộc họp, **Thanh công cụ Tài nguyên** sẽ xuất hiện phía trên khung trình chiếu. Dưới đây là các công cụ và mục menu có sẵn khi <u>trình chiếu một tài nguyên trong cuộc họp</u> – được giải thích từ trái sang phải.
+Khi trình chiếu một tài nguyên trong cuộc họp, **Thanh công cụ Tài nguyên** sẽ xuất hiện phía trên khung vẽ. Dưới đây là các công cụ và mục menu có sẵn khi <u>trình chiếu một tài nguyên trong cuộc họp</u> – được giải thích từ trái sang phải.
 
 ![Menu Avatour khi trình chiếu tài nguyên trong cuộc họp](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting_oflsr5.png) *Menu Avatour khi trình chiếu tài nguyên trong cuộc họp*
 
+Khi video 360° trực tiếp được phát trong cuộc họp, menu này sẽ hiển thị ở phía dưới khung hình.
+
+<img src="https://res.cloudinary.com/avatour/image/upload/c_fill,g_auto,w_480,h_120/avatour-screenshot-live360video-menu-meeting_cguwzb.png" alt="Menu Avatour với video 360° trực tiếp trong cuộc họp" style="width:50%; display:block; border:1px solid #DDE5EA; border-radius:6px; margin:20px 0 4px;"> *Menu Avatour với video 360° trực tiếp trong cuộc họp*
+
+Dưới đây là mô tả về tất cả các thành phần hiển thị trong các menu ở trên.
 
 - **Dòng thời gian video / Thanh tiến trình** – Hiển thị tiến trình video kèm theo các ghi chú và chủ đề chính được trích xuất từ âm thanh. Nhấp vào một ghi chú hoặc chủ đề để chuyển đến thời điểm đó và mở ghi chú. Bao gồm các nút điều khiển **Phát / Tạm dừng**.   
-- **Ảnh chụp nhanh** – Chụp ảnh 360° hoặc 2D từ tài sản.  
+- **Ảnh chụp nhanh** – Chụp ảnh 360° hoặc 2D từ tài nguyên.  
 - **Điểm nhấn** – Làm nổi bật một khu vực cụ thể cho tất cả người tham gia trong các phiên trực tiếp.  
 - **Hiển thị/Ẩn Góc nhìn (POV)** – Hiển thị hướng nhìn của từng người tham gia trong video 360°.  
-- **Ghi chú** – Tạo ghi chú gắn với các thời điểm cụ thể trong tài sản. Mỗi ghi chú có tác giả và có thể được phân loại (Quan sát, Vấn đề, Hành động, Khuyến nghị), theo dõi theo trạng thái (Chưa giải quyết → Đang xử lý → Đã giải quyết), giao cho người phụ trách và chia sẻ qua liên kết trực tiếp. Nếu tài nguyên có dữ liệu định vị GPS, các ghi chú cũng sẽ hiển thị tọa độ GPS. 
+- **Ghi chú** – Tạo ghi chú gắn với các thời điểm cụ thể trong tài liệu hoặc trong quá trình phát trực tiếp video. (Lưu ý: Khi đang phát trực tiếp, một tài liệu = ảnh chụp nhanh sẽ tự động được tạo ra để lưu lại ghi chú). Mỗi ghi chú có tác giả và có thể được phân loại (Quan sát, Vấn đề, Hành động, Khuyến nghị), theo dõi theo trạng thái (Chưa giải quyết → Đang xử lý → Đã giải quyết), giao cho người phụ trách và chia sẻ qua liên kết trực tiếp. Nếu tài liệu có dữ liệu định vị GPS, các ghi chú cũng sẽ hiển thị tọa độ GPS. Ghi chú cũng có thể được di chuyển đến vị trí khác (kéo để thay đổi vị trí) và di chuyển trên dòng thời gian (di chuyển tiến hoặc lùi trên dòng thời gian).
 
-  ![Ghi chú Avatour và Bộ lọc ghi chú](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-note-and-filters_g181oc.png) *Ghi chú Avatour và Bộ lọc ghi chú*
+  ![Ghi chú Avatour và Bộ lọc ghi chú](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-notes-and-filters_g181oc.png) *Ghi chú Avatour và Bộ lọc ghi chú*
 
-- **Ghi chú từ lệnh thoại** – Đây là các ghi chú tạm thời được tạo tự động khi bản ghi phát hiện các cụm từ như “chèn ghi chú”, “ghi chú” hoặc “tạo ghi chú”. Các ghi chú này xuất hiện trên dòng thời gian và cần được người dùng **định vị và hoàn thiện**. 
+- **Ghi chú từ lệnh giọng nói** – Đây là các vị trí giữ chỗ được tạo tự động khi phát hiện các cụm từ như “chèn ghi chú”, “ghi chú” hoặc “tạo ghi chú” trong video đã ghi. Các ghi chú này xuất hiện trên dòng thời gian và cần được người dùng **định vị và hoàn thiện**. 
 
-  ![Ghi chú Avatour - Được tạo bởi lệnh thoại](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-notes-voice-command-generated_ic5cu4.png) *Ghi chú Avatour - Được tạo bởi lệnh thoại*
+  ![Ghi chú Avatour - Tạo bởi lệnh giọng nói](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-notes-voice-command-generated_ic5cu4.png) *Ghi chú Avatour - Tạo bởi lệnh giọng nói*
 
-- **Ghi chú do AI tạo ra** – Đây là các ghi chú tạm thời được tạo tự động khi hệ thống ghi âm phát hiện các đoạn trong bản âm thanh của video nghe giống như các vấn đề cần được ghi lại để theo dõi sau này. Ghi chú do AI tạo ra trước tiên cần được chủ sở hữu ghi chú phê duyệt (xem Bảng điều khiển không gian làm việc bên dưới). Sau khi được phê duyệt, các ghi chú này giống như Ghi chú lệnh thoại vì chúng xuất hiện trên dòng thời gian và cần được người dùng **định vị và hoàn thiện**. 
+- **Ghi chú do AI tạo ra** – Đây là các vị trí giữ chỗ được tạo tự động khi bản ghi phát hiện các đề cập trong bản âm thanh của video, nghe giống như các vấn đề cần được ghi lại để theo dõi. Ghi chú do AI tạo ra trước tiên cần được chủ sở hữu ghi chú phê duyệt (xem Bảng điều khiển Không gian làm việc bên dưới). Sau khi được phê duyệt, các ghi chú này giống như Ghi chú lệnh thoại vì chúng xuất hiện trên dòng thời gian và cần được người dùng **định vị và hoàn thiện**. 
 
-- **Bảng ghi chú và tóm tắt** – Mở một bảng bên hiển thị tất cả các ghi chú, chủ đề chính và bản tóm tắt cho tài sản. Nhấp vào một mục sẽ đưa bạn đến thời điểm đó trong video.  
+- **Bảng ghi chú và tóm tắt** – Mở một bảng bên hiển thị tất cả các ghi chú, các chủ đề chính và bản tóm tắt cho tài sản. Nhấp vào một mục sẽ đưa bạn đến thời điểm đó trong video.  
 
-  ![Tóm tắt điều hành tài sản Avatour](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-exec-summary_cqpqbs.png) *Tóm tắt chính của Avatour khi trình bày một tài sản trong cuộc họp*
+  ![Tóm tắt điều hành tài sản Avatour](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-exec-summary_cqpqbs.png) *Tóm tắt điều hành Avatour khi trình bày một tài sản trong cuộc họp*
 
-  ![Các chủ đề của Avatour](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-topics_duuq1a.png) *Chủ đề Avatour khi trình bày tài sản trong cuộc họp*
+  ![Các chủ đề của Avatour](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-topics_duuq1a.png) *Các chủ đề của Avatour khi trình bày tài sản trong cuộc họp*
 
   Từ **bảng điều khiển bên**, bạn có thể **in báo cáo tài sản** hoặc **tải xuống dưới dạng tệp TXT hoặc CSV**. Báo cáo có thể bao gồm một số yếu tố mà bạn có thể **chọn trước khi xuất**. 
 
@@ -287,17 +292,17 @@ Khi trình chiếu một tài nguyên trong cuộc họp, **Thanh công cụ Tà
   ![Chọn thành phần báo cáo tài sản Avatour](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-asset-report-element-selection_ud8c5k.png)  
   *Menu chọn thành phần báo cáo tài sản Avatour*
 
-- **Chia sẻ liên kết** – Chia sẻ liên kết đến một ghi chú hoặc cảnh cụ thể trong tài sản.  
+- **Liên kết chia sẻ** – Chia sẻ liên kết đến một ghi chú hoặc cảnh cụ thể trong tài sản.  
 - **Phụ đề (CC)** – Hiển thị bản chép lời trên màn hình trong khi phát video.
 
 ##### Thanh công cụ tài nguyên (Không gian làm việc)
 
 Khi xem xét một tài nguyên trong không gian làm việc, thanh công cụ có giao diện tương tự nhưng được tối ưu hóa cho việc sử dụng cá nhân:
 
-![Menu Avatour khi trình bày tài sản bên ngoài cuộc họp, ví dụ: khi truy cập không gian làm việc](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-workspace_iri8gc.png) *Menu Avatour khi trình chiếu tài nguyên trong không gian làm việc*
+![Menu Avatour khi trình bày một tài nguyên bên ngoài cuộc họp, ví dụ: khi truy cập vào không gian làm việc](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-workspace_iri8gc.png) *Menu Avatour khi trình bày một tài sản trong không gian làm việc*
 
 - **Dòng thời gian video / Thanh tiến trình** – Hiển thị tiến trình video kèm theo ghi chú và các chủ đề chính được trích xuất từ bản âm thanh. Nhấp vào bất kỳ vị trí nào trên dòng thời gian để di chuyển qua video. Nhấp vào một ghi chú hoặc chủ đề để chuyển đến thời điểm đó và mở ghi chú. Bao gồm các nút điều khiển **Phát / Tạm dừng**.  
-- **Ảnh chụp nhanh, Ghi chú, Bảng tóm tắt ghi chú, Liên kết chia sẻ, Phụ đề**  
+- **Ảnh chụp nhanh, Ghi chú, Bảng điều khiển Ghi chú và Tóm tắt, Liên kết chia sẻ, Phụ đề**  
 - Không khả dụng: **Spotlight, POV** (các tính năng này yêu cầu có người tham gia trực tiếp)  
 - Các nút điều khiển bổ sung:
   - **Bước 10 giây** – Bỏ qua về phía trước/phía sau  
@@ -305,9 +310,9 @@ Khi xem xét một tài nguyên trong không gian làm việc, thanh công cụ 
   - **Cắt video** – Cắt phần đầu hoặc phần cuối của tài liệu
 
 
-## 4. Dành cho người dùng chủ và quản trị viên - Bảng điều khiển web Avatour {#for-host-and-admin-users-avatour-web-console}
+## 4. Dành cho người dùng chủ máy chủ và quản trị viên - Bảng điều khiển web Avatour {#for-host-and-admin-users-avatour-web-console}
 
-Khi đăng nhập vào Tài khoản người dùng Avatour, bạn sẽ truy cập vào **Bảng điều khiển web**.  
+Khi bạn đăng nhập vào Tài khoản người dùng Avatour, bạn sẽ truy cập vào **Bảng điều khiển web**.  
 
 ### 4.1 Bảng điều khiển web - Tổng quan về Menu chính {#web-console-overview-main-menu}
 
@@ -315,11 +320,11 @@ Khi đăng nhập vào Tài khoản người dùng Avatour, bạn sẽ truy cậ
 
 ![Bảng điều khiển web Avatour - Menu chính](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu_qwpthq.png) *Bảng điều khiển web Avatour - Menu chính*
 
-- **Không gian làm việc** – Sắp xếp nội dung của bạn một cách hiệu quả. Mỗi không gian làm việc chứa các mục **Tài sản**, **Người cộng tác**, **Cuộc họp** và **Cài đặt**.  
-- **Tài nguyên** – Truy cập và quản lý tất cả tài nguyên của bạn (video, hình ảnh, tệp PDF). Quản trị viên có thể xem tất cả tài nguyên của tài khoản, và các tài nguyên được chia sẻ sẽ hiển thị cho tất cả người dùng.  
+- **Không gian làm việc** – Sắp xếp nội dung của bạn một cách hiệu quả. Mỗi không gian làm việc chứa các mục **Tài nguyên**, **Người cộng tác**, **Cuộc họp** và **Cài đặt**.  
+- **Tài nguyên** – Truy cập và quản lý tất cả tài nguyên của bạn (video, hình ảnh, tệp PDF). Quản trị viên có thể xem tất cả tài nguyên trong tài khoản, và các tài nguyên được chia sẻ sẽ hiển thị cho tất cả người dùng.  
 - **Hồ sơ** – Quản lý ngôn ngữ và mật khẩu của bạn.  
 - **Phân tích** – Theo dõi hoạt động phiên làm việc, mức độ sử dụng không gian làm việc và các chỉ số ROI.  
-- **Cài đặt** *(Chỉ dành cho quản trị viên)* – Cấu hình các thiết lập mặc định cho không gian làm việc, cuộc họp và tài nguyên trên toàn tổ chức. Quản trị viên cũng có thể tùy chỉnh thương hiệu (logo, màu sắc, hình nền).  
+- **Cài đặt** *(Chỉ dành cho quản trị viên)* – Định cấu hình các thiết lập mặc định cho không gian làm việc, cuộc họp và tài sản trên toàn tổ chức. Quản trị viên cũng có thể tùy chỉnh thương hiệu (logo, màu sắc, hình nền).  
 - **Tài khoản** *(Chỉ dành cho quản trị viên)* – Quản lý người dùng đã đăng ký và camera 360°.  
 - **Đăng nhập thiết bị** – Nhập mã hiển thị trên camera 360° của bạn để ghép nối thiết bị với tài khoản.  
 - **Hướng dẫn** – Truy cập các hướng dẫn có hướng dẫn chi tiết.  
@@ -341,33 +346,33 @@ Nhấp vào biểu tượng chuông để xem tóm tắt hoạt động của kh
 
 ![Avatour Web Console - Hoạt động gần đây trong không gian làm việc](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-workspace-recent-activities_gby1ws.png) *Hoạt động gần đây trong không gian làm việc*
 
-Bên trong một không gian làm việc:
+Bên trong không gian làm việc:
 
 ![Không gian làm việc Avatour với Bảng tài sản, Bảng điều khiển và Bảng cuộc họp](https://res.cloudinary.com/avatour/image/upload/v1785929001/avatour-screenshot-workspace-dashboard_dqp5ff.png) *Không gian làm việc với Tài sản (bên trái), Bảng điều khiển không gian làm việc (giữa), Cuộc họp (bên phải)*
 
-Ở giữa, bạn sẽ thấy bảng điều khiển không gian làm việc cung cấp tổng quan về tất cả các ghi chú trong các tài sản được phân bổ cho không gian làm việc đó, kèm theo một số menu thả xuống để lựa chọn theo các thuộc tính khác nhau của ghi chú. Bạn cũng có thể xuất tất cả các ghi chú từ chế độ xem này.
+Ở giữa, bạn sẽ thấy bảng điều khiển không gian làm việc cung cấp cái nhìn tổng quan về tất cả các ghi chú trong các tài sản được phân bổ cho không gian làm việc đó, kèm theo một số menu thả xuống để lọc theo các thuộc tính khác nhau của ghi chú. Tại đây, bạn cũng có thể chấp nhận hoặc xóa các ghi chú do AI đề xuất. Bạn cũng có thể xuất tất cả các ghi chú từ giao diện này.
 
-Trong các menu phía dưới, bạn sẽ tìm thấy:
+Trong các menu phía dưới, bạn sẽ thấy:
 
 - **Tài sản** – Quản lý các tệp được phân bổ cho không gian làm việc này.  
 - **Người cộng tác** – 
   Kiểm soát quyền truy cập vào không gian làm việc bằng cách 
-  - **Người xem** – Có thể xem tài sản. Lời mời sẽ tạo một người dùng Khách nếu cần.  
-  - **Người chỉnh sửa** – Quyền kiểm soát toàn bộ không gian làm việc, có quyền tương tự như Chủ phòng. Lời mời sẽ nâng cấp người dùng lên Chủ phòng nếu cần.  
-> Nhiều người dùng có thể truy cập một không gian làm việc đồng thời mà không cần tổ chức cuộc họp. Các không gian làm việc công khai và cài đặt quyền truy cập cuộc họp cung cấp các phương thức truy cập thay thế.  
-- **Báo cáo** – Tạo báo cáo bằng cách sử dụng Mẫu Kiểm tra trên các tài nguyên được chọn trong không gian làm việc. Các phản hồi được tạo ra bởi AI dựa trên các bản ghi âm trong video đã chọn.  
+  - **Người xem** – Có thể xem tài sản. Lời mời sẽ tạo tài khoản Khách nếu cần thiết.  
+  - **Người chỉnh sửa** – Quyền kiểm soát toàn bộ không gian làm việc, tương đương với quyền của Chủ sở hữu. Lời mời sẽ nâng cấp người dùng lên Chủ sở hữu nếu cần thiết.  
+> Nhiều người dùng có thể truy cập không gian làm việc cùng lúc mà không cần tổ chức cuộc họp. Các không gian làm việc công khai và cài đặt quyền truy cập cuộc họp cung cấp các phương thức truy cập thay thế.  
+- **Báo cáo** – Tạo báo cáo bằng Mẫu Kiểm tra trên các tài nguyên đã chọn trong không gian làm việc. Các phản hồi được AI tạo ra dựa trên các bản ghi âm trong các video đã chọn.  
 
 ![Báo cáo không gian làm việc và lựa chọn tài sản của Avatour](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-asset-selection-and-workspace-report_itjt8f.png) *Báo cáo không gian làm việc và lựa chọn tài sản*
 
-- **Bản đồ** – Hiển thị vị trí các tài sản được kích hoạt GPS trên bản đồ như đã mô tả ở trên cho các cuộc họp. 
+- **Bản đồ** – Hiển thị vị trí các tài sản được hỗ trợ GPS trên bản đồ như đã mô tả ở trên cho các cuộc họp. 
 - **Cuộc họp** – Tổ chức các cuộc họp trong không gian làm việc.  
-- **Cài đặt** – Cấu hình các thiết lập mặc định cho không gian làm việc và cuộc họp:
+- **Cài đặt** – Định cấu hình các thiết lập mặc định cho không gian làm việc và cuộc họp:
 
 ![Cài đặt Avatour - Chế độ xem không gian làm việc](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-workspace-settings_llcei3.png) *Cài đặt không gian làm việc*
 
 **Cài đặt không gian làm việc**
 
-- **Mẫu báo cáo** – Chọn Mẫu kiểm tra để tạo báo cáo do AI sinh ra. Bạn có thể tải lên các mẫu này trong Tài khoản (xem bên dưới).  
+- **Mẫu báo cáo** – Chọn một Mẫu kiểm tra để tạo báo cáo do AI sinh ra. Bạn có thể tải lên các mẫu này trong phần Tài khoản (xem bên dưới).  
 - **Bật thông báo** – Email tóm tắt hàng ngày về các thay đổi trạng thái ghi chú.  
 
 ![Thông báo qua email - Ví dụ](https://res.cloudinary.com/avatour/image/upload/c_crop,h_600,w_600,x_170,y_60/Screenshot_2026-03-05_140654_bjk0xk.png) *Ví dụ về thông báo qua email*
@@ -377,7 +382,7 @@ Trong các menu phía dưới, bạn sẽ tìm thấy:
 **Cài đặt cuộc họp**
   
 * **Yêu cầu xác thực** – Người tham gia phải đăng nhập.  
-* **Cho phép truy cập khách** – Cho phép người dùng chưa đăng ký xem tài nguyên.  
+* **Cho phép truy cập khách** – Cho phép người dùng chưa đăng ký xem các tài liệu.  
 * **Tự động bắt đầu ghi hình / Bắt đầu thủ công** – Chọn chế độ ghi hình tự động hoặc bắt đầu thủ công cho cuộc họp.  
 * **Yêu cầu người chủ trì** – Người chủ trì phải chấp nhận người tham gia; cuộc họp kết thúc khi người chủ trì rời khỏi.  
 * **Cho phép truy cập với tư cách người xem** – Tham gia mà không cần mic hoặc camera; giao tiếp qua chat.  
@@ -394,23 +399,25 @@ Quản lý tất cả video 360°/2D, hình ảnh và tệp PDF. Tải lên/tả
 
 ![Avatour Web Console - Mục menu chính Tài nguyên](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-assets_ky5emz.png) *Mục menu chính Tài nguyên*
 
-Bạn cũng có thể tạo mã HTML để cho phép nhúng công khai một tài nguyên, ví dụ như trên trang web của bạn. Chỉ cần nhấp vào ô chọn "Cho phép nhúng công khai" rồi nhấp vào "Lưu" để lấy mã.
+Bạn cũng có thể tạo mã HTML để cho phép nhúng công khai một tài nguyên, ví dụ như trên trang web của bạn. Chỉ cần nhấp vào hộp kiểm "Bật nhúng công khai" rồi nhấp vào "Lưu" để lấy mã.
 
-![Bảng điều khiển web Avatour - Mục menu chính: Tài sản](https://res.cloudinary.com/avatour/image/upload/v1785921604/avatour-screenshot-main-menu-assets-embed-code_mtau8g.png) *Tài nguyên mục menu chính*
+![Bảng điều khiển web Avatour - Mục menu chính Tài sản](https://res.cloudinary.com/avatour/image/upload/v1785921604/avatour-screenshot-main-menu-assets-embed-code_mtau8g.png) *Tài nguyên mục menu chính*
 
 #### 4.2.3 Cài đặt
 
-Người dùng quản trị có quyền truy cập vào menu này để quản lý Cài đặt tập trung cho toàn bộ nền tảng Avatour. Mỗi cài đặt có thể được chọn hoặc bỏ chọn để trở thành cài đặt mặc định trên toàn bộ nền tảng. Mỗi tùy chọn cũng có thể được khóa, nghĩa là thiết lập mặc định sẽ không thể bị thay đổi bởi các người dùng khác trên nền tảng. Tại đây, bạn cũng có thể thực hiện tùy chỉnh tiếp thị liên quan đến thương hiệu của mình (logo, màu sắc, v.v.).
+Người dùng quản trị có quyền truy cập vào menu này để quản lý các cài đặt tập trung cho toàn bộ nền tảng Avatour. Mỗi cài đặt có thể được chọn hoặc bỏ chọn để trở thành cài đặt mặc định trên toàn bộ nền tảng. Mỗi cài đặt cũng có thể được khóa, nghĩa là cài đặt mặc định sẽ không thể bị thay đổi bởi các người dùng khác trên nền tảng. Tại đây, bạn cũng có thể thực hiện tùy chỉnh tiếp thị liên quan đến thương hiệu của mình (logo, màu sắc, v.v.).
 
 ![Bảng điều khiển web Avatour - Cài đặt mục menu chính](https://res.cloudinary.com/avatour/image/upload/v1781172727/avatour-screenshot-main-menu-settings-1-of-2_fsaatf.jpg) *Phần Cài đặt*
 
 #### 4.2.4 Tài khoản
 
-Tại đây, bạn có thể xem chi tiết tài khoản của mình và quản lý các tài khoản người dùng đã đăng ký, bao gồm quyền truy cập vào không gian làm việc cũng như tải lên các mẫu kiểm tra để tạo báo cáo không gian làm việc (xem phần trên).
+Tại đây, bạn có thể xem chi tiết tài khoản của mình và quản lý các tài khoản người dùng đã đăng ký (Chủ tài khoản, Quản trị viên, Khách), bao gồm quyền truy cập vào không gian làm việc cũng như tải lên các mẫu kiểm tra để tạo báo cáo không gian làm việc (xem phần trên).
 
-![Bảng điều khiển web Avatour - Mục menu chính Tài khoản](https://res.cloudinary.com/avatour/image/upload/v1786103904/avatour-screenshot-main-menu-account-1-of-2_oq5amr.png) *Tổng quan về tài khoản - Các phần phía trên*
+![Avatour Web Console - Mục menu chính "Tài khoản"](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-account-1-of-3_oq5amr.png) *Tổng quan về tài khoản - Các phần trên cùng*
 
-![Bảng điều khiển web Avatour - Mục menu chính Tài khoản](https://res.cloudinary.com/avatour/image/upload/v1772360316/avatour-screenshot-main-menu-account-2-of-2_udgyjz.png) *Tổng quan về tài khoản - Phần dưới*
+![Avatour Web Console - Mục menu chính Tài khoản](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-account-2-of-3_oq5amr.png) *Tổng quan về tài khoản - Quản lý quyền truy cập không gian làm việc*
+
+![Bảng điều khiển web Avatour - Mục menu chính Tài khoản](https://res.cloudinary.com/avatour/image/upload/v1772360316/avatour-screenshot-main-menu-account-3-of-3_udgyjz.png) *Tổng quan về tài khoản - Các phần dưới*
 
 #### 4.2.5 Phân tích
 

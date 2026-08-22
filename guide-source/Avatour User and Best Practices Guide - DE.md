@@ -114,7 +114,7 @@ Workspace-Berechtigungen legen fest, was ein Benutzer **innerhalb eines bestimmt
 
 - **Mitwirkender mit Leserechten:** Benutzer mit dieser Berechtigung haben Lesezugriff auf die Assets des Arbeitsbereichs. Sie **können keine Assets ändern, keine Meetings verwalten und keine Mitwirkenden verwalten**, aber sie **können Notizen zu Assets erstellen**. 
   
-## 3. Für Teilnehmer an Remote-Besprechungen und Besucher des Arbeitsbereichs {#for-remote-meeting-participants-and-workspace-visitors}
+## 3. Für Teilnehmer an Online-Besprechungen und Besucher des Arbeitsbereichs {#for-remote-meeting-participants-and-workspace-visitors}
 
 Avatour bietet Nutzern zwei Hauptmöglichkeiten zur Zusammenarbeit:
 
@@ -122,7 +122,7 @@ Avatour bietet Nutzern zwei Hauptmöglichkeiten zur Zusammenarbeit:
   Möglicherweise erhalten Sie eine **Kalendereinladung** zur Teilnahme an einem Avatour-Meeting. Während des Meetings können die Teilnehmer eine **Live-Besichtigung vor Ort** durchführen oder gemeinsam und synchron Objekte begutachten.
 
 - **Einen Arbeitsbereich besuchen (asynchrone Zusammenarbeit):**  
-  Möglicherweise werden Sie auch als **Mitarbeiter in einen Arbeitsbereich** eingeladen, um Objekte **asynchron** (nach Ihrem eigenen Zeitplan) zu begutachten.
+  Möglicherweise werden Sie auch als **Mitarbeiter in einem Arbeitsbereich** eingeladen, um Objekte **asynchron** (nach Ihrem eigenen Zeitplan) zu begutachten.
 
 ### 3.1 So nehmen Sie an einem Avatour-Meeting teil und besuchen einen Avatour-Arbeitsbereich {#how-to-join-an-avatour-meeting-and-visit-an-avatour-workspace}
 #### 3.1.1 Jedes Gerät mit „Flachbildschirm“ und Webbrowser {#any-flat-screen}
@@ -135,18 +135,18 @@ Sie können über einen Webbrowser von **jedem Desktop- oder Laptop-Computer, Sm
 1. **Über eine Kalendereinladung (empfohlen):** 
  - In der Regel erhalten Sie eine **Kalendereinladung** mit einem **Direktlink zur Teilnahme** (zum Beispiel: `https://avatour.live/join?s=xxxxx`).  
    - Wenn Sie auf den Link klicken, wird der **5-stellige Meeting-Code** automatisch ausgefüllt und Sie werden zum Meeting weitergeleitet.
-   - **Authentifizierung erforderlich:** Einige Meetings sind auf registrierte Nutzer beschränkt. In diesem Fall wird in der Einladung darauf hingewiesen, dass Sie sich **anmelden müssen, um auf die Besprechung zugreifen zu können**. 
+   - **Authentifizierung erforderlich:** Einige Besprechungen sind auf registrierte Benutzer beschränkt. In diesem Fall wird in der Einladung darauf hingewiesen, dass Sie sich **anmelden müssen, um auf die Besprechung zugreifen zu können**. 
  - **Passwortgeschützte Besprechungen:** Für manche Besprechungen ist möglicherweise ein Passwort erforderlich. In diesem Fall enthält die Einladung das Passwort, das Sie eingeben müssen, um teilzunehmen.
 
-2. **Über den Besprechungscode:**  
-   - Wenn der Gastgeber einen **5-stelligen Meeting-Code** separat mitteilt, gehen Sie zu [https://avatour.live/join](https://avatour.live/join), geben Sie Ihren **Namen** und den **Meeting-Code** ein und nehmen Sie am Meeting teil.  
+2. **Über den Meeting-Code:** 
+ - Wenn der Gastgeber Ihnen separat einen **5-stelligen Meeting-Code** mitteilt, gehen Sie zu [https://avatour.live/join](https://avatour.live/join), geben Sie Ihren **Namen** und den **Meeting-Code** ein und nehmen Sie am Meeting teil.  
    - Wenn die Besprechung **passwortgeschützt** ist, geben Sie das vom Gastgeber bereitgestellte Passwort ein. 
  - Wenn für die Besprechung eine **Authentifizierung** erforderlich ist, müssen Sie sich vor der Teilnahme **mit Ihrem Avatour-Konto anmelden**.
 
-> **Tipp 1:** Wenn Ihre Kamera oder Ihr Mikrofon nicht funktioniert, werden diese möglicherweise von einer anderen Anwendung (z. B. Microsoft Teams oder Zoom) verwendet. Schließen Sie alle Apps, die möglicherweise Ihre Kamera oder Ihr Mikrofon nutzen, und verlassen Sie das Avatour-Meeting, um anschließend erneut beizutreten.  
+> **Tipp 1:** Wenn Ihre Kamera oder Ihr Mikrofon nicht funktionieren, werden sie möglicherweise von einer anderen Anwendung (z. B. Microsoft Teams oder Zoom) verwendet. Schließen Sie alle Apps, die möglicherweise Ihre Kamera oder Ihr Mikrofon nutzen, verlassen Sie dann die Avatour-Besprechung und nehmen Sie erneut daran teil.  
 
-> **Tipp 2:** Wenn Sie dem Meeting immer noch nicht beitreten können, führen Sie diesen Test durch: [https://avatour.live/test](https://avatour.live/test).  
-> Der Test kann feststellen, ob Ihre **Unternehmensfirewall oder Ihr Netzwerk** den Zugriff blockiert, und liefert Informationen, die Ihnen als Grundlage für Gespräche mit Ihrem IT-Team dienen können.  
+> **Tipp 2:** Wenn Sie der Besprechung immer noch nicht beitreten können, führen Sie diesen Test durch: [https://avatour.live/test](https://avatour.live/test).  
+> Der Test kann feststellen, ob Ihre **Unternehmensfirewall oder Ihr Netzwerk** den Zugriff blockiert, und liefert Informationen, die Ihnen als Grundlage für Gespräche mit Ihrem IT-Team dienen.  
 
 > **Tipp 3:** Verwenden Sie **nicht** die Avatour-Apps für iOS oder Android, um an Meetings teilzunehmen. Diese Apps werden nur benötigt, wenn Sie **ein Live-Meeting von einer Insta360-Kamera streamen**, da diese Kameras die Avatour-360°-Software nicht direkt ausführen können und ein Smartphone zur Unterstützung benötigen.
 
@@ -176,7 +176,7 @@ Sie können mit einer Reihe kompatibler Meta- und Pico-Headsets an einem Meeting
 
 Avatour ermöglicht die Zusammenarbeit in zwei Hauptkontexten:
 
-1. **Meetings (synchron):** Arbeiten Sie in Echtzeit mit anderen Teilnehmern zusammen, beispielsweise bei Live-Besichtigungen vor Ort oder beim gemeinsamen Betrachten aufgezeichneter Inhalte.  
+1. **Meetings (synchron):** Arbeiten Sie in Echtzeit mit anderen Teilnehmern zusammen, beispielsweise bei Live-Standortbesichtigungen oder der gemeinsamen Sichtung aufgezeichneter Inhalte.  
 2. **Arbeitsbereiche (asynchron):** Sehen Sie sich Inhalte nach Ihrem eigenen Zeitplan an und interagieren Sie mit ihnen – rund um die Uhr.
 
 Die **Tools für die Zusammenarbeit sind in Meetings und Arbeitsbereichen weitgehend ähnlich**, wobei es aufgrund des synchronen bzw. asynchronen Kontexts einige Unterschiede gibt.
@@ -185,9 +185,9 @@ Die **Tools für die Zusammenarbeit sind in Meetings und Arbeitsbereichen weitge
 
 Die Avatour-Benutzeroberfläche gliedert sich in drei Hauptbereiche:
 
-- **Linkes Fenster** – Arbeitsbereich-Assets und unterstützende Tools  
-- **Mittlerer Arbeitsbereich** – Hauptanzeigebereich für Live-Videos oder Assets  
-- **Rechtes Fenster** – Kontextinformationen wie Teilnehmer, Besprechungen oder Chat  
+- **Linkes Fenster** – Arbeitsbereichs-Inhalte und unterstützende Tools  
+- **Mittlere Arbeitsfläche** – Hauptanzeigebereich für Live-Video, Assets und das Arbeitsbereich-Dashboard  
+- **Rechter Bereich** – Kontextbezogene Informationen wie Teilnehmer, Besprechungen oder Chat  
 
 Die meisten Interaktionen werden über das **untere Menü** initiiert.  
 Ein Klick auf eine Menüoption öffnet einen **Seitenbereich** auf der linken oder rechten Seite des Bildschirms, während die **zentrale Arbeitsfläche** der primäre Anzeigebereich bleibt.
@@ -195,9 +195,9 @@ Ein Klick auf eine Menüoption öffnet einen **Seitenbereich** auf der linken od
 ---
 #### 3.2.2 Beispiel für die Ansicht in einem Meeting
 
-Hier ist ein Beispiel für eine Ansicht in einem Avatour-Meeting:
+Hier ist ein Beispiel für die Ansicht in einem Avatour-Meeting:
 
-![Avatour-Meeting-Benutzeroberfläche mit Elementen-Panel, leerem Arbeitsbereich und Teilnehmer-Panel](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-meeting-assets-blank-participants_pugprq.png)  
+![Avatour-Meeting-Benutzeroberfläche mit Asset-Panel, leerer Arbeitsfläche und Teilnehmer-Panel](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-meeting-assets-blank-participants_pugprq.png)  
 *Avatour-Meeting mit Asset-Panel (links), Arbeitsfläche (Mitte) und Teilnehmer-Panel (rechts)*
 
 ---
@@ -206,7 +206,7 @@ Hier ist ein Beispiel für eine Ansicht in einem Avatour-Meeting:
 
 Hier ist ein Beispiel für eine Arbeitsbereichsansicht:
 
-![Avatour-Arbeitsbereich mit dem Bereich „Assets“, einer leeren Arbeitsfläche und dem Bereich „Meetings“](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-workspace-assets-blank-meetings_qeumpl.png)  
+![Avatour-Arbeitsbereich mit dem Bereich „Assets“, leerer Arbeitsfläche und dem Bereich „Meetings“](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-workspace-assets-blank-meetings_qeumpl.png)  
 *Avatour-Arbeitsbereich mit dem Asset-Panel (links), der Arbeitsfläche (Mitte) und dem Meeting-Panel (rechts)*
 
 ---
@@ -215,32 +215,32 @@ Hier ist ein Beispiel für eine Arbeitsbereichsansicht:
 
 Das untere Menü bietet Zugriff auf die wichtigsten Steuerelemente und Panels der Benutzeroberfläche:
 
-**Unteres Menü im Meeting**  
+**Unteres Menü des Meetings**  
 
-![Unteres Menü im Avatour-Meeting](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-meeting-bottom-menu_bflaor.png)  
-*Unteres Menü im Avatour-Meeting*
+![Unteres Menü eines Avatour-Meetings](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-meeting-bottom-menu_bflaor.png)  
+*Unteres Menü eines Avatour-Meetings*
 
 - **Assets** – Zeigen Sie Dateien im Arbeitsbereich an, darunter aufgezeichnete Videos, Bilder, Screenshots und PDFs. 
 - **Chat** – Senden Sie Nachrichten an alle Besprechungsteilnehmer.  
 - **Kamera** – Schalten Sie Ihre Webcam ein oder aus.  
 - **Mikrofon** – Stummschalten oder Stummschaltung aufheben.  
-- **Präsentieren** – Präsentieren Sie ein Asset, Ihren Desktop oder das Webcam-Bild (siehe Abschnitt „Präsentieren“ weiter unten).  
+- **Präsentieren** – Ein Asset, den Desktop oder das Webcam-Bild präsentieren (siehe Abschnitt „Präsentieren“ weiter unten).  
 - **Host-Tools** (nur für Hosts):  
   - **Fokus sperren** – Sperren Sie die Ansicht für alle Teilnehmer.  
-  - **Alle stummschalten** – Alle Teilnehmer stummschalten.  
-- **Vollbild aktivieren** – Den Meeting-Tab im Vollbildmodus anzeigen.  
-- **Meeting verlassen** – Das Meeting verlassen.  
-- **Aufzeichnung starten** – Verwenden Sie diese Schaltfläche, um die Aufzeichnung während eines Meetings manuell zu starten und zu stoppen. Alternativ können Meetings automatisch aufgezeichnet werden, wenn in den Arbeitsbereichseinstellungen die Option **„Aufzeichnung automatisch starten“** aktiviert ist. In beiden Fällen werden die Aufzeichnungen in den Assets des Arbeitsbereichs gespeichert.
-- **Karte** – Öffnen oder schließen Sie das Kartenfenster, um die Kamerabewegung für Assets mit GPS-Tracking anzuzeigen. Durch Klicken auf einen Ort springen Sie zum genauen Punkt im Video. Die Karte wird während der Videowiedergabe in Echtzeit aktualisiert. Auch Notizen werden auf der Karte angezeigt.
+  - **Alle stummschalten** – Schalten Sie alle Teilnehmer stumm.  
+- **Vollbild aktivieren** – Schalten Sie die Besprechungsregisterkarte auf Vollbild um.  
+- **Besprechung verlassen** – Verlassen Sie die Besprechung.  
+- **Aufzeichnung starten** – Verwenden Sie diese Schaltfläche, um die Aufzeichnung während eines Meetings manuell zu starten und zu beenden. Alternativ können Meetings automatisch aufgezeichnet werden, wenn in den Arbeitsbereichseinstellungen die Option **„Aufzeichnung automatisch starten“** aktiviert ist. In beiden Fällen werden die Aufzeichnungen in den Assets des Arbeitsbereichs gespeichert.
+- **Karte** – Öffnen oder schließen Sie das Kartenfenster, um die Kamerabewegung für Assets mit GPS-Track anzuzeigen. Durch Klicken auf einen Ort springen Sie zum genauen Punkt im Video. Die Karte wird während der Videowiedergabe in Echtzeit aktualisiert. Auch Notizen werden auf der Karte angezeigt.
 - **Teilnehmer** – Öffnen oder schließen Sie das Teilnehmerfenster.  
-- **Besprechungsinfo** – Zeigt den Besprechungscode und den Einladungslink an und bietet Zugriff auf entsprechende Tutorials.  
+- **Besprechungsinfo** – Zeigen Sie den Besprechungscode und den Einladungslink an und greifen Sie auf zugehörige Tutorials zu.  
 
-![Avatour-Besprechungsinfo](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-meeting-info-side-pane_nx7dp4.png)  
-*Seitenbereich „Avatour-Besprechungsinfo“*
+![Avatour-Besprechungsinformationen](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-meeting-info-side-pane_nx7dp4.png)  
+*Seitenbereich „Avatour-Besprechungsinformationen“*
 
 - **Einstellungen** – Passen Sie die Sprach-, Audio- und Videoeinstellungen an. Bei Live-360°-Videobesprechungen können Sie mit **Bitrate anzeigen** die Verbindungsstatistiken überwachen.
 
-> Tipp: Senden Sie den Besprechungslink oder fügen Sie ihn einem Kalendereintrag hinzu, um Teilnehmer einzuladen.
+> Tipp: Senden Sie den Meeting-Link oder fügen Sie ihn einem Kalendereintrag hinzu, um Teilnehmer einzuladen.
 
 ---
 
@@ -248,44 +248,49 @@ Das untere Menü bietet Zugriff auf die wichtigsten Steuerelemente und Panels de
 
 Über die Option **Präsentieren** im unteren Menü des Meetings können Sie Inhalte für alle Teilnehmer freigeben.
 
-- **Kamera** – Geben Sie die Kamera Ihres Geräts (Laptop, Smartphone usw.) frei. Dies kann auch während eines Live-360°-Videomeetings genutzt werden, um eine zweite Ansicht für Nahaufnahmen oder bestimmte Details einzublenden. Beim Freigeben einer Smartphone-Kamera (Vorder- oder Rückseite) können die Teilnehmer des Remote-Meetings den Zoom des Smartphones nutzen und die Taschenlampe ein- und ausschalten.
+- **Kamera** – Geben Sie die Kamera Ihres Geräts (Laptop, Smartphone usw.) freigeben. Dies kann auch während eines Live-360°-Videomeetings genutzt werden, um eine zweite Ansicht für Nahaufnahmen oder bestimmte Details einzublenden. Bei der Freigabe einer Smartphone-Kamera (Vorder- oder Rückseite) können die Teilnehmer des Remote-Meetings den Zoom des Smartphones nutzen und die Taschenlampe ein- und ausschalten.
 - **Desktop** – Geben Sie Ihren Desktop-Bildschirm für alle Teilnehmer frei.  
 - **Asset** – Präsentieren Sie ein Asset aus dem Arbeitsbereich. Durch die Auswahl eines Assets wird die **Asset-Symbolleiste** geöffnet, die Wiedergabesteuerungen und Kollaborationswerkzeuge speziell für das präsentierte Asset bereitstellt.
 
-##### Asset-Symbolleiste (Meeting)
+##### Asset- und Live-360°-Symbolleisten in Meetings
 
-Wenn Sie ein Asset in einem Meeting präsentieren, erscheint die **Asset-Symbolleiste** oberhalb der Arbeitsfläche. Hier sind die Werkzeuge und Menüpunkte, die bei der <u>Präsentation eines Assets in einem Meeting</u> verfügbar sind – von links nach rechts erklärt.
+Wenn Sie ein Asset in einem Meeting präsentieren, erscheint die **Asset-Symbolleiste** über der Arbeitsfläche. Hier sind die Werkzeuge und Menüpunkte, die bei der <u>Präsentation eines Assets in einem Meeting</u> verfügbar sind – erklärt von links nach rechts.
 
-![Avatour-Menü bei der Präsentation eines Assets in einer Besprechung](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting_oflsr5.png) *Avatour-Menü bei der Präsentation eines Assets in einer Besprechung*
+![Avatour-Menü bei der Präsentation eines Assets in einem Meeting](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting_oflsr5.png) *Avatour-Menü bei der Präsentation eines Assets in einem Meeting*
 
+Wenn ein Live-360°-Video in ein Meeting gestreamt wird, wird dieses Menü am unteren Rand der Arbeitsfläche angezeigt.
 
-- **Video-Zeitleiste / Fortschrittsbalken** – Zeigt den Videofortschritt mit Notizen und aus dem Audio extrahierten Schlüsselthemen an. Klicken Sie auf eine Notiz oder ein Thema, um zu diesem Moment zu springen und die Notiz zu öffnen. Enthält **Wiedergabe-/Pause-**-Steuerelemente.   
+<img src="https://res.cloudinary.com/avatour/image/upload/c_fill,g_auto,w_480,h_120/avatour-screenshot-live360video-menu-meeting_cguwzb.png" alt="Avatour-Menü mit Live-360°-Video in einer Besprechung" style="width:50%; display:block; border:1px solid #DDE5EA; border-radius:6px; margin:20px 0 4px;"> *Avatour-Menü mit Live-360°-Video in einem Meeting*
+
+Hier finden Sie eine Beschreibung aller Elemente, die in den obenstehenden Menüs angezeigt werden.
+
+- **Video-Zeitleiste / Fortschrittsbalken** – Zeigt den Videofortschritt mit Notizen und aus dem Ton extrahierten Schlüsselthemen an. Klicken Sie auf eine Notiz oder ein Thema, um zu diesem Moment zu springen und die Notiz zu öffnen. Enthält **Wiedergabe-/Pause**-Steuerelemente.   
 - **Schnappschuss** – Erfassen Sie ein 360°- oder 2D-Bild aus dem Asset.  
-- **Spotlight** – Heben Sie während Live-Sitzungen einen bestimmten Bereich für alle Teilnehmer hervor.  
+- **Spotlight** – Hebt während Live-Sitzungen einen bestimmten Bereich für alle Teilnehmer hervor.  
 - **Blickwinkel (POV) anzeigen/ausblenden** – Zeigt an, wohin jeder Teilnehmer im 360°-Video blickt.  
-- **Notizen** – Erstellen Sie Notizen, die an bestimmte Momente im Asset verankert sind. Jede Notiz hat einen Verfasser und kann kategorisiert (Beobachtung, Problem, Maßnahme, Empfehlung), nach Status verfolgt (Offen → In Bearbeitung → Gelöst), einem Verantwortlichen zugewiesen und über direkte Links geteilt werden. Verfügt das Asset über einen GPS-Track, werden in den Notizen auch die GPS-Koordinaten angezeigt. 
+- **Notizen** – Erstellen Sie Notizen, die an bestimmte Momente in einem Asset oder während eines Live-Videostreams verankert sind. (Hinweis: In einem Live-Stream wird automatisch ein Asset = Snapshot erstellt, um die Notiz zu erfassen.) Jede Notiz hat einen Verfasser und kann kategorisiert (Beobachtung, Problem, Maßnahme, Empfehlung), nach Status verfolgt (Offen → In Bearbeitung → Gelöst), einem Verantwortlichen zugewiesen und über direkte Links geteilt werden. Verfügt das Asset über einen GPS-Track, zeigen die Notizen auch die GPS-Koordinaten an. Notizen können zudem an eine andere Position verschoben (durch Ziehen die Position ändern) und in der Zeitleiste verschoben werden (in der Zeitleiste vorwärts oder rückwärts bewegen).
 
-  ![Avatour-Notiz und Notizfilter](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-note-and-filters_g181oc.png) *Avatour-Notiz und Notizfilter*
+  ![Avatour-Notiz und Notizfilter](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-notes-and-filters_g181oc.png) *Avatour-Notizen und Notizfilter*
 
-- **Notizen per Sprachbefehl** – Hierbei handelt es sich um automatisch generierte Platzhalter, wenn die Aufzeichnung Ausdrücke wie „Notiz einfügen“, „Notiz machen“ oder „Notiz erstellen“ erkennt. Diese Notizen erscheinen auf der Zeitleiste und müssen vom Nutzer **positioniert und fertiggestellt** werden. 
+- **Notizen per Sprachbefehl** – Hierbei handelt es sich um automatisch generierte Platzhalter, die entstehen, wenn in einem aufgezeichneten Video Äußerungen wie „Notiz einfügen“, „eine Notiz machen“ oder „eine Notiz erstellen“ erkannt werden. Diese Notizen erscheinen auf der Zeitachse und müssen vom Benutzer **positioniert und fertiggestellt** werden. 
 
   ![Avatour-Notizen – durch Sprachbefehle generiert](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-notes-voice-command-generated_ic5cu4.png) *Avatour-Notizen – durch Sprachbefehle generiert*
 
-- **Von der KI generierte Notizen** – Hierbei handelt es sich um automatisch generierte Platzhalter, wenn die Aufzeichnung in der Audiospur des Videos Erwähnungen erkennt, die wie Probleme klingen, die zur weiteren Bearbeitung erfasst werden müssen. Von der KI generierte Notizen müssen zunächst vom Notizbesitzer genehmigt werden (siehe Workspace-Dashboard unten). Nach der Genehmigung verhalten sie sich wie Sprachbefehlsnotizen, da sie auf der Zeitachse erscheinen und vom Benutzer **positioniert und fertiggestellt** werden müssen. 
+- **Von der KI generierte Notizen** – Hierbei handelt es sich um automatisch generierte Platzhalter, wenn die Aufzeichnung in der Audiospur des Videos Erwähnungen erkennt, die nach Problemen klingen, die zur weiteren Bearbeitung erfasst werden müssen. Von der KI generierte Notizen müssen zunächst vom Notizbesitzer genehmigt werden (siehe Workspace-Dashboard unten). Nach der Genehmigung verhalten sie sich wie Sprachbefehlsnotizen, da sie auf der Zeitachse erscheinen und vom Benutzer **positioniert und fertiggestellt** werden müssen. 
 
 - **Notizen- und Zusammenfassungsbereich** – Öffnet einen Seitenbereich, in dem alle Notizen, Schlüsselthemen und eine Zusammenfassung für das Asset angezeigt werden. Ein Klick auf einen Eintrag führt Sie zu diesem Moment im Video.  
 
-  ![Avatour-Zusammenfassung des Assets](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-exec-summary_cqpqbs.png) *Avatour-Zusammenfassung bei der Präsentation eines Assets in einer Besprechung*
+  ![Avatour-Zusammenfassung zum Asset](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-exec-summary_cqpqbs.png) *Avatour-Zusammenfassung bei der Präsentation eines Assets in einer Besprechung*
 
   ![Avatour-Themen](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-topics_duuq1a.png) *Avatour-Themen bei der Präsentation eines Assets in einer Besprechung*
 
   Über das **Seitenpanel** können Sie **einen Asset-Bericht ausdrucken** oder **als TXT- oder CSV-Datei herunterladen**. Berichte können verschiedene Elemente enthalten, die Sie **vor dem Export auswählen** können. 
 
-  ![Menüs zum Drucken des Avatour-Asset-Berichts](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-asset-report-print-menus_kn0syn.png)  
-  *Menüs zum Drucken/Herunterladen des Avatour-Asset-Berichts* 
+  ![Avatour-Menüs zum Drucken des Asset-Berichts](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-asset-report-print-menus_kn0syn.png)  
+  *Avatour-Menüs zum Drucken/Herunterladen des Asset-Berichts*  
 
- ![Auswahl der Elemente für den Avatour-Asset-Bericht zum Drucken](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-asset-report-element-selection_ud8c5k.png)  
-  *Menü zur Elementauswahl im Avatour-Asset-Bericht*
+  ![Avatour: Elementauswahl beim Drucken des Asset-Berichts](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-asset-report-element-selection_ud8c5k.png)  
+  *Avatour: Menü zur Elementauswahl im Asset-Bericht*
 
 - **Link teilen** – Einen Link zu einer bestimmten Notiz oder Szene im Asset teilen.  
 - **Untertitel (CC)** – Während der Videowiedergabe eine Texttranskription auf dem Bildschirm anzeigen.
@@ -296,13 +301,13 @@ Beim Anzeigen eines Assets in einem Arbeitsbereich ist die Symbolleiste ähnlich
 
 ![Avatour-Menü bei der Präsentation eines Assets außerhalb einer Besprechung, z. B. beim Besuch eines Arbeitsbereichs](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-workspace_iri8gc.png) *Avatour-Menü bei der Präsentation eines Assets in einem Arbeitsbereich*
 
-- **Video-Zeitleiste / Fortschrittsbalken** – Zeigt den Videofortschritt mit Notizen und Schlüsselthemen an, die aus der Audiospur extrahiert wurden. Klicken Sie auf eine beliebige Stelle der Zeitleiste, um im Video zu navigieren. Klicken Sie auf eine Notiz oder ein Thema, um zu diesem Moment zu springen und die Notiz zu öffnen. Enthält **Wiedergabe-/Pause-**-Steuerelemente.  
-- **Snapshot, Notizen, Notizen- und Zusammenfassungsbereich, Link teilen, Untertitel**  
+- **Video-Zeitleiste / Fortschrittsbalken** – Zeigt den Videofortschritt mit Notizen und Schlüsselthemen an, die aus der Audiospur extrahiert wurden. Klicken Sie an einer beliebigen Stelle auf der Zeitleiste, um im Video zu springen. Klicken Sie auf eine Notiz oder ein Thema, um zu diesem Moment zu springen und die Notiz zu öffnen. Enthält **Wiedergabe-/Pause-**-Steuerelemente.  
+- **Schnappschuss, Notizen, Notizen- und Zusammenfassungsbereich, Link teilen, Untertitel**  
 - Nicht verfügbar: **Spotlight, POV** (dafür sind Live-Teilnehmer erforderlich)  
 - Zusätzliche Steuerelemente:
   - **10-Sekunden-Schritte** – Vorwärts/rückwärts springen  
   - **Wiedergabegeschwindigkeit** – Geschwindigkeit anpassen (0,5×–2×)  
-  - **Video zuschneiden** – Anfang oder Ende des Clips zuschneiden
+  - **Video zuschneiden** – Anfang oder Ende des Videos zuschneiden
 
 
 ## 4. Für Host- und Admin-Benutzer – Avatour-Webkonsole {#for-host-and-admin-users-avatour-web-console}
@@ -318,11 +323,11 @@ Auf der linken Seite sehen Sie die folgenden Menüpunkte:
 - **Arbeitsbereiche** – Organisieren Sie Ihre Inhalte effizient. Jeder Arbeitsbereich enthält **Assets**, **Mitarbeiter**, **Besprechungen** und **Einstellungen**.  
 - **Assets** – Greifen Sie auf alle Ihre Assets (Videos, Bilder, PDFs) zu und verwalten Sie diese. Administratoren können alle Assets des Kontos einsehen, und freigegebene Assets sind für alle Benutzer sichtbar.  
 - **Profil** – Verwalten Sie Ihre Sprache und Ihr Passwort.  
-- **Analysen** – Verfolgen Sie Sitzungsaktivitäten, die Nutzung von Arbeitsbereichen und ROI-Kennzahlen.  
+- **Analysen** – Verfolgen Sie Sitzungsaktivitäten, die Nutzung der Arbeitsbereiche und ROI-Kennzahlen.  
 - **Einstellungen** *(nur für Administratoren)* – Konfigurieren Sie die Standardwerte für Arbeitsbereiche, Besprechungen und Assets unternehmensweit. Administratoren können außerdem das Branding (Logo, Farben, Hintergründe) anpassen.  
 - **Konto** *(nur für Administratoren)* – Verwalten Sie registrierte Benutzer und 360°-Kameras.  
 - **Geräteanmeldung** – Geben Sie den auf Ihrer 360°-Kamera angezeigten Code ein, um sie mit Ihrem Konto zu koppeln.  
-- **Tutorials** – Greifen Sie auf angeleitete Tutorials zu.  
+- **Anleitungen** – Greifen Sie auf geführte Anleitungen zu.  
 - **Abmelden** – Melden Sie sich von der Konsole ab.
 
 > Bereiche wie „Profil“, „Geräteanmeldung“, „Tutorials“ und „Abmelden“ sind selbsterklärend und weisen keine detaillierten Unterabschnitte auf.
@@ -339,25 +344,25 @@ Arbeitsbereiche sind flexible Organisationseinheiten, mit denen Sie Assets, Mitw
 
 Klicken Sie auf das Glockensymbol, um eine Übersicht über die Aktivitäten im Arbeitsbereich der letzten 7 Tage anzuzeigen.
 
-![Avatour-Webkonsole – Aktuelle Aktivitäten im Arbeitsbereich](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-workspace-recent-activities_gby1ws.png) *Aktuelle Aktivitäten im Arbeitsbereich*
+![Avatour-Webkonsole – Letzte Aktivitäten im Arbeitsbereich](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-workspace-recent-activities_gby1ws.png) *Letzte Aktivitäten im Arbeitsbereich*
 
 Innerhalb eines Arbeitsbereichs:
 
 ![Avatour-Arbeitsbereich mit Asset-Bereich, Dashboard und Besprechungsbereich](https://res.cloudinary.com/avatour/image/upload/v1785929001/avatour-screenshot-workspace-dashboard_dqp5ff.png) *Arbeitsbereich mit Assets (links), Arbeitsbereich-Dashboard (Mitte), Meetings (rechts)*
 
-In der Mitte sehen Sie das Arbeitsbereich-Dashboard, das Ihnen einen Überblick über alle Notizen in den diesem Arbeitsbereich zugewiesenen Assets bietet, mit mehreren Dropdown-Menüs zur Auswahl nach verschiedenen Notizen-Attributen. Sie können auch alle Notizen aus dieser Ansicht exportieren.
+In der Mitte sehen Sie das Arbeitsbereich-Dashboard, das Ihnen einen Überblick über alle Notizen in den diesem Arbeitsbereich zugewiesenen Assets bietet, mit mehreren Dropdown-Menüs zur Auswahl nach verschiedenen Notizenattributen. Hier können Sie auch die von der KI vorgeschlagenen Notizen annehmen oder löschen. Außerdem können Sie alle Notizen aus dieser Ansicht exportieren.
 
 In den Menüs unten finden Sie:
 
 - **Assets** – Verwalten Sie die diesem Arbeitsbereich zugewiesenen Dateien.  
 - **Mitarbeiter** – 
-  Steuern Sie den Zugriff auf Arbeitsbereiche durch 
+  Zugriff auf Arbeitsbereiche steuern durch 
   - **Betrachter** – Kann Assets anzeigen. Bei einer Einladung wird bei Bedarf ein Gastbenutzer angelegt.  
   - **Bearbeiter** – Vollständige Kontrolle über den Arbeitsbereich, gleiche Rechte wie der Host. Bei einer Einladung wird der Benutzer bei Bedarf zum Host hochgestuft.  
 > Mehrere Benutzer können gleichzeitig ohne Besprechung auf einen Arbeitsbereich zugreifen. Öffentliche Arbeitsbereiche und Zugriffseinstellungen für Besprechungen bieten alternative Zugriffsmöglichkeiten.  
-- **Bericht** – Erstellen Sie mithilfe einer Inspektionsvorlage einen Bericht zu ausgewählten Assets des Arbeitsbereichs. Die Antworten werden von einer KI auf der Grundlage der Audiospuren in den ausgewählten Videos generiert.  
+- **Bericht** – Erstellen Sie mithilfe einer Inspektionsvorlage einen Bericht zu ausgewählten Assets des Arbeitsbereichs. Die Antworten werden von der KI auf der Grundlage der Audiospuren in den ausgewählten Videos generiert.  
 
-![Avatour-Arbeitsbereichsbericht und Objekt-Auswahl](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-asset-selection-and-workspace-report_itjt8f.png) *Arbeitsbereichsbericht und Objekt-Auswahl*
+![Avatour-Arbeitsbereichsbericht und Objektauswahl](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-asset-selection-and-workspace-report_itjt8f.png) *Arbeitsbereichsbericht und Objektauswahl*
 
 - **Karte** – Zeigen Sie die Standorte von Objekten mit GPS-Funktion auf einer Karte an, wie oben für Besprechungen beschrieben. 
 - **Besprechungen** – Organisieren Sie Besprechungen im Arbeitsbereich.  
@@ -394,7 +399,7 @@ Verwalten Sie alle 360°-/2D-Videos, Bilder und PDFs. Laden Sie Assets hoch bzw.
 
 ![Avatour-Webkonsole – Hauptmenüpunkt „Assets“](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-assets_ky5emz.png) *Hauptmenüpunkt „Assets“*
 
-Sie können auch den HTML-Code generieren, um eine öffentliche Einbettung eines Assets zu ermöglichen, z. B. auf Ihrer Website. Aktivieren Sie einfach das Kontrollkästchen „Öffentliche Einbettung aktivieren“ und klicken Sie anschließend auf „Speichern“, um den Code zu erhalten.
+Sie können auch den HTML-Code generieren, um eine öffentliche Einbettung eines Assets zu ermöglichen, z. B. auf Ihrer Website. Aktivieren Sie dazu einfach das Kontrollkästchen „Öffentliche Einbettung aktivieren“ und klicken Sie anschließend auf „Speichern“, um den Code zu erhalten.
 
 ![Avatour-Webkonsole – Hauptmenüpunkt „Assets“](https://res.cloudinary.com/avatour/image/upload/v1785921604/avatour-screenshot-main-menu-assets-embed-code_mtau8g.png) *Hauptmenüpunkt „Assets“*
 
@@ -406,17 +411,19 @@ Admin-Benutzer haben Zugriff auf dieses Menü, um die Einstellungen für die ges
 
 #### 4.2.4 Konto
 
-Hier können Sie Details zu Ihrem Konto einsehen und registrierte Benutzerkonten verwalten, einschließlich deren Zugriff auf den Arbeitsbereich, sowie Inspektionsvorlagen hochladen, um Arbeitsbereichsberichte zu erstellen (siehe oben).
+Hier können Sie Details zu Ihrem Konto einsehen und registrierte Benutzerkonten (Host, Admin, Gast) verwalten, einschließlich deren Zugriffsrechte auf den Arbeitsbereich, sowie Inspektionsvorlagen hochladen, um Arbeitsbereichsberichte zu erstellen (siehe oben).
 
-![Avatour-Webkonsole – Hauptmenüpunkt „Konto“](https://res.cloudinary.com/avatour/image/upload/v1786103904/avatour-screenshot-main-menu-account-1-of-2_oq5amr.png) *Kontoübersicht – Obere Bereiche*
+![Avatour-Webkonsole – Hauptmenüpunkt „Konto“](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-account-1-of-3_oq5amr.png) *Kontoübersicht – Obere Bereiche*
 
-![Avatour-Webkonsole – Hauptmenüpunkt „Konto“](https://res.cloudinary.com/avatour/image/upload/v1772360316/avatour-screenshot-main-menu-account-2-of-2_udgyjz.png) *Kontoübersicht – Unterer Bereich*
+![Avatour-Webkonsole – Hauptmenüpunkt „Konto“](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-account-2-of-3_oq5amr.png) *Kontoübersicht – Verwaltung der Arbeitsbereichszugriffe*
+
+![Avatour-Webkonsole – Hauptmenüpunkt „Konto“](https://res.cloudinary.com/avatour/image/upload/v1772360316/avatour-screenshot-main-menu-account-3-of-3_udgyjz.png) *Kontoübersicht – Untere Bereiche*
 
 #### 4.2.5 Analysen
 
-Bietet Einblicke in Besprechungen, die Nutzung des Arbeitsbereichs und ROI-Kennzahlen.
+Bietet Einblicke in Besprechungen, die Nutzung von Arbeitsbereichen und ROI-Kennzahlen.
 
-![Avatour-Webkonsole – Hauptmenüpunkt „Analytik“ (1 von 3)](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-analytics-1-of-3_ds3epe.png) *Analytik-Übersicht*
+![Avatour-Webkonsole – Hauptmenüpunkt „Analytik“ (1 von 3)](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-analytics-1-of-3_ds3epe.png) *Übersicht „Analytik“*
 
 ![Avatour-Webkonsole – Hauptmenüpunkt „Analytik“ (2 von 3)](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-analytics-2-of-3_vpcsme.png) *Besprechungsaktivität und Arbeitsbereichsnutzung*
 
