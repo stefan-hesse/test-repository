@@ -260,7 +260,7 @@ When presenting an asset in a meeting, the **Asset Toolbar** appears above the c
 
 When a live 360° video is streaming into a meeting, this menu shows at the bottom of the canvas.
 
-<img src="https://res.cloudinary.com/avatour/image/upload/c_fill,g_auto,w_480,h_120/avatour-screenshot-live360video-menu-meeting_cguwzb.png" alt="Avatour Menu with Live 360° Video in a Meeting" style="width:50%; display:block; border:1px solid #DDE5EA; border-radius:6px; margin:20px 0 4px;"> *Avatour Menu with Live 360° Video in a Meeting*
+<img src="https://res.cloudinary.com/avatour/image/upload/c_fill,g_auto,w_600,h_120/avatour-screenshot-live360video-menu-meeting_cguwzb.png" alt="Avatour Menu with Live 360° Video in a Meeting" style="width:50%; display:block; border:1px solid #DDE5EA; border-radius:6px; margin:20px 0 4px;"> *Avatour Menu with Live 360° Video in a Meeting*
 
 Here is a description of all the elements shown in the menus above.
 
