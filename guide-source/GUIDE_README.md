@@ -194,6 +194,15 @@ Anchors like `{#for-all-avatour-users}` on headings serve two purposes:
 1. **Stable sidebar links** — without an anchor, the build script auto-generates one from the heading text. If you rephrase the heading, the auto-generated anchor changes and any existing links to it break. An explicit anchor stays stable regardless of how you rephrase the heading.
 2. **Clean deep-link URLs** — lets you share a direct link like `avatour.com/user-guide#for-all-avatour-users` that reliably jumps to the right section.
 
+**Important — always use the `avatour.com` URL for external links, never the GitHub Pages URL directly:**
+
+```
+✅ https://avatour.com/user-guide#421-workspaces
+❌ https://stefan-hesse.github.io/test-repository/dist/avatour-guide-embed.html#421-workspaces
+```
+
+The `avatour.com/user-guide` page forwards the hash to the iframe automatically. Linking directly to the GitHub Pages URL bypasses the Webflow page entirely and will break if the hosting location ever changes.
+
 **Anchors are only needed on h2 and h3 headings** — specifically those you want to link to externally or that appear in the sidebar. H4 and deeper do not need anchors.
 
 Rules for anchor IDs: lowercase only, hyphens instead of spaces, no special characters, unique within the file.
