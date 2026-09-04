@@ -356,10 +356,10 @@ body.print-mode .guide-article table { page-break-inside: avoid; }
 <a href="#for-host-and-admin-users-avatour-web-console">4. Para usuários anfitriões e administradores — Console da Web do Avatour</a>
 <a href="#web-console-overview-main-menu" class="sub">4.1 Console da Web - Visão geral do menu principal</a>
 <a href="#web-console-details-by-menu-item" class="sub">4.2 Console da Web – Detalhes por item de menu (com imagens)</a>
-<a href="#onsite-how-to-use-the-avatour-turnkey-kit">5. No local – Como usar o kit pronto para uso da Avatour</a>
+<a href="#onsite-how-to-use-the-avatour-turnkey-kit">5. No local – Como usar o kit pronto para uso do Avatour</a>
 <a href="#51-introdução" class="sub">5.1 Introdução</a>
 <a href="#52-dicas-úteis" class="sub">5.2 Dicas úteis</a>
-<a href="#53-aplicativo-da-câmera-avatour" class="sub">5.3 Aplicativo da câmera Avatour</a>
+<a href="#53-aplicativo-avatour-camera" class="sub">5.3 Aplicativo Avatour Camera</a>
 <a href="#best-practice-advice">6. Recomendações sobre melhores práticas</a>
 <a href="#61-primeiros-usos-informais-e-familiarização" class="sub">6.1 Primeiros usos (informais) e familiarização</a>
 <a href="#62-antes-de-uma-reunião-ao-vivo-com-vídeo-em-360" class="sub">6.2 Antes de uma reunião ao vivo com vídeo em 360°</a>
@@ -389,58 +389,56 @@ Dê uma olhada especialmente nas <a href="https://avatour.com/features" target="
 </ol>
 <h2 id="avatour-user-types">2. Tipos de usuários do Avatour</h2>
 <h3 id="21-participantes-da-reunião-não-é-necessária-conta">2.1 Participantes da reunião (não é necessária conta)</h3>
-<p>Os usuários podem participar da reunião sem se cadastrar para uma conta Avatour.
-Exceção: se o organizador tiver restringido a reunião a usuários cadastrados — por exemplo, para permitir que apenas funcionários internos participem por meio do Single Sign-On (SSO) —, o convite do calendário indicará que os participantes devem fazer login para se autenticar.</p>
-<p>Os usuários acessam a reunião da seguinte forma:</p>
+<p>Os usuários podem participar da reunião sem se cadastrar para obter uma conta no Avatour. Exceção: Se o organizador tiver marcado a opção “Autenticação necessária” nas configurações da reunião (veja também 4.2.1 Configurações para espaços de trabalho e reuniões) — por exemplo, para permitir que apenas funcionários internos participem por meio do Single Sign-On (SSO) —, o convite do calendário indicará que os participantes devem fazer login para se autenticar.</p>
+<p>Os usuários acessam a reunião da seguinte maneira:</p>
 <ul>
-<li>Recebem um convite de calendário do anfitrião.</li>
-<li>Usam o link da reunião no convite para participar.</li>
+<li>Recebem um link da reunião do anfitrião</li>
 <li>Digitam uma senha da reunião, caso o anfitrião tenha ativado uma.</li>
 <li>Os participantes podem participar sem uma conta Avatour, a menos que a reunião seja restrita e exija login para autenticação.</li>
 </ul>
 <h4 id="211-participante">2.1.1 Participante</h4>
 <ul>
-<li>Pode participar e interagir plenamente (webcam, microfone, chat e funcionalidade de apresentação).</li>
+<li>Pode participar e interagir plenamente (webcam, microfone, chat e funcionalidade “Apresentar”).</li>
 <li>Máximo de 20 participantes interativos por reunião.</li>
 </ul>
 <h4 id="212-espectador">2.1.2 Espectador</h4>
 <ul>
-<li>Pode assistir à reunião e participar apenas por chat.</li>
+<li>Pode assistir à reunião e participar apenas por meio do chat.</li>
 <li>Não pode compartilhar vídeo, usar microfone, fazer apresentações, reproduzir/pausar recursos ou capturar instantâneos.</li>
 <li>Máximo de 10 espectadores por reunião.</li>
 <li>Juntamente com os participantes, uma reunião pode acomodar até 30 participantes.</li>
 </ul>
 <h3 id="22-usuários-registrados">2.2 Usuários registrados</h3>
-<p>Os usuários registrados possuem uma conta no Avatour. As contas são criadas de uma das seguintes maneiras:</p>
+<p>Usuários registrados possuem uma conta no Avatour. As contas são criadas de uma das seguintes maneiras:</p>
 <ul>
-<li><strong>Convidado pelo administrador:</strong> Durante a integração, o Avatour configura um <strong>tenant dedicado</strong> para a organização e cria uma ou mais <strong>contas de administrador</strong>. Os administradores podem então <strong>convidar usuários</strong> dentro da organização e atribuí-los a <strong>grupos</strong>, que definem sua função na plataforma (Convidado, Anfitrião ou Administrador). Os usuários convidados recebem um <strong>link de cadastro</strong> para concluir a configuração da conta e definir uma senha.  </li>
-<li><strong>Convidado pelo anfitrião:</strong> Os anfitriões podem adicionar usuários como <strong>colaboradores editores</strong> a um Espaço de Trabalho. Isso consome uma <strong>licença de Anfitrião</strong> e garante que o usuário tenha acesso no nível de Anfitrião.  </li>
-<li><strong>Provisionamento automático de SSO (apenas nos planos Enterprise/Business):</strong> As contas podem ser criadas automaticamente pelo IdP. Por padrão, as contas provisionadas por SSO são adicionadas ao <strong>grupo de Convidados</strong>, a menos que sejam substituídas por meio de <strong>mapeamentos de grupos SAML</strong>. Os administradores ainda podem convidar usuários e atribuir associação a grupos diretamente, mesmo quando o SSO está habilitado.</li>
+<li><strong>Convidados pelo administrador:</strong> Durante a integração, o Avatour configura um <strong>tenant dedicado</strong> para a organização e cria uma ou mais <strong>contas de administrador</strong>. Os administradores podem então <strong>convidar usuários</strong> dentro da organização e atribuí-los a <strong>grupos</strong>, que definem sua função na plataforma (Convidado, Anfitrião ou Administrador). Os usuários convidados recebem um <strong>link de cadastro</strong> para concluir a configuração da conta e definir uma senha.  </li>
+<li><strong>Convidado pelo anfitrião:</strong> Os anfitriões podem adicionar usuários como <strong>colaboradores editores</strong> a um Espaço de Trabalho. Isso consome uma <strong>licença de anfitrião</strong> e garante que o usuário tenha acesso no nível de anfitrião.  </li>
+<li><strong>Provisionamento automático por SSO (apenas nos planos Enterprise/Business):</strong> As contas podem ser criadas automaticamente pelo IdP. Por padrão, as contas provisionadas por SSO são adicionadas ao <strong>grupo Convidado</strong>, a menos que sejam substituídas por meio de <strong>mapeamentos de grupos SAML</strong>. Os administradores ainda podem convidar usuários e atribuir associação a grupos diretamente, mesmo quando o SSO estiver habilitado.</li>
 </ul>
 <p><strong>Resumo:</strong>  </p>
-<p>Os usuários registrados e sua associação a grupos podem ser gerenciados de várias maneiras:</p>
+<p>Os usuários registrados e suas associações a grupos podem ser gerenciados de várias maneiras:</p>
 <ul>
 <li><strong>Gerenciamento por administrador:</strong> Um administrador no console do Avatour pode criar usuários e atribuí-los a grupos, o que define sua função na plataforma (Convidado, Anfitrião ou Administrador).  </li>
-<li><strong>Provisionamento de SSO:</strong> Para clientes dos planos Enterprise ou Business com SSO ativado, o IdP pode provisionar contas automaticamente e atribuir associação a grupos, o que define a função do usuário na plataforma.  </li>
-<li><strong>Usuários convidados pelo Anfitrião:</strong> Os Anfitriões podem convidar outros usuários como colaboradores Editores para Espaços de Trabalho específicos. Atribuir a função de colaborador Editor consome uma licença de Anfitrião.</li>
+<li><strong>Provisionamento por SSO:</strong> Para clientes dos planos Enterprise ou Business com SSO ativado, o IdP pode provisionar contas automaticamente e atribuir a participação em grupos, o que define a função do usuário na plataforma.  </li>
+<li><strong>Usuários convidados pelo Anfitrião:</strong> Os Anfitriões podem convidar outros usuários como colaboradores com função de Editor para Espaços de Trabalho específicos. A atribuição da função de colaborador Editor consome uma licença de Anfitrião.</li>
 </ul>
 <p><strong>Prática recomendada (clientes Enterprise):</strong><br />
-Para organizações que esperam um grande número de usuários que precisam acessar o Avatour, recomenda-se <strong>integrar o Single Sign-On (SSO)</strong> e gerenciar usuários e associações a grupos a partir do <strong>IdP</strong>. Essa abordagem simplifica o provisionamento de contas, a atribuição de grupos e o gerenciamento de licenças, reduzindo a sobrecarga administrativa e garantindo um controle de acesso consistente.</p>
-<h4 id="221-usuários-convidados">2.2.1 Usuários convidados</h4>
+Para organizações que esperam um grande número de usuários que precisam de acesso ao Avatour, recomenda-se <strong>integrar o Single Sign-On (SSO)</strong> e gerenciar usuários e associações a grupos a partir do <strong>IdP</strong>. Essa abordagem agiliza o provisionamento de contas, a atribuição de grupos e o gerenciamento de licenças, reduzindo a carga administrativa e garantindo um controle de acesso consistente.</p>
+<h4 id="221-usuários-convidados">2.2.1 Usuários Convidados</h4>
 <ul>
-<li>Adicionados ao <strong>grupo de convidados</strong>.  </li>
-<li>Podem <strong>visualizar ativos</strong> nos espaços de trabalho onde foram adicionados como <strong>colaboradores visualizadores</strong>.  </li>
-<li>Não podem criar espaços de trabalho, hospedar reuniões ou fazer upload de conteúdo.  </li>
-<li>As contas de convidados provisionadas por SSO <strong>são autenticadas via IdP</strong>; não é necessária nenhuma senha gerenciada pelo Avatour.</li>
+<li>Adicionados ao <strong>grupo Convidado</strong>.  </li>
+<li>Podem <strong>visualizar ativos</strong> nos Espaços de Trabalho nos quais foram adicionados como <strong>colaboradores Visualizadores</strong>.  </li>
+<li>Não podem criar espaços de trabalho, organizar reuniões nem enviar conteúdo.  </li>
+<li>As contas de convidados provisionadas por SSO <strong>são autenticadas por meio do IdP</strong>; não é necessária nenhuma senha gerenciada pelo Avatour.</li>
 </ul>
 <hr />
-<h4 id="222-usuários-licenciados-acesso-ao-console-web">2.2.2 Usuários licenciados (acesso ao console web)</h4>
+<h4 id="222-usuários-licenciados-acesso-ao-console-da-web">2.2.2 Usuários licenciados (acesso ao console da web)</h4>
 <h5 id="usuários-anfitriões-grupo-anfitrião">Usuários anfitriões (Grupo: Anfitrião)</h5>
 <ul>
-<li>Pode criar/gerenciar Espaços de Trabalho, convidar colaboradores para um espaço de trabalho, <strong>organizar reuniões ao vivo</strong>, enviar <strong>Capturas Rápidas</strong>.  </li>
-<li>Tem acesso ao <strong>Painel do Anfitrião</strong> e ao <strong>Aplicativo do Operador</strong> em câmeras 360° compatíveis.  </li>
+<li>Podem criar/gerenciar Espaços de Trabalho, convidar colaboradores para um espaço de trabalho, <strong>organizar reuniões ao vivo</strong> e enviar <strong>Capturas Rápidas</strong>.  </li>
+<li>Têm acesso ao <strong>Painel do Anfitrião</strong> e ao <strong>Aplicativo do Operador</strong> em câmeras 360° compatíveis.  </li>
 </ul>
-<h5 id="usuários-administradores-grupo-admin">Usuários Administradores (Grupo: Admin)</h5>
+<h5 id="usuários-administradores-grupo-admin">Usuários administradores (Grupo: Admin)</h5>
 <ul>
 <li>Inclui todos os recursos do Anfitrião, além da administração completa da conta.</li>
 </ul>
@@ -448,9 +446,9 @@ Para organizações que esperam um grande número de usuários que precisam aces
 <p><strong>Gerenciamento de contas</strong>  </p>
 <ul>
 <li>Criar novos usuários e atribuí-los a grupos.</li>
-<li>Redefinir senhas quando gerenciadas pelo Avatour (não aplicável quando o SSO está habilitado). </li>
-<li>Atualizar usuários convidados para Anfitriões.  </li>
-<li>Desativar usuários (as contas de administrador devem primeiro ser convertidas para Anfitrião antes da exclusão).  </li>
+<li>Redefinir senhas quando gerenciadas pelo Avatour (não se aplica quando o SSO estiver ativado). </li>
+<li>Promover usuários convidados a Anfitriões.  </li>
+<li>Desativar usuários (as contas de administrador devem primeiro ser convertidas em Anfitrião antes da exclusão).  </li>
 <li>Transferir ativos de um usuário Anfitrião para outro durante a exclusão.</li>
 </ul>
 <p><strong>Configurações</strong>  </p>
@@ -459,39 +457,39 @@ Para organizações que esperam um grande número de usuários que precisam aces
 <li>Ativar ou desativar <strong>recursos de IA</strong> ou <strong>gravação</strong>.  </li>
 <li>Aplicar a identidade visual da empresa de maneira consistente em toda a plataforma, caso um <strong>domínio personalizado</strong> esteja configurado.</li>
 </ul>
-<p><strong>Ativos e Análises</strong> </p>
+<p><strong>Recursos e Análises</strong> </p>
 <ul>
-<li>Visualizar todos os ativos enviados por qualquer usuário da organização.  </li>
+<li>Visualizar todos os recursos enviados por qualquer usuário da organização.  </li>
 <li>Analisar o uso da plataforma em toda a organização.</li>
 </ul>
 <hr />
-<h4 id="223-permissões-de-colaborador-do-espaço-de-trabalho">2.2.3 Permissões de colaborador do espaço de trabalho</h4>
-<p>As permissões do espaço de trabalho definem o que um usuário pode fazer <strong>dentro de um espaço de trabalho específico</strong>. Elas são distintas da associação a grupos no nível da plataforma (Convidado, Anfitrião, Administrador).</p>
+<h4 id="223-permissões-dos-colaboradores-do-espaço-de-trabalho">2.2.3 Permissões dos colaboradores do espaço de trabalho</h4>
+<p>As permissões do espaço de trabalho definem o que um usuário pode fazer <strong>dentro de um espaço de trabalho específico</strong>. Elas são distintas da filiação a grupos no nível da plataforma (Convidado, Anfitrião, Administrador).</p>
 <ul>
 <li>
 <p><strong>Colaborador Editor:</strong> Usuários com essa permissão podem:</p>
 <ul>
 <li>Gerenciar ativos (carregar, remover, desfocar rostos, gerar resumos)  </li>
 <li>Gerenciar configurações de reunião (ativar/desativar gravação, permitir ou remover participantes)  </li>
-<li>Agendar e hospedar reuniões ao vivo  </li>
+<li>Agendar e conduzir reuniões ao vivo  </li>
 <li>Gerar relatórios com base em modelos predefinidos  </li>
 <li>Adicionar ou remover colaboradores do Espaço de Trabalho  </li>
 </ul>
 </li>
 <li>
-<p><strong>Colaborador visualizador:</strong> Usuários com essa permissão têm acesso somente para leitura aos ativos do Espaço de Trabalho. Eles <strong>não podem modificar ativos, gerenciar reuniões ou gerenciar colaboradores</strong>, mas <strong>podem criar notas nos ativos</strong>. </p>
+<p><strong>Colaborador visualizador:</strong> Usuários com essa permissão têm acesso somente para leitura aos ativos do Espaço de Trabalho. Eles <strong>não podem modificar ativos, gerenciar reuniões nem gerenciar colaboradores</strong>, mas <strong>podem criar notas nos ativos</strong>. </p>
 </li>
 </ul>
 <h2 id="for-remote-meeting-participants-and-workspace-visitors">3. Para participantes de reuniões remotas e visitantes do espaço de trabalho</h2>
 <p>O Avatour permite que os usuários colaborem de duas maneiras principais:</p>
 <ul>
 <li>
-<p><strong>Participar de uma reunião no Avatour (Colaboração Síncrona):</strong><br />
-  Você pode receber um <strong>convite de calendário</strong> para participar de uma reunião no Avatour. Durante a reunião, os participantes podem realizar uma <strong>visita remota ao local em tempo real</strong> ou analisar recursos em sincronia.</p>
+<p><strong>Participar de uma reunião no Avatour (colaboração síncrona):</strong><br />
+  Você pode receber um <strong>convite de calendário</strong> para participar de uma reunião no Avatour. Durante a reunião, os participantes podem realizar uma <strong>visita remota ao local em tempo real</strong> ou analisar recursos juntos de forma síncrona.</p>
 </li>
 <li>
 <p><strong>Visitar um Espaço de Trabalho (Colaboração assíncrona):</strong><br />
-  Você também pode ser convidado como <strong>colaborador de um Espaço de Trabalho</strong> para analisar recursos <strong>de forma assíncrona</strong> (conforme sua disponibilidade).</p>
+  Você também pode ser convidado como <strong>colaborador de um Espaço de Trabalho</strong> para revisar ativos <strong>de forma assíncrona</strong> (conforme sua disponibilidade).</p>
 </li>
 </ul>
 <h3 id="how-to-join-an-avatour-meeting-and-visit-an-avatour-workspace">3.1 Como participar de uma reunião do Avatour e visitar um Espaço de Trabalho do Avatour</h3>
@@ -499,7 +497,7 @@ Para organizações que esperam um grande número de usuários que precisam aces
 <p>Você pode participar de uma reunião do Avatour a partir de <strong>qualquer computador desktop ou laptop, smartphone ou tablet</strong> usando um navegador da web.  </p>
 <h5 id="participando-de-uma-reunião-do-avatour">Participando de uma reunião do Avatour</h5>
 <blockquote>
-<p><strong>Observação:</strong> Para participar de uma reunião do Avatour, é necessário <strong>conceder permissões para o microfone</strong>. Aceite todas as solicitações de permissão exibidas pelo seu navegador.</p>
+<p><strong>Observação:</strong> Para participar de uma reunião do Avatour, é necessário <strong>conceder permissões de microfone</strong>. Aceite todas as solicitações de permissão exibidas pelo seu navegador.</p>
 </blockquote>
 <ol>
 <li>
@@ -507,7 +505,7 @@ Para organizações que esperam um grande número de usuários que precisam aces
   - Normalmente, você receberá um <strong>convite de calendário</strong> com um <strong>link direto para participar</strong> (por exemplo: <code>https://avatour.live/join?s=xxxxx</code>).  </p>
 <ul>
 <li>Ao clicar no link, o <strong>código da reunião de 5 caracteres</strong> será preenchido automaticamente e você será direcionado para a reunião.</li>
-<li><strong>Autenticação necessária:</strong> algumas reuniões são restritas a usuários registrados. Nesse caso, o convite indicará que você precisa <strong>fazer login para acessar a reunião</strong>. </li>
+<li><strong>Autenticação necessária:</strong> Algumas reuniões são restritas a usuários registrados. Nesse caso, o convite indicará que você precisa <strong>fazer login para acessar a reunião</strong>. </li>
 <li><strong>Reuniões protegidas por senha:</strong> Algumas reuniões podem exigir uma senha. Nesse caso, o convite incluirá a senha que você deve digitar para participar.</li>
 </ul>
 </li>
@@ -521,12 +519,12 @@ Para organizações que esperam um grande número de usuários que precisam aces
 </li>
 </ol>
 <blockquote>
-<p><strong>Dica 1:</strong> Se sua câmera ou microfone não funcionar, pode ser que estejam sendo usados por outro aplicativo (por exemplo, Microsoft Teams ou Zoom). Feche todos os aplicativos que possam estar usando sua câmera ou microfone e, em seguida, saia e volte a participar da reunião do Avatour.  </p>
-<p><strong>Dica 2:</strong> Se você ainda não conseguir participar da reunião, execute este teste: <a href="https://avatour.live/test" target="_blank" rel="noopener">https://avatour.live/test</a>.<br />
-O teste pode identificar se o <strong>firewall corporativo ou a rede</strong> está bloqueando o acesso e fornecerá informações para orientar as discussões com sua equipe de TI.  </p>
+<p><strong>Dica 1:</strong> Se sua câmera ou microfone não funcionar, pode ser que estejam sendo usados por outro aplicativo (por exemplo, Microsoft Teams ou Zoom). Feche todos os aplicativos que possam estar usando sua câmera ou microfone e, em seguida, saia e volte a participar da reunião no Avatour.  </p>
+<p><strong>Dica 2:</strong> Se você ainda não conseguir participar da reunião, faça este teste: <a href="https://avatour.live/test" target="_blank" rel="noopener">https://avatour.live/test</a>.<br />
+O teste pode identificar se o <strong>firewall ou a rede da sua empresa</strong> está bloqueando o acesso e fornecerá informações para orientar as discussões com sua equipe de TI.  </p>
 <p><strong>Dica 3:</strong> <strong>Não</strong> use os aplicativos do Avatour para iOS ou Android para participar de reuniões. Esses aplicativos só são necessários ao <strong>transmitir uma reunião ao vivo a partir de uma câmera Insta360</strong>, já que essas câmeras não podem executar o software Avatour 360° diretamente e precisam de um smartphone para auxiliar.</p>
 </blockquote>
-<h5 id="acessando-um-espaço-de-trabalho-do-avatour-sem-participar-de-uma-reunião-do-avatour">Acessando um Espaço de Trabalho do Avatour (sem participar de uma Reunião do Avatour)</h5>
+<h5 id="acessando-um-espaço-de-trabalho-do-avatour-sem-participar-de-uma-reunião-do-avatour">Acessando um Espaço de Trabalho do Avatour (sem participar de uma reunião do Avatour)</h5>
 <p>Você pode acessar um Espaço de Trabalho das seguintes maneiras:</p>
 <ul>
 <li>
@@ -539,11 +537,11 @@ O teste pode identificar se o <strong>firewall corporativo ou a rede</strong> es
 <ol>
 <li>Ao ser adicionado como colaborador, você receberá uma <strong>notificação por e-mail</strong> com um link para o Espaço de Trabalho.</li>
 <li>Clique no link do e-mail para abrir o Espaço de Trabalho. Se ainda não estiver conectado, será solicitado que você <strong>faça login ou conclua o cadastro</strong>.</li>
-<li>Após fazer login, o Espaço de Trabalho será aberto automaticamente.</li>
+<li>Após fazer o login, o Espaço de Trabalho será aberto automaticamente.</li>
 </ol>
 </li>
 </ul>
-<p>Como alternativa, você pode fazer login em <a href="https://avatour.live/login" target="_blank" rel="noopener">https://avatour.live/login</a> e acessar o Espaço de Trabalho a partir da sua <strong>lista de Espaços de Trabalho</strong>.</p>
+<p>Como alternativa, você pode fazer o login em <a href="https://avatour.live/login" target="_blank" rel="noopener">https://avatour.live/login</a> e acessar o Espaço de Trabalho a partir da sua <strong>lista de Espaços de Trabalho</strong>.</p>
 <h4 id="vr-headset">3.1.2 Óculos de RV</h4>
 <p>Você pode participar de uma reunião e visitar um Workspace usando diversos modelos compatíveis de óculos de RV da Meta e da Pico. Para fazer isso: </p>
 <ol>
@@ -553,8 +551,8 @@ O teste pode identificar se o <strong>firewall corporativo ou a rede</strong> es
 <h3 id="meeting-tools">3.2 Ferramentas de colaboração em reuniões e espaços de trabalho</h3>
 <p>O Avatour permite a colaboração em dois contextos principais:</p>
 <ol>
-<li><strong>Reuniões (síncronas):</strong> colabore em tempo real com outros participantes, incluindo visitas ao local ao vivo ou revisão conjunta de materiais gravados.  </li>
-<li><strong>Espaços de Trabalho (assíncronos):</strong> revise e interaja com os materiais de acordo com sua própria programação, 24 horas por dia, 7 dias por semana.</li>
+<li><strong>Reuniões (síncronas):</strong> colabore em tempo real com outros participantes, incluindo visitas ao local ao vivo ou a análise conjunta de recursos gravados.  </li>
+<li><strong>Espaços de trabalho (assíncronos):</strong> analise e interaja com os recursos de acordo com sua própria programação, 24 horas por dia, 7 dias por semana.</li>
 </ol>
 <p>As <strong>ferramentas de colaboração são, em grande parte, semelhantes</strong> entre reuniões e espaços de trabalho, com algumas diferenças decorrentes do contexto síncrono versus assíncrono.</p>
 <h4 id="321-layout-da-interface">3.2.1 Layout da interface</h4>
@@ -565,17 +563,17 @@ O teste pode identificar se o <strong>firewall corporativo ou a rede</strong> es
 <li><strong>Painel direito</strong> – Informações contextuais, como participantes, reuniões ou chat  </li>
 </ul>
 <p>A maioria das interações é iniciada a partir do <strong>menu inferior</strong>.<br />
-Clicar em uma opção do menu abre um <strong>painel lateral</strong> no lado esquerdo ou direito da tela, enquanto a <strong>área central</strong> permanece como a área de visualização principal.</p>
+Clicar em uma opção do menu abre um <strong>painel lateral</strong> no lado esquerdo ou direito da tela, enquanto a <strong>área central</strong> permanece como a área principal de visualização.</p>
 <hr />
 <h4 id="322-exemplo-de-visualização-de-reunião">3.2.2 Exemplo de visualização de reunião</h4>
 <p>Aqui está um exemplo de visualização em uma Reunião do Avatour:</p>
-<p><img alt="Interface do usuário da Reunião do Avatour com Painel de Recursos, tela em branco e Painel de Participantes" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-meeting-assets-blank-participants_pugprq.png" /><br />
-<em>Reunião do Avatour com o Painel de Recursos (à esquerda), a tela (no centro) e o Painel de Participantes (à direita)</em></p>
+<p><img alt="Interface do usuário de uma reunião do Avatour com painel de ativos, tela em branco e painel de participantes" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-meeting-assets-blank-participants_pugprq.png" /><br />
+<em>Reunião do Avatour com Painel de Recursos (à esquerda), tela (no centro) e Painel de Participantes (à direita)</em></p>
 <hr />
-<h4 id="323-exemplo-de-visualização-do-espaço-de-trabalho">3.2.3 Exemplo de visualização do Espaço de Trabalho</h4>
-<p>Aqui está um exemplo de uma visualização do Espaço de Trabalho:</p>
-<p><img alt="Espaço de Trabalho do Avatour com Painel de Recursos, tela em branco e Painel de Reuniões" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-workspace-assets-blank-meetings_qeumpl.png" /><br />
-<em>Área de Trabalho do Avatour com Painel de Recursos (à esquerda), Tela (ao centro) e Painel de Reuniões (à direita)</em></p>
+<h4 id="323-exemplo-de-visualização-da-área-de-trabalho">3.2.3 Exemplo de visualização da área de trabalho</h4>
+<p>Aqui está um exemplo de visualização da área de trabalho:</p>
+<p><img alt="Espaço de Trabalho do Avatour com Painel de Recursos, Tela em branco e Painel de Reuniões" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-workspace-assets-blank-meetings_qeumpl.png" /><br />
+<em>Área de Trabalho do Avatour com Painel de Recursos (à esquerda), Área de Trabalho (ao centro) e Painel de Reuniões (à direita)</em></p>
 <hr />
 <h4 id="324-visão-geral-do-menu-inferior">3.2.4 Visão geral do menu inferior</h4>
 <p>O menu inferior fornece acesso aos principais controles e painéis da interface:</p>
@@ -583,51 +581,51 @@ Clicar em uma opção do menu abre um <strong>painel lateral</strong> no lado es
 <p><img alt="Menu inferior da reunião do Avatour" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-meeting-bottom-menu_bflaor.png" /><br />
 <em>Menu inferior da reunião do Avatour</em></p>
 <ul>
-<li><strong>Recursos</strong> – Visualize arquivos da área de trabalho, incluindo vídeos gravados, imagens, capturas de tela e PDFs. </li>
-<li><strong>Bate-papo</strong> – Envie mensagens a todos os participantes da reunião.  </li>
+<li><strong>Recursos</strong> – Visualize os arquivos da área de trabalho, incluindo vídeos gravados, imagens, capturas de tela e PDFs. </li>
+<li><strong>Bate-papo</strong> – Envie mensagens para todos os participantes da reunião.  </li>
 <li><strong>Câmera</strong> – Ligue ou desligue sua webcam.  </li>
 <li><strong>Microfone</strong> – Silenciar ou ativar o microfone.  </li>
 <li><strong>Apresentar</strong> – Apresentar um recurso, a área de trabalho ou a imagem da webcam (consulte a seção “Apresentar” abaixo).  </li>
-<li><strong>Ferramentas do anfitrião</strong> (somente para anfitriões):  <ul>
-<li><strong>Bloquear foco</strong> – Bloqueia a visualização para todos os participantes.  </li>
-<li><strong>Silenciar todos</strong> – Silencia todos os participantes.  </li>
+<li><strong>Ferramentas do Anfitrião</strong> (somente para anfitriões):  <ul>
+<li><strong>Bloquear Foco</strong> – Bloqueia a visualização para todos os participantes.  </li>
+<li><strong>Silenciar Todos</strong> – Silencia todos os participantes.  </li>
 </ul>
 </li>
-<li><strong>Ativar tela cheia</strong> – Coloca a aba da reunião em tela cheia.  </li>
+<li><strong>Ativar Tela Cheia</strong> – Coloca a aba da reunião em tela cheia.  </li>
 <li><strong>Sair da reunião</strong> – Sair da reunião.  </li>
-<li><strong>Iniciar gravação</strong> – Use este botão para iniciar e parar a gravação manualmente durante uma reunião. Alternativamente, as reuniões podem ser gravadas automaticamente se a opção <strong>iniciar gravação automaticamente</strong> estiver ativada nas configurações do espaço de trabalho. Em ambos os casos, as gravações são salvas nos recursos do espaço de trabalho.</li>
-<li><strong>Mapa</strong> – Abra ou feche o painel do mapa para ver o movimento da câmera para recursos com trilha de GPS. Clicar em um local leva você diretamente ao ponto exato no vídeo. O mapa é atualizado em tempo real à medida que o vídeo é reproduzido. As anotações também são exibidas no mapa.</li>
+<li><strong>Iniciar gravação</strong> – Use este botão para iniciar e parar a gravação manualmente durante uma reunião. Alternativamente, as reuniões podem ser gravadas automaticamente se a opção <strong>início automático da gravação</strong> estiver ativada nas configurações do espaço de trabalho. Em ambos os casos, as gravações são salvas nos recursos do espaço de trabalho.</li>
+<li><strong>Mapa</strong> – Abra ou feche o painel do mapa para ver o movimento da câmera para ativos com rastreamento por GPS. Clicar em um local leva você diretamente ao ponto exato no vídeo. O mapa é atualizado em tempo real à medida que o vídeo é reproduzido. As anotações também são exibidas no mapa.</li>
 <li><strong>Participantes</strong> – Abra ou feche o painel de participantes.  </li>
-<li><strong>Informações da reunião</strong> – Visualize o código da reunião, o link de convite e acesse tutoriais relacionados.  </li>
+<li><strong>Informações da reunião</strong> – Visualize o código da reunião, o link da reunião e acesse tutoriais relacionados.  </li>
 </ul>
-<p><img alt="Informações da reunião do Avatour" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-meeting-info-side-pane_nx7dp4.png" /><br />
-<em>Painel lateral de informações da reunião do Avatour</em></p>
+<p><img alt="Informações da Reunião do Avatour" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-meeting-info-side-pane_nx7dp4.png" /><br />
+<em>Painel lateral de Informações da Reunião do Avatour</em></p>
 <ul>
 <li><strong>Configurações</strong> – Ajuste as configurações de idioma, áudio e vídeo. Para reuniões com vídeo 360° ao vivo, use <strong>Mostrar taxa de bits</strong> para monitorar as estatísticas de conectividade.</li>
 </ul>
 <blockquote>
-<p>Dica: envie o link da reunião ou adicione-o a um evento do calendário para convidar os participantes.</p>
+<p>Dica: Envie o link da reunião ou adicione-o a um evento do calendário para convidar participantes.</p>
 </blockquote>
 <hr />
 <h5 id="menu-apresentar">Menu “Apresentar”</h5>
 <p>A opção <strong>Apresentar</strong> no menu inferior da reunião permite que você compartilhe conteúdo com todos os participantes.</p>
 <ul>
-<li><strong>Câmera</strong> – Compartilhe a câmera do seu dispositivo (laptop, smartphone etc.). Isso também pode ser usado durante uma videoconferência ao vivo em 360° para sobrepor uma visão secundária para close-ups ou detalhes específicos. Ao compartilhar a câmera de um smartphone (frontal ou traseira), os participantes remotos da reunião podem usar o zoom do smartphone e também ligar e desligar a lanterna.</li>
-<li><strong>Área de Trabalho</strong> – Compartilhe a tela da sua área de trabalho com todos os participantes.  </li>
-<li><strong>Recurso</strong> – Apresente um recurso da área de trabalho. Ao selecionar um recurso, a <strong>barra de ferramentas de recursos</strong> é exibida, oferecendo controles de reprodução e ferramentas de colaboração específicas para o recurso que está sendo apresentado.</li>
+<li><strong>Câmera</strong> – Compartilhe a câmera do seu dispositivo (laptop, smartphone etc.). Isso também pode ser usado durante uma reunião de vídeo ao vivo em 360° para sobrepor uma visão secundária para close-ups ou detalhes específicos. Ao compartilhar a câmera de um smartphone (frontal ou traseira), os participantes remotos da reunião podem usar o zoom do smartphone e também ligar e desligar a lanterna.</li>
+<li><strong>Área de trabalho</strong> – Compartilhe a tela da sua área de trabalho com todos os participantes.  </li>
+<li><strong>Recurso</strong> – Apresente um recurso da área de trabalho. Ao selecionar um recurso, a <strong>barra de ferramentas de recursos</strong> é aberta, oferecendo controles de reprodução e ferramentas de colaboração específicas para o recurso que está sendo apresentado.</li>
 </ul>
-<h5 id="barras-de-ferramentas-de-recurso-e-live-360-em-reuniões">Barras de ferramentas de recurso e Live 360° em reuniões</h5>
-<p>Ao apresentar um recurso em uma reunião, a <strong>Barra de ferramentas de recurso</strong> aparece acima da tela. Aqui estão as ferramentas e os itens de menu disponíveis ao <u>apresentar um recurso em uma reunião</u> – explicados da esquerda para a direita.</p>
+<h5 id="barras-de-ferramentas-de-recurso-e-live-360-em-reuniões">Barras de ferramentas de Recurso e Live 360° em reuniões</h5>
+<p>Ao apresentar um recurso em uma reunião, a <strong>Barra de ferramentas de Recurso</strong> aparece acima da tela. Aqui estão as ferramentas e os itens de menu disponíveis ao <u>apresentar um recurso em uma reunião</u> – explicados da esquerda para a direita.</p>
 <p><img alt="Menu do Avatour durante a apresentação de um recurso em uma reunião" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-present-asset-menu-meeting_oflsr5.png" /> <em>Menu do Avatour ao apresentar um recurso em uma reunião</em></p>
-<p>Quando um vídeo 360° ao vivo está sendo transmitido em uma reunião, esse menu aparece na parte inferior da tela.</p>
-<p><img src="https://res.cloudinary.com/avatour/image/upload/c_fill,g_auto,w_600,h_120,f_auto,q_auto/avatour-screenshot-live360video-menu-meeting_cguwzb.png" alt="Menu do Avatour com vídeo ao vivo em 360° em uma reunião" style="width:50%; display:block; border:1px solid #DDE5EA; border-radius:6px; margin:20px 0 4px;"> <em>Menu do Avatour com vídeo ao vivo em 360° durante uma reunião</em></p>
+<p>Quando um vídeo 360° ao vivo está sendo transmitido em uma reunião, esse menu é exibido na parte inferior da tela.</p>
+<p><img src="https://res.cloudinary.com/avatour/image/upload/c_fill,g_auto,w_600,h_120,f_auto,q_auto/avatour-screenshot-live360video-menu-meeting_cguwzb.png" alt="Menu do Avatour com vídeo ao vivo em 360° em uma reunião" style="width:50%; display:block; border:1px solid #DDE5EA; border-radius:6px; margin:20px 0 4px;"> <em>Menu do Avatour com vídeo ao vivo em 360° em uma reunião</em></p>
 <p>Aqui está uma descrição de todos os elementos exibidos nos menus acima.</p>
 <ul>
-<li><strong>Linha do tempo do vídeo / Barra de progresso</strong> – Mostra o progresso do vídeo com anotações e tópicos principais extraídos do áudio. Clique em uma anotação ou tópico para pular para aquele momento e abrir a anotação. Inclui controles de <strong>Reproduzir / Pausar</strong>.   </li>
-<li><strong>Instantâneo</strong> – Capture uma imagem em 360° ou 2D do recurso.  </li>
-<li><strong>Destaque</strong> – Destaque uma área específica para todos os participantes durante sessões ao vivo.  </li>
-<li><strong>Mostrar/Ocultar Ponto de Vista (POV)</strong> – Exiba para onde cada participante está olhando no vídeo em 360°.  </li>
-<li><strong>Notas</strong> – Crie notas vinculadas a momentos específicos em um recurso ou durante uma transmissão de vídeo ao vivo. (Observação: durante uma transmissão ao vivo, um recurso = instantâneo será criado automaticamente para capturar a nota). Cada nota tem um autor e pode ser categorizada (Observação, Problema, Ação, Recomendação), acompanhada por status (Aberta → Em andamento → Resolvida), atribuída a um responsável e compartilhada por meio de links diretos. Se o recurso tiver um rastramento de GPS, as notas também exibirão as coordenadas de GPS. As notas também podem ser movidas para outra posição (arraste para alterar a posição) e deslocadas na linha do tempo (avançar ou retroceder na linha do tempo).</li>
+<li><strong>Linha do tempo do vídeo / Barra de progresso</strong> – Mostra o progresso do vídeo com anotações e tópicos-chave extraídos do áudio. Clique em uma anotação ou tópico para pular para aquele momento e abrir a anotação. Inclui controles de <strong>Reproduzir / Pausar</strong>.   </li>
+<li><strong>Instantâneo</strong> – Capture uma imagem em 360° ou 2D a partir do recurso.  </li>
+<li><strong>Destaque</strong> – Destaque uma área específica para todos os participantes durante sessões ao vivo.</li>
+<li><strong>Mostrar/Ocultar Ponto de Vista (POV)</strong> – Exibe para onde cada participante está olhando no vídeo em 360°.  </li>
+<li><strong>Notas</strong> – Crie notas vinculadas a momentos específicos em um recurso ou durante uma transmissão de vídeo ao vivo. (Observação: durante uma transmissão ao vivo, um recurso = instantâneo será criado automaticamente para capturar a nota). Cada nota tem um autor e pode ser categorizada (Observação, Problema, Ação, Recomendação), acompanhada por status (Aberta → Em andamento → Resolvida), atribuída a um responsável e compartilhada por meio de links diretos. Se o recurso tiver um registro de GPS, as notas também exibirão as coordenadas GPS. As notas também podem ser movidas para outra posição (arraste para alterar a posição) e deslocadas na linha do tempo (avançar ou retroceder na linha do tempo).</li>
 </ul>
 <p><img alt="Notas do Avatour e Filtro de Notas" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-present-asset-menu-meeting-showing-notes-and-filters_g181oc.png" /> <em>Notas do Avatour e Filtros de Notas</em></p>
 <ul>
@@ -636,34 +634,34 @@ Clicar em uma opção do menu abre um <strong>painel lateral</strong> no lado es
 <p><img alt="Notas do Avatour – Geradas por comando de voz" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-notes-voice-command-generated_ic5cu4.png" /> <em>Notas do Avatour – Geradas por comando de voz</em></p>
 <ul>
 <li>
-<p><strong>Notas geradas por IA</strong> – São marcadores de posição gerados automaticamente quando a gravação detecta menções na trilha de áudio do vídeo que soam como questões que precisam ser registradas para acompanhamento. As notas geradas por IA precisam primeiro ser aprovadas pelo proprietário da nota (veja o Painel de Trabalho abaixo). Uma vez aprovadas, elas se comportam como Notas de Comando de Voz, pois aparecem na linha do tempo e precisam ser <strong>posicionadas e finalizadas</strong> pelo usuário. </p>
+<p><strong>Notas geradas por IA</strong> – São marcadores de posição gerados automaticamente quando a gravação detecta menções na trilha de áudio do vídeo que soam como questões que precisam ser registradas para acompanhamento. As notas geradas por IA precisam primeiro ser aprovadas pelo proprietário da nota (veja o Painel de Controle do Espaço de Trabalho abaixo). Uma vez aprovadas, elas se comportam como as notas de comando de voz, pois aparecem na linha do tempo e precisam ser <strong>posicionadas e finalizadas</strong> pelo usuário. </p>
 </li>
 <li>
-<p><strong>Painel de Notas e Resumo</strong> – Abre um painel lateral que exibe todas as notas, tópicos-chave e um resumo executivo do ativo. Clicar em um item leva você até aquele momento no vídeo.  </p>
+<p><strong>Painel de notas e resumo</strong> – Abre um painel lateral que exibe todas as notas, tópicos principais e um resumo executivo do recurso. Clicar em um item leva você até aquele momento no vídeo. </p>
 </li>
 </ul>
-<p><img alt="Resumo Executivo do Ativo do Avatour" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-present-asset-menu-meeting-showing-exec-summary_cqpqbs.png" /> <em>Resumo Executivo do Avatour durante a apresentação de um Ativo em uma Reunião</em></p>
-<p><img alt="Tópicos do Avatour" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-present-asset-menu-meeting-showing-topics_duuq1a.png" /> <em>Tópicos do Avatour durante a apresentação de um ativo em uma reunião</em></p>
+<p><img alt="Resumo executivo do recurso Avatour" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-present-asset-menu-meeting-showing-exec-summary_cqpqbs.png" /> <em>Resumo Executivo do Avatour durante a apresentação de um ativo em uma reunião</em></p>
+<p><img alt="Tópicos do Avatour" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-present-asset-menu-meeting-showing-topics_duuq1a.png" /> <em>Tópicos do Avatour durante a apresentação de um recurso em uma reunião</em></p>
 <p>No <strong>painel lateral</strong>, você pode <strong>imprimir um relatório de ativos</strong> ou <strong>baixá-lo como arquivo TXT ou CSV</strong>. Os relatórios podem incluir vários elementos que você pode <strong>escolher antes de exportar</strong>. </p>
 <p><img alt="Menus de impressão do relatório de ativos do Avatour" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-asset-report-print-menus_kn0syn.png" /><br />
 <em>Menus de impressão/download do relatório de ativos do Avatour</em>  </p>
-<p><img alt="Seleção de elementos do relatório de ativos do Avatour" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-asset-report-element-selection_ud8c5k.png" /><br />
-<em>Menu de seleção de elementos do relatório de ativos do Avatour</em></p>
+<p><img alt="Seleção de elementos para impressão do Relatório de ativos do Avatour" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-asset-report-element-selection_ud8c5k.png" /><br />
+<em>Menu de seleção de elementos do Relatório de ativos do Avatour</em></p>
 <ul>
 <li><strong>Compartilhar link</strong> – Compartilhe um link para uma nota ou cena específica no ativo.  </li>
 <li><strong>Legendas (CC)</strong> – Exiba a transcrição do texto na tela durante a reprodução do vídeo.</li>
 </ul>
-<h5 id="barra-de-ferramentas-do-recurso-área-de-trabalho">Barra de ferramentas do recurso (Área de trabalho)</h5>
-<p>Ao revisar um recurso em uma área de trabalho, a barra de ferramentas é semelhante, mas otimizada para uso individual:</p>
-<p><img alt="Menu do Avatour ao apresentar um recurso fora de uma reunião, por exemplo, ao acessar uma área de trabalho" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-present-asset-menu-workspace_iri8gc.png" /> <em>Menu do Avatour ao apresentar um recurso em uma área de trabalho</em></p>
+<h5 id="barra-de-ferramentas-do-ativo-espaço-de-trabalho">Barra de ferramentas do ativo (Espaço de trabalho)</h5>
+<p>Ao revisar um ativo em um espaço de trabalho, a barra de ferramentas é semelhante, mas otimizada para uso individual:</p>
+<p><img alt="Menu do Avatour durante a apresentação de um ativo fora de uma reunião, por exemplo, ao acessar uma área de trabalho" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-present-asset-menu-workspace_iri8gc.png" /> <em>Menu do Avatour ao apresentar um recurso em um espaço de trabalho</em></p>
 <ul>
-<li><strong>Linha do tempo do vídeo / Barra de progresso</strong> – Mostra o progresso do vídeo com anotações e tópicos principais extraídos da trilha de áudio. Clique em qualquer lugar da linha do tempo para avançar ou retroceder no vídeo. Clique em uma anotação ou tópico para pular para aquele momento e abrir a anotação. Inclui controles de <strong>Reproduzir / Pausar</strong>.  </li>
+<li><strong>Linha do tempo do vídeo / Barra de progresso</strong> – Mostra o progresso do vídeo com notas e tópicos principais extraídos da trilha de áudio. Clique em qualquer lugar da linha do tempo para avançar ou retroceder no vídeo. Clique em uma nota ou tópico para saltar para aquele momento e abrir a nota. Inclui os controles <strong>Reproduzir / Pausar</strong>.  </li>
 <li><strong>Instantâneo, Notas, Painel de Notas e Resumo, Compartilhar link, Legendas</strong>  </li>
 <li>Indisponível: <strong>Spotlight, POV</strong> (esses recursos exigem participantes ao vivo)  </li>
 <li>Controles adicionais:<ul>
 <li><strong>Passos de 10 segundos</strong> – Avançar/retroceder  </li>
 <li><strong>Velocidade de reprodução</strong> – Ajustar a velocidade (0,5×–2×)  </li>
-<li><strong>Cortar vídeo</strong> – Cortar o início ou o final do arquivo</li>
+<li><strong>Cortar vídeo</strong> – Cortar o início ou o fim do arquivo</li>
 </ul>
 </li>
 </ul>
@@ -758,28 +756,28 @@ Clicar em uma opção do menu abre um <strong>painel lateral</strong> no lado es
 <p><img alt="Console da Web do Avatour - Item do Menu Principal “Análises” (1 de 3)" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-main-menu-analytics-1-of-3_ds3epe.png" /> <em>Visão geral das análises</em></p>
 <p><img alt="Console da Web do Avatour - Item do menu principal “Análises” (2 de 3)" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-main-menu-analytics-2-of-3_vpcsme.png" /> <em>Atividade de Reuniões e Uso do Espaço de Trabalho</em></p>
 <p><img alt="Console da Web do Avatour - Item do menu principal “Análises” (3 de 3)" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-main-menu-analytics-3-of-3_hn2pmr.png" /> <em>Economias e uso de licenças de dispositivos</em> </p>
-<h2 id="onsite-how-to-use-the-avatour-turnkey-kit">5. No local – Como usar o kit pronto para uso da Avatour</h2>
+<h2 id="onsite-how-to-use-the-avatour-turnkey-kit">5. No local – Como usar o kit pronto para uso do Avatour</h2>
 <h3 id="51-introdução">5.1 Introdução</h3>
 <p>Aqui você encontrará um guia on-line muito completo para dar seus primeiros passos com o Kit Avatour Turnkey: <a href="https://avatour.com/quickstart-panox-v2" target="_blank" rel="noopener">Guia de Início Rápido – Kit Avatour Turnkey 3.1 (Configuração do Pilot PanoX V2)</a></p>
 <p>E aqui está também a imagem com instruções que você encontrará dentro da tampa da maleta do kit 3.1.
-<img alt="Imagem dentro da tampa da maleta do Kit Avatour" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/v1775994773/avatour-turnkey-kit-3.1-inside-lid-picture_dq4ipl.png" /> <em>Imagem dentro da tampa da maleta do kit Avatour</em> </p>
+<img alt="Imagem dentro da tampa da maleta do Kit Avatour" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/v1775994773/avatour-turnkey-kit-3.1-inside-lid-picture_dq4ipl.png" /> <em>Imagem dentro da tampa da caixa do Kit Avatour</em> </p>
 <p>Siga o guia e as instruções para desembalar, montar e ligar sua câmera.</p>
 <hr />
 <h3 id="52-dicas-úteis">5.2 Dicas úteis</h3>
 <h4 id="bateria-externa--reuniões-ao-vivo-mais-longas-e-melhor-desempenho-térmico">Bateria externa – Reuniões ao vivo mais longas e melhor desempenho térmico</h4>
-<p>A bateria interna da câmera dura aproximadamente 30 a 45 minutos. Será exibido um alerta quando a bateria estiver ficando fraca. Com uma bateria externa, você pode prolongar o tempo de funcionamento e até mesmo torná-lo ilimitado, já que é possível trocar as baterias durante o uso.</p>
+<p>A bateria interna da câmera dura cerca de 30 a 45 minutos. Será exibido um alerta quando a bateria estiver ficando fraca. Com uma bateria externa, você pode prolongar o tempo de funcionamento e até mesmo torná-lo ilimitado, já que é possível trocar as baterias durante o uso.</p>
 <ul>
 <li>
 <p><strong>Se o seu kit incluir uma bateria Ulanzi:</strong> Fixe-a entre a base do tripé e a haste extensível e, em seguida, conecte a bateria à câmera via USB-C.  </p>
 </li>
 <li>
-<p><strong>Se o seu kit incluir uma haste de bateria Telesin:</strong> Monte a câmera diretamente na haste de bateria extensível Telesin e conecte-a via USB-C.  </p>
+<p><strong>Se o seu kit incluir uma haste com bateria da Telesin:</strong> Monte a câmera diretamente na haste extensível com bateria da Telesin e conecte-a via USB-C.  </p>
 </li>
 </ul>
-<p>Usando a bateria externa:</p>
+<p>Uso da bateria externa:</p>
 <ol>
-<li>Aumenta a duração total da bateria de ~40 minutos (apenas com a bateria da câmera) para ~3 horas.  </li>
-<li>Agrega estabilidade à configuração da câmera.  </li>
+<li>Prolonga a duração total da bateria de ~40 minutos (apenas com a bateria da câmera) para ~3 horas.  </li>
+<li>Aumenta a estabilidade da configuração da câmera.  </li>
 <li>Ajuda a evitar um possível superaquecimento.  </li>
 </ol>
 <blockquote>
@@ -798,7 +796,7 @@ Clicar em uma opção do menu abre um <strong>painel lateral</strong> no lado es
 </li>
 <li>
 <p><strong>Ambientes mais silenciosos / vários participantes próximos à câmera:</strong> 
-  Use o alto-falante clipável NoxGear. Ele não oferece a mesma alta fidelidade que os alto-falantes para conferências (por exemplo, o Jabra Speak), mas é fácil de prender na camisa e capta vozes próximas com eficácia.  </p>
+  Use o alto-falante clipável NoxGear. Ele não tem a mesma alta fidelidade que alto-falantes de conferência (por exemplo, o Jabra Speak), mas é fácil de prender na camisa e captura vozes próximas com eficácia.  </p>
 <ul>
 <li><strong>Ligar/Desligar:</strong> Mantenha pressionado o botão Reproduzir/Pausar por 2 segundos.  </li>
 <li><strong>Modo de emparelhamento Bluetooth:</strong> Entra automaticamente no modo de emparelhamento ao ser ligado (o LED pisca em azul/vermelho; fica azul constante quando emparelhado).  </li>
@@ -819,15 +817,15 @@ Clicar em uma opção do menu abre um <strong>painel lateral</strong> no lado es
 <h5 id="teste-a-velocidade-da-rede">Teste a velocidade da rede</h5>
 <ul>
 <li><strong>Teste em um único local:</strong> Qualquer verificador de velocidade que você costuma usar (por exemplo, <a href="https://www.speedtest.net" target="_blank" rel="noopener">Speedtest</a>) para verificar tanto a largura de banda de upload quanto a de download.   </li>
-<li><strong>Teste caminhando pelo local:</strong> Na câmera: Configurações → Rede → Teste de conexão. Caminhe por todo o espaço para confirmar a cobertura e a largura de banda.</li>
+<li><strong>Teste caminhando pelo local:</strong> Na câmera: Configurações → Rede → Teste de conexão. Percorra todo o espaço para confirmar a cobertura e a largura de banda.</li>
 </ul>
 <h5 id="wi-fi-local">Wi-Fi local</h5>
 <ul>
 <li>Altamente recomendado para conexões estáveis.  </li>
-<li>Se o departamento de TI exigir inclusão na lista de permissões, localize o endereço MAC: Configurações → Sobre → Endereço Wi-Fi.</li>
+<li>Se a equipe de TI exigir inclusão na lista de permissões, localize o endereço MAC: Configurações → Sobre → Endereço Wi-Fi.</li>
 </ul>
 <h5 id="rede-móvel">Rede móvel</h5>
-<p><strong>Opção A: Hotspot e SIM fornecidos no kit</strong>  </p>
+<p><strong>Opção A: Hotspot e cartão SIM fornecidos no kit</strong>  </p>
 <ul>
 <li>Conecte o hotspot GlocalMe ao bastão de bateria Telesin (ímã).  </li>
 <li>Garante que não haja interferência e mantém a conexão caso você se afaste da câmera.  </li>
@@ -842,8 +840,8 @@ Clicar em uma opção do menu abre um <strong>painel lateral</strong> no lado es
 - Use seu próprio smartphone ou um hotspot dedicado.  </p>
 <p><strong>Observação importante:</strong>  </p>
 <blockquote>
-<p>Mantenha o hotspot desativado enquanto estiver conectado ao Wi-Fi; ative-o somente quando estiver fora do alcance. O sistema operacional da câmera alterna dinamicamente entre redes Wi-Fi com base na intensidade do sinal e pode, inadvertidamente, mudar para o hotspot mesmo quando o Wi-Fi estiver disponível.</p>
-<p>As redes móveis podem limitar a largura de banda inesperadamente. Verifique com sua operadora os limites do plano de dados ou entre em contato com o suporte da Avatour se estiver usando nosso hotspot e cartão SIM.</p>
+<p>Mantenha o hotspot desligado enquanto estiver conectado ao Wi-Fi; ative-o somente quando estiver fora de alcance. O sistema operacional da câmera alterna dinamicamente entre redes Wi-Fi com base na intensidade do sinal e pode, inadvertidamente, mudar para o hotspot mesmo quando o Wi-Fi estiver disponível.</p>
+<p>As redes móveis podem limitar a largura de banda inesperadamente. Verifique com sua operadora os limites do plano de dados ou entre em contato com o suporte da Avatour se estiver usando nosso hotspot e SIM.</p>
 </blockquote>
 <h5 id="situações-de-baixa-largura-de-banda">Situações de baixa largura de banda</h5>
 <ul>
@@ -852,16 +850,16 @@ Clicar em uma opção do menu abre um <strong>painel lateral</strong> no lado es
 </ul>
 <h5 id="sem-conectividade">Sem conectividade</h5>
 <ul>
-<li>Apenas vídeos pré-gravados podem ser usados (<a href="https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app" target="_blank" rel="noopener">guia de gravação</a>).</li>
-</ul>
-<h4 id="outros-participantes-no-local--práticas-recomendadas">Outros participantes no local – Práticas recomendadas</h4>
-<p>Quando vários participantes ingressam em uma reunião ao vivo do Avatour a partir do mesmo local que a câmera 360°, o gerenciamento cuidadoso do <strong>áudio e da largura de banda</strong> é fundamental:  </p>
-<ul>
-<li>Cada smartphone, tablet ou laptop conectado no local consome largura de banda da rede e pode afetar negativamente a transmissão da câmera 360°.  </li>
-<li>Vários microfones e alto-falantes no mesmo espaço podem causar <strong>retroalimentação de áudio</strong>, tornando a experiência da reunião desagradável para todos os participantes.</li>
+<li>Somente vídeos pré-gravados podem ser usados (<a href="https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app" target="_blank" rel="noopener">guia de gravação</a>).</li>
 </ul>
 <h4 id="outros-participantes-no-local--melhores-práticas">Outros participantes no local – Melhores práticas</h4>
-<p>Quando vários participantes entram em uma reunião ao vivo do Avatour no mesmo local da câmera 360°, é fundamental gerenciar cuidadosamente o <strong>áudio e a largura de banda</strong>:  </p>
+<p>Quando vários participantes ingressam em uma reunião ao vivo do Avatour a partir do mesmo local da câmera 360°, é fundamental gerenciar cuidadosamente o <strong>áudio e a largura de banda</strong>:  </p>
+<ul>
+<li>Cada smartphone, tablet ou laptop conectado no local consome largura de banda da rede e pode afetar negativamente a transmissão da câmera 360°.  </li>
+<li>Vários microfones e alto-falantes no mesmo espaço podem causar <strong>feedback de áudio</strong>, tornando a experiência da reunião desagradável para todos os participantes.</li>
+</ul>
+<h4 id="outros-participantes-no-local--melhores-práticas_1">Outros participantes no local – Melhores práticas</h4>
+<p>Quando vários participantes entram em uma reunião ao vivo do Avatour no mesmo local que a câmera 360°, o gerenciamento cuidadoso do <strong>áudio e da largura de banda</strong> é fundamental:  </p>
 <ul>
 <li>Cada smartphone, tablet ou laptop conectado no local consome largura de banda da rede e pode afetar negativamente a transmissão da câmera 360°.  </li>
 <li>Vários microfones e alto-falantes no mesmo espaço podem causar <strong>retroalimentação de áudio</strong>, tornando a experiência da reunião desagradável para todos os participantes.</li>
@@ -870,60 +868,58 @@ Clicar em uma opção do menu abre um <strong>painel lateral</strong> no lado es
 <ul>
 <li><strong>Use fones de ouvido com fio ou sem fio:</strong> de preferência com cancelamento de ruído para evitar eco e retroalimentação.  </li>
 <li><strong>Modo Presencial:</strong> Participe da reunião no modo Presencial quando estiver fisicamente presente próximo à câmera 360°.  <ul>
-<li>Esse modo é otimizado para uso presencial: </li>
+<li>Esse modo é otimizado para uso no local: </li>
 </ul>
 </li>
 <li>Silencia o microfone e o alto-falante do participante por padrão.<br />
         - <strong>Não</strong> transmite a imagem da câmera do participante. </li>
 <li><strong>Não</strong> exibe a imagem da câmera 360° no navegador do participante. </li>
-<li>Economiza largura de banda da rede, garantindo que a câmera 360° tenha o máximo de largura de banda de upload disponível para a transmissão ao vivo.<br />
-        - Útil quando um usuário deseja compartilhar detalhes específicos; você <strong>pode compartilhar sua câmera</strong> para visualizações direcionadas.  </li>
+<li>Economiza largura de banda da rede, garantindo que a câmera 360° tenha a máxima largura de banda de upload disponível para a transmissão ao vivo.<br />
+        - Útil quando um usuário deseja compartilhar detalhes específicos; você <strong>pode compartilhar sua câmera</strong> para visões direcionadas.  </li>
 <li><strong>Silenciar quando não estiver falando ativamente:</strong> evita feedback de áudio indesejado e distrações.  </li>
-<li><strong>Use uma rede separada, se possível:</strong> mantenha seu smartphone conectado a uma rede diferente daquela da câmera para reduzir interferências.  </li>
+<li><strong>Use uma rede separada, se possível:</strong> Conecte seu smartphone a uma rede diferente daquela da câmera para reduzir interferências.  </li>
 </ul>
 <p>Seguir essas orientações garante um tour ao vivo tranquilo e de alta qualidade tanto para os participantes presenciais quanto para os remotos.</p>
-<h3 id="53-aplicativo-da-câmera-avatour">5.3 Aplicativo da câmera Avatour</h3>
-<p>Aqui estão (1) o menu principal, (2) as configurações e (3) as configurações de rede.</p>
-<p><img alt="Aplicativo da câmera Avatour 360° - Três menus" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-cam-app-3-menu-screens_nju8bt.png" /> <em>Aplicativo Avatour 360° Camera - 3 menus</em></p>
-<p><strong>Captura Rápida</strong> - Para gravação de vídeo em 360° offline no cartão de memória SD da câmera 360. - Para uma descrição detalhada, consulte <a href="https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app" target="_blank" rel="noopener">Como gravar e enviar vídeos em 360° com o aplicativo Avatour?</a>. Recomendamos o uso de um dispositivo de áudio externo (conectado via Bluetooth). Observação: você também pode alterar o ângulo do vídeo de 360° para 270°, 180° e para vídeos e fotos 2D padrão, por exemplo, para focar ou ocultar áreas confidenciais — basta alterar os modos no canto inferior direito na tela de Captura Rápida (<em>isso só é possível, no entanto, se a resolução 4K estiver selecionada nas Configurações para Captura Rápida — veja abaixo</em>)</p>
+<h3 id="53-aplicativo-avatour-camera">5.3 Aplicativo Avatour Camera</h3>
+<p>Aqui estão (1) o menu principal, (2) as configurações e (3) Configurações de rede.</p>
+<p><img alt="Aplicativo Avatour 360° Camera - Três menus" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-cam-app-3-menu-screens_nju8bt.png" /> <em>Aplicativo Avatour 360° Camera — 3 menus</em></p>
+<p><strong>Captura rápida</strong> — Para gravação offline de vídeos em 360° no cartão de memória SD da câmera 360. — Para uma descrição detalhada, consulte <a href="https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app" target="_blank" rel="noopener">Como gravar e enviar vídeos em 360° com o aplicativo Avatour?</a>. Recomendamos o uso de um dispositivo de áudio externo (conectado via Bluetooth). Observação: você também pode alterar o ângulo do vídeo de 360° para 270°, 180° e vídeos e fotos 2D padrão, por exemplo, para ajustar o foco ou ocultar áreas confidenciais — basta alterar os modos no canto inferior direito na tela de controle de qualidade (<em>isso só é possível, no entanto, se a resolução 4K estiver selecionada nas Configurações da Captura Rápida — veja abaixo</em>)</p>
 <p><strong>Reunião ao Vivo</strong> — Para videoconferências ao vivo em 360°. Você verá seus espaços de trabalho e, ao clicar em um deles, iniciará a transmissão de vídeo ao vivo pela câmera 360°. Antes de participar da reunião com sua câmera 360°, é necessário conectar um dispositivo de áudio via Bluetooth. Para uma descrição detalhada, consulte <a href="https://avatour.com/support/how-to-start-a-live-capture-meeting-with-your-pilot-camera" target="_blank" rel="noopener">Como iniciar uma reunião de Captura ao Vivo com sua câmera Pilot?</a></p>
 <blockquote>
 <p>Ao hospedar uma reunião do Live Capture com sua câmera 360°, você terá à disposição ferramentas de reunião semelhantes às da experiência na web. Aqui está um link para o artigo da nossa Base de Conhecimento que explica essas ferramentas com mais detalhes: <a href="https://avatour.com/support/what-avatour-app-tools-are-available-to-labpano-pilot-camera-operators" target="_blank" rel="noopener">Ferramentas do aplicativo do operador</a></p>
 </blockquote>
-<p><strong>Galeria</strong> - Encontre aqui todos os seus vídeos e fotos em 360° para enviar para o Avatour Web Console. Você pode enviar e excluir recursos em lote — toque em “Selecionar” na parte superior da tela. Antes do envio, você pode escolher várias etapas de processamento, como “Desfocar rostos”, gerar um “Resumo por IA” e otimizar o sinal de áudio com “Melhorar a fala”. Você pode até mesmo escolher um espaço de trabalho para alocar o recurso — ele, é claro, também estará na seção geral de recursos do Console da Web.</p>
+<p><strong>Galeria</strong> — Encontre aqui todos os seus vídeos e fotos em 360° para enviar para o Avatour Web Console. Você pode enviar e excluir recursos em lote — toque em “Selecionar” na parte superior da tela. Antes do envio, você pode escolher várias etapas de processamento, como “Desfocar rostos”, gerar “Resumo por IA” e otimizar o sinal de áudio com “Melhorar a fala”. Você pode até mesmo escolher um espaço de trabalho para alocar o recurso — ele, é claro, também estará na seção geral de recursos no Console da Web.</p>
 <p><strong>Configurações</strong> — Nas Configurações, você tem as seguintes opções:</p>
 <ul>
 <li><strong>Rede</strong>: essa opção permite alterar a rede Wi-Fi à qual a câmera está conectada ou executar um teste de conexão de rede para verificar a taxa de transferência do streaming</li>
 <li>
-<p><strong>Captura ao vivo</strong>: ajuste suas configurações de Captura ao vivo de acordo com a largura de banda disponível, a sensibilidade de RV do convidado ou se as lentes de proteção da sua câmera estiverem instaladas:</p>
+<p><strong>Captura ao vivo</strong>: ajuste suas configurações de captura ao vivo de acordo com a largura de banda disponível, a sensibilidade de RV do convidado ou se as lentes de proteção da sua câmera estiverem instaladas:</p>
 <ul>
 <li><strong>Taxa de quadros alvo (opcional)</strong>: ajuste a taxa de quadros do seu vídeo de Captura ao Vivo entre 15 fps, 24 fps e 30 fps. Taxas de quadros mais altas produzem um vídeo mais suave, mas exigirão mais largura de banda de upload. Padrão: 15 fps</li>
 <li><strong>Taxa de bits alvo</strong>: Permite aumentar ou diminuir a taxa de bits máxima de streaming para sua Captura ao Vivo. Você pode definir sua taxa de bits alvo entre 1 Mbps e 10 Mbps. Taxas de bits mais altas resultam em maior resolução de vídeo, mas exigem mais largura de banda de upload. Padrão: 5 Mbps</li>
-<li><strong>Otimizar movimento</strong>: Isso diminuirá a taxa de quadros do vídeo, gerando menos carga na largura de banda de upload da sua rede e aumentando sua taxa de bits de streaming. Além disso, essa opção ajuda a reduzir a sensação de enjoo para participantes de RV. Padrão: Desativado</li>
-<li><strong>Bloqueio de direção</strong>: Isso “trava” a visão de 360°, independentemente de como você mova a câmera 360°. Se você quiser que o vídeo em 360° acompanhe o movimento da câmera, por exemplo, você quiser “apontar” com a lente frontal para algo, defina o Bloqueio de direção como Não. Assim, a câmera se comportará como uma câmera tradicional e poderá ser mais útil para visitas guiadas. Padrão: Sim</li>
-<li><strong>Orientação inicial</strong>: Ao definir o Bloqueio de Direção como Não, você pode escolher qual lente (frontal ou traseira) deve ser a orientação inicial ao iniciar o vídeo ao vivo. Padrão: Olhando para o Operador, pois essa é a maneira mais natural de iniciar uma reunião ao vivo (= lente traseira). A Captura Rápida funciona de maneira diferente (a lente frontal é a Orientação Inicial por padrão — veja abaixo).</li>
+<li><strong>Otimizar movimento</strong>: Isso diminuirá a taxa de quadros do vídeo, gerando menos carga na largura de banda de upload da sua rede e aumentando sua taxa de bits de streaming. Além disso, essa opção ajuda a reduzir a sensação de enjôo para participantes de RV. Padrão: Desativado</li>
+<li><strong>Bloqueio de direção</strong>: Isso “bloqueará” a visão de 360°, independentemente de como você mover a câmera 360°. Se você quiser que o vídeo em 360° acompanhe o movimento da câmera, por exemplo, você quiser “apontar” com a lente frontal para algo, defina o Bloqueio de direção como Não. Assim, a câmera se comportará como uma câmera tradicional e poderá ser mais útil para visitas guiadas. Padrão: Sim</li>
+<li><strong>Orientação inicial</strong>: Ao definir o Bloqueio de Direção como “Não”, você pode escolher qual lente (frontal ou traseira) deve ser a orientação inicial ao iniciar o vídeo ao vivo. Padrão: voltada para o operador, pois essa é a maneira mais natural de iniciar uma reunião ao vivo (= lente traseira). A Captura Rápida funciona de maneira diferente (a lente frontal é a orientação inicial por padrão — veja abaixo).</li>
 </ul>
 </li>
 <li>
-<p><strong>Captura Rápida</strong>: Ajuste suas configurações de Captura Rápida de acordo com sua taxa de quadros de vídeo preferida, largura de banda disponível para uploads de vídeos gravados e outras preferências. Recursos relacionados ao mapa, conforme explicado acima (por exemplo, visualização do mapa, anotações no mapa), são possíveis quando um sinal de GPS é recebido e a configuração de localização nas configurações nativas da câmera está ativada (o que deve ser o padrão). O ícone de localização/GPS no canto superior direito da Captura Rápida deve estar verde. Pode levar alguns instantes para receber o sinal de GPS e estabelecer a conexão.</p>
+<p><strong>Captura Rápida</strong>: Ajuste suas configurações de Captura Rápida de acordo com sua taxa de quadros de vídeo preferida, largura de banda disponível para envio de vídeos gravados e outras preferências. Recursos relacionados ao mapa, conforme explicado acima (por exemplo, visualização do mapa, anotações no mapa), são possíveis quando um sinal de GPS é recebido e a configuração de localização nas configurações nativas da câmera está ativada (o que deve ser o padrão). O ícone de localização/GPS no canto superior direito da Captura Rápida deve estar verde. Pode levar alguns instantes para receber o sinal de GPS e estabelecer a conexão.</p>
 <ul>
-<li><strong>Resolução</strong>: Aqui você pode alterar a resolução. <em>(As resoluções de 6k são experimentais e exigem uma etapa manual de união das imagens na Galeria antes do envio para o Avatour Web Console.)</em><ul>
-<li><strong>4k</strong> - Esta é a resolução padrão e mantém um bom equilíbrio entre qualidade de vídeo e tamanho do arquivo.</li>
+<li><strong>Resolução</strong>: Aqui você pode alterar a resolução. <em>(As resoluções de 6k são experimentais e exigem uma etapa manual de união na Galeria antes do envio para o Avatour Web Console.)</em><ul>
+<li><strong>4k</strong> - Essa é a resolução padrão e mantém um bom equilíbrio entre qualidade de vídeo e tamanho do arquivo.</li>
 </ul>
 </li>
-<li><strong>6k a 30 fps</strong><ul>
-<li><strong>6k a 10 fps</strong> - É útil se você quiser manter o tamanho do arquivo menor do que com os 30 fps, quando a fluidez do movimento for menos importante.</li>
-</ul>
-</li>
-<li>Para outras resoluções, você também pode usar os aplicativos nativos da câmera, inclusive no PanoX V2. Para mais detalhes, consulte <a href="https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app" target="_blank" rel="noopener">Como gravar e enviar vídeos em 360° com o aplicativo Avatour?</a></li>
-<li><strong>Taxa de quadros alvo</strong>: Ajuste a taxa de quadros para suas gravações de vídeo em Captura Rápida entre 15 fps, 24 fps e 30 fps. Taxas de quadros mais altas produzem um vídeo mais suave, mas aumentam o tamanho do arquivo de vídeo e o tempo de envio. Recomendado: 30 fps</li>
-<li><strong>Taxa de bits alvo</strong>: Defina a taxa de bits alvo para uploads do Quick Capture entre 5 Mbps e 20 Mbps. Taxas de bits mais baixas aumentam a velocidade de upload, mas reduzem a qualidade do vídeo. Recomendado: 20 Mbps</li>
-<li><strong>Bloqueio de direção</strong>: O mesmo que acima, na seção “Captura ao vivo”. A orientação inicial padrão é sempre a lente frontal.</li>
+<li><strong>6k a 30 fps</strong> <em>(requer uma etapa adicional de costura na Galeria)</em></li>
+<li><strong>6k a 10 fps</strong> <em>(requer uma etapa adicional de costura na Galeria)</em> - Isso é útil se você quiser manter o tamanho do arquivo menor do que com os 30 fps, quando a fluidez do movimento for menos importante.</li>
+<li>Para outras resoluções, você também pode usar os aplicativos nativos da câmera, inclusive no PanoX V2. Para mais detalhes, consulte <a href="https://avatour.com/support/como-gravar-e-enviar-vídeos-em-360-com-o-app-avatour" target="_blank" rel="noopener">Como gravar e enviar vídeos em 360º com o aplicativo Avatour?</a></li>
+<li><strong>Taxa de quadros alvo</strong> <em>(disponível apenas para resolução 4K)</em> - Ajuste a taxa de quadros para suas gravações de vídeo em Captura Rápida entre 15 fps, 24 fps e 30 fps. Taxas de quadros mais altas produzem um vídeo mais suave, mas aumentam o tamanho do arquivo de vídeo e o tempo de envio. Recomendado: 30 fps</li>
+<li><strong>Taxa de bits alvo</strong> <em>(disponível apenas para resolução 4K)</em> Defina a taxa de bits alvo para uploads do Quick Capture entre 5 Mbps e 20 Mbps. Taxas de bits mais baixas aumentam a velocidade de upload, mas reduzem a qualidade do vídeo. Recomendado: 20 Mbps</li>
+<li><strong>Bloqueio de direção</strong>: igual ao descrito acima em “Captura ao vivo”. A orientação inicial padrão é sempre a lente frontal para a “Captura rápida”.</li>
 </ul>
 </li>
 </ul>
 <blockquote>
-<p>Consulte também nossa <a href="https://avatour.com/support/avatour-360deg-video-file-size-calculator" target="_blank" rel="noopener">Calculadora de tamanho de arquivo de vídeo do Avatour 360°</a> para obter mais orientações sobre as configurações acima e os tamanhos dos arquivos de vídeo. Para evitar ficar sem espaço de armazenamento, será exibido um alerta para que você possa interromper a gravação e liberar espaço (por exemplo, enviando vídeos da Galeria para os Recursos do Avatour Web Console).</p>
+<p>Consulte também nossa <a href="https://avatour.com/support/avatour-360deg-video-file-size-calculator" target="_blank" rel="noopener">Calculadora de tamanho de arquivo de vídeo Avatour 360°</a> para obter mais orientações sobre as configurações acima e os tamanhos dos arquivos de vídeo. Para evitar ficar sem espaço de armazenamento, será exibido um alerta para que você possa interromper a gravação e liberar espaço (por exemplo, enviando vídeos da Galeria para os Recursos do Avatour Web Console).</p>
 </blockquote>
 <ul>
 <li><strong>Sobre</strong>: Visualize o número de série do dispositivo e a versão do software</li>
