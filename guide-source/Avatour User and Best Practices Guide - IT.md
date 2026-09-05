@@ -13,16 +13,16 @@ Definizioni dei termini chiave e dei concetti di Avatour utilizzati di frequente
 4. Sito web  
 Dai un'occhiata in particolare alle [Funzionalità di Avatour](https://avatour.com/features) insieme alle sezioni dedicate ai Casi d'uso e ai Settori per scoprire come Avatour può supportare le tue esigenze specifiche.
 
-## 2. Tipi di utenti Avatour  {#avatour-user-types}
+## 2. Tipi di utenti di Avatour  {#avatour-user-types}
 
 ### 2.1 Partecipanti alla riunione (non è richiesto alcun account)
-Gli utenti possono partecipare alla riunione senza registrarsi per ottenere un account Avatour. Eccezione: se l’organizzatore ha selezionato l’impostazione della riunione “Autenticazione richiesta” (vedi anche 4.2.1 Impostazioni per spazi di lavoro e riunioni) — ad esempio, per consentire solo ai dipendenti interni di partecipare tramite Single Sign-On (SSO) — l’invito del calendario indicherà che i partecipanti devono effettuare l’accesso per autenticarsi.
+Gli utenti possono partecipare alla riunione senza registrarsi per creare un account Avatour. Eccezione: se l’organizzatore ha selezionato l’impostazione della riunione “Autenticazione richiesta” (vedi anche 4.2.1 Impostazioni per spazi di lavoro e riunioni) — ad esempio, per consentire solo ai dipendenti interni di partecipare tramite Single Sign-On (SSO) — l’invito del calendario indicherà che i partecipanti devono effettuare l’accesso per autenticarsi.
 
 Gli utenti accedono alla riunione come segue:
 
-- Ricevono un link alla riunione dall’organizzatore
-- Inseriscono una password di accesso alla riunione, se l’organizzatore ne ha abilitata una.
-- I partecipanti possono partecipare senza un account Avatour, a meno che la riunione non sia soggetta a restrizioni e richieda l’accesso per l’autenticazione.
+- Ricevono un link alla riunione dall’organizzatore.
+- Inseriscono una password della riunione se l’organizzatore ne ha abilitata una.
+- I partecipanti possono partecipare senza un account Avatour a meno che la riunione non sia soggetta a restrizioni e richieda l’accesso per l’autenticazione.
 
 #### 2.1.1 Partecipante 
 
@@ -40,9 +40,9 @@ Gli utenti accedono alla riunione come segue:
 
 Gli utenti registrati dispongono di un account Avatour. Gli account vengono creati in uno dei seguenti modi:
 
-- **Su invito dell’amministratore:** durante la procedura di onboarding, Avatour configura un **tenant dedicato** per l’organizzazione e crea uno o più **account amministratore**. Gli amministratori possono quindi **invitare utenti** all’interno dell’organizzazione e assegnarli a **gruppi**, che definiscono il loro ruolo sulla piattaforma (Ospite, Host o Amministratore). Gli utenti invitati ricevono un **link di registrazione** per completare la configurazione dell’account e impostare una password.  
-- **Invitati dall’Host:** Gli Host possono aggiungere utenti come **collaboratori con ruolo di Editor** a uno Spazio di lavoro. Ciò comporta l’utilizzo di una **licenza Host** e garantisce all’utente un accesso a livello di Host.  
-- **Provisioning automatico tramite SSO (solo livelli Enterprise/Business):** Gli account possono essere creati automaticamente dall’IdP. Per impostazione predefinita, gli account forniti tramite SSO vengono aggiunti al **gruppo Ospite**, a meno che ciò non venga sovrascritto tramite **mappature dei gruppi SAML**. Gli amministratori possono comunque invitare utenti e assegnare l’appartenenza a un gruppo direttamente anche quando l’SSO è abilitato.
+- **Invitati dall’amministratore:** durante la procedura di onboarding, Avatour configura un **tenant dedicato** per l’organizzazione e crea uno o più **account amministratore**. Gli amministratori possono quindi **invitare utenti** all’interno dell’organizzazione e assegnarli a **gruppi**, che definiscono il loro ruolo sulla piattaforma (Ospite, Host o Amministratore). Gli utenti invitati ricevono un **link di registrazione** per completare la configurazione dell’account e impostare una password.  
+- **Invitati dall’host:** Gli Host possono aggiungere utenti come **collaboratori con ruolo di Editor** a uno Spazio di lavoro. Ciò comporta l’utilizzo di una **licenza Host** e garantisce all’utente un accesso a livello di Host.  
+- **Provisioning automatico tramite SSO (solo livelli Enterprise/Business):** Gli account possono essere creati automaticamente dall’IdP. Per impostazione predefinita, gli account forniti tramite SSO vengono aggiunti al **gruppo Ospite**, a meno che non venga sovrascritto tramite **mappature dei gruppi SAML**. Gli amministratori possono comunque invitare utenti e assegnare l’appartenenza a un gruppo direttamente anche quando l’SSO è abilitato.
 
 **Riepilogo:**  
 
@@ -50,23 +50,23 @@ Gli utenti registrati e la loro appartenenza ai gruppi possono essere gestiti in
 
 - **Gestione da parte degli amministratori:** un amministratore nella console di Avatour può creare utenti e assegnarli a gruppi, che definiscono il loro ruolo sulla piattaforma (Ospite, Host o Amministratore).  
 - **Provisioning SSO:** per i clienti dei livelli Enterprise o Business con SSO abilitato, l’IdP può effettuare automaticamente il provisioning degli account e assegnare l’appartenenza ai gruppi, definendo così il ruolo dell’utente sulla piattaforma.  
-- **Utenti invitati dall’Host:** Gli Host possono invitare altri utenti come collaboratori con ruolo di Editor in specifici spazi di lavoro. L’assegnazione del ruolo di collaboratore Editor comporta l’utilizzo di una licenza Host.
+- **Utenti invitati dall’Host:** gli Host possono invitare altri utenti come collaboratori con ruolo di Editor in specifici spazi di lavoro. L’assegnazione del ruolo di collaboratore Editor comporta l’utilizzo di una licenza Host.
 
-**Best practice consigliata (clienti Enterprise):**  
-Per le organizzazioni che prevedono un numero elevato di utenti che necessitano di accesso ad Avatour, si raccomanda di **integrare il Single Sign-On (SSO)** e gestire gli utenti e le appartenenze ai gruppi dall’**IdP**. Questo approccio semplifica la creazione degli account, l’assegnazione ai gruppi e la gestione delle licenze, riducendo il carico amministrativo e garantendo un controllo degli accessi coerente.
+**Best practice raccomandata (clienti Enterprise):**  
+Per le organizzazioni che prevedono un numero elevato di utenti che necessitano di accedere ad Avatour, si raccomanda di **integrare il Single Sign-On (SSO)** e gestire gli utenti e le appartenenze ai gruppi dall’**IdP**. Questo approccio semplifica il provisioning degli account, l’assegnazione ai gruppi e la gestione delle licenze, riducendo il carico amministrativo e garantendo un controllo degli accessi coerente.
 
 #### 2.2.1 Utenti ospiti
 
 - Aggiunti al **gruppo Ospiti**.  
 - Possono **visualizzare le risorse** all’interno degli spazi di lavoro in cui sono stati aggiunti come **collaboratori con ruolo di Visualizzatore**.  
-- Non possono creare spazi di lavoro, ospitare riunioni né caricare contenuti.  
-- Gli account ospite forniti tramite SSO **effettuano l’autenticazione tramite l’IdP**; non è richiesta alcuna password gestita da Avatour.
+- Non possono creare spazi di lavoro, ospitare riunioni o caricare contenuti.  
+- Gli account Ospite forniti tramite SSO **effettuano l’autenticazione tramite l’IdP**; non è richiesta alcuna password gestita da Avatour.
 
 ---
 
 #### 2.2.2 Utenti con licenza (accesso alla console web)
 
-##### Utenti host (Gruppo: Host)
+##### Utenti Host (Gruppo: Host)
 
 - Possono creare/gestire spazi di lavoro, invitare collaboratori in uno spazio di lavoro, **ospitare riunioni in diretta**, caricare **Quick Captures**.  
 - Hanno accesso alla **dashboard dell’ospitante** e all’**app dell’operatore** sulle telecamere a 360° supportate.  
@@ -87,7 +87,7 @@ Per le organizzazioni che prevedono un numero elevato di utenti che necessitano 
 
 **Impostazioni**  
 
-- Configurare **le impostazioni di sicurezza a livello di organizzazione** per risorse, aree di lavoro e riunioni ospitate sulla piattaforma (ad es. se un Host debba essere presente per avviare una riunione, se i volti debbano essere sfocati in tutti i video caricati sulla piattaforma).  
+- Configurare **le impostazioni di sicurezza a livello di organizzazione** per le risorse, gli spazi di lavoro e le riunioni ospitate sulla piattaforma (ad esempio, se un Host debba essere presente per avviare una riunione, se i volti debbano essere sfocati in tutti i video caricati sulla piattaforma).  
 - Abilitare o disabilitare le **funzionalità di intelligenza artificiale** o la **registrazione**.  
 - Applicare il branding aziendale in modo coerente su tutta la piattaforma se è configurato un **dominio personalizzato**.
   
@@ -95,7 +95,7 @@ Per le organizzazioni che prevedono un numero elevato di utenti che necessitano 
 **Risorse e analisi** 
  
 - Visualizzare tutte le risorse caricate da qualsiasi utente dell’organizzazione.  
-- Esaminare l’utilizzo della piattaforma a livello dell’intera organizzazione.
+- Esaminare l’utilizzo della piattaforma all’interno dell’organizzazione.
 
 ---
 
@@ -108,9 +108,9 @@ Le autorizzazioni dello spazio di lavoro definiscono ciò che un utente può far
   - Gestire le impostazioni delle riunioni (abilitare/disabilitare la registrazione, ammettere o rimuovere partecipanti)  
   - Pianificare e ospitare riunioni in diretta  
   - Generare report basati su modelli predefiniti  
-  - Aggiungere o rimuovere collaboratori dall’area di lavoro  
+  - Aggiungere o rimuovere collaboratori dallo spazio di lavoro  
 
-- **Collaboratore con ruolo di visualizzatore:** gli utenti con questa autorizzazione hanno accesso in sola lettura alle risorse dello spazio di lavoro. **Non possono modificare le risorse, gestire le riunioni né gestire i collaboratori**, ma **possono creare note sulle risorse**. 
+- **Collaboratore in modalità visualizzazione:** gli utenti con questa autorizzazione hanno accesso in sola lettura alle risorse dell’area di lavoro. **Non possono modificare le risorse, gestire le riunioni né gestire i collaboratori**, ma **possono creare note sulle risorse**. 
   
 ## 3. Per i partecipanti alle riunioni da remoto e i visitatori dell'area di lavoro {#for-remote-meeting-participants-and-workspace-visitors}
 
@@ -429,7 +429,7 @@ Fornisce approfondimenti su riunioni, utilizzo dello spazio di lavoro e metriche
 
 ## 5. In loco - Come utilizzare il kit chiavi in mano Avatour {#onsite-how-to-use-the-avatour-turnkey-kit}
 
-### 5.1 Per iniziare
+### 5.1 Introduzione
 Qui troverete una guida online molto completa per i vostri primi passi con il kit Avatour Turnkey: [Guida rapida – Kit Avatour Turnkey 3.1 (Configurazione Pilot PanoX V2)](https://avatour.com/quickstart-panox-v2)
 
 Ecco inoltre l’immagine con le istruzioni che troverete all’interno del coperchio della valigetta del kit 3.1.
@@ -441,17 +441,17 @@ Seguite la guida e le istruzioni per disimballare, assemblare e accendere la vos
 
 ### 5.2 Suggerimenti utili
 
-#### Batteria esterna – Riunioni più lunghe e migliori prestazioni termiche 
+#### Batteria esterna – Riunioni in diretta più lunghe e migliori prestazioni termiche 
 
 La batteria interna della videocamera dura circa 30-45 minuti. Quando la batteria si sta scaricando, verrà visualizzato un avviso. Con una batteria esterna è possibile prolungare il tempo di funzionamento e renderlo addirittura illimitato, poiché è possibile sostituire le batterie durante l’uso.
 
-- **Se il tuo kit include una batteria Ulanzi:** fissala tra la base del treppiede e l’asta estensibile, quindi collega la batteria alla videocamera tramite USB-C.  
+- **Se il kit include una batteria Ulanzi:** fissala tra la base del treppiede e l’asta estensibile, quindi collega la batteria alla videocamera tramite USB-C.  
 
-- **Se il kit include un'asta con batteria Telesin:** montare la videocamera direttamente sull'asta estensibile con batteria Telesin e collegarla tramite USB-C.  
+- **Se il kit include un’asta con batteria Telesin:** Montate la videocamera direttamente sul bastone con batteria estensibile Telesin e collegatela tramite USB-C.  
 
 Utilizzo della batteria esterna:
 
-1. Estende l’autonomia totale da circa 40 minuti (solo batteria della videocamera) a circa 3 ore.  
+1. Estende la durata totale della batteria da circa 40 minuti (solo batteria della videocamera) a circa 3 ore.  
 2. Aggiunge stabilità alla configurazione della videocamera.  
 3. Aiuta a prevenire un potenziale surriscaldamento.  
 
@@ -466,50 +466,50 @@ Utilizzo della batteria esterna:
   - **Volume:** Utilizzare i pulsanti “+” e “-”.  
 
 - **Ambienti più silenziosi / più partecipanti vicino alla videocamera:** 
-  Utilizza l’altoparlante a clip NoxGear. Non offre la stessa qualità audio degli altoparlanti da conferenza (ad es. Jabra Speak), ma è facile da agganciare alla camicia e cattura efficacemente le voci nelle vicinanze.  
+  Utilizza l’altoparlante a clip NoxGear. Non offre la stessa alta fedeltà degli altoparlanti da conferenza (ad es. Jabra Speak), ma è facile da agganciare alla camicia e cattura efficacemente le voci vicine.  
   - **Accensione/Spegnimento:** Tieni premuto il pulsante Riproduci/Pausa per 2 secondi.  
-  - **Modalità di accoppiamento Bluetooth:** Entra automaticamente in modalità di accoppiamento all’accensione (il LED lampeggia in blu/rosso; rimane acceso in blu una volta effettuato l’accoppiamento).  
+  - **Modalità di accoppiamento Bluetooth:** Entra automaticamente in modalità di accoppiamento all’accensione (il LED lampeggia in blu/rosso; rimane blu fisso una volta effettuato l’accoppiamento).  
   - **Volume:** Utilizza i pulsanti “+” e “-”.  
 
-- **Utilizzo del proprio dispositivo:** Se si preferisce un’alternativa (ad es. un altoparlante da conferenza o un auricolare personale), è possibile accoppiarlo tramite la videocamera: Impostazioni → Bluetooth.  
+- **Utilizzo del proprio dispositivo:** se si preferisce un’alternativa (ad es. un altoparlante da conferenza o cuffie personali), è possibile accoppiarla tramite la videocamera: Impostazioni → Bluetooth.  
 
 #### Connettività
-**Prima di iniziare:** Assicurarsi di disporre di una connessione a Internet tramite:
+**Prima di iniziare:** assicurarsi di disporre di una connessione a Internet tramite:
 
 - **Wi-Fi locale** (preferibile)
 - **Rete mobile** (se fuori dalla portata del Wi-Fi)
 
-**Larghezza di banda consigliata:** 10 Mbps in upload/download per lo streaming completo a 360° (~5 Mbps). Una larghezza di banda inferiore (1–2 Mbps) funziona solo se si rimane fermi.
+**Larghezza di banda consigliata:** 10 Mbps in upload/download per lo streaming completo a 360° (~5 Mbps). Una larghezza di banda inferiore (1–2 Mbps) funziona solo quando si rimane fermi.
 
 ##### Verifica della velocità di rete
-- **Test in un’unica posizione:** Utilizza qualsiasi strumento di verifica della velocità che usi abitualmente (ad es. [Speedtest](https://www.speedtest.net)) per verificare sia la velocità in upload che quella in download.   
-- **Test camminando all’interno del sito:** Dalla videocamera: Impostazioni → Rete → Test di connessione. Percorri l’intero spazio per verificare la copertura e la larghezza di banda.
+- **Test in un'unica posizione:** utilizza qualsiasi strumento di verifica della velocità che usi normalmente (ad es. [Speedtest](https://www.speedtest.net)) per verificare sia la velocità di upload che quella di download.   
+- **Test camminando all'interno della sede:** Dalla telecamera: Impostazioni → Rete → Test di connessione. Percorri l’intero spazio per verificare la copertura e la larghezza di banda.
 
 ##### Wi-Fi locale
-- Altamente raccomandato per connessioni stabili.  
+- Altamente consigliato per connessioni stabili.  
 - Se il reparto IT richiede l’inserimento in whitelist, individua l’indirizzo MAC: Impostazioni → Informazioni → Indirizzo Wi-Fi.
 
 ##### Rete mobile
-**Opzione A: hotspot e SIM forniti con il kit**  
+**Opzione A: hotspot e SIM forniti nel kit**  
 
-- Collegare l’hotspot GlocalMe al battery stick Telesin (magnete).  
+- Collegare l’hotspot GlocalMe alla batteria portatile Telesin (magnete).  
 - Assicura l’assenza di interferenze e mantiene la connessione anche allontanandosi dalla telecamera.  
 - Risoluzione dei problemi:
   - Verificare la presenza della SIM preinstallata (non la Cloud SIM).  
-  - Abilitare il 5G in Gestione scheda SIM.  
+  - Abilita il 5G in Gestione scheda SIM.  
   - Verifica che l’APN sia corretto per la tua regione ([Guida alla configurazione APN](https://avatour.com/support/how-do-i-change-the-apn-on-my-glocalme-hotspot)).
 
 **Opzione B: Hotspot personale / SIM**
 - Utilizza il tuo smartphone o un hotspot dedicato.  
 
 **Nota importante:**  
-> Tieni l’hotspot disattivato mentre sei connesso al Wi-Fi; attivalo solo quando sei fuori copertura. Il sistema operativo della fotocamera passa dinamicamente da una rete Wi-Fi all’altra in base alla potenza del segnale e potrebbe passare inavvertitamente all’hotspot anche quando il Wi-Fi è disponibile.
+> Tieni l’hotspot disattivato mentre sei connesso al Wi-Fi; abilitalo solo quando sei fuori copertura. Il sistema operativo della fotocamera passa dinamicamente da una rete Wi-Fi all’altra in base alla potenza del segnale e potrebbe passare inavvertitamente all’hotspot anche quando il Wi-Fi è disponibile.
 
 > Le reti mobili potrebbero limitare la larghezza di banda in modo imprevisto. Verifica con il tuo operatore i limiti del piano dati oppure contatta l’assistenza Avatour se utilizzi il nostro hotspot e la nostra SIM.
 
-##### Situazioni con bassa larghezza di banda
-- Registra in anticipo dei video della località per riprodurli in un secondo momento ([guida alla registrazione](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)).  
-- Condividi lo streaming della fotocamera dello smartphone per integrare le aree con larghezza di banda ridotta (0,1–0,3 Mbps in upload).
+##### Situazioni di bassa larghezza di banda
+- Registra in anticipo i video delle località per riprodurli in un secondo momento ([guida alla registrazione](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)).  
+- Condividi il flusso video della fotocamera dello smartphone per ovviare alle aree con larghezza di banda ridotta (0,1–0,3 Mbps in upload).
 
 ##### Assenza di connettività
 - È possibile utilizzare solo video preregistrati ([guida alla registrazione](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)).
@@ -523,23 +523,22 @@ Quando più partecipanti si uniscono a una riunione Avatour in diretta dalla ste
 
 #### Altri partecipanti in loco – Best practice
 
-Quando più partecipanti si collegano a una riunione Avatour in diretta dalla stessa postazione in cui si trova la telecamera a 360°, è fondamentale gestire con attenzione **l’audio e la larghezza di banda**:  
+Quando più partecipanti si collegano a una riunione Avatour in diretta dalla stessa postazione della telecamera a 360°, è fondamentale gestire con attenzione **l’audio e la larghezza di banda**:  
 
 - Ogni smartphone, tablet o laptop connesso in loco consuma larghezza di banda di rete e può influire negativamente sul feed della telecamera a 360°.  
-- La presenza di più microfoni e altoparlanti nello stesso spazio può causare **un feedback audio**, rendendo l’esperienza della riunione sgradevole per tutti i partecipanti.
+- La presenza di più microfoni e altoparlanti nello stesso spazio può causare **feedback audio**, rendendo l’esperienza della riunione sgradevole per tutti i partecipanti.
 
 Per affrontare queste sfide, segui queste **migliori pratiche**:
 
-- **Utilizza cuffie con cavo o wireless:** preferibilmente con cancellazione del rumore per evitare eco e feedback.  
-- **Modalità “In loco”:** partecipa alla riunione in modalità “In loco” quando sei fisicamente presente vicino alla telecamera a 360°.  
-  - Questa modalità è ottimizzata per l’uso in loco:  
-    - Disattiva per impostazione predefinita il microfono e l’altoparlante del partecipante. 
- - **Non** trasmette il feed della videocamera del partecipante. 
- - **Non** visualizza il feed della videocamera a 360° nel browser del partecipante.  
-    - Risparmia la larghezza di banda di rete, garantendo che la telecamera a 360° disponga della massima larghezza di banda in upload disponibile per lo streaming live. 
- - Utile quando un utente desidera condividere dettagli specifici; è **possibile condividere a sua volta il proprio video** per inquadrature mirate.  
-- **Disattivare l’audio quando non si sta parlando attivamente:** previene il feedback audio indesiderato e le distrazioni.  
-- **Utilizzare una rete separata, se possibile:** collegare lo smartphone a una rete diversa da quella della telecamera per ridurre le interferenze.  
+- **Utilizza cuffie con cavo o wireless:** preferibilmente con cancellazione del rumore per prevenire eco e feedback.  
+- **Modalità “In loco”:** Partecipate alla riunione in modalità “In loco” quando siete fisicamente presenti vicino alla telecamera a 360°, poiché questa modalità è ottimizzata per l’uso in loco: 
+ - Disattiva per impostazione predefinita il microfono e l’altoparlante del partecipante. 
+ - **Non** trasmette il feed della telecamera del partecipante.  
+    - **Non** visualizza il feed della telecamera a 360° nel browser del partecipante. 
+ - Risparmia la larghezza di banda della rete, garantendo che la telecamera a 360° disponga della massima larghezza di banda in upload disponibile per lo streaming live. 
+ - Utile quando un utente desidera condividere dettagli specifici; è **possibile condividere a sua volta la propria videocamera** per inquadrature mirate.  
+- **Disattivare l’audio quando non si sta parlando attivamente:** impedisce feedback audio indesiderati e distrazioni.  
+- **Utilizzare una rete separata, se possibile:** collegare lo smartphone a una rete diversa da quella della videocamera per ridurre le interferenze.  
 
 Seguire queste linee guida garantisce un tour in diretta fluido e di alta qualità sia per i partecipanti in loco che per quelli remoti.
 
@@ -549,38 +548,37 @@ Ecco i menu (1) Livello superiore, (2) Impostazioni e (3) Impostazioni di rete.
 
 ![App Avatour 360° Camera - Tre menu](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-cam-app-3-menu-screens_nju8bt.png) *App Avatour 360° Camera - 3 menu*
 
-**Acquisizione rapida** - Per la registrazione offline di video a 360° sulla scheda di memoria SD inserita nella videocamera a 360°. - Per una descrizione dettagliata, consulta [Come si registrano e si caricano i video a 360° con l’app Avatour?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app). Si consiglia di utilizzare un dispositivo audio esterno (collegato tramite Bluetooth). N.B. È anche possibile modificare l’angolo di ripresa da 360° a 270°, 180° e a video e immagini standard in 2D, ad esempio per mettere a fuoco o oscurare aree riservate: basta cambiare le modalità nell’angolo in basso a destra una volta nella schermata QC (*possibile tuttavia solo con una risoluzione 4K selezionata nelle Impostazioni per Quick Capture – vedi sotto*)
+**Acquisizione rapida** - Per la registrazione offline di video a 360° sulla scheda di memoria SD inserita nella videocamera a 360°. - Per una descrizione dettagliata, consulta [Come si registrano e si caricano video a 360° con l’app Avatour?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app). Si consiglia di utilizzare un dispositivo audio esterno (collegato tramite Bluetooth). N.B. È anche possibile modificare l’angolo di ripresa da 360° a 270°, 180° e a video e immagini 2D standard, ad esempio per mettere a fuoco o oscurare aree riservate: basta cambiare le modalità nell’angolo in basso a destra una volta nella schermata QC (*possibile tuttavia solo con una risoluzione 4K selezionata nelle Impostazioni per Quick Capture – vedi sotto*)
 
-**Riunione in diretta** - Per videoconferenze in diretta a 360°. Vedrete le vostre aree di lavoro e, cliccando su una di esse, avvierete lo streaming video in diretta dalla telecamera a 360°. Prima di poter partecipare alla riunione con la vostra telecamera a 360°, è necessario collegare un dispositivo audio tramite Bluetooth. Per una descrizione dettagliata, consulta [Come avviare una riunione Live Capture con la tua telecamera Pilot?](https://avatour.com/support/how-to-start-a-live-capture-meeting-with-your-pilot-camera)
+**Riunione in diretta** - Per videoconferenze in diretta a 360°. Vedrai i tuoi spazi di lavoro e, cliccando su uno di essi, avvierai lo streaming video in diretta dalla telecamera a 360°. Prima di poter partecipare alla riunione con la tua telecamera a 360°, devi collegare un dispositivo audio tramite Bluetooth. Per una descrizione dettagliata, consulta [Come avviare una riunione Live Capture con la tua telecamera Pilot?](https://avatour.com/support/how-to-start-a-live-capture-meeting-with-your-pilot-camera)
 
-> Quando si ospita una riunione Live Capture con la propria telecamera a 360°, si avranno a disposizione strumenti di riunione simili a quelli dell’esperienza web. Ecco un link al nostro articolo della Knowledge Base che spiega questi strumenti in modo più dettagliato: [Strumenti dell’app operatore](https://avatour.com/support/what-avatour-app-tools-are-available-to-labpano-pilot-camera-operators)
+> Quando si ospita una riunione Live Capture con la propria telecamera a 360°, si avranno a disposizione strumenti di riunione simili a quelli dell’esperienza web. Ecco un link al nostro articolo della Knowledge Base che spiega questi strumenti in modo più dettagliato: [Strumenti dell’app per operatori](https://avatour.com/support/what-avatour-app-tools-are-available-to-labpano-pilot-camera-operators)
 
 **Galleria** - Qui troverai tutti i tuoi video e le tue immagini a 360° da caricare sulla console web di Avatour. Puoi caricare ed eliminare risorse in blocco: tocca "Seleziona" nella parte superiore dello schermo. Prima del caricamento puoi scegliere diverse operazioni di elaborazione come “Sfocare i volti”, generare un “Riassunto AI” e ottimizzare il segnale audio con “Migliora il parlato”. Puoi anche scegliere un’area di lavoro a cui assegnare il file: ovviamente sarà presente anche nella sezione generale dei file nella Web Console.
 
 **Impostazioni** - All’interno delle Impostazioni, sono disponibili le seguenti opzioni:
 
 - **Rete**: questa opzione consente di modificare la rete Wi-Fi a cui è connessa la videocamera o di eseguire un test di connessione di rete per visualizzare la velocità di streaming
-- **Acquisizione in diretta**: regola le impostazioni di acquisizione in diretta in base alla larghezza di banda disponibile, alla sensibilità VR dell’ospite o alla presenza o meno delle lenti protettive installate sulla telecamera:
-  - **Frequenza fotogrammi target (opzionale)**: regola la frequenza fotogrammi del video in acquisizione live tra 15 fps, 24 fps e 30 fps. Frequenze fotogrammi più elevate producono un video più fluido, ma richiedono una maggiore larghezza di banda in upload. Impostazione predefinita: 15 fps
-  - **Bitrate target**: consente di aumentare o diminuire il bitrate massimo di streaming per la tua Live Capture. Puoi impostare il bitrate target tra 1 Mbps e 10 Mbps. Bitrate più elevati comporteranno una risoluzione video più alta, ma richiederanno una maggiore larghezza di banda in upload. Impostazione predefinita: 5 Mbps
-  - **Ottimizza il movimento**: questa opzione riduce la frequenza dei fotogrammi del video, generando un carico minore sulla larghezza di banda in upload della rete e aumentando il bitrate di streaming. Inoltre, questa opzione aiuta a ridurre la cinetosi per i partecipanti in realtà virtuale. Impostazione predefinita: Disattivata
-  - **Blocco direzione**: questa opzione “blocca” la visione a 360°, indipendentemente da come si muova la videocamera a 360°. Se desideri che il video a 360° si muova seguendo il movimento della videocamera, ad esempio se vuoi "puntare" con l'obiettivo anteriore verso qualcosa, imposta il Blocco direzione su No. In questo modo la videocamera si comporterà come una videocamera tradizionale e potrebbe risultare più utile per le visite guidate. Impostazione predefinita: Sì
-  - **Orientamento iniziale**: quando si imposta il Blocco direzione su No, è possibile scegliere quale obiettivo (anteriore o posteriore) debba rappresentare l’orientamento iniziale all’avvio del video in diretta. Impostazione predefinita: rivolto verso l’operatore, poiché questo è il modo più naturale per avviare una riunione in diretta (= obiettivo posteriore). La funzione “Acquisizione rapida” funziona in modo diverso (l’obiettivo anteriore è l’orientamento iniziale per impostazione predefinita – vedi sotto).
+- **Acquisizione in diretta**: Regola le impostazioni di Live Capture in base alla larghezza di banda disponibile, alla sensibilità VR dell’ospite o alla presenza o meno delle lenti protettive installate sulla telecamera:
+  - **Frequenza fotogrammi target (opzionale)**: regola la frequenza fotogrammi del video in Live Capture tra 15 fps, 24 fps e 30 fps. Frequenze di fotogrammi più elevate producono un video più fluido, ma richiedono una maggiore larghezza di banda in upload. Impostazione predefinita: 15 fps
+  - **Bitrate target**: Consente di aumentare o diminuire il bitrate massimo di streaming per la Live Capture. È possibile impostare il bitrate target tra 1 Mbps e 10 Mbps. Bitrate più elevati comportano una risoluzione video più alta, ma richiedono una maggiore larghezza di banda in upload. Impostazione predefinita: 5 Mbps
+  - **Ottimizza il movimento**: questa opzione riduce la frequenza dei fotogrammi del video, generando un carico minore sulla larghezza di banda in upload della rete e aumentando il bitrate di streaming. Inoltre, questa opzione aiuta a ridurre la cinetosi per i partecipanti in realtà virtuale. Impostazione predefinita: Disattivato
+  - **Blocco direzione**: questa opzione “blocca” la visione a 360°, indipendentemente da come si muova la videocamera a 360°. Se desideri che il video a 360° segua i movimenti della telecamera, ad esempio se vuoi “puntare” con l’obiettivo anteriore verso qualcosa, imposta il Blocco direzione su No. In questo modo la telecamera si comporterà come una telecamera tradizionale e potrebbe risultare più utile per le visite guidate. Impostazione predefinita: Sì
+  - **Orientamento iniziale**: quando si imposta il Blocco direzione su No, è possibile scegliere quale obiettivo (anteriore o posteriore) debba essere l’orientamento iniziale all’avvio del video in diretta. Impostazione predefinita: rivolto verso l’operatore, poiché questo è il modo più naturale per avviare una riunione in diretta (= obiettivo posteriore). La funzione “Acquisizione rapida” funziona in modo diverso (l’obiettivo anteriore è l’orientamento iniziale per impostazione predefinita – vedi sotto).
 
-- **Acquisizione rapida**: Regola le impostazioni di "Acquisizione rapida" in base alla frequenza dei fotogrammi video preferita, alla larghezza di banda disponibile per il caricamento dei video registrati e ad altre preferenze. Le funzionalità relative alla mappa, come spiegato sopra (ad es. visualizzazione della mappa, note sulla mappa), sono disponibili quando viene ricevuto un segnale GPS e l'impostazione della posizione nelle impostazioni native della fotocamera è abilitata (dovrebbe essere attiva di default). L’icona della posizione/GPS nell’angolo in alto a destra di “Acquisizione rapida” dovrebbe essere verde. Potrebbero essere necessari alcuni istanti per ricevere il segnale GPS e stabilire la connessione.
-  - **Risoluzione**: Qui è possibile modificare la risoluzione. *(Le risoluzioni a 6k sono sperimentali e richiedono una fase di unione manuale nella Galleria prima del caricamento sulla console web di Avatour.)*
-    - **4k** - È la risoluzione standard e garantisce un buon equilibrio tra qualità video e dimensione del file.
-	  - **6k a 30 fps** *(richiede un'ulteriore operazione di unione nella Galleria)*
-	  - **6k a 10 fps** *(richiede un passaggio aggiuntivo di unione delle immagini nella Galleria)* - È utile se si desidera mantenere le dimensioni del file inferiori rispetto a quelle a 30 fps, quando la fluidità del movimento è meno importante.
-	  - Per altre risoluzioni è possibile utilizzare anche le app native della fotocamera, disponibili anche su PanoX V2; per i dettagli, consultare [Come si registrano e si caricano video a 360° con l’app Avatour?](https://avatour.com/support/come-si-registrano-e-caricano-video-a-360-con-l-app-avatour)
+- **Acquisizione rapida**: Regola le impostazioni di "Acquisizione rapida" in base alla frequenza dei fotogrammi video preferita, alla larghezza di banda disponibile per il caricamento dei video registrati e ad altre preferenze. Le funzioni relative alla mappa, come spiegato sopra (ad es. vista mappa, note sulla mappa), sono disponibili quando viene ricevuto un segnale GPS e l’impostazione della posizione nelle impostazioni native della fotocamera è abilitata (dovrebbe esserlo per impostazione predefinita). L’icona di localizzazione/GPS nell’angolo in alto a destra di “Acquisizione rapida” dovrebbe essere verde. Potrebbero essere necessari alcuni istanti per ricevere il segnale GPS e stabilire la connessione.
+  - **Risoluzione**: qui è possibile modificare la risoluzione. *(Le risoluzioni a 6k sono sperimentali e richiedono una fase di unione manuale nella Galleria prima del caricamento sulla console web di Avatour.)*
+ - **4k** - È lo standard e mantiene un buon equilibrio tra qualità video e dimensione del file.
+      - **6k a 30 fps** *(richiede un’ulteriore fase di unione nella Galleria)*
+ - **6k a 10 fps** *(richiede un’ulteriore fase di unione nella Galleria)* - È utile se si desidera mantenere le dimensioni del file inferiori rispetto a quelle ottenute con i 30 fps, quando la fluidità del movimento è meno importante.
+ - Per altre risoluzioni è possibile utilizzare anche le app native della fotocamera, disponibili anche su PanoX V2; per i dettagli, consultare [Come si registrano e si caricano video a 360° con l’app Avatour?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)
   - **Frequenza fotogrammi target** *(disponibile solo per la risoluzione 4K)* - Regola la frequenza fotogrammi per le tue registrazioni video in modalità Quick Capture tra 15 fps, 24 fps e 30 fps. Frequenze fotogrammi più elevate producono un video più fluido, ma aumentano le dimensioni del file video e il tempo di caricamento. Consigliato: 30 fps
-  - **Bitrate target** *(disponibile solo per la risoluzione 4K)* Imposta il bitrate target per i caricamenti in modalità Quick Capture tra 5 Mbps e 20 Mbps. Bitrate più bassi aumentano la velocità di caricamento, ma riducono la qualità del video. Consigliato: 20 Mbps
-  - **Blocco orientamento**: come indicato sopra nella sezione “Live Capture”. L’orientamento iniziale predefinito per Quick Capture è sempre l’obiettivo anteriore.
+  - **Bitrate target** *(disponibile solo per la risoluzione 4K)* Imposta il bitrate target per i caricamenti Quick Capture tra 5 Mbps e 20 Mbps. Bitrate più bassi aumentano la velocità di caricamento, ma riducono la qualità del video. Consigliato: 20 Mbps
+  - **Blocco orientamento**: come indicato sopra nella sezione “Acquisizione in diretta”. L’orientamento iniziale predefinito per “Acquisizione rapida” è sempre l’obiettivo anteriore.
 
-  > Consulta anche il nostro [Calcolatore delle dimensioni dei file video Avatour a 360°](https://avatour.com/support/avatour-360deg-video-file-size-calculator) per ulteriori consigli sulle impostazioni sopra indicate e sulle dimensioni dei file video. Per evitare di esaurire lo spazio di archiviazione, verrà visualizzato un avviso che ti consentirà di interrompere la registrazione e liberare spazio (ad esempio caricando i video dalla Galleria nella sezione “Risorse” della console web di Avatour).
+  > Consulta anche il nostro [Calcolatore delle dimensioni dei file video a 360° di Avatour](https://avatour.com/support/avatour-360deg-video-file-size-calculator) per ulteriori consigli sulle impostazioni sopra indicate e sulle dimensioni dei file video. Per evitare di esaurire lo spazio di archiviazione, verrà visualizzato un avviso che ti consentirà di interrompere la registrazione e liberare spazio (ad esempio caricando i video dalla Galleria nella sezione “Risorse” della console web di Avatour).
 
 - **Informazioni**: visualizza il numero di serie del dispositivo e la versione del software
-
 
 **Account** - Per effettuare l’accesso con il proprio account host o amministratore Avatour.
 

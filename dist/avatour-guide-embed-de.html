@@ -356,7 +356,7 @@ body.print-mode .guide-article table { page-break-inside: avoid; }
 <a href="#for-host-and-admin-users-avatour-web-console">4. Für Host- und Admin-Benutzer – Avatour-Webkonsole</a>
 <a href="#web-console-overview-main-menu" class="sub">4.1 Webkonsole – Übersicht Hauptmenü</a>
 <a href="#web-console-details-by-menu-item" class="sub">4.2 Webkonsole – Details nach Menüpunkt (mit Bildern)</a>
-<a href="#onsite-how-to-use-the-avatour-turnkey-kit">5. Vor Ort – So nutzen Sie das Avatour-Komplettpaket</a>
+<a href="#onsite-how-to-use-the-avatour-turnkey-kit">5. Vor Ort – So verwenden Sie das Avatour-Komplettpaket</a>
 <a href="#51-erste-schritte" class="sub">5.1 Erste Schritte</a>
 <a href="#52-nützliche-tipps" class="sub">5.2 Nützliche Tipps</a>
 <a href="#53-avatour-kamera-app" class="sub">5.3 Avatour-Kamera-App</a>
@@ -389,10 +389,10 @@ Werfen Sie insbesondere einen Blick auf die <a href="https://avatour.com/feature
 </ol>
 <h2 id="avatour-user-types">2. Avatour-Benutzertypen</h2>
 <h3 id="21-teilnehmer-an-besprechungen-kein-konto-erforderlich">2.1 Teilnehmer an Besprechungen (kein Konto erforderlich)</h3>
-<p>Benutzer können an der Besprechung teilnehmen, ohne sich für ein Avatour-Konto zu registrieren. Ausnahme: Wenn der Gastgeber in den Besprechungseinstellungen die Option „Authentifizierung erforderlich“ aktiviert hat (siehe auch 4.2.1 Einstellungen für Arbeitsbereiche und Besprechungen) – beispielsweise, um nur internen Mitarbeitern die Teilnahme über Single Sign-On (SSO) zu ermöglichen –, wird in der Kalendereinladung darauf hingewiesen, dass sich die Teilnehmer zur Authentifizierung anmelden müssen.</p>
+<p>Benutzer können an der Besprechung teilnehmen, ohne sich für ein Avatour-Konto zu registrieren. Ausnahme: Wenn der Gastgeber die Besprechungseinstellung „Authentifizierung erforderlich“ aktiviert hat (siehe auch 4.2.1 Einstellungen für Arbeitsbereiche und Besprechungen) – beispielsweise, um nur internen Mitarbeitern die Teilnahme über Single Sign-On (SSO) zu ermöglichen –, wird in der Kalendereinladung darauf hingewiesen, dass sich die Teilnehmer zur Authentifizierung anmelden müssen.</p>
 <p>Benutzer nehmen wie folgt an der Besprechung teil:</p>
 <ul>
-<li>Sie erhalten einen Besprechungslink vom Gastgeber.</li>
+<li>Sie erhalten vom Gastgeber einen Besprechungslink.</li>
 <li>Sie geben ein Besprechungskennwort ein, falls der Gastgeber eines aktiviert hat.</li>
 <li>Teilnehmer können ohne Avatour-Konto teilnehmen, es sei denn, die Besprechung ist eingeschränkt und erfordert eine Anmeldung zur Authentifizierung.</li>
 </ul>
@@ -404,22 +404,22 @@ Werfen Sie insbesondere einen Blick auf die <a href="https://avatour.com/feature
 <h4 id="212-zuschauer">2.1.2 Zuschauer</h4>
 <ul>
 <li>Kann die Besprechung verfolgen und ausschließlich über den Chat teilnehmen.</li>
-<li>Kann kein Video teilen, kein Mikrofon nutzen, keine Präsentationen halten, keine Assets abspielen/anhalten und keine Momentaufnahmen erstellen.</li>
+<li>Kann kein Video teilen, kein Mikrofon verwenden, keine Präsentationen halten, keine Assets abspielen/anhalten und keine Schnappschüsse aufnehmen.</li>
 <li>Maximal 10 Zuschauer pro Meeting.</li>
 <li>Zusammen mit den Teilnehmern kann ein Meeting bis zu 30 Teilnehmer umfassen.</li>
 </ul>
 <h3 id="22-registrierte-nutzer">2.2 Registrierte Nutzer</h3>
 <p>Registrierte Nutzer verfügen über ein Avatour-Konto. Konten werden auf eine der folgenden Weisen erstellt:</p>
 <ul>
-<li><strong>Vom Administrator eingeladen:</strong> Während der Einbindung richtet Avatour einen <strong>dedizierten Tenant</strong> für die Organisation ein und erstellt ein oder mehrere <strong>Administratorkonten</strong>. Administratoren können dann <strong>Nutzer</strong> innerhalb der Organisation <strong>einladen</strong> und sie <strong>Gruppen</strong> zuweisen, die ihre Rolle auf der Plattform definieren (Gast, Gastgeber oder Administrator). Eingeladene Nutzer erhalten einen <strong>Anmeldelink</strong>, über den sie die Kontoeinrichtung abschließen und ein Passwort festlegen können.  </li>
+<li><strong>Vom Administrator eingeladen:</strong> Während des Onboardings richtet Avatour einen <strong>dedizierten Tenant</strong> für die Organisation ein und erstellt ein oder mehrere <strong>Administratorkonten</strong>. Administratoren können dann <strong>Nutzer</strong> innerhalb der Organisation <strong>einladen</strong> und ihnen <strong>Gruppen</strong> zuweisen, die ihre Rolle auf der Plattform definieren (Gast, Gastgeber oder Administrator). Eingeladene Nutzer erhalten einen <strong>Anmeldelink</strong>, über den sie die Kontoeinrichtung abschließen und ein Passwort festlegen können.  </li>
 <li><strong>Vom Gastgeber eingeladen:</strong> Hosts können Benutzer als <strong>Mitarbeiter mit Bearbeitungsrechten</strong> zu einem Arbeitsbereich hinzufügen. Dies verbraucht eine <strong>Host-Lizenz</strong> und stellt sicher, dass der Benutzer Zugriff auf Host-Ebene hat.  </li>
-<li><strong>Automatische SSO-Bereitstellung (nur Enterprise-/Business-Stufe):</strong> Konten können automatisch vom Identitätsanbieter (IdP) angelegt werden. Standardmäßig werden über SSO bereitgestellte Konten der <strong>Gastgruppe</strong> hinzugefügt, sofern dies nicht über <strong>SAML-Gruppenzuordnungen</strong> überschrieben wird. Administratoren können auch bei aktiviertem SSO weiterhin Nutzer einladen und ihnen direkt eine Gruppenmitgliedschaft zuweisen.</li>
+<li><strong>Automatische SSO-Bereitstellung (nur Enterprise-/Business-Stufe):</strong> Konten können automatisch vom Identitätsanbieter (IdP) angelegt werden. Standardmäßig werden über SSO bereitgestellte Konten der <strong>Gästegruppe</strong> hinzugefügt, sofern dies nicht über <strong>SAML-Gruppenzuordnungen</strong> überschrieben wird. Administratoren können auch bei aktiviertem SSO weiterhin Nutzer einladen und ihnen direkt eine Gruppenmitgliedschaft zuweisen.</li>
 </ul>
 <p><strong>Zusammenfassung:</strong>  </p>
-<p>Registrierte Benutzer und ihre Gruppenmitgliedschaft können auf verschiedene Arten verwaltet werden:</p>
+<p>Registrierte Nutzer und ihre Gruppenzugehörigkeit können auf verschiedene Arten verwaltet werden:</p>
 <ul>
-<li><strong>Verwaltung durch Administratoren:</strong> Ein Administrator in der Avatour-Konsole kann Benutzer anlegen und ihnen Gruppen zuweisen, die ihre Plattformrolle (Gast, Host oder Administrator) definieren.  </li>
-<li><strong>SSO-Bereitstellung:</strong> Für Kunden der Enterprise- oder Business-Stufe mit aktiviertem SSO kann der IdP automatisch Konten bereitstellen und Gruppenmitgliedschaften zuweisen, wodurch die Plattformrolle des Benutzers definiert wird.  </li>
+<li><strong>Verwaltung durch Administratoren:</strong> Ein Administrator in der Avatour-Konsole kann Nutzer anlegen und ihnen Gruppen zuweisen, die ihre Rolle auf der Plattform definieren (Gast, Host oder Administrator).  </li>
+<li><strong>SSO-Bereitstellung:</strong> Für Kunden der Enterprise- oder Business-Stufe mit aktiviertem SSO kann der IdP automatisch Konten bereitstellen und Gruppenmitgliedschaften zuweisen, die die Plattformrolle des Benutzers definieren.  </li>
 <li><strong>Von Hosts eingeladene Benutzer:</strong> Hosts können andere Benutzer als „Editor“-Mitarbeiter zu bestimmten Arbeitsbereichen einladen. Die Zuweisung der Rolle „Editor“-Mitarbeiter verbraucht eine Host-Lizenz.</li>
 </ul>
 <p><strong>Empfohlene Vorgehensweise (Enterprise-Kunden):</strong><br />
@@ -427,13 +427,13 @@ Für Organisationen, die mit einer großen Anzahl von Benutzern rechnen, die Zug
 <h4 id="221-gastbenutzer">2.2.1 Gastbenutzer</h4>
 <ul>
 <li>Werden der <strong>Gastgruppe</strong> hinzugefügt.  </li>
-<li>Können <strong>Assets</strong> in Arbeitsbereichen anzeigen, in denen sie als <strong>Mitwirkende mit Betrachterrechten</strong> hinzugefügt wurden.  </li>
+<li>Können <strong>Assets</strong> in Arbeitsbereichen <strong>anzeigen</strong>, in denen sie als <strong>Mitwirkende mit Betrachterrechten</strong> hinzugefügt wurden.  </li>
 <li>Können keine Arbeitsbereiche erstellen, keine Besprechungen veranstalten und keine Inhalte hochladen.  </li>
 <li>Über SSO bereitgestellte Gastkonten <strong>authentifizieren sich über den IdP</strong>; ein von Avatour verwaltetes Passwort ist nicht erforderlich.</li>
 </ul>
 <hr />
 <h4 id="222-lizenzierte-benutzer-zugriff-auf-die-webkonsole">2.2.2 Lizenzierte Benutzer (Zugriff auf die Webkonsole)</h4>
-<h5 id="gastgeber-benutzer-gruppe-gastgeber">Gastgeber-Benutzer (Gruppe: Gastgeber)</h5>
+<h5 id="host-benutzer-gruppe-host">Host-Benutzer (Gruppe: Host)</h5>
 <ul>
 <li>Können Arbeitsbereiche erstellen/verwalten, Mitwirkende in einen Arbeitsbereich einladen, <strong>Live-Meetings veranstalten</strong> und <strong>Schnellaufnahmen</strong> hochladen.  </li>
 <li>Haben Zugriff auf das <strong>Host-Dashboard</strong> und die <strong>Operator-App</strong> auf unterstützten 360°-Kameras.  </li>
@@ -447,7 +447,7 @@ Für Organisationen, die mit einer großen Anzahl von Benutzern rechnen, die Zug
 <ul>
 <li>Neue Benutzer anlegen und diesen Gruppen zuweisen.</li>
 <li>Passwörter zurücksetzen, wenn die Verwaltung durch Avatour erfolgt (gilt nicht, wenn SSO aktiviert ist). </li>
-<li>Gastbenutzer zu Hosts hochstufen.  </li>
+<li>Gastbenutzer auf Host hochstufen.  </li>
 <li>Benutzer deaktivieren (Admin-Konten müssen vor dem Löschen zunächst in Host-Konten umgewandelt werden).  </li>
 <li>Assets beim Löschen von einem Host-Benutzer auf einen anderen übertragen.</li>
 </ul>
@@ -467,17 +467,17 @@ Für Organisationen, die mit einer großen Anzahl von Benutzern rechnen, die Zug
 <p>Arbeitsbereichsberechtigungen legen fest, was ein Benutzer <strong>innerhalb eines bestimmten Arbeitsbereichs</strong> tun darf. Diese sind unabhängig von der Gruppenmitgliedschaft auf Plattformebene (Gast, Gastgeber, Administrator).</p>
 <ul>
 <li>
-<p><strong>Mitarbeiter mit Editor-Berechtigung:</strong> Benutzer mit dieser Berechtigung können:</p>
+<p><strong>Mitarbeiter mit Bearbeitungsrechten:</strong> Benutzer mit dieser Berechtigung können:</p>
 <ul>
 <li>Assets verwalten (hochladen, entfernen, Gesichter unkenntlich machen, Zusammenfassungen erstellen)  </li>
-<li>Besprechungseinstellungen verwalten (Aufzeichnung aktivieren/deaktivieren, Teilnehmer zulassen oder entfernen)  </li>
-<li>Live-Besprechungen planen und leiten  </li>
+<li>Meeting-Einstellungen verwalten (Aufzeichnung aktivieren/deaktivieren, Teilnehmer zulassen oder entfernen)  </li>
+<li>Live-Meetings planen und leiten  </li>
 <li>Berichte auf Basis vordefinierter Vorlagen erstellen  </li>
-<li>Mitwirkende zum Arbeitsbereich hinzufügen oder daraus entfernen  </li>
+<li>Mitwirkende zum Workspace hinzufügen oder daraus entfernen  </li>
 </ul>
 </li>
 <li>
-<p><strong>Mitwirkender mit Leserechten:</strong> Nutzer mit dieser Berechtigung haben Lesezugriff auf die Assets des Arbeitsbereichs. Sie <strong>können keine Assets bearbeiten, keine Besprechungen verwalten und keine Mitwirkenden verwalten</strong>, aber sie <strong>können Notizen zu Assets erstellen</strong>. </p>
+<p><strong>Mitwirkender mit Leserechten:</strong> Benutzer mit dieser Berechtigung haben Lesezugriff auf die Assets des Arbeitsbereichs. Sie <strong>können weder Assets bearbeiten noch Besprechungen oder Mitwirkende verwalten</strong>, aber sie <strong>können Notizen zu Assets erstellen</strong>. </p>
 </li>
 </ul>
 <h2 id="for-remote-meeting-participants-and-workspace-visitors">3. Für Teilnehmer an Remote-Besprechungen und Besucher des Arbeitsbereichs</h2>
@@ -756,12 +756,12 @@ Durch Klicken auf eine Menüoption wird ein <strong>Seitenbereich</strong> auf d
 <p><img alt="Avatour-Webkonsole – Hauptmenüpunkt „Analytik“ (1 von 3)" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-main-menu-analytics-1-of-3_ds3epe.png" /> <em>Übersicht „Analytik“</em></p>
 <p><img alt="Avatour-Webkonsole – Hauptmenüpunkt „Analytik“ (2 von 3)" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-main-menu-analytics-2-of-3_vpcsme.png" /> <em>Besprechungsaktivität und Arbeitsbereichsnutzung</em></p>
 <p><img alt="Avatour-Webkonsole – Hauptmenüpunkt „Analytik“ (3 von 3)" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-main-menu-analytics-3-of-3_hn2pmr.png" /> <em>Einsparungen und Nutzung von Gerätelizenzen</em> </p>
-<h2 id="onsite-how-to-use-the-avatour-turnkey-kit">5. Vor Ort – So nutzen Sie das Avatour-Komplettpaket</h2>
+<h2 id="onsite-how-to-use-the-avatour-turnkey-kit">5. Vor Ort – So verwenden Sie das Avatour-Komplettpaket</h2>
 <h3 id="51-erste-schritte">5.1 Erste Schritte</h3>
 <p>Hier finden Sie eine sehr umfassende Online-Anleitung für Ihre ersten Schritte mit dem Avatour Turnkey Kit: <a href="https://avatour.com/quickstart-panox-v2" target="_blank" rel="noopener">Schnellstartanleitung – Avatour Turnkey Kit 3.1 (Einrichtung des Pilot PanoX V2)</a></p>
 <p>Und hier ist auch das Bild mit den Anweisungen, das Sie auf der Innenseite des Deckels des 3.1-Kit-Koffers finden.
 <img alt="Abbildung auf der Innenseite des Deckels des Avatour-Kit-Koffers" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/v1775994773/avatour-turnkey-kit-3.1-inside-lid-picture_dq4ipl.png" /> <em>Bild auf der Innenseite des Deckels des Avatour-Kit-Koffers</em> </p>
-<p>Befolgen Sie die Anleitung und die Hinweise zum Auspacken, Zusammenbauen und Einschalten Ihrer Kamera.</p>
+<p>Befolgen Sie die Anleitung und die Anweisungen zum Auspacken, Zusammenbauen und Einschalten Ihrer Kamera.</p>
 <hr />
 <h3 id="52-nützliche-tipps">5.2 Nützliche Tipps</h3>
 <h4 id="externer-akku--längere-live-meetings-und-verbesserte-wärmeableitung">Externer Akku – Längere Live-Meetings und verbesserte Wärmeableitung</h4>
@@ -771,22 +771,22 @@ Durch Klicken auf eine Menüoption wird ein <strong>Seitenbereich</strong> auf d
 <p><strong>Falls Ihr Set einen Ulanzi-Akku enthält:</strong> Befestigen Sie ihn zwischen dem Stativfuß und dem ausziehbaren Stab und schließen Sie den Akku dann über USB-C an die Kamera an.  </p>
 </li>
 <li>
-<p><strong>Wenn Ihr Set einen Telesin-Akustab enthält:</strong> Befestigen Sie die Kamera direkt am ausziehbaren Telesin-Akustab und schließen Sie sie über USB-C an.  </p>
+<p><strong>Falls Ihr Set einen Telesin-Akku-Stab enthält:</strong> Befestigen Sie die Kamera direkt am ausziehbaren Telesin-Akustab und schließen Sie sie über USB-C an.  </p>
 </li>
 </ul>
 <p>Verwendung des externen Akkus:</p>
 <ol>
-<li>Verlängert die Gesamtlaufzeit von ca. 40 Minuten (nur Kamera-Akku) auf ca. 3 Stunden.  </li>
+<li>Verlängert die Gesamtlaufzeit von ~40 Minuten (nur Kamera-Akku) auf ~3 Stunden.  </li>
 <li>Verleiht dem Kameraaufbau zusätzliche Stabilität.  </li>
 <li>Trägt dazu bei, eine mögliche Überhitzung zu verhindern.  </li>
 </ol>
 <blockquote>
 <p>Wir empfehlen, den externen Akku von Anfang an zu verwenden, insbesondere bei Live-Meetings.</p>
 </blockquote>
-<h4 id="audio-hinweise-für-live-meetings-und-aufzeichnungen">Audio-Hinweise für Live-Meetings und Aufzeichnungen</h4>
+<h4 id="audio-hinweise-für-live-meetings-und-aufnahmen">Audio-Hinweise für Live-Meetings und Aufnahmen</h4>
 <ul>
 <li>
-<p><strong>Lauter Umgebung:</strong> 
+<p><strong>Lautstarke Umgebungen:</strong> 
   Verwenden Sie die im Lieferumfang enthaltenen Shokz-Kopfhörer für eine klare Audioaufnahme.  </p>
 <ul>
 <li><strong>Ein-/Ausschalten:</strong> Halten Sie die „+“-Taste 3 Sekunden lang gedrückt (blaue LED = ein, rote LED = aus).  </li>
@@ -796,19 +796,19 @@ Durch Klicken auf eine Menüoption wird ein <strong>Seitenbereich</strong> auf d
 </li>
 <li>
 <p><strong>Ruhigere Umgebungen / mehrere Teilnehmer in der Nähe der Kamera:</strong> 
-  Verwenden Sie den NoxGear-Anstecklautsprecher. Er bietet zwar nicht die gleiche Klangqualität wie Konferenzlautsprecher (z. B. Jabra Speak), lässt sich jedoch einfach an Ihrem Hemd befestigen und erfasst Stimmen in der Nähe effektiv.  </p>
+  Verwenden Sie den NoxGear-Clip-Lautsprecher. Er bietet zwar nicht die gleiche Klangqualität wie Konferenzlautsprecher (z. B. Jabra Speak), lässt sich jedoch einfach an Ihrem Hemd befestigen und nimmt Stimmen in der Nähe effektiv auf.  </p>
 <ul>
 <li><strong>Ein-/Ausschalten:</strong> Halten Sie die Wiedergabe-/Pause-Taste 2 Sekunden lang gedrückt.  </li>
-<li><strong>Bluetooth-Kopplungsmodus:</strong> Wechselt beim Einschalten automatisch in den Kopplungsmodus (LED blinkt blau/rot; leuchtet blau, wenn gekoppelt).  </li>
+<li><strong>Bluetooth-Kopplungsmodus:</strong> Wechselt beim Einschalten automatisch in den Kopplungsmodus (LED blinkt blau/rot; leuchtet blau, wenn die Kopplung hergestellt ist).  </li>
 <li><strong>Lautstärke:</strong> Verwenden Sie die Tasten „+“ und „-“.  </li>
 </ul>
 </li>
 <li>
-<p><strong>Verwendung Ihres eigenen Geräts:</strong> Wenn Sie ein alternatives Gerät bevorzugen (z. B. einen Konferenzlautsprecher oder ein persönliches Headset), können Sie es über die Kamera koppeln: Einstellungen → Bluetooth.  </p>
+<p><strong>Verwendung eines eigenen Geräts:</strong> Wenn Sie ein alternatives Gerät bevorzugen (z. B. einen Konferenzlautsprecher oder ein eigenes Headset), können Sie es über die Kamera koppeln: Einstellungen → Bluetooth.  </p>
 </li>
 </ul>
 <h4 id="konnektivität">Konnektivität</h4>
-<p><strong>Bevor Sie beginnen:</strong> Stellen Sie eine Internetverbindung her über:</p>
+<p><strong>Bevor Sie beginnen:</strong> Stellen Sie eine Internetverbindung sicher über:</p>
 <ul>
 <li><strong>Lokales WLAN</strong> (bevorzugt)</li>
 <li><strong>Mobilfunknetz</strong> (außerhalb der WLAN-Reichweite)</li>
@@ -816,13 +816,13 @@ Durch Klicken auf eine Menüoption wird ein <strong>Seitenbereich</strong> auf d
 <p><strong>Empfohlene Bandbreite:</strong> 10 Mbit/s Upload/Download für vollständiges 360°-Streaming (~5 Mbit/s). Eine geringere Bandbreite (1–2 Mbit/s) funktioniert nur im Stillstand.</p>
 <h5 id="netzwerkgeschwindigkeit-testen">Netzwerkgeschwindigkeit testen</h5>
 <ul>
-<li><strong>Test an einem Standort:</strong> Verwenden Sie einen beliebigen Geschwindigkeitsmesser, den Sie normalerweise nutzen (z. B. <a href="https://www.speedtest.net" target="_blank" rel="noopener">Speedtest</a>), um sowohl die Upload- als auch die Download-Bandbreite zu überprüfen.   </li>
-<li><strong>Test beim Gehen durch den Standort:</strong> Über die Kamera: Einstellungen → Netzwerk → Verbindungstest. Gehen Sie durch den gesamten Raum, um die Abdeckung und die Bandbreite zu überprüfen.</li>
+<li><strong>Test an einem Standort:</strong> Verwenden Sie einen beliebigen Geschwindigkeitstest, den Sie normalerweise nutzen (z. B. <a href="https://www.speedtest.net" target="_blank" rel="noopener">Speedtest</a>), um sowohl die Upload- als auch die Download-Bandbreite zu überprüfen.   </li>
+<li><strong>Test beim Begehen des Geländes:</strong> Von der Kamera aus: Einstellungen → Netzwerk → Verbindungstest. Gehen Sie durch den gesamten Raum, um die Abdeckung und die Bandbreite zu überprüfen.</li>
 </ul>
 <h5 id="lokales-wlan">Lokales WLAN</h5>
 <ul>
 <li>Für stabile Verbindungen dringend empfohlen.  </li>
-<li>Falls die IT-Abteilung eine Whitelist erfordert, finden Sie die MAC-Adresse unter: Einstellungen → Info → WLAN-Adresse.</li>
+<li>Falls die IT-Abteilung eine Whitelist-Eintragung verlangt, finden Sie die MAC-Adresse hier: Einstellungen → Über → WLAN-Adresse.</li>
 </ul>
 <h5 id="mobilfunknetz">Mobilfunknetz</h5>
 <p><strong>Option A: Im Kit enthaltener Hotspot &amp; SIM-Karte</strong>  </p>
@@ -830,99 +830,96 @@ Durch Klicken auf eine Menüoption wird ein <strong>Seitenbereich</strong> auf d
 <li>Befestigen Sie den GlocalMe-Hotspot am Telesin-Akku-Stick (Magnet).  </li>
 <li>Dies gewährleistet, dass keine Störungen auftreten und die Verbindung aufrechterhalten bleibt, wenn Sie sich von der Kamera entfernen.  </li>
 <li>Fehlerbehebung:<ul>
-<li>Vergewissern Sie sich, dass die vorinstallierte SIM-Karte (nicht die Cloud-SIM) verwendet wird.  </li>
+<li>Vergewissern Sie sich, dass die vorinstallierte SIM-Karte verwendet wird (nicht die Cloud-SIM).  </li>
 <li>Aktivieren Sie 5G im SIM-Karten-Manager.  </li>
 <li>Überprüfen Sie den korrekten APN für Ihre Region (<a href="https://avatour.com/support/how-do-i-change-the-apn-on-my-glocalme-hotspot" target="_blank" rel="noopener">APN-Einrichtungsanleitung</a>).</li>
 </ul>
 </li>
 </ul>
-<p><strong>Option B: Eigener Hotspot / SIM-Karte</strong>
+<p><strong>Option B: Persönlicher Hotspot / SIM-Karte</strong>
 - Verwenden Sie Ihr eigenes Smartphone oder einen dedizierten Hotspot.  </p>
 <p><strong>Wichtiger Hinweis:</strong>  </p>
 <blockquote>
-<p>Halten Sie den Hotspot ausgeschaltet, solange eine WLAN-Verbindung besteht; aktivieren Sie ihn nur, wenn Sie sich außerhalb der Reichweite befinden. Das Betriebssystem der Kamera wechselt je nach Signalstärke dynamisch zwischen WLAN-Netzwerken und wechselt möglicherweise versehentlich zum Hotspot, selbst wenn WLAN verfügbar ist.</p>
+<p>Lassen Sie den Hotspot ausgeschaltet, solange eine WLAN-Verbindung besteht; aktivieren Sie ihn erst, wenn Sie sich außerhalb der Reichweite befinden. Das Betriebssystem der Kamera wechselt je nach Signalstärke dynamisch zwischen WLAN-Netzwerken und wechselt möglicherweise versehentlich zum Hotspot, selbst wenn WLAN verfügbar ist.</p>
 <p>Mobilfunknetze können die Bandbreite unerwartet drosseln. Erkundigen Sie sich bei Ihrem Mobilfunkanbieter nach den Limits Ihres Datentarifs oder wenden Sie sich an den Avatour-Support, wenn Sie unseren Hotspot und unsere SIM-Karte nutzen.</p>
 </blockquote>
 <h5 id="situationen-mit-geringer-bandbreite">Situationen mit geringer Bandbreite</h5>
 <ul>
 <li>Nehmen Sie Standortvideos vorab auf, um sie später abzuspielen (<a href="https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app" target="_blank" rel="noopener">Anleitung zur Aufnahme</a>).  </li>
-<li>Geben Sie den Live-Feed einer Smartphone-Kamera weiter, um Bereiche mit geringer Bandbreite (0,1–0,3 Mbit/s Upload) zu ergänzen.</li>
+<li>Teilen Sie den Live-Stream einer Smartphone-Kamera, um Bereiche mit geringer Bandbreite (0,1–0,3 Mbit/s Upload) zu ergänzen.</li>
 </ul>
 <h5 id="keine-internetverbindung">Keine Internetverbindung</h5>
 <ul>
 <li>Es können nur vorab aufgezeichnete Videos verwendet werden (<a href="https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app" target="_blank" rel="noopener">Anleitung zur Aufzeichnung</a>).</li>
 </ul>
 <h4 id="weitere-teilnehmer-vor-ort--bewährte-vorgehensweisen">Weitere Teilnehmer vor Ort – Bewährte Vorgehensweisen</h4>
+<p>Wenn mehrere Teilnehmer von demselben Standort aus wie die 360°-Kamera an einem Live-Avatour-Meeting teilnehmen, ist ein sorgfältiger Umgang mit <strong>Audio und Bandbreite</strong> entscheidend:  </p>
+<ul>
+<li>Jedes vor Ort verbundene Smartphone, Tablet oder Laptop beansprucht Netzwerkbandbreite und kann die Übertragung der 360°-Kamera beeinträchtigen.  </li>
+<li>Mehrere Mikrofone und Lautsprecher im selben Raum können zu <strong>Rückkopplungen</strong> führen, was das Meeting-Erlebnis für alle Teilnehmer unangenehm macht.</li>
+</ul>
+<h4 id="weitere-teilnehmer-vor-ort--bewährte-vorgehensweisen_1">Weitere Teilnehmer vor Ort – Bewährte Vorgehensweisen</h4>
 <p>Wenn mehrere Teilnehmer von demselben Standort wie die 360°-Kamera aus an einem Live-Avatour-Meeting teilnehmen, ist ein sorgfältiges Management von <strong>Audio und Bandbreite</strong> entscheidend:  </p>
 <ul>
 <li>Jedes vor Ort verbundene Smartphone, Tablet oder Laptop beansprucht Netzwerkbandbreite und kann die Übertragung der 360°-Kamera beeinträchtigen.  </li>
-<li>Mehrere Mikrofone und Lautsprecher im selben Raum können <strong>Rückkopplungen</strong> verursachen, was das Meeting-Erlebnis für alle Teilnehmer unangenehm macht.</li>
+<li>Mehrere Mikrofone und Lautsprecher im selben Raum können <strong>Toneinbrüche</strong> verursachen, was das Meeting-Erlebnis für alle Teilnehmer unangenehm macht.</li>
 </ul>
-<h4 id="weitere-teilnehmer-vor-ort--bewährte-vorgehensweisen_1">Weitere Teilnehmer vor Ort – Bewährte Vorgehensweisen</h4>
-<p>Wenn mehrere Teilnehmer von demselben Standort wie die 360°-Kamera aus an einem Live-Avatour-Meeting teilnehmen, ist eine sorgfältige Verwaltung von <strong>Audio und Bandbreite</strong> entscheidend:  </p>
+<p>Befolgen Sie diese <strong>Best Practices</strong>, um diese Herausforderungen zu bewältigen:</p>
 <ul>
-<li>Jedes vor Ort verbundene Smartphone, Tablet oder jeder Laptop beansprucht Netzwerkbandbreite und kann die Übertragung der 360°-Kamera beeinträchtigen.  </li>
-<li>Mehrere Mikrofone und Lautsprecher im selben Raum können <strong>Rückkopplungen</strong> verursachen, was das Meeting-Erlebnis für alle Teilnehmer unangenehm macht.</li>
-</ul>
-<p>Befolgen Sie zur Bewältigung dieser Herausforderungen die folgenden <strong>Best Practices</strong>:</p>
-<ul>
-<li><strong>Verwenden Sie kabelgebundene oder kabellose Kopfhörer:</strong> Vorzugsweise mit Geräuschunterdrückung, um Echo und Rückkopplungen zu vermeiden.  </li>
-<li><strong>Vor-Ort-Modus:</strong> Nehmen Sie im Vor-Ort-Modus am Meeting teil, wenn Sie sich physisch in der Nähe der 360°-Kamera befinden.  <ul>
-<li>Dieser Modus ist für den Einsatz vor Ort optimiert: </li>
-</ul>
-</li>
+<li><strong>Verwenden Sie kabelgebundene oder kabellose Kopfhörer:</strong> Vorzugsweise mit Geräuschunterdrückung, um Echo und Toneinbrüche zu vermeiden.  </li>
+<li><strong>Vor-Ort-Modus:</strong> Nehmen Sie im Vor-Ort-Modus an der Besprechung teil, wenn Sie sich physisch in der Nähe der 360°-Kamera befinden, da dieser Modus für die Nutzung vor Ort optimiert ist: </li>
 <li>Schaltet das Mikrofon und den Lautsprecher des Teilnehmers standardmäßig stumm. </li>
 <li>Sendet <strong>nicht</strong> das Kamerabild des Teilnehmers.<br />
-        - Das Bild der 360°-Kamera wird <strong>nicht</strong> im Browser des Teilnehmers angezeigt. </li>
-<li>Dies schont die Netzwerkbandbreite und stellt sicher, dass der Live-Stream der 360°-Kamera die maximal verfügbare Upload-Bandbreite nutzen kann. </li>
+        - Das Bild der 360°-Kamera wird im Browser des Teilnehmers <strong>nicht</strong> angezeigt. </li>
+<li>Dies schont die Netzwerkbandbreite und stellt sicher, dass der 360°-Kamera die maximal verfügbare Upload-Bandbreite für den Live-Stream zur Verfügung steht. </li>
 <li>Nützlich, wenn ein Nutzer bestimmte Details zeigen möchte; Sie <strong>können Ihre Kamera zurückschalten</strong>, um gezielte Ansichten zu ermöglichen.  </li>
-<li><strong>Stummschalten, wenn Sie nicht aktiv sprechen:</strong> Verhindert unerwünschte Audio-Rückkopplungen und Ablenkungen.  </li>
-<li><strong>Verwenden Sie nach Möglichkeit ein separates Netzwerk:</strong> Verbinden Sie Ihr Smartphone mit einem anderen Netzwerk als dem der Kamera, um Interferenzen zu reduzieren.  </li>
+<li><strong>Stummschalten, wenn Sie nicht aktiv sprechen:</strong> Verhindert unerwünschte akustische Rückkopplungen und Ablenkungen.  </li>
+<li><strong>Verwenden Sie nach Möglichkeit ein separates Netzwerk:</strong> Verbinden Sie Ihr Smartphone mit einem anderen Netzwerk als dem der Kamera, um Störungen zu reduzieren.  </li>
 </ul>
 <p>Die Befolgung dieser Richtlinien gewährleistet eine reibungslose, qualitativ hochwertige Live-Tour sowohl für Teilnehmer vor Ort als auch für Fernteilnehmer.</p>
 <h3 id="53-avatour-kamera-app">5.3 Avatour-Kamera-App</h3>
-<p>Hier sehen Sie (1) das Hauptmenü, (2) die Einstellungen und (3) die Netzwerkeinstellungen.</p>
+<p>Hier sind (1) das Hauptmenü, (2) die Einstellungen und (3) die Netzwerkeinstellungen.</p>
 <p><img alt="Avatour 360°-Kamera-App – Drei Menüs" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-cam-app-3-menu-screens_nju8bt.png" /> <em>Avatour 360°-Kamera-App – 3 Menüs</em></p>
-<p><strong>Schnellaufnahme</strong> – Für die Offline-Aufnahme von 360°-Videos auf die SD-Speicherkarte in der 360°-Kamera. – Eine ausführliche Beschreibung finden Sie unter <a href="https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app" target="_blank" rel="noopener">Wie nimmt man mit der Avatour-App 360°-Videos auf und lädt sie hoch?</a>. Wir empfehlen die Verwendung eines externen Audiogeräts (über Bluetooth verbunden). Hinweis: Sie können den Aufnahmewinkel auch von 360° auf 270°, 180° sowie auf Standard-2D-Videos und -Bilder umstellen, z. B. um den Fokus anzupassen oder vertrauliche Bereiche auszublenden – wechseln Sie dazu einfach im QC-Bildschirm den Modus in der unteren rechten Ecke (<em>dies ist jedoch nur möglich, wenn in den Einstellungen für „Quick Capture“ eine 4K-Auflösung ausgewählt wurde – siehe unten</em>)</p>
-<p><strong>Live-Meeting</strong> – Für Live-360°-Videokonferenzen. Sie sehen Ihre Arbeitsbereiche; wenn Sie auf einen davon klicken, wird der Live-Videostream von der 360°-Kamera gestartet. Bevor Sie mit Ihrer 360°-Kamera am Meeting teilnehmen können, müssen Sie ein Audiogerät über Bluetooth verbinden. Eine ausführliche Beschreibung finden Sie unter <a href="https://avatour.com/support/how-to-start-a-live-capture-meeting-with-your-pilot-camera" target="_blank" rel="noopener">Wie starte ich ein „Live Capture“-Meeting mit Ihrer Pilot-Kamera?</a></p>
+<p><strong>Schnellaufnahme</strong> – Für die Offline-Aufnahme von 360°-Videos auf die SD-Speicherkarte in der 360°-Kamera. – Eine ausführliche Beschreibung finden Sie unter <a href="https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app" target="_blank" rel="noopener">Wie nimmt man mit der Avatour-App 360°-Videos auf und lädt sie hoch?</a>. Wir empfehlen die Verwendung eines externen Audiogeräts (über Bluetooth verbunden). Hinweis: Sie können den Aufnahmewinkel auch von 360° auf 270°, 180° sowie auf Standard-2D-Videos und -Bilder umstellen, z. B. um den Fokus anzupassen oder vertrauliche Bereiche auszublenden – wechseln Sie dazu einfach im QC-Bildschirm einmal den Modus in der unteren rechten Ecke (<em>dies ist jedoch nur möglich, wenn in den Einstellungen für „Quick Capture“ eine 4K-Auflösung ausgewählt wurde – siehe unten</em>)</p>
+<p><strong>Live-Meeting</strong> – Für Live-360°-Videokonferenzen. Sie sehen Ihre Arbeitsbereiche; durch Anklicken eines davon wird der Live-Videostream von der 360°-Kamera gestartet. Bevor Sie mit Ihrer 360°-Kamera am Meeting teilnehmen können, müssen Sie ein Audiogerät über Bluetooth verbinden. Eine ausführliche Beschreibung finden Sie unter <a href="https://avatour.com/support/how-to-start-a-live-capture-meeting-with-your-pilot-camera" target="_blank" rel="noopener">So starten Sie ein Live-Capture-Meeting mit Ihrer Pilot-Kamera?</a></p>
 <blockquote>
-<p>Wenn Sie ein Live-Capture-Meeting mit Ihrer 360°-Kamera veranstalten, stehen Ihnen ähnliche Meeting-Tools zur Verfügung, die der Web-Erfahrung entsprechen. Hier ist ein Link zu unserem Knowledge-Base-Artikel, in dem diese Tools ausführlicher erläutert werden: <a href="https://avatour.com/support/what-avatour-app-tools-are-available-to-labpano-pilot-camera-operators" target="_blank" rel="noopener">Tools der Operator-App</a></p>
+<p>Wenn Sie ein Live-Capture-Meeting mit Ihrer 360°-Kamera veranstalten, stehen Ihnen ähnliche Meeting-Tools zur Verfügung, die der Web-Erfahrung entsprechen. Hier ist ein Link zu unserem Knowledge-Base-Artikel, in dem diese Tools ausführlicher erklärt werden: <a href="https://avatour.com/support/what-avatour-app-tools-are-available-to-labpano-pilot-camera-operators" target="_blank" rel="noopener">Tools der Operator-App</a></p>
 </blockquote>
-<p><strong>Galerie</strong> – Hier finden Sie alle Ihre 360°-Videos und -Bilder zum Hochladen in die Avatour-Webkonsole. Sie können Assets in großen Mengen hochladen und löschen – tippen Sie dazu oben auf dem Bildschirm auf „Auswählen“. Vor dem Hochladen können Sie verschiedene Verarbeitungsschritte wählen, wie z. B. „Gesichter unscharf machen“, eine „KI-Zusammenfassung“ erstellen und das Audiosignal mit „Sprachverbesserung“ optimieren. Sie können sogar einen Arbeitsbereich auswählen, dem das Asset zugeordnet werden soll – es befindet sich natürlich auch im allgemeinen Asset-Bereich der Webkonsole.</p>
+<p><strong>Galerie</strong> – Hier finden Sie alle Ihre 360°-Videos und -Bilder zum Hochladen in die Avatour-Webkonsole. Sie können Assets in großen Mengen hochladen und löschen – tippen Sie dazu oben auf dem Bildschirm auf „Auswählen“. Vor dem Hochladen können Sie verschiedene Verarbeitungsschritte auswählen, wie z. B. „Gesichter unscharf machen“, eine „KI-Zusammenfassung“ erstellen und das Audiosignal mit „Sprachverbesserung“ optimieren. Sie können sogar einen Arbeitsbereich auswählen, dem das Asset zugeordnet werden soll – es wird natürlich auch im allgemeinen Asset-Bereich der Webkonsole zu finden sein.</p>
 <p><strong>Einstellungen</strong> – In den Einstellungen stehen Ihnen folgende Optionen zur Verfügung:</p>
 <ul>
-<li><strong>Netzwerk</strong>: Mit dieser Option können Sie das WLAN-Netzwerk ändern, mit dem die Kamera verbunden ist, oder einen Netzwerkverbindungstest durchführen, um Ihren Streaming-Durchsatz anzuzeigen</li>
+<li><strong>Netzwerk</strong>: Mit dieser Option können Sie ändern, mit welchem WLAN-Netzwerk die Kamera verbunden ist, oder einen Netzwerkverbindungstest durchführen, um Ihren Streaming-Durchsatz anzuzeigen</li>
 <li>
-<p><strong>Live-Aufnahme</strong>: Passen Sie Ihre Live-Aufnahme-Einstellungen je nach verfügbarer Bandbreite, der VR-Empfindlichkeit des Gastes oder je nachdem, ob die Schutzgläser Ihrer Kamera installiert sind, an:</p>
+<p><strong>Live-Aufnahme</strong>: Passen Sie Ihre Live-Aufnahme-Einstellungen je nach verfügbarer Bandbreite, der VR-Empfindlichkeit des Gastes oder dem Vorhandensein von Schutzgläsern an Ihrer Kamera an:</p>
 <ul>
-<li><strong>Zielbildrate (optional)</strong>: Stellen Sie die Bildrate für Ihr Live-Aufnahme-Video zwischen 15 fps, 24 fps und 30 fps ein. Höhere Bildraten sorgen für ein flüssigeres Video, erfordern jedoch mehr Upload-Bandbreite. Standard: 15 fps</li>
-<li><strong>Zielbitrate</strong>: Ermöglicht es Ihnen, die maximale Streaming-Bitrate für Ihre Live-Aufnahme zu erhöhen oder zu verringern. Sie können Ihre Zielbitrate zwischen 1 Mbit/s und 10 Mbit/s einstellen. Höhere Bitraten führen zu einer höheren Videoauflösung, erfordern jedoch mehr Upload-Bandbreite. Standard: 5 Mbit/s</li>
-<li><strong>Bewegung optimieren</strong>: Diese Option verringert die Bildrate des Videos, wodurch die Upload-Bandbreite Ihres Netzwerks weniger belastet wird, und erhöht Ihre Streaming-Bitrate. Zudem hilft diese Option dabei, Bewegungsübelkeit bei VR-Teilnehmern zu reduzieren. Standard: Aus</li>
-<li><strong>Richtungssperre</strong>: Damit wird die 360°-Aufnahme „gesperrt“, unabhängig davon, wie Sie die 360°-Kamera bewegen. Wenn Sie möchten, dass sich das 360°-Video mit der Kamerabewegung mitbewegt – z. B. wenn Sie mit dem vorderen Objektiv auf etwas „zeigen“ möchten –, stellen Sie die Richtungssperre auf „Nein“. Dann verhält sich die Kamera wie eine herkömmliche Kamera, was für Führungen möglicherweise sinnvoller ist. Standard: Ja</li>
-<li><strong>Anfangsausrichtung</strong>: Wenn Sie die Richtungssperre auf „Nein“ setzen, können Sie wählen, welches Objektiv (vorne oder hinten) die Anfangsausrichtung sein soll, wenn Sie das Live-Video starten. Standard: Auf den Bediener gerichtet, da dies die natürlichste Art ist, ein Live-Meeting zu beginnen (= hinteres Objektiv). Bei „Schnellaufnahme“ ist dies anders (die vordere Linse ist standardmäßig die Anfangsausrichtung – siehe unten).</li>
+<li><strong>Zielbildrate (optional)</strong>: Passen Sie die Bildrate für Ihr Live-Aufnahme-Video zwischen 15 fps, 24 fps und 30 fps an. Höhere Bildraten sorgen für ein flüssigeres Video, erfordern jedoch mehr Upload-Bandbreite. Standard: 15 fps</li>
+<li><strong>Zielbitrate</strong>: Hiermit können Sie die maximale Streaming-Bitrate für Ihre Live-Aufnahme erhöhen oder verringern. Sie können Ihre Zielbitrate zwischen 1 Mbit/s und 10 Mbit/s einstellen. Höhere Bitraten führen zu einer höheren Videoauflösung, erfordern jedoch mehr Upload-Bandbreite. Standard: 5 Mbit/s</li>
+<li><strong>Bewegung optimieren</strong>: Diese Option verringert die Bildrate des Videos, wodurch die Upload-Bandbreite Ihres Netzwerks weniger belastet wird, und erhöht Ihre Streaming-Bitrate. Zudem trägt diese Option dazu bei, die Bewegungsübelkeit bei VR-Teilnehmern zu verringern. Standard: Aus</li>
+<li><strong>Richtungssperre</strong>: Hiermit wird die 360°-Aufnahme „gesperrt“, unabhängig davon, wie Sie die 360°-Kamera bewegen. Wenn Sie möchten, dass sich das 360°-Video mit der Kamerabewegung mitbewegt – z. B. wenn Sie mit dem vorderen Objektiv auf etwas „zeigen“ möchten –, stellen Sie die Richtungssperre auf „Nein“. Dann verhält sich die Kamera wie eine herkömmliche Kamera, was für Führungen möglicherweise praktischer ist. Standard: Ja</li>
+<li><strong>Anfangsausrichtung</strong>: Wenn Sie die Richtungssperre auf „Nein“ setzen, können Sie wählen, welches Objektiv (vorne oder hinten) die Anfangsausrichtung sein soll, wenn Sie das Live-Video starten. Standard: Auf den Bediener gerichtet, da dies die natürlichste Art ist, ein Live-Meeting zu beginnen (= hinteres Objektiv). Bei „Schnellaufnahme“ ist dies anders (die Frontkamera ist standardmäßig die Anfangsausrichtung – siehe unten).</li>
 </ul>
 </li>
 <li>
-<p><strong>Schnellaufnahme</strong>: Passen Sie Ihre „Quick Capture“-Einstellungen entsprechend Ihrer bevorzugten Videobildrate, der verfügbaren Bandbreite für das Hochladen von Videoaufnahmen und anderen Präferenzen an. Kartenbezogene Funktionen wie oben beschrieben (z. B. Kartenansicht, Notizen auf einer Karte) sind möglich, wenn ein GPS-Signal empfangen wird und die Standorteinstellung in den nativen Kameraeinstellungen aktiviert ist (sollte standardmäßig der Fall sein). Das Standort-/GPS-Symbol in der oberen rechten Ecke der „Schnellaufnahme“ sollte grün sein. Es kann einen Moment dauern, bis das GPS-Signal empfangen und die Verbindung hergestellt ist.</p>
+<p><strong>Schnellaufnahme</strong>: Passen Sie Ihre Einstellungen für die Schnellaufnahme entsprechend Ihrer bevorzugten Videobildrate, der verfügbaren Bandbreite für das Hochladen von Videoaufnahmen und anderen Präferenzen an. Kartenbezogene Funktionen wie oben beschrieben (z. B. Kartenansicht, Notizen auf einer Karte) sind möglich, wenn ein GPS-Signal empfangen wird und die Standorteinstellung in den nativen Kameraeinstellungen aktiviert ist (sollte standardmäßig aktiviert sein). Das Standort-/GPS-Symbol in der oberen rechten Ecke der „Schnellaufnahme“ sollte grün sein. Es kann einige Augenblicke dauern, bis das GPS-Signal empfangen und die Verbindung hergestellt ist.</p>
 <ul>
-<li><strong>Auflösung</strong>: Hier können Sie die Auflösung ändern. <em>(Die 6k-Auflösungen sind experimentell und erfordern vor dem Hochladen in die Avatour-Webkonsole einen manuellen Stitching-Schritt in der Galerie.)</em><ul>
-<li><strong>4k</strong> – Dies ist der Standard und bietet ein gutes Gleichgewicht zwischen Videoqualität und Dateigröße.</li>
+<li><strong>Auflösung</strong>: Hier können Sie die Auflösung ändern. <em>(Die 6k-Auflösungen sind experimentell und erfordern vor dem Hochladen in die Avatour-Webkonsole einen manuellen Stitching-Schritt in der Galerie.)</em></li>
 </ul>
 </li>
-<li><strong>6k bei 30 fps</strong> <em>(erfordert einen zusätzlichen Schritt zum Zusammenfügen in der Galerie)</em></li>
-<li><strong>6k bei 10 fps</strong> <em>(erfordert einen zusätzlichen Schritt zum Zusammenfügen in der Galerie)</em> – Dies ist nützlich, wenn Sie die Dateigröße geringer halten möchten als bei 30 fps, sofern flüssige Bewegungen weniger wichtig sind.</li>
-<li>Für andere Auflösungen können Sie auch die nativen Kamera-Apps verwenden, auch auf dem PanoX V2. Details finden Sie unter <a href="https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app" target="_blank" rel="noopener">Wie nimmt man 360°-Videos mit der Avatour-App auf und lädt sie hoch?</a></li>
-<li><strong>Zielbildrate</strong> <em>(nur für 4K-Auflösung verfügbar)</em> – Passen Sie die Bildrate für Ihre „Quick Capture“-Videoaufnahmen zwischen 15 fps, 24 fps und 30 fps an. Höhere Bildraten sorgen für ein flüssigeres Video, erhöhen jedoch die Dateigröße und die Upload-Dauer. Empfohlen: 30 fps</li>
+<li><strong>4k</strong> – Dies ist der Standard und bietet ein gutes Gleichgewicht zwischen Videoqualität und Dateigröße.
+            - <strong>6k bei 30 fps</strong> <em>(erfordert einen zusätzlichen Schritt zum Zusammenfügen in der Galerie)</em></li>
+<li><strong>6k bei 10 fps</strong> <em>(erfordert einen zusätzlichen Schritt zum Zusammenfügen in der Galerie)</em> - Dies ist nützlich, wenn Sie die Dateigröße geringer halten möchten als bei 30 fps und flüssige Bewegungen weniger wichtig sind.</li>
+<li>Für andere Auflösungen können Sie auch die nativen Kamera-Apps verwenden, auch auf dem PanoX V2. Details finden Sie unter <a href="https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app" target="_blank" rel="noopener">Wie nimmt man 360°-Videos mit der Avatour-App auf und lädt sie hoch?</a><ul>
+<li><strong>Zielbildrate</strong> <em>(nur für 4k-Auflösung verfügbar)</em> – Passen Sie die Bildrate für Ihre „Quick Capture“-Videoaufnahmen zwischen 15 fps, 24 fps und 30 fps an. Höhere Bildraten sorgen für ein flüssigeres Video, erhöhen jedoch die Dateigröße und die Upload-Dauer. Empfohlen: 30 fps</li>
 <li><strong>Zielbitrate</strong> <em>(nur bei 4K-Auflösung verfügbar)</em> Stellen Sie die Zielbitrate für „Quick Capture“-Uploads zwischen 5 Mbit/s und 20 Mbit/s ein. Niedrigere Bitraten erhöhen die Upload-Geschwindigkeit, verringern jedoch die Videoqualität. Empfohlen: 20 Mbit/s</li>
-<li><strong>Ausrichtungssperre</strong>: Wie oben unter „Live Capture“ beschrieben. Die Standard-Ausgangsausrichtung ist bei „Quick Capture“ immer die Frontlinse.</li>
+<li><strong>Ausrichtungssperre</strong>: Wie oben unter „Live Capture“ beschrieben. Die Standardausrichtung („Initial Orientation“) ist bei „Quick Capture“ immer die Frontlinse.</li>
 </ul>
 </li>
 </ul>
 <blockquote>
-<p>Weitere Hinweise zu den oben genannten Einstellungen und Videodateigrößen finden Sie in unserem <a href="https://avatour.com/support/avatour-360deg-video-file-size-calculator" target="_blank" rel="noopener">Avatour 360°-Videodateigrößenrechner</a>. Um zu verhindern, dass der Speicherplatz knapp wird, wird eine Warnmeldung angezeigt, damit Sie die Aufnahme beenden und Speicherplatz freigeben können (z. B. durch Hochladen von Videos aus der Galerie in die Avatour-Webkonsole „Assets“).</p>
+<p>Weitere Hinweise zu den oben genannten Einstellungen und Videodateigrößen finden Sie in unserem <a href="https://avatour.com/support/avatour-360deg-video-file-size-calculator" target="_blank" rel="noopener">Avatour 360°-Videodateigrößenrechner</a>. Um zu verhindern, dass der Speicherplatz knapp wird, erscheint eine Warnmeldung, damit Sie die Aufnahme beenden und Speicherplatz freigeben können (z. B. durch Hochladen von Videos aus der Galerie in die „Assets“ der Avatour-Webkonsole).</p>
 </blockquote>
 <ul>
-<li><strong>Über</strong>: Hier werden die Seriennummer des Geräts und die Softwareversion angezeigt</li>
+<li><strong>Info</strong>: Zeigt die Seriennummer des Geräts und die Softwareversion an</li>
 </ul>
 <p><strong>Konto</strong> – Zum Anmelden mit Ihrem Avatour-Host- oder Admin-Konto.</p>
 <h2 id="best-practice-advice">6. Empfehlungen zu bewährten Vorgehensweisen</h2>
