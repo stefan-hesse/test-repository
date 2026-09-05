@@ -532,7 +532,6 @@ To address these challenges, follow these **best practices**:
 
 - **Use wired or wireless headphones:** Preferably with noise-canceling to prevent echo and feedback.  
 - **On-Site Mode:** Join the meeting in On-Site mode when physically present near the 360° camera as this mode is optimized for onsite use:
-
     - Mutes the participant’s mic and speaker by default.
     - Does **not** send the participant’s camera feed.
     - Does **not** display the 360° camera feed in the participant’s browser.
@@ -570,7 +569,6 @@ Here are (1) the Top Level, (2) Settings and (3) Network Settings menus.
 
 - **Quick Capture**: Adjust your Quick Capture settings depending on your preferred video frame rate, available bandwidth for recorded video uploads and other preferences. Map related features as explained above (e.g. map view, notes in a map) are possible when a GPS signal is received and the location setting in the native camera settings is enabled (should be by default). The location / GPS icon in the top right corner of the Quick Capture should be green. It might take some moments to receive the GPS signal and establish the connection.
     - **Resolution**: Here you can change the resolution. *(The 6k resolutions are experimental and need a manual stitching step in the Gallery before upload to the Avatour Web Console.)*
-
         - **4k** - This is the standard and maintains a good balance between video quality and file size.
         - **6k @ 30 fps** *(requires an additional stitching step in the Gallery)*
         - **6k @ 10 fps** *(requires an additional stitching step in the Gallery)* - This is useful if you want to keep file size lower than with the 30 fps when smooth motion is less important.
