@@ -341,10 +341,10 @@ body.print-mode .guide-article table { page-break-inside: avoid; }
 <a href="#for-all-avatour-users">1. Für alle Avatour-Nutzer</a>
 <a href="#avatour-user-types">2. Avatour-Benutzertypen</a>
 <a href="#21-teilnehmer-an-besprechungen-kein-konto-erforderlich" class="sub">2.1 Teilnehmer an Besprechungen (kein Konto erforderlich)</a>
-<a href="#22-registrierte-nutzer" class="sub">2.2 Registrierte Nutzer</a>
+<a href="#22-registrierte-benutzer" class="sub">2.2 Registrierte Benutzer</a>
 <a href="#for-remote-meeting-participants-and-workspace-visitors">3. Für Teilnehmer an Remote-Besprechungen und Besucher des Arbeitsbereichs</a>
 <a href="#how-to-join-an-avatour-meeting-and-visit-an-avatour-workspace" class="sub">3.1 So nehmen Sie an einem Avatour-Meeting teil und besuchen einen Avatour-Arbeitsbereich</a>
-<a href="#meeting-tools" class="sub">3.2 Tools für die Zusammenarbeit in Meetings und Workspaces</a>
+<a href="#meeting-tools" class="sub">3.2 Tools für die Zusammenarbeit in Meetings und Arbeitsbereichen</a>
 <a href="#for-host-and-admin-users-avatour-web-console">4. Für Host- und Admin-Benutzer – Avatour-Webkonsole</a>
 <a href="#web-console-overview-main-menu" class="sub">4.1 Webkonsole – Übersicht Hauptmenü</a>
 <a href="#web-console-details-by-menu-item" class="sub">4.2 Webkonsole – Details nach Menüpunkt (mit Bildern)</a>
@@ -401,22 +401,22 @@ Werfen Sie insbesondere einen Blick auf die <a href="https://avatour.com/feature
 <h4 id="212-zuschauer">2.1.2 Zuschauer</h4>
 <ul>
 <li>Kann die Besprechung verfolgen und ausschließlich über den Chat teilnehmen.</li>
-<li>Kann kein Video teilen, kein Mikrofon verwenden, keine Präsentationen halten, keine Assets abspielen/anhalten und keine Schnappschüsse aufnehmen.</li>
+<li>Kann kein Video teilen, kein Mikrofon nutzen, keine Präsentationen halten, keine Assets abspielen/anhalten und keine Schnappschüsse aufnehmen.</li>
 <li>Maximal 10 Zuschauer pro Meeting.</li>
 <li>Zusammen mit den Teilnehmern kann ein Meeting bis zu 30 Teilnehmer umfassen.</li>
 </ul>
-<h3 id="22-registrierte-nutzer">2.2 Registrierte Nutzer</h3>
+<h3 id="22-registrierte-benutzer">2.2 Registrierte Benutzer</h3>
 <p>Registrierte Nutzer verfügen über ein Avatour-Konto. Konten werden auf eine der folgenden Weisen erstellt:</p>
 <ul>
 <li><strong>Vom Administrator eingeladen:</strong> Während des Onboardings richtet Avatour einen <strong>dedizierten Tenant</strong> für die Organisation ein und erstellt ein oder mehrere <strong>Administratorkonten</strong>. Administratoren können dann <strong>Nutzer</strong> innerhalb der Organisation <strong>einladen</strong> und ihnen <strong>Gruppen</strong> zuweisen, die ihre Rolle auf der Plattform definieren (Gast, Gastgeber oder Administrator). Eingeladene Nutzer erhalten einen <strong>Anmeldelink</strong>, über den sie die Kontoeinrichtung abschließen und ein Passwort festlegen können.  </li>
 <li><strong>Vom Gastgeber eingeladen:</strong> Hosts können Benutzer als <strong>Mitarbeiter mit Bearbeitungsrechten</strong> zu einem Arbeitsbereich hinzufügen. Dies verbraucht eine <strong>Host-Lizenz</strong> und stellt sicher, dass der Benutzer Zugriff auf Host-Ebene hat.  </li>
-<li><strong>Automatische SSO-Bereitstellung (nur Enterprise-/Business-Stufe):</strong> Konten können automatisch vom Identitätsanbieter (IdP) angelegt werden. Standardmäßig werden über SSO bereitgestellte Konten der <strong>Gästegruppe</strong> hinzugefügt, sofern dies nicht über <strong>SAML-Gruppenzuordnungen</strong> überschrieben wird. Administratoren können auch bei aktiviertem SSO weiterhin Nutzer einladen und ihnen direkt eine Gruppenmitgliedschaft zuweisen.</li>
+<li><strong>Automatische SSO-Bereitstellung (nur Enterprise-/Business-Stufe):</strong> Konten können automatisch vom Identitätsanbieter (IdP) erstellt werden. Standardmäßig werden über SSO bereitgestellte Konten der <strong>Gastgruppe</strong> hinzugefügt, sofern dies nicht über <strong>SAML-Gruppenzuordnungen</strong> überschrieben wird. Administratoren können auch bei aktiviertem SSO weiterhin Benutzer einladen und ihnen direkt eine Gruppenmitgliedschaft zuweisen.</li>
 </ul>
 <p><strong>Zusammenfassung:</strong>  </p>
-<p>Registrierte Nutzer und ihre Gruppenzugehörigkeit können auf verschiedene Arten verwaltet werden:</p>
+<p>Registrierte Benutzer und ihre Gruppenzugehörigkeit können auf verschiedene Arten verwaltet werden:</p>
 <ul>
-<li><strong>Verwaltung durch Administratoren:</strong> Ein Administrator in der Avatour-Konsole kann Nutzer anlegen und ihnen Gruppen zuweisen, die ihre Rolle auf der Plattform definieren (Gast, Host oder Administrator).  </li>
-<li><strong>SSO-Bereitstellung:</strong> Für Kunden der Enterprise- oder Business-Stufe mit aktiviertem SSO kann der IdP automatisch Konten bereitstellen und Gruppenmitgliedschaften zuweisen, die die Plattformrolle des Benutzers definieren.  </li>
+<li><strong>Verwaltung durch Administratoren:</strong> Ein Administrator in der Avatour-Konsole kann Benutzer anlegen und ihnen Gruppen zuweisen, die ihre Rolle auf der Plattform definieren (Gast, Host oder Administrator).  </li>
+<li><strong>SSO-Bereitstellung:</strong> Für Kunden der Enterprise- oder Business-Stufe mit aktiviertem SSO kann der IdP automatisch Konten bereitstellen und Gruppenmitgliedschaften zuweisen, wodurch die Plattformrolle des Benutzers definiert wird.  </li>
 <li><strong>Von Hosts eingeladene Benutzer:</strong> Hosts können andere Benutzer als „Editor“-Mitarbeiter zu bestimmten Arbeitsbereichen einladen. Die Zuweisung der Rolle „Editor“-Mitarbeiter verbraucht eine Host-Lizenz.</li>
 </ul>
 <p><strong>Empfohlene Vorgehensweise (Enterprise-Kunden):</strong><br />
@@ -432,7 +432,7 @@ Für Organisationen, die mit einer großen Anzahl von Benutzern rechnen, die Zug
 <h4 id="222-lizenzierte-benutzer-zugriff-auf-die-webkonsole">2.2.2 Lizenzierte Benutzer (Zugriff auf die Webkonsole)</h4>
 <h5 id="host-benutzer-gruppe-host">Host-Benutzer (Gruppe: Host)</h5>
 <ul>
-<li>Können Arbeitsbereiche erstellen/verwalten, Mitwirkende in einen Arbeitsbereich einladen, <strong>Live-Meetings veranstalten</strong> und <strong>Schnellaufnahmen</strong> hochladen.  </li>
+<li>Können Arbeitsbereiche erstellen/verwalten, Mitwirkende in einen Arbeitsbereich einladen, <strong>Live-Meetings veranstalten</strong> und <strong>Quick Captures</strong> hochladen.  </li>
 <li>Haben Zugriff auf das <strong>Host-Dashboard</strong> und die <strong>Operator-App</strong> auf unterstützten 360°-Kameras.  </li>
 </ul>
 <h5 id="admin-benutzer-gruppe-admin">Admin-Benutzer (Gruppe: Admin)</h5>
@@ -442,9 +442,9 @@ Für Organisationen, die mit einer großen Anzahl von Benutzern rechnen, die Zug
 <p><strong>Zu den zusätzlichen Admin-Rechten gehören:</strong></p>
 <p><strong>Kontoverwaltung</strong>  </p>
 <ul>
-<li>Neue Benutzer anlegen und diesen Gruppen zuweisen.</li>
+<li>Neue Benutzer anlegen und ihnen Gruppen zuweisen.</li>
 <li>Passwörter zurücksetzen, wenn die Verwaltung durch Avatour erfolgt (gilt nicht, wenn SSO aktiviert ist). </li>
-<li>Gastbenutzer auf Host hochstufen.  </li>
+<li>Gastbenutzer zu Hosts hochstufen.  </li>
 <li>Benutzer deaktivieren (Admin-Konten müssen vor dem Löschen zunächst in Host-Konten umgewandelt werden).  </li>
 <li>Assets beim Löschen von einem Host-Benutzer auf einen anderen übertragen.</li>
 </ul>
@@ -452,29 +452,29 @@ Für Organisationen, die mit einer großen Anzahl von Benutzern rechnen, die Zug
 <ul>
 <li>Konfigurieren Sie <strong>unternehmensweite Sicherheitseinstellungen</strong> für Assets, Arbeitsbereiche und Meetings, die auf der Plattform gehostet werden (z. B. ob ein Host anwesend sein muss, um ein Meeting zu starten, oder ob Gesichter in allen auf die Plattform hochgeladenen Videos unkenntlich gemacht werden sollen).  </li>
 <li><strong>KI-Funktionen</strong> oder <strong>Aufzeichnung</strong> aktivieren oder deaktivieren.  </li>
-<li>Das Unternehmensbranding plattformweit einheitlich anwenden, wenn eine <strong>benutzerdefinierte Domain</strong> konfiguriert ist.</li>
+<li>Das Unternehmensbranding plattformweit einheitlich anwenden, sofern eine <strong>benutzerdefinierte Domain</strong> konfiguriert ist.</li>
 </ul>
 <p><strong>Assets &amp; Analysen</strong> </p>
 <ul>
-<li>Alle von beliebigen Benutzern in der Organisation hochgeladenen Assets anzeigen.  </li>
+<li>Alle Assets anzeigen, die von beliebigen Benutzern in der Organisation hochgeladen wurden.  </li>
 <li>Überprüfen Sie die Plattformnutzung in der gesamten Organisation.</li>
 </ul>
 <hr />
-<h4 id="223-berechtigungen-für-arbeitsbereich-mitarbeiter">2.2.3 Berechtigungen für Arbeitsbereich-Mitarbeiter</h4>
-<p>Arbeitsbereichsberechtigungen legen fest, was ein Benutzer <strong>innerhalb eines bestimmten Arbeitsbereichs</strong> tun darf. Diese sind unabhängig von der Gruppenmitgliedschaft auf Plattformebene (Gast, Gastgeber, Administrator).</p>
+<h4 id="223-berechtigungen-für-mitwirkende-in-arbeitsbereichen">2.2.3 Berechtigungen für Mitwirkende in Arbeitsbereichen</h4>
+<p>Arbeitsbereichsberechtigungen legen fest, was ein Nutzer <strong>innerhalb eines bestimmten Arbeitsbereichs</strong> tun darf. Diese sind unabhängig von der Gruppenmitgliedschaft auf Plattformebene (Gast, Gastgeber, Administrator).</p>
 <ul>
-<li>
-<p><strong>Mitarbeiter mit Bearbeitungsrechten:</strong> Benutzer mit dieser Berechtigung können:</p>
-<ul>
+<li><strong>Mitarbeiter mit Editor-Berechtigung:</strong> Benutzer mit dieser Berechtigung können:<ul>
 <li>Assets verwalten (hochladen, entfernen, Gesichter unkenntlich machen, Zusammenfassungen erstellen)  </li>
-<li>Meeting-Einstellungen verwalten (Aufzeichnung aktivieren/deaktivieren, Teilnehmer zulassen oder entfernen)  </li>
-<li>Live-Meetings planen und leiten  </li>
-<li>Berichte auf Basis vordefinierter Vorlagen erstellen  </li>
-<li>Mitwirkende zum Workspace hinzufügen oder daraus entfernen  </li>
+<li>Besprechungseinstellungen verwalten (Aufzeichnung aktivieren/deaktivieren, Teilnehmer zulassen oder entfernen) </li>
 </ul>
 </li>
+<li>Live-Besprechungen planen und leiten </li>
+<li>Berichte auf Basis vordefinierter Vorlagen erstellen </li>
 <li>
-<p><strong>Mitwirkender mit Leserechten:</strong> Benutzer mit dieser Berechtigung haben Lesezugriff auf die Assets des Arbeitsbereichs. Sie <strong>können weder Assets bearbeiten noch Besprechungen oder Mitwirkende verwalten</strong>, aber sie <strong>können Notizen zu Assets erstellen</strong>. </p>
+<p>Mitwirkende zum Arbeitsbereich hinzufügen oder daraus entfernen  </p>
+</li>
+<li>
+<p><strong>Mitwirkender als Betrachter:</strong> Benutzer mit dieser Berechtigung haben Lesezugriff auf die Assets des Arbeitsbereichs. Sie <strong>können keine Assets bearbeiten, keine Besprechungen verwalten und keine Mitwirkenden verwalten</strong>, aber sie <strong>können Notizen zu Assets erstellen</strong>. </p>
 </li>
 </ul>
 <h2 id="for-remote-meeting-participants-and-workspace-visitors">3. Für Teilnehmer an Remote-Besprechungen und Besucher des Arbeitsbereichs</h2>
@@ -482,7 +482,7 @@ Für Organisationen, die mit einer großen Anzahl von Benutzern rechnen, die Zug
 <ul>
 <li>
 <p><strong>An einem Avatour-Meeting teilnehmen (synchrone Zusammenarbeit):</strong><br />
-  Möglicherweise erhalten Sie eine <strong>Kalendereinladung</strong> zur Teilnahme an einem Avatour-Meeting. Während des Meetings können die Teilnehmer eine <strong>Live-Besichtigung vor Ort</strong> durchführen oder Assets gemeinsam synchron begutachten.</p>
+  Möglicherweise erhalten Sie eine <strong>Kalendereinladung</strong> zur Teilnahme an einem Avatour-Meeting. Während des Meetings können die Teilnehmer eine <strong>Live-Besichtigung vor Ort</strong> durchführen oder Objekte synchron gemeinsam begutachten.</p>
 </li>
 <li>
 <p><strong>Einen Arbeitsbereich besuchen (asynchrone Zusammenarbeit):</strong><br />
@@ -499,29 +499,29 @@ Für Organisationen, die mit einer großen Anzahl von Benutzern rechnen, die Zug
 <ol>
 <li>
 <p><strong>Über eine Kalendereinladung (empfohlen):</strong> 
-  - In der Regel erhalten Sie eine <strong>Kalendereinladung</strong> mit einem <strong>Direktlink zur Teilnahme</strong> (zum Beispiel: <code>https://avatour.live/join?s=xxxxx</code>).  </p>
+ - In der Regel erhalten Sie eine <strong>Kalendereinladung</strong> mit einem <strong>Direktlink zur Teilnahme</strong> (zum Beispiel: <code>https://avatour.live/join?s=xxxxx</code>).  </p>
 <ul>
 <li>Wenn Sie auf den Link klicken, wird der <strong>5-stellige Meeting-Code</strong> automatisch ausgefüllt und Sie werden zum Meeting weitergeleitet.</li>
-<li><strong>Authentifizierung erforderlich:</strong> Einige Meetings sind auf registrierte Nutzer beschränkt. In diesem Fall wird in der Einladung darauf hingewiesen, dass Sie sich <strong>anmelden müssen, um an der Besprechung teilzunehmen</strong>. </li>
+<li><strong>Authentifizierung erforderlich:</strong> Einige Meetings sind auf registrierte Nutzer beschränkt. In diesem Fall wird in der Einladung darauf hingewiesen, dass Sie sich <strong>anmelden müssen, um auf die Besprechung zugreifen zu können</strong>. </li>
 <li><strong>Passwortgeschützte Besprechungen:</strong> Für manche Besprechungen ist möglicherweise ein Passwort erforderlich. In diesem Fall enthält die Einladung das Passwort, das Sie eingeben müssen, um teilzunehmen.</li>
 </ul>
 </li>
 <li>
-<p><strong>Über den Besprechungscode:</strong> 
-  - Wenn der Gastgeber einen <strong>5-stelligen Besprechungscode</strong> separat weitergibt, rufen Sie <a href="https://avatour.live/join" target="_blank" rel="noopener">https://avatour.live/join</a> auf, geben Sie Ihren <strong>Namen</strong> und den <strong>Besprechungscode</strong> ein und nehmen Sie an der Besprechung teil.  </p>
+<p><strong>Über den Besprechungscode:</strong>  </p>
 <ul>
+<li>Wenn der Gastgeber einen <strong>5-stelligen Meeting-Code</strong> separat mitteilt, gehen Sie zu <a href="https://avatour.live/join" target="_blank" rel="noopener">https://avatour.live/join</a>, geben Sie Ihren <strong>Namen</strong> und den <strong>Meeting-Code</strong> ein und nehmen Sie am Meeting teil.  </li>
 <li>Wenn die Besprechung <strong>passwortgeschützt</strong> ist, geben Sie das vom Gastgeber bereitgestellte Passwort ein. </li>
 <li>Wenn für die Besprechung eine <strong>Authentifizierung</strong> erforderlich ist, müssen Sie sich vor der Teilnahme <strong>mit Ihrem Avatour-Konto anmelden</strong>.</li>
 </ul>
 </li>
 </ol>
 <blockquote>
-<p><strong>Tipp 1:</strong> Wenn Ihre Kamera oder Ihr Mikrofon nicht funktioniert, werden diese möglicherweise von einer anderen Anwendung (z. B. Microsoft Teams oder Zoom) verwendet. Schließen Sie alle Apps, die möglicherweise Ihre Kamera oder Ihr Mikrofon nutzen, und verlassen Sie das Avatour-Meeting, um anschließend erneut beizutreten.  </p>
+<p><strong>Tipp 1:</strong> Wenn Ihre Kamera oder Ihr Mikrofon nicht funktioniert, wird es möglicherweise von einer anderen Anwendung (z. B. Microsoft Teams oder Zoom) verwendet. Schließen Sie alle Apps, die möglicherweise Ihre Kamera oder Ihr Mikrofon nutzen, und verlassen Sie das Avatour-Meeting, um anschließend erneut beizutreten.  </p>
 <p><strong>Tipp 2:</strong> Wenn Sie dem Meeting immer noch nicht beitreten können, führen Sie diesen Test durch: <a href="https://avatour.live/test" target="_blank" rel="noopener">https://avatour.live/test</a>.<br />
 Der Test kann feststellen, ob Ihre <strong>Unternehmensfirewall oder Ihr Netzwerk</strong> den Zugriff blockiert, und liefert Informationen, die Ihnen als Grundlage für Gespräche mit Ihrem IT-Team dienen.  </p>
-<p><strong>Tipp 3:</strong> Verwenden Sie <strong>nicht</strong> die Avatour-Apps für iOS oder Android, um an Meetings teilzunehmen. Diese Apps werden nur benötigt, wenn <strong>ein Live-Meeting von einer Insta360-Kamera gestreamt wird</strong>, da diese Kameras die Avatour-360°-Software nicht direkt ausführen können und ein Smartphone zur Unterstützung benötigen.</p>
+<p><strong>Tipp 3:</strong> Verwenden Sie <strong>nicht</strong> die Avatour-Apps für iOS oder Android, um an Meetings teilzunehmen. Diese Apps werden nur benötigt, wenn Sie <strong>ein Live-Meeting von einer Insta360-Kamera streamen</strong>, da diese Kameras die Avatour-360°-Software nicht direkt ausführen können und ein Smartphone zur Unterstützung benötigen.</p>
 </blockquote>
-<h5 id="einen-avatour-workspace-besuchen-ohne-an-einem-avatour-meeting-teilzunehmen">Einen Avatour-Workspace besuchen (ohne an einem Avatour-Meeting teilzunehmen)</h5>
+<h5 id="einen-avatour-arbeitsbereich-besuchen-ohne-an-einem-avatour-meeting-teilzunehmen">Einen Avatour-Arbeitsbereich besuchen (ohne an einem Avatour-Meeting teilzunehmen)</h5>
 <p>Sie können auf folgende Weise auf einen Arbeitsbereich zugreifen:</p>
 <ul>
 <li>
@@ -540,63 +540,63 @@ Der Test kann feststellen, ob Ihre <strong>Unternehmensfirewall oder Ihr Netzwer
 </ul>
 <p>Alternativ können Sie sich unter <a href="https://avatour.live/login" target="_blank" rel="noopener">https://avatour.live/login</a> anmelden und über Ihre <strong>Liste der Arbeitsbereiche</strong> auf den Arbeitsbereich zugreifen.</p>
 <h4 id="vr-headset">3.1.2 VR-Headset</h4>
-<p>Sie können mit einer Reihe kompatibler Meta- und Pico-Headsets an einem Meeting teilnehmen und einen Workspace besuchen. Gehen Sie dazu wie folgt vor: </p>
+<p>Du kannst über eine Reihe kompatibler Meta- und Pico-Headsets an einem Meeting teilnehmen und einen Workspace besuchen. Gehe dazu wie folgt vor: </p>
 <ol>
 <li>Installieren Sie unsere Avatour-App aus Ihrem jeweiligen VR-Store: <a href="https://avatour.com/support/which-vr-headsets-can-i-use-with-avatour" target="_blank" rel="noopener">So installieren Sie die Avatour-VR-App</a></li>
 <li>Starten Sie unsere App und geben Sie den Besprechungscode ein oder wählen Sie einen Arbeitsbereich aus, um an einer Besprechung teilzunehmen. Weitere Informationen zur Nutzung unserer VR-App finden Sie in unserem Knowledge-Base-Artikel <a href="https://avatour.com/support/what-features-are-available-to-vr-guests" target="_blank" rel="noopener">hier</a>.</li>
 </ol>
-<h3 id="meeting-tools">3.2 Tools für die Zusammenarbeit in Meetings und Workspaces</h3>
+<h3 id="meeting-tools">3.2 Tools für die Zusammenarbeit in Meetings und Arbeitsbereichen</h3>
 <p>Avatour ermöglicht die Zusammenarbeit in zwei Hauptkontexten:</p>
 <ol>
 <li><strong>Meetings (synchron):</strong> Arbeiten Sie in Echtzeit mit anderen Teilnehmern zusammen, beispielsweise bei Live-Besichtigungen vor Ort oder beim gemeinsamen Betrachten aufgezeichneter Inhalte.  </li>
-<li><strong>Arbeitsbereiche (asynchron):</strong> Betrachten und bearbeiten Sie Inhalte nach Ihrem eigenen Zeitplan, rund um die Uhr.</li>
+<li><strong>Arbeitsbereiche (asynchron):</strong> Sehen Sie sich Inhalte nach Ihrem eigenen Zeitplan rund um die Uhr an und interagieren Sie mit ihnen.</li>
 </ol>
-<p>Die <strong>Tools zur Zusammenarbeit sind in Meetings und Arbeitsbereichen weitgehend ähnlich</strong>, wobei es aufgrund des synchronen bzw. asynchronen Kontexts einige Unterschiede gibt.</p>
+<p>Die <strong>Tools zur Zusammenarbeit sind bei Besprechungen und in Arbeitsbereichen weitgehend ähnlich</strong>, wobei es aufgrund des synchronen bzw. asynchronen Kontexts einige Unterschiede gibt.</p>
 <h4 id="321-aufbau-der-benutzeroberfläche">3.2.1 Aufbau der Benutzeroberfläche</h4>
 <p>Die Avatour-Benutzeroberfläche gliedert sich in drei Hauptbereiche:</p>
 <ul>
-<li><strong>Linkes Fenster</strong> – Arbeitsbereich-Objekte und unterstützende Tools  </li>
-<li><strong>Mittlerer Bildschirmbereich</strong> – Hauptanzeigebereich für Live-Video, Objekte und das Arbeitsbereich-Dashboard  </li>
-<li><strong>Rechtes Fenster</strong> – Kontextbezogene Informationen, wie Teilnehmer, Besprechungen oder Chat  </li>
+<li><strong>Linker Bereich</strong> – Arbeitsbereich-Inhalte und unterstützende Tools  </li>
+<li><strong>Mittlerer Arbeitsbereich</strong> – Hauptanzeigebereich für Live-Video, Inhalte und das Arbeitsbereich-Dashboard  </li>
+<li><strong>Rechter Bereich</strong> – Kontextbezogene Informationen wie Teilnehmer, Meetings oder Chat  </li>
 </ul>
 <p>Die meisten Interaktionen werden über das <strong>untere Menü</strong> initiiert.<br />
-Durch Klicken auf eine Menüoption wird ein <strong>Seitenbereich</strong> auf der linken oder rechten Seite des Bildschirms geöffnet, während die <strong>zentrale Arbeitsfläche</strong> der primäre Anzeigebereich bleibt.</p>
+Durch Klicken auf eine Menüoption öffnet sich ein <strong>Seitenbereich</strong> auf der linken oder rechten Seite des Bildschirms, während die <strong>zentrale Arbeitsfläche</strong> der primäre Anzeigebereich bleibt.</p>
 <hr />
-<h4 id="322-beispiel-für-die-besprechungsansicht">3.2.2 Beispiel für die Besprechungsansicht</h4>
+<h4 id="322-beispiel-für-die-meeting-ansicht">3.2.2 Beispiel für die Meeting-Ansicht</h4>
 <p>Hier ist ein Beispiel für eine Ansicht in einem Avatour-Meeting:</p>
-<p><img alt="Avatour-Meeting-Benutzeroberfläche mit Medienbereich, leerem Arbeitsbereich und Teilnehmerbereich" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-meeting-assets-blank-participants_pugprq.png" /><br />
-<em>Avatour-Meeting mit Asset-Panel (links), Arbeitsbereich (Mitte) und Teilnehmer-Panel (rechts)</em></p>
+<p><img alt="Avatour-Meeting-Benutzeroberfläche mit Ressourcenbereich, leerer Arbeitsfläche und Teilnehmerbereich" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-meeting-assets-blank-participants_pugprq.png" /><br />
+<em>Avatour-Meeting mit Asset-Panel (links), Arbeitsfläche (Mitte) und Teilnehmer-Panel (rechts)</em></p>
 <hr />
 <h4 id="323-beispiel-für-die-arbeitsbereichsansicht">3.2.3 Beispiel für die Arbeitsbereichsansicht</h4>
 <p>Hier ist ein Beispiel für eine Arbeitsbereichsansicht:</p>
-<p><img alt="Avatour-Arbeitsbereich mit Asset-Panel, leerer Arbeitsfläche und Meeting-Panel" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-workspace-assets-blank-meetings_qeumpl.png" /><br />
+<p><img alt="Avatour-Arbeitsbereich mit Ressourcenbereich, leerer Arbeitsfläche und Besprechungsbereich" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-workspace-assets-blank-meetings_qeumpl.png" /><br />
 <em>Avatour-Arbeitsbereich mit dem Bereich „Assets“ (links), der Arbeitsfläche (Mitte) und dem Bereich „Meetings“ (rechts)</em></p>
 <hr />
 <h4 id="324-übersicht-über-das-untere-menü">3.2.4 Übersicht über das untere Menü</h4>
 <p>Das untere Menü bietet Zugriff auf die wichtigsten Steuerelemente und Bereiche der Benutzeroberfläche:</p>
-<p><strong>Unteres Menü im Meeting</strong>  </p>
-<p><img alt="Unteres Menü im Avatour-Meeting" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-meeting-bottom-menu_bflaor.png" /><br />
-<em>Unteres Menü im Avatour-Meeting</em></p>
+<p><strong>Unteres Menü „Meeting“</strong>  </p>
+<p><img alt="Avatour-Belege-Untermenü" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-meeting-bottom-menu_bflaor.png" /><br />
+<em>Avatour-Belege-Untermenü</em></p>
 <ul>
 <li><strong>Assets</strong> – Zeigen Sie Dateien im Arbeitsbereich an, darunter aufgezeichnete Videos, Bilder, Screenshots und PDFs. </li>
-<li><strong>Chat</strong> – Senden Sie Nachrichten an alle Besprechungsteilnehmer.  </li>
+<li><strong>Chat</strong> – Senden Sie Nachrichten an alle Meeting-Teilnehmer.  </li>
 <li><strong>Kamera</strong> – Schalten Sie Ihre Webcam ein oder aus.  </li>
-<li><strong>Mikrofon</strong> – Stummschalten oder Stummschaltung aufheben.  </li>
-<li><strong>Präsentieren</strong> – Ein Asset, den Desktop oder das Webcam-Bild präsentieren (siehe Abschnitt „Präsentieren“ weiter unten).  </li>
+<li><strong>Mikrofon</strong> – Schalten Sie Ihr Mikrofon stumm oder heben Sie die Stummschaltung auf.  </li>
+<li><strong>Präsentieren</strong> – Präsentieren Sie eine Datei, Ihren Desktop oder Ihr Webcam-Bild (siehe Abschnitt „Präsentieren“ weiter unten).  </li>
 <li><strong>Host-Tools</strong> (nur für Gastgeber):  <ul>
-<li><strong>Fokus sperren</strong> – Sperren Sie die Ansicht für alle Teilnehmer.  </li>
-<li><strong>Alle stummschalten</strong> – Schalten Sie alle Teilnehmer stumm.  </li>
+<li><strong>Fokus sperren</strong> – Sperren Sie die Ansicht für alle Teilnehmer. </li>
 </ul>
 </li>
+<li><strong>Alle stummschalten</strong> – Schalten Sie alle Teilnehmer stumm.  </li>
 <li><strong>Vollbild aktivieren</strong> – Schalten Sie die Besprechungsregisterkarte auf Vollbild um.  </li>
 <li><strong>Besprechung verlassen</strong> – Verlassen Sie die Besprechung.  </li>
-<li><strong>Aufzeichnung starten</strong> – Verwenden Sie diese Schaltfläche, um die Aufzeichnung während eines Meetings manuell zu starten und zu beenden. Alternativ können Meetings automatisch aufgezeichnet werden, wenn in den Arbeitsbereichseinstellungen die Option <strong>„Aufzeichnung automatisch starten“</strong> aktiviert ist. In beiden Fällen werden die Aufzeichnungen in den Assets des Arbeitsbereichs gespeichert.</li>
-<li><strong>Karte</strong> – Öffnen oder schließen Sie das Kartenfenster, um die Kamerabewegung für Assets mit GPS-Tracking anzuzeigen. Durch Klicken auf einen Ort springen Sie zum genauen Punkt im Video. Die Karte wird während der Videowiedergabe in Echtzeit aktualisiert. Auf der Karte werden auch Notizen angezeigt.</li>
-<li><strong>Teilnehmer</strong> – Öffnen oder schließen Sie das Teilnehmerfenster.  </li>
-<li><strong>Besprechungsinfo</strong> – Zeigen Sie den Besprechungscode und den Besprechungslink an und greifen Sie auf entsprechende Tutorials zu.  </li>
+<li><strong>Aufzeichnung starten</strong> – Verwenden Sie diese Schaltfläche, um die Aufzeichnung während eines Meetings manuell zu starten und zu stoppen. Alternativ können Meetings automatisch aufgezeichnet werden, wenn in den Arbeitsbereichseinstellungen die Option <strong>„Aufzeichnung automatisch starten“</strong> aktiviert ist. In beiden Fällen werden die Aufzeichnungen in den Assets des Arbeitsbereichs gespeichert.</li>
+<li><strong>Karte</strong> – Öffnen oder schließen Sie das Kartenfenster, um die Kamerabewegung für Assets mit GPS-Tracking anzuzeigen. Durch Klicken auf einen Ort springt man zum genauen Punkt im Video. Die Karte wird während der Videowiedergabe in Echtzeit aktualisiert. Auch Notizen werden auf der Karte angezeigt.</li>
+<li><strong>Teilnehmer</strong> – Öffne oder schließe das Teilnehmerfenster.  </li>
+<li><strong>Besprechungsinfo</strong> – Zeige den Besprechungscode und den Besprechungslink an und greife auf entsprechende Tutorials zu.  </li>
 </ul>
-<p><img alt="Avatour-Besprechungsinfo" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-meeting-info-side-pane_nx7dp4.png" /><br />
-<em>Seitenbereich „Avatour-Besprechungsinfo“</em></p>
+<p><img alt="Avatour-Besprechungsinformationen" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-meeting-info-side-pane_nx7dp4.png" /><br />
+<em>Seitenbereich „Avatour-Besprechungsinformationen“</em></p>
 <ul>
 <li><strong>Einstellungen</strong> – Passen Sie die Sprach-, Audio- und Videoeinstellungen an. Bei Live-360°-Videobesprechungen können Sie mit <strong>Bitrate anzeigen</strong> die Verbindungsstatistiken überwachen.</li>
 </ul>
@@ -615,52 +615,52 @@ Durch Klicken auf eine Menüoption wird ein <strong>Seitenbereich</strong> auf d
 <p>Wenn Sie ein Asset in einem Meeting präsentieren, erscheint die <strong>Asset-Symbolleiste</strong> über der Arbeitsfläche. Hier sind die Werkzeuge und Menüpunkte, die bei der <u>Präsentation eines Assets in einem Meeting</u> verfügbar sind – von links nach rechts erklärt.</p>
 <p><img alt="Avatour-Menü bei der Präsentation eines Assets in einem Meeting" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-present-asset-menu-meeting_oflsr5.png" /> <em>Avatour-Menü bei der Präsentation eines Assets in einem Meeting</em></p>
 <p>Wenn ein Live-360°-Video in ein Meeting gestreamt wird, wird dieses Menü am unteren Rand der Arbeitsfläche angezeigt.</p>
-<p><img src="https://res.cloudinary.com/avatour/image/upload/c_fill,g_auto,w_600,h_120,f_auto,q_auto/avatour-screenshot-live360video-menu-meeting_cguwzb.png" alt="Avatour-Menü mit Live-360°-Video in einem Meeting" style="width:50%; display:block; border:1px solid #DDE5EA; border-radius:6px; margin:20px 0 4px;"> <em>Avatour-Menü mit Live-360°-Video in einer Besprechung</em></p>
-<p>Hier finden Sie eine Beschreibung aller Elemente, die in den obenstehenden Menüs angezeigt werden.</p>
+<p><img src="https://res.cloudinary.com/avatour/image/upload/c_fill,g_auto,w_600,h_120,f_auto,q_auto/avatour-screenshot-live360video-menu-meeting_cguwzb.png" alt="Avatour-Menü mit Live-360°-Video in einer Besprechung" style="width:50%; display:block; border:1px solid #DDE5EA; border-radius:6px; margin:20px 0 4px;"> <em>Avatour-Menü mit Live-360°-Video in einer Besprechung</em></p>
+<p>Hier finden Sie eine Beschreibung aller Elemente, die in den obigen Menüs angezeigt werden.</p>
 <ul>
-<li><strong>Video-Zeitleiste / Fortschrittsbalken</strong> – Zeigt den Videofortschritt mit Notizen und aus dem Audio extrahierten Schlüsselthemen an. Klicken Sie auf eine Notiz oder ein Thema, um zu diesem Moment zu springen und die Notiz zu öffnen. Enthält <strong>Wiedergabe-/Pause</strong>-Steuerelemente.   </li>
+<li><strong>Video-Zeitleiste / Fortschrittsbalken</strong> – Zeigt den Videofortschritt mit Notizen und aus dem Audio extrahierten Schlüsselthemen an. Klicken Sie auf eine Notiz oder ein Thema, um zu diesem Moment zu springen und die Notiz zu öffnen. Enthält <strong>Wiedergabe-/Pause-</strong>-Steuerelemente.   </li>
 <li><strong>Schnappschuss</strong> – Erfassen Sie ein 360°- oder 2D-Bild aus dem Asset.  </li>
-<li><strong>Spotlight</strong> – Hebt während Live-Sitzungen einen bestimmten Bereich für alle Teilnehmer hervor.  </li>
+<li><strong>Spotlight</strong> – Heben Sie während Live-Sitzungen einen bestimmten Bereich für alle Teilnehmer hervor.  </li>
 <li><strong>Blickwinkel (POV) anzeigen/ausblenden</strong> – Zeigt an, wohin jeder Teilnehmer im 360°-Video blickt.  </li>
-<li><strong>Notizen</strong> – Erstellen Sie Notizen, die an bestimmte Momente in einem Asset oder während eines Live-Videostreams verankert sind. (Hinweis: In einem Live-Stream wird automatisch ein Asset (= Schnappschuss) erstellt, um die Notiz zu erfassen.) Jede Notiz hat einen Verfasser und kann kategorisiert (Beobachtung, Problem, Maßnahme, Empfehlung), nach Status verfolgt (Offen → In Bearbeitung → Gelöst), einem Verantwortlichen zugewiesen und über direkte Links geteilt werden. Verfügt das Asset über einen GPS-Track, zeigen die Notizen zusätzlich die GPS-Koordinaten an. Notizen können zudem an eine andere Position verschoben (durch Ziehen die Position ändern) und in der Zeitleiste verschoben werden (in der Zeitleiste vorwärts oder rückwärts bewegen).</li>
+<li><strong>Notizen</strong> – Erstellen Sie Notizen, die an bestimmte Momente in einem Asset oder während eines Live-Videostreams verankert sind. (Hinweis: In einem Live-Stream wird automatisch ein Asset = Snapshot erstellt, um die Notiz zu erfassen.) Jede Notiz hat einen Verfasser und kann kategorisiert (Beobachtung, Problem, Maßnahme, Empfehlung), nach Status verfolgt (Offen → In Bearbeitung → Gelöst), einem Verantwortlichen zugewiesen und über direkte Links geteilt werden. Verfügt das Asset über einen GPS-Track, werden in den Notizen auch die GPS-Koordinaten angezeigt. Notizen können zudem an eine andere Position verschoben (durch Ziehen die Position ändern) und auf der Zeitachse verschoben werden (vorwärts oder rückwärts auf der Zeitachse bewegen).</li>
 </ul>
 <p><img alt="Avatour-Notiz und Notizfilter" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-present-asset-menu-meeting-showing-notes-and-filters_g181oc.png" /> <em>Avatour-Notizen und Notizfilter</em></p>
 <ul>
-<li><strong>Notizen per Sprachbefehl</strong> – Hierbei handelt es sich um automatisch generierte Platzhalter, wenn in einem aufgezeichneten Video Äußerungen wie „Notiz einfügen“, „Notiz machen“ oder „eine Notiz erstellen“ erkannt werden. Diese Notizen erscheinen auf der Zeitachse und müssen vom Benutzer <strong>positioniert und fertiggestellt</strong> werden. </li>
+<li><strong>Notizen durch Sprachbefehle</strong> – Hierbei handelt es sich um automatisch generierte Platzhalter, wenn in einem aufgezeichneten Video Äußerungen wie „Notiz einfügen“, „Notiz machen“ oder „Notiz erstellen“ erkannt werden. Diese Notizen erscheinen auf der Zeitleiste und müssen vom Benutzer <strong>positioniert und fertiggestellt</strong> werden. </li>
 </ul>
-<p><img alt="Avatour-Notizen – durch Sprachbefehle generiert" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-notes-voice-command-generated_ic5cu4.png" /> <em>Avatour-Notizen – Durch Sprachbefehl generiert</em></p>
+<p><img alt="Avatour-Notizen – durch Sprachbefehl generiert" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-notes-voice-command-generated_ic5cu4.png" /> <em>Avatour-Notizen – durch Sprachbefehl generiert</em></p>
 <ul>
 <li>
-<p><strong>Von der KI generierte Notizen</strong> – Hierbei handelt es sich um automatisch generierte Platzhalter, wenn die Aufzeichnung im Audiospuren des Videos Erwähnungen erkennt, die nach Problemen klingen, die zur weiteren Bearbeitung erfasst werden müssen. KI-generierte Notizen müssen zunächst vom Notizbesitzer genehmigt werden (siehe Workspace-Dashboard unten). Nach der Freigabe verhalten sie sich wie Sprachbefehlsnotizen, da sie auf der Zeitachse erscheinen und vom Benutzer <strong>positioniert und fertiggestellt</strong> werden müssen. </p>
+<p><strong>Von der KI generierte Notizen</strong> – Hierbei handelt es sich um automatisch generierte Platzhalter, wenn die Aufzeichnung in der Audiospur des Videos Erwähnungen erkennt, die nach Problemen klingen, die zur weiteren Bearbeitung erfasst werden müssen. Von der KI generierte Notizen müssen zunächst vom Notizbesitzer genehmigt werden (siehe Workspace-Dashboard unten). Nach der Genehmigung verhalten sie sich wie Sprachbefehlsnotizen, da sie auf der Zeitachse erscheinen und vom Benutzer <strong>positioniert und fertiggestellt</strong> werden müssen. </p>
 </li>
 <li>
-<p><strong>Notizen- und Zusammenfassungsbereich</strong> – Öffnet einen Seitenbereich, in dem alle Notizen, Schlüsselthemen und eine Zusammenfassung für das Asset angezeigt werden. Ein Klick auf einen Eintrag führt Sie zu diesem Moment im Video. </p>
+<p><strong>Notizen- und Zusammenfassungsfenster</strong> – Öffnet ein Seitenfenster, in dem alle Notizen, Schlüsselthemen und eine Zusammenfassung für das Asset angezeigt werden. Ein Klick auf einen Eintrag führt Sie zu diesem Moment im Video.  </p>
 </li>
 </ul>
-<p><img alt="Avatour-Zusammenfassung zum Asset" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-present-asset-menu-meeting-showing-exec-summary_cqpqbs.png" /> <em>Avatour-Zusammenfassung bei der Präsentation eines Assets in einer Besprechung</em></p>
+<p><img alt="Avatour-Asset-Zusammenfassung" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-present-asset-menu-meeting-showing-exec-summary_cqpqbs.png" /> <em>Avatour-Zusammenfassung bei der Präsentation eines Assets in einer Besprechung</em></p>
 <p><img alt="Avatour-Themen" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-present-asset-menu-meeting-showing-topics_duuq1a.png" /> <em>Avatour-Themen bei der Präsentation eines Assets in einer Besprechung</em></p>
 <p>Über das <strong>Seitenpanel</strong> können Sie <strong>einen Asset-Bericht ausdrucken</strong> oder <strong>als TXT- oder CSV-Datei herunterladen</strong>. Berichte können verschiedene Elemente enthalten, die Sie <strong>vor dem Export auswählen</strong> können. </p>
-<p><img alt="Avatour-Menüs zum Drucken von Asset-Berichten" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-asset-report-print-menus_kn0syn.png" /><br />
-<em>Avatour-Menüs zum Drucken/Herunterladen von Asset-Berichten</em>  </p>
-<p><img alt="Auswahl der Elemente für den Avatour-Asset-Bericht zum Drucken" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-asset-report-element-selection_ud8c5k.png" /><br />
-<em>Menü zur Elementauswahl im Avatour-Asset-Bericht</em></p>
+<p><img alt="Avatour-Menüs zum Drucken von Asset-Berichten" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-asset-report-print-menus_kn0syn.png" /> 
+ <em>Avatour-Menüs zum Drucken/Herunterladen von Asset-Berichten</em>  </p>
+<p><img alt="Avatour: Auswahl der Elemente für den Asset-Bericht zum Drucken" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-asset-report-element-selection_ud8c5k.png" /> 
+ <em>Menü zur Auswahl der Elemente für den Avatour-Asset-Bericht</em></p>
 <ul>
 <li><strong>Link teilen</strong> – Einen Link zu einer bestimmten Notiz oder Szene im Asset teilen.  </li>
 <li><strong>Untertitel (CC)</strong> – Während der Videowiedergabe eine Texttranskription auf dem Bildschirm anzeigen.</li>
 </ul>
 <h5 id="asset-symbolleiste-arbeitsbereich">Asset-Symbolleiste (Arbeitsbereich)</h5>
-<p>Beim Anzeigen eines Assets in einem Arbeitsbereich ist die Symbolleiste ähnlich, jedoch für die individuelle Nutzung optimiert:</p>
+<p>Beim Anzeigen eines Assets in einem Arbeitsbereich sieht die Symbolleiste ähnlich aus, ist jedoch für die individuelle Nutzung optimiert:</p>
 <p><img alt="Avatour-Menü bei der Präsentation eines Assets außerhalb einer Besprechung, z. B. beim Besuch eines Arbeitsbereichs" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-present-asset-menu-workspace_iri8gc.png" /> <em>Avatour-Menü bei der Präsentation eines Assets in einem Arbeitsbereich</em></p>
 <ul>
 <li><strong>Video-Zeitleiste / Fortschrittsbalken</strong> – Zeigt den Videofortschritt mit Notizen und Schlüsselthemen an, die aus der Audiospur extrahiert wurden. Klicken Sie an eine beliebige Stelle auf der Zeitleiste, um im Video zu navigieren. Klicken Sie auf eine Notiz oder ein Thema, um zu diesem Moment zu springen und die Notiz zu öffnen. Enthält <strong>Wiedergabe-/Pause-</strong>-Steuerelemente.  </li>
-<li><strong>Schnappschuss, Notizen, Notizen- und Zusammenfassungsbereich, Link teilen, Untertitel</strong>  </li>
+<li><strong>Snapshot, Notizen, Notizen- und Zusammenfassungsbereich, Link teilen, Untertitel</strong>  </li>
 <li>Nicht verfügbar: <strong>Spotlight, POV</strong> (dafür sind Live-Teilnehmer erforderlich)  </li>
 <li>Zusätzliche Steuerelemente:<ul>
-<li><strong>10-Sekunden-Schritte</strong> – Vorwärts/rückwärts springen  </li>
-<li><strong>Wiedergabegeschwindigkeit</strong> – Geschwindigkeit anpassen (0,5×–2×)  </li>
-<li><strong>Video zuschneiden</strong> – Anfang oder Ende des Clips zuschneiden</li>
+<li><strong>10-Sekunden-Schritte</strong> – Vorwärts/rückwärts springen </li>
 </ul>
 </li>
+<li><strong>Wiedergabegeschwindigkeit</strong> – Geschwindigkeit anpassen (0,5×–2×) </li>
+<li><strong>Video zuschneiden</strong> – Anfang oder Ende des Clips zuschneiden</li>
 </ul>
 <h2 id="for-host-and-admin-users-avatour-web-console">4. Für Host- und Admin-Benutzer – Avatour-Webkonsole</h2>
 <p>Wenn Sie sich bei Ihrem Avatour-Benutzerkonto anmelden, gelangen Sie zur <strong>Webkonsole</strong>.  </p>
@@ -671,8 +671,8 @@ Durch Klicken auf eine Menüoption wird ein <strong>Seitenbereich</strong> auf d
 <li><strong>Arbeitsbereiche</strong> – Organisieren Sie Ihre Inhalte effizient. Jeder Arbeitsbereich enthält <strong>Assets</strong>, <strong>Mitarbeiter</strong>, <strong>Besprechungen</strong> und <strong>Einstellungen</strong>.  </li>
 <li><strong>Assets</strong> – Greifen Sie auf alle Ihre Assets (Videos, Bilder, PDFs) zu und verwalten Sie diese. Administratoren können alle Assets des Kontos einsehen, und freigegebene Assets sind für alle Benutzer sichtbar.  </li>
 <li><strong>Profil</strong> – Verwalten Sie Ihre Sprache und Ihr Passwort.  </li>
-<li><strong>Analysen</strong> – Verfolgen Sie Sitzungsaktivitäten, die Nutzung der Arbeitsbereiche und ROI-Kennzahlen.  </li>
-<li><strong>Einstellungen</strong> <em>(nur für Administratoren)</em> – Konfigurieren Sie die Standardwerte für Arbeitsbereiche, Besprechungen und Assets unternehmensweit. Administratoren können außerdem das Branding (Logo, Farben, Hintergründe) anpassen.  </li>
+<li><strong>Analysen</strong> – Verfolgen Sie Sitzungsaktivitäten, die Nutzung von Arbeitsbereichen und ROI-Kennzahlen.  </li>
+<li><strong>Einstellungen</strong> <em>(nur für Administratoren)</em> – Konfigurieren Sie unternehmensweite Standardeinstellungen für Arbeitsbereiche, Besprechungen und Assets. Administratoren können außerdem das Branding (Logo, Farben, Hintergründe) anpassen.  </li>
 <li><strong>Konto</strong> <em>(nur für Administratoren)</em> – Verwalten Sie registrierte Benutzer und 360°-Kameras.  </li>
 <li><strong>Geräteanmeldung</strong> – Geben Sie den auf Ihrer 360°-Kamera angezeigten Code ein, um sie mit Ihrem Konto zu koppeln.  </li>
 <li><strong>Anleitungen</strong> – Greifen Sie auf geführte Anleitungen zu.  </li>
@@ -684,30 +684,28 @@ Durch Klicken auf eine Menüoption wird ein <strong>Seitenbereich</strong> auf d
 <hr />
 <h3 id="web-console-details-by-menu-item">4.2 Webkonsole – Details nach Menüpunkt (mit Bildern)</h3>
 <h4 id="421-arbeitsbereiche">4.2.1 Arbeitsbereiche</h4>
-<p>Arbeitsbereiche sind flexible Organisationseinheiten, mit denen Sie Assets, Mitwirkende und Besprechungen an einem Ort verwalten können. Über die Schaltfläche <strong>Neuer Arbeitsbereich</strong> in der oberen rechten Ecke können Sie einen neuen Arbeitsbereich erstellen.</p>
+<p>Arbeitsbereiche sind flexible Organisationseinheiten, mit denen Sie Assets, Mitwirkende und Besprechungen an einem Ort verwalten können. Sie können einen neuen Arbeitsbereich über die Schaltfläche <strong>Neuer Arbeitsbereich</strong> in der oberen rechten Ecke erstellen.</p>
 <p><img alt="Avatour-Webkonsole – Hauptmenüpunkt „Arbeitsbereiche“" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-main-menu-workspaces_hnhkjj.png" /> <em>Avatour-Webkonsole – Hauptmenüpunkt „Arbeitsbereiche“</em></p>
 <p>Klicken Sie auf das Glockensymbol, um eine Übersicht über die Aktivitäten im Arbeitsbereich der letzten 7 Tage anzuzeigen.</p>
 <p><img alt="Avatour-Webkonsole – Letzte Aktivitäten im Arbeitsbereich" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-main-menu-workspace-recent-activities_gby1ws.png" /> <em>Letzte Aktivitäten im Arbeitsbereich</em></p>
 <p>Innerhalb eines Arbeitsbereichs:</p>
-<p><img alt="Avatour-Arbeitsbereich mit Asset-Bereich, Dashboard und Besprechungsbereich" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/v1785929001/avatour-screenshot-workspace-dashboard_dqp5ff.png" /> <em>Arbeitsbereich mit Assets (links), Arbeitsbereich-Dashboard (Mitte), Meetings (rechts)</em></p>
-<p>In der Mitte sehen Sie das Arbeitsbereich-Dashboard, das Ihnen einen Überblick über alle Notizen in den diesem Arbeitsbereich zugewiesenen Assets bietet, mit mehreren Dropdown-Menüs zur Auswahl nach verschiedenen Notizenattributen. Hier können Sie auch die von der KI vorgeschlagenen Notizen annehmen oder löschen. Außerdem können Sie alle Notizen aus dieser Ansicht exportieren.</p>
+<p><img alt="Avatour-Arbeitsbereich mit Asset-Panel, Dashboard und Meeting-Panel" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/v1785929001/avatour-screenshot-workspace-dashboard_dqp5ff.png" /> <em>Arbeitsbereich mit Assets (links), Arbeitsbereichs-Dashboard (Mitte), Meetings (rechts)</em></p>
+<p>In der Mitte sehen Sie das Arbeitsbereichs-Dashboard, das Ihnen einen Überblick über alle Notizen in den diesem Arbeitsbereich zugewiesenen Assets bietet, mit mehreren Dropdown-Menüs zur Auswahl nach verschiedenen Notizenattributen. Hier können Sie auch die von der KI vorgeschlagenen Notizen akzeptieren oder löschen. Außerdem können Sie alle Notizen aus dieser Ansicht exportieren.</p>
 <p>In den Menüs unten finden Sie:</p>
 <ul>
 <li><strong>Assets</strong> – Verwalten Sie die diesem Arbeitsbereich zugewiesenen Dateien.  </li>
 <li><strong>Mitarbeiter</strong> – 
-  Zugriff auf Arbeitsbereiche steuern durch <ul>
-<li><strong>Betrachter</strong> – Kann Assets anzeigen. Bei einer Einladung wird bei Bedarf ein Gastbenutzer angelegt.  </li>
+  Zugriff auf Arbeitsbereiche steuern durch </li>
+<li><strong>Betrachter</strong> – Kann Assets anzeigen. Bei einer Einladung wird bei Bedarf ein Gastbenutzer angelegt. </li>
 <li><strong>Bearbeiter</strong> – Vollständige Kontrolle über den Arbeitsbereich, gleiche Rechte wie der Host. Bei einer Einladung wird der Benutzer bei Bedarf zum Host hochgestuft.  <blockquote>
 <p>Mehrere Benutzer können gleichzeitig ohne Besprechung auf einen Arbeitsbereich zugreifen. Öffentliche Arbeitsbereiche und Zugriffseinstellungen für Besprechungen bieten alternative Zugriffsmöglichkeiten.  </p>
 </blockquote>
 </li>
+<li><strong>Bericht</strong> – Erstellen Sie mithilfe einer Inspektionsvorlage einen Bericht zu ausgewählten Assets des Arbeitsbereichs. Die Antworten werden von der KI auf Grundlage der Audiospuren in den ausgewählten Videos generiert.  </li>
 </ul>
-</li>
-<li><strong>Bericht</strong> – Erstellen Sie mithilfe einer Inspektionsvorlage einen Bericht zu ausgewählten Assets des Arbeitsbereichs. Die Antworten werden von der KI auf der Grundlage der Audiospuren in den ausgewählten Videos generiert.  </li>
-</ul>
-<p><img alt="Avatour-Arbeitsbereichsbericht und Objektauswahl" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-asset-selection-and-workspace-report_itjt8f.png" /> <em>Arbeitsbereichsbericht und Objektauswahl</em></p>
+<p><img alt="Avatour-Arbeitsbereichsbericht und Objekt-Auswahl" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-asset-selection-and-workspace-report_itjt8f.png" /> <em>Arbeitsbereichsbericht und Objekt-Auswahl</em></p>
 <ul>
-<li><strong>Karte</strong> – Zeigen Sie die Standorte von Objekten mit GPS-Funktion auf einer Karte an, wie oben für Besprechungen beschrieben. </li>
+<li><strong>Karte</strong> – Zeigen Sie GPS-gestützte Standorte von Objekten auf einer Karte an, wie oben für Besprechungen beschrieben. </li>
 <li><strong>Besprechungen</strong> – Organisieren Sie Besprechungen im Arbeitsbereich.  </li>
 <li><strong>Einstellungen</strong> – Konfigurieren Sie die Standardeinstellungen für den Arbeitsbereich und Besprechungen:</li>
 </ul>
@@ -724,10 +722,10 @@ Durch Klicken auf eine Menüoption wird ein <strong>Seitenbereich</strong> auf d
 <p><strong>Besprechungseinstellungen</strong></p>
 <ul>
 <li><strong>Authentifizierung erforderlich</strong> – Teilnehmer müssen sich anmelden.  </li>
-<li><strong>Gastzugang zulassen</strong> – Nicht registrierten Benutzern wird das Anzeigen von Assets gestattet.  </li>
-<li><strong>Aufzeichnung automatisch starten / Manuell starten</strong> – Wählen Sie aus, ob Besprechungen automatisch aufgezeichnet oder manuell gestartet werden sollen.  </li>
+<li><strong>Gastzugang zulassen</strong> – Nicht registrierten Benutzern wird die Anzeige von Assets gestattet.  </li>
+<li><strong>Aufzeichnung automatisch starten / manuell starten</strong> – Wählen Sie aus, ob Besprechungen automatisch aufgezeichnet oder manuell gestartet werden sollen.  </li>
 <li><strong>Moderator erforderlich</strong> – Der Moderator muss Teilnehmer zulassen; die Besprechung endet, wenn der Moderator die Besprechung verlässt.  </li>
-<li><strong>Zugang für Zuschauer zulassen</strong> – Teilnahme ohne Mikrofon oder Kamera; Kommunikation über den Chat.  </li>
+<li><strong>Zugang als Zuschauer zulassen</strong> – Teilnahme ohne Mikrofon oder Kamera; Kommunikation über den Chat.  </li>
 <li><strong>Passwortgeschützte Besprechungen</strong> – Für die Teilnahme ist ein Passwort erforderlich.  </li>
 <li><strong>Frage zu Reiseeinsparungen anzeigen</strong> – Fragen Sie die Teilnehmer, ob die Besprechung zu Reiseeinsparungen geführt hat.  </li>
 </ul>
@@ -741,23 +739,23 @@ Durch Klicken auf eine Menüoption wird ein <strong>Seitenbereich</strong> auf d
 <p>Sie können auch den HTML-Code generieren, um eine öffentliche Einbettung eines Assets zu ermöglichen, z. B. auf Ihrer Website. Aktivieren Sie dazu einfach das Kontrollkästchen „Öffentliche Einbettung aktivieren“ und klicken Sie anschließend auf „Speichern“, um den Code zu erhalten.</p>
 <p><img alt="Avatour-Webkonsole – Hauptmenüpunkt „Assets“" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/v1785921604/avatour-screenshot-main-menu-assets-embed-code_mtau8g.png" /> <em>Hauptmenüpunkt „Assets“</em></p>
 <h4 id="423-einstellungen">4.2.3 Einstellungen</h4>
-<p>Admin-Benutzer haben Zugriff auf dieses Menü, um die Einstellungen für die gesamte Avatour-Plattform zentral zu verwalten. Jede Einstellung kann aktiviert oder deaktiviert werden, um als Standardeinstellung für die gesamte Plattform festgelegt zu werden. Jede Einstellung kann zudem gesperrt werden, was bedeutet, dass die Standardeinstellung von anderen Nutzern der Plattform nicht geändert werden kann. Hier können Sie auch Marketing-Anpassungen hinsichtlich Ihres Brandings (Logo, Farben usw.) vornehmen.</p>
+<p>Admin-Benutzer haben Zugriff auf dieses Menü, um die Einstellungen für die gesamte Avatour-Plattform zentral zu verwalten. Jede Einstellung kann aktiviert oder deaktiviert werden, um als Standardeinstellung für die gesamte Plattform festzulegen. Jede Einstellung kann zudem gesperrt werden, was bedeutet, dass die Standardeinstellung von anderen Nutzern der Plattform nicht geändert werden kann. Hier können Sie auch Marketing-Anpassungen hinsichtlich Ihres Brandings (Logo, Farben usw.) vornehmen.</p>
 <p><img alt="Avatour-Webkonsole – Hauptmenüpunkt „Einstellungen“" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/v1781172727/avatour-screenshot-main-menu-settings-1-of-2_fsaatf.jpg" /> <em>Bereich „Einstellungen“</em></p>
 <h4 id="424-konto">4.2.4 Konto</h4>
-<p>Hier können Sie Details zu Ihrem Konto einsehen und registrierte Benutzerkonten (Host, Admin, Gast) verwalten, einschließlich deren Zugriffsrechte auf den Arbeitsbereich, sowie Inspektionsvorlagen hochladen, um Arbeitsbereichsberichte zu erstellen (siehe oben).</p>
+<p>Hier können Sie Details zu Ihrem Konto einsehen und registrierte Benutzerkonten (Host, Admin, Gast) verwalten, einschließlich deren Zugriff auf den Arbeitsbereich, sowie Inspektionsvorlagen hochladen, um Arbeitsbereichsberichte zu erstellen (siehe oben).</p>
 <p><img alt="Avatour-Webkonsole – Hauptmenüpunkt „Konto“" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-main-menu-account-1-of-3_oq5amr.png" /> <em>Kontoübersicht – Obere Bereiche</em></p>
 <p><img alt="Avatour-Webkonsole – Hauptmenüpunkt „Konto“" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-main-menu-account-2-of-3_oq5amr.png" /> <em>Kontoübersicht – Verwaltung der Arbeitsbereichszugriffe</em></p>
 <p><img alt="Avatour-Webkonsole – Hauptmenüpunkt „Konto“" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/v1772360316/avatour-screenshot-main-menu-account-3-of-3_udgyjz.png" /> <em>Kontoübersicht – Untere Bereiche</em></p>
 <h4 id="425-analysen">4.2.5 Analysen</h4>
 <p>Bietet Einblicke in Besprechungen, die Nutzung von Arbeitsbereichen und ROI-Kennzahlen.</p>
-<p><img alt="Avatour-Webkonsole – Hauptmenüpunkt „Analytik“ (1 von 3)" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-main-menu-analytics-1-of-3_ds3epe.png" /> <em>Übersicht „Analytik“</em></p>
-<p><img alt="Avatour-Webkonsole – Hauptmenüpunkt „Analytik“ (2 von 3)" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-main-menu-analytics-2-of-3_vpcsme.png" /> <em>Besprechungsaktivität und Arbeitsbereichsnutzung</em></p>
+<p><img alt="Avatour-Webkonsole – Hauptmenüpunkt „Analytik“ (1 von 3)" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-main-menu-analytics-1-of-3_ds3epe.png" /> <em>Analytik-Übersicht</em></p>
+<p><img alt="Avatour-Webkonsole – Hauptmenüpunkt „Analytik“ (2 von 3)" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-main-menu-analytics-2-of-3_vpcsme.png" /> <em>Besprechungsaktivität und Workspace-Nutzung</em></p>
 <p><img alt="Avatour-Webkonsole – Hauptmenüpunkt „Analytik“ (3 von 3)" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-main-menu-analytics-3-of-3_hn2pmr.png" /> <em>Einsparungen und Nutzung von Gerätelizenzen</em> </p>
 <h2 id="onsite-how-to-use-the-avatour-turnkey-kit">5. Vor Ort – So verwenden Sie das Avatour-Komplettpaket</h2>
 <h3 id="51-erste-schritte">5.1 Erste Schritte</h3>
 <p>Hier finden Sie eine sehr umfassende Online-Anleitung für Ihre ersten Schritte mit dem Avatour Turnkey Kit: <a href="https://avatour.com/quickstart-panox-v2" target="_blank" rel="noopener">Schnellstartanleitung – Avatour Turnkey Kit 3.1 (Einrichtung des Pilot PanoX V2)</a></p>
 <p>Und hier ist auch das Bild mit den Anweisungen, das Sie auf der Innenseite des Deckels des 3.1-Kit-Koffers finden.
-<img alt="Abbildung auf der Innenseite des Deckels des Avatour-Kit-Koffers" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/v1775994773/avatour-turnkey-kit-3.1-inside-lid-picture_dq4ipl.png" /> <em>Bild auf der Innenseite des Deckels des Avatour-Kit-Koffers</em> </p>
+<img alt="Bild auf der Innenseite des Deckels des Avatour-Kit-Koffers" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/v1775994773/avatour-turnkey-kit-3.1-inside-lid-picture_dq4ipl.png" /> <em>Bild auf der Innenseite des Deckels des Avatour-Kit-Koffers</em> </p>
 <p>Befolgen Sie die Anleitung und die Anweisungen zum Auspacken, Zusammenbauen und Einschalten Ihrer Kamera.</p>
 <hr />
 <h3 id="52-nützliche-tipps">5.2 Nützliche Tipps</h3>
@@ -765,10 +763,10 @@ Durch Klicken auf eine Menüoption wird ein <strong>Seitenbereich</strong> auf d
 <p>Der interne Akku der Kamera hält ca. 30–45 Minuten. Wenn der Akku fast leer ist, wird eine Warnmeldung angezeigt. Mit einem externen Akku können Sie die Betriebszeit verlängern und sogar unbegrenzt nutzen, da Sie die Akkus während des Betriebs austauschen können.</p>
 <ul>
 <li>
-<p><strong>Falls Ihr Set einen Ulanzi-Akku enthält:</strong> Befestigen Sie ihn zwischen dem Stativfuß und dem ausziehbaren Stab und schließen Sie den Akku dann über USB-C an die Kamera an.  </p>
+<p><strong>Wenn Ihr Set einen Ulanzi-Akku enthält:</strong> Befestigen Sie ihn zwischen dem Stativfuß und dem ausziehbaren Stab und schließen Sie den Akku dann über USB-C an die Kamera an.  </p>
 </li>
 <li>
-<p><strong>Wenn Ihr Set einen Telesin-Akustab enthält:</strong> Befestigen Sie die Kamera direkt am ausziehbaren Telesin-Akustab und verbinden Sie sie über USB-C.  </p>
+<p><strong>Wenn Ihr Set einen Telesin-Akustab enthält:</strong> Befestigen Sie die Kamera direkt am ausziehbaren Telesin-Akustab und schließen Sie sie über USB-C an.  </p>
 </li>
 </ul>
 <p>Verwendung des externen Akkus:</p>
@@ -780,28 +778,28 @@ Durch Klicken auf eine Menüoption wird ein <strong>Seitenbereich</strong> auf d
 <blockquote>
 <p>Wir empfehlen, den externen Akku von Anfang an zu verwenden, insbesondere bei Live-Meetings.</p>
 </blockquote>
-<h4 id="audio-hinweise-für-live-meetings-und-aufnahmen">Audio-Hinweise für Live-Meetings und Aufnahmen</h4>
+<h4 id="audio-hinweise-für-live-meetings-und-aufzeichnungen">Audio-Hinweise für Live-Meetings und Aufzeichnungen</h4>
 <ul>
+<li><strong>Lärmreiche Umgebungen:</strong> 
+  Verwenden Sie die im Lieferumfang enthaltenen Shokz-Kopfhörer für eine klare Audioaufnahme. </li>
+<li><strong>Ein-/Ausschalten:</strong> Halten Sie die „+“-Taste 3 Sekunden lang gedrückt (blaue LED = eingeschaltet, rote LED = ausgeschaltet). </li>
+<li><strong>Bluetooth-Kopplungsmodus:</strong> Halten Sie bei ausgeschaltetem Headset die Taste „+“ 5 Sekunden lang gedrückt (LED blinkt blau/rot). </li>
 <li>
-<p><strong>Lärmreiche Umgebungen:</strong> 
-  Verwenden Sie die im Lieferumfang enthaltenen Shokz-Kopfhörer für eine klare Audioaufnahme.  </p>
-<ul>
-<li><strong>Ein-/Ausschalten:</strong> Halten Sie die „+“-Taste 3 Sekunden lang gedrückt (blaue LED = ein, rote LED = aus).  </li>
-<li><strong>Bluetooth-Kopplungsmodus:</strong> Halten Sie bei ausgeschaltetem Headset die Taste „+“ 5 Sekunden lang gedrückt (LED blinkt blau/rot).  </li>
-<li><strong>Lautstärke:</strong> Verwenden Sie die Tasten „+“ und „-“.  </li>
-</ul>
+<p><strong>Lautstärke:</strong> Verwenden Sie die Tasten „+“ und „-“.  </p>
 </li>
 <li>
 <p><strong>Ruhigere Umgebungen / mehrere Teilnehmer in der Nähe der Kamera:</strong> 
-  Verwenden Sie den NoxGear-Aufstecklautsprecher. Er bietet zwar nicht die gleiche Klangqualität wie Konferenzlautsprecher (z. B. Jabra Speak), lässt sich aber einfach an Ihrem Hemd befestigen und nimmt Stimmen in der Nähe effektiv auf.  </p>
-<ul>
-<li><strong>Ein-/Ausschalten:</strong> Halten Sie die Wiedergabe-/Pause-Taste 2 Sekunden lang gedrückt.  </li>
-<li><strong>Bluetooth-Kopplungsmodus:</strong> Wechselt beim Einschalten automatisch in den Kopplungsmodus (LED blinkt blau/rot; leuchtet blau, wenn die Kopplung hergestellt ist).  </li>
-<li><strong>Lautstärke:</strong> Verwenden Sie die Tasten „+“ und „-“.  </li>
+  Verwenden Sie den NoxGear-Anstecklautsprecher. Er bietet zwar nicht die gleiche Klangqualität wie Konferenzlautsprecher (z. B. Jabra Speak), lässt sich aber leicht an Ihrem Hemd befestigen und nimmt Stimmen in der Nähe effektiv auf. </p>
+</li>
+<li><strong>Ein-/Ausschalten:</strong> Halten Sie die Wiedergabe-/Pause-Taste 2 Sekunden lang gedrückt.  <ul>
+<li><strong>Bluetooth-Kopplungsmodus:</strong> Wechselt beim Einschalten automatisch in den Kopplungsmodus (LED blinkt blau/rot; leuchtet blau, wenn die Kopplung abgeschlossen ist). </li>
 </ul>
 </li>
 <li>
-<p><strong>Verwendung eines eigenen Geräts:</strong> Wenn Sie ein alternatives Gerät bevorzugen (z. B. einen Konferenzlautsprecher oder ein eigenes Headset), können Sie es über die Kamera koppeln: Einstellungen → Bluetooth.  </p>
+<p><strong>Lautstärke:</strong> Verwenden Sie die Tasten „+“ und „-“.  </p>
+</li>
+<li>
+<p><strong>Verwendung eines eigenen Geräts:</strong> Wenn Sie ein alternatives Gerät bevorzugen (z. B. einen Konferenzlautsprecher oder ein persönliches Headset), können Sie es über die Kamera koppeln: Einstellungen → Bluetooth.  </p>
 </li>
 </ul>
 <h4 id="konnektivität">Konnektivität</h4>
@@ -813,32 +811,32 @@ Durch Klicken auf eine Menüoption wird ein <strong>Seitenbereich</strong> auf d
 <p><strong>Empfohlene Bandbreite:</strong> 10 Mbit/s Upload/Download für vollständiges 360°-Streaming (~5 Mbit/s). Eine geringere Bandbreite (1–2 Mbit/s) funktioniert nur im Stillstand.</p>
 <h5 id="netzwerkgeschwindigkeit-testen">Netzwerkgeschwindigkeit testen</h5>
 <ul>
-<li><strong>Test an einem Standort:</strong> Verwenden Sie einen beliebigen Geschwindigkeitsmesser, den Sie normalerweise nutzen (z. B. <a href="https://www.speedtest.net" target="_blank" rel="noopener">Speedtest</a>), um sowohl die Upload- als auch die Download-Bandbreite zu überprüfen.   </li>
-<li><strong>Test beim Gehen durch den Standort:</strong> Über die Kamera: Einstellungen → Netzwerk → Verbindungstest. Gehen Sie durch den gesamten Raum, um die Netzabdeckung und die Bandbreite zu überprüfen.</li>
+<li><strong>Test an einem Standort:</strong> Verwenden Sie einen beliebigen Geschwindigkeitstest, den Sie normalerweise nutzen (z. B. <a href="https://www.speedtest.net" target="_blank" rel="noopener">Speedtest</a>), um sowohl die Upload- als auch die Download-Bandbreite zu überprüfen.   </li>
+<li><strong>Test beim Durchlaufen des Geländes:</strong> Über die Kamera: Einstellungen → Netzwerk → Verbindungstest. Gehen Sie durch den gesamten Raum, um die Abdeckung und die Bandbreite zu überprüfen.</li>
 </ul>
 <h5 id="lokales-wlan">Lokales WLAN</h5>
 <ul>
 <li>Für stabile Verbindungen dringend empfohlen.  </li>
-<li>Falls die IT-Abteilung eine Whitelist-Eintragung verlangt, finden Sie die MAC-Adresse hier: Einstellungen → Über → WLAN-Adresse.</li>
+<li>Falls die IT-Abteilung eine Whitelist-Eintragung verlangt, finden Sie die MAC-Adresse unter: Einstellungen → Info → WLAN-Adresse.</li>
 </ul>
 <h5 id="mobilfunknetz">Mobilfunknetz</h5>
 <p><strong>Option A: Im Kit enthaltener Hotspot &amp; SIM-Karte</strong>  </p>
 <ul>
 <li>Befestigen Sie den GlocalMe-Hotspot am Telesin-Akku-Stick (Magnet).  </li>
-<li>Dies gewährleistet, dass keine Störungen auftreten und die Verbindung auch dann aufrechterhalten bleibt, wenn Sie sich von der Kamera entfernen.  </li>
+<li>Dies gewährleistet, dass keine Störungen auftreten und die Verbindung aufrechterhalten bleibt, wenn Sie sich von der Kamera entfernen.  </li>
 <li>Fehlerbehebung:<ul>
 <li>Vergewissern Sie sich, dass die vorinstallierte SIM-Karte (nicht die Cloud-SIM) verwendet wird.  </li>
-<li>Aktivieren Sie 5G im SIM-Karten-Manager.  </li>
-<li>Überprüfen Sie den korrekten APN für Ihre Region (<a href="https://avatour.com/support/how-do-i-change-the-apn-on-my-glocalme-hotspot" target="_blank" rel="noopener">APN-Einrichtungsanleitung</a>).</li>
+<li>Aktivieren Sie 5G im SIM-Karten-Manager. </li>
 </ul>
 </li>
+<li>Überprüfen Sie den korrekten APN für Ihre Region (<a href="https://avatour.com/support/how-do-i-change-the-apn-on-my-glocalme-hotspot" target="_blank" rel="noopener">APN-Einrichtungsanleitung</a>).</li>
 </ul>
 <p><strong>Option B: Persönlicher Hotspot / SIM-Karte</strong>
 - Verwenden Sie Ihr eigenes Smartphone oder einen dedizierten Hotspot.  </p>
 <p><strong>Wichtiger Hinweis:</strong>  </p>
 <blockquote>
-<p>Lassen Sie den Hotspot ausgeschaltet, solange eine WLAN-Verbindung besteht; aktivieren Sie ihn nur, wenn Sie sich außerhalb der Reichweite befinden. Das Betriebssystem der Kamera wechselt je nach Signalstärke dynamisch zwischen WLAN-Netzwerken und wechselt möglicherweise versehentlich zum Hotspot, selbst wenn WLAN verfügbar ist.</p>
-<p>Mobilfunknetze können die Bandbreite unerwartet drosseln. Erkundigen Sie sich bei Ihrem Mobilfunkanbieter nach den Limits Ihres Datentarifs oder wenden Sie sich an den Avatour-Support, wenn Sie unseren Hotspot und unsere SIM-Karte nutzen.</p>
+<p>Halten Sie den Hotspot ausgeschaltet, solange eine WLAN-Verbindung besteht; aktivieren Sie ihn nur, wenn Sie sich außerhalb der Reichweite befinden. Das Betriebssystem der Kamera wechselt je nach Signalstärke dynamisch zwischen WLAN-Netzwerken und wechselt möglicherweise versehentlich zum Hotspot, selbst wenn WLAN verfügbar ist.</p>
+<p>Mobilfunknetze können die Bandbreite unerwartet drosseln. Erkundigen Sie sich bei Ihrem Mobilfunkanbieter nach den Grenzen Ihres Datentarifs oder wenden Sie sich an den Avatour-Support, wenn Sie unseren Hotspot und unsere SIM-Karte nutzen.</p>
 </blockquote>
 <h5 id="situationen-mit-geringer-bandbreite">Situationen mit geringer Bandbreite</h5>
 <ul>
@@ -856,37 +854,39 @@ Durch Klicken auf eine Menüoption wird ein <strong>Seitenbereich</strong> auf d
 <li>Mehrere Mikrofone und Lautsprecher im selben Raum können <strong>Audio-Rückkopplungen</strong> verursachen, was das Meeting-Erlebnis für alle Teilnehmer unangenehm macht.</li>
 </ul>
 <h4 id="weitere-teilnehmer-vor-ort--bewährte-vorgehensweisen_1">Weitere Teilnehmer vor Ort – Bewährte Vorgehensweisen</h4>
-<p>Wenn mehrere Teilnehmer von demselben Standort aus wie die 360°-Kamera an einem Live-Avatour-Meeting teilnehmen, ist ein sorgfältiges Management von <strong>Audio und Bandbreite</strong> entscheidend:  </p>
+<p>Wenn mehrere Teilnehmer von demselben Standort wie die 360°-Kamera aus an einem Live-Avatour-Meeting teilnehmen, ist eine sorgfältige Verwaltung von <strong>Audio und Bandbreite</strong> entscheidend:  </p>
 <ul>
-<li>Jedes vor Ort verbundene Smartphone, Tablet oder jeder Laptop beansprucht Netzwerkbandbreite und kann die Übertragung der 360°-Kamera beeinträchtigen.  </li>
+<li>Jedes vor Ort verbundene Smartphone, Tablet oder Laptop beansprucht Netzwerkbandbreite und kann die Übertragung der 360°-Kamera beeinträchtigen.  </li>
 <li>Mehrere Mikrofone und Lautsprecher im selben Raum können <strong>Audio-Rückkopplungen</strong> verursachen, was das Meeting-Erlebnis für alle Teilnehmer unangenehm macht.</li>
 </ul>
-<p>Befolgen Sie zur Bewältigung dieser Herausforderungen die folgenden <strong>Best Practices</strong>:</p>
+<p>Befolgen Sie zur Bewältigung dieser Herausforderungen die folgenden <strong>Bewährten Vorgehensweisen</strong>:</p>
 <ul>
 <li><strong>Verwenden Sie kabelgebundene oder kabellose Kopfhörer:</strong> Vorzugsweise mit Geräuschunterdrückung, um Echo und Rückkopplungen zu vermeiden.  </li>
 <li>
-<p><strong>Vor-Ort-Modus:</strong> Nehmen Sie im Vor-Ort-Modus am Meeting teil, wenn Sie sich physisch in der Nähe der 360°-Kamera befinden, da dieser Modus für den Einsatz vor Ort optimiert ist:</p>
+<p><strong>Vor-Ort-Modus:</strong> Nehmen Sie im Vor-Ort-Modus an der Besprechung teil, wenn Sie sich physisch in der Nähe der 360°-Kamera befinden, da dieser Modus für den Einsatz vor Ort optimiert ist:</p>
+</li>
+<li>
+<p>Schaltet das Mikrofon und den Lautsprecher des Teilnehmers standardmäßig stumm.</p>
 <ul>
-<li>Schaltet das Mikrofon und den Lautsprecher des Teilnehmers standardmäßig stumm.</li>
 <li>Sendet <strong>nicht</strong> das Kamerabild des Teilnehmers.</li>
-<li>Zeigt das Bild der 360°-Kamera <strong>nicht</strong> im Browser des Teilnehmers an.</li>
-<li>Schont die Netzwerkbandbreite und stellt sicher, dass der 360°-Kamera die maximal verfügbare Upload-Bandbreite für den Livestream zur Verfügung steht.</li>
-<li>Nützlich, wenn ein Nutzer bestimmte Details zeigen möchte; Sie <strong>können Ihr Kamerabild zurücksenden</strong>, um gezielte Ansichten zu ermöglichen.</li>
-<li><strong>Stummschalten, wenn Sie nicht aktiv sprechen:</strong> Verhindert unerwünschte Rückkopplungen und Ablenkungen.</li>
-<li><strong>Verwenden Sie nach Möglichkeit ein separates Netzwerk:</strong> Verbinden Sie Ihr Smartphone mit einem anderen Netzwerk als dem der Kamera, um Störungen zu reduzieren.</li>
+<li>Das Bild der 360°-Kamera wird im Browser des Teilnehmers <strong>nicht</strong> angezeigt.</li>
+<li>Dies schont die Netzwerkbandbreite und stellt sicher, dass der Live-Stream der 360°-Kamera die maximal verfügbare Upload-Bandbreite nutzen kann.</li>
+<li>Nützlich, wenn ein Benutzer bestimmte Details zeigen möchte; Sie <strong>können Ihre eigene Kamera wieder einblenden</strong>, um bestimmte Bereiche gezielt zu zeigen.</li>
 </ul>
 </li>
+<li><strong>Stummschalten, wenn Sie nicht aktiv sprechen:</strong> Verhindert unerwünschte Rückkopplungen und Ablenkungen.</li>
+<li><strong>Verwenden Sie nach Möglichkeit ein separates Netzwerk:</strong> Verbinden Sie Ihr Smartphone mit einem anderen Netzwerk als dem der Kamera, um Störungen zu reduzieren.</li>
 </ul>
 <p>Die Befolgung dieser Richtlinien gewährleistet eine reibungslose, qualitativ hochwertige Live-Tour sowohl für Teilnehmer vor Ort als auch für Remote-Teilnehmer.</p>
 <h3 id="53-avatour-kamera-app">5.3 Avatour-Kamera-App</h3>
 <p>Hier sind (1) das Hauptmenü, (2) die Einstellungen und (3) die Netzwerkeinstellungen.</p>
 <p><img alt="Avatour 360°-Kamera-App – Drei Menüs" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-cam-app-3-menu-screens_nju8bt.png" /> <em>Avatour 360°-Kamera-App – 3 Menüs</em></p>
-<p><strong>Schnellaufnahme</strong> – Für die Offline-Aufnahme von 360°-Videos auf die SD-Speicherkarte in der 360°-Kamera. – Eine ausführliche Beschreibung findest du unter <a href="https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app" target="_blank" rel="noopener">Wie nimmt man mit der Avatour-App 360°-Videos auf und lädt sie hoch?</a>. Wir empfehlen die Verwendung eines externen Audiogeräts (über Bluetooth verbunden). Hinweis: Sie können den Aufnahmewinkel auch von 360° auf 270°, 180° sowie auf Standard-2D-Videos und -Bilder ändern, z. B. um den Fokus anzupassen oder vertrauliche Bereiche auszublenden – wechseln Sie dazu einfach im QC-Bildschirm den Modus in der unteren rechten Ecke (<em>dies ist jedoch nur möglich, wenn in den Einstellungen für „Quick Capture“ eine 4K-Auflösung ausgewählt wurde – siehe unten</em>)</p>
-<p><strong>Live-Meeting</strong> – Für Live-360°-Videokonferenzen. Sie sehen Ihre Arbeitsbereiche; wenn Sie auf einen davon klicken, wird der Live-Videostream von der 360°-Kamera gestartet. Bevor Sie mit Ihrer 360°-Kamera am Meeting teilnehmen können, müssen Sie ein Audiogerät über Bluetooth verbinden. Eine ausführliche Beschreibung findest du unter <a href="https://avatour.com/support/how-to-start-a-live-capture-meeting-with-your-pilot-camera" target="_blank" rel="noopener">Wie starte ich ein Live-Capture-Meeting mit deiner Pilot-Kamera?</a></p>
+<p><strong>Schnellaufnahme</strong> – Für die Offline-Aufnahme von 360°-Videos auf die SD-Speicherkarte in der 360°-Kamera. – Eine ausführliche Beschreibung findest du unter <a href="https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app" target="_blank" rel="noopener">Wie nimmt man mit der Avatour-App 360°-Videos auf und lädt sie hoch?</a>. Wir empfehlen die Verwendung eines externen Audiogeräts (über Bluetooth verbunden). Hinweis: Sie können den Aufnahmewinkel auch von 360° auf 270°, 180° sowie auf Standard-2D-Videos und -Bilder umstellen, z. B. um den Fokus anzupassen oder vertrauliche Bereiche zu verpixeln – wechseln Sie dazu einfach im QC-Bildschirm einmal den Modus in der unteren rechten Ecke (<em>dies ist jedoch nur möglich, wenn in den Einstellungen für „Quick Capture“ eine 4K-Auflösung ausgewählt wurde – siehe unten</em>).</p>
+<p><strong>Live-Meeting</strong> – Für Live-360°-Videokonferenzen. Sie sehen Ihre Arbeitsbereiche; wenn Sie auf einen davon klicken, wird der Live-Videostream von der 360°-Kamera gestartet. Bevor Sie mit Ihrer 360°-Kamera am Meeting teilnehmen können, müssen Sie ein Audiogerät über Bluetooth verbinden. Eine detaillierte Beschreibung finden Sie unter <a href="https://avatour.com/support/how-to-start-a-live-capture-meeting-with-your-pilot-camera" target="_blank" rel="noopener">Wie starte ich ein Live-Capture-Meeting mit Ihrer Pilot-Kamera?</a></p>
 <blockquote>
 <p>Wenn Sie ein Live-Capture-Meeting mit Ihrer 360°-Kamera veranstalten, stehen Ihnen ähnliche Meeting-Tools zur Verfügung, die der Web-Erfahrung entsprechen. Hier ist ein Link zu unserem Knowledge-Base-Artikel, in dem diese Tools ausführlicher erläutert werden: <a href="https://avatour.com/support/what-avatour-app-tools-are-available-to-labpano-pilot-camera-operators" target="_blank" rel="noopener">Tools der Operator-App</a></p>
 </blockquote>
-<p><strong>Galerie</strong> – Hier finden Sie alle Ihre 360°-Videos und -Bilder zum Hochladen in die Avatour-Webkonsole. Sie können Assets in großen Mengen hochladen und löschen – tippen Sie dazu oben auf dem Bildschirm auf „Auswählen“. Vor dem Hochladen können Sie verschiedene Verarbeitungsschritte auswählen, wie z. B. „Gesichter unscharf machen“, eine „KI-Zusammenfassung“ erstellen und das Audiosignal mit „Sprachverbesserung“ optimieren. Sie können sogar einen Arbeitsbereich auswählen, dem das Asset zugeordnet werden soll – es wird natürlich auch im allgemeinen Asset-Bereich der Webkonsole zu finden sein.</p>
+<p><strong>Galerie</strong> – Hier finden Sie alle Ihre 360°-Videos und -Bilder zum Hochladen in die Avatour-Webkonsole. Sie können Assets in großen Mengen hochladen und löschen – tippen Sie dazu oben auf dem Bildschirm auf „Auswählen“. Vor dem Hochladen können Sie verschiedene Verarbeitungsschritte auswählen, wie z. B. „Gesichter unscharf machen“, eine „KI-Zusammenfassung“ erstellen und das Audiosignal mit „Sprache verbessern“ optimieren. Sie können sogar einen Arbeitsbereich auswählen, dem das Asset zugeordnet werden soll – es wird natürlich auch im allgemeinen Asset-Bereich der Webkonsole zu finden sein.</p>
 <p><strong>Einstellungen</strong> – In den Einstellungen stehen Ihnen folgende Optionen zur Verfügung:</p>
 <ul>
 <li><strong>Netzwerk</strong>: Mit dieser Option können Sie das WLAN-Netzwerk ändern, mit dem die Kamera verbunden ist, oder einen Netzwerkverbindungstest durchführen, um Ihren Streaming-Durchsatz anzuzeigen</li>
@@ -895,13 +895,13 @@ Durch Klicken auf eine Menüoption wird ein <strong>Seitenbereich</strong> auf d
 <ul>
 <li><strong>Zielbildrate (optional)</strong>: Passen Sie die Bildrate für Ihr Live-Aufnahme-Video zwischen 15 fps, 24 fps und 30 fps an. Höhere Bildraten sorgen für ein flüssigeres Video, erfordern jedoch mehr Upload-Bandbreite. Standard: 15 fps</li>
 <li><strong>Zielbitrate</strong>: Hiermit können Sie die maximale Streaming-Bitrate für Ihre Live-Aufnahme erhöhen oder verringern. Sie können Ihre Zielbitrate zwischen 1 Mbit/s und 10 Mbit/s einstellen. Höhere Bitraten führen zu einer höheren Videoauflösung, erfordern jedoch mehr Upload-Bandbreite. Standard: 5 Mbit/s</li>
-<li><strong>Bewegung optimieren</strong>: Dadurch wird die Bildrate des Videos verringert, was die Upload-Bandbreite Ihres Netzwerks entlastet und Ihre Streaming-Bitrate erhöht. Zudem hilft diese Option dabei, Bewegungsübelkeit bei VR-Teilnehmern zu reduzieren. Standard: Aus</li>
-<li><strong>Richtungssperre</strong>: Damit wird die 360°-Ansicht „gesperrt“, unabhängig davon, wie Sie die 360°-Kamera bewegen. Wenn Sie möchten, dass sich das 360°-Video mit der Kamerabewegung mitbewegt – z. B. wenn Sie mit dem vorderen Objektiv auf etwas „zeigen“ möchten –, stellen Sie die Richtungssperre auf „Nein“ ein. Dann verhält sich die Kamera wie eine herkömmliche Kamera, was für Führungen möglicherweise praktischer ist. Standard: Ja</li>
-<li><strong>Anfangsausrichtung</strong>: Wenn Sie die Richtungssperre auf „Nein“ setzen, können Sie wählen, welches Objektiv (vorne oder hinten) die Anfangsausrichtung sein soll, wenn Sie das Live-Video starten. Standard: Auf den Bediener gerichtet, da dies die natürlichste Art ist, ein Live-Meeting zu beginnen (= Rückkamera). Bei der „Schnellaufnahme“ ist dies anders (die Frontkamera ist standardmäßig die „Anfangsausrichtung“ – siehe unten).</li>
+<li><strong>Bewegung optimieren</strong>: Dadurch wird die Bildrate des Videos verringert, was die Upload-Bandbreite Ihres Netzwerks entlastet und Ihre Streaming-Bitrate erhöht. Zudem hilft diese Option dabei, die Bewegungsübelkeit bei VR-Teilnehmern zu reduzieren. Standard: Aus</li>
+<li><strong>Richtungssperre</strong>: Hiermit wird der 360°-Blickwinkel „gesperrt“, unabhängig davon, wie Sie die 360°-Kamera bewegen. Wenn Sie möchten, dass sich das 360°-Video mit der Kamerabewegung mitbewegt, z. B. Sie mit dem vorderen Objektiv auf etwas „zeigen“ möchten, stellen Sie die Richtungssperre auf „Nein“. Dann verhält sich die Kamera wie eine herkömmliche Kamera, was für Führungen möglicherweise praktischer ist. Standard: Ja</li>
+<li><strong>Anfangsausrichtung</strong>: Wenn Sie „Richtungssperre“ auf „Nein“ setzen, können Sie wählen, welches Objektiv (vorne oder hinten) die Anfangsausrichtung sein soll, wenn Sie das Live-Video starten. Standard: Blick auf den Bediener, da dies die natürlichste Art ist, ein Live-Meeting zu beginnen (= hinteres Objektiv). Bei „Schnellaufnahme“ ist dies anders (das vordere Objektiv ist standardmäßig die Anfangsausrichtung – siehe unten).</li>
 </ul>
 </li>
 <li>
-<p><strong>Schnellaufnahme</strong>: Passen Sie Ihre Einstellungen für die Schnellaufnahme entsprechend Ihrer bevorzugten Videobildrate, der verfügbaren Bandbreite für das Hochladen von Videoaufnahmen und anderen Präferenzen an. Kartenbezogene Funktionen, wie oben erläutert (z. B. Kartenansicht, Notizen auf einer Karte), sind möglich, wenn ein GPS-Signal empfangen wird und die Standorteinstellung in den nativen Kameraeinstellungen aktiviert ist (sollte standardmäßig der Fall sein). Das Standort-/GPS-Symbol in der oberen rechten Ecke von „Schnellaufnahme“ sollte grün sein. Es kann einen Moment dauern, bis das GPS-Signal empfangen und die Verbindung hergestellt ist.</p>
+<p><strong>Schnellaufnahme</strong>: Passen Sie Ihre Einstellungen für die „Schnellaufnahme“ entsprechend Ihrer bevorzugten Videobildrate, der verfügbaren Bandbreite für das Hochladen von Videoaufzeichnungen und anderen Präferenzen an. Kartenbezogene Funktionen wie oben beschrieben (z. B. Kartenansicht, Notizen auf einer Karte) sind möglich, wenn ein GPS-Signal empfangen wird und die Standortfunktion in den nativen Kameraeinstellungen aktiviert ist (sollte standardmäßig der Fall sein). Das Standort-/GPS-Symbol in der oberen rechten Ecke von „Quick Capture“ sollte grün sein. Es kann einen Moment dauern, bis das GPS-Signal empfangen und die Verbindung hergestellt ist.</p>
 <ul>
 <li>
 <p><strong>Auflösung</strong>: Hier können Sie die Auflösung ändern. <em>(Die 6k-Auflösungen sind experimentell und erfordern vor dem Hochladen in die Avatour-Webkonsole einen manuellen Stitching-Schritt in der Galerie.)</em></p>
@@ -909,9 +909,9 @@ Durch Klicken auf eine Menüoption wird ein <strong>Seitenbereich</strong> auf d
 <li><strong>4k</strong> – Dies ist der Standard und bietet ein gutes Gleichgewicht zwischen Videoqualität und Dateigröße.</li>
 <li><strong>6k bei 30 fps</strong> <em>(erfordert einen zusätzlichen Schritt zum Zusammenfügen in der Galerie)</em></li>
 <li><strong>6k bei 10 fps</strong> <em>(erfordert einen zusätzlichen Schritt zum Zusammenfügen in der Galerie)</em> – Dies ist nützlich, wenn Sie die Dateigröße geringer halten möchten als bei 30 fps, sofern flüssige Bewegungen weniger wichtig sind.</li>
-<li>Für andere Auflösungen kannst du auch die nativen Kamera-Apps verwenden, auch auf dem PanoX V2. Details findest du unter <a href="https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app" target="_blank" rel="noopener">Wie nimmt man 360°-Videos mit der Avatour-App auf und lädt sie hoch?</a><ul>
-<li><strong>Zielbildrate</strong> <em>(nur für 4k-Auflösung verfügbar)</em> - Stellen Sie die Bildrate für Ihre „Quick Capture“-Videoaufnahmen zwischen 15 fps, 24 fps und 30 fps ein. Höhere Bildraten sorgen für ein flüssigeres Video, erhöhen jedoch die Dateigröße und die Upload-Dauer. Empfohlen: 30 fps</li>
-<li><strong>Ziel-Bitrate</strong> <em>(nur für 4K-Auflösung verfügbar)</em> Stellen Sie die Ziel-Bitrate für „Quick Capture“-Uploads zwischen 5 Mbit/s und 20 Mbit/s ein. Niedrigere Bitraten erhöhen die Upload-Geschwindigkeit, verringern jedoch die Videoqualität. Empfohlen: 20 Mbit/s</li>
+<li>Für andere Auflösungen können Sie auch die nativen Kamera-Apps verwenden, auch auf dem PanoX V2. Details finden Sie unter <a href="https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app" target="_blank" rel="noopener">Wie nimmt man 360°-Videos mit der Avatour-App auf und lädt sie hoch?</a><ul>
+<li><strong>Zielbildrate</strong> <em>(nur für 4k-Auflösung verfügbar)</em> – Passen Sie die Bildrate für Ihre „Quick Capture“-Videoaufnahmen zwischen 15 fps, 24 fps und 30 fps an. Höhere Bildraten sorgen für flüssigere Videos, erhöhen jedoch die Dateigröße und die Upload-Dauer. Empfohlen: 30 fps</li>
+<li><strong>Zielbitrate</strong> <em>(nur bei 4K-Auflösung verfügbar)</em> Stellen Sie die Zielbitrate für „Quick Capture“-Uploads zwischen 5 Mbit/s und 20 Mbit/s ein. Niedrigere Bitraten erhöhen die Upload-Geschwindigkeit, verringern jedoch die Videoqualität. Empfohlen: 20 Mbit/s</li>
 <li><strong>Ausrichtungssperre</strong>: Wie oben unter „Live Capture“ beschrieben. Die Standard-Ausgangsausrichtung ist bei „Quick Capture“ immer die Frontlinse.</li>
 </ul>
 </li>
@@ -921,12 +921,12 @@ Durch Klicken auf eine Menüoption wird ein <strong>Seitenbereich</strong> auf d
 </li>
 </ul>
 <blockquote>
-<p>Weitere Hinweise zu den oben genannten Einstellungen und Videodateigrößen finden Sie in unserem <a href="https://avatour.com/support/avatour-360deg-video-file-size-calculator" target="_blank" rel="noopener">Avatour 360°-Videodateigrößenrechner</a>. Um zu verhindern, dass der Speicherplatz knapp wird, wird eine Warnmeldung angezeigt, damit Sie die Aufnahme beenden und Speicherplatz freigeben können (z. B. durch Hochladen von Videos aus der Galerie in die Avatour-Webkonsole „Assets“).</p>
+<p>Weitere Hinweise zu den oben genannten Einstellungen und Videodateigrößen findest du in unserem <a href="https://avatour.com/support/avatour-360deg-video-file-size-calculator" target="_blank" rel="noopener">Avatour 360°-Videodateigrößenrechner</a>. Um zu verhindern, dass der Speicherplatz knapp wird, wird eine Warnmeldung angezeigt, damit Sie die Aufnahme beenden und Speicherplatz freigeben können (z. B. durch Hochladen von Videos aus der Galerie in die Avatour-Webkonsole „Assets“).</p>
 </blockquote>
 <ul>
 <li><strong>Über</strong>: Seriennummer des Geräts und Softwareversion anzeigen</li>
 </ul>
-<p><strong>Konto</strong> – Zum Einloggen mit Ihrem Avatour-Host- oder Admin-Konto.</p>
+<p><strong>Konto</strong> – Zur Anmeldung mit Ihrem Avatour-Host- oder Admin-Konto.</p>
 <h2 id="best-practice-advice">6. Empfehlungen zu bewährten Vorgehensweisen</h2>
 <h3 id="61-erste-informelle-nutzung-und-einarbeitung">6.1 Erste (informelle) Nutzung und Einarbeitung</h3>
 <p>Für Ihre ersten Schritte und zum Kennenlernen der Avatour-Webkonsole und des Avatour-Turnkey-Kits empfehlen wir folgende Vorgehensweise:</p>
@@ -1045,10 +1045,10 @@ Durch Klicken auf eine Menüoption wird ein <strong>Seitenbereich</strong> auf d
   <li><a href="#for-all-avatour-users">1. Für alle Avatour-Nutzer</a></li>
   <li><a href="#avatour-user-types">2. Avatour-Benutzertypen</a></li>
   <li class="toc2"><a href="#21-teilnehmer-an-besprechungen-kein-konto-erforderlich">2.1 Teilnehmer an Besprechungen (kein Konto erforderlich)</a></li>
-  <li class="toc2"><a href="#22-registrierte-nutzer">2.2 Registrierte Nutzer</a></li>
+  <li class="toc2"><a href="#22-registrierte-benutzer">2.2 Registrierte Benutzer</a></li>
   <li><a href="#for-remote-meeting-participants-and-workspace-visitors">3. Für Teilnehmer an Remote-Besprechungen und Besucher des Arbeitsbereichs</a></li>
   <li class="toc2"><a href="#how-to-join-an-avatour-meeting-and-visit-an-avatour-workspace">3.1 So nehmen Sie an einem Avatour-Meeting teil und besuchen einen Avatour-Arbeitsbereich</a></li>
-  <li class="toc2"><a href="#meeting-tools">3.2 Tools für die Zusammenarbeit in Meetings und Workspaces</a></li>
+  <li class="toc2"><a href="#meeting-tools">3.2 Tools für die Zusammenarbeit in Meetings und Arbeitsbereichen</a></li>
   <li><a href="#for-host-and-admin-users-avatour-web-console">4. Für Host- und Admin-Benutzer – Avatour-Webkonsole</a></li>
   <li class="toc2"><a href="#web-console-overview-main-menu">4.1 Webkonsole – Übersicht Hauptmenü</a></li>
   <li class="toc2"><a href="#web-console-details-by-menu-item">4.2 Webkonsole – Details nach Menüpunkt (mit Bildern)</a></li>
