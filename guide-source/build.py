@@ -749,7 +749,7 @@ def md_to_html(md_text):
     """Convert Markdown to HTML."""
     md = markdown.Markdown(extensions=[
         TocExtension(slugify=lambda value, separator: re.sub(r'[^\w-]', '', value.lower().replace(' ', separator))),
-        'tables', 'fenced_code', 'attr_list', 'md_in_html', 'sane_lists',
+        'tables', 'fenced_code', 'attr_list', 'md_in_html',
     ])
     return optimize_cloudinary_urls(md.convert(md_text))
 
