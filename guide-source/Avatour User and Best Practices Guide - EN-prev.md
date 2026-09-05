@@ -532,13 +532,14 @@ To address these challenges, follow these **best practices**:
 
 - **Use wired or wireless headphones:** Preferably with noise-canceling to prevent echo and feedback.  
 - **On-Site Mode:** Join the meeting in On-Site mode when physically present near the 360° camera as this mode is optimized for onsite use:
-    - Mutes the participant’s mic and speaker by default.  
-    - Does **not** send the participant’s camera feed.  
-    - Does **not** display the 360° camera feed in the participant’s browser.  
-    - Conserves network bandwidth, ensuring the 360° camera has maximum available upload for the live stream.  
-    - Useful when a user wants to share specific details; you **can share back your camera** for targeted views.  
-- **Mute when not actively speaking:** Prevents unwanted audio feedback and distractions.  
-- **Use a separate network if possible:** Have your smartphone connected to a different network than the camera’s network to reduce interference.  
+
+    - Mutes the participant’s mic and speaker by default.
+    - Does **not** send the participant’s camera feed.
+    - Does **not** display the 360° camera feed in the participant’s browser.
+    - Conserves network bandwidth, ensuring the 360° camera has maximum available upload for the live stream.
+    - Useful when a user wants to share specific details; you **can share back your camera** for targeted views.
+- **Mute when not actively speaking:** Prevents unwanted audio feedback and distractions.
+- **Use a separate network if possible:** Have your smartphone connected to a different network than the camera’s network to reduce interference.
 
 Following these guidelines ensures a smooth, high-quality live tour for both onsite and remote participants.
 
@@ -560,6 +561,7 @@ Here are (1) the Top Level, (2) Settings and (3) Network Settings menus.
 
 - **Network**: This option allows you to change which WiFi network the camera is connected to or run a network connection test to view your streaming throughput
 - **Live Capture**: Adjust your Live Capture settings depending on available bandwidth, guest’s VR sensitivity, or if your camera’s protective lenses are installed:
+
     - **Target Frame Rate (optional)**: Adjust the frame rate for your Live Capture video between 15 fps, 24 fps, and 30 fps. Higher frame rates produce a smoother video, but will require more upload bandwidth. Default: 15 fps
     - **Target Bitrate**: Enables you to increase or decrease the maximum streaming bitrate for your Live Capture. You can set your target bitrate between 1 Mbps and 10 Mbps. Higher bitrates will result in higher video resolution, but will require more upload bandwidth. Default: 5 Mbps
     - **Optimize Motion**: This will decrease the video frame rate, generating less load on your network's upload bandwidth, and increase your streaming bitrate. In addition, this option helps to reduce motion sickness for VR participants. Default: Off
@@ -568,6 +570,7 @@ Here are (1) the Top Level, (2) Settings and (3) Network Settings menus.
 
 - **Quick Capture**: Adjust your Quick Capture settings depending on your preferred video frame rate, available bandwidth for recorded video uploads and other preferences. Map related features as explained above (e.g. map view, notes in a map) are possible when a GPS signal is received and the location setting in the native camera settings is enabled (should be by default). The location / GPS icon in the top right corner of the Quick Capture should be green. It might take some moments to receive the GPS signal and establish the connection.
     - **Resolution**: Here you can change the resolution. *(The 6k resolutions are experimental and need a manual stitching step in the Gallery before upload to the Avatour Web Console.)*
+
         - **4k** - This is the standard and maintains a good balance between video quality and file size.
         - **6k @ 30 fps** *(requires an additional stitching step in the Gallery)*
         - **6k @ 10 fps** *(requires an additional stitching step in the Gallery)* - This is useful if you want to keep file size lower than with the 30 fps when smooth motion is less important.
