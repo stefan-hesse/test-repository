@@ -104,11 +104,11 @@ For organizations expecting a large number of users who need access to Avatour, 
 Workspace permissions define what a user can do **within a specific Workspace**. These are separate from platform-level group membership (Guest, Host, Admin).
 
 - **Editor collaborator:** Users with this permission can:
-  - Manage Assets (upload, remove, blur faces, generate summaries)  
-  - Manage meeting settings (enable/disable recording, allow or remove participants)  
-  - Schedule and host live meetings  
-  - Generate reports based on predefined templates  
-  - Add or remove collaborators from the Workspace  
+    - Manage Assets (upload, remove, blur faces, generate summaries)  
+    - Manage meeting settings (enable/disable recording, allow or remove participants)  
+    - Schedule and host live meetings  
+    - Generate reports based on predefined templates  
+    - Add or remove collaborators from the Workspace  
 
 - **Viewer collaborator:** Users with this permission have read-only access to Workspace Assets. They **cannot modify Assets, manage meetings, or manage collaborators**, but they **can create Notes on Assets**. 
   
@@ -131,15 +131,15 @@ You can join an Avatour meeting from **any desktop or laptop computer, smartphon
 > **Note:** Joining an Avatour meeting requires that you **grant microphone permissions**. Please accept any permission prompts from your browser.
 
 1. **Via calendar invitation (recommended):**  
-   - You will typically receive a **calendar invitation** with a **direct join link** (for example: `https://avatour.live/join?s=xxxxx`).  
-   - Clicking the link will automatically populate the **5-character meeting code** and take you to the meeting.
-   - **Authentication required:** Some meetings are restricted to registered users. In this case, the invitation will indicate that you need to **log in to access the meeting**.  
-   - **Password-protected meetings:** Some meetings may require a password. In that case, the invitation will include the password you must enter to join.
+    - You will typically receive a **calendar invitation** with a **direct join link** (for example: `https://avatour.live/join?s=xxxxx`).  
+    - Clicking the link will automatically populate the **5-character meeting code** and take you to the meeting.
+    - **Authentication required:** Some meetings are restricted to registered users. In this case, the invitation will indicate that you need to **log in to access the meeting**.  
+    - **Password-protected meetings:** Some meetings may require a password. In that case, the invitation will include the password you must enter to join.
 
 2. **Via meeting code:**  
-   - If the host shares a **5-character meeting code** separately, go to [https://avatour.live/join](https://avatour.live/join), enter your **name** and the **meeting code**, and join the meeting.  
-   - If the meeting is **password-protected**, enter the password provided by the host.  
-   - If the meeting requires **authentication**, you will need to **log in with your Avatour account** before joining.
+    - If the host shares a **5-character meeting code** separately, go to [https://avatour.live/join](https://avatour.live/join), enter your **name** and the **meeting code**, and join the meeting.  
+    - If the meeting is **password-protected**, enter the password provided by the host.  
+    - If the meeting requires **authentication**, you will need to **log in with your Avatour account** before joining.
 
 > **Tip 1:** If your camera or microphone does not work, it may be in use by another application (for example Microsoft Teams or Zoom). Close any apps that might be using your camera or microphone, then leave and rejoin the Avatour meeting.  
 
@@ -158,9 +158,9 @@ You can access a Workspace in the following ways:
 - **Restricted Workspace:**  
   If the Workspace is restricted, you must be added as a **collaborator** with either **Editor** or **Viewer** permissions.
 
-  1. When you are added as a collaborator, you will receive an **email notification** with a link to the Workspace.
-  2. Click the link in the email to open the Workspace. If you are not already logged in, you will be prompted to **log in or complete signup**.
-  3. Once logged in, the Workspace will open automatically.
+    1. When you are added as a collaborator, you will receive an **email notification** with a link to the Workspace.
+    2. Click the link in the email to open the Workspace. If you are not already logged in, you will be prompted to **log in or complete signup**.
+    3. Once logged in, the Workspace will open automatically.
 
   Alternatively, you can log in at [https://avatour.live/login](https://avatour.live/login) and access the Workspace from your **list of Workspaces**.
 
@@ -224,8 +224,8 @@ The bottom menu provides access to the main interface controls and panels:
 - **Microphone** – Mute or unmute yourself.  
 - **Present** – Present an asset, desktop, or webcam feed (see Present section below).  
 - **Host Tools** (hosts only):  
-  - **Lock Focus** – Lock the view for all participants.  
-  - **Mute All** – Mute all participants.  
+    - **Lock Focus** – Lock the view for all participants.  
+    - **Mute All** – Mute all participants.  
 - **Enable Full Screen** – Make the meeting tab full screen.  
 - **Exit Meeting** – Leave the meeting.  
 - **Start Recording** – Use this button to start and stop recording manually during a meeting. Alternatively, meetings can be recorded automatically if **auto-start recording** is enabled in the workspace settings. In both cases, recordings are saved to the workspace assets.
@@ -285,10 +285,10 @@ Here is a description of all the elements shown in the menus above.
   From the **side panel**, you can **print an asset report** or **download it as TXT or CSV file**. Reports can include several elements which you can **choose before exporting**. 
 
   ![Avatour Asset Report Print Menus](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-asset-report-print-menus_kn0syn.png)  
-  *Avatour Asset Report Print / Download Menus*  
+    *Avatour Asset Report Print / Download Menus*  
 
   ![Avatour Print Asset Report Element Selection](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-asset-report-element-selection_ud8c5k.png)  
-  *Avatour Asset Report Element Selection Menu*
+    *Avatour Asset Report Element Selection Menu*
 
 - **Share Link** – Share a link to a specific note or scene in the asset.  
 - **Closed Captions (CC)** – Display on-screen text transcription during video playback.
@@ -303,9 +303,9 @@ When reviewing an asset in a workspace, the toolbar is similar but optimized for
 - **Snapshot, Notes, Notes and Summary Panel Panel, Share Link, Closed Captions**  
 - Not available: **Spotlight, POV** (these require live participants)  
 - Additional controls:
-  - **10-second steps** – Skip forward/backward  
-  - **Playback Speed** – Adjust speed (0.5×–2×)  
-  - **Trim Video** – Trim beginning or end of the asset
+    - **10-second steps** – Skip forward/backward  
+    - **Playback Speed** – Adjust speed (0.5×–2×)  
+    - **Trim Video** – Trim beginning or end of the asset
 
 
 ## 4. For Host and Admin Users - Avatour Web Console {#for-host-and-admin-users-avatour-web-console}
@@ -355,8 +355,8 @@ In the bottom menus you will find:
 - **Assets** – Manage files allocated to this workspace.  
 - **Collaborators** – 
   Control access to workspaces by 
-  - **Viewer** – Can view assets. Invitation creates a Guest user if needed.  
-  - **Editor** – Full workspace control, same rights as Host. Invitation upgrades user to Host if needed.  
+    - **Viewer** – Can view assets. Invitation creates a Guest user if needed.  
+    - **Editor** – Full workspace control, same rights as Host. Invitation upgrades user to Host if needed.  
 > Multiple users can access a workspace simultaneously without a meeting. Public workspaces and meeting access settings provide alternative access.  
 - **Report** – Generate a report using an Inspection Template on selected workspace assets. Responses are generated by AI based on the audio track(s) in the video(s) selected.  
 
@@ -461,15 +461,15 @@ Using the external battery:
 
 - **Noisy environments:** 
   Use the Shokz headphones included in your kit for clear audio capture.  
-  - **Power On/Off:** Hold the “+” button for 3 seconds (blue LED = on, red LED = off).  
-  - **Bluetooth Pairing Mode:** While the headset is off, hold the “+” button for 5 seconds (LED flashes blue/red).  
-  - **Volume:** Use the “+” and “-” buttons.  
+    - **Power On/Off:** Hold the “+” button for 3 seconds (blue LED = on, red LED = off).  
+    - **Bluetooth Pairing Mode:** While the headset is off, hold the “+” button for 5 seconds (LED flashes blue/red).  
+    - **Volume:** Use the “+” and “-” buttons.  
 
 - **Quieter environments / multiple participants near camera:** 
   Use the NoxGear clip-on speaker. It’s not as high fidelity as conference speakers (e.g., Jabra Speak), but is easy to clip onto your shirt and captures nearby voices effectively.  
-  - **Power On/Off:** Hold the Play/Pause button for 2 seconds.  
-  - **Bluetooth Pairing Mode:** Automatically enters pairing mode when powered on (LED flashes blue/red; solid blue when paired).  
-  - **Volume:** Use the “+” and “-” buttons.  
+    - **Power On/Off:** Hold the Play/Pause button for 2 seconds.  
+    - **Bluetooth Pairing Mode:** Automatically enters pairing mode when powered on (LED flashes blue/red; solid blue when paired).  
+    - **Volume:** Use the “+” and “-” buttons.  
 
 - **Using your own device:** If you prefer an alternative (e.g., a conference speaker or personal headset), you can pair it via the camera: Settings → Bluetooth.  
 
@@ -495,9 +495,9 @@ Using the external battery:
 - Attach GlocalMe hotspot to Telesin battery stick (magnet).  
 - Ensures no interference and maintains connection if moving away from camera.  
 - Troubleshooting:
-  - Confirm pre-installed SIM (not Cloud SIM).  
-  - Enable 5G in SIM Card Manager.  
-  - Verify correct APN for your region ([APN setup guide](https://avatour.com/support/how-do-i-change-the-apn-on-my-glocalme-hotspot)).
+    - Confirm pre-installed SIM (not Cloud SIM).  
+    - Enable 5G in SIM Card Manager.  
+    - Verify correct APN for your region ([APN setup guide](https://avatour.com/support/how-do-i-change-the-apn-on-my-glocalme-hotspot)).
 
 **Option B: Personal hotspot / SIM**
 - Use your own smartphone or dedicated hotspot.  
@@ -533,11 +533,11 @@ To address these challenges, follow these **best practices**:
 - **Use wired or wireless headphones:** Preferably with noise-canceling to prevent echo and feedback.  
 - **On-Site Mode:** Join the meeting in On-Site mode when physically present near the 360° camera as this mode is optimized for onsite use:
 
-  - Mutes the participant’s mic and speaker by default.
-  - Does **not** send the participant’s camera feed.
-  - Does **not** display the 360° camera feed in the participant’s browser.
-  - Conserves network bandwidth, ensuring the 360° camera has maximum available upload for the live stream.
-  - Useful when a user wants to share specific details; you **can share back your camera** for targeted views.
+    - Mutes the participant’s mic and speaker by default.
+    - Does **not** send the participant’s camera feed.
+    - Does **not** display the 360° camera feed in the participant’s browser.
+    - Conserves network bandwidth, ensuring the 360° camera has maximum available upload for the live stream.
+    - Useful when a user wants to share specific details; you **can share back your camera** for targeted views.
 - **Mute when not actively speaking:** Prevents unwanted audio feedback and distractions.
 - **Use a separate network if possible:** Have your smartphone connected to a different network than the camera’s network to reduce interference.
 
@@ -562,22 +562,22 @@ Here are (1) the Top Level, (2) Settings and (3) Network Settings menus.
 - **Network**: This option allows you to change which WiFi network the camera is connected to or run a network connection test to view your streaming throughput
 - **Live Capture**: Adjust your Live Capture settings depending on available bandwidth, guest’s VR sensitivity, or if your camera’s protective lenses are installed:
 
-  - **Target Frame Rate (optional)**: Adjust the frame rate for your Live Capture video between 15 fps, 24 fps, and 30 fps. Higher frame rates produce a smoother video, but will require more upload bandwidth. Default: 15 fps
-  - **Target Bitrate**: Enables you to increase or decrease the maximum streaming bitrate for your Live Capture. You can set your target bitrate between 1 Mbps and 10 Mbps. Higher bitrates will result in higher video resolution, but will require more upload bandwidth. Default: 5 Mbps
-  - **Optimize Motion**: This will decrease the video frame rate, generating less load on your network's upload bandwidth, and increase your streaming bitrate. In addition, this option helps to reduce motion sickness for VR participants. Default: Off
-  - **Direction Lock**: This will "lock" the 360° no matter how you move the 360° cam. If you want the 360° video to move with the camera movement, e.g. you want to "point" with the front lens to something the set Direction Lock to No. Then the camera will behave like a traditional camera and it might be more useful for guided tours. Default: Yes
-  - **Initial Orientation**: When you set Direction Lock to No then you can choose which lens (front or back) should be the initial orientation when you start the live video. Default: Looking at Operator as this is the most natural way to start a live meeting (= back lens). Quick Capture is different (front lens is Initial Orientation by default - see below).
+    - **Target Frame Rate (optional)**: Adjust the frame rate for your Live Capture video between 15 fps, 24 fps, and 30 fps. Higher frame rates produce a smoother video, but will require more upload bandwidth. Default: 15 fps
+    - **Target Bitrate**: Enables you to increase or decrease the maximum streaming bitrate for your Live Capture. You can set your target bitrate between 1 Mbps and 10 Mbps. Higher bitrates will result in higher video resolution, but will require more upload bandwidth. Default: 5 Mbps
+    - **Optimize Motion**: This will decrease the video frame rate, generating less load on your network's upload bandwidth, and increase your streaming bitrate. In addition, this option helps to reduce motion sickness for VR participants. Default: Off
+    - **Direction Lock**: This will "lock" the 360° no matter how you move the 360° cam. If you want the 360° video to move with the camera movement, e.g. you want to "point" with the front lens to something the set Direction Lock to No. Then the camera will behave like a traditional camera and it might be more useful for guided tours. Default: Yes
+    - **Initial Orientation**: When you set Direction Lock to No then you can choose which lens (front or back) should be the initial orientation when you start the live video. Default: Looking at Operator as this is the most natural way to start a live meeting (= back lens). Quick Capture is different (front lens is Initial Orientation by default - see below).
 
 - **Quick Capture**: Adjust your Quick Capture settings depending on your preferred video frame rate, available bandwidth for recorded video uploads and other preferences. Map related features as explained above (e.g. map view, notes in a map) are possible when a GPS signal is received and the location setting in the native camera settings is enabled (should be by default). The location / GPS icon in the top right corner of the Quick Capture should be green. It might take some moments to receive the GPS signal and establish the connection.
-  - **Resolution**: Here you can change the resolution. *(The 6k resolutions are experimental and need a manual stitching step in the Gallery before upload to the Avatour Web Console.)*
+    - **Resolution**: Here you can change the resolution. *(The 6k resolutions are experimental and need a manual stitching step in the Gallery before upload to the Avatour Web Console.)*
 
-    - **4k** - This is the standard and maintains a good balance between video quality and file size.
-    - **6k @ 30 fps** *(requires an additional stitching step in the Gallery)*
-    - **6k @ 10 fps** *(requires an additional stitching step in the Gallery)* - This is useful if you want to keep file size lower than with the 30 fps when smooth motion is less important.
-    - For other resolutions you can also use the native camera apps, also on the PanoX V2, for details see [How do you record and upload 360 videos with the Avatour App?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)
-  - **Target Frame Rate** *(only available for 4k resolution)* - Adjust the frame rate for your Quick Capture video recordings between 15 fps, 24 fps, and 30 fps. Higher frame rates produce a smoother video, but will increase video file size and upload time. Recommended: 30 fps
-  - **Target Bitrate** *(only available for 4k resolution)* Set the target bitrate for Quick Capture uploads between 5 Mbps and 20 Mbps. Lower bitrates increase upload speeds, but will decrease video quality. Recommended: 20 Mbps
-  - **Direction Lock**: Same as above under Live Capture. The default Initial Orientation is always the front lens for Quick Capture.
+        - **4k** - This is the standard and maintains a good balance between video quality and file size.
+        - **6k @ 30 fps** *(requires an additional stitching step in the Gallery)*
+        - **6k @ 10 fps** *(requires an additional stitching step in the Gallery)* - This is useful if you want to keep file size lower than with the 30 fps when smooth motion is less important.
+        - For other resolutions you can also use the native camera apps, also on the PanoX V2, for details see [How do you record and upload 360 videos with the Avatour App?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)
+    - **Target Frame Rate** *(only available for 4k resolution)* - Adjust the frame rate for your Quick Capture video recordings between 15 fps, 24 fps, and 30 fps. Higher frame rates produce a smoother video, but will increase video file size and upload time. Recommended: 30 fps
+    - **Target Bitrate** *(only available for 4k resolution)* Set the target bitrate for Quick Capture uploads between 5 Mbps and 20 Mbps. Lower bitrates increase upload speeds, but will decrease video quality. Recommended: 20 Mbps
+    - **Direction Lock**: Same as above under Live Capture. The default Initial Orientation is always the front lens for Quick Capture.
 
   > See also our [Avatour 360° Video File Size Calculator](https://avatour.com/support/avatour-360deg-video-file-size-calculator) for further advice on the above settings and video file sizes. To prevent running out of data storage there will be an alert so that you can stop recording and free up storage (e.g. by uploading videos from the Gallery to the Avatour Web Console Assets).
 
