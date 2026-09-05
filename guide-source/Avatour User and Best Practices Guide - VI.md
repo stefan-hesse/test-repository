@@ -427,48 +427,48 @@ Cung cấp thông tin chi tiết về các cuộc họp, việc sử dụng khô
 
 ![Bảng điều khiển web Avatour - Mục menu chính Phân tích (3 trong 3)](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-analytics-3-of-3_hn2pmr.png) *Tiết kiệm và Sử dụng Giấy phép Thiết bị* 
 
-## 5. Tại chỗ - Cách sử dụng bộ công cụ Avatour Turnkey {#onsite-how-to-use-the-avatour-turnkey-kit}
+## 5. Tại chỗ - Cách sử dụng Bộ công cụ Avatour sẵn sàng sử dụng {#onsite-how-to-use-the-avatour-turnkey-kit}
 
 ### 5.1 Bắt đầu
-Tại đây, bạn sẽ tìm thấy một hướng dẫn trực tuyến rất chi tiết cho những bước đầu tiên của bạn với Bộ công cụ Avatour Turnkey: [Hướng dẫn Bắt đầu Nhanh – Bộ công cụ Avatour Turnkey 3.1 (Cài đặt Pilot PanoX V2)](https://avatour.com/quickstart-panox-v2)
+Tại đây, bạn sẽ tìm thấy một hướng dẫn trực tuyến rất chi tiết để thực hiện những bước đầu tiên với Bộ dụng cụ Avatour Turnkey: [Hướng dẫn Bắt đầu Nhanh – Bộ dụng cụ Avatour Turnkey 3.1 (Cài đặt Pilot PanoX V2)](https://avatour.com/quickstart-panox-v2)
 
-Và đây cũng là hình ảnh kèm hướng dẫn mà bạn sẽ tìm thấy bên trong nắp hộp của bộ kit 3.1.
-![Hình ảnh bên trong nắp hộp bộ kit Avatour](https://res.cloudinary.com/avatour/image/upload/v1775994773/avatour-turnkey-kit-3.1-inside-lid-picture_dq4ipl.png) *Hình ảnh bên trong nắp hộp Avatour Kit* 
+Dưới đây là hình ảnh kèm hướng dẫn mà bạn sẽ tìm thấy bên trong nắp hộp của bộ kit 3.1.
+![Hình ảnh bên trong nắp hộp bộ kit Avatour](https://res.cloudinary.com/avatour/image/upload/v1775994773/avatour-turnkey-kit-3.1-inside-lid-picture_dq4ipl.png) *Hình ảnh bên trong nắp hộp bộ kit Avatour* 
 
-Hãy làm theo hướng dẫn để mở hộp, lắp ráp và bật nguồn máy ảnh.
+Hãy làm theo hướng dẫn và các bước sau để mở hộp, lắp ráp và bật nguồn máy ảnh.
 
 ---
 
 ### 5.2 Mẹo hữu ích
 
-#### Pin ngoài – Thời lượng sử dụng lâu hơn và cải thiện khả năng tản nhiệt 
+#### Pin ngoài – Thời gian ghi hình dài hơn & Cải thiện khả năng tản nhiệt 
 
-Pin bên trong máy ảnh có thời lượng khoảng 30-45 phút. Sẽ có cảnh báo khi pin sắp cạn. Với pin ngoài, bạn có thể kéo dài thời gian hoạt động và thậm chí làm cho nó trở nên vô hạn vì bạn có thể thay pin trong khi sử dụng.
+Pin tích hợp của máy ảnh có thời lượng khoảng 30–45 phút. Sẽ có cảnh báo khi pin sắp cạn. Với pin ngoài, bạn có thể kéo dài thời gian hoạt động và thậm chí làm cho thời gian hoạt động trở nên vô hạn vì bạn có thể thay pin trong khi máy đang hoạt động.
 
-- **Nếu bộ sản phẩm của bạn bao gồm pin Ulanzi:** Gắn pin vào giữa chân đế tripod và thanh kéo dài, sau đó kết nối pin với máy quay qua cổng USB-C.  
+- **Nếu bộ sản phẩm của bạn bao gồm pin Ulanzi:** Gắn pin giữa chân máy và thanh kéo dài, sau đó kết nối pin với máy quay qua cổng USB-C.  
 
-- **Nếu bộ sản phẩm của bạn bao gồm thanh pin Telesin:** Gắn máy ảnh trực tiếp lên thanh pin có thể kéo dài của Telesin và kết nối qua cổng USB-C.  
+- **Nếu bộ sản phẩm của bạn bao gồm thanh pin Telesin:** Gắn máy quay trực tiếp lên thanh pin kéo dài Telesin và kết nối qua cổng USB-C.  
 
-Sử dụng pin ngoài:
+Lợi ích khi sử dụng pin ngoài:
 
-1. Kéo dài tổng thời lượng pin từ ~40 phút (chỉ dùng pin máy ảnh) lên ~3 giờ.  
-2. Tăng độ ổn định cho thiết lập máy ảnh.  
-3. Giúp ngăn ngừa nguy cơ quá nhiệt.  
+1. Kéo dài thời lượng pin tổng cộng từ ~40 phút (chỉ dùng pin máy quay) lên ~3 giờ.  
+2. Tăng độ ổn định cho thiết lập máy quay.  
+3. Giúp ngăn ngừa tình trạng quá nhiệt tiềm ẩn.  
 
 > Chúng tôi khuyến nghị luôn sử dụng pin ngoài ngay từ đầu, đặc biệt là trong các cuộc họp trực tiếp.
 
-#### Lưu ý về âm thanh cho các cuộc họp trực tiếp và ghi hình
+#### Các lưu ý về âm thanh cho các cuộc họp trực tiếp và ghi âm
 
 - **Môi trường ồn ào:** 
   Sử dụng tai nghe Shokz đi kèm trong bộ sản phẩm để thu âm thanh rõ ràng.  
-  - **Bật/Tắt nguồn:** Nhấn giữ nút “+” trong 3 giây (đèn LED xanh dương = bật, đèn LED đỏ = tắt).  
+  - **Bật/Tắt nguồn:** Nhấn và giữ nút “+” trong 3 giây (đèn LED xanh dương = bật, đèn LED đỏ = tắt).  
   - **Chế độ ghép nối Bluetooth:** Khi tai nghe đang tắt, nhấn giữ nút “+” trong 5 giây (đèn LED nhấp nháy màu xanh dương/đỏ).  
   - **Âm lượng:** Sử dụng các nút “+” và “-”.  
 
 - **Môi trường yên tĩnh hơn / nhiều người tham gia gần camera:** 
   Sử dụng loa kẹp NoxGear. Loa này không có chất lượng âm thanh cao như các loa hội nghị (ví dụ: Jabra Speak), nhưng dễ dàng kẹp vào áo và thu âm giọng nói xung quanh hiệu quả.  
-  - **Bật/Tắt nguồn:** Nhấn giữ nút Phát/Tạm dừng trong 2 giây.  
-  - **Chế độ ghép nối Bluetooth:** Tự động chuyển sang chế độ ghép nối khi bật nguồn (đèn LED nhấp nháy màu xanh lam/đỏ; sáng liên tục màu xanh lam khi đã ghép nối).  
+  - **Bật/Tắt nguồn:** Nhấn và giữ nút Phát/Tạm dừng trong 2 giây.  
+  - **Chế độ ghép nối Bluetooth:** Tự động chuyển sang chế độ ghép nối khi bật nguồn (đèn LED nhấp nháy màu xanh dương/đỏ; sáng liên tục màu xanh dương khi đã ghép nối).  
   - **Âm lượng:** Sử dụng các nút “+” và “-”.  
 
 - **Sử dụng thiết bị của riêng bạn:** Nếu bạn muốn dùng thiết bị khác (ví dụ: loa hội nghị hoặc tai nghe cá nhân), bạn có thể ghép nối qua camera: Cài đặt → Bluetooth.  
@@ -477,38 +477,38 @@ Sử dụng pin ngoài:
 **Trước khi bắt đầu:** Đảm bảo kết nối internet qua:
 
 - **WiFi cục bộ** (ưu tiên)
-- **Mạng di động** (nếu nằm ngoài phạm vi phủ sóng WiFi)
+- **Mạng di động** (nếu nằm ngoài phạm vi WiFi)
 
-**Băng thông khuyến nghị:** 10 Mbps (tải lên/tải xuống) để phát trực tiếp 360° đầy đủ (~5 Mbps). Băng thông thấp hơn (1–2 Mbps) chỉ hoạt động khi đứng yên.
+**Băng thông khuyến nghị:** 10 Mbps tải lên/tải xuống để phát trực tiếp 360° đầy đủ (~5 Mbps). Băng thông thấp hơn (1–2 Mbps) chỉ hoạt động khi đứng yên.
 
 ##### Kiểm tra tốc độ mạng
-- **Kiểm tra tại một vị trí cố định:** Sử dụng bất kỳ công cụ kiểm tra tốc độ nào bạn thường dùng (ví dụ: [Speedtest](https://www.speedtest.net)) để xác minh cả băng thông tải lên và tải xuống.   
+- **Kiểm tra tại một vị trí:** Sử dụng bất kỳ công cụ kiểm tra tốc độ nào bạn thường dùng (ví dụ: [Speedtest](https://www.speedtest.net)) để xác minh cả băng thông tải lên và tải xuống.   
 - **Kiểm tra khi di chuyển trong khu vực:** Từ camera: Cài đặt → Mạng → Kiểm tra kết nối. Đi bộ qua toàn bộ không gian để xác nhận phạm vi phủ sóng và băng thông.
 
 ##### WiFi cục bộ
-- Rất được khuyến nghị để đảm bảo kết nối ổn định.  
-- Nếu bộ phận CNTT yêu cầu đưa vào danh sách trắng, hãy tìm địa chỉ MAC: Cài đặt → Giới thiệu → Địa chỉ WiFi.
+- Rất được khuyến nghị để có kết nối ổn định.  
+- Nếu bộ phận CNTT yêu cầu danh sách trắng, hãy tìm địa chỉ MAC: Cài đặt → Giới thiệu → Địa chỉ WiFi.
 
 ##### Mạng di động
-**Tùy chọn A: Điểm phát sóng & SIM do bộ sản phẩm cung cấp**  
+**Tùy chọn A: Điểm phát sóng và SIM do bộ sản phẩm cung cấp**  
 
-- Gắn điểm phát sóng GlocalMe vào thanh pin Telesin (nam châm).  
-- Đảm bảo không có nhiễu và duy trì kết nối khi di chuyển ra xa camera.  
+- Gắn điểm phát sóng GlocalMe vào thanh pin Telesin (bằng nam châm).  
+- Đảm bảo không bị nhiễu và duy trì kết nối khi di chuyển ra xa camera.  
 - Khắc phục sự cố:
-  - Xác nhận SIM được cài đặt sẵn (không phải Cloud SIM).  
+  - Xác nhận SIM được cài đặt sẵn (không phải SIM đám mây).  
   - Bật 5G trong Trình quản lý thẻ SIM.  
-  - Kiểm tra xem APN có phù hợp với khu vực của bạn không ([Hướng dẫn thiết lập APN](https://avatour.com/support/how-do-i-change-the-apn-on-my-glocalme-hotspot)).
+  - Kiểm tra xem APN có đúng với khu vực của bạn không ([hướng dẫn thiết lập APN](https://avatour.com/support/how-do-i-change-the-apn-on-my-glocalme-hotspot)).
 
 **Tùy chọn B: Điểm phát sóng cá nhân / SIM**
 - Sử dụng điện thoại thông minh của riêng bạn hoặc thiết bị phát sóng chuyên dụng.  
 
 **Lưu ý quan trọng:**  
-> Tắt điểm phát sóng khi đang kết nối với WiFi; chỉ bật khi nằm ngoài vùng phủ sóng. Hệ điều hành của máy ảnh sẽ tự động chuyển đổi giữa các mạng WiFi dựa trên cường độ tín hiệu và có thể vô tình chuyển sang điểm phát sóng ngay cả khi có WiFi.
+> Tắt điểm phát sóng khi đang kết nối với WiFi; chỉ bật khi nằm ngoài phạm vi phủ sóng. Hệ điều hành của máy ảnh sẽ tự động chuyển đổi giữa các mạng Wi-Fi dựa trên cường độ tín hiệu và có thể vô tình chuyển sang điểm phát sóng ngay cả khi có Wi-Fi.
 
-> Mạng di động có thể hạn chế băng thông một cách bất ngờ. Hãy kiểm tra giới hạn gói dữ liệu với nhà mạng của bạn hoặc liên hệ với bộ phận hỗ trợ của Avatour nếu bạn đang sử dụng điểm phát sóng và SIM của chúng tôi.
+> Mạng di động có thể giới hạn băng thông một cách bất ngờ. Hãy kiểm tra với nhà mạng về giới hạn gói dữ liệu, hoặc liên hệ với bộ phận hỗ trợ của Avatour nếu bạn đang sử dụng điểm phát sóng và SIM của chúng tôi.
 
 ##### Các tình huống băng thông thấp
-- Quay sẵn video tại địa điểm để phát lại sau ([hướng dẫn quay phim](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)).  
+- Ghi trước các video về địa điểm để phát lại sau ([hướng dẫn ghi hình](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)).  
 - Chia sẻ luồng camera từ điện thoại thông minh để bổ sung cho các khu vực có băng thông thấp (tốc độ tải lên 0,1–0,3 Mbps).
 
 ##### Không có kết nối
@@ -516,67 +516,67 @@ Sử dụng pin ngoài:
 
 #### Những người tham gia khác tại chỗ – Các phương pháp hay nhất
 
-Khi nhiều người tham gia tham gia một cuộc họp trực tiếp trên Avatour từ cùng một địa điểm với camera 360°, việc quản lý cẩn thận **âm thanh và băng thông** là rất quan trọng:  
+Khi nhiều người tham gia tham gia một cuộc họp Avatour trực tiếp từ cùng một địa điểm với camera 360°, việc quản lý cẩn thận **âm thanh và băng thông** là rất quan trọng:  
 
-- Mỗi chiếc điện thoại thông minh, máy tính bảng hoặc máy tính xách tay được kết nối tại chỗ đều tiêu tốn băng thông mạng và có thể ảnh hưởng tiêu cực đến luồng video từ camera 360°.  
-- Nhiều micro và loa trong cùng một không gian có thể gây ra **hiện tượng phản hồi âm thanh**, khiến trải nghiệm cuộc họp trở nên khó chịu cho tất cả người tham gia.
-
-#### Những người tham gia khác tại hiện trường – Các phương pháp hay nhất
-
-Khi nhiều người tham gia tham gia cuộc họp trực tiếp trên Avatour từ cùng một địa điểm với camera 360°, việc quản lý cẩn thận **âm thanh và băng thông** là vô cùng quan trọng:  
-
-- Mỗi chiếc điện thoại thông minh, máy tính bảng hoặc máy tính xách tay được kết nối tại chỗ đều tiêu tốn băng thông mạng và có thể ảnh hưởng tiêu cực đến luồng video từ camera 360°.  
+- Mỗi điện thoại thông minh, máy tính bảng hoặc máy tính xách tay được kết nối tại chỗ đều tiêu tốn băng thông mạng và có thể ảnh hưởng tiêu cực đến luồng video từ camera 360°.  
 - Nhiều micrô và loa trong cùng một không gian có thể gây ra **hiện tượng phản hồi âm thanh**, khiến trải nghiệm cuộc họp trở nên khó chịu cho tất cả người tham gia.
 
-Để giải quyết những thách thức này, hãy tuân theo các **thực hành tốt nhất** sau:
+#### Người tham gia tại chỗ khác – Các thực hành tốt nhất
 
-- **Sử dụng tai nghe có dây hoặc không dây:** Tốt nhất là loại có tính năng khử tiếng ồn để ngăn chặn tiếng vang và phản hồi âm thanh.  
-- **Chế độ Tại chỗ:** Tham gia cuộc họp ở chế độ Tại chỗ khi có mặt trực tiếp gần camera 360°, vì chế độ này được tối ưu hóa cho việc sử dụng tại chỗ: 
- - Tắt micrô và loa của người tham gia theo mặc định. 
- - **Không** truyền tín hiệu camera của người tham gia.  
-    - **Không** hiển thị luồng video từ camera 360° trên trình duyệt của người tham gia. 
- - Tiết kiệm băng thông mạng, đảm bảo camera 360° có băng thông tải lên tối đa cho luồng phát trực tiếp. 
- - Hữu ích khi người dùng muốn chia sẻ các chi tiết cụ thể; bạn **có thể chia sẻ lại hình ảnh từ camera của mình** để người xem tập trung vào những góc nhìn cụ thể.  
-- **Tắt tiếng khi không đang nói:** Ngăn chặn tiếng ồn phản hồi không mong muốn và các yếu tố gây xao nhãng.  
-- **Sử dụng mạng riêng biệt nếu có thể:** Kết nối điện thoại thông minh của bạn với mạng khác so với mạng của camera để giảm nhiễu.  
+Khi nhiều người tham gia tham gia cuộc họp Avatour trực tiếp từ cùng địa điểm với camera 360°, việc quản lý cẩn thận **âm thanh và băng thông** là rất quan trọng:  
+
+- Mỗi chiếc điện thoại thông minh, máy tính bảng hoặc máy tính xách tay được kết nối tại chỗ đều tiêu tốn băng thông mạng và có thể ảnh hưởng tiêu cực đến luồng hình ảnh từ camera 360°.  
+- Nhiều micro và loa trong cùng một không gian có thể gây ra **hiện tượng phản hồi âm thanh**, khiến trải nghiệm cuộc họp trở nên khó chịu cho tất cả người tham gia.
+
+Để giải quyết những thách thức này, hãy tuân thủ các **thực hành tốt nhất** sau đây:
+
+- **Sử dụng tai nghe có dây hoặc không dây:** Tốt nhất là loại có tính năng khử tiếng ồn để ngăn chặn tiếng vang và phản hồi.  
+- **Chế độ Tại Chỗ:** Tham gia cuộc họp ở chế độ Tại Chỗ khi có mặt trực tiếp gần camera 360°, vì chế độ này được tối ưu hóa cho việc sử dụng tại chỗ:
+    - Tự động tắt tiếng mic và loa của người tham gia theo mặc định. 
+ - **Không** truyền tín hiệu camera của người tham gia. 
+ - **Không** hiển thị hình ảnh từ camera 360° trong trình duyệt của người tham gia.  
+    - Tiết kiệm băng thông mạng, đảm bảo camera 360° có băng thông tải lên tối đa cho luồng phát trực tiếp. 
+ - Hữu ích khi người dùng muốn chia sẻ chi tiết cụ thể; bạn **có thể chia sẻ lại hình ảnh từ camera của mình** để người khác xem những góc quay cụ thể.  
+- **Tắt tiếng khi không đang nói:** Ngăn chặn tiếng vang âm thanh không mong muốn và các yếu tố gây xao nhãng.  
+- **Sử dụng mạng riêng nếu có thể:** Kết nối điện thoại thông minh của bạn với mạng khác với mạng của camera để giảm nhiễu.  
 
 Tuân thủ các hướng dẫn này sẽ đảm bảo một chuyến tham quan trực tiếp mượt mà, chất lượng cao cho cả người tham gia tại chỗ và từ xa.
 
-### 5.3 Ứng dụng Camera Avatour
+### 5.3 Ứng dụng camera Avatour
 
-Dưới đây là các menu (1) Màn hình chính, (2) Cài đặt và (3) Cài đặt mạng.
+Dưới đây là các menu (1) Cấp cao nhất, (2) Cài đặt và (3) Cài đặt mạng.
 
 ![Ứng dụng camera Avatour 360° - Ba menu](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-cam-app-3-menu-screens_nju8bt.png) *Ứng dụng máy ảnh Avatour 360° - 3 menu*
 
-**Quay nhanh** - Dùng để quay video 360° ngoại tuyến vào thẻ nhớ SD trong máy ảnh 360. - Để biết mô tả chi tiết, xem [Làm thế nào để quay và tải lên video 360° bằng ứng dụng Avatour?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app). Chúng tôi khuyên bạn nên sử dụng thiết bị âm thanh bên ngoài (kết nối qua Bluetooth). Lưu ý: Bạn cũng có thể thay đổi góc quay video từ 360° sang 270°, 180° và video 2D tiêu chuẩn cũng như hình ảnh, ví dụ như để lấy nét hoặc che khuất các khu vực bí mật - chỉ cần thay đổi chế độ ở góc dưới cùng bên phải khi ở màn hình QC (*tuy nhiên, chỉ có thể thực hiện được khi đã chọn độ phân giải 4K trong Cài đặt cho Chụp nhanh - xem bên dưới*)
+**Chụp nhanh** - Dùng để quay video 360° ngoại tuyến vào thẻ nhớ SD trong máy quay 360. - Để biết mô tả chi tiết, hãy xem [Làm thế nào để quay và tải lên video 360 bằng ứng dụng Avatour?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app). Chúng tôi khuyến nghị sử dụng thiết bị âm thanh ngoài (kết nối qua Bluetooth). Lưu ý: Bạn cũng có thể thay đổi góc quay video từ 360° xuống 270°, 180° và video 2D tiêu chuẩn cũng như hình ảnh, ví dụ như để lấy nét hoặc che khuất các khu vực nhạy cảm - chỉ cần thay đổi chế độ ở góc dưới bên phải khi ở màn hình QC (*tuy nhiên, điều này chỉ khả thi khi đã chọn độ phân giải 4K trong Cài đặt cho Chế độ Quay Nhanh - xem bên dưới*)
 
-**Họp Trực Tiếp** - Dành cho hội nghị video 360° trực tiếp. Bạn sẽ thấy các không gian làm việc của mình và khi nhấp vào một trong số đó, luồng video trực tiếp từ camera 360° sẽ được khởi chạy. Trước khi tham gia cuộc họp bằng camera 360°, bạn cần kết nối thiết bị âm thanh qua Bluetooth. Để biết mô tả chi tiết, hãy xem [Cách bắt đầu cuộc họp Ghi hình Trực tiếp với camera Pilot?](https://avatour.com/support/how-to-start-a-live-capture-meeting-with-your-pilot-camera)
+**Họp Trực Tiếp** - Dành cho hội nghị video 360° trực tiếp. Bạn sẽ thấy các không gian làm việc của mình và việc nhấp vào một trong số đó sẽ khởi động luồng video trực tiếp từ camera 360°. Trước khi tham gia cuộc họp bằng camera 360°, bạn cần kết nối thiết bị âm thanh qua Bluetooth. Để biết mô tả chi tiết, hãy xem [Cách bắt đầu cuộc họp Live Capture với camera Pilot?](https://avatour.com/support/how-to-start-a-live-capture-meeting-with-your-pilot-camera)
 
-> Khi tổ chức cuộc họp Live Capture bằng camera 360°, bạn sẽ có các công cụ họp tương tự như khi sử dụng trên web. Dưới đây là liên kết đến bài viết trong Cơ sở Kiến thức của chúng tôi giải thích chi tiết hơn về các công cụ này: [Công cụ trên ứng dụng Operator](https://avatour.com/support/what-avatour-app-tools-are-available-to-labpano-pilot-camera-operators)
+> Khi tổ chức cuộc họp Live Capture bằng camera 360°, bạn sẽ có các công cụ họp tương tự như trải nghiệm trên web. Dưới đây là liên kết đến bài viết trong Cơ sở Kiến thức của chúng tôi giải thích chi tiết hơn về các công cụ này: [Công cụ Ứng dụng Điều hành](https://avatour.com/support/what-avatour-app-tools-are-available-to-labpano-pilot-camera-operators)
 
-**Thư viện** - Tại đây, bạn có thể tìm thấy tất cả các video và hình ảnh 360° của mình để tải lên Bảng điều khiển web Avatour. Bạn có thể tải lên và xóa tài nguyên theo lô - nhấn vào "Chọn" ở đầu màn hình. Trước khi tải lên, bạn có thể chọn một số bước xử lý như “Làm mờ khuôn mặt”, tạo “Tóm tắt bằng AI” và tối ưu hóa tín hiệu âm thanh “Tăng cường giọng nói”. Bạn thậm chí có thể chọn một không gian làm việc để phân bổ tài nguyên vào – tất nhiên, tài nguyên đó cũng sẽ có trong phần tài nguyên chung trên Web Console.
+**Thư viện** - Tại đây, bạn có thể tìm thấy tất cả các video và hình ảnh 360° của mình để tải lên Bảng điều khiển web Avatour. Bạn có thể tải lên và xóa tài sản theo lô - chạm vào "Chọn" ở đầu màn hình. Trước khi tải lên, bạn có thể chọn một số bước xử lý như "Làm mờ khuôn mặt", tạo "Tóm tắt bằng AI" và tối ưu hóa tín hiệu âm thanh "Nâng cao giọng nói". Bạn thậm chí có thể chọn một không gian làm việc để phân bổ tài sản vào đó - tất nhiên, tài sản đó cũng sẽ có trong phần tài sản chung trong Bảng điều khiển web.
 
 **Cài đặt** - Trong phần Cài đặt, bạn có các tùy chọn sau:
 
-- **Mạng**: Tùy chọn này cho phép bạn thay đổi mạng WiFi mà camera đang kết nối hoặc thực hiện kiểm tra kết nối mạng để xem thông lượng phát trực tiếp
-- **Quay trực tiếp**: Điều chỉnh cài đặt Ghi hình Trực tiếp tùy theo băng thông khả dụng, độ nhạy VR của khách hoặc liệu ống kính bảo vệ của camera đã được lắp đặt hay chưa:
-  - **Tốc độ khung hình mục tiêu (tùy chọn)**: Điều chỉnh tốc độ khung hình cho video Ghi hình Trực tiếp trong khoảng 15 fps, 24 fps và 30 fps. Tốc độ khung hình cao hơn sẽ tạo ra video mượt mà hơn, nhưng sẽ yêu cầu băng thông tải lên lớn hơn. Mặc định: 15 fps
-  - **Tốc độ bit mục tiêu**: Cho phép bạn tăng hoặc giảm tốc độ bit phát trực tuyến tối đa cho tính năng Ghi hình trực tiếp. Bạn có thể đặt tốc độ bit mục tiêu trong khoảng từ 1 Mbps đến 10 Mbps. Tốc độ bit cao hơn sẽ mang lại độ phân giải video cao hơn, nhưng sẽ yêu cầu băng thông tải lên lớn hơn. Mặc định: 5 Mbps
-  - **Tối ưu hóa chuyển động**: Tính năng này sẽ giảm tốc độ khung hình video, giúp giảm tải cho băng thông tải lên của mạng và tăng tốc độ bit phát trực tuyến. Ngoài ra, tùy chọn này còn giúp giảm tình trạng say chuyển động cho người tham gia VR. Mặc định: Tắt
-  - **Khóa hướng**: Tính năng này sẽ “khóa” góc quay 360° bất kể bạn di chuyển camera 360° như thế nào. Nếu bạn muốn video 360° di chuyển theo chuyển động của máy quay, ví dụ như bạn muốn "hướng" ống kính trước vào một vật thể nào đó, hãy đặt Khóa hướng thành Không. Khi đó, máy quay sẽ hoạt động như một máy quay truyền thống và có thể hữu ích hơn cho các tour hướng dẫn. Mặc định: Có
-  - **Hướng ban đầu**: Khi bạn đặt Khóa hướng thành Không, bạn có thể chọn ống kính nào (trước hoặc sau) sẽ là hướng ban đầu khi bạn bắt đầu phát video trực tiếp. Mặc định: Hướng về người điều khiển vì đây là cách tự nhiên nhất để bắt đầu một cuộc họp trực tiếp (= ống kính sau). Chế độ "Quick Capture" thì khác (ống kính trước là hướng ban đầu theo mặc định - xem bên dưới).
+- **Mạng**: Tùy chọn này cho phép bạn thay đổi mạng WiFi mà camera đang kết nối hoặc thực hiện kiểm tra kết nối mạng để xem thông lượng truyền phát
+- **Ghi hình trực tiếp**: Điều chỉnh cài đặt Ghi hình Trực tiếp tùy thuộc vào băng thông có sẵn, độ nhạy VR của khách hoặc liệu ống kính bảo vệ của camera có được lắp đặt hay không:
+    - **Tốc độ khung hình mục tiêu (tùy chọn)**: Điều chỉnh tốc độ khung hình cho video Ghi hình Trực tiếp trong khoảng 15 fps, 24 fps và 30 fps. Tốc độ khung hình cao hơn sẽ tạo ra video mượt mà hơn, nhưng sẽ cần nhiều băng thông tải lên hơn. Mặc định: 15 fps
+    - **Tốc độ bit mục tiêu**: Cho phép bạn tăng hoặc giảm tốc độ bit phát trực tuyến tối đa cho tính năng Ghi hình trực tiếp. Bạn có thể đặt tốc độ bit mục tiêu trong khoảng từ 1 Mbps đến 10 Mbps. Tốc độ bit cao hơn sẽ mang lại độ phân giải video cao hơn, nhưng sẽ đòi hỏi băng thông tải lên lớn hơn. Mặc định: 5 Mbps
+    - **Tối ưu hóa chuyển động**: Tính năng này sẽ giảm tốc độ khung hình của video, giúp giảm tải cho băng thông tải lên của mạng và tăng tốc độ bit phát trực tuyến. Ngoài ra, tùy chọn này còn giúp giảm tình trạng say chuyển động cho người tham gia VR. Mặc định: Tắt
+    - **Khóa hướng**: Tùy chọn này sẽ “khóa” góc quay 360° bất kể bạn di chuyển camera 360° như thế nào. Nếu bạn muốn video 360° di chuyển theo chuyển động của camera, ví dụ như bạn muốn "hướng" ống kính phía trước vào một vật thể nào đó, hãy đặt Khóa hướng thành Không. Khi đó, camera sẽ hoạt động như một camera truyền thống và có thể hữu ích hơn cho các tour hướng dẫn. Mặc định: Có
+    - **Hướng ban đầu**: Khi bạn đặt Khóa hướng thành Không, bạn có thể chọn ống kính nào (trước hoặc sau) sẽ là hướng ban đầu khi bắt đầu phát video trực tiếp. Mặc định: Hướng về Người điều khiển vì đây là cách tự nhiên nhất để bắt đầu một cuộc họp trực tiếp (= ống kính sau). Chế độ "Quick Capture" thì khác (ống kính trước là Hướng ban đầu theo mặc định - xem bên dưới).
 
-- **Chế độ Chụp nhanh**: Điều chỉnh cài đặt Chế độ Chụp nhanh tùy theo tốc độ khung hình video ưa thích, băng thông khả dụng để tải lên video đã ghi và các tùy chọn khác. Các tính năng liên quan đến bản đồ như đã giải thích ở trên (ví dụ: chế độ xem bản đồ, ghi chú trên bản đồ) sẽ hoạt động khi nhận được tín hiệu GPS và cài đặt vị trí trong cài đặt camera gốc được bật (thường được bật mặc định). Biểu tượng vị trí/GPS ở góc trên bên phải của Quick Capture phải có màu xanh lá cây. Có thể mất một lúc để nhận tín hiệu GPS và thiết lập kết nối.
-  - **Độ phân giải**: Tại đây, bạn có thể thay đổi độ phân giải. *(Các độ phân giải 6k đang trong giai đoạn thử nghiệm và cần thực hiện bước ghép ảnh thủ công trong Thư viện trước khi tải lên Bảng điều khiển web Avatour.)*
+- **Quick Capture**: Điều chỉnh cài đặt "Quick Capture" tùy theo tốc độ khung hình video ưa thích của bạn, băng thông khả dụng để tải lên video đã ghi và các tùy chọn khác. Các tính năng liên quan đến bản đồ như đã giải thích ở trên (ví dụ: chế độ xem bản đồ, ghi chú trên bản đồ) có thể sử dụng được khi nhận được tín hiệu GPS và cài đặt vị trí trong cài đặt camera gốc được bật (thường là mặc định). Biểu tượng vị trí / GPS ở góc trên bên phải của Chụp nhanh phải có màu xanh lá cây. Có thể mất một lúc để nhận được tín hiệu GPS và thiết lập kết nối.
+    - **Độ phân giải**: Tại đây, bạn có thể thay đổi độ phân giải. *(Các độ phân giải 6k đang trong giai đoạn thử nghiệm và cần thực hiện bước ghép ảnh thủ công trong Thư viện trước khi tải lên Bảng điều khiển web Avatour.)*
  - **4k** - Đây là độ phân giải tiêu chuẩn và duy trì sự cân bằng tốt giữa chất lượng video và kích thước tệp.
-      - **6k @ 30 fps** *(yêu cầu thêm bước ghép ảnh trong Gallery)*
- - **6k @ 10 fps** *(yêu cầu thêm bước ghép ảnh trong Gallery)* - Tùy chọn này hữu ích nếu bạn muốn giữ kích thước tệp nhỏ hơn so với 30 fps khi độ mượt mà của chuyển động không quá quan trọng.
- - Đối với các độ phân giải khác, bạn cũng có thể sử dụng các ứng dụng camera gốc, kể cả trên PanoX V2; để biết chi tiết, xem [Làm thế nào để quay và tải lên video 360 độ bằng ứng dụng Avatour?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)
-  - **Tốc độ khung hình mục tiêu** *(chỉ có sẵn cho độ phân giải 4K)* - Điều chỉnh tốc độ khung hình cho các video quay bằng chế độ Quick Capture trong khoảng từ 15 fps, 24 fps đến 30 fps. Tốc độ khung hình cao hơn sẽ tạo ra video mượt mà hơn, nhưng sẽ làm tăng kích thước tệp video và thời gian tải lên. Khuyến nghị: 30 khung hình/giây
-  - **Tốc độ bit mục tiêu** *(chỉ khả dụng cho độ phân giải 4K)* Đặt tốc độ bit mục tiêu cho các bản tải lên Quick Capture trong khoảng từ 5 Mbps đến 20 Mbps. Tốc độ bit thấp hơn sẽ tăng tốc độ tải lên, nhưng sẽ làm giảm chất lượng video. Khuyến nghị: 20 Mbps
-  - **Khóa hướng**: Giống như phần Live Capture ở trên. Hướng ban đầu mặc định luôn là ống kính phía trước đối với Quick Capture.
+        - **6k @ 30 fps** *(cần thêm bước ghép hình trong Thư viện)*
+        - **6k @ 10 khung hình/giây** *(yêu cầu thêm bước ghép hình trong Gallery)* - Tùy chọn này hữu ích nếu bạn muốn giữ kích thước tệp nhỏ hơn so với 30 khung hình/giây khi độ mượt mà của chuyển động không quá quan trọng.
+        - Đối với các độ phân giải khác, bạn cũng có thể sử dụng các ứng dụng camera gốc, kể cả trên PanoX V2; để biết chi tiết, xem [Làm thế nào để quay và tải lên video 360 độ bằng ứng dụng Avatour?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)
+    - **Tốc độ khung hình mục tiêu** *(chỉ khả dụng cho độ phân giải 4K)* - Điều chỉnh tốc độ khung hình cho các bản ghi video Quick Capture trong khoảng từ 15 fps, 24 fps đến 30 fps. Tốc độ khung hình cao hơn sẽ tạo ra video mượt mà hơn, nhưng sẽ làm tăng kích thước tệp video và thời gian tải lên. Khuyến nghị: 30 khung hình/giây
+    - **Tốc độ bit mục tiêu** *(chỉ có sẵn cho độ phân giải 4K)* Đặt tốc độ bit mục tiêu cho các bản tải lên Quick Capture trong khoảng từ 5 Mbps đến 20 Mbps. Tốc độ bit thấp hơn sẽ tăng tốc độ tải lên, nhưng sẽ làm giảm chất lượng video. Khuyến nghị: 20 Mbps
+    - **Khóa hướng**: Giống như phần trên trong mục Live Capture. Hướng ban đầu mặc định luôn là ống kính phía trước đối với Quick Capture.
 
-  > Xem thêm [Công cụ tính kích thước tệp video 360° của Avatour](https://avatour.com/support/avatour-360deg-video-file-size-calculator) để biết thêm lời khuyên về các cài đặt trên và kích thước tệp video. Để tránh hết dung lượng lưu trữ, hệ thống sẽ hiển thị cảnh báo để bạn có thể dừng ghi và giải phóng dung lượng (ví dụ: bằng cách tải video từ Thư viện lên Tài nguyên trên Bảng điều khiển web Avatour).
+  > Xem thêm [Công cụ tính kích thước tệp video 360° của Avatour](https://avatour.com/support/avatour-360deg-video-file-size-calculator) để biết thêm lời khuyên về các cài đặt trên và kích thước tệp video. Để tránh hết dung lượng lưu trữ, hệ thống sẽ hiển thị cảnh báo để bạn có thể dừng quay và giải phóng dung lượng (ví dụ: bằng cách tải video từ Thư viện lên Tài nguyên trên Bảng điều khiển web Avatour).
 
 - **Giới thiệu**: Xem số sê-ri thiết bị và phiên bản phần mềm
 

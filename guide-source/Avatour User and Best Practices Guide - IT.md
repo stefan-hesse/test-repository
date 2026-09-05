@@ -433,26 +433,26 @@ Fornisce approfondimenti su riunioni, utilizzo dello spazio di lavoro e metriche
 Qui troverete una guida online molto completa per i vostri primi passi con il kit Avatour Turnkey: [Guida rapida – Kit Avatour Turnkey 3.1 (Configurazione Pilot PanoX V2)](https://avatour.com/quickstart-panox-v2)
 
 Ecco inoltre l’immagine con le istruzioni che troverete all’interno del coperchio della valigetta del kit 3.1.
-![Immagine all’interno del coperchio della valigetta del kit Avatour](https://res.cloudinary.com/avatour/image/upload/v1775994773/avatour-turnkey-kit-3.1-inside-lid-picture_dq4ipl.png) *Immagine all’interno del coperchio della custodia del kit Avatour* 
+![Immagine all’interno del coperchio della valigetta del kit Avatour](https://res.cloudinary.com/avatour/image/upload/v1775994773/avatour-turnkey-kit-3.1-inside-lid-picture_dq4ipl.png) *Immagine all’interno del coperchio della valigetta del kit Avatour* 
 
-Seguite la guida e le istruzioni per disimballare, assemblare e accendere la vostra videocamera.
+Seguite la guida e le istruzioni per disimballare, assemblare e accendere la vostra telecamera.
 
 ---
 
 ### 5.2 Suggerimenti utili
 
-#### Batteria esterna – Riunioni in diretta più lunghe e migliori prestazioni termiche 
+#### Batteria esterna – Incontri in diretta più lunghi e migliori riprese termiche 
 
-La batteria interna della videocamera dura circa 30-45 minuti. Quando la batteria si sta scaricando, verrà visualizzato un avviso. Con una batteria esterna è possibile prolungare il tempo di funzionamento e renderlo addirittura illimitato, poiché è possibile sostituire le batterie durante l’uso.
+La batteria interna della telecamera dura circa 30-45 minuti. Quando la batteria è in esaurimento, verrà visualizzato un avviso. Con una batteria esterna è possibile prolungare l’autonomia e renderla addirittura illimitata, poiché è possibile sostituire le batterie durante il funzionamento.
 
-- **Se il kit include una batteria Ulanzi:** fissala tra la base del treppiede e l’asta estensibile, quindi collega la batteria alla videocamera tramite USB-C.  
+- **Se il kit include una batteria Ulanzi:** Fissala tra la base del treppiede e l’asta estensibile, quindi collega la batteria alla videocamera tramite USB-C.  
 
-- **Se il kit include un’asta con batteria Telesin:** Montate la videocamera direttamente sul bastone con batteria estensibile Telesin e collegatela tramite USB-C.  
+- **Se il tuo kit include un’asta con batteria Telesin:** Monta la videocamera direttamente sull’asta estensibile con batteria Telesin e collegala tramite USB-C.  
 
 Utilizzo della batteria esterna:
 
 1. Estende la durata totale della batteria da circa 40 minuti (solo batteria della videocamera) a circa 3 ore.  
-2. Aggiunge stabilità alla configurazione della videocamera.  
+2. Aumenta la stabilità della configurazione della videocamera.  
 3. Aiuta a prevenire un potenziale surriscaldamento.  
 
 > Si consiglia di utilizzare sempre la batteria esterna fin dall’inizio, specialmente per le riunioni in diretta.
@@ -461,38 +461,38 @@ Utilizzo della batteria esterna:
 
 - **Ambienti rumorosi:** 
   Utilizza le cuffie Shokz incluse nel kit per una registrazione audio chiara.  
-  - **Accensione/spegnimento:** Tieni premuto il pulsante “+” per 3 secondi (LED blu = acceso, LED rosso = spento).  
-  - **Modalità di accoppiamento Bluetooth:** Con le cuffie spente, tenere premuto il pulsante “+” per 5 secondi (il LED lampeggia in blu/rosso).  
-  - **Volume:** Utilizzare i pulsanti “+” e “-”.  
+  - **Accensione/Spegnimento:** Tieni premuto il pulsante “+” per 3 secondi (LED blu = acceso, LED rosso = spento).  
+  - **Modalità di accoppiamento Bluetooth:** con le cuffie spente, tenere premuto il pulsante “+” per 5 secondi (il LED lampeggia in blu/rosso).  
+  - **Volume:** utilizzare i pulsanti “+” e “-”.  
 
 - **Ambienti più silenziosi / più partecipanti vicino alla videocamera:** 
-  Utilizza l’altoparlante a clip NoxGear. Non offre la stessa alta fedeltà degli altoparlanti da conferenza (ad es. Jabra Speak), ma è facile da agganciare alla camicia e cattura efficacemente le voci vicine.  
-  - **Accensione/Spegnimento:** Tieni premuto il pulsante Riproduci/Pausa per 2 secondi.  
-  - **Modalità di accoppiamento Bluetooth:** Entra automaticamente in modalità di accoppiamento all’accensione (il LED lampeggia in blu/rosso; rimane blu fisso una volta effettuato l’accoppiamento).  
-  - **Volume:** Utilizza i pulsanti “+” e “-”.  
+  Utilizza l’altoparlante a clip NoxGear. Non offre la stessa fedeltà audio degli altoparlanti da conferenza (ad es. Jabra Speak), ma è facile da agganciare alla camicia e cattura efficacemente le voci nelle vicinanze.  
+  - **Accensione/spegnimento:** Tieni premuto il pulsante Play/Pausa per 2 secondi.  
+  - **Modalità di accoppiamento Bluetooth:** Entra automaticamente in modalità di accoppiamento all’accensione (il LED lampeggia in blu/rosso; rimane blu fisso una volta accoppiato).  
+  - **Volume:** Utilizzare i pulsanti “+” e “-”.  
 
-- **Utilizzo del proprio dispositivo:** se si preferisce un’alternativa (ad es. un altoparlante da conferenza o cuffie personali), è possibile accoppiarla tramite la videocamera: Impostazioni → Bluetooth.  
+- **Utilizzo del proprio dispositivo:** se si preferisce un’alternativa (ad es. un altoparlante per conferenze o un auricolare personale), è possibile accoppiarla tramite la fotocamera: Impostazioni → Bluetooth.  
 
 #### Connettività
-**Prima di iniziare:** assicurarsi di disporre di una connessione a Internet tramite:
+**Prima di iniziare:** Assicurati di disporre di una connessione a Internet tramite:
 
 - **Wi-Fi locale** (preferibile)
 - **Rete mobile** (se fuori dalla portata del Wi-Fi)
 
-**Larghezza di banda consigliata:** 10 Mbps in upload/download per lo streaming completo a 360° (~5 Mbps). Una larghezza di banda inferiore (1–2 Mbps) funziona solo quando si rimane fermi.
+**Larghezza di banda consigliata:** 10 Mbps in upload/download per lo streaming completo a 360° (~5 Mbps). Una larghezza di banda inferiore (1–2 Mbps) funziona solo se si rimane fermi.
 
 ##### Verifica della velocità di rete
-- **Test in un'unica posizione:** utilizza qualsiasi strumento di verifica della velocità che usi normalmente (ad es. [Speedtest](https://www.speedtest.net)) per verificare sia la velocità di upload che quella di download.   
-- **Test camminando all'interno della sede:** Dalla telecamera: Impostazioni → Rete → Test di connessione. Percorri l’intero spazio per verificare la copertura e la larghezza di banda.
+- **Test in un’unica posizione:** Utilizza qualsiasi strumento di verifica della velocità che usi normalmente (ad es. [Speedtest](https://www.speedtest.net)) per verificare sia la larghezza di banda in upload che in download.   
+- **Test camminando all’interno del sito:** Dalla fotocamera: Impostazioni → Rete → Test di connessione. Percorri l’intero spazio per verificare la copertura e la larghezza di banda.
 
 ##### Wi-Fi locale
 - Altamente consigliato per connessioni stabili.  
 - Se il reparto IT richiede l’inserimento in whitelist, individua l’indirizzo MAC: Impostazioni → Informazioni → Indirizzo Wi-Fi.
 
 ##### Rete mobile
-**Opzione A: hotspot e SIM forniti nel kit**  
+**Opzione A: hotspot e SIM forniti con il kit**  
 
-- Collegare l’hotspot GlocalMe alla batteria portatile Telesin (magnete).  
+- Collegare l’hotspot GlocalMe al battery stick Telesin (magnete).  
 - Assicura l’assenza di interferenze e mantiene la connessione anche allontanandosi dalla telecamera.  
 - Risoluzione dei problemi:
   - Verificare la presenza della SIM preinstallata (non la Cloud SIM).  
@@ -503,13 +503,13 @@ Utilizzo della batteria esterna:
 - Utilizza il tuo smartphone o un hotspot dedicato.  
 
 **Nota importante:**  
-> Tieni l’hotspot disattivato mentre sei connesso al Wi-Fi; abilitalo solo quando sei fuori copertura. Il sistema operativo della fotocamera passa dinamicamente da una rete Wi-Fi all’altra in base alla potenza del segnale e potrebbe passare inavvertitamente all’hotspot anche quando il Wi-Fi è disponibile.
+> Tieni l’hotspot disattivato mentre sei connesso al Wi-Fi; attivalo solo quando sei fuori portata. Il sistema operativo della fotocamera passa dinamicamente da una rete Wi-Fi all’altra in base alla potenza del segnale e potrebbe passare inavvertitamente all’hotspot anche quando il Wi-Fi è disponibile.
 
 > Le reti mobili potrebbero limitare la larghezza di banda in modo imprevisto. Verifica con il tuo operatore i limiti del piano dati oppure contatta l’assistenza Avatour se utilizzi il nostro hotspot e la nostra SIM.
 
-##### Situazioni di bassa larghezza di banda
-- Registra in anticipo i video delle località per riprodurli in un secondo momento ([guida alla registrazione](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)).  
-- Condividi il flusso video della fotocamera dello smartphone per ovviare alle aree con larghezza di banda ridotta (0,1–0,3 Mbps in upload).
+##### Situazioni con larghezza di banda ridotta
+- Registra in anticipo i video della posizione per riprodurli in un secondo momento ([guida alla registrazione](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)).  
+- Condividi lo streaming della fotocamera dello smartphone per ovviare alle aree con larghezza di banda ridotta (0,1–0,3 Mbps in upload).
 
 ##### Assenza di connettività
 - È possibile utilizzare solo video preregistrati ([guida alla registrazione](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)).
@@ -523,22 +523,22 @@ Quando più partecipanti si uniscono a una riunione Avatour in diretta dalla ste
 
 #### Altri partecipanti in loco – Best practice
 
-Quando più partecipanti si collegano a una riunione Avatour in diretta dalla stessa postazione della telecamera a 360°, è fondamentale gestire con attenzione **l’audio e la larghezza di banda**:  
+Quando più partecipanti si collegano a una riunione Avatour in diretta dalla stessa sede in cui si trova la telecamera a 360°, è fondamentale gestire con attenzione **l’audio e la larghezza di banda**:  
 
 - Ogni smartphone, tablet o laptop connesso in loco consuma larghezza di banda di rete e può influire negativamente sul feed della telecamera a 360°.  
-- La presenza di più microfoni e altoparlanti nello stesso spazio può causare **feedback audio**, rendendo l’esperienza della riunione sgradevole per tutti i partecipanti.
+- La presenza di più microfoni e altoparlanti nello stesso spazio può causare **un feedback audio**, rendendo l’esperienza della riunione spiacevole per tutti i partecipanti.
 
 Per affrontare queste sfide, segui queste **migliori pratiche**:
 
-- **Utilizza cuffie con cavo o wireless:** preferibilmente con cancellazione del rumore per prevenire eco e feedback.  
-- **Modalità “In loco”:** Partecipate alla riunione in modalità “In loco” quando siete fisicamente presenti vicino alla telecamera a 360°, poiché questa modalità è ottimizzata per l’uso in loco: 
- - Disattiva per impostazione predefinita il microfono e l’altoparlante del partecipante. 
- - **Non** trasmette il feed della telecamera del partecipante.  
-    - **Non** visualizza il feed della telecamera a 360° nel browser del partecipante. 
- - Risparmia la larghezza di banda della rete, garantendo che la telecamera a 360° disponga della massima larghezza di banda in upload disponibile per lo streaming live. 
- - Utile quando un utente desidera condividere dettagli specifici; è **possibile condividere a sua volta la propria videocamera** per inquadrature mirate.  
-- **Disattivare l’audio quando non si sta parlando attivamente:** impedisce feedback audio indesiderati e distrazioni.  
-- **Utilizzare una rete separata, se possibile:** collegare lo smartphone a una rete diversa da quella della videocamera per ridurre le interferenze.  
+- **Utilizzate cuffie con cavo o wireless:** preferibilmente con cancellazione del rumore per evitare eco e feedback.  
+- **Modalità "In loco":** partecipate alla riunione in modalità "In loco" quando siete fisicamente presenti vicino alla telecamera a 360°, poiché questa modalità è ottimizzata per l’uso in loco:
+    - Disattiva per impostazione predefinita il microfono e l’altoparlante del partecipante. 
+ - **Non** trasmette il feed della videocamera del partecipante. 
+ - **Non** visualizza il feed della videocamera a 360° nel browser del partecipante.  
+    - Risparmia la larghezza di banda di rete, garantendo che la telecamera a 360° disponga della massima larghezza di banda in upload disponibile per lo streaming live. 
+ - Utile quando un utente desidera condividere dettagli specifici; è **possibile condividere a sua volta il proprio video** per inquadrature mirate.  
+- **Disattivare l’audio quando non si sta parlando attivamente:** previene il feedback audio indesiderato e le distrazioni.  
+- **Utilizzare una rete separata, se possibile:** collegare lo smartphone a una rete diversa da quella della telecamera per ridurre le interferenze.  
 
 Seguire queste linee guida garantisce un tour in diretta fluido e di alta qualità sia per i partecipanti in loco che per quelli remoti.
 
@@ -546,41 +546,41 @@ Seguire queste linee guida garantisce un tour in diretta fluido e di alta qualit
 
 Ecco i menu (1) Livello superiore, (2) Impostazioni e (3) Impostazioni di rete.
 
-![App Avatour 360° Camera - Tre menu](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-cam-app-3-menu-screens_nju8bt.png) *App Avatour 360° Camera - 3 menu*
+![App Avatour 360° Camera - I tre menu](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-cam-app-3-menu-screens_nju8bt.png) *App Avatour 360° Camera - 3 menu*
 
-**Acquisizione rapida** - Per la registrazione offline di video a 360° sulla scheda di memoria SD inserita nella videocamera a 360°. - Per una descrizione dettagliata, consulta [Come si registrano e si caricano video a 360° con l’app Avatour?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app). Si consiglia di utilizzare un dispositivo audio esterno (collegato tramite Bluetooth). N.B. È anche possibile modificare l’angolo di ripresa da 360° a 270°, 180° e a video e immagini 2D standard, ad esempio per mettere a fuoco o oscurare aree riservate: basta cambiare le modalità nell’angolo in basso a destra una volta nella schermata QC (*possibile tuttavia solo con una risoluzione 4K selezionata nelle Impostazioni per Quick Capture – vedi sotto*)
+**Acquisizione rapida** - Per la registrazione offline di video a 360° sulla scheda di memoria SD inserita nella fotocamera a 360°. - Per una descrizione dettagliata, consulta [Come si registrano e si caricano i video a 360° con l’app Avatour?](https://avatour.com/support/come-si-registrano-e-caricano-video-a-360-con-l’app-avatour). Si consiglia di utilizzare un dispositivo audio esterno (collegato tramite Bluetooth). N.B. È anche possibile modificare l’ampiezza del video da 360° a 270°, 180° e a video e immagini 2D standard, ad esempio per mettere a fuoco o oscurare aree riservate: basta cambiare le modalità nell’angolo in basso a destra una volta nella schermata QC (*possibile tuttavia solo con una risoluzione 4K selezionata nelle Impostazioni per la Quick Capture – vedi sotto*)
 
 **Riunione in diretta** - Per videoconferenze in diretta a 360°. Vedrai i tuoi spazi di lavoro e, cliccando su uno di essi, avvierai lo streaming video in diretta dalla telecamera a 360°. Prima di poter partecipare alla riunione con la tua telecamera a 360°, devi collegare un dispositivo audio tramite Bluetooth. Per una descrizione dettagliata, consulta [Come avviare una riunione Live Capture con la tua telecamera Pilot?](https://avatour.com/support/how-to-start-a-live-capture-meeting-with-your-pilot-camera)
 
-> Quando si ospita una riunione Live Capture con la propria telecamera a 360°, si avranno a disposizione strumenti di riunione simili a quelli dell’esperienza web. Ecco un link al nostro articolo della Knowledge Base che spiega questi strumenti in modo più dettagliato: [Strumenti dell’app per operatori](https://avatour.com/support/what-avatour-app-tools-are-available-to-labpano-pilot-camera-operators)
+> Quando si ospita una riunione Live Capture con la propria telecamera a 360°, si avranno a disposizione strumenti di riunione simili a quelli dell’esperienza web. Ecco un link al nostro articolo della Knowledge Base che spiega questi strumenti in modo più dettagliato: [Strumenti dell’app operatore](https://avatour.com/support/what-avatour-app-tools-are-available-to-labpano-pilot-camera-operators)
 
-**Galleria** - Qui troverai tutti i tuoi video e le tue immagini a 360° da caricare sulla console web di Avatour. Puoi caricare ed eliminare risorse in blocco: tocca "Seleziona" nella parte superiore dello schermo. Prima del caricamento puoi scegliere diverse operazioni di elaborazione come “Sfocare i volti”, generare un “Riassunto AI” e ottimizzare il segnale audio con “Migliora il parlato”. Puoi anche scegliere un’area di lavoro a cui assegnare il file: ovviamente sarà presente anche nella sezione generale dei file nella Web Console.
+**Galleria** - Qui troverai tutti i tuoi video e le tue foto a 360° da caricare sulla console web di Avatour. Puoi caricare ed eliminare risorse in blocco: tocca “Seleziona” nella parte superiore dello schermo. Prima del caricamento puoi scegliere diverse operazioni di elaborazione come “Sfoca volti”, generare un “Riassunto AI” e ottimizzare il segnale audio con “Migliora il parlato”. Puoi anche scegliere un’area di lavoro a cui assegnare il file: ovviamente sarà presente anche nella sezione generale dei file nella Web Console.
 
-**Impostazioni** - All’interno delle Impostazioni, sono disponibili le seguenti opzioni:
+**Impostazioni** - All’interno delle Impostazioni sono disponibili le seguenti opzioni:
 
 - **Rete**: questa opzione consente di modificare la rete Wi-Fi a cui è connessa la videocamera o di eseguire un test di connessione di rete per visualizzare la velocità di streaming
 - **Acquisizione in diretta**: Regola le impostazioni di Live Capture in base alla larghezza di banda disponibile, alla sensibilità VR dell’ospite o alla presenza o meno delle lenti protettive installate sulla telecamera:
-  - **Frequenza fotogrammi target (opzionale)**: regola la frequenza fotogrammi del video in Live Capture tra 15 fps, 24 fps e 30 fps. Frequenze di fotogrammi più elevate producono un video più fluido, ma richiedono una maggiore larghezza di banda in upload. Impostazione predefinita: 15 fps
-  - **Bitrate target**: Consente di aumentare o diminuire il bitrate massimo di streaming per la Live Capture. È possibile impostare il bitrate target tra 1 Mbps e 10 Mbps. Bitrate più elevati comportano una risoluzione video più alta, ma richiedono una maggiore larghezza di banda in upload. Impostazione predefinita: 5 Mbps
-  - **Ottimizza il movimento**: questa opzione riduce la frequenza dei fotogrammi del video, generando un carico minore sulla larghezza di banda in upload della rete e aumentando il bitrate di streaming. Inoltre, questa opzione aiuta a ridurre la cinetosi per i partecipanti in realtà virtuale. Impostazione predefinita: Disattivato
-  - **Blocco direzione**: questa opzione “blocca” la visione a 360°, indipendentemente da come si muova la videocamera a 360°. Se desideri che il video a 360° segua i movimenti della telecamera, ad esempio se vuoi “puntare” con l’obiettivo anteriore verso qualcosa, imposta il Blocco direzione su No. In questo modo la telecamera si comporterà come una telecamera tradizionale e potrebbe risultare più utile per le visite guidate. Impostazione predefinita: Sì
-  - **Orientamento iniziale**: quando si imposta il Blocco direzione su No, è possibile scegliere quale obiettivo (anteriore o posteriore) debba essere l’orientamento iniziale all’avvio del video in diretta. Impostazione predefinita: rivolto verso l’operatore, poiché questo è il modo più naturale per avviare una riunione in diretta (= obiettivo posteriore). La funzione “Acquisizione rapida” funziona in modo diverso (l’obiettivo anteriore è l’orientamento iniziale per impostazione predefinita – vedi sotto).
+    - **Frequenza fotogrammi target (opzionale)**: Regola la frequenza fotogrammi del video in Live Capture tra 15 fps, 24 fps e 30 fps. Frequenze di fotogrammi più elevate producono un video più fluido, ma richiedono una maggiore larghezza di banda in upload. Impostazione predefinita: 15 fps
+    - **Bitrate target**: consente di aumentare o diminuire il bitrate massimo di streaming per la Live Capture. È possibile impostare il bitrate target tra 1 Mbps e 10 Mbps. Bitrate più elevati comportano una risoluzione video più alta, ma richiedono una maggiore larghezza di banda in upload. Impostazione predefinita: 5 Mbps
+    - **Ottimizza movimento**: questa opzione riduce la frequenza dei fotogrammi del video, generando un carico minore sulla larghezza di banda in upload della rete e aumentando il bitrate di streaming. Inoltre, questa opzione aiuta a ridurre la cinetosi per i partecipanti in realtà virtuale. Impostazione predefinita: Disattivato
+    - **Blocco direzione**: Questa opzione “blocca” la visione a 360°, indipendentemente da come si muova la videocamera a 360°. Se desideri che il video a 360° si sposti seguendo il movimento della telecamera, ad esempio se vuoi “puntare” con l’obiettivo anteriore verso qualcosa, imposta il Blocco direzione su No. In questo modo la telecamera si comporterà come una telecamera tradizionale e potrebbe risultare più utile per le visite guidate. Impostazione predefinita: Sì
+    - **Orientamento iniziale**: quando imposti il **Blocco direzione** su **No**, puoi scegliere quale obiettivo (anteriore o posteriore) debba essere l’orientamento iniziale all’avvio del video in diretta. Impostazione predefinita: rivolto verso l’operatore, poiché questo è il modo più naturale per iniziare una riunione in diretta (= obiettivo posteriore). La funzione «Acquisizione rapida» funziona in modo diverso (l’orientamento iniziale predefinito è l’obiettivo anteriore – vedi sotto).
 
-- **Acquisizione rapida**: Regola le impostazioni di "Acquisizione rapida" in base alla frequenza dei fotogrammi video preferita, alla larghezza di banda disponibile per il caricamento dei video registrati e ad altre preferenze. Le funzioni relative alla mappa, come spiegato sopra (ad es. vista mappa, note sulla mappa), sono disponibili quando viene ricevuto un segnale GPS e l’impostazione della posizione nelle impostazioni native della fotocamera è abilitata (dovrebbe esserlo per impostazione predefinita). L’icona di localizzazione/GPS nell’angolo in alto a destra di “Acquisizione rapida” dovrebbe essere verde. Potrebbero essere necessari alcuni istanti per ricevere il segnale GPS e stabilire la connessione.
-  - **Risoluzione**: qui è possibile modificare la risoluzione. *(Le risoluzioni a 6k sono sperimentali e richiedono una fase di unione manuale nella Galleria prima del caricamento sulla console web di Avatour.)*
- - **4k** - È lo standard e mantiene un buon equilibrio tra qualità video e dimensione del file.
-      - **6k a 30 fps** *(richiede un’ulteriore fase di unione nella Galleria)*
- - **6k a 10 fps** *(richiede un’ulteriore fase di unione nella Galleria)* - È utile se si desidera mantenere le dimensioni del file inferiori rispetto a quelle ottenute con i 30 fps, quando la fluidità del movimento è meno importante.
- - Per altre risoluzioni è possibile utilizzare anche le app native della fotocamera, disponibili anche su PanoX V2; per i dettagli, consultare [Come si registrano e si caricano video a 360° con l’app Avatour?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)
-  - **Frequenza fotogrammi target** *(disponibile solo per la risoluzione 4K)* - Regola la frequenza fotogrammi per le tue registrazioni video in modalità Quick Capture tra 15 fps, 24 fps e 30 fps. Frequenze fotogrammi più elevate producono un video più fluido, ma aumentano le dimensioni del file video e il tempo di caricamento. Consigliato: 30 fps
-  - **Bitrate target** *(disponibile solo per la risoluzione 4K)* Imposta il bitrate target per i caricamenti Quick Capture tra 5 Mbps e 20 Mbps. Bitrate più bassi aumentano la velocità di caricamento, ma riducono la qualità del video. Consigliato: 20 Mbps
-  - **Blocco orientamento**: come indicato sopra nella sezione “Acquisizione in diretta”. L’orientamento iniziale predefinito per “Acquisizione rapida” è sempre l’obiettivo anteriore.
+- **Acquisizione rapida**: Regola le impostazioni di «Acquisizione rapida» in base alla frequenza dei fotogrammi video preferita, alla larghezza di banda disponibile per il caricamento dei video registrati e ad altre preferenze. Le funzionalità relative alla mappa, come spiegato sopra (ad es. vista mappa, note su una mappa), sono disponibili quando viene ricevuto un segnale GPS e l’impostazione della posizione nelle impostazioni native della fotocamera è abilitata (dovrebbe esserlo per impostazione predefinita). L’icona di localizzazione/GPS nell’angolo in alto a destra di “Acquisizione rapida” dovrebbe essere verde. Potrebbero essere necessari alcuni istanti per ricevere il segnale GPS e stabilire la connessione.
+    - **Risoluzione**: Qui puoi modificare la risoluzione. *(Le risoluzioni a 6k sono sperimentali e richiedono una fase di unione manuale nella Galleria prima del caricamento sulla console web di Avatour.)*
+ - **4k** - È lo standard e garantisce un buon equilibrio tra qualità video e dimensione del file.
+        - **6k a 30 fps** *(richiede un'ulteriore operazione di unione nella Galleria)*
+        - **6k a 10 fps** *(richiede un passaggio aggiuntivo di unione delle immagini nella Galleria)* - È utile se si desidera mantenere le dimensioni del file inferiori rispetto a quelle ottenute con i 30 fps, quando la fluidità del movimento è meno importante.
+        - Per altre risoluzioni è possibile utilizzare anche le app native della fotocamera, anche su PanoX V2; per i dettagli, consultare [Come si registrano e si caricano i video a 360° con l’app Avatour?](https://avatour.com/support/come-si-registrano-e-caricano-video-a-360-con-l-app-avatour)
+    - **Frequenza fotogrammi target** *(disponibile solo per la risoluzione 4K)* - Regola la frequenza fotogrammi per le tue registrazioni video in modalità Quick Capture tra 15 fps, 24 fps e 30 fps. Frequenze fotogrammi più elevate producono un video più fluido, ma aumentano le dimensioni del file video e il tempo di caricamento. Consigliato: 30 fps
+    - **Bitrate target** *(disponibile solo per la risoluzione 4K)* Imposta il bitrate target per i caricamenti in modalità Quick Capture tra 5 Mbps e 20 Mbps. Bitrate più bassi aumentano la velocità di caricamento, ma riducono la qualità del video. Consigliato: 20 Mbps
+    - **Blocco orientamento**: come indicato sopra nella sezione "Acquisizione live". L’orientamento iniziale predefinito per Quick Capture è sempre l’obiettivo frontale.
 
-  > Consulta anche il nostro [Calcolatore delle dimensioni dei file video a 360° di Avatour](https://avatour.com/support/avatour-360deg-video-file-size-calculator) per ulteriori consigli sulle impostazioni sopra indicate e sulle dimensioni dei file video. Per evitare di esaurire lo spazio di archiviazione, verrà visualizzato un avviso che ti consentirà di interrompere la registrazione e liberare spazio (ad esempio caricando i video dalla Galleria nella sezione “Risorse” della console web di Avatour).
+  > Consulta anche il nostro [Calcolatore delle dimensioni dei file video Avatour a 360°](https://avatour.com/support/avatour-360deg-video-file-size-calculator) per ulteriori consigli sulle impostazioni sopra indicate e sulle dimensioni dei file video. Per evitare di esaurire lo spazio di archiviazione, verrà visualizzato un avviso che ti consentirà di interrompere la registrazione e liberare spazio (ad esempio caricando i video dalla Galleria nella sezione “Risorse” della console web di Avatour).
 
 - **Informazioni**: visualizza il numero di serie del dispositivo e la versione del software
 
-**Account** - Per effettuare l’accesso con il proprio account host o amministratore Avatour.
+**Account** - Per effettuare l’accesso con il tuo account host o amministratore Avatour.
 
 ## 6. Consigli sulle migliori pratiche {#best-practice-advice}
 
