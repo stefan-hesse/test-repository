@@ -746,21 +746,7 @@ def optimize_cloudinary_urls(html):
 
 # ── MARKDOWN → HTML ───────────────────────────────────────────────────────
 def md_to_html(md_text):
-    """Convert Markdown to HTML. Normalises 2-space list indent to 4-space."""
-    def normalise_list_indent(text):
-        lines = text.split('\n')
-        out = []
-        for line in lines:
-            stripped = line.lstrip(' ')
-            spaces = len(line) - len(stripped)
-            if spaces > 0 and stripped and (
-                stripped[0] in '-*' or
-                (stripped[0].isdigit() and len(stripped) > 1 and stripped[1] in '.) ')
-            ):
-                line = ' ' * (spaces * 2) + stripped
-            out.append(line)
-        return '\n'.join(out)
-    md_text = normalise_list_indent(md_text)
+    """Convert Markdown to HTML."""
     md = markdown.Markdown(extensions=[
         TocExtension(slugify=lambda value, separator: re.sub(r'[^\w-]', '', value.lower().replace(' ', separator))),
         'tables', 'fenced_code', 'attr_list', 'md_in_html', 'sane_lists',
