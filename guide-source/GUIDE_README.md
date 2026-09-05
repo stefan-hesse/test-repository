@@ -275,6 +275,31 @@ You can join from any desktop, laptop, or smartphone.
     > **Note:** Do NOT use the Avatour iOS / Android apps for joining meetings.
 ```
 
+### 4. Use 4 spaces per indent level for nested lists
+
+The pipeline uses the Python `markdown` library, which requires exactly **4 spaces per indent level**. MacDown is configured to match this, so what you see in MacDown's preview is exactly what renders on the website.
+
+- Level 1 (top): 0 spaces
+- Level 2 (children): 4 spaces
+- Level 3 (grandchildren): 8 spaces
+
+✅ Correct:
+```markdown
+- **Quick Capture**: Adjust your settings...
+    - **Resolution**: Choose a resolution.
+        - **4k** - Standard quality.
+        - **6k** - Experimental.
+    - **Target Frame Rate**: Adjust fps.
+```
+❌ Wrong — 2-space indent; parser treats children as continuation text:
+```markdown
+- **Quick Capture**: Adjust your settings...
+  - **Resolution**: Choose a resolution.
+    - **4k** - Standard quality.
+```
+
+No blank lines are needed between a parent item and its children — the 4-space indent is sufficient.
+
 ---
 
 ## Section anchors
@@ -423,6 +448,27 @@ Press **Cmd+P**, then set:
 | Translation skipped | No sections changed vs EN-prev | Normal if only `build.py` or non-content files were changed |
 | IT/ES/FR content looks wrong after a build | Previous bad translation in files | Delete `EN-prev.md` on GitHub and re-run — forces full re-translation |
 | French page not loading in Webflow | iframe src not updated | Add `avatour-guide-embed-fr.html` to the Webflow FR page |
+
+---
+
+## Pipeline technical notes (`build.py`)
+
+This section records deliberate changes to `build.py` and why they were made, so future maintainers understand the setup.
+
+### `normalise_list_indent` — removed (September 2026)
+
+An earlier version of `build.py` contained a function called `normalise_list_indent` that doubled all list indentation (2 spaces → 4, 4 spaces → 8, etc.). It was intended to allow 2-space indented lists in the source MD. This caused two problems:
+
+1. If the source already used 4-space indents, they were doubled to 8, breaking nested list rendering.
+2. The MacDown preview no longer matched the website, making it impossible to author the guide reliably.
+
+**Fix:** The function was removed entirely. The pipeline now passes the MD source to the `markdown` library unchanged. Authors use 4-space indentation (matching the Python `markdown` library's default), and MacDown is configured to match. What you see in MacDown = what renders on the website.
+
+### `sane_lists` extension — removed (September 2026)
+
+The `sane_lists` extension was active in the `markdown` library configuration. It enforces stricter list parsing rules and required blank lines between a parent list item and its children to recognise nesting correctly. This conflicted with standard Markdown behaviour and with MacDown's rendering.
+
+**Fix:** `sane_lists` was removed from the extensions list. Nested lists now work without blank lines between levels, consistent with MacDown and standard Markdown.
 
 ---
 
