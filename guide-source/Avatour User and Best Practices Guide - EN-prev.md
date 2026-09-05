@@ -16,13 +16,11 @@ Have a look especially at [Avatour Features](https://avatour.com/features) along
 ## 2. Avatour User Types  {#avatour-user-types}
 
 ### 2.1 Meeting Attendees (No Account required)
-Users can join the meeting without registering for an Avatour account.
-Exception: If the host has restricted the meeting to registered users — for example, to allow only internal employees to join via Single Sign-On (SSO) — the calendar invitation will indicate that participants must log in to authenticate.
+Users can join the meeting without registering for an Avatour account. Exception: If the host has ticked the meeting setting "Authentication required" (see also 4.2.1 Settings for Workspaces and Meetings) - for example, to allow only internal employees to join via Single Sign-On (SSO) — the calendar invitation will indicate that participants must log in to authenticate.
 
 Users access the meeting as follows:
 
-- Receive a calendar invitation from the host.
-- Use the meeting link in the invitation to join.
+- Receive a meeting link from the host
 - Enter a meeting password if the host has enabled one.
 - Participants can join without an Avatour account unless the meeting is restricted and requires login to authenticate.
 
@@ -233,7 +231,7 @@ The bottom menu provides access to the main interface controls and panels:
 - **Start Recording** – Use this button to start and stop recording manually during a meeting. Alternatively, meetings can be recorded automatically if **auto-start recording** is enabled in the workspace settings. In both cases, recordings are saved to the workspace assets.
 - **Map** – Open or close the map panel to see the camera movement for assets with a GPS track. Clicking a location jumps to the exact point in the video. The map updates live as the video plays. Notes are also shown on the map.
 - **Participants** – Open or close the participants panel.  
-- **Meeting Info** – View the meeting code, invite link, and access related tutorials.  
+- **Meeting Info** – View the meeting code, meeting link, and access related tutorials.  
 
 ![Avatour Meeting Info](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-meeting-info-side-pane_nx7dp4.png)  
 *Avatour Meeting Info Side Pane*
@@ -572,12 +570,12 @@ Here are (1) the Top Level, (2) Settings and (3) Network Settings menus.
 - **Quick Capture**: Adjust your Quick Capture settings depending on your preferred video frame rate, available bandwidth for recorded video uploads and other preferences. Map related features as explained above (e.g. map view, notes in a map) are possible when a GPS signal is received and the location setting in the native camera settings is enabled (should be by default). The location / GPS icon in the top right corner of the Quick Capture should be green. It might take some moments to receive the GPS signal and establish the connection.
   - **Resolution**: Here you can change the resolution. *(The 6k resolutions are experimental and need a manual stitching step in the Gallery before upload to the Avatour Web Console.)*
 	  - **4k** - This is the standard and maintains a good balance between video quality and file size.
-	  - **6k @ 30 fps**
-	  - **6k @ 10 fps** - This is useful if you want to keep file size lower than with the 30 fps when smooth motion is less important.
+	  - **6k @ 30 fps** *(requires an additional stitching step in the Gallery)*
+	  - **6k @ 10 fps** *(requires an additional stitching step in the Gallery)* - This is useful if you want to keep file size lower than with the 30 fps when smooth motion is less important.
 	  - For other resolutions you can also use the native camera apps, also on the PanoX V2, for details see [How do you record and upload 360 videos with the Avatour App?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)
-  - **Target Frame Rate**: Adjust the frame rate for your Quick Capture video recordings between 15 fps, 24 fps, and 30 fps. Higher frame rates produce a smoother video, but will increase video file size and upload time. Recommended: 30 fps
-  - **Target Bitrate**: Set the target bitrate for Quick Capture uploads between 5 Mbps and 20 Mbps. Lower bitrates increase upload speeds, but will decrease video quality. Recommended: 20 Mbps
-  - **Direction Lock**: Same as above under Live Capture. The default Initial Orientation is always the front lens.
+  - **Target Frame Rate** *(only available for 4k resolution)* - Adjust the frame rate for your Quick Capture video recordings between 15 fps, 24 fps, and 30 fps. Higher frame rates produce a smoother video, but will increase video file size and upload time. Recommended: 30 fps
+  - **Target Bitrate** *(only available for 4k resolution)* Set the target bitrate for Quick Capture uploads between 5 Mbps and 20 Mbps. Lower bitrates increase upload speeds, but will decrease video quality. Recommended: 20 Mbps
+  - **Direction Lock**: Same as above under Live Capture. The default Initial Orientation is always the front lens for Quick Capture.
 
   > See also our [Avatour 360° Video File Size Calculator](https://avatour.com/support/avatour-360deg-video-file-size-calculator) for further advice on the above settings and video file sizes. To prevent running out of data storage there will be an alert so that you can stop recording and free up storage (e.g. by uploading videos from the Gallery to the Avatour Web Console Assets).
 
