@@ -128,35 +128,35 @@ Puedes unirte a una reunión de Avatour desde **cualquier ordenador de sobremesa
 
 ##### Unirse a una reunión de Avatour
 
-> **Nota:** Para unirte a una reunión de Avatour, debes **conceder permisos al micrófono**. Acepta cualquier solicitud de permiso que te muestre tu navegador.
+> **Nota:** Para unirte a una reunión de Avatour es necesario que **concedas permisos al micrófono**. Por favor, acepta cualquier solicitud de permiso que te muestre tu navegador.
 
-1. **A través de una invitación de calendario (recomendado):** 
- - Normalmente recibirás una **invitación de calendario** con un **enlace directo para unirte** (por ejemplo: `https://avatour.live/join?s=xxxxx`).  
-    - Al hacer clic en el enlace, se completará automáticamente el **código de la reunión de 5 caracteres** y se le redirigirá a la reunión.
-    - **Se requiere autenticación:** Algunas reuniones están restringidas a usuarios registrados. En este caso, la invitación indicará que debes **iniciar sesión para acceder a la reunión**. 
- - **Reuniones protegidas con contraseña:** Algunas reuniones pueden requerir una contraseña. En ese caso, la invitación incluirá la contraseña que debes introducir para unirte.
+1. **A través de una invitación de calendario (recomendado):**  
+    - Normalmente recibirás una **invitación de calendario** con un **enlace directo para unirte** (por ejemplo: `https://avatour.live/join?s=xxxxx`). 
+ - Al hacer clic en el enlace, se completará automáticamente el **código de la reunión de 5 caracteres** y se te redirigirá a la reunión.
+    - **Se requiere autenticación:** Algunas reuniones están restringidas a usuarios registrados. En este caso, la invitación indicará que debes **iniciar sesión para acceder a la reunión**.  
+    - **Reuniones protegidas con contraseña:** Algunas reuniones pueden requerir una contraseña. En ese caso, la invitación incluirá la contraseña que debes introducir para unirte.
 
 2. **A través del código de reunión:**  
     - Si el anfitrión comparte por separado un **código de reunión de 5 caracteres**, ve a [https://avatour.live/join](https://avatour.live/join), introduce tu **nombre** y el **código de reunión**, y únete a la reunión.  
     - Si la reunión está **protegida con contraseña**, introduce la contraseña facilitada por el anfitrión. 
  - Si la reunión requiere **autenticación**, tendrás que **iniciar sesión con tu cuenta de Avatour** antes de unirte.
 
-> **Consejo 1:** Si tu cámara o micrófono no funcionan, es posible que otra aplicación los esté utilizando (por ejemplo, Microsoft Teams o Zoom). Cierra cualquier aplicación que pueda estar utilizando tu cámara o micrófono y, a continuación, sal de la reunión de Avatour y vuelve a unirte a ella.  
+> **Consejo 1:** Si tu cámara o micrófono no funcionan, es posible que los esté utilizando otra aplicación (por ejemplo, Microsoft Teams o Zoom). Cierra cualquier aplicación que pueda estar utilizando tu cámara o micrófono y, a continuación, sal de la reunión de Avatour y vuelve a unirte a ella.  
 
 > **Consejo 2:** Si sigues sin poder unirte a la reunión, realiza esta prueba: [https://avatour.live/test](https://avatour.live/test).  
 > La prueba puede determinar si tu **cortafuegos corporativo o tu red** están bloqueando el acceso, y te proporcionará información que te servirá de guía para hablar con tu equipo de TI.  
 
 > **Consejo 3:** **No** utilices las aplicaciones de Avatour para iOS o Android para unirte a las reuniones. Estas aplicaciones solo son necesarias cuando **se retransmite una reunión en directo desde una cámara Insta360**, ya que dichas cámaras no pueden ejecutar directamente el software Avatour 360° y requieren un smartphone como dispositivo auxiliar.
 
-##### Visitar un espacio de trabajo de Avatour (sin unirse a una reunión de Avatour)
+##### Visitar un espacio de trabajo de Avatour (sin unirte a una reunión de Avatour)
 
-Puedes acceder a un espacio de trabajo de las siguientes formas:
+Puedes acceder a un espacio de trabajo de las siguientes maneras:
 
 - **Espacio de trabajo público:**  
   Si el espacio de trabajo es público, se puede acceder directamente al enlace, sin necesidad de iniciar sesión.
 
 - **Espacio de trabajo restringido:**  
-  Si el espacio de trabajo es restringido, debes ser añadido como **colaborador** con permisos de **editor** o **visor**.
+  Si el espacio de trabajo es restringido, debes ser añadido como **colaborador** con permisos de **editor** o de **visor**.
 
     1. Cuando te añadan como colaborador, recibirás una **notificación por correo electrónico** con un enlace al espacio de trabajo.
     2. Haz clic en el enlace del correo electrónico para abrir el espacio de trabajo. Si aún no has iniciado sesión, se te pedirá que **inicies sesión o completes el registro**.
@@ -184,18 +184,18 @@ Las **herramientas de colaboración son en su mayoría similares** entre las reu
 La interfaz de Avatour se organiza en torno a tres áreas principales:
 
 - **Panel izquierdo**: recursos del espacio de trabajo y herramientas de apoyo  
-- **Área central**: área principal de visualización para vídeo en directo, recursos y el panel de control del espacio de trabajo  
+- **Área central**: área principal de visualización para el vídeo en directo, los recursos y el panel de control del espacio de trabajo  
 - **Panel derecho**: información contextual, como participantes, reuniones o chat  
 
 La mayoría de las interacciones se inician desde el **menú inferior**.  
 Al hacer clic en una opción del menú, se abre un **panel lateral** a la izquierda o a la derecha de la pantalla, mientras que el **lienzo central** sigue siendo el área de visualización principal.
 
 ---
-#### 3.2.2 Ejemplo de vista de reunión
+#### 3.2.2 Ejemplo de vista de una reunión
 
-A continuación se muestra un ejemplo de vista en una reunión de Avatour:
+A continuación se muestra un ejemplo de una vista en una reunión de Avatour:
 
-![Interfaz de usuario de una reunión de Avatour con panel de recursos, lienzo en blanco y panel de participantes](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-meeting-assets-blank-participants_pugprq.png)  
+![Interfaz de usuario de una reunión de Avatour con el panel de recursos, el lienzo en blanco y el panel de participantes](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-meeting-assets-blank-participants_pugprq.png)  
 *Reunión de Avatour con el panel de recursos (izquierda), el lienzo (centro) y el panel de participantes (derecha)*
 
 ---
@@ -218,20 +218,20 @@ El menú inferior permite acceder a los controles y paneles principales de la in
 ![Menú inferior de la reunión de Avatour](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-meeting-bottom-menu_bflaor.png)  
 *Menú inferior de la reunión de Avatour*
 
-- **Recursos** – Revisa los archivos del espacio de trabajo, incluidos vídeos grabados, imágenes, capturas de pantalla y archivos PDF. 
-- **Chat** – Envía mensajes a todos los participantes de la reunión.  
+- **Recursos**: revisa los archivos del espacio de trabajo, incluidos vídeos grabados, imágenes, capturas de pantalla y archivos PDF. 
+- **Chat**: envía mensajes a todos los participantes de la reunión.  
 - **Cámara** – Activa o desactiva tu cámara web.  
-- **Micrófono** – Silénciate o desactiva el silencio.  
-- **Presentar** – Presentar un recurso, el escritorio o la imagen de la cámara web (consulta la sección «Presentar» más abajo).  
+- **Micrófono** – Silencia o desactiva el silencio de tu micrófono.  
+- **Presentar** – Presenta un recurso, el escritorio o la imagen de la cámara web (consulta la sección «Presentar» más abajo).  
 - **Herramientas del anfitrión** (solo para anfitriones):  
     - **Bloquear enfoque**: bloquea la vista para todos los participantes. 
  - **Silenciar a todos**: silencia a todos los participantes.  
 - **Activar pantalla completa**: muestra la pestaña de la reunión a pantalla completa.  
 - **Salir de la reunión**: abandona la reunión.  
-- **Iniciar grabación**: utiliza este botón para iniciar y detener la grabación manualmente durante una reunión. Como alternativa, las reuniones se pueden grabar automáticamente si se ha activado la opción **«Iniciar grabación automática»** en la configuración del espacio de trabajo. En ambos casos, las grabaciones se guardan en los recursos del espacio de trabajo.
-- **Mapa**: abre o cierra el panel del mapa para ver el movimiento de la cámara en los recursos que cuentan con un registro GPS. Al hacer clic en una ubicación, se salta al punto exacto del vídeo. El mapa se actualiza en tiempo real a medida que se reproduce el vídeo. Las notas también se muestran en el mapa.
+- **Iniciar grabación** – Utiliza este botón para iniciar y detener la grabación manualmente durante una reunión. Como alternativa, las reuniones se pueden grabar automáticamente si se ha activado la opción **inicio automático de grabación** en la configuración del espacio de trabajo. En ambos casos, las grabaciones se guardan en los recursos del espacio de trabajo.
+- **Mapa**: abre o cierra el panel del mapa para ver el movimiento de la cámara en los recursos que cuentan con un registro GPS. Al hacer clic en una ubicación, se salta al punto exacto del vídeo. El mapa se actualiza en tiempo real a medida que se reproduce el vídeo. También se muestran notas en el mapa.
 - **Participantes**: abre o cierra el panel de participantes.  
-- **Información de la reunión**: consulta el código de la reunión, el enlace de la reunión y accede a tutoriales relacionados.  
+- **Información de la reunión**: consulta el código de la reunión, el enlace a la reunión y accede a tutoriales relacionados.  
 
 ![Información de la reunión de Avatour](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-meeting-info-side-pane_nx7dp4.png)  
 *Panel lateral de información de la reunión de Avatour*
@@ -246,7 +246,7 @@ El menú inferior permite acceder a los controles y paneles principales de la in
 
 La opción **Presentar** del menú inferior de la reunión te permite compartir contenido con todos los participantes.
 
-- **Cámara**: comparte la cámara de tu dispositivo (portátil, smartphone, etc.). Esto también se puede utilizar durante una reunión de vídeo en directo a 360° para superponer una vista secundaria con primeros planos o detalles específicos. Al compartir la cámara de un smartphone (delantera o trasera), los participantes remotos de la reunión pueden utilizar el zoom del smartphone y también activar y desactivar la linterna.
+- **Cámara**: comparte la cámara de tu dispositivo (portátil, smartphone, etc.). Esta función también se puede utilizar durante una reunión de vídeo en directo a 360° para superponer una vista secundaria con primeros planos o detalles específicos. Al compartir la cámara de un smartphone (delantera o trasera), los participantes remotos de la reunión pueden utilizar el zoom del smartphone y también encender y apagar la linterna.
 - **Escritorio**: comparte la pantalla de tu escritorio con todos los participantes.  
 - **Recurso**: presenta un recurso desde el espacio de trabajo. Al seleccionar un recurso, se abre la **barra de herramientas de recursos**, que ofrece controles de reproducción y herramientas de colaboración específicas para el recurso que se está presentando.
 
@@ -256,7 +256,7 @@ Al presentar un recurso en una reunión, la **barra de herramientas de recursos*
 
 ![Menú de Avatour al presentar un activo en una reunión](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting_oflsr5.png) *Menú de Avatour al presentar un activo en una reunión*
 
-Cuando se transmite un vídeo en directo de 360° en una reunión, este menú aparece en la parte inferior del lienzo.
+Cuando se transmite un vídeo en 360° en directo en una reunión, este menú aparece en la parte inferior del lienzo.
 
 <img src="https://res.cloudinary.com/avatour/image/upload/c_fill,g_auto,w_600,h_120/avatour-screenshot-live360video-menu-meeting_cguwzb.png" alt="Menú de Avatour con vídeo en directo de 360° en una reunión" style="width:50%; display:block; border:1px solid #DDE5EA; border-radius:6px; margin:20px 0 4px;"> *Menú de Avatour con vídeo en directo de 360° en una reunión*
 
@@ -265,12 +265,12 @@ A continuación se ofrece una descripción de todos los elementos que aparecen e
 - **Línea de tiempo del vídeo / Barra de progreso**: muestra el progreso del vídeo con notas y temas clave extraídos del audio. Haz clic en una nota o en un tema para saltar a ese momento y abrir la nota. Incluye controles de **Reproducir / Pausa**.   
 - **Instantánea**: captura una imagen de 360° o en 2D del recurso.  
 - **Foco**: resalta un área específica para todos los participantes durante las sesiones en directo.  
-- **Mostrar/ocultar punto de vista (POV)**: muestra hacia dónde mira cada participante en el vídeo de 360°.  
-- **Notas**: crea notas vinculadas a momentos específicos de un recurso o durante una retransmisión de vídeo en directo. (Nota: durante una retransmisión en directo, se creará automáticamente un recurso = instantánea para capturar la nota). Cada nota tiene un autor y puede clasificarse (Observación, Problema, Acción, Recomendación), seguirse por estado (Abierta → En curso → Resuelta), asignarse a un responsable y compartirse mediante enlaces directos. Si el activo tiene un registro GPS, las notas también muestran las coordenadas GPS. Las notas también se pueden desplazar a otra posición (arrastrar para cambiar la posición) y mover en la línea de tiempo (avanzar o retroceder en la línea de tiempo).
+- **Mostrar/Ocultar punto de vista (POV)**: muestra hacia dónde mira cada participante en el vídeo de 360°.  
+- **Notas**: crea notas vinculadas a momentos específicos de un recurso o durante una retransmisión de vídeo en directo. (Nota: durante una retransmisión en directo, se creará automáticamente un recurso = instantánea para capturar la nota). Cada nota tiene un autor y se puede clasificar (Observación, Problema, Acción, Recomendación), realizar un seguimiento por estado (Abierta → En curso → Resuelta), asignarla a un responsable y compartirla mediante enlaces directos. Si el recurso cuenta con un registro GPS, las notas también muestran las coordenadas GPS. Las notas también se pueden desplazar a otra posición (arrastrar para cambiar la posición) y mover en la línea de tiempo (avanzar o retroceder en la línea de tiempo). También puedes adjuntar un archivo a una respuesta en una nota.
 
   ![Nota de Avatour y filtro de notas](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-notes-and-filters_g181oc.png) *Notas de Avatour y filtros de notas*
 
-- **Notas de comando de voz**: son marcadores de posición generados automáticamente cuando se detectan en un vídeo grabado expresiones como «insertar nota», «tomar una nota» o «hacer una nota». Estas notas aparecen en la línea de tiempo y el usuario debe **colocarlas y finalizarlas**. 
+- **Notas de comando de voz**: son marcadores de posición generados automáticamente cuando, en un vídeo grabado, se detectan expresiones como «insertar nota», «tomar una nota» o «hacer una nota». Estas notas aparecen en la línea de tiempo y el usuario debe **colocarlas y finalizarlas**. 
 
   ![Notas de Avatour: generadas por comando de voz](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-notes-voice-command-generated_ic5cu4.png) *Notas de Avatour: generadas por comando de voz*
 
@@ -284,28 +284,28 @@ A continuación se ofrece una descripción de todos los elementos que aparecen e
 
   Desde el **panel lateral**, puedes **imprimir un informe de activos** o **descargarlo como archivo TXT o CSV**. Los informes pueden incluir varios elementos que puedes **seleccionar antes de exportarlos**. 
 
-  ![Menús de impresión del informe de activos de Avatour](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-asset-report-print-menus_kn0syn.png) 
- *Menús de impresión y descarga del informe de activos de Avatour*  
+  ![Menús de impresión del informe de activos de Avatour](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-asset-report-print-menus_kn0syn.png)  
+    *Menús de impresión y descarga del informe de recursos de Avatour* 
 
-  ![Selección de elementos del informe de activos de Avatour](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-asset-report-element-selection_ud8c5k.png) 
+ ![Selección de elementos para imprimir el informe de recursos de Avatour](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-asset-report-element-selection_ud8c5k.png) 
  *Menú de selección de elementos del informe de activos de Avatour*
 
-- **Compartir enlace**: comparte un enlace a una nota o escena específica del recurso.  
+- **Compartir enlace**: comparte un enlace a una nota o escena específica del activo.  
 - **Subtítulos (CC)**: muestra la transcripción del texto en pantalla durante la reproducción del vídeo.
 
-##### Barra de herramientas del recurso (Espacio de trabajo)
+##### Barra de herramientas del recurso (espacio de trabajo)
 
 Al revisar un recurso en un espacio de trabajo, la barra de herramientas es similar, pero está optimizada para el uso individual:
 
 ![Menú de Avatour al presentar un recurso fuera de una reunión, p. ej., al visitar un espacio de trabajo](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-workspace_iri8gc.png) *Menú de Avatour al presentar un recurso en un espacio de trabajo*
 
-- **Línea de tiempo del vídeo / Barra de progreso**: muestra el progreso del vídeo con notas y temas clave extraídos de la pista de audio. Haz clic en cualquier punto de la línea de tiempo para desplazarte por el vídeo. Haz clic en una nota o en un tema para saltar a ese momento y abrir la nota. Incluye controles de **Reproducción / Pausa**.  
+- **Línea de tiempo del vídeo / Barra de progreso**: muestra el progreso del vídeo con notas y temas clave extraídos de la pista de audio. Haz clic en cualquier punto de la línea de tiempo para desplazarte por el vídeo. Haz clic en una nota o en un tema para saltar a ese momento y abrir la nota. Incluye controles de **Reproducir / Pausa**.  
 - **Instantánea, Notas, Panel de notas y resumen, Compartir enlace, Subtítulos**  
 - No disponible: **Spotlight, POV** (estas funciones requieren participantes en directo)  
 - Controles adicionales:
-    - **Intervalos de 10 segundos** – Avanzar o retroceder 
- - **Velocidad de reproducción** – Ajustar la velocidad (0,5×–2×) 
- - **Recortar vídeo** – Recortar el principio o el final del recurso
+    - **Intervalos de 10 segundos**: avanzar o retroceder 
+ - **Velocidad de reproducción**: ajustar la velocidad (0,5×–2×) 
+ - **Recortar vídeo**: recortar el principio o el final del archivo
 
 
 ## 4. Para usuarios «Host» y «Admin»: consola web de Avatour {#for-host-and-admin-users-avatour-web-console}
