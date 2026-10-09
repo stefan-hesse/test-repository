@@ -35,6 +35,7 @@ Users access the meeting as follows:
 - Cannot share video, use a microphone, present, play/pause Assets, or capture Snapshots.
 - Maximum of 10 Spectators per meeting.
 - Together with Participants, a meeting can host up to 30 attendees.
+- Spectators need a spectator meeting link (see also 4.2.1 Settings for Workspaces and Meetings)
 
 ### 2.2 Registered Users
 
@@ -380,12 +381,12 @@ In the bottom menus you will find:
 **Meeting Settings**
   
 * **Authentication required** – Participants must sign in.  
-* **Allow guest access** – Permit non-registered users to view assets.  
-* **Auto-Start Recording / Manual Start** – Choose if meetings auto-record or are started manually.  
-* **Require host** – Host must admit participants; meeting ends when host leaves.  
-* **Allow spectator access** – Join without mic or camera; communicate via chat.  
-* **Password protected meetings** – Require a password for joining.  
-* **Show Travel-Savings Question** – Ask participants if the meeting reduced travel.  
+* **Allow guest access** – Permit non-registered users to view assets. 
+* **Auto-Start Recording / Manual Start** – Choose if meetings auto-record or are started manually. 
+* **Require host** – Host must admit participants; meeting ends when host leaves.
+* **Allow spectator access** – Join without mic or camera; communicate via chat. When enabled a spectator meeting link is shown.
+* **Password protected meetings** – Require a password for joining.
+* **Show Travel-Savings Question** – Ask participants if the meeting reduced travel.
 
 > Settings can be combined (e.g., no host required but password protected).
 
@@ -393,7 +394,7 @@ In the bottom menus you will find:
 
 #### 4.2.2 Assets
 
-Manage all 360°/2D videos, pictures, and PDFs. Upload/download assets, allocate to workspaces, share with other users, rename, print/download reports, activate face blur, and AI summarization.
+Manage all 360°/2D videos (MP4, MOV), pictures (PNG, JPEG / JPG, HEIC) and PDFs. Upload/download assets, allocate to workspaces, share with other users, rename, print/download reports, activate face blur, and AI summarization.
 
 ![Avatour Web Console - Main Menu Item Assets](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-assets_ky5emz.png) *Main Menu Item Assets*
 
@@ -403,7 +404,7 @@ You can also generate the HTML code to enable a public embed of an asset, e.g. o
 
 #### 4.2.3 Settings
 
-Admin Users have access to this menu to manage Settings centrally for the entire Avatour platform. Each setting can be ticked or unticked to become the default setting across the entire platform. Each setting can also be locked, meaning that the default setting can not be changed by other users of the platform. Here you can also do marketing customization regarding your branding (logo, colours etc.).
+Admin Users have access to this menu to manage **Settings centrally for the entire Avatour platform for ALL workspaces. Changes in those settings will be applied to newly created workspaces (not to existing workspaces)**. Each setting can be ticked or unticked to become the default setting across the entire platform. Each setting can also be locked, meaning that the default setting can not be changed by other users of the platform. Here you can also do marketing customization regarding your branding (logo, colours etc.).
 
 ![Avatour Web Console - Main Menu Item Settings](https://res.cloudinary.com/avatour/image/upload/v1781172727/avatour-screenshot-main-menu-settings-1-of-2_fsaatf.jpg) *Settings Section*
 
@@ -502,10 +503,14 @@ Using the external battery:
 **Option B: Personal hotspot / SIM**
 - Use your own smartphone or dedicated hotspot.  
 
-**Important Note:**  
+**Important Notes:**  
 > Keep hotspot off while connected to WiFi; enable only when out of range. The camera's OS dynamically switches between WiFi networks based on signal strength and may inadvertently switch to the hotspot even when WiFi is available.
 
+> Always keep the hotspot in a direct  line to the 360° camera, e.g. do not put the hotspot in your trousers' back pocket as your own body will be in the way.
+
 > Mobile networks may throttle bandwidth unexpectedly. Check with your carrier on data plan limits, or contact Avatour support if using our hotspot and SIM.
+ 
+> In some cases 4G / LTE networks might give a better signal than 5G networks. Always test both.
 
 ##### Low Bandwidth Situations
 - Pre-record location videos for later playback ([recording guide](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)).  
@@ -632,7 +637,7 @@ For your first uses and getting familiar with the Avatour Web Console and the Av
 
 - For instances where the camera needs to remain stable, use the tripod stand and extend the camera to the correct height, best to eye-level.
 
-- Always connect the camera to your local WiFi network where possible. For areas without WiFi access, use the provided hotspot. The hotspot has a SIM card that will connect to a reliable cell network near you. Always keep the hotspot switched off when not in use indoors as otherwise the 360° cam could connect to the hotspot which we do not want indoors. When outdoors, keep the hotspot near the 360° camera.
+- Always connect the camera to your local WiFi network where possible. For areas without WiFi access, use the provided or your own hotspot. Always keep the hotspot switched off when not in use indoors as otherwise the 360° cam could connect to the hotspot which we do not want indoors. Always keep the hotspot in a direct  line to the 360° camera, e.g. do not put the hotspot in your trousers' back pocket as your own body will be in the way.
 
 - When the camera bitrate starts to drop below 2 Mbps, walk slower or stop completely until the signal stabilizes again. This usually happens when you change from one WiFi Access Point to another. 
 

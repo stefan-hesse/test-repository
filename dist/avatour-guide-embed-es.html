@@ -389,7 +389,7 @@ Echa un vistazo especialmente a <a href="https://avatour.com/features" target="_
 </ol>
 <h2 id="avatour-user-types">2. Tipos de usuarios de Avatour</h2>
 <h3 id="21-asistentes-a-la-reunión-no-se-requiere-cuenta">2.1 Asistentes a la reunión (no se requiere cuenta)</h3>
-<p>Los usuarios pueden unirse a la reunión sin necesidad de registrarse para obtener una cuenta de Avatour. Excepción: Si el anfitrión ha marcado la opción «Se requiere autenticación» en la configuración de la reunión (véase también 4.2.1 Configuración de espacios de trabajo y reuniones) —por ejemplo, para permitir que solo los empleados internos se unan mediante el inicio de sesión único (SSO)—, la invitación del calendario indicará que los participantes deben iniciar sesión para autenticarse.</p>
+<p>Los usuarios pueden unirse a la reunión sin necesidad de registrarse para obtener una cuenta de Avatour. Excepción: Si el anfitrión ha marcado la opción de configuración de la reunión «Se requiere autenticación» (véase también 4.2.1 Configuración de espacios de trabajo y reuniones) —por ejemplo, para permitir que solo los empleados internos se unan mediante el inicio de sesión único (SSO)—, la invitación del calendario indicará que los participantes deben iniciar sesión para autenticarse.</p>
 <p>Los usuarios acceden a la reunión de la siguiente manera:</p>
 <ul>
 <li>Reciben un enlace a la reunión del anfitrión.</li>
@@ -398,7 +398,7 @@ Echa un vistazo especialmente a <a href="https://avatour.com/features" target="_
 </ul>
 <h4 id="211-participante">2.1.1 Participante</h4>
 <ul>
-<li>Puede unirse e interactuar plenamente (cámara web, micrófono, chat y función «Presentar»).</li>
+<li>Puede unirse e interactuar plenamente (cámara web, micrófono, chat y función de presentación).</li>
 <li>Máximo de 20 participantes interactivos por reunión.</li>
 </ul>
 <h4 id="212-espectador">2.1.2 Espectador</h4>
@@ -407,49 +407,50 @@ Echa un vistazo especialmente a <a href="https://avatour.com/features" target="_
 <li>No puede compartir vídeo, utilizar el micrófono, realizar presentaciones, reproducir o pausar recursos, ni capturar instantáneas.</li>
 <li>Máximo de 10 espectadores por reunión.</li>
 <li>Junto con los participantes, una reunión puede acoger hasta 30 asistentes.</li>
+<li>Los espectadores necesitan un enlace de reunión para espectadores (véase también 4.2.1 Configuración de espacios de trabajo y reuniones)</li>
 </ul>
 <h3 id="22-usuarios-registrados">2.2 Usuarios registrados</h3>
 <p>Los usuarios registrados tienen una cuenta de Avatour. Las cuentas se crean de una de las siguientes formas:</p>
 <ul>
-<li><strong>Invitados por el administrador:</strong> Durante el proceso de incorporación, Avatour configura un <strong>tenant dedicado</strong> para la organización y crea una o más <strong>cuentas de administrador</strong>. A continuación, los administradores pueden <strong>invitar a usuarios</strong> de la organización y asignarlos a <strong>grupos</strong>, que definen su rol en la plataforma (Invitado, Anfitrión o Administrador). Los usuarios invitados reciben un <strong>enlace de registro</strong> para completar la configuración de la cuenta y establecer una contraseña.  </li>
+<li><strong>Invitados por el administrador:</strong> Durante el proceso de incorporación, Avatour configura un <strong>tenant dedicado</strong> para la organización y crea una o más <strong>cuentas de administrador</strong>. A continuación, los administradores pueden <strong>invitar a usuarios</strong> de la organización y asignarlos a <strong>grupos</strong>, que definen su rol en la plataforma (invitado, anfitrión o administrador). Los usuarios invitados reciben un <strong>enlace de registro</strong> para completar la configuración de la cuenta y establecer una contraseña.  </li>
 <li><strong>Invitados por el anfitrión:</strong> Los anfitriones pueden añadir usuarios como <strong>colaboradores editores</strong> a un espacio de trabajo. Esto consume una <strong>licencia de anfitrión</strong> y garantiza que el usuario tenga acceso de nivel de anfitrión.  </li>
-<li><strong>Aprovisionamiento automático mediante SSO (solo en los planes Enterprise y Business):</strong> El IdP puede crear cuentas automáticamente. Por defecto, las cuentas aprovisionadas mediante SSO se añaden al <strong>grupo Invitado</strong>, a menos que se anule esta configuración mediante <strong>asignaciones de grupos SAML</strong>. Los administradores pueden seguir invitando a usuarios y asignándoles la pertenencia a grupos directamente, incluso cuando el SSO está habilitado.</li>
+<li><strong>Aprovisionamiento automático mediante SSO (solo en los planes Enterprise y Business):</strong> El IdP puede crear cuentas automáticamente. Por defecto, las cuentas aprovisionadas mediante SSO se añaden al <strong>grupo «Invitado»</strong>, a menos que se anule mediante <strong>asignaciones de grupos SAML</strong>. Los administradores pueden seguir invitando a usuarios y asignándoles la pertenencia a grupos directamente, incluso cuando el SSO está habilitado.</li>
 </ul>
 <p><strong>Resumen:</strong>  </p>
 <p>Los usuarios registrados y su pertenencia a grupos se pueden gestionar de varias formas:</p>
 <ul>
 <li><strong>Gestión por parte del administrador:</strong> un administrador en la consola de Avatour puede crear usuarios y asignarlos a grupos, lo que define su rol en la plataforma (Invitado, Anfitrión o Administrador).  </li>
-<li><strong>Aprovisionamiento mediante SSO:</strong> para los clientes de los niveles «Enterprise» o «Business» con SSO habilitado, el IdP puede aprovisionar automáticamente cuentas y asignar la pertenencia a grupos, lo que define el rol del usuario en la plataforma.  </li>
-<li><strong>Usuarios invitados por el anfitrión:</strong> Los anfitriones pueden invitar a otros usuarios como colaboradores con rol de «Editor» a espacios de trabajo específicos. La asignación del rol de colaborador «Editor» consume una licencia de anfitrión.</li>
+<li><strong>Aprovisionamiento mediante SSO:</strong> Para los clientes de los niveles «Enterprise» o «Business» con SSO habilitado, el IdP puede aprovisionar automáticamente cuentas y asignar la pertenencia a grupos, lo que define el rol del usuario en la plataforma.  </li>
+<li><strong>Usuarios invitados por un anfitrión:</strong> Los anfitriones pueden invitar a otros usuarios como colaboradores con rol de editor a espacios de trabajo específicos. La asignación del rol de colaborador con función de editor consume una licencia de anfitrión.</li>
 </ul>
 <p><strong>Práctica recomendada (clientes Enterprise):</strong><br />
 Para las organizaciones que prevén un gran número de usuarios que necesiten acceder a Avatour, se recomienda <strong>integrar el inicio de sesión único (SSO)</strong> y gestionar los usuarios y las pertenencias a grupos desde el <strong>IdP</strong>. Este enfoque agiliza el aprovisionamiento de cuentas, la asignación a grupos y la gestión de licencias, lo que reduce la carga administrativa y garantiza un control de acceso coherente.</p>
 <h4 id="221-usuarios-invitados">2.2.1 Usuarios invitados</h4>
 <ul>
-<li>Se añaden al <strong>grupo de invitados</strong>.  </li>
-<li>Pueden <strong>ver recursos</strong> dentro de los espacios de trabajo en los que se les haya añadido como <strong>colaboradores con rol de espectador</strong>.  </li>
+<li>Se añaden al <strong>grupo Invitados</strong>.  </li>
+<li>Pueden <strong>ver activos</strong> dentro de los espacios de trabajo en los que se les haya añadido como <strong>colaboradores con rol de visor</strong>.  </li>
 <li>No pueden crear espacios de trabajo, organizar reuniones ni subir contenido.  </li>
-<li>Las cuentas de invitado provisionadas mediante SSO <strong>se autentican a través del IdP</strong>; no se requiere ninguna contraseña gestionada por Avatour.</li>
+<li>Las cuentas de invitado aprovisionadas mediante SSO <strong>se autentican a través del IdP</strong>; no se requiere ninguna contraseña gestionada por Avatour.</li>
 </ul>
 <hr />
 <h4 id="222-usuarios-con-licencia-acceso-a-la-consola-web">2.2.2 Usuarios con licencia (acceso a la consola web)</h4>
-<h5 id="usuarios-anfitriones-grupo-anfitrión">Usuarios anfitriones (Grupo: Anfitrión)</h5>
+<h5 id="usuarios-anfitriones-grupo-anfitrión">Usuarios anfitriones (grupo: Anfitrión)</h5>
 <ul>
 <li>Pueden crear y gestionar espacios de trabajo, invitar a colaboradores a un espacio de trabajo, <strong>organizar reuniones en directo</strong> y subir <strong>capturas rápidas</strong>.  </li>
 <li>Tienen acceso al <strong>panel de control del anfitrión</strong> y a la <strong>aplicación del operador</strong> en las cámaras de 360° compatibles.  </li>
 </ul>
 <h5 id="usuarios-administradores-grupo-admin">Usuarios administradores (Grupo: Admin)</h5>
 <ul>
-<li>Incluye todas las funciones de los anfitriones, además de la administración completa de la cuenta.</li>
+<li>Incluye todas las funciones de anfitrión, además de la administración completa de cuentas.</li>
 </ul>
 <p><strong>Los privilegios adicionales de administrador incluyen:</strong></p>
 <p><strong>Gestión de cuentas</strong>  </p>
 <ul>
 <li>Crear nuevos usuarios y asignarlos a grupos.</li>
 <li>Restablecer contraseñas cuando la gestión corre a cargo de Avatour (no aplicable cuando el SSO está habilitado). </li>
-<li>Elevar el nivel de los usuarios invitados a «anfitrión».  </li>
-<li>Desactivar usuarios (las cuentas de administrador deben convertirse primero en «anfitrión» antes de su eliminación).  </li>
-<li>Transferir activos de un usuario «anfitrión» a otro durante la eliminación.</li>
+<li>Ascender a los usuarios invitados a la categoría de anfitrión.  </li>
+<li>Desactivar usuarios (las cuentas de administrador deben convertirse primero en de anfitrión antes de su eliminación).  </li>
+<li>Transferir activos de un usuario anfitrión a otro durante la eliminación.</li>
 </ul>
 <p><strong>Configuración</strong>  </p>
 <ul>
@@ -668,13 +669,13 @@ Al hacer clic en una opción del menú, se abre un <strong>panel lateral</strong
 <li><strong>Recortar vídeo</strong>: recortar el principio o el final del archivo</li>
 </ul>
 <h2 id="for-host-and-admin-users-avatour-web-console">4. Para usuarios «Host» y «Admin»: consola web de Avatour</h2>
-<p>Al iniciar sesión en tu cuenta de usuario de Avatour, accederás a la <strong>Consola web</strong>.  </p>
+<p>Cuando inicies sesión en tu cuenta de usuario de Avatour, accederás a la <strong>Consola web</strong>.  </p>
 <h3 id="web-console-overview-main-menu">4.1 Consola web: descripción general del menú principal</h3>
 <p>En la parte izquierda, verás los siguientes elementos del menú:</p>
 <p><img alt="Consola web de Avatour - Menú principal" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-main-menu_qwpthq.png" /> <em>Consola web de Avatour - Menú principal</em></p>
 <ul>
 <li><strong>Espacios de trabajo</strong>: organiza tu contenido de forma eficiente. Cada espacio de trabajo contiene <strong>Recursos</strong>, <strong>Colaboradores</strong>, <strong>Reuniones</strong> y <strong>Configuración</strong>.  </li>
-<li><strong>Recursos</strong>: accede y gestiona todos tus recursos (vídeos, imágenes, PDF). Los administradores pueden ver todos los recursos de la cuenta, y los recursos compartidos son visibles para todos los usuarios.  </li>
+<li><strong>Recursos</strong>: accede y gestiona todos tus recursos (vídeos, imágenes, archivos PDF). Los administradores pueden ver todos los recursos de la cuenta, y los recursos compartidos son visibles para todos los usuarios.  </li>
 <li><strong>Perfil</strong>: gestiona tu idioma y contraseña.  </li>
 <li><strong>Análisis</strong>: realiza un seguimiento de la actividad de las sesiones, el uso de los espacios de trabajo y las métricas de ROI.  </li>
 <li><strong>Configuración</strong> <em>(solo para administradores)</em>: configura los valores predeterminados de los espacios de trabajo, las reuniones y los recursos en toda la organización. Los administradores también pueden personalizar la imagen de marca (logotipo, colores, fondos).  </li>
@@ -690,19 +691,19 @@ Al hacer clic en una opción del menú, se abre un <strong>panel lateral</strong
 <h3 id="web-console-details-by-menu-item">4.2 Consola web: detalles por elemento del menú (con imágenes)</h3>
 <h4 id="421-espacios-de-trabajo">4.2.1 Espacios de trabajo</h4>
 <p>Los espacios de trabajo son unidades organizativas flexibles que te permiten gestionar recursos, colaboradores y reuniones en un solo lugar. Puedes crear un nuevo espacio de trabajo con el botón <strong>Nuevo espacio de trabajo</strong> situado en la esquina superior derecha.</p>
-<p><img alt="Consola web de Avatour: elemento del menú principal «Espacios de trabajo»" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-main-menu-workspaces_hnhkjj.png" /> <em>Consola web de Avatour: elemento del menú principal «Espacios de trabajo»</em></p>
+<p><img alt="Consola web de Avatour - Elemento del menú principal «Espacios de trabajo»" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-main-menu-workspaces_hnhkjj.png" /> <em>Consola web de Avatour - Elemento del menú principal «Espacios de trabajo»</em></p>
 <p>Haz clic en el icono de la campana para ver un resumen de la actividad del espacio de trabajo durante los últimos 7 días.</p>
 <p><img alt="Consola web de Avatour - Actividades recientes del espacio de trabajo" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-main-menu-workspace-recent-activities_gby1ws.png" /> <em>Actividades recientes del espacio de trabajo</em></p>
 <p>Dentro de un espacio de trabajo:</p>
-<p><img alt="Espacio de trabajo de Avatour con el panel de activos, el panel de control y el panel de reuniones" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/v1785929001/avatour-screenshot-workspace-dashboard_dqp5ff.png" /> <em>Espacio de trabajo con activos (izquierda), panel de control del espacio de trabajo (centro), reuniones (derecha)</em></p>
-<p>En el centro se encuentra el panel de control del espacio de trabajo, que ofrece una visión general de todas las notas de los activos asignados a ese espacio de trabajo, con varios menús desplegables para seleccionar según distintos atributos de las notas. Aquí también puedes aceptar o eliminar las notas sugeridas por la IA. Asimismo, puedes exportar todas las notas desde esta vista.</p>
+<p><img alt="Espacio de trabajo de Avatour con el panel de recursos, el panel de control y el panel de reuniones" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/v1785929001/avatour-screenshot-workspace-dashboard_dqp5ff.png" /> <em>Espacio de trabajo con activos (izquierda), panel de control del espacio de trabajo (centro), reuniones (derecha)</em></p>
+<p>En el centro se encuentra el panel de control del espacio de trabajo, que ofrece una visión general de todas las notas de los activos asignados a ese espacio de trabajo, con varios menús desplegables para filtrar según distintos atributos de las notas. Aquí también puedes aceptar o eliminar las notas sugeridas por la IA. Asimismo, puedes exportar todas las notas desde esta vista.</p>
 <p>En los menús inferiores encontrarás:</p>
 <ul>
 <li><strong>Recursos</strong>: gestiona los archivos asignados a este espacio de trabajo.  </li>
 <li><strong>Colaboradores</strong>: 
-  Controla el acceso a los espacios de trabajo mediante </li>
+  Controlar el acceso a los espacios de trabajo mediante </li>
 <li><strong>Visor</strong>: puede ver los activos. La invitación crea un usuario invitado si es necesario. </li>
-<li><strong>Editor</strong>: control total del espacio de trabajo, con los mismos derechos que el anfitrión. La invitación eleva al usuario a la categoría de anfitrión si es necesario.  <blockquote>
+<li><strong>Editor</strong>: control total del espacio de trabajo, con los mismos derechos que el anfitrión. La invitación eleva al usuario a anfitrión si es necesario.  <blockquote>
 <p>Varios usuarios pueden acceder a un espacio de trabajo simultáneamente sin necesidad de una reunión. Los espacios de trabajo públicos y la configuración de acceso a las reuniones ofrecen opciones de acceso alternativas.  </p>
 </blockquote>
 </li>
@@ -710,62 +711,62 @@ Al hacer clic en una opción del menú, se abre un <strong>panel lateral</strong
 </ul>
 <p><img alt="Informe del espacio de trabajo de Avatour y selección de activos" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-asset-selection-and-workspace-report_itjt8f.png" /> <em>Informe del espacio de trabajo y selección de activos</em></p>
 <ul>
-<li><strong>Mapa</strong> – Muestra las ubicaciones de los activos con GPS en un mapa, tal y como se ha descrito anteriormente para las reuniones. </li>
+<li><strong>Mapa</strong> – Muestra en un mapa la ubicación de los activos con GPS, tal y como se ha descrito anteriormente para las reuniones. </li>
 <li><strong>Reuniones</strong> – Organiza reuniones en el espacio de trabajo.  </li>
 <li><strong>Configuración</strong> – Configura los valores predeterminados del espacio de trabajo y de las reuniones:</li>
 </ul>
 <p><img alt="Configuración de Avatour - Vista del espacio de trabajo" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-workspace-settings_llcei3.png" /> <em>Configuración del espacio de trabajo</em></p>
 <p><strong>Configuración del espacio de trabajo</strong></p>
 <ul>
-<li><strong>Plantilla de informe</strong> – Selecciona una plantilla de inspección para los informes generados por IA. Puedes subirlas en la cuenta (véase más abajo).  </li>
+<li><strong>Plantilla de informe</strong> – Selecciona una plantilla de inspección para los informes generados por IA. Puedes subirlas en «Cuenta» (véase más abajo).  </li>
 <li><strong>Habilitar notificaciones</strong>: correos electrónicos diarios con un resumen de los cambios en el estado de las notas.  </li>
 </ul>
 <p><img alt="Notificaciones por correo electrónico - Ejemplo" src="https://res.cloudinary.com/avatour/image/upload/c_crop,h_600,w_600,x_170,y_60,f_auto,q_auto/Screenshot_2026-03-05_140654_bjk0xk.png" /> <em>Ejemplo de notificaciones por correo electrónico</em></p>
 <ul>
 <li><strong>Espacio de trabajo público</strong>: cualquier persona que tenga el enlace puede ver los activos directamente.</li>
 </ul>
-<p><strong>Configuración de la reunión</strong></p>
+<p><strong>Configuración de reuniones</strong></p>
 <ul>
 <li><strong>Se requiere autenticación</strong>: los participantes deben iniciar sesión.  </li>
-<li><strong>Permitir acceso de invitados</strong>: permite a los usuarios no registrados ver los recursos.  </li>
-<li><strong>Inicio automático de la grabación / Inicio manual</strong>: elige si las reuniones se graban automáticamente o se inician manualmente.  </li>
-<li><strong>Requerir anfitrión</strong>: el anfitrión debe admitir a los participantes; la reunión finaliza cuando el anfitrión se marcha.  </li>
-<li><strong>Permitir acceso como espectador</strong>: participar sin micrófono ni cámara; comunicarse a través del chat.  </li>
-<li><strong>Reuniones protegidas con contraseña</strong>: se requiere una contraseña para unirse.  </li>
-<li><strong>Mostrar pregunta sobre ahorro en desplazamientos</strong>: pregunta a los participantes si la reunión ha reducido los desplazamientos.  </li>
+<li><strong>Permitir acceso de invitados</strong>: permite a los usuarios no registrados ver los recursos. </li>
+<li><strong>Inicio automático de la grabación / Inicio manual</strong>: elige si las reuniones se graban automáticamente o se inician manualmente. </li>
+<li><strong>Se requiere anfitrión</strong>: el anfitrión debe admitir a los participantes; la reunión finaliza cuando el anfitrión se marcha.</li>
+<li><strong>Permitir acceso como espectador</strong>: participar sin micrófono ni cámara; comunicarse a través del chat. Cuando está activada esta opción, se muestra un enlace de reunión para espectadores.</li>
+<li><strong>Reuniones protegidas con contraseña</strong>: se requiere una contraseña para participar.</li>
+<li><strong>Mostrar pregunta sobre ahorro en desplazamientos</strong>: pregunta a los participantes si la reunión ha reducido los desplazamientos.</li>
 </ul>
 <blockquote>
-<p>Las opciones de configuración se pueden combinar (por ejemplo, no se requiere anfitrión, pero sí protección con contraseña).</p>
+<p>Las opciones de configuración se pueden combinar (por ejemplo, no se requiere anfitrión pero sí protección con contraseña).</p>
 </blockquote>
 <hr />
 <h4 id="422-recursos">4.2.2 Recursos</h4>
-<p>Gestiona todos los vídeos en 360° y 2D, imágenes y archivos PDF. Sube y descarga recursos, asígnalos a espacios de trabajo, compártelos con otros usuarios, cámbiales el nombre, imprime o descarga informes, activa el desenfoque de rostros y el resumen mediante IA.</p>
+<p>Gestiona todos los vídeos de 360°/2D (MP4, MOV), imágenes (PNG, JPEG/JPG, HEIC) y archivos PDF. Sube y descarga recursos, asígnalos a espacios de trabajo, compártelos con otros usuarios, cámbiales el nombre, imprime o descarga informes, activa el desenfoque de rostros y el resumen mediante IA.</p>
 <p><img alt="Consola web de Avatour - Elemento del menú principal «Recursos»" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-main-menu-assets_ky5emz.png" /> <em>Elemento del menú principal «Recursos»</em></p>
-<p>También puedes generar el código HTML para habilitar la incrustación pública de un recurso, por ejemplo, en tu página web. Solo tienes que marcar la casilla «Habilitar incrustación pública» y, a continuación, hacer clic en «Guardar» para obtener el código.</p>
-<p><img alt="Consola web de Avatour - Elemento del menú principal «Recursos»" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/v1785921604/avatour-screenshot-main-menu-assets-embed-code_mtau8g.png" /> <em>Elementos del menú principal: Recursos</em></p>
+<p>También puede generar el código HTML para habilitar la incrustación pública de un activo, por ejemplo, en su sitio web. Basta con marcar la casilla «Habilitar incrustación pública» y, a continuación, hacer clic en «Guardar» para obtener el código.</p>
+<p><img alt="Consola web de Avatour - Elemento del menú principal «Activos»" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/v1785921604/avatour-screenshot-main-menu-assets-embed-code_mtau8g.png" /> <em>Elementos del menú principal: Recursos</em></p>
 <h4 id="423-configuración">4.2.3 Configuración</h4>
-<p>Los usuarios administradores tienen acceso a este menú para gestionar de forma centralizada la configuración de toda la plataforma Avatour. Cada opción se puede marcar o desmarcar para que se convierta en la configuración predeterminada en toda la plataforma. Cada configuración también se puede bloquear, lo que significa que otros usuarios de la plataforma no podrán modificar la configuración predeterminada. Aquí también puedes realizar personalizaciones de marketing relacionadas con tu imagen de marca (logotipo, colores, etc.).</p>
-<p><img alt="Consola web de Avatour - Configuración de elementos del menú principal" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/v1781172727/avatour-screenshot-main-menu-settings-1-of-2_fsaatf.jpg" /> <em>Sección de configuración</em></p>
+<p>Los usuarios administradores tienen acceso a este menú para gestionar <strong>la configuración de forma centralizada para toda la plataforma Avatour y para TODOS los espacios de trabajo. Los cambios en dicha configuración se aplicarán a los espacios de trabajo de nueva creación (no a los ya existentes)</strong>. Cada opción se puede marcar o desmarcar para que se convierta en la configuración predeterminada en toda la plataforma. Cada opción también se puede bloquear, lo que significa que otros usuarios de la plataforma no podrán modificar la configuración predeterminada. Aquí también puedes realizar personalizaciones de marketing relacionadas con tu imagen de marca (logotipo, colores, etc.).</p>
+<p><img alt="Consola web de Avatour - Menú principal: Configuración" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/v1781172727/avatour-screenshot-main-menu-settings-1-of-2_fsaatf.jpg" /> <em>Sección de configuración</em></p>
 <h4 id="424-cuenta">4.2.4 Cuenta</h4>
-<p>Aquí puedes consultar los detalles de tu cuenta y gestionar las cuentas de usuario registradas (anfitrión, administrador, invitado), incluido su acceso al espacio de trabajo, así como cargar plantillas de inspección para generar informes del espacio de trabajo (véase más arriba).</p>
+<p>Aquí puedes consultar los detalles de tu cuenta y gestionar las cuentas de usuario registradas (Anfitrión, Administrador, Invitado), incluido su acceso al espacio de trabajo, así como cargar plantillas de inspección para generar informes del espacio de trabajo (véase más arriba).</p>
 <p><img alt="Consola web de Avatour - Elemento del menú principal «Cuenta»" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-main-menu-account-1-of-3_oq5amr.png" /> <em>Resumen de la cuenta - Secciones superiores</em></p>
 <p><img alt="Consola web de Avatour - Opción del menú principal «Cuenta»" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-main-menu-account-2-of-3_oq5amr.png" /> <em>Resumen de la cuenta - Gestión del acceso al espacio de trabajo</em></p>
-<p><img alt="Consola web de Avatour - Elemento del menú principal «Cuenta»" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/v1772360316/avatour-screenshot-main-menu-account-3-of-3_udgyjz.png" /> <em>Resumen de la cuenta: secciones inferiores</em></p>
+<p><img alt="Consola web de Avatour - Elemento del menú principal «Cuenta»" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/v1772360316/avatour-screenshot-main-menu-account-3-of-3_udgyjz.png" /> <em>Resumen de la cuenta - Secciones inferiores</em></p>
 <h4 id="425-análisis">4.2.5 Análisis</h4>
 <p>Ofrece información detallada sobre las reuniones, el uso del espacio de trabajo y las métricas de retorno de la inversión.</p>
 <p><img alt="Consola web de Avatour - Opción del menú principal «Análisis» (1 de 3)" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-main-menu-analytics-1-of-3_ds3epe.png" /> <em>Resumen de análisis</em></p>
 <p><img alt="Consola web de Avatour - Elemento del menú principal «Análisis» (2 de 3)" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-main-menu-analytics-2-of-3_vpcsme.png" /> <em>Actividad de las reuniones y uso del espacio de trabajo</em></p>
-<p><img alt="Consola web de Avatour - Menú principal: «Análisis» (3 de 3)" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-main-menu-analytics-3-of-3_hn2pmr.png" /> <em>Ahorros y uso de licencias de dispositivos</em> </p>
+<p><img alt="Consola web de Avatour - Menú principal: «Análisis» (3 de 3)" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-main-menu-analytics-3-of-3_hn2pmr.png" /> <em>Ahorro y uso de licencias de dispositivos</em> </p>
 <h2 id="onsite-how-to-use-the-avatour-turnkey-kit">5. In situ: cómo utilizar el kit «llave en mano» de Avatour</h2>
 <h3 id="51-primeros-pasos">5.1 Primeros pasos</h3>
-<p>Aquí encontrarás una guía en línea muy completa para dar tus primeros pasos con el kit llave en mano de Avatour: <a href="https://avatour.com/quickstart-panox-v2" target="_blank" rel="noopener">Guía de inicio rápido – Kit llave en mano de Avatour 3.1 (configuración del Pilot PanoX V2)</a></p>
+<p>Aquí encontrarás una guía en línea muy completa para dar tus primeros pasos con el kit llave en mano de Avatour: <a href="https://avatour.com/quickstart-panox-v2" target="_blank" rel="noopener">Guía de inicio rápido – Kit llave en mano de Avatour 3.1 (configuración de Pilot PanoX V2)</a></p>
 <p>Y aquí también tienes la imagen con las instrucciones que encontrarás en el interior de la tapa del estuche del kit 3.1.
-<img alt="Imagen en el interior de la tapa del estuche del kit Avatour" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/v1775994773/avatour-turnkey-kit-3.1-inside-lid-picture_dq4ipl.png" /> <em>Imagen en el interior de la tapa del estuche del kit Avatour</em> </p>
+<img alt="Imagen del interior de la tapa del estuche del kit Avatour" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/v1775994773/avatour-turnkey-kit-3.1-inside-lid-picture_dq4ipl.png" /> <em>Imagen en el interior de la tapa del estuche del kit Avatour</em> </p>
 <p>Sigue la guía y las instrucciones para desembalar, montar y encender tu cámara.</p>
 <hr />
 <h3 id="52-consejos-útiles">5.2 Consejos útiles</h3>
-<h4 id="batería-externa-reuniones-en-directo-más-largas-y-mejor-rendimiento-térmico">Batería externa: reuniones en directo más largas y mejor rendimiento térmico</h4>
-<p>La batería interna de la cámara dura entre 30 y 45 minutos aproximadamente. Aparecerá una alerta cuando la batería se esté agotando. Con una batería externa puedes prolongar el tiempo de funcionamiento e incluso hacerlo infinito, ya que puedes cambiar de batería durante el uso.</p>
+<h4 id="batería-externa-reuniones-en-directo-más-largas-y-mejor-gestión-térmica">Batería externa: reuniones en directo más largas y mejor gestión térmica</h4>
+<p>La batería interna de la cámara dura entre 30 y 45 minutos aproximadamente. Se activará una alerta cuando la batería se esté agotando. Con una batería externa, puedes ampliar el tiempo de funcionamiento e incluso hacerlo infinito, ya que puedes cambiar de batería durante el uso.</p>
 <ul>
 <li>
 <p><strong>Si tu kit incluye una batería Ulanzi:</strong> Colócala entre la base del trípode y el palo extensible y, a continuación, conecta la batería a la cámara mediante USB-C.  </p>
@@ -786,7 +787,7 @@ Al hacer clic en una opción del menú, se abre un <strong>panel lateral</strong
 <h4 id="consideraciones-sobre-el-audio-para-reuniones-en-directo-y-grabaciones">Consideraciones sobre el audio para reuniones en directo y grabaciones</h4>
 <ul>
 <li><strong>Entornos ruidosos:</strong> 
-  Utiliza los auriculares Shokz incluidos en el kit para obtener una captura de audio nítida. </li>
+  Utiliza los auriculares Shokz incluidos en el kit para una captura de audio nítida. </li>
 <li><strong>Encendido/apagado:</strong> Mantén pulsado el botón «+» durante 3 segundos (LED azul = encendido, LED rojo = apagado). </li>
 <li><strong>Modo de emparejamiento por Bluetooth:</strong> Con los auriculares apagados, mantén pulsado el botón «+» durante 5 segundos (el LED parpadea en azul/rojo). </li>
 <li>
@@ -794,14 +795,14 @@ Al hacer clic en una opción del menú, se abre un <strong>panel lateral</strong
 </li>
 <li>
 <p><strong>Entornos más silenciosos / varios participantes cerca de la cámara:</strong> 
-  Utiliza el altavoz acoplable NoxGear. No ofrece una calidad de sonido tan alta como los altavoces para conferencias (por ejemplo, el Jabra Speak), pero es fácil de sujetar a la camisa y capta eficazmente las voces cercanas. </p>
+  Utiliza el altavoz acoplable NoxGear. No ofrece una calidad de sonido tan alta como los altavoces de conferencia (por ejemplo, Jabra Speak), pero es fácil de enganchar a la camisa y capta eficazmente las voces cercanas. </p>
 </li>
-<li><strong>Encendido/apagado:</strong> Mantén pulsado el botón de reproducción/pausa durante 2 segundos.  <ul>
-<li><strong>Modo de emparejamiento por Bluetooth:</strong> Entra automáticamente en modo de emparejamiento al encenderse (el LED parpadea en azul/rojo; permanece fijo en azul cuando está emparejado). </li>
-</ul>
-</li>
+<li><strong>Encendido/apagado:</strong> Mantén pulsado el botón de reproducción/pausa durante 2 segundos. </li>
 <li>
-<p><strong>Volumen:</strong> Utiliza los botones «+» y «-».  </p>
+<p><strong>Modo de emparejamiento por Bluetooth:</strong> Entra automáticamente en modo de emparejamiento al encenderse (el LED parpadea en azul/rojo; permanece azul fijo cuando está emparejado).  </p>
+<ul>
+<li><strong>Volumen:</strong> Utiliza los botones «+» y «-».  </li>
+</ul>
 </li>
 <li>
 <p><strong>Uso de tu propio dispositivo:</strong> Si prefieres una alternativa (por ejemplo, un altavoz de conferencia o unos auriculares personales), puedes emparejarlo a través de la cámara: Ajustes → Bluetooth.  </p>
@@ -810,10 +811,10 @@ Al hacer clic en una opción del menú, se abre un <strong>panel lateral</strong
 <h4 id="conectividad">Conectividad</h4>
 <p><strong>Antes de empezar:</strong> Asegúrate de tener conexión a Internet a través de:</p>
 <ul>
-<li><strong>WiFi local</strong> (recomendado)</li>
-<li><strong>Red móvil</strong> (si se encuentra fuera del alcance de la red WiFi)</li>
+<li><strong>WiFi local</strong> (preferible)</li>
+<li><strong>Red móvil</strong> (si estás fuera del alcance de la red WiFi)</li>
 </ul>
-<p><strong>Ancho de banda recomendado:</strong> 10 Mbps de subida/descarga para una transmisión completa en 360° (~5 Mbps). Un ancho de banda menor (1–2 Mbps) solo funciona cuando se está quieto.</p>
+<p><strong>Ancho de banda recomendado:</strong> 10 Mbps de subida/descarga para una transmisión completa en 360° (~5 Mbps). Un ancho de banda inferior (1-2 Mbps) solo funciona si te mantienes quieto.</p>
 <h5 id="comprobar-la-velocidad-de-la-red">Comprobar la velocidad de la red</h5>
 <ul>
 <li><strong>Prueba en una sola ubicación:</strong> Utiliza cualquier herramienta de comprobación de velocidad que utilices habitualmente (por ejemplo, <a href="https://www.speedtest.net" target="_blank" rel="noopener">Speedtest</a>) para verificar tanto el ancho de banda de subida como el de bajada.   </li>
@@ -822,31 +823,35 @@ Al hacer clic en una opción del menú, se abre un <strong>panel lateral</strong
 <h5 id="wi-fi-local">Wi-Fi local</h5>
 <ul>
 <li>Muy recomendable para conexiones estables.  </li>
-<li>Si el departamento de TI exige una lista blanca, busca la dirección MAC: Ajustes → Acerca de → Dirección Wi-Fi.</li>
+<li>Si el departamento de TI exige incluirlo en la lista blanca, busca la dirección MAC: Ajustes → Acerca de → Dirección Wi-Fi.</li>
 </ul>
 <h5 id="red-móvil">Red móvil</h5>
 <p><strong>Opción A: punto de acceso y tarjeta SIM incluidos en el kit</strong>  </p>
 <ul>
-<li>Acopla el punto de acceso GlocalMe al stick de batería Telesin (imán).  </li>
+<li>Conecta el punto de acceso GlocalMe al stick de batería Telesin (imán).  </li>
 <li>Garantiza que no haya interferencias y mantiene la conexión si te alejas de la cámara.  </li>
 <li>Solución de problemas:<ul>
-<li>Comprueba que la tarjeta SIM esté preinstalada (no es una SIM en la nube).  </li>
-<li>Activa el 5G en el gestor de tarjetas SIM. </li>
+<li>Comprueba que la tarjeta SIM esté preinstalada (no es una Cloud SIM). </li>
 </ul>
 </li>
+<li>Activa el 5G en el gestor de tarjetas SIM.  <ul>
 <li>Comprueba que el APN sea el correcto para tu región (<a href="https://avatour.com/support/how-do-i-change-the-apn-on-my-glocalme-hotspot" target="_blank" rel="noopener">Guía de configuración del APN</a>).</li>
 </ul>
-<p><strong>Opción B: Punto de acceso personal / SIM</strong>
+</li>
+</ul>
+<p><strong>Opción B: Punto de acceso personal / tarjeta SIM</strong>
 - Utiliza tu propio smartphone o un punto de acceso dedicado.  </p>
-<p><strong>Nota importante:</strong>  </p>
+<p><strong>Notas importantes:</strong>  </p>
 <blockquote>
-<p>Mantén el punto de acceso desactivado mientras estés conectado a una red Wi-Fi; actívalo solo cuando estés fuera de cobertura. El sistema operativo de la cámara cambia dinámicamente entre redes Wi-Fi en función de la intensidad de la señal y puede cambiar inadvertidamente al punto de acceso incluso cuando hay Wi-Fi disponible.</p>
+<p>Mantén el punto de acceso desactivado mientras estés conectado a una red Wi-Fi; actívalo solo cuando estés fuera de cobertura. El sistema operativo de la cámara cambia dinámicamente entre redes Wi-Fi en función de la intensidad de la señal y puede cambiar inadvertidamente al punto de acceso incluso cuando haya Wi-Fi disponible.</p>
+<p>Mantén siempre el punto de acceso en línea recta con la cámara de 360°, por ejemplo, no lo guardes en el bolsillo trasero de tus pantalones, ya que tu propio cuerpo se interpondrá en la señal.</p>
 <p>Las redes móviles pueden limitar el ancho de banda de forma inesperada. Consulta con tu operador los límites de tu plan de datos o ponte en contacto con el servicio de asistencia de Avatour si utilizas nuestro punto de acceso y nuestra tarjeta SIM.</p>
+<p>En algunos casos, las redes 4G/LTE pueden ofrecer una mejor señal que las redes 5G. Prueba siempre ambas.</p>
 </blockquote>
 <h5 id="situaciones-de-bajo-ancho-de-banda">Situaciones de bajo ancho de banda</h5>
 <ul>
 <li>Graba con antelación vídeos de la ubicación para reproducirlos más tarde (<a href="https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app" target="_blank" rel="noopener">guía de grabación</a>).  </li>
-<li>Comparte la transmisión de la cámara de un smartphone para complementar las zonas con poco ancho de banda (0,1-0,3 Mbps de subida).</li>
+<li>Comparte la transmisión de la cámara de un smartphone para complementar las zonas con bajo ancho de banda (0,1-0,3 Mbps de subida).</li>
 </ul>
 <h5 id="sin-conexión">Sin conexión</h5>
 <ul>
@@ -870,75 +875,77 @@ Al hacer clic en una opción del menú, se abre un <strong>panel lateral</strong
 <li><strong>Modo «In situ»:</strong> Únete a la reunión en modo «In situ» cuando estés físicamente cerca de la cámara de 360°, ya que este modo está optimizado para su uso in situ:<ul>
 <li>Silencia el micrófono y el altavoz del participante de forma predeterminada.</li>
 <li><strong>No</strong> transmite la señal de la cámara del participante.</li>
-<li><strong>No</strong> muestra la señal de la cámara de 360° en el navegador del participante.</li>
+<li><strong>No</strong> muestra la imagen de la cámara de 360° en el navegador del participante.</li>
 <li>Ahorra ancho de banda de red, lo que garantiza que la cámara de 360° disponga del máximo ancho de banda de subida disponible para la retransmisión en directo.</li>
-<li>Resulta útil cuando un usuario desea compartir detalles específicos; <strong>puedes compartir a tu vez la imagen de tu cámara</strong> para ofrecer vistas específicas.</li>
+<li>Resulta útil cuando un usuario desea compartir detalles específicos; <strong>puedes volver a compartir la imagen de tu cámara</strong> para ofrecer vistas específicas.</li>
 </ul>
 </li>
-<li><strong>Silenciar cuando no se esté hablando activamente:</strong> evita la retroalimentación de audio no deseada y las distracciones.</li>
-<li><strong>Utilizar una red independiente si es posible:</strong> conecta tu smartphone a una red diferente a la de la cámara para reducir las interferencias.</li>
+<li><strong>Silencia el micrófono cuando no estés hablando activamente:</strong> evita la retroalimentación de audio no deseada y las distracciones.</li>
+<li><strong>Utiliza una red independiente si es posible:</strong> conecta tu smartphone a una red diferente a la de la cámara para reducir las interferencias.</li>
 </ul>
 <p>Seguir estas pautas garantiza un recorrido en directo fluido y de alta calidad tanto para los participantes presenciales como para los remotos.</p>
 <h3 id="53-aplicación-de-la-cámara-avatour">5.3 Aplicación de la cámara Avatour</h3>
 <p>Aquí se muestran (1) el menú principal, (2) el menú de ajustes y (3) el menú de configuración de red.</p>
 <p><img alt="Aplicación de cámara Avatour 360° - Tres menús" src="https://res.cloudinary.com/avatour/image/upload/f_auto,q_auto/avatour-screenshot-cam-app-3-menu-screens_nju8bt.png" /> <em>Aplicación de cámara Avatour 360° - 3 menús</em></p>
-<p><strong>Captura rápida</strong>: para grabar vídeos de 360° sin conexión en la tarjeta de memoria SD de la cámara 360. - Para obtener una descripción detallada, consulta <a href="https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app" target="_blank" rel="noopener">¿Cómo se graban y se suben vídeos de 360° con la aplicación Avatour?</a>. Recomendamos utilizar un dispositivo de audio externo (conectado por Bluetooth). Nota: También puedes cambiar el ángulo de vídeo de 360° a 270°, 180° y a vídeos y fotografías 2D estándar, por ejemplo, para enfocar o ocultar zonas confidenciales; basta con cambiar los modos en la esquina inferior derecha de la pantalla de captura rápida (<em>aunque esto solo es posible si se ha seleccionado una resolución 4K en la configuración de «Captura rápida»; véase más abajo</em>).</p>
+<p><strong>Captura rápida</strong>: para grabar vídeos de 360° sin conexión en la tarjeta de memoria SD de la cámara 360. - Para obtener una descripción detallada, consulta <a href="https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app" target="_blank" rel="noopener">¿Cómo se graban y se suben vídeos de 360° con la aplicación Avatour?</a>. Recomendamos utilizar un dispositivo de audio externo (conectado por Bluetooth). Nota: También puedes cambiar el ángulo de vídeo de 360° a 270°, 180° y a vídeos y fotos 2D estándar, por ejemplo, para enfocar o ocultar zonas confidenciales; basta con cambiar los modos en la esquina inferior derecha una vez en la pantalla de QC (<em>aunque esto solo es posible si se ha seleccionado una resolución 4K en los Ajustes de Captura Rápida; véase más abajo</em>).</p>
 <p><strong>Reunión en directo</strong>: para videoconferencias en directo a 360°. Verás tus espacios de trabajo y, al hacer clic en uno de ellos, se iniciará la transmisión de vídeo en directo desde la cámara de 360°. Antes de poder unirte a la reunión con tu cámara de 360°, debes conectar un dispositivo de audio mediante Bluetooth. Para obtener una descripción detallada, consulta <a href="https://avatour.com/support/how-to-start-a-live-capture-meeting-with-your-pilot-camera" target="_blank" rel="noopener">¿Cómo iniciar una reunión de Live Capture con tu cámara Pilot?</a></p>
 <blockquote>
-<p>Al organizar una reunión de Live Capture con tu cámara de 360°, tendrás a tu disposición herramientas de reunión similares a las de la experiencia web. Aquí tienes un enlace a nuestro artículo de la Base de conocimientos que explica estas herramientas con más detalle: <a href="https://avatour.com/support/¿qué-herramientas-de-la-app-de-Avatour-están-disponibles-para-los-operadores-de-la-cámara-Pilot-de-LabPano?" target="_blank" rel="noopener">Herramientas de la aplicación para operadores</a></p>
+<p>Al organizar una reunión de Live Capture con tu cámara de 360°, tendrás a tu disposición herramientas de reunión similares a las de la experiencia web. Aquí tienes un enlace a nuestro artículo de la Base de conocimientos que explica estas herramientas con más detalle: <a href="https://avatour.com/support/what-avatour-app-tools-are-available-to-labpano-pilot-camera-operators" target="_blank" rel="noopener">Herramientas de la aplicación del operador</a></p>
 </blockquote>
-<p><strong>Galería</strong>: aquí encontrarás todos tus vídeos e imágenes de 360° para subirlos a la consola web de Avatour. Puedes subir y eliminar recursos de forma masiva: pulsa «Seleccionar» en la parte superior de la pantalla. Antes de subir los archivos, puedes elegir varios pasos de procesamiento, como «Desenfocar rostros», generar un «Resumen con IA» y optimizar la señal de audio con «Mejorar el habla». Incluso puedes elegir un espacio de trabajo al que asignar el archivo; por supuesto, también aparecerá en la sección general de archivos de la consola web.</p>
-<p><strong>Configuración</strong>: en «Configuración» tienes las siguientes opciones:</p>
+<p><strong>Galería</strong>: aquí encontrarás todos tus vídeos e imágenes en 360° para subirlos a la consola web de Avatour. Puedes subir y eliminar recursos de forma masiva: pulsa «Seleccionar» en la parte superior de la pantalla. Antes de subirlos, puedes elegir varios pasos de procesamiento, como «Desenfocar rostros», generar un «Resumen con IA» y optimizar la señal de audio con «Mejorar voz». Incluso puedes elegir un espacio de trabajo al que asignar el recurso; por supuesto, también aparecerá en la sección general de recursos de la consola web.</p>
+<p><strong>Configuración</strong>: en «Configuración» dispones de las siguientes opciones:</p>
 <ul>
 <li><strong>Red</strong>: esta opción te permite cambiar la red Wi-Fi a la que está conectada la cámara o realizar una prueba de conexión de red para ver el rendimiento de la transmisión</li>
 <li>
-<p><strong>Captura en directo</strong>: ajusta la configuración de la captura en directo en función del ancho de banda disponible, la sensibilidad a la realidad virtual del invitado o si las lentes protectoras de la cámara están instaladas:</p>
+<p><strong>Captura en directo</strong>: Ajusta la configuración de tu «Captura en directo» en función del ancho de banda disponible, la sensibilidad a la realidad virtual del invitado o si las lentes protectoras de tu cámara están instaladas:</p>
+</li>
+<li>
+<p><strong>Frecuencia de fotogramas objetivo (opcional)</strong>: Ajusta la frecuencia de fotogramas de tu vídeo de «Captura en directo» entre 15 fps, 24 fps y 30 fps. Las velocidades de fotogramas más altas producen un vídeo más fluido, pero requerirán más ancho de banda de subida. Por defecto: 15 fps</p>
 <ul>
-<li><strong>Frecuencia de fotogramas objetivo (opcional)</strong>: ajusta la frecuencia de fotogramas de tu vídeo de «Captura en directo» entre 15 fps, 24 fps y 30 fps. Las frecuencias de fotogramas más altas producen un vídeo más fluido, pero requerirán más ancho de banda de subida. Por defecto: 15 fps</li>
-<li><strong>Velocidad de bits objetivo</strong>: te permite aumentar o reducir la velocidad de bits máxima de transmisión de tu «Captura en directo». Puedes establecer la velocidad de bits objetivo entre 1 Mbps y 10 Mbps. Las velocidades de bits más altas darán lugar a una mayor resolución de vídeo, pero requerirán más ancho de banda de subida. Valor predeterminado: 5 Mbps</li>
-<li><strong>Optimizar movimiento</strong>: Esto reducirá la velocidad de fotogramas del vídeo, lo que generará menos carga en el ancho de banda de subida de tu red y aumentará tu velocidad de bits de transmisión. Además, esta opción ayuda a reducir el mareo por movimiento en los participantes de realidad virtual. Valor predeterminado: Desactivado</li>
-<li><strong>Bloqueo de dirección</strong>: Esta opción «bloqueará» la visión de 360°, independientemente de cómo muevas la cámara de 360°. Si deseas que el vídeo de 360° se mueva con el movimiento de la cámara —por ejemplo, si quieres «apuntar» con la lente frontal hacia algo—, configura el bloqueo de dirección en No. De este modo, la cámara se comportará como una cámara tradicional, lo que puede resultar más útil para visitas guiadas. Por defecto: Sí</li>
-<li><strong>Orientación inicial</strong>: Cuando configures el <strong>Bloqueo de dirección</strong> en «No», podrás elegir qué lente (delantera o trasera) debe ser la orientación inicial al iniciar el vídeo en directo. Por defecto: mirando al operador, ya que es la forma más natural de iniciar una reunión en directo (= lente trasera). La «Captura rápida» es diferente (la cámara frontal es la orientación inicial por defecto; véase más abajo).</li>
+<li><strong>Velocidad de bits objetivo</strong>: Te permite aumentar o disminuir la velocidad de bits máxima de transmisión para tu «Captura en directo». Puedes establecer la velocidad de bits objetivo entre 1 Mbps y 10 Mbps. Unas velocidades de bits más altas darán como resultado una mayor resolución de vídeo, pero requerirán más ancho de banda de subida. Valor predeterminado: 5 Mbps</li>
+<li><strong>Optimizar movimiento</strong>: Esto reducirá la frecuencia de fotogramas del vídeo, lo que generará menos carga en el ancho de banda de subida de tu red y aumentará tu velocidad de bits de transmisión. Además, esta opción ayuda a reducir el mareo por movimiento en los participantes de realidad virtual. Valor predeterminado: Desactivado</li>
+<li><strong>Bloqueo de dirección</strong>: Esto «bloqueará» la visión de 360°, independientemente de cómo muevas la cámara de 360°. Si deseas que el vídeo de 360° se mueva con el movimiento de la cámara —por ejemplo, si quieres «apuntar» con la lente frontal hacia algo—, configura el bloqueo de dirección en «No». De este modo, la cámara se comportará como una cámara tradicional, lo que puede resultar más útil para visitas guiadas. Valor predeterminado: Sí</li>
+<li><strong>Orientación inicial</strong>: Cuando configures el bloqueo de dirección en «No», podrás elegir qué lente (delantera o trasera) debe ser la orientación inicial al iniciar el vídeo en directo. Por defecto: mirando al operador, ya que es la forma más natural de comenzar una reunión en directo (= cámara trasera). La «Captura rápida» funciona de forma diferente (la cámara frontal es la orientación inicial por defecto; véase más abajo).</li>
 </ul>
 </li>
 <li>
-<p><strong>Captura rápida</strong>: Ajusta la configuración de la «Captura rápida» en función de la frecuencia de fotogramas de vídeo que prefieras, el ancho de banda disponible para la subida de vídeos grabados y otras preferencias. Las funciones relacionadas con el mapa, tal y como se ha explicado anteriormente (por ejemplo, la vista de mapa o las notas en un mapa), están disponibles cuando se recibe una señal GPS y la configuración de ubicación en los ajustes nativos de la cámara está activada (debería estarlo por defecto). El icono de ubicación/GPS situado en la esquina superior derecha de «Captura rápida» debería aparecer en verde. Puede tardar unos instantes en recibirse la señal GPS y establecerse la conexión.</p>
+<p><strong>Captura rápida</strong>: Ajusta la configuración de la «Captura rápida» en función de la frecuencia de fotogramas de vídeo que prefieras, el ancho de banda disponible para la subida de los vídeos grabados y otras preferencias. Las funciones relacionadas con el mapa, tal y como se ha explicado anteriormente (por ejemplo, la vista de mapa o las notas en un mapa), están disponibles cuando se recibe una señal GPS y la configuración de ubicación en los ajustes nativos de la cámara está activada (debería estarlo por defecto). El icono de ubicación/GPS situado en la esquina superior derecha de la Captura rápida debería aparecer en verde. Puede tardar unos instantes en recibirse la señal GPS y establecerse la conexión.</p>
 <ul>
 <li><strong>Resolución</strong>: Aquí puedes cambiar la resolución. <em>(Las resoluciones de 6k son experimentales y requieren un paso de unión manual en la Galería antes de subirlas a la consola web de Avatour.)</em><ul>
-<li><strong>4k</strong>: es la resolución estándar y mantiene un buen equilibrio entre la calidad del vídeo y el tamaño del archivo.</li>
+<li><strong>4k</strong>: es la resolución estándar y ofrece un buen equilibrio entre la calidad del vídeo y el tamaño del archivo.</li>
 </ul>
 </li>
 </ul>
 </li>
 <li><strong>6k a 30 fps</strong> <em>(requiere un paso adicional de unión de imágenes en la Galería)</em>
-        - <strong>6k a 10 fps</strong> <em>(requiere un paso adicional de unión en la Galería)</em>: resulta útil si deseas mantener un tamaño de archivo menor que con los 30 fps, cuando la fluidez del movimiento es menos importante.
-        - Para otras resoluciones, también puedes utilizar las aplicaciones nativas de la cámara, incluso en el PanoX V2; para más detalles, consulta <a href="https://avatour.com/support/cómo-se-graban-y-suben-vídeos-de-360-con-la-app-avatour" target="_blank" rel="noopener">¿Cómo se graban y se suben vídeos de 360º con la aplicación Avatour?</a><ul>
-<li><strong>Velocidad de fotogramas objetivo</strong> <em>(solo disponible para la resolución 4K)</em>: ajusta la velocidad de fotogramas de tus grabaciones de vídeo con «Captura rápida» entre 15 fps, 24 fps y 30 fps. Las velocidades de fotogramas más altas producen un vídeo más fluido, pero aumentarán el tamaño del archivo de vídeo y el tiempo de subida. Recomendado: 30 fps</li>
+        - <strong>6k a 10 fps</strong> <em>(requiere un paso adicional de unión de imágenes en la Galería)</em>: esto resulta útil si deseas mantener un tamaño de archivo menor que con los 30 fps, cuando la fluidez del movimiento es menos importante.
+        - Para otras resoluciones, también puedes utilizar las aplicaciones nativas de la cámara, incluso en la PanoX V2; para más detalles, consulta <a href="https://avatour.com/support/cómo-se-graban-y-suben-vídeos-de-360-con-la-app-avatour" target="_blank" rel="noopener">¿Cómo se graban y se suben vídeos de 360º con la aplicación Avatour?</a><ul>
+<li><strong>Velocidad de fotogramas objetivo</strong> <em>(disponible solo para la resolución 4K)</em>: ajusta la velocidad de fotogramas de tus grabaciones de vídeo con «Captura rápida» entre 15 fps, 24 fps y 30 fps. Las velocidades de fotogramas más altas producen un vídeo más fluido, pero aumentarán el tamaño del archivo de vídeo y el tiempo de subida. Recomendado: 30 fps</li>
 <li><strong>Velocidad de bits objetivo</strong> <em>(solo disponible para resolución 4K)</em> Establece la velocidad de bits objetivo para las subidas de «Captura rápida» entre 5 Mbps y 20 Mbps. Las velocidades de bits más bajas aumentan la velocidad de subida, pero reducen la calidad del vídeo. Recomendado: 20 Mbps</li>
-<li><strong>Bloqueo de dirección</strong>: igual que en el apartado anterior sobre «Captura en directo». La orientación inicial predeterminada es siempre la lente frontal para «Captura rápida».</li>
+<li><strong>Bloqueo de orientación</strong>: igual que en el apartado anterior sobre «Captura en directo». La orientación inicial predeterminada es siempre la lente frontal para «Captura rápida».</li>
 </ul>
 </li>
 </ul>
 <blockquote>
-<p>Consulta también nuestra <a href="https://avatour.com/support/avatour-360deg-video-file-size-calculator" target="_blank" rel="noopener">Calculadora de tamaño de archivos de vídeo de 360° de Avatour</a> para obtener más consejos sobre los ajustes anteriores y los tamaños de los archivos de vídeo. Para evitar quedarte sin espacio de almacenamiento, aparecerá una alerta para que puedas detener la grabación y liberar espacio (por ejemplo, subiendo vídeos desde la Galería a los activos de la consola web de Avatour).</p>
+<p>Consulta también nuestra <a href="https://avatour.com/support/avatour-360deg-video-file-size-calculator" target="_blank" rel="noopener">Calculadora de tamaño de archivos de vídeo de 360° de Avatour</a> para obtener más consejos sobre los ajustes anteriores y los tamaños de los archivos de vídeo. Para evitar quedarte sin espacio de almacenamiento, aparecerá una alerta para que puedas detener la grabación y liberar espacio (por ejemplo, subiendo vídeos desde la Galería a los recursos de la consola web de Avatour).</p>
 </blockquote>
 <ul>
 <li><strong>Acerca de</strong>: Ver el número de serie del dispositivo y la versión del software</li>
 </ul>
-<p><strong>Cuenta</strong>: para iniciar sesión con tu cuenta de administrador o de anfitrión de Avatour.</p>
+<p><strong>Cuenta</strong>: para iniciar sesión con tu cuenta de administrador o de host de Avatour.</p>
 <h2 id="best-practice-advice">6. Consejos sobre buenas prácticas</h2>
 <h3 id="61-primeros-usos-informales-y-familiarización">6.1 Primeros usos (informales) y familiarización</h3>
-<p>Para tus primeros usos y para familiarizarte con la consola web de Avatour y el kit llave en mano de Avatour, te recomendamos seguir los siguientes pasos:</p>
+<p>Para tus primeros usos y para familiarizarte con la consola web de Avatour y el kit llave en mano de Avatour, te recomendamos los siguientes pasos:</p>
 <ol>
 <li>Llévate el kit a casa y pruébalo con tu familia y amigos utilizando tu conexión a Internet doméstica.</li>
-<li>Llévate el kit a la oficina y conéctate a la red corporativa (pueden surgir cuestiones relacionadas con la empresa, como los cortafuegos corporativos, pero ya sabes por el primer paso que Avatour funciona y que este es un tema que debe resolver tu equipo de TI con la ayuda de Avatour).</li>
+<li>Llévate el kit a la oficina y conéctalo a la red corporativa (pueden surgir cuestiones relacionadas con la empresa, como los cortafuegos corporativos, pero ya sabes por el primer paso que Avatour funciona y que este es un tema que debe resolver tu equipo de TI con la ayuda de Avatour).</li>
 <li>Empieza a utilizar Avatour in situ (fuera de tu oficina), en el lugar de la reunión al que los participantes remotos tendrían que desplazarse normalmente. Es posible que surjan más cuestiones relacionadas con la conectividad; Avatour te ayudará en colaboración con tu equipo de TI.</li>
 <li>Empieza a utilizarlo con participantes remotos, tanto internos como externos.</li>
 </ol>
 <h3 id="62-antes-de-una-reunión-en-directo-con-vídeo-de-360">6.2 Antes de una reunión en directo con vídeo de 360°</h3>
 <ul>
 <li>
-<p>Recomendamos realizar un recorrido en vídeo de 360° grabado antes de cualquier recorrido en directo, si el tiempo lo permite, por tres razones: (1) Disponer de una solución alternativa para el recorrido en directo; (2) contar con material para la documentación y su revisión posterior (además del recorrido en directo grabado); y (3) empezar a crear una biblioteca de vídeos de 360° de todas sus instalaciones, lo cual puede resultar útil para muchos casos de uso. </p>
+<p>Recomendamos realizar un recorrido en vídeo de 360° grabado antes de cualquier recorrido en directo, si el tiempo lo permite, por tres razones: (1) Disponer de una solución alternativa para el recorrido en directo, (2) tener material para la documentación y su revisión posterior (además del recorrido en directo grabado) y (3) empezar a crear una biblioteca de vídeos de 360° de todas tus instalaciones, lo cual puede resultar útil para muchos casos de uso. </p>
 </li>
 <li>
 <p>Carga todos los componentes del kit durante al menos 90 minutos antes de la reunión en directo. Recomendamos mantener todos los dispositivos en carga continua cuando no se utilicen. De este modo, todos los dispositivos estarán siempre listos, incluso para reuniones improvisadas no planificadas.</p>
@@ -950,13 +957,13 @@ Al hacer clic en una opción del menú, se abre un <strong>panel lateral</strong
 <p>Confirma que se ha creado un Workspace para celebrar una reunión en directo e incluye todos los recursos relevantes.</p>
 </li>
 <li>
-<p>Invita a todos los participantes a la reunión a través de tu espacio de trabajo. De este modo, se creará una invitación en los calendarios de todos los participantes, que incluirá el enlace de invitación a la reunión.</p>
+<p>Invita a todos los participantes a la reunión a través de tu espacio de trabajo. Esto genera una invitación en los calendarios de todos los participantes e incluye el enlace de invitación a la reunión.</p>
 </li>
 <li>
-<p>Empareja y conecta a la cámara los auriculares o el altavoz Bluetooth que tengas previsto utilizar para la visita guiada.</p>
+<p>Empareja y conecta a la cámara los auriculares o el altavoz Bluetooth que tengas previsto utilizar para la visita.</p>
 </li>
 <li>
-<p>Todos los usuarios de smartphones que se encuentren en las instalaciones deben conectarse a una red diferente a la de la cámara. Esto reducirá la carga sobre el ancho de banda de la red de la cámara.</p>
+<p>Todos los usuarios de smartphones presentes en el lugar deben conectarse desde una red diferente a la de la cámara. Esto reducirá la carga sobre el ancho de banda de la red de la cámara.</p>
 </li>
 <li>
 <p>Si eres el único operador de cámara, llévate un smartphone por si quieres compartir la pantalla de tu móvil y mostrar detalles precisos.</p>
@@ -965,7 +972,7 @@ Al hacer clic en una opción del menú, se abre un <strong>panel lateral</strong
 <p>Comprueba que la cámara de 360° pueda conectarse a tu red Wi-Fi local.</p>
 </li>
 <li>
-<p>Antes de una reunión de Avatour, planifica la ruta que vas a seguir por las instalaciones. Realiza una reunión de prueba de Avatour con la cámara y comprueba que todas las zonas tengan velocidades de transmisión superiores a 1 Mbps. Esto se puede ver en la propia pantalla de la cámara o, si eres un participante remoto, accediendo a «Ajustes» y activando «Mostrar velocidad de transmisión».</p>
+<p>Antes de una reunión de Avatour, planifica la ruta que vas a seguir por las instalaciones. Realiza una reunión de prueba de Avatour con la cámara y comprueba que todas las zonas tengan velocidades de transmisión superiores a 1 Mbps de ancho de banda. Esto se puede ver en la propia pantalla de la cámara o, si eres un participante remoto, yendo a «Ajustes» y activando «Mostrar velocidad de transmisión».</p>
 </li>
 <li>
 <p>Si observas que algunas zonas tienen poco o ningún ancho de banda, lo mejor es tomar imágenes o realizar una grabación. Estas se pueden presentar durante la reunión para que los participantes remotos las revisen. Puedes seguir la guía anterior que explica nuestra función «Captura rápida» para grabar y subir vídeos o imágenes sin conexión.</p>
@@ -977,7 +984,7 @@ Al hacer clic en una opción del menú, se abre un <strong>panel lateral</strong
 <p>Puedes comenzar en otra solución de videoconferencia (por ejemplo, Teams, Zoom o Google Meet), pero antes de pasar a Avatour, cierra completamente la otra aplicación de videoconferencia. En algunos casos, estas otras aplicaciones darán prioridad al micrófono, los altavoces o la cámara web de tu dispositivo, lo que provocará que queden desactivados para Avatour. Además, NO ejecutes Avatour Y otra videoconferencia al mismo tiempo, ya que esto reducirá el ancho de banda disponible.</p>
 </li>
 <li>
-<p>Si tiene previsto utilizar la cámara 360 en un entorno con temperaturas elevadas, se recomienda utilizar el módulo de refrigeración (solo Pilot Pano). Esto ayudará a reducir las posibilidades de que la cámara se sobrecaliente y se apague automáticamente.</p>
+<p>Si tiene previsto utilizar la cámara de 360° en un entorno con temperaturas elevadas, se recomienda utilizar el módulo de refrigeración (solo Pilot Pano). Esto ayudará a reducir las posibilidades de que la cámara se sobrecaliente y se apague automáticamente.</p>
 </li>
 </ul>
 <h3 id="63-al-manejar-la-cámara-in-situ-para-una-reunión-en-directo-con-vídeo-de-360">6.3 Al manejar la cámara in situ para una reunión en directo con vídeo de 360°</h3>
@@ -989,16 +996,16 @@ Al hacer clic en una opción del menú, se abre un <strong>panel lateral</strong
 <p>Sostén la cámara delante de ti, por encima del nivel de los ojos. Esto permite que todos los participantes remotos vean la mayor parte del entorno que te rodea.</p>
 </li>
 <li>
-<p>En los casos en los que la cámara deba permanecer estable, utiliza el trípode y ajusta la altura de la cámara a la altura adecuada, preferiblemente a la altura de los ojos.</p>
+<p>En los casos en que la cámara deba permanecer estable, utiliza el trípode y ajusta la altura de la cámara a la altura adecuada, preferiblemente a la altura de los ojos.</p>
 </li>
 <li>
-<p>Conecta siempre la cámara a tu red Wi-Fi local siempre que sea posible. En zonas sin acceso a Wi-Fi, utiliza el punto de acceso que se proporciona. El punto de acceso cuenta con una tarjeta SIM que se conectará a una red móvil fiable cercana. Mantén siempre el punto de acceso apagado cuando no lo utilices en interiores, ya que, de lo contrario, la cámara de 360° podría conectarse a él, algo que no deseamos en interiores. Cuando estés al aire libre, mantén el punto de acceso cerca de la cámara de 360°.</p>
+<p>Conecta siempre la cámara a tu red Wi-Fi local siempre que sea posible. En zonas sin acceso a Wi-Fi, utiliza el punto de acceso proporcionado o el tuyo propio. Mantén siempre el punto de acceso apagado cuando no lo utilices en interiores, ya que, de lo contrario, la cámara de 360° podría conectarse a él, algo que no queremos que ocurra en interiores. Mantén siempre el punto de acceso en línea recta con la cámara de 360°, por ejemplo, no lo guardes en el bolsillo trasero de tus pantalones, ya que tu propio cuerpo se interpondrá en la señal.</p>
 </li>
 <li>
-<p>Cuando la velocidad de transmisión de la cámara empiece a descender por debajo de los 2 Mbps, camina más despacio o detente por completo hasta que la señal se estabilice de nuevo. Esto suele ocurrir al cambiar de un punto de acceso Wi-Fi a otro. </p>
+<p>Cuando la tasa de bits de la cámara empiece a caer por debajo de los 2 Mbps, camina más despacio o detente por completo hasta que la señal se estabilice de nuevo. Esto suele ocurrir al cambiar de un punto de acceso Wi-Fi a otro. </p>
 </li>
 <li>
-<p>Si sabes que la conexión y el vídeo se interrumpirán al desplazarte a una ubicación concreta (por ejemplo, al pasar de una zona de producción interior a una zona exterior), avisa con antelación a los participantes remotos.</p>
+<p>Si sabes que la conexión y el vídeo se interrumpirán al desplazarte a una ubicación concreta (por ejemplo, al pasar de una zona de producción interior a una zona exterior), avisa de ello con antelación a los participantes remotos.</p>
 </li>
 <li>
 <p>Si necesitas mostrar algo con gran detalle o con letra pequeña, puedes acercarte mucho con la cámara de 360° y también puedes utilizar tu propio smartphone o el de un participante presente en el lugar para unirte a la reunión y mostrar la cámara (trasera) de tu teléfono o del suyo.</p>
@@ -1019,7 +1026,7 @@ Al hacer clic en una opción del menú, se abre un <strong>panel lateral</strong
 <p>Los consejos anteriores no relacionados con la conectividad también se aplican, en general, a la grabación sin conexión (por ejemplo, muévete despacio).</p>
 </li>
 <li>
-<p>Utiliza siempre unos auriculares Bluetooth externos.</p>
+<p>Utiliza siempre unos auriculares externos con Bluetooth.</p>
 </li>
 <li>
 <p>Comprueba que el GPS funcione cuando sea necesario.</p>
@@ -1031,7 +1038,7 @@ Al hacer clic en una opción del menú, se abre un <strong>panel lateral</strong
 <p>Coloca la cámara en el suelo y apúntala hacia los elementos que quieras destacar. Si configuras el «Bloqueo de dirección» en «No», incluso puedes señalar algo con la cámara de 360° (por ejemplo, utilizando la lente frontal).  </p>
 </li>
 <li>
-<p>Si estás grabando para obtener un informe generado por IA y también utilizas comandos de voz, habla alto y claro. Para ayudar a la IA a identificar ubicaciones, medidas y problemas, y para completar tus plantillas de inspección, menciónalos explícitamente y utiliza la misma terminología que se emplea en tu plantilla.</p>
+<p>Si estás grabando para obtener un informe generado por IA y también utilizas comandos de voz, habla alto y claro. Para ayudar a la IA a identificar ubicaciones, medidas y problemas, así como a completar tus plantillas de inspección, menciónalos explícitamente y utiliza la misma terminología que se emplea en tu plantilla.</p>
 </li>
 </ul>
 <blockquote>
