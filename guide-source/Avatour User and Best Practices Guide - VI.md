@@ -16,50 +16,51 @@ Hãy đặc biệt tham khảo [Các tính năng của Avatour](https://avatour.
 ## 2. Các loại người dùng Avatour  {#avatour-user-types}
 
 ### 2.1 Người tham dự cuộc họp (Không cần tài khoản)
-Người dùng có thể tham gia cuộc họp mà không cần đăng ký tài khoản Avatour. Trường hợp ngoại lệ: Nếu người tổ chức đã chọn cài đặt cuộc họp "Yêu cầu xác thực" (xem thêm 4.2.1 Cài đặt cho Không gian làm việc và Cuộc họp) — ví dụ: để chỉ cho phép nhân viên nội bộ tham gia qua Đăng nhập một lần (SSO) — lời mời trên lịch sẽ thông báo rằng người tham gia phải đăng nhập để xác thực.
+Người dùng có thể tham gia cuộc họp mà không cần đăng ký tài khoản Avatour. Ngoại lệ: Nếu người tổ chức đã chọn tùy chọn "Yêu cầu xác thực" trong cài đặt cuộc họp (xem thêm mục 4.2.1 Cài đặt cho Không gian làm việc và Cuộc họp) — ví dụ: để chỉ cho phép nhân viên nội bộ tham gia thông qua Đăng nhập một lần (SSO) — thì lời mời trên lịch sẽ thông báo rằng người tham gia phải đăng nhập để xác thực.
 
 Người dùng truy cập cuộc họp như sau:
 
-- Nhận liên kết cuộc họp từ người tổ chức.
-- Nhập mật khẩu cuộc họp nếu người tổ chức đã kích hoạt tính năng này.
+- Nhận liên kết cuộc họp từ người chủ trì.
+- Nhập mật khẩu cuộc họp nếu người chủ trì đã bật tính năng này.
 - Người tham gia có thể tham gia mà không cần tài khoản Avatour trừ khi cuộc họp bị hạn chế và yêu cầu đăng nhập để xác thực.
 
 #### 2.1.1 Người tham gia 
 
-- Có thể tham gia và tương tác đầy đủ (webcam, micrô, trò chuyện và tính năng Trình bày).
+- Có thể tham gia và tương tác đầy đủ (webcam, micrô, trò chuyện và chức năng Trình bày).
 - Tối đa 20 người tham gia tương tác cho mỗi cuộc họp.
 
-#### 2.1.2 Người theo dõi
+#### 2.1.2 Người xem
 
 - Có thể xem cuộc họp và chỉ tham gia qua trò chuyện.
-- Không thể chia sẻ video, sử dụng micrô, trình chiếu, phát/tạm dừng Tài nguyên hoặc chụp Ảnh chụp màn hình.
+- Không thể chia sẻ video, sử dụng micrô, trình chiếu, phát/tạm dừng Tài nguyên hoặc chụp Ảnh chụp nhanh.
 - Tối đa 10 Người xem cho mỗi cuộc họp.
-- Cùng với Người tham gia, một cuộc họp có thể có tối đa 30 người tham dự.
+- Cùng với Người tham gia, một cuộc họp có thể chứa tối đa 30 người tham dự.
+- Người xem cần có liên kết tham gia cuộc họp dành cho người xem (xem thêm 4.2.1 Cài đặt cho Không gian làm việc và Cuộc họp)
 
 ### 2.2 Người dùng đã đăng ký
 
 Người dùng đã đăng ký có tài khoản Avatour. Tài khoản được tạo theo một trong các cách sau:
 
-- **Được quản trị viên mời:** Trong quá trình thiết lập ban đầu, Avatour sẽ thiết lập một **tenant chuyên dụng** cho tổ chức và tạo một hoặc nhiều **tài khoản quản trị viên**. Sau đó, các quản trị viên có thể **mời người dùng** trong tổ chức và phân công họ vào các **nhóm**, qua đó xác định vai trò của họ trên nền tảng (Khách, Người chủ trì hoặc Quản trị viên). Người dùng được mời sẽ nhận được một **liên kết đăng ký** để hoàn tất việc thiết lập tài khoản và đặt mật khẩu.  
-- **Được người chủ trì mời:** Chủ nhà có thể thêm người dùng với tư cách là **người cộng tác biên tập** vào Không gian làm việc. Việc này sẽ tiêu tốn một **giấy phép Chủ nhà** và đảm bảo người dùng có quyền truy cập ở cấp độ Chủ nhà.  
-- **Tự động cấp quyền SSO (chỉ dành cho gói Enterprise/Business):** Tài khoản có thể được tạo tự động bởi IdP. Theo mặc định, các tài khoản được cấp quyền qua SSO sẽ được thêm vào **nhóm Khách**, trừ khi được ghi đè thông qua **các bản ánh xạ nhóm SAML**. Quản trị viên vẫn có thể mời người dùng và chỉ định tư cách thành viên nhóm trực tiếp ngay cả khi SSO được bật.
+- **Được quản trị viên mời:** Trong quá trình thiết lập ban đầu, Avatour thiết lập một **tenant chuyên dụng** cho tổ chức và tạo một hoặc nhiều **tài khoản quản trị viên**. Sau đó, các quản trị viên có thể **mời người dùng** trong tổ chức và phân công họ vào các **nhóm**, qua đó xác định vai trò của họ trên nền tảng (Khách, Người chủ trì hoặc Quản trị viên). Người dùng được mời sẽ nhận được một **liên kết đăng ký** để hoàn tất việc thiết lập tài khoản và đặt mật khẩu.  
+- **Được người chủ trì mời:** Chủ nhà có thể thêm người dùng với tư cách là **người cộng tác với quyền chỉnh sửa** vào Không gian làm việc. Việc này sẽ tiêu tốn một **giấy phép Chủ nhà** và đảm bảo người dùng có quyền truy cập ở cấp độ Chủ nhà.  
+- **Tự động cấp quyền thông qua SSO (chỉ dành cho gói Enterprise/Business):** Tài khoản có thể được tạo tự động bởi IdP. Theo mặc định, các tài khoản được cấp quyền qua SSO sẽ được thêm vào **nhóm Khách**, trừ khi được ghi đè thông qua **bản đồ nhóm SAML**. Quản trị viên vẫn có thể mời người dùng và chỉ định tư cách thành viên nhóm trực tiếp ngay cả khi SSO được bật.
 
 **Tóm tắt:**  
 
 Người dùng đã đăng ký và tư cách thành viên nhóm của họ có thể được quản lý theo nhiều cách:
 
-- **Quản lý bởi quản trị viên:** Một quản trị viên trong bảng điều khiển Avatour có thể tạo người dùng và gán họ vào các nhóm, qua đó xác định vai trò của họ trên nền tảng (Khách, Chủ nhà hoặc Quản trị viên).  
+- **Quản lý bởi quản trị viên:** Quản trị viên trong bảng điều khiển Avatour có thể tạo người dùng và gán họ vào các nhóm, từ đó xác định vai trò của họ trên nền tảng (Khách, Chủ nhà hoặc Quản trị viên).  
 - **Cấp quyền SSO:** Đối với khách hàng gói Enterprise hoặc Business đã bật SSO, IdP có thể tự động cấp quyền cho các tài khoản và chỉ định tư cách thành viên nhóm, từ đó xác định vai trò của người dùng trên nền tảng.  
-- **Người dùng được Chủ nhà mời:** Chủ nhà có thể mời người dùng khác với tư cách là cộng tác viên Biên tập viên vào các Không gian làm việc cụ thể. Việc gán vai trò cộng tác viên Biên tập viên sẽ tiêu tốn một giấy phép Chủ nhà.
+- **Người dùng được Chủ nhà mời:** Chủ nhà có thể mời người dùng khác làm cộng tác viên Biên tập viên cho các Không gian làm việc cụ thể. Việc gán vai trò cộng tác viên Biên tập viên sẽ tiêu tốn một giấy phép Chủ nhà.
 
-**Thực tiễn tốt nhất được khuyến nghị (Khách hàng Enterprise):**  
-Đối với các tổ chức dự kiến có số lượng lớn người dùng cần truy cập vào Avatour, nên **tích hợp Đăng nhập Một Lần (SSO)** và quản lý người dùng cùng tư cách thành viên nhóm từ **IdP**. Cách tiếp cận này giúp tối ưu hóa việc cấp quyền tài khoản, phân công nhóm và quản lý giấy phép, giảm bớt gánh nặng quản trị và đảm bảo kiểm soát truy cập nhất quán.
+**Thực hành tốt nhất được khuyến nghị (Khách hàng Enterprise):**  
+Đối với các tổ chức dự kiến có số lượng lớn người dùng cần truy cập Avatour, nên **tích hợp Đăng nhập Một Lần (SSO)** và quản lý người dùng cùng tư cách thành viên nhóm từ **IdP**. Cách tiếp cận này giúp tối ưu hóa việc cấp quyền tài khoản, phân công nhóm và quản lý giấy phép, từ đó giảm bớt gánh nặng quản trị và đảm bảo kiểm soát truy cập nhất quán.
 
 #### 2.2.1 Người dùng khách
 
 - Được thêm vào **nhóm Khách**.  
 - Có thể **xem Tài sản** trong các Không gian làm việc mà họ đã được thêm vào với tư cách là **người cộng tác ở vai trò Người xem**.  
-- Không thể tạo Không gian làm việc, tổ chức cuộc họp hoặc tải lên nội dung.  
+- Không thể tạo không gian làm việc, tổ chức cuộc họp hoặc tải lên nội dung.  
 - Các tài khoản Khách được cấp qua SSO **xác thực thông qua IdP**; không yêu cầu mật khẩu do Avatour quản lý.
 
 ---
@@ -69,25 +70,25 @@ Người dùng đã đăng ký và tư cách thành viên nhóm của họ có t
 ##### Người dùng Chủ trì (Nhóm: Chủ trì)
 
 - Có thể tạo/quản lý Không gian làm việc, mời cộng tác viên vào không gian làm việc, **tổ chức các cuộc họp trực tiếp**, tải lên **Hình ảnh chụp nhanh**.  
-- Có quyền truy cập vào **Bảng điều khiển người tổ chức** và **Ứng dụng điều hành** trên các camera 360° được hỗ trợ.  
+- Có quyền truy cập vào **Bảng điều khiển Người tổ chức** và **Ứng dụng Điều hành** trên các camera 360° được hỗ trợ.  
 
-##### Người dùng Quản trị viên (Nhóm: Admin)
+##### Người dùng Quản trị (Nhóm: Admin)
 
-- Bao gồm tất cả các quyền hạn của Người dùng Chủ trì cùng với quyền quản trị tài khoản đầy đủ.
+- Bao gồm tất cả các tính năng của Người chủ trì cùng với quyền quản trị tài khoản đầy đủ.
 
-**Các đặc quyền Quản trị viên bổ sung bao gồm:**
+**Các đặc quyền Quản trị bổ sung bao gồm:**
 
 **Quản lý tài khoản**  
 
 - Tạo người dùng mới và gán họ vào các nhóm.
-- Đặt lại mật khẩu khi được quản lý bởi Avatour (không áp dụng khi đã bật SSO). 
+- Đặt lại mật khẩu khi được quản lý bởi Avatour (không áp dụng khi SSO được bật). 
 - Nâng cấp người dùng Khách lên thành Người chủ trì.  
 - Vô hiệu hóa người dùng (tài khoản Quản trị viên phải được chuyển đổi thành Người chủ trì trước khi xóa).  
 - Chuyển tài sản từ một người dùng Người chủ trì sang người dùng khác trong quá trình xóa.
 
 **Cài đặt**  
 
-- Cấu hình **cài đặt bảo mật toàn tổ chức** cho tài sản, không gian làm việc và các cuộc họp được tổ chức trên nền tảng (ví dụ: liệu người chủ trì có bắt buộc phải có mặt để bắt đầu cuộc họp hay không, liệu khuôn mặt có nên bị làm mờ trên tất cả các video được tải lên nền tảng hay không).  
+- Cấu hình **cài đặt bảo mật toàn tổ chức** cho tài sản, không gian làm việc và các cuộc họp được tổ chức trên nền tảng (ví dụ: liệu Host có bắt buộc phải có mặt để bắt đầu cuộc họp hay không, liệu khuôn mặt có nên bị làm mờ trên tất cả video được tải lên nền tảng hay không).  
 - Bật hoặc tắt **các tính năng AI** hoặc **chức năng ghi hình**.  
 - Áp dụng nhận diện thương hiệu của công ty một cách nhất quán trên toàn nền tảng nếu đã cấu hình **tên miền tùy chỉnh**.
   
@@ -101,7 +102,7 @@ Người dùng đã đăng ký và tư cách thành viên nhóm của họ có t
 
 #### 2.2.3 Quyền của người cộng tác trong không gian làm việc
 
-Quyền trong không gian làm việc xác định những việc người dùng có thể làm **trong một không gian làm việc cụ thể**. Những quyền này tách biệt với tư cách thành viên nhóm ở cấp nền tảng (Khách, Người chủ trì, Quản trị viên).
+Quyền trong không gian làm việc xác định những gì người dùng có thể làm **trong một không gian làm việc cụ thể**. Những quyền này tách biệt với tư cách thành viên nhóm ở cấp nền tảng (Khách, Người chủ trì, Quản trị viên).
 
 - **Người cộng tác với quyền Chỉnh sửa:** Người dùng có quyền này có thể:
     - Quản lý Tài sản (tải lên, xóa, làm mờ khuôn mặt, tạo bản tóm tắt)  
@@ -310,7 +311,7 @@ Khi xem xét một tài sản trong không gian làm việc, thanh công cụ c�
 
 ## 4. Dành cho người dùng chủ và quản trị viên - Bảng điều khiển web Avatour {#for-host-and-admin-users-avatour-web-console}
 
-Khi bạn đăng nhập vào Tài khoản người dùng Avatour, bạn sẽ truy cập vào **Bảng điều khiển web**.  
+Khi đăng nhập vào Tài khoản người dùng Avatour, bạn sẽ truy cập vào **Bảng điều khiển web**.  
 
 ### 4.1 Bảng điều khiển web - Tổng quan về Menu chính {#web-console-overview-main-menu}
 
@@ -319,12 +320,12 @@ Khi bạn đăng nhập vào Tài khoản người dùng Avatour, bạn sẽ tru
 ![Bảng điều khiển web Avatour - Menu chính](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu_qwpthq.png) *Bảng điều khiển web Avatour - Menu chính*
 
 - **Không gian làm việc** – Sắp xếp nội dung của bạn một cách hiệu quả. Mỗi không gian làm việc chứa **Tài sản**, **Người cộng tác**, **Cuộc họp** và **Cài đặt**.  
-- **Tài nguyên** – Truy cập và quản lý tất cả tài nguyên của bạn (video, hình ảnh, tệp PDF). Quản trị viên có thể xem tất cả tài nguyên của tài khoản, và các tài nguyên được chia sẻ sẽ hiển thị cho tất cả người dùng.  
+- **Tài nguyên** – Truy cập và quản lý tất cả tài nguyên của bạn (video, hình ảnh, tệp PDF). Quản trị viên có thể xem tất cả tài nguyên trong tài khoản, và các tài nguyên được chia sẻ sẽ hiển thị cho tất cả người dùng.  
 - **Hồ sơ** – Quản lý ngôn ngữ và mật khẩu của bạn.  
 - **Phân tích** – Theo dõi hoạt động phiên làm việc, mức độ sử dụng không gian làm việc và các chỉ số ROI.  
-- **Cài đặt** *(Chỉ dành cho quản trị viên)* – Cấu hình các thiết lập mặc định cho không gian làm việc, cuộc họp và tài sản trên toàn tổ chức. Quản trị viên cũng có thể tùy chỉnh thương hiệu (logo, màu sắc, hình nền).  
+- **Cài đặt** *(Chỉ dành cho quản trị viên)* – Cấu hình các thiết lập mặc định cho không gian làm việc, cuộc họp và tài nguyên trên toàn tổ chức. Quản trị viên cũng có thể tùy chỉnh thương hiệu (logo, màu sắc, hình nền).  
 - **Tài khoản** *(Chỉ dành cho quản trị viên)* – Quản lý người dùng đã đăng ký và camera 360°.  
-- **Đăng nhập thiết bị** – Nhập mã hiển thị trên camera 360° của bạn để ghép nối với tài khoản.  
+- **Đăng nhập thiết bị** – Nhập mã hiển thị trên camera 360° của bạn để ghép nối thiết bị với tài khoản.  
 - **Hướng dẫn** – Truy cập các hướng dẫn có hướng dẫn chi tiết.  
 - **Đăng xuất** – Đăng xuất khỏi bảng điều khiển.
 
@@ -336,7 +337,7 @@ Khi bạn đăng nhập vào Tài khoản người dùng Avatour, bạn sẽ tru
 
 #### 4.2.1 Không gian làm việc
 
-Không gian làm việc là các đơn vị tổ chức linh hoạt cho phép bạn quản lý tài sản, cộng tác viên và các cuộc họp tại một nơi. Bạn có thể tạo một không gian làm việc mới bằng nút **Không gian làm việc mới** ở góc trên bên phải.
+Không gian làm việc là các đơn vị tổ chức linh hoạt, cho phép bạn quản lý tài sản, cộng tác viên và các cuộc họp tại một nơi. Bạn có thể tạo một không gian làm việc mới bằng nút **Không gian làm việc mới** ở góc trên bên phải.
 
 ![Bảng điều khiển web Avatour - Mục menu chính Không gian làm việc](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-workspaces_hnhkjj.png) *Bảng điều khiển web Avatour - Mục menu chính Không gian làm việc*
 
@@ -344,19 +345,19 @@ Nhấp vào biểu tượng chuông để xem tóm tắt hoạt động của kh
 
 ![Avatour Web Console - Hoạt động gần đây trong không gian làm việc](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-workspace-recent-activities_gby1ws.png) *Hoạt động gần đây trong không gian làm việc*
 
-Bên trong một không gian làm việc:
+Bên trong không gian làm việc:
 
 ![Không gian làm việc Avatour với Bảng tài sản, Bảng điều khiển và Bảng cuộc họp](https://res.cloudinary.com/avatour/image/upload/v1785929001/avatour-screenshot-workspace-dashboard_dqp5ff.png) *Không gian làm việc với Tài sản (bên trái), Bảng điều khiển không gian làm việc (giữa), Cuộc họp (bên phải)*
 
 Ở giữa, bạn sẽ thấy bảng điều khiển không gian làm việc cung cấp cái nhìn tổng quan về tất cả các ghi chú trong các tài sản được phân bổ cho không gian làm việc đó, kèm theo một số menu thả xuống để lọc theo các thuộc tính khác nhau của ghi chú. Tại đây, bạn cũng có thể chấp nhận hoặc xóa các ghi chú do AI đề xuất. Bạn cũng có thể xuất tất cả các ghi chú từ giao diện này.
 
-Trong các menu phía dưới, bạn sẽ thấy:
+Trong các menu phía dưới, bạn sẽ tìm thấy:
 
 - **Tài sản** – Quản lý các tệp được phân bổ cho không gian làm việc này.  
 - **Người cộng tác** – 
   Kiểm soát quyền truy cập vào không gian làm việc bằng 
- - **Người xem** – Có thể xem tài sản. Lời mời sẽ tạo người dùng Khách nếu cần. 
- - **Người chỉnh sửa** – Quyền kiểm soát toàn bộ không gian làm việc, có quyền tương tự như Chủ phòng. Lời mời sẽ nâng cấp người dùng lên Chủ phòng nếu cần.  
+ - **Người xem** – Có thể xem tài nguyên. Lời mời sẽ tạo người dùng Khách nếu cần. 
+ - **Người chỉnh sửa** – Quyền kiểm soát toàn bộ không gian làm việc, có quyền tương tự như Chủ sở hữu. Lời mời sẽ nâng cấp người dùng lên Chủ sở hữu nếu cần.  
 > Nhiều người dùng có thể truy cập không gian làm việc cùng lúc mà không cần tổ chức cuộc họp. Các không gian làm việc công khai và cài đặt quyền truy cập cuộc họp cung cấp các phương thức truy cập thay thế.  
 - **Báo cáo** – Tạo báo cáo bằng cách sử dụng Mẫu Kiểm tra trên các tài nguyên được chọn trong không gian làm việc. Các phản hồi được AI tạo ra dựa trên các bản ghi âm trong video đã chọn.  
 
@@ -364,7 +365,7 @@ Trong các menu phía dưới, bạn sẽ thấy:
 
 - **Bản đồ** – Hiển thị vị trí các tài sản được kích hoạt GPS trên bản đồ như đã mô tả ở trên cho các cuộc họp. 
 - **Cuộc họp** – Tổ chức các cuộc họp trong không gian làm việc.  
-- **Cài đặt** – Cấu hình các thiết lập mặc định cho không gian làm việc và cuộc họp:
+- **Cài đặt** – Định cấu hình các thiết lập mặc định cho không gian làm việc và cuộc họp:
 
 ![Cài đặt Avatour - Chế độ xem không gian làm việc](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-workspace-settings_llcei3.png) *Cài đặt không gian làm việc*
 
@@ -380,12 +381,12 @@ Trong các menu phía dưới, bạn sẽ thấy:
 **Cài đặt cuộc họp**
   
 * **Yêu cầu xác thực** – Người tham gia phải đăng nhập.  
-* **Cho phép truy cập khách** – Cho phép người dùng chưa đăng ký xem tài nguyên.  
-* **Tự động bắt đầu ghi hình / Bắt đầu thủ công** – Chọn chế độ ghi hình tự động hoặc bắt đầu thủ công cho cuộc họp.  
-* **Yêu cầu người chủ trì** – Người chủ trì phải chấp nhận người tham gia; cuộc họp kết thúc khi người chủ trì rời khỏi.  
-* **Cho phép truy cập với tư cách người xem** – Tham gia mà không cần mic hoặc camera; giao tiếp qua chat.  
-* **Cuộc họp được bảo vệ bằng mật khẩu** – Yêu cầu mật khẩu để tham gia.  
-* **Hiển thị câu hỏi về tiết kiệm chi phí đi lại** – Hỏi người tham gia xem cuộc họp có giúp giảm chi phí đi lại hay không.  
+* **Cho phép truy cập khách** – Cho phép người dùng chưa đăng ký xem tài nguyên. 
+* **Tự động bắt đầu ghi âm / Bắt đầu thủ công** – Chọn liệu cuộc họp sẽ tự động ghi âm hay được bắt đầu thủ công. 
+* **Yêu cầu người chủ trì** – Người chủ trì phải chấp nhận người tham gia; cuộc họp kết thúc khi người chủ trì rời khỏi.
+* **Cho phép truy cập với tư cách người quan sát** – Tham gia mà không cần mic hoặc camera; giao tiếp qua chat. Khi được bật, liên kết tham gia cuộc họp dành cho người quan sát sẽ được hiển thị.
+* **Cuộc họp được bảo vệ bằng mật khẩu** – Yêu cầu mật khẩu để tham gia.
+* **Hiển thị câu hỏi về tiết kiệm chi phí đi lại** – Hỏi người tham gia xem cuộc họp có giúp giảm chi phí đi lại hay không.
 
 > Các cài đặt có thể được kết hợp (ví dụ: không yêu cầu người chủ trì nhưng được bảo vệ bằng mật khẩu).
 
@@ -393,49 +394,49 @@ Trong các menu phía dưới, bạn sẽ thấy:
 
 #### 4.2.2 Tài nguyên
 
-Quản lý tất cả video 360°/2D, hình ảnh và tệp PDF. Tải lên/tải xuống tài nguyên, phân bổ vào không gian làm việc, chia sẻ với người dùng khác, đổi tên, in/tải xuống báo cáo, kích hoạt tính năng làm mờ khuôn mặt và tóm tắt bằng AI.
+Quản lý tất cả video 360°/2D (MP4, MOV), hình ảnh (PNG, JPEG / JPG, HEIC) và tệp PDF. Tải lên/tải xuống tài nguyên, phân bổ vào không gian làm việc, chia sẻ với người dùng khác, đổi tên, in/tải xuống báo cáo, kích hoạt tính năng làm mờ khuôn mặt và tóm tắt bằng AI.
 
-![Avatour Web Console - Mục menu chính Tài nguyên](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-assets_ky5emz.png) *Mục menu chính Tài nguyên*
+![Avatour Web Console - Mục menu chính Tài sản](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-assets_ky5emz.png) *Mục menu chính Tài sản*
 
-Bạn cũng có thể tạo mã HTML để cho phép nhúng công khai một tài nguyên, ví dụ như trên trang web của bạn. Chỉ cần nhấp vào ô chọn "Cho phép nhúng công khai" rồi nhấp vào "Lưu" để lấy mã.
+Bạn cũng có thể tạo mã HTML để cho phép nhúng công khai một tài sản, ví dụ như trên trang web của bạn. Chỉ cần nhấp vào ô chọn "Cho phép nhúng công khai" rồi nhấp vào "Lưu" để lấy mã.
 
-![Bảng điều khiển web Avatour - Mục menu chính Tài sản](https://res.cloudinary.com/avatour/image/upload/v1785921604/avatour-screenshot-main-menu-assets-embed-code_mtau8g.png) *Tài nguyên mục menu chính*
+![Avatour Web Console - Mục menu chính Tài sản](https://res.cloudinary.com/avatour/image/upload/v1785921604/avatour-screenshot-main-menu-assets-embed-code_mtau8g.png) *Tài nguyên mục menu chính*
 
 #### 4.2.3 Cài đặt
 
-Người dùng quản trị có quyền truy cập vào menu này để quản lý Cài đặt tập trung cho toàn bộ nền tảng Avatour. Mỗi cài đặt có thể được chọn hoặc bỏ chọn để trở thành cài đặt mặc định trên toàn bộ nền tảng. Mỗi cài đặt cũng có thể được khóa, nghĩa là cài đặt mặc định sẽ không thể bị thay đổi bởi các người dùng khác trên nền tảng. Tại đây, bạn cũng có thể thực hiện tùy chỉnh tiếp thị liên quan đến thương hiệu của mình (logo, màu sắc, v.v.).
+Người dùng quản trị có quyền truy cập vào menu này để quản lý **cài đặt tập trung cho toàn bộ nền tảng Avatour đối với TẤT CẢ các không gian làm việc. Các thay đổi trong các cài đặt này sẽ được áp dụng cho các không gian làm việc mới được tạo (không áp dụng cho các không gian làm việc hiện có)**. Mỗi cài đặt có thể được chọn hoặc bỏ chọn để trở thành cài đặt mặc định trên toàn bộ nền tảng. Mỗi cài đặt cũng có thể được khóa, nghĩa là cài đặt mặc định không thể bị thay đổi bởi các người dùng khác trên nền tảng. Tại đây, bạn cũng có thể thực hiện tùy chỉnh tiếp thị liên quan đến thương hiệu của mình (logo, màu sắc, v.v.).
 
 ![Bảng điều khiển web Avatour - Cài đặt mục menu chính](https://res.cloudinary.com/avatour/image/upload/v1781172727/avatour-screenshot-main-menu-settings-1-of-2_fsaatf.jpg) *Phần Cài đặt*
 
 #### 4.2.4 Tài khoản
 
-Tại đây, bạn có thể xem chi tiết tài khoản của mình và quản lý các tài khoản người dùng đã đăng ký (Chủ nhà, Quản trị viên, Khách), bao gồm quyền truy cập vào không gian làm việc cũng như tải lên các mẫu kiểm tra để tạo báo cáo không gian làm việc (xem phần trên).
+Tại đây, bạn có thể xem chi tiết tài khoản của mình và quản lý các tài khoản người dùng đã đăng ký (Chủ tài khoản, Quản trị viên, Khách), bao gồm quyền truy cập vào không gian làm việc cũng như tải lên các mẫu kiểm tra để tạo báo cáo không gian làm việc (xem phần trên).
 
-![Avatour Web Console - Mục menu chính Tài khoản](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-account-1-of-3_oq5amr.png) *Tổng quan về Tài khoản - Các phần trên cùng*
+![Avatour Web Console - Mục menu chính Tài khoản](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-account-1-of-3_oq5amr.png) *Tổng quan về tài khoản - Các phần phía trên*
 
-![Avatour Web Console - Mục menu chính Tài khoản](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-account-2-of-3_oq5amr.png) *Tổng quan về tài khoản - Quản lý quyền truy cập không gian làm việc*
+![Bảng điều khiển web Avatour - Mục menu chính Tài khoản](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-account-2-of-3_oq5amr.png) *Tổng quan về tài khoản - Quản lý quyền truy cập không gian làm việc*
 
-![Bảng điều khiển web Avatour - Mục menu chính "Tài khoản"](https://res.cloudinary.com/avatour/image/upload/v1772360316/avatour-screenshot-main-menu-account-3-of-3_udgyjz.png) *Tổng quan về tài khoản - Các phần bên dưới*
+![Bảng điều khiển web Avatour - Mục menu chính Tài khoản](https://res.cloudinary.com/avatour/image/upload/v1772360316/avatour-screenshot-main-menu-account-3-of-3_udgyjz.png) *Tổng quan về tài khoản - Các phần dưới*
 
 #### 4.2.5 Phân tích
 
 Cung cấp thông tin chi tiết về các cuộc họp, việc sử dụng không gian làm việc và các chỉ số ROI.
 
-![Avatour Web Console - Mục menu chính Phân tích (1 trong 3)](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-analytics-1-of-3_ds3epe.png) *Tổng quan về Phân tích*
+![Bảng điều khiển web Avatour - Mục menu chính Phân tích (1 trong 3)](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-analytics-1-of-3_ds3epe.png) *Tổng quan về Phân tích*
 
-![Bảng điều khiển web Avatour - Mục menu chính: Phân tích (2/3)](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-analytics-2-of-3_vpcsme.png) *Hoạt động cuộc họp & Sử dụng không gian làm việc*
+![Bảng điều khiển web Avatour - Mục menu chính Phân tích (2 trong 3)](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-analytics-2-of-3_vpcsme.png) *Hoạt động cuộc họp & Sử dụng không gian làm việc*
 
-![Bảng điều khiển web Avatour - Mục menu chính Phân tích (3 trong 3)](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-analytics-3-of-3_hn2pmr.png) *Tiết kiệm và Sử dụng Giấy phép Thiết bị* 
+![Bảng điều khiển web Avatour - Mục menu chính: Phân tích (3 trong 3)](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-analytics-3-of-3_hn2pmr.png) *Tiết kiệm và Sử dụng Giấy phép Thiết bị* 
 
 ## 5. Tại chỗ - Cách sử dụng bộ công cụ Avatour Turnkey {#onsite-how-to-use-the-avatour-turnkey-kit}
 
 ### 5.1 Bắt đầu
-Tại đây, bạn sẽ tìm thấy một hướng dẫn trực tuyến rất chi tiết để thực hiện những bước đầu tiên với Bộ công cụ Avatour Turnkey: [Hướng dẫn Bắt đầu Nhanh – Cài đặt Avatour Turnkey Kit 3.1 (Pilot PanoX V2)](https://avatour.com/quickstart-panox-v2)
+Tại đây, bạn sẽ tìm thấy một hướng dẫn trực tuyến rất chi tiết để thực hiện những bước đầu tiên với Bộ công cụ Avatour Turnkey: [Hướng dẫn Bắt đầu Nhanh – Bộ công cụ Avatour Turnkey 3.1 (Cài đặt Pilot PanoX V2)](https://avatour.com/quickstart-panox-v2)
 
 Và đây cũng là hình ảnh kèm hướng dẫn mà bạn sẽ tìm thấy bên trong nắp hộp của bộ kit 3.1.
-![Hình ảnh bên trong nắp hộp bộ Avatour Kit](https://res.cloudinary.com/avatour/image/upload/v1775994773/avatour-turnkey-kit-3.1-inside-lid-picture_dq4ipl.png) *Hình ảnh bên trong nắp hộp bộ kit Avatour* 
+![Hình ảnh bên trong nắp hộp bộ kit Avatour](https://res.cloudinary.com/avatour/image/upload/v1775994773/avatour-turnkey-kit-3.1-inside-lid-picture_dq4ipl.png) *Hình ảnh bên trong nắp hộp bộ kit Avatour* 
 
-Hãy làm theo hướng dẫn và các bước sau để mở hộp, lắp ráp và bật nguồn máy ảnh của bạn.
+Hãy làm theo hướng dẫn để mở hộp, lắp ráp và bật nguồn máy ảnh.
 
 ---
 
@@ -443,7 +444,7 @@ Hãy làm theo hướng dẫn và các bước sau để mở hộp, lắp ráp 
 
 #### Pin ngoài – Thời lượng sử dụng lâu hơn và cải thiện khả năng tản nhiệt 
 
-Pin bên trong máy ảnh có thời lượng khoảng 30–45 phút. Sẽ có cảnh báo khi pin sắp hết. Với pin ngoài, bạn có thể kéo dài thời gian hoạt động và thậm chí làm cho thời gian này trở nên vô hạn nhờ khả năng thay pin trong khi đang sử dụng.
+Pin bên trong máy ảnh có thời lượng khoảng 30-45 phút. Sẽ có cảnh báo khi pin sắp hết. Với pin ngoài, bạn có thể kéo dài thời gian hoạt động và thậm chí làm cho thời gian này trở nên vô hạn vì bạn có thể thay pin trong khi sử dụng.
 
 - **Nếu bộ sản phẩm của bạn bao gồm pin Ulanzi:** Gắn pin vào giữa chân đế tripod và thanh kéo dài, sau đó kết nối pin với máy ảnh qua cổng USB-C.  
 
@@ -467,48 +468,52 @@ Sử dụng pin ngoài:
 
 - **Môi trường yên tĩnh hơn / nhiều người tham gia gần camera:** 
   Sử dụng loa kẹp NoxGear. Loa này không có chất lượng âm thanh cao như các loa hội nghị (ví dụ: Jabra Speak), nhưng dễ dàng kẹp vào áo và thu âm giọng nói xung quanh hiệu quả. 
- - **Bật/Tắt nguồn:** Nhấn giữ nút Phát/Tạm dừng trong 2 giây.  
-    - **Chế độ ghép nối Bluetooth:** Tự động chuyển sang chế độ ghép nối khi bật nguồn (đèn LED nhấp nháy màu xanh dương/đỏ; sáng liên tục màu xanh dương khi đã ghép nối). 
- - **Âm lượng:** Sử dụng các nút “+” và “-”.  
+ - **Bật/Tắt nguồn:** Nhấn và giữ nút Phát/Tạm dừng trong 2 giây. 
+ - **Chế độ ghép nối Bluetooth:** Tự động chuyển sang chế độ ghép nối khi bật nguồn (đèn LED nhấp nháy màu xanh dương/đỏ; sáng liên tục màu xanh dương khi đã ghép nối).  
+    - **Âm lượng:** Sử dụng các nút “+” và “-”.  
 
 - **Sử dụng thiết bị của riêng bạn:** Nếu bạn muốn dùng thiết bị khác (ví dụ: loa hội nghị hoặc tai nghe cá nhân), bạn có thể ghép nối qua camera: Cài đặt → Bluetooth.  
 
 #### Kết nối
-**Trước khi bắt đầu:** Đảm bảo có kết nối internet qua:
+**Trước khi bắt đầu:** Đảm bảo kết nối internet qua:
 
 - **WiFi cục bộ** (ưu tiên)
-- **Mạng di động** (nếu nằm ngoài phạm vi phủ sóng WiFi)
+- **Mạng di động** (nếu ngoài phạm vi WiFi)
 
 **Băng thông khuyến nghị:** 10 Mbps tải lên/tải xuống để phát trực tiếp 360° đầy đủ (~5 Mbps). Băng thông thấp hơn (1–2 Mbps) chỉ hoạt động khi đứng yên.
 
 ##### Kiểm tra tốc độ mạng
 - **Kiểm tra tại một vị trí:** Sử dụng bất kỳ công cụ kiểm tra tốc độ nào bạn thường dùng (ví dụ: [Speedtest](https://www.speedtest.net)) để xác minh cả băng thông tải lên và tải xuống.   
-- **Kiểm tra khi di chuyển trong khu vực:** Từ camera: Cài đặt → Mạng → Kiểm tra kết nối. Di chuyển khắp toàn bộ khu vực để xác nhận phạm vi phủ sóng và băng thông.
+- **Kiểm tra khi di chuyển trong khu vực:** Từ camera: Cài đặt → Mạng → Kiểm tra kết nối. Di chuyển khắp không gian để xác nhận phạm vi phủ sóng và băng thông.
 
-##### Wi-Fi cục bộ
+##### WiFi cục bộ
 - Rất được khuyến nghị để đảm bảo kết nối ổn định.  
-- Nếu bộ phận CNTT yêu cầu đưa vào danh sách trắng, hãy tìm địa chỉ MAC: Cài đặt → Giới thiệu → Địa chỉ Wi-Fi.
+- Nếu bộ phận CNTT yêu cầu đưa vào danh sách trắng, hãy tìm địa chỉ MAC: Cài đặt → Giới thiệu → Địa chỉ WiFi.
 
 ##### Mạng di động
 **Tùy chọn A: Điểm phát sóng và SIM do bộ sản phẩm cung cấp**  
 
-- Gắn điểm phát sóng GlocalMe vào thanh pin Telesin (bằng nam châm).  
-- Đảm bảo không có nhiễu và duy trì kết nối khi di chuyển xa khỏi camera.  
+- Gắn điểm phát sóng GlocalMe vào thanh pin Telesin (nam châm).  
+- Đảm bảo không có nhiễu và duy trì kết nối nếu di chuyển ra xa camera.  
 - Khắc phục sự cố:
-    - Xác nhận SIM được cài đặt sẵn (không phải Cloud SIM).  
-    - Bật 5G trong Trình quản lý thẻ SIM. 
- - Xác minh APN chính xác cho khu vực của bạn ([hướng dẫn thiết lập APN](https://avatour.com/support/how-do-i-change-the-apn-on-my-glocalme-hotspot)).
+    - Xác nhận SIM đã được cài đặt sẵn (không phải Cloud SIM). 
+ - Bật 5G trong Trình quản lý thẻ SIM.  
+    - Kiểm tra xem APN đã đúng cho khu vực của bạn chưa ([Hướng dẫn thiết lập APN](https://avatour.com/support/how-do-i-change-the-apn-on-my-glocalme-hotspot)).
 
 **Tùy chọn B: Điểm phát sóng cá nhân / SIM**
-- Sử dụng điện thoại thông minh của riêng bạn hoặc thiết bị phát sóng chuyên dụng.  
+- Sử dụng điện thoại thông minh của riêng bạn hoặc điểm phát sóng chuyên dụng.  
 
 **Lưu ý quan trọng:**  
-> Tắt điểm phát sóng khi đang kết nối với WiFi; chỉ bật khi nằm ngoài vùng phủ sóng. Hệ điều hành của máy ảnh sẽ tự động chuyển đổi giữa các mạng WiFi dựa trên cường độ tín hiệu và có thể vô tình chuyển sang điểm phát sóng ngay cả khi có WiFi.
+> Tắt điểm phát sóng khi đang kết nối với WiFi; chỉ bật khi nằm ngoài phạm vi phủ sóng. Hệ điều hành của camera sẽ tự động chuyển đổi giữa các mạng WiFi dựa trên cường độ tín hiệu và có thể vô tình chuyển sang điểm phát sóng ngay cả khi có WiFi.
 
-> Mạng di động có thể giới hạn băng thông một cách bất ngờ. Hãy kiểm tra giới hạn gói cước dữ liệu với nhà mạng của bạn, hoặc liên hệ với bộ phận hỗ trợ của Avatour nếu bạn đang sử dụng điểm phát sóng và SIM của chúng tôi.
+> Luôn đặt điểm phát sóng trong tầm nhìn trực tiếp với camera 360°, ví dụ: không nên để điểm phát sóng trong túi sau quần vì cơ thể bạn sẽ cản trở tín hiệu.
+
+> Mạng di động có thể giới hạn băng thông một cách bất ngờ. Hãy kiểm tra giới hạn gói dữ liệu với nhà mạng của bạn, hoặc liên hệ với bộ phận hỗ trợ của Avatour nếu bạn đang sử dụng điểm phát sóng và thẻ SIM của chúng tôi.
+ 
+> Trong một số trường hợp, mạng 4G / LTE có thể cung cấp tín hiệu tốt hơn so với mạng 5G. Luôn thử cả hai.
 
 ##### Các tình huống băng thông thấp
-- Quay sẵn video vị trí để phát lại sau ([hướng dẫn quay phim](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)).  
+- Quay sẵn video tại địa điểm để phát lại sau ([hướng dẫn quay phim](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)).  
 - Chia sẻ luồng camera từ điện thoại thông minh để bổ sung cho các khu vực có băng thông thấp (tốc độ tải lên 0,1–0,3 Mbps).
 
 ##### Không có kết nối
@@ -518,7 +523,7 @@ Sử dụng pin ngoài:
 
 Khi nhiều người tham gia tham gia một cuộc họp trực tiếp trên Avatour từ cùng một địa điểm với camera 360°, việc quản lý cẩn thận **âm thanh và băng thông** là rất quan trọng:  
 
-- Mỗi điện thoại thông minh, máy tính bảng hoặc máy tính xách tay được kết nối tại hiện trường đều tiêu tốn băng thông mạng và có thể ảnh hưởng tiêu cực đến luồng video từ camera 360°.  
+- Mỗi chiếc điện thoại thông minh, máy tính bảng hoặc máy tính xách tay được kết nối tại chỗ đều tiêu tốn băng thông mạng và có thể ảnh hưởng tiêu cực đến luồng video từ camera 360°.  
 - Nhiều micro và loa trong cùng một không gian có thể gây ra **hiện tượng phản hồi âm thanh**, khiến trải nghiệm cuộc họp trở nên khó chịu cho tất cả người tham gia.
 
 #### Người tham gia khác tại hiện trường – Các thực hành tốt nhất
@@ -531,53 +536,53 @@ Khi nhiều người tham gia tham gia cuộc họp Avatour trực tiếp từ c
 Để giải quyết những thách thức này, hãy tuân theo các **thực hành tốt nhất** sau:
 
 - **Sử dụng tai nghe có dây hoặc không dây:** Tốt nhất là loại có tính năng khử tiếng ồn để ngăn chặn tiếng vang và phản hồi âm thanh.  
-- **Chế độ Tại chỗ:** Tham gia cuộc họp ở chế độ Tại chỗ khi bạn có mặt thực tế gần camera 360°, vì chế độ này được tối ưu hóa cho việc sử dụng tại chỗ:
+- **Chế độ Tại chỗ:** Tham gia cuộc họp ở chế độ Tại chỗ khi bạn có mặt gần camera 360°, vì chế độ này được tối ưu hóa cho việc sử dụng tại chỗ:
     - Tự động tắt tiếng mic và loa của người tham gia theo mặc định.
-    - **Không** phát luồng hình ảnh từ camera của người tham gia.
+    - **Không** truyền tín hiệu camera của người tham gia.
     - **Không** hiển thị hình ảnh từ camera 360° trên trình duyệt của người tham gia.
-    - Tiết kiệm băng thông mạng, đảm bảo camera 360° có tốc độ tải lên tối đa cho luồng trực tiếp.
-    - Tính năng này hữu ích khi người dùng muốn chia sẻ các chi tiết cụ thể; bạn **có thể chia sẻ lại hình ảnh từ camera của mình** để người xem tập trung vào những chi tiết cụ thể.
-- **Tắt tiếng khi không đang nói:** Ngăn chặn hiện tượng phản hồi âm thanh không mong muốn và các yếu tố gây xao nhãng.
-- **Sử dụng mạng riêng nếu có thể:** Kết nối điện thoại thông minh của bạn với mạng khác với mạng của camera để giảm nhiễu.
+    - Tiết kiệm băng thông mạng, đảm bảo camera 360° có băng thông tải lên tối đa cho luồng phát trực tiếp.
+    - Hữu ích khi người dùng muốn chia sẻ các chi tiết cụ thể; bạn **có thể chia sẻ lại hình ảnh từ camera của mình** để người xem tập trung vào những góc nhìn cụ thể.
+- **Tắt tiếng khi không đang nói:** Ngăn chặn tiếng vang âm thanh không mong muốn và các yếu tố gây xao nhãng.
+- **Sử dụng mạng riêng biệt nếu có thể:** Kết nối điện thoại thông minh của bạn với mạng khác so với mạng của camera để giảm nhiễu.
 
 Tuân thủ các hướng dẫn này sẽ đảm bảo một chuyến tham quan trực tiếp mượt mà, chất lượng cao cho cả người tham gia tại chỗ và từ xa.
 
 ### 5.3 Ứng dụng Avatour Camera
 
-Dưới đây là các menu (1) Cấp cao nhất, (2) Cài đặt và (3) Cài đặt mạng.
+Dưới đây là các menu (1) Màn hình chính, (2) Cài đặt và (3) Cài đặt mạng.
 
-![Ứng dụng camera Avatour 360° - Ba menu](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-cam-app-3-menu-screens_nju8bt.png) *Ứng dụng máy ảnh 360° Avatour - 3 menu*
+![Ứng dụng camera Avatour 360° - Ba menu](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-cam-app-3-menu-screens_nju8bt.png) *Ứng dụng camera Avatour 360° - 3 menu*
 
-**Chụp nhanh** - Dùng để quay video 360° ngoại tuyến vào thẻ nhớ SD trong máy ảnh 360°. - Để biết mô tả chi tiết, hãy xem [Làm thế nào để quay và tải lên video 360° bằng ứng dụng Avatour?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app). Chúng tôi khuyên bạn nên sử dụng thiết bị âm thanh bên ngoài (kết nối qua Bluetooth). Lưu ý: Bạn cũng có thể thay đổi góc quay video từ 360° sang 270°, 180° và video 2D tiêu chuẩn cũng như hình ảnh, ví dụ: để lấy nét hoặc che khuất các khu vực bí mật - chỉ cần thay đổi chế độ ở góc dưới bên phải khi ở màn hình QC (*tuy nhiên, chỉ có thể thực hiện được khi đã chọn độ phân giải 4K trong Cài đặt cho Chế độ Quay Nhanh - xem bên dưới*)
+**Chụp nhanh** - Dùng để quay video 360° ngoại tuyến vào thẻ nhớ SD trong máy quay 360. - Để biết mô tả chi tiết, hãy xem [Làm thế nào để quay và tải lên video 360° bằng ứng dụng Avatour?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app). Chúng tôi khuyên bạn nên sử dụng thiết bị âm thanh bên ngoài (kết nối qua Bluetooth). Lưu ý: Bạn cũng có thể thay đổi góc quay video từ 360° sang 270°, 180° và video 2D tiêu chuẩn cũng như hình ảnh, ví dụ: để lấy nét hoặc che khuất các khu vực bí mật - chỉ cần thay đổi chế độ ở góc dưới bên phải khi ở màn hình QC (*tuy nhiên, chỉ có thể thực hiện được khi chọn độ phân giải 4K trong Cài đặt cho Chế độ Quay Nhanh - xem bên dưới*)
 
-**Họp Trực tiếp** - Dành cho hội nghị video 360° trực tiếp. Bạn sẽ thấy các không gian làm việc của mình và nhấp vào một trong số đó sẽ khởi động luồng video trực tiếp từ camera 360°. Trước khi tham gia cuộc họp bằng camera 360°, bạn cần kết nối thiết bị âm thanh qua Bluetooth. Để biết mô tả chi tiết, hãy xem [Cách bắt đầu cuộc họp Live Capture bằng camera Pilot?](https://avatour.com/support/how-to-start-a-live-capture-meeting-with-your-pilot-camera)
+**Họp Trực Tiếp** - Dành cho hội nghị video 360° trực tiếp. Bạn sẽ thấy các không gian làm việc của mình và khi nhấp vào một trong số đó, luồng video trực tiếp từ camera 360° sẽ được khởi động. Trước khi tham gia cuộc họp bằng camera 360°, bạn cần kết nối thiết bị âm thanh qua Bluetooth. Để biết mô tả chi tiết, hãy xem [Cách bắt đầu cuộc họp Live Capture bằng camera Pilot?](https://avatour.com/support/how-to-start-a-live-capture-meeting-with-your-pilot-camera)
 
-> Khi tổ chức cuộc họp Live Capture bằng camera 360°, bạn sẽ có các công cụ cuộc họp tương tự như trải nghiệm trên web. Dưới đây là liên kết đến bài viết trong Cơ sở Kiến thức của chúng tôi giải thích chi tiết hơn về các công cụ này: [Công cụ Ứng dụng cho Người vận hành](https://avatour.com/support/các-công-cụ-trên-ứng-dụng-Avatour-dành-cho-người-vận-hành-máy-ảnh-Pilot-của-LabPano)
+> Khi tổ chức cuộc họp Live Capture bằng camera 360°, bạn sẽ có các công cụ họp tương tự như trên nền tảng web. Dưới đây là liên kết đến bài viết trong Cơ sở Kiến thức của chúng tôi giải thích chi tiết hơn về các công cụ này: [Công cụ Ứng dụng Điều hành](https://avatour.com/support/what-avatour-app-tools-are-available-to-labpano-pilot-camera-operators)
 
-**Thư viện** - Tại đây, bạn có thể tìm thấy tất cả các video và hình ảnh 360° của mình để tải lên Bảng điều khiển web Avatour. Bạn có thể tải lên và xóa tài nguyên theo lô - hãy nhấn vào "Chọn" ở đầu màn hình. Trước khi tải lên, bạn có thể chọn một số bước xử lý như "Làm mờ khuôn mặt", tạo "Tóm tắt bằng AI" và tối ưu hóa tín hiệu âm thanh "Nâng cao chất lượng giọng nói". Bạn thậm chí có thể chọn một không gian làm việc để phân bổ tài sản vào đó - tất nhiên, tài sản này cũng sẽ xuất hiện trong phần tài sản chung trên Bảng điều khiển Web.
+**Thư viện** - Tại đây, bạn có thể tìm thấy tất cả các video và hình ảnh 360° của mình để tải lên Bảng điều khiển web Avatour. Bạn có thể tải lên và xóa tài nguyên theo lô - nhấn vào "Chọn" ở đầu màn hình. Trước khi tải lên, bạn có thể chọn một số bước xử lý như "Làm mờ khuôn mặt", tạo "Tóm tắt bằng AI" và tối ưu hóa tín hiệu âm thanh "Nâng cao chất lượng giọng nói". Bạn thậm chí có thể chọn một không gian làm việc để phân bổ tài nguyên vào đó - tất nhiên, tài nguyên này cũng sẽ có trong phần tài nguyên chung trên Bảng điều khiển Web.
 
 **Cài đặt** - Trong phần Cài đặt, bạn có các tùy chọn sau:
 
-- **Mạng**: Tùy chọn này cho phép bạn thay đổi mạng WiFi mà camera đang kết nối hoặc chạy kiểm tra kết nối mạng để xem thông lượng phát trực tuyến
-- **Quay trực tiếp**: Điều chỉnh cài đặt Quay trực tiếp tùy thuộc vào băng thông khả dụng, độ nhạy VR của khách hoặc liệu ống kính bảo vệ của camera có được lắp đặt hay không:
+- **Mạng**: Tùy chọn này cho phép bạn thay đổi mạng WiFi mà camera đang kết nối hoặc thực hiện kiểm tra kết nối mạng để xem thông lượng phát trực tuyến
+- **Quay trực tiếp**: Điều chỉnh cài đặt Ghi hình Trực tiếp tùy theo băng thông khả dụng, độ nhạy VR của khách hoặc liệu ống kính bảo vệ của camera có được lắp đặt hay không:
 
-    - **Tốc độ khung hình mục tiêu (tùy chọn)**: Điều chỉnh tốc độ khung hình cho video Truyền trực tiếp trong khoảng từ 15 fps, 24 fps đến 30 fps. Tốc độ khung hình cao hơn sẽ tạo ra video mượt mà hơn, nhưng sẽ yêu cầu băng thông tải lên lớn hơn. Mặc định: 15 fps
-    - **Tốc độ bit mục tiêu**: Cho phép bạn tăng hoặc giảm tốc độ bit phát trực tuyến tối đa cho tính năng Ghi hình trực tiếp. Bạn có thể đặt tốc độ bit mục tiêu trong khoảng từ 1 Mbps đến 10 Mbps. Tốc độ bit cao hơn sẽ mang lại độ phân giải video cao hơn, nhưng sẽ yêu cầu băng thông tải lên nhiều hơn. Mặc định: 5 Mbps
-    - **Tối ưu hóa chuyển động**: Tính năng này sẽ giảm tốc độ khung hình video, giúp giảm tải cho băng thông tải lên của mạng và tăng tốc độ bit phát trực tuyến. Ngoài ra, tùy chọn này còn giúp giảm chứng say chuyển động cho người tham gia VR. Mặc định: Tắt
-    - **Khóa hướng**: Tùy chọn này sẽ “khóa” góc quay 360° bất kể bạn di chuyển camera 360° như thế nào. Nếu bạn muốn video 360° di chuyển theo chuyển động của máy quay, ví dụ như bạn muốn "hướng" ống kính trước vào một vật thể nào đó, hãy đặt Khóa hướng thành Không. Khi đó, máy quay sẽ hoạt động như một máy quay truyền thống và có thể hữu ích hơn cho các tour hướng dẫn. Mặc định: Bật
-    - **Hướng ban đầu**: Khi bạn đặt Khóa hướng thành "Không", bạn có thể chọn ống kính nào (trước hoặc sau) sẽ là hướng ban đầu khi bắt đầu phát video trực tiếp. Mặc định: Hướng về người điều khiển vì đây là cách tự nhiên nhất để bắt đầu một cuộc họp trực tiếp (= ống kính sau). Chế độ "Quick Capture" hoạt động khác (ống kính trước là Hướng ban đầu theo mặc định - xem bên dưới).
+ - **Tốc độ khung hình mục tiêu (tùy chọn)**: Điều chỉnh tốc độ khung hình cho video Ghi hình Trực tiếp trong khoảng 15 fps, 24 fps và 30 fps. Tốc độ khung hình cao hơn sẽ tạo ra video mượt mà hơn, nhưng sẽ yêu cầu băng thông tải lên lớn hơn. Mặc định: 15 fps
+    - **Tốc độ bit mục tiêu**: Cho phép bạn tăng hoặc giảm tốc độ bit phát trực tuyến tối đa cho tính năng Ghi hình trực tiếp. Bạn có thể đặt tốc độ bit mục tiêu trong khoảng từ 1 Mbps đến 10 Mbps. Tốc độ bit cao hơn sẽ mang lại độ phân giải video cao hơn, nhưng sẽ yêu cầu băng thông tải lên lớn hơn. Mặc định: 5 Mbps
+    - **Tối ưu hóa chuyển động**: Tính năng này sẽ giảm tốc độ khung hình video, giúp giảm tải cho băng thông tải lên của mạng và tăng tốc độ bit phát trực tuyến. Ngoài ra, tùy chọn này còn giúp giảm cảm giác say khi xem thực tế ảo (VR) cho người tham gia. Mặc định: Tắt
+    - **Khóa hướng**: Tính năng này sẽ "khóa" góc quay 360° bất kể bạn di chuyển camera 360° như thế nào. Nếu bạn muốn video 360° di chuyển theo chuyển động của máy quay, ví dụ như bạn muốn "chỉ" vào một vật thể nào đó bằng ống kính phía trước, hãy đặt Khóa hướng thành Không. Khi đó, máy quay sẽ hoạt động như một máy quay truyền thống và có thể hữu ích hơn cho các tour hướng dẫn. Mặc định: Có
+    - **Hướng ban đầu**: Khi bạn đặt Khóa hướng thành Không, bạn có thể chọn ống kính nào (trước hoặc sau) sẽ là hướng ban đầu khi bắt đầu phát video trực tiếp. Mặc định: Hướng về Người điều khiển vì đây là cách tự nhiên nhất để bắt đầu một cuộc họp trực tiếp (= ống kính sau). Chế độ "Quick Capture" hoạt động khác (ống kính trước là hướng ban đầu theo mặc định - xem bên dưới).
 
-- **Quick Capture**: Điều chỉnh cài đặt Quick Capture tùy theo tốc độ khung hình video ưa thích, băng thông khả dụng để tải lên video đã ghi và các tùy chọn khác. Các tính năng liên quan đến bản đồ như đã giải thích ở trên (ví dụ: chế độ xem bản đồ, ghi chú trên bản đồ) chỉ khả dụng khi nhận được tín hiệu GPS và cài đặt vị trí trong cài đặt camera gốc được bật (thường được bật theo mặc định). Biểu tượng vị trí/GPS ở góc trên bên phải của Quick Capture phải có màu xanh lá cây. Có thể mất một chút thời gian để nhận tín hiệu GPS và thiết lập kết nối.
-    - **Độ phân giải**: Tại đây, bạn có thể thay đổi độ phân giải. *(Các độ phân giải 6k đang trong giai đoạn thử nghiệm và cần thực hiện bước ghép nối thủ công trong Thư viện trước khi tải lên Avatour Web Console.)*
-        - **4k** - Đây là độ phân giải tiêu chuẩn, giúp duy trì sự cân bằng tốt giữa chất lượng video và kích thước tệp.
+- **Quick Capture**: Điều chỉnh cài đặt "Quick Capture" tùy theo tốc độ khung hình video ưa thích, băng thông khả dụng để tải lên video đã ghi và các tùy chọn khác. Các tính năng liên quan đến bản đồ như đã giải thích ở trên (ví dụ: chế độ xem bản đồ, ghi chú trên bản đồ) chỉ khả dụng khi nhận được tín hiệu GPS và cài đặt vị trí trong cài đặt camera gốc được bật (thường được bật theo mặc định). Biểu tượng vị trí/GPS ở góc trên bên phải của Quick Capture phải có màu xanh lá cây. Có thể mất một chút thời gian để nhận tín hiệu GPS và thiết lập kết nối.
+    - **Độ phân giải**: Tại đây, bạn có thể thay đổi độ phân giải. *(Các độ phân giải 6k đang trong giai đoạn thử nghiệm và cần thực hiện bước ghép nối thủ công trong Thư viện trước khi tải lên Bảng điều khiển web Avatour.)*
+        - **4k** - Đây là độ phân giải tiêu chuẩn, đảm bảo sự cân bằng tốt giữa chất lượng video và kích thước tệp.
  - **6k @ 30 fps** *(yêu cầu thêm bước ghép ảnh trong Thư viện)*
-        - **6k @ 10 khung hình/giây** *(cần thêm bước ghép ảnh trong Gallery)* - Tùy chọn này hữu ích nếu bạn muốn giữ kích thước tệp nhỏ hơn so với chế độ 30 khung hình/giây khi độ mượt mà của chuyển động không quá quan trọng.
-        - Đối với các độ phân giải khác, bạn cũng có thể sử dụng các ứng dụng camera gốc, kể cả trên PanoX V2; để biết chi tiết, xem [Cách quay và tải lên video 360 độ bằng ứng dụng Avatour?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)
-    - **Tốc độ khung hình mục tiêu** *(chỉ có sẵn cho độ phân giải 4K)* - Điều chỉnh tốc độ khung hình cho các bản ghi video Quick Capture trong khoảng từ 15 fps, 24 fps đến 30 fps. Tốc độ khung hình cao hơn sẽ tạo ra video mượt mà hơn, nhưng sẽ làm tăng kích thước tệp video và thời gian tải lên. Khuyến nghị: 30 khung hình/giây
+        - **6k @ 10 fps** *(yêu cầu thêm bước ghép ảnh trong Gallery)* - Tùy chọn này hữu ích nếu bạn muốn giữ kích thước tệp nhỏ hơn so với 30 fps khi độ mượt mà của chuyển động không quá quan trọng.
+        - Đối với các độ phân giải khác, bạn cũng có thể sử dụng các ứng dụng camera gốc, kể cả trên PanoX V2; để biết chi tiết, xem [Làm thế nào để quay và tải lên video 360 độ bằng ứng dụng Avatour?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)
+    - **Tốc độ khung hình mục tiêu** *(chỉ khả dụng cho độ phân giải 4K)* - Điều chỉnh tốc độ khung hình cho các bản ghi video Quick Capture trong khoảng từ 15 fps, 24 fps đến 30 fps. Tốc độ khung hình cao hơn sẽ tạo ra video mượt mà hơn, nhưng sẽ làm tăng kích thước tệp video và thời gian tải lên. Khuyến nghị: 30 fps
     - **Tốc độ bit mục tiêu** *(chỉ có sẵn cho độ phân giải 4K)* Đặt tốc độ bit mục tiêu cho các bản tải lên Quick Capture trong khoảng từ 5 Mbps đến 20 Mbps. Tốc độ bit thấp hơn sẽ tăng tốc độ tải lên, nhưng sẽ làm giảm chất lượng video. Khuyến nghị: 20 Mbps
     - **Khóa hướng**: Tương tự như phần Live Capture ở trên. Hướng ban đầu mặc định luôn là ống kính phía trước đối với Quick Capture.
 
-  > Xem thêm [Công cụ tính kích thước tệp video 360° của Avatour](https://avatour.com/support/avatour-360deg-video-file-size-calculator) để biết thêm lời khuyên về các cài đặt trên và kích thước tệp video. Để tránh hết dung lượng lưu trữ, hệ thống sẽ hiển thị cảnh báo để bạn có thể dừng ghi hình và giải phóng dung lượng (ví dụ: bằng cách tải video từ Thư viện lên phần Tài nguyên trên Bảng điều khiển web Avatour).
+  > Xem thêm [Công cụ tính kích thước tệp video 360° Avatour](https://avatour.com/support/avatour-360deg-video-file-size-calculator) để biết thêm lời khuyên về các cài đặt trên và kích thước tệp video. Để tránh hết dung lượng lưu trữ, hệ thống sẽ hiển thị cảnh báo để bạn có thể dừng ghi hình và giải phóng dung lượng (ví dụ: bằng cách tải video từ Thư viện lên phần Tài nguyên trên Bảng điều khiển web Avatour).
 
 - **Giới thiệu**: Xem số sê-ri thiết bị và phiên bản phần mềm
 
@@ -591,54 +596,54 @@ Dưới đây là các menu (1) Cấp cao nhất, (2) Cài đặt và (3) Cài �
 
 1. Mang bộ sản phẩm về nhà và thử nghiệm cùng gia đình và bạn bè bằng kết nối internet tại nhà.
 2. Mang bộ sản phẩm đến văn phòng và kết nối với mạng công ty (có thể phát sinh các vấn đề liên quan đến công ty, ví dụ như tường lửa công ty – nhưng từ bước 1, bạn đã biết rằng Avatour hoạt động tốt và đây là vấn đề mà đội ngũ CNTT của bạn cần giải quyết với sự hỗ trợ từ Avatour).
-3. Bắt đầu sử dụng Avatour tại hiện trường (ngoài văn phòng) tại địa điểm họp mà các thành viên tham gia từ xa thường phải di chuyển đến. Có thể phát sinh thêm các vấn đề về kết nối. Avatour sẽ hỗ trợ phối hợp cùng đội ngũ CNTT của bạn.
-4. Bắt đầu sử dụng với các thành viên tham gia từ xa cả nội bộ lẫn bên ngoài.
+3. Bắt đầu sử dụng Avatour tại chỗ (ngoài văn phòng) tại địa điểm họp mà những người tham gia từ xa thường phải di chuyển đến. Có thể sẽ phát sinh thêm các vấn đề về kết nối. Avatour sẽ hỗ trợ phối hợp cùng đội ngũ CNTT của bạn.
+4. Bắt đầu sử dụng với những người tham gia từ xa cả trong và ngoài công ty.
 
 ### 6.2 Trước khi tổ chức cuộc họp trực tiếp bằng video 360°
 
 - Chúng tôi khuyến nghị thực hiện một chuyến tham quan video 360° được ghi lại trước bất kỳ chuyến tham quan trực tiếp nào nếu thời gian cho phép, vì ba lý do sau: (1) Có giải pháp dự phòng cho buổi tham quan trực tiếp, (2) có tài liệu để lưu trữ và xem lại sau này (bên cạnh bản ghi lại buổi tham quan trực tiếp) và (3) bắt đầu xây dựng thư viện video 360° của tất cả các địa điểm của quý vị, điều này có thể hữu ích cho nhiều trường hợp sử dụng. 
 
-- Sạc đầy đủ tất cả các thành phần bộ thiết bị trong ít nhất 90 phút trước cuộc họp trực tiếp. Chúng tôi khuyến nghị nên để tất cả các thiết bị ở chế độ sạc liên tục khi không sử dụng. Nhờ đó, mọi thiết bị sẽ luôn sẵn sàng, kể cả cho các cuộc họp đột xuất không theo kế hoạch.
+- Sạc đầy đủ tất cả các thành phần bộ thiết bị trong ít nhất 90 phút trước cuộc họp trực tiếp. Chúng tôi khuyến nghị nên để tất cả các thiết bị sạc liên tục khi không sử dụng. Như vậy, tất cả các thiết bị sẽ luôn sẵn sàng, kể cả cho các cuộc họp đột xuất không theo kế hoạch.
 
-- Lắp ráp đầy đủ bộ thiết bị (1. chân đế tripod + 2. pin Ulanzi + 3. gậy kéo dài + 4. camera 360°).
+- Lắp ráp đầy đủ bộ kit (1. chân đế tripod + 2. pin Ulanzi + 3. gậy kéo dài + 4. camera 360°).
 
 - Xác nhận đã tạo Workspace để tổ chức cuộc họp trực tiếp và bao gồm tất cả các tài nguyên liên quan.
 
 - Mời tất cả người tham gia vào cuộc họp thông qua Không gian làm việc của bạn. Thao tác này sẽ tạo lời mời trên lịch của tất cả người tham gia và bao gồm liên kết mời tham gia cuộc họp.
 
-- Ghép nối và kết nối tai nghe Bluetooth hoặc loa mà bạn dự định sử dụng cho buổi tham quan với camera.
+- Ghép nối và kết nối tai nghe Bluetooth hoặc loa mà bạn dự định sử dụng cho chuyến tham quan với camera.
 
 - Tất cả người dùng điện thoại thông minh tại hiện trường nên kết nối từ một mạng khác với mạng của camera. Điều này sẽ giảm tải cho băng thông mạng của camera.
 
-- Nếu bạn là người điều khiển camera một mình, hãy mang theo điện thoại thông minh để có thể chia sẻ màn hình điện thoại và hiển thị các chi tiết nhỏ.
+- Nếu bạn là người điều khiển camera một mình, hãy mang theo điện thoại thông minh phòng trường hợp muốn chia sẻ màn hình điện thoại để hiển thị các chi tiết nhỏ.
 
-- Xác nhận camera 360° có thể kết nối với mạng Wi-Fi tại địa phương.
+- Xác nhận camera 360° có thể kết nối với mạng Wi-Fi cục bộ của bạn.
 
-- Trước khi bắt đầu cuộc họp Avatour, hãy lên kế hoạch lộ trình di chuyển trong cơ sở. Thực hiện một cuộc họp Avatour thử nghiệm với camera và kiểm tra xem tất cả các khu vực đều có tốc độ bit trên 1 Mbps. Thông tin này có thể xem trực tiếp trên màn hình camera hoặc, đối với người tham gia từ xa, bằng cách vào Cài đặt và kích hoạt tùy chọn “Hiển thị Tốc độ bit”.
+- Trước khi bắt đầu cuộc họp Avatour, hãy lên kế hoạch lộ trình di chuyển trong cơ sở. Thực hiện một cuộc họp Avatour thử nghiệm với camera và kiểm tra xem tất cả các khu vực đều có tốc độ bit trên 1 Mbps. Thông tin này có thể xem trực tiếp trên màn hình camera hoặc, đối với người tham gia từ xa, bằng cách vào Cài đặt và kích hoạt tùy chọn “Hiển thị tốc độ bit”.
 
 - Nếu phát hiện một số khu vực có băng thông thấp hoặc không có băng thông, tốt nhất bạn nên chụp ảnh hoặc quay video. Những tài liệu này sau đó có thể được trình chiếu trong cuộc họp để người tham gia từ xa xem xét. Bạn có thể tham khảo hướng dẫn ở trên giải thích về tính năng “Quick Capture” để ghi hình và tải lên video/hình ảnh ngoại tuyến.
 
-- Nếu có người tham gia từ xa tham gia cuộc họp mà chưa từng sử dụng Avatour trước đây, hãy cung cấp cho họ một bản tóm tắt ngắn gọn về nền tảng này, các tính năng của nó (video trực tiếp 360 độ, tài nguyên, ảnh chụp nhanh, chú thích, tính năng Spotlight) và các công cụ hỗ trợ cuộc họp.
+- Nếu có người tham gia từ xa tham gia cuộc họp mà trước đây chưa từng sử dụng Avatour, hãy cung cấp cho họ một bản tóm tắt ngắn gọn về nền tảng này, các tính năng của nó (video trực tiếp 360 độ, tài nguyên, ảnh chụp nhanh, chú thích, tính năng Spotlight) và các công cụ hỗ trợ cuộc họp.
 
-- Bạn có thể bắt đầu bằng một giải pháp hội nghị video khác (ví dụ: Teams, Zoom, Google Meet), nhưng trước khi chuyển sang Avatour, hãy đóng hoàn toàn ứng dụng hội nghị video kia. Trong một số trường hợp, các ứng dụng khác này sẽ ưu tiên sử dụng micrô/loa/webcam của thiết bị, dẫn đến việc các thiết bị này bị vô hiệu hóa khi sử dụng Avatour. Ngoài ra, KHÔNG nên chạy Avatour VÀ một ứng dụng hội nghị video khác cùng lúc vì điều này sẽ làm giảm băng thông khả dụng.
+- Bạn có thể bắt đầu bằng một giải pháp hội nghị video khác (ví dụ: Teams, Zoom, Google Meet), nhưng trước khi chuyển sang Avatour, hãy đóng hoàn toàn ứng dụng hội nghị video kia. Trong một số trường hợp, các ứng dụng này sẽ ưu tiên sử dụng micrô/loa/webcam của thiết bị, dẫn đến việc chúng bị vô hiệu hóa khi sử dụng Avatour. Ngoài ra, KHÔNG nên chạy Avatour CÙNG LÚC với một ứng dụng hội nghị video khác vì điều này sẽ làm giảm băng thông khả dụng.
 
 - Nếu bạn dự định sử dụng camera 360° trong môi trường có nhiệt độ cao, nên sử dụng mô-đun làm mát (chỉ dành cho Pilot Pano). Điều này sẽ giúp giảm nguy cơ camera quá nhiệt và tự động tắt nguồn.
 
-### 6.3 Khi vận hành camera tại hiện trường cho cuộc họp video trực tiếp 360°
+### 6.3 Khi vận hành camera tại hiện trường cho cuộc họp trực tiếp bằng video 360°
 
-- Khi vận hành camera, hãy đảm bảo rằng bạn **đi chậm** và **thường xuyên dừng lại để đặt camera xuống chân máy**. Điều này giúp (1) cải thiện chất lượng video vì bạn sẽ tạo ra ít dữ liệu video hơn do không di chuyển máy ảnh một cách không cần thiết và (2) giảm thiểu thời gian gián đoạn video tiềm ẩn khi kết nối mạng của máy ảnh chuyển đổi giữa các điểm truy cập Wi-Fi.
+- Khi vận hành camera, hãy đảm bảo rằng bạn **đi bộ chậm rãi** và **thường xuyên dừng lại để đặt camera xuống chân máy**. Điều này giúp (1) cải thiện chất lượng video vì bạn tạo ra ít dữ liệu video hơn do không di chuyển máy ảnh một cách không cần thiết và (2) giảm thiểu thời gian gián đoạn video tiềm ẩn khi kết nối mạng của máy ảnh chuyển đổi giữa các điểm truy cập Wi-Fi.
 
-- Giữ máy ảnh trước mặt bạn và cao hơn tầm mắt. Điều này giúp tất cả người tham gia từ xa có thể quan sát được phần lớn khu vực xung quanh bạn.
+- Giữ máy quay trước mặt và cao hơn tầm mắt. Điều này giúp tất cả người tham gia từ xa có thể nhìn thấy phần lớn khu vực xung quanh bạn.
 
-- Trong trường hợp cần giữ máy quay ổn định, hãy sử dụng chân máy và điều chỉnh máy quay lên độ cao phù hợp, tốt nhất là ngang tầm mắt.
+- Trong trường hợp cần giữ máy quay ổn định, hãy sử dụng chân máy và điều chỉnh độ cao phù hợp, tốt nhất là ngang tầm mắt.
 
-- Luôn kết nối máy quay với mạng WiFi cục bộ khi có thể. Đối với những khu vực không có kết nối WiFi, hãy sử dụng điểm phát sóng (hotspot) được cung cấp. Điểm phát sóng này có thẻ SIM sẽ kết nối với mạng di động đáng tin cậy gần bạn. Luôn tắt điểm phát sóng khi không sử dụng trong nhà, vì nếu không, camera 360° có thể kết nối với điểm phát sóng – điều mà chúng ta không mong muốn khi ở trong nhà. Khi ở ngoài trời, hãy giữ điểm phát sóng gần camera 360°.
+- Luôn kết nối camera với mạng WiFi cục bộ nếu có thể. Đối với các khu vực không có kết nối WiFi, hãy sử dụng điểm phát sóng được cung cấp hoặc của riêng bạn. Luôn tắt điểm phát sóng khi không sử dụng trong nhà, vì nếu không, camera 360° có thể kết nối với điểm phát sóng này – điều mà chúng ta không mong muốn trong nhà. Luôn đặt điểm phát sóng trong đường truyền trực tiếp với camera 360°, ví dụ: không nên để điểm phát sóng trong túi sau quần vì cơ thể bạn sẽ cản trở tín hiệu.
 
-- Khi tốc độ truyền dữ liệu của camera bắt đầu giảm xuống dưới 2 Mbps, hãy đi chậm lại hoặc dừng hẳn cho đến khi tín hiệu ổn định trở lại. Điều này thường xảy ra khi bạn chuyển từ điểm truy cập Wi-Fi này sang điểm truy cập khác. 
+- Khi tốc độ truyền dữ liệu của camera bắt đầu giảm xuống dưới 2 Mbps, hãy đi chậm lại hoặc dừng hẳn cho đến khi tín hiệu ổn định trở lại. Tình trạng này thường xảy ra khi bạn chuyển từ điểm truy cập Wi-Fi này sang điểm truy cập khác. 
 
 - Nếu bạn biết kết nối và video sẽ bị gián đoạn khi di chuyển đến một vị trí cụ thể (Ví dụ: di chuyển từ khu vực sản xuất trong nhà sang khu vực ngoài trời), hãy thông báo trước cho những người tham gia từ xa.
 
-- Nếu cần trình chiếu nội dung có chi tiết cao hoặc chữ viết nhỏ, bạn có thể tiến lại rất gần với camera 360° và cũng có thể sử dụng điện thoại thông minh của chính mình hoặc của một người tham gia tại hiện trường để tham gia cuộc họp và chia sẻ camera (mặt sau) của điện thoại đó.
+- Nếu cần trình chiếu nội dung có chi tiết cao hoặc chữ viết nhỏ, bạn có thể tiến lại rất gần với camera 360° và cũng có thể sử dụng điện thoại thông minh của chính mình hoặc của một người tham gia tại chỗ để tham gia cuộc họp và chia sẻ camera (mặt sau) của điện thoại đó.
 
 - Nếu có thể, chúng tôi khuyến nghị nên có thêm một người tại hiện trường để hỗ trợ việc chia sẻ camera điện thoại thông minh như đã mô tả ở trên, vì điều này thường rất hữu ích và cần thiết.
 
@@ -656,9 +661,9 @@ Dưới đây là các menu (1) Cấp cao nhất, (2) Cài đặt và (3) Cài �
 
 - Dự đoán những gì người xem muốn thấy, ví dụ: các chi tiết, hãy đưa camera 360° lại rất gần và chờ một lúc.
 
-- Đặt máy quay xuống và hướng về những đối tượng bạn muốn làm nổi bật. Nếu bạn thiết lập "Khóa hướng" thành "Không", bạn thậm chí có thể dùng camera 360° để chỉ vào một vật thể (ví dụ: sử dụng ống kính phía trước).  
+- Đặt máy quay xuống và hướng về những vật thể bạn muốn làm nổi bật. Nếu bạn đặt chế độ Khóa Hướng thành "Không", bạn thậm chí có thể chỉ vào một vật thể bằng camera 360° (ví dụ: sử dụng ống kính phía trước).  
 
-- Nếu bạn đang ghi hình để tạo báo cáo do AI sinh ra và cũng sử dụng lệnh giọng nói, hãy nói to và rõ ràng. Để giúp AI nhận diện vị trí, số đo, vấn đề và điền vào các mẫu kiểm tra của bạn, hãy đề cập rõ ràng đến những yếu tố này và sử dụng cùng thuật ngữ như trong mẫu của bạn.
+- Nếu bạn đang ghi hình để tạo báo cáo do AI sinh ra và cũng sử dụng lệnh giọng nói, hãy nói to và rõ ràng. Để giúp AI xác định vị trí, số đo, các vấn đề và điền vào các mẫu kiểm tra của bạn, hãy đề cập rõ ràng đến những thông tin đó và sử dụng cùng thuật ngữ như trong mẫu của bạn.
 
 
 > Lưu ý: Hầu hết các tính năng của Avatour cũng có sẵn cho video 2D.
