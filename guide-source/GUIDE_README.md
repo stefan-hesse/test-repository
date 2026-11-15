@@ -133,7 +133,7 @@ Every time you push a change to the English source file, the build script automa
 | Chinese (Simplified) | `Avatour User and Best Practices Guide - ZH.md` | `avatour.com/user-guide-zh` |
 | Korean | `Avatour User and Best Practices Guide - KO.md` | `avatour.com/user-guide-ko` |
 
-The language switcher (EN / IT / ES / FR / DE / PT / TH / VI / ZH / KO buttons) is built into the header of every HTML output — it is part of the built files and switches between the ten standalone HTML pages.
+**Language buttons (EN / IT / ES / FR / DE / PT / TH / VI / ZH / KO):** on avatour.com the buttons are **Webflow elements on each page** (the guide itself is only the iframe content). Adding a language therefore means adding a button on **every** Webflow guide page, not only creating the new page. The standalone and print HTML files built by `build.py` also contain their own switcher, generated from the `LANGUAGES` list in `build.py`; it is not what visitors see on avatour.com.
 
 ---
 
@@ -141,18 +141,27 @@ The language switcher (EN / IT / ES / FR / DE / PT / TH / VI / ZH / KO buttons) 
 
 Used for Thai, Vietnamese, Chinese and Korean. Takes two pushes so that DeepL only translates the new language and the other languages are not re-sent.
 
+**Before you start**
+- Commit and push any pending edits to the English guide first, and wait for the green build in GitHub Actions. Otherwise those edits would be saved as already translated (in `EN-prev.md`) while the other languages never see them.
+- The build commits its results back to the repository (`Auto-build: translate + generate HTML`). In GitHub Desktop always **Fetch origin** and **Pull origin** before replacing files and before every push, otherwise GitHub Desktop refuses with "Newer Commits on Remote".
+
 1. **Check DeepL support** and the target-language code in the DeepL API documentation (for example `KO` for Korean; Chinese has two variants, `ZH-HANS` Simplified and `ZH-HANT` Traditional).
 2. **Edit `build.py`:**
     - Add the code to the `lang_codes` and `lang_names` dicts in `run_auto_translate()`
     - Add an entry to the `LANGUAGES` list (`code`, `suffix`, `source`, `webflow`, `title`)
     - If the script is not Latin-based, add a Google Font that covers it to the `@import` line and to every `font-family` stack (done so far: Sarabun for Thai, Noto Sans SC for Chinese, Noto Sans KR for Korean). Vietnamese renders correctly with the existing Roboto stack.
-3. **Push 1 — translate only the new language:**
+3. **Push 1 — translate only the new language** (one single commit):
     - In `build.py`, comment out all other translation languages in `LANGUAGES` (the English entry stays active)
-    - Delete `Avatour User and Best Practices Guide - EN-prev.md` from `guide-source/` (GitHub online)
-    - Commit and push `build.py` (GitHub Desktop), then check that the new `- XX.md` file appears in `guide-source/`
-4. **Push 2 — restore everything:** uncomment all languages in `build.py`, commit and push. The other languages are not re-translated.
-5. **Webflow:** create the page `avatour.com/user-guide-xx` with the iframe pointing to `.../dist/avatour-guide-embed-xx.html`, add both `<head>` scripts (scroll coordinator and hash forwarding), then **publish** the page. A "Page Not Found" before publishing is expected.
-6. **Update this README** (language table, file listings, counts, switcher, cache note).
+    - Delete `Avatour User and Best Practices Guide - EN-prev.md` locally (move it to the Trash in Finder), **not** as a separate commit on GitHub online: every push to `main` starts the build (`build-guide.yml` has no path filter), so a separate deletion commit would run a build with all languages still active and, without `EN-prev.md`, re-translate every language from scratch (cost, and existing translations are overwritten)
+    - In GitHub Desktop, check the diff of `build.py` (the other languages must show as commented out with `#`) and that exactly two files are changed: `build.py` and the deleted `EN-prev.md`
+    - Commit both together and push, wait for the green build, then check on GitHub that the new `- XX.md` file exists in `guide-source/` and contains the translation
+4. **Push 2 — restore everything:** Fetch and Pull first. Then uncomment all languages in `build.py`, commit and push. The other languages are not re-translated.
+5. **Webflow:**
+    - Create the page `avatour.com/user-guide-xx` (duplicating an existing language page is the quickest way) with the iframe pointing to `.../dist/avatour-guide-embed-xx.html`, and make sure both `<head>` scripts (scroll coordinator and hash forwarding) are present
+    - **Add the new language's button on every other guide page** (all existing languages), and on the new page mark its own button as the active one
+    - **Publish.** A "Page Not Found" before publishing is expected.
+6. **Check the live pages:** click through all language buttons, and for non-Latin scripts confirm the text renders correctly.
+7. **Update this README** (language table, file listings, counts, cache note).
 
 **Quality check:** DeepL output is good but not perfect. Have a native speaker skim a new language for tone and key UI terms before sending it to a customer.
 
@@ -478,9 +487,19 @@ Press **Cmd+P**, then set:
 
 ---
 
-## Pipeline technical notes (`build.py`)
+## Pipeline technical notes (`build.py` and the workflow)
 
-This section records deliberate changes to `build.py` and why they were made, so future maintainers understand the setup.
+This section records how the GitHub Actions workflow behaves and deliberate changes to `build.py`, with the reasons, so future maintainers understand the setup.
+
+### GitHub Actions workflow (`.github/workflows/build-guide.yml`)
+
+How it behaves (read from the workflow file, November 2026):
+
+- **Triggers:** every push to `main` (there is no path filter, so any commit starts it, including a commit that only deletes or edits another file) and a manual **Run workflow** button (`workflow_dispatch`). A manual run with an unchanged `EN-prev.md` rebuilds the HTML without translating anything.
+- **Steps:** checkout → Python 3.11 → `pip install markdown pymdown-extensions python-frontmatter anthropic` → two debug steps → `python guide-source/build.py` (with `DEEPL_API_KEY` from the repository secrets) → commit and push the results → upload `dist/` as a build artifact.
+- **The build commits back to the repository:** it runs `git add dist/ guide-source/` and pushes a commit named `Auto-build: translate + generate HTML [skip ci]`. This is why GitHub Desktop must **Fetch and Pull** before you push again.
+- **Leftovers from an earlier setup:** `anthropic` is still installed and a "Debug env" step still checks an `ANTHROPIC_API_KEY` secret, although translation now uses DeepL. They are harmless (the debug step only prints whether the key is set and its length) but can be removed in a future clean-up.
+- **Node.js 20 deprecation warning:** GitHub reports that actions such as `actions/upload-artifact@v4` target Node.js 20 and are being forced onto Node.js 24. The workflow file has no `node-version` setting, so the fix would be to update the action versions (`checkout`, `setup-python`, `upload-artifact`) to releases that support Node.js 24, after checking the current versions on GitHub. Not urgent.
 
 ### `normalise_list_indent` — removed (September 2026)
 
