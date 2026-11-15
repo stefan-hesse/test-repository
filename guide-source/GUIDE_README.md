@@ -53,12 +53,18 @@ test-repository/
     Avatour User and Best Practices Guide - EN-prev.md ← Auto-generated snapshot for change detection — do not edit
     GUIDE_README.md                 ← This document
     build.py                        ← Build script — do not edit unless needed
+    deepl-glossary.csv              ← Terms DeepL must keep or translate in a fixed way (e.g. the brand name Avatour) — this one you may edit
+    deepl_glossary_check.py         ← Live check of the glossary against DeepL (started from GitHub Actions)
+    tests/
+      test_deepl_glossary.py        ← Automated tests for the glossary and the brand-name check
+      mock_deepl.py                 ← Simulated DeepL used by the tests
   .github/
     workflows/
       build-guide.yml               ← GitHub Actions workflow — do not edit
+      test-deepl-glossary.yml       ← Manual test: Actions → Test DeepL glossary → Run workflow
 ```
 
-> **Note:** Never edit files in `dist/` manually. They are rebuilt automatically on every push. The IT, ES and FR Markdown files and `EN-prev.md` are also auto-generated — **only ever edit the English source file**. GitHub Desktop may show `dist/` files as changed after a build — just ignore this.
+> **Note:** Never edit files in `dist/` manually. They are rebuilt automatically on every push. All translated Markdown files (IT, ES, FR, DE, PT, TH, VI, ZH, KO) and `EN-prev.md` are also auto-generated — **only ever edit the English source file**. GitHub Desktop may show `dist/` files as changed after a build — just ignore this.
 
 ---
 
@@ -118,6 +124,34 @@ Every time you push a change to the English source file, the build script automa
 
 ---
 
+## Brand name and terminology (DeepL glossary)
+
+**The problem it solves.** Headings are sent to DeepL as short separate texts. Without context DeepL sometimes writes the brand name in the target script, for example "아바투어" instead of "Avatour" in Korean (found on 15 November 2026 in 7 places of the Korean guide, in headings, body text and an image caption). It was inconsistent: the same name stayed "Avatour" in most places.
+
+**How it works now**
+- The terms live in `guide-source/deepl-glossary.csv`. The first column is `en`, then one column per language code (`it, es, fr, de, pt, vi, zh, ko, th`). A cell holds the agreed translation. **The same word as in English means "keep as is"** (that is how `Avatour` is set up). An empty cell means no rule for that language.
+- Whenever the build translates something, it makes sure DeepL has an up-to-date glossary for each language (named `avatour-guide-xx-<fingerprint>`) and uses it for the translation. If the CSV changes, a new glossary is created automatically and the outdated one is removed. Only glossaries with this name pattern are ever touched.
+- **Thai** is the exception: DeepL does not offer glossaries for Thai (DeepL API documentation, November 2026), so Thai is translated without one. The brand-name check below still covers Thai.
+- The build never fails because of the glossary. If DeepL rejects a glossary or the API has a problem, the text is translated without it and a yellow warning appears on the Actions run. DeepL calls are also retried automatically on temporary errors.
+
+**Adding or changing a term**
+1. Edit `deepl-glossary.csv` (plain text, UTF-8; a text editor is safest). One row per English term, no term twice, no tabs or line breaks inside a cell, at most 1024 bytes per cell. Example row: `Avatour,Avatour,Avatour,...` (one cell per language column).
+2. Commit and push. The glossary is updated at the next translation.
+3. **It only affects text translated from now on.** Existing translations stay as they are. To apply a new or changed term to existing text in a language, that language has to be translated again, with the same two-push procedure as when adding a language (only that language active, `EN-prev.md` deleted in the same commit as the `build.py` change).
+4. Run **Actions → Test DeepL glossary → Run workflow** and check the result (see below).
+
+**Brand-name check (automatic).** At every build, the log shows "Step 1b: Brand-name check". For each language and each protected term (term with the same translation as English) it compares, section by section, how often the term appears in English and in the translation. A **yellow warning on the Actions run** means a translation has fewer occurrences than English, so something was transliterated or dropped. Warnings never fail the build. To fix one, correct the translated Markdown file by hand (it is reused as long as the English text of that section does not change) or translate that language again.
+
+**Tests**
+- 39 automated tests (`guide-source/tests/`) check the glossary logic against a simulated DeepL, so they cost nothing.
+- **Actions → Test DeepL glossary → Run workflow** runs these tests and then a live check against the real DeepL API (a few cents at most; it creates the real glossaries and changes nothing in the repository). Run it after every change to the translation code or the glossary. A green run means both passed; the run summary shows a table per language.
+- First live run (15 November 2026): green; the glossary was accepted for IT, ES, FR, DE, PT, VI, ZH and KO (PT-BR and ZH-HANS work with the `pt` and `zh` glossaries), Thai reported as "no glossary possible", and the brand-name check found no problems in the existing language files (the Korean file had been corrected by hand that day).
+- **What the live test does not prove:** the short test sentences did not trigger the original Korean problem (DeepL kept "Avatour" in them even without a glossary), so the protective effect of the glossary rests on how DeepL glossaries work and on the brand-name check as a safety net, not on a live demonstration.
+
+**Not covered yet:** agreeing one translation per language for role terms such as Host (Chinese currently uses both 主机 and 主持人 and Vietnamese both "chủ trì" and "Chủ nhà" for the same role — to be confirmed by a native speaker). Once decided, they go into the CSV as new rows.
+
+---
+
 ## Multi-language setup
 
 | Language | Source file | Webflow page |
@@ -147,7 +181,8 @@ Used for Thai, Vietnamese, Chinese and Korean. Takes two pushes so that DeepL on
 
 1. **Check DeepL support** and the target-language code in the DeepL API documentation (for example `KO` for Korean; Chinese has two variants, `ZH-HANS` Simplified and `ZH-HANT` Traditional).
 2. **Edit `build.py`:**
-    - Add the code to the `lang_codes` and `lang_names` dicts in `run_auto_translate()`
+    - Add the language to the two dictionaries `DEEPL_TARGET_CODES` and `LANGUAGE_NAMES` (just above `run_auto_translate()`)
+    - Add a column for the language to `deepl-glossary.csv` (the same word as in English for `Avatour`), unless DeepL has no glossaries for it (Thai has none; check the list of glossary languages in the DeepL API documentation)
     - Add an entry to the `LANGUAGES` list (`code`, `suffix`, `source`, `webflow`, `title`)
     - If the script is not Latin-based, add a Google Font that covers it to the `@import` line and to every `font-family` stack (done so far: Sarabun for Thai, Noto Sans SC for Chinese, Noto Sans KR for Korean). Vietnamese renders correctly with the existing Roboto stack.
 3. **Push 1 — translate only the new language** (one single commit):
@@ -500,6 +535,15 @@ How it behaves (read from the workflow file, November 2026):
 - **The build commits back to the repository:** it runs `git add dist/ guide-source/` and pushes a commit named `Auto-build: translate + generate HTML [skip ci]`. This is why GitHub Desktop must **Fetch and Pull** before you push again.
 - **Leftovers from an earlier setup:** `anthropic` is still installed and a "Debug env" step still checks an `ANTHROPIC_API_KEY` secret, although translation now uses DeepL. They are harmless (the debug step only prints whether the key is set and its length) but can be removed in a future clean-up.
 - **Node.js 20 deprecation warning:** GitHub reports that actions such as `actions/upload-artifact@v4` target Node.js 20 and are being forced onto Node.js 24. The workflow file has no `node-version` setting, so the fix would be to update the action versions (`checkout`, `setup-python`, `upload-artifact`) to releases that support Node.js 24, after checking the current versions on GitHub. Not urgent.
+- **Second workflow:** `test-deepl-glossary.yml` is started manually only (Actions → Test DeepL glossary). It never commits anything. It shows the same Node.js 20 warning for `checkout@v4` and `setup-python@v5`.
+
+### DeepL calls, glossary and brand-name check (added 15 November 2026)
+
+- **DeepL calls:** one helper (`deepl_http`) handles all DeepL requests. It retries HTTP 429 and 5xx with waiting times of 2, 4 and 8 seconds and never retries 400 or 456, as DeepL recommends. The API address can be overridden with the environment variable `DEEPL_API_URL` (used by the tests; also handy for the Free plan).
+- **Glossary:** one glossary per language (DeepL v3 glossary endpoints, source `en`, target = the root language code, for example `pt` for PT-BR and `zh` for ZH-HANS). Created once per CSV content, found again by name on later builds. Translation requests then carry `glossary_id` and `source_lang=EN`; if DeepL answers 400 the request is repeated without the glossary.
+- **Only when something is translated:** glossaries are checked or created only in builds in which at least one English section changed. A normal build without translation makes no glossary calls.
+- **Brand-name check:** `run_glossary_qa()` runs in every build (Step 1b), reads only local files and makes no API call.
+- **Language tables:** the DeepL code and display name of each language moved out of `run_auto_translate()` into the module-level dictionaries `DEEPL_TARGET_CODES` and `LANGUAGE_NAMES`, so that the live check script uses the same values.
 
 ### `normalise_list_indent` — removed (September 2026)
 
