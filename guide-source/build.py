@@ -7,6 +7,9 @@ Converts guide-source/Avatour User and Best Practices Guide.md into three output
   2. embed HTML       → dist/avatour-guide-embed.html  (for Webflow iframe)
   3. PDF-ready HTML   → dist/avatour-guide-print.html  (open in Chrome → Cmd+P → Save as PDF)
 
+Translation uses the DeepL API. Brand names and agreed terms are kept consistent with a DeepL
+glossary that is built from guide-source/deepl-glossary.csv (see GUIDE_README.md).
+
 Usage:
   python guide-source/build.py
 
@@ -14,9 +17,10 @@ Requirements:
   pip install markdown pymdown-extensions python-frontmatter
 """
 
-import os, re, json, time
+import os, re, json, time, csv, hashlib
 import urllib.request
 import urllib.parse
+import urllib.error
 import frontmatter
 import markdown
 from markdown.extensions.toc import TocExtension
@@ -37,27 +41,252 @@ def split_sections(text):
     sections.append((heading, ''.join(lines)))
     return sections
 
-def translate_with_deepl(text, target_lang, api_key):
-    """Translate text using DeepL API. target_lang is e.g. 'IT', 'ES', 'FR'."""
-    payload = urllib.parse.urlencode({
+# ── DEEPL API HELPERS ─────────────────────────────────────────────────────
+# DEEPL_API_URL can be overridden with an environment variable (for example to
+# use the Free plan endpoint, or a local test server in the automated tests).
+DEEPL_API_URL = os.environ.get('DEEPL_API_URL', 'https://api.deepl.com').rstrip('/')
+
+class DeepLError(Exception):
+    """A DeepL API call failed. `status` is the HTTP status (0 = network problem)."""
+    def __init__(self, status, message):
+        super().__init__(message)
+        self.status = status
+
+def deepl_http(method, path, api_key, data=None, json_body=None, retries=3):
+    """Call the DeepL API and return the parsed JSON (None for an empty answer).
+    Retries HTTP 429 and 5xx with exponential backoff, as DeepL recommends.
+    400 and 456 are never retried."""
+    url = DEEPL_API_URL + path
+    headers = {'Authorization': f'DeepL-Auth-Key {api_key}'}
+    body = None
+    if json_body is not None:
+        body = json.dumps(json_body).encode('utf-8')
+        headers['Content-Type'] = 'application/json'
+    elif data is not None:
+        body = data
+        headers['Content-Type'] = 'application/x-www-form-urlencoded'
+    attempt = 0
+    while True:
+        req = urllib.request.Request(url, data=body, headers=headers, method=method)
+        try:
+            with urllib.request.urlopen(req, timeout=60) as resp:
+                raw = resp.read()
+                return json.loads(raw) if raw else None
+        except urllib.error.HTTPError as e:
+            detail = e.read().decode('utf-8', 'replace')[:300]
+            trace = e.headers.get('X-Trace-ID', '') if e.headers else ''
+            if (e.code == 429 or e.code >= 500) and attempt < retries:
+                wait = 2 ** (attempt + 1)
+                print(f"    [DEEPL] HTTP {e.code} on {method} {path} — retrying in {wait}s")
+                time.sleep(wait)
+                attempt += 1
+                continue
+            raise DeepLError(e.code, f"HTTP {e.code} on {method} {path}: {detail} (trace {trace})")
+        except (urllib.error.URLError, TimeoutError) as e:
+            if attempt < retries:
+                wait = 2 ** (attempt + 1)
+                print(f"    [DEEPL] Network problem on {method} {path} ({e}) — retrying in {wait}s")
+                time.sleep(wait)
+                attempt += 1
+                continue
+            raise DeepLError(0, f"Network problem on {method} {path}: {e}")
+
+def gh_warning(message):
+    """Print a warning that GitHub Actions shows as a yellow annotation on the run."""
+    print(f"::warning::{message}")
+
+def translate_with_deepl(text, target_lang, api_key, glossary_id=None):
+    """Translate text using DeepL API. target_lang is e.g. 'IT', 'ES', 'FR'.
+    With a glossary_id the glossary is applied (DeepL then needs source_lang).
+    If DeepL rejects the glossary (HTTP 400) the text is translated without it."""
+    params = {
         'text': text,
         'target_lang': target_lang,
         'tag_handling': 'off',
         'preserve_formatting': '1',
-    }).encode('utf-8')
-    req = urllib.request.Request(
-        'https://api.deepl.com/v2/translate',
-        data=payload,
-        headers={
-            'Authorization': f'DeepL-Auth-Key {api_key}',
-            'Content-Type': 'application/x-www-form-urlencoded',
-        }
-    )
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        result = json.loads(resp.read())
+    }
+    if glossary_id:
+        params['source_lang'] = 'EN'
+        params['glossary_id'] = glossary_id
+    try:
+        result = deepl_http('POST', '/v2/translate', api_key,
+                            data=urllib.parse.urlencode(params).encode('utf-8'))
+    except DeepLError as e:
+        if glossary_id and e.status == 400:
+            gh_warning(f"DeepL rejected the glossary for {target_lang} — translating without it ({e})")
+            params.pop('glossary_id')
+            params.pop('source_lang')
+            result = deepl_http('POST', '/v2/translate', api_key,
+                                data=urllib.parse.urlencode(params).encode('utf-8'))
+        else:
+            raise
     return result['translations'][0]['text']
 
-def auto_translate_lang(en_sections, en_prev_dict, lang_path, lang_name, lang_code, api_key):
+# ── GLOSSARY (brand name and agreed terms) ────────────────────────────────
+# The terms live in guide-source/deepl-glossary.csv: first column "en", then one
+# column per language code (it, es, fr, de, pt, vi, zh, ko, th). A cell is the
+# agreed translation; the same word as in English means "keep as is" (e.g. Avatour).
+# An empty cell means no rule for that language.
+GLOSSARY_FILE   = "guide-source/deepl-glossary.csv"
+GLOSSARY_PREFIX = "avatour-guide"
+# DeepL offers no glossaries for these languages (DeepL API documentation, Nov 2026).
+GLOSSARY_UNSUPPORTED = {"th"}
+
+def read_glossary_file(path=None):
+    """Read the glossary CSV. Returns {language: [(english, target), ...]}, or None if
+    the file does not exist. Raises ValueError for a file DeepL would reject."""
+    path = path or GLOSSARY_FILE
+    if not os.path.exists(path):
+        return None
+    with open(path, 'r', encoding='utf-8-sig', newline='') as f:
+        rows = [(n, r) for n, r in enumerate(csv.reader(f), start=1) if any(c.strip() for c in r)]
+    if not rows:
+        return None
+    header = [c.strip().lower() for c in rows[0][1]]
+    if not header or header[0] != 'en':
+        raise ValueError(f"{path}: the first column of the header row must be 'en'")
+    langs = header[1:]
+    if len(set(langs)) != len(langs):
+        raise ValueError(f"{path}: a language column appears twice in the header row")
+    targets = {lang: [] for lang in langs}
+    seen = set()
+    for n, row in rows[1:]:
+        row = row + [''] * (len(header) - len(row))
+        en = row[0].strip()
+        if not en:
+            continue
+        if en in seen:
+            raise ValueError(f"{path} line {n}: the English term '{en}' appears twice")
+        seen.add(en)
+        for lang, cell in zip(langs, row[1:]):
+            target = cell.strip()
+            if not target:
+                continue
+            for phrase in (en, target):
+                if re.search(r'[\x00-\x1f\x7f\u2028\u2029]', phrase):
+                    raise ValueError(f"{path} line {n}: '{phrase}' contains a control character")
+                if len(phrase.encode('utf-8')) > 1024:
+                    raise ValueError(f"{path} line {n}: '{phrase[:30]}...' is longer than 1024 bytes")
+            targets[lang].append((en, target))
+    return targets
+
+def protected_terms(targets, lang):
+    """English terms that must stay unchanged in this language (target == English)."""
+    return [en for en, target in (targets or {}).get(lang, []) if en == target]
+
+def glossary_tsv(entries):
+    return "\n".join(f"{en}\t{target}" for en, target in entries)
+
+def glossary_name(lang, entries):
+    """Name = prefix + language + a short fingerprint of the entries. A changed CSV gives a
+    new name, so the glossary is renewed automatically and the old one removed."""
+    digest = hashlib.sha256(glossary_tsv(entries).encode('utf-8')).hexdigest()[:10]
+    return f"{GLOSSARY_PREFIX}-{lang}-{digest}"
+
+def sync_glossaries(api_key, targets, langs):
+    """Make sure every language in `langs` that has entries has a current DeepL glossary.
+    Returns {language: glossary_id}. Never raises: any problem is reported as a warning
+    and that language is simply translated without a glossary."""
+    ids = {}
+    try:
+        existing = (deepl_http('GET', '/v3/glossaries', api_key) or {}).get('glossaries', [])
+    except Exception as e:
+        gh_warning(f"Could not read the DeepL glossary list — translating without glossaries ({e})")
+        return ids
+    by_name = {g.get('name'): g.get('glossary_id') for g in existing}
+    for lang in langs:
+        entries = (targets or {}).get(lang, [])
+        if not entries:
+            continue
+        if lang in GLOSSARY_UNSUPPORTED:
+            print(f"  [GLOSSARY] {lang.upper()}: DeepL has no glossaries for this language — skipped")
+            continue
+        name = glossary_name(lang, entries)
+        gid = by_name.get(name)
+        if gid:
+            print(f"  [GLOSSARY] {lang.upper()}: using existing glossary {name}")
+        else:
+            try:
+                created = deepl_http('POST', '/v3/glossaries', api_key, json_body={
+                    'name': name,
+                    'dictionaries': [{
+                        'source_lang': 'en',
+                        'target_lang': lang,
+                        'entries': glossary_tsv(entries),
+                        'entries_format': 'tsv',
+                    }],
+                })
+                gid = created['glossary_id']
+                for _ in range(10):          # wait until DeepL reports it ready
+                    if created.get('ready', True):
+                        break
+                    time.sleep(1)
+                    created = deepl_http('GET', f'/v3/glossaries/{gid}', api_key)
+                print(f"  [GLOSSARY] {lang.upper()}: created glossary {name} ({len(entries)} entries)")
+            except Exception as e:
+                gh_warning(f"Could not create the DeepL glossary for {lang.upper()} — translating without it ({e})")
+                continue
+        ids[lang] = gid
+        prefix = f"{GLOSSARY_PREFIX}-{lang}-"
+        for g in existing:                   # remove outdated versions of this language's glossary
+            if (g.get('name') or '').startswith(prefix) and g.get('name') != name:
+                try:
+                    deepl_http('DELETE', f"/v3/glossaries/{g['glossary_id']}", api_key)
+                    print(f"  [GLOSSARY] {lang.upper()}: removed outdated glossary {g['name']}")
+                except Exception as e:
+                    gh_warning(f"Could not remove the outdated glossary {g.get('name')} ({e})")
+    return ids
+
+# ── QUALITY CHECK: brand name must survive translation ────────────────────
+def qa_check_language(en_text, lang_text, terms):
+    """Compare how often each protected term appears, section by section, in the English
+    and the translated text. Returns a list of readable problems (empty = fine)."""
+    en_secs, lang_secs = split_sections(en_text), split_sections(lang_text)
+    issues = []
+    if len(en_secs) != len(lang_secs):
+        for term in terms:
+            n_en, n_tr = en_text.count(term), lang_text.count(term)
+            if n_tr < n_en:
+                issues.append(f"'{term}' appears {n_en}x in English but only {n_tr}x in the translation (section structure differs)")
+        return issues
+    for (eh, eb), (lh, lb) in zip(en_secs, lang_secs):
+        label = 'intro' if eh == '__preamble__' else re.sub(r'\s*\{#[\w-]+\}\s*$', '', eh.strip())[:60]
+        for term in terms:
+            n_en, n_tr = (eh + eb).count(term), (lh + lb).count(term)
+            if n_tr < n_en:
+                issues.append(f"{label}: '{term}' appears {n_en}x in English but only {n_tr}x in the translation")
+    return issues
+
+def run_glossary_qa():
+    """Check every existing language file. Warnings only — this never fails the build."""
+    try:
+        targets = read_glossary_file()
+        if not targets:
+            print("  [QA] No glossary file — brand-name check skipped")
+            return
+        en_path = "guide-source/Avatour User and Best Practices Guide.md"
+        with open(en_path, 'r', encoding='utf-8') as f:
+            en_text = f.read()
+        for lang in LANGUAGES:
+            code = lang["code"]
+            if code == "en" or not os.path.exists(lang["source"]):
+                continue
+            terms = protected_terms(targets, code)
+            if not terms:
+                continue
+            with open(lang["source"], 'r', encoding='utf-8') as f:
+                issues = qa_check_language(en_text, f.read(), terms)
+            if issues:
+                for issue in issues:
+                    print(f"  [QA] {code.upper()}: {issue}")
+                gh_warning(f"[{code.upper()}] {len(issues)} place(s) where a protected term ({', '.join(terms)}) is missing "
+                           f"in the translation, e.g. {issues[0]}")
+            else:
+                print(f"  [QA] {code.upper()}: protected terms ({', '.join(terms)}) OK")
+    except Exception as e:
+        gh_warning(f"Brand-name check could not run ({e})")
+
+def auto_translate_lang(en_sections, en_prev_dict, lang_path, lang_name, lang_code, api_key, glossary_id=None):
     """Translate changed EN sections into one language file using DeepL."""
     # Load existing translated file by position (for unchanged sections only)
     existing = []
@@ -89,13 +318,13 @@ def auto_translate_lang(en_sections, en_prev_dict, lang_path, lang_name, lang_co
             prefix = m.group(1)
             heading_text = m.group(2)
             anchor = m.group(3) or ''
-            translated_text = translate_with_deepl(heading_text, lang_code, api_key)
+            translated_text = translate_with_deepl(heading_text, lang_code, api_key, glossary_id)
             translated_heading = f"{prefix}{translated_text.strip()}{anchor}\n"
         else:
             translated_heading = en_heading
 
         # Translate body with DeepL
-        translated_body = translate_with_deepl(en_body, lang_code, api_key)
+        translated_body = translate_with_deepl(en_body, lang_code, api_key, glossary_id)
 
         parts.append(translated_heading + translated_body)
         label = en_heading.strip()[:60]
@@ -198,6 +427,11 @@ def translate_body(body, target_language, api_key):
             translated_chunks.append(chunk)
     return ''.join(translated_chunks)
 
+# DeepL target-language code and display name for each language in LANGUAGES.
+# Add a line to both when adding a language.
+DEEPL_TARGET_CODES = {"it": "IT", "es": "ES", "fr": "FR", "de": "DE", "pt": "PT-BR", "th": "TH", "vi": "VI", "zh": "ZH-HANS", "ko": "KO"}
+LANGUAGE_NAMES     = {"it": "Italian", "es": "Spanish", "fr": "French", "de": "German", "pt": "Portuguese (Brazil)", "th": "Thai", "vi": "Vietnamese", "zh": "Chinese (Simplified)", "ko": "Korean"}
+
 def run_auto_translate():
     """Step 1: detect changed EN sections and translate to IT, ES and FR using DeepL."""
     api_key = os.environ.get('DEEPL_API_KEY', '')
@@ -227,16 +461,26 @@ def run_auto_translate():
     print(f"  [TRANSLATE] {total_changed} section(s) changed")
 
     if total_changed > 0:
+        glossary_ids = {}
+        try:
+            glossary_targets = read_glossary_file()
+        except ValueError as e:
+            glossary_targets = None
+            gh_warning(f"Glossary file ignored — {e}")
+        if glossary_targets:
+            glossary_ids = sync_glossaries(api_key, glossary_targets,
+                                           [l["code"] for l in LANGUAGES if l["code"] != "en"])
+        else:
+            print("  [GLOSSARY] No glossary in use")
         for lang in LANGUAGES:
             if lang["code"] == "en":
                 continue
-            lang_codes = {"it": "IT", "es": "ES", "fr": "FR", "de": "DE", "pt": "PT-BR", "th": "TH", "vi": "VI", "zh": "ZH-HANS", "ko": "KO"}
-            lang_names = {"it": "Italian", "es": "Spanish", "fr": "French", "de": "German", "pt": "Portuguese (Brazil)", "th": "Thai", "vi": "Vietnamese", "zh": "Chinese (Simplified)", "ko": "Korean"}
-            lang_code = lang_codes.get(lang["code"], lang["code"].upper())
-            lang_name = lang_names.get(lang["code"], lang["code"])
+            lang_code = DEEPL_TARGET_CODES.get(lang["code"], lang["code"].upper())
+            lang_name = LANGUAGE_NAMES.get(lang["code"], lang["code"])
             print(f"  [TRANSLATE] → {lang_name}")
             auto_translate_lang(en_sections, en_prev_dict,
-                lang["source"], lang_name, lang_code, api_key)
+                lang["source"], lang_name, lang_code, api_key,
+                glossary_ids.get(lang["code"]))
 
     # Save current EN as new EN-prev
     import shutil
@@ -1008,6 +1252,9 @@ def main():
 
     print("\n── Step 1: Auto-translate ──────────────────────────────")
     run_auto_translate()
+
+    print("\n── Step 1b: Brand-name check ───────────────────────────")
+    run_glossary_qa()
 
     print("\n── Step 2: Build HTML ──────────────────────────────────")
     for lang in LANGUAGES:

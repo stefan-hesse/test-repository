@@ -1,0 +1,29 @@
+name: Test DeepL glossary
+# Manual test only (Actions -> Test DeepL glossary -> Run workflow).
+# Runs the automated tests (simulated DeepL, free) and then a live check against the real DeepL API
+# (a few cents at most). It never commits anything and never changes the guide.
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install markdown pymdown-extensions python-frontmatter
+      - name: Automated tests (simulated DeepL, no cost)
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: python -m unittest discover -s guide-source/tests -v
+      - name: Live check against the real DeepL API
+        env:
+          DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: python guide-source/deepl_glossary_check.py
