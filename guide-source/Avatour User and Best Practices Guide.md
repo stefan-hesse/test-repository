@@ -410,7 +410,7 @@ You can also generate the HTML code to enable a public embed of an asset, e.g. o
 
 Admin Users have access to this menu to manage **Settings centrally for the entire Avatour platform for ALL workspaces. Changes in those settings will be applied from the time of change (e.g. to newly created workspaces and not to existing workspaces)**. Each setting can be ticked or unticked to become the default setting across the entire platform. Each setting can also be locked, meaning that the default setting can not be changed by other users of the platform. We also offer custom domains and custom branding.
 
-![Avatour Web Console - Main Menu Item Settings](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-settings-1-of-2.png)
+![Avatour Web Console - Main Menu Item Settings](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-settings-1-of-2?_v_2026-10-31.png)
 
 ![Avatour Web Console - Main Menu Item Settings](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-settings-2-of-2.png) *Settings Section*
 
@@ -428,11 +428,11 @@ Here you can see details of your account and manage registered user accounts (Ho
 
 Provides insights into meetings, workspace usage, and ROI metrics.
 
-![Avatour Web Console - Main Menu Item Analytics (1 of 3)](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-analytics-1-of-3.png) *Analytics Overview*
+![Avatour Web Console - Main Menu Item Analytics (1 of 3)](https://res.cloudinary.com/avatour/image/upload/v1794224327/avatour-screenshot-main-menu-analytics-1-of-3.png) *Analytics - Live Meetings and Workspace Engagement*
 
-![Avatour Web Console - Main Menu Item Analytics (2 of 3)](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-analytics-2-of-3.png) *Meeting Activity & Workspace Usage*
+![Avatour Web Console - Main Menu Item Analytics (2 of 3)](https://res.cloudinary.com/avatour/image/upload/v1794402103/avatour-screenshot-main-menu-analytics-2-of-3.png) *Workspace Activity and Viewed Assets*
 
-![Avatour Web Console - Main Menu Item Analytics (3 of 3)](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-analytics-3-of-3.png) *Savings and Device License Usage* 
+![Avatour Web Console - Main Menu Item Analytics (3 of 3)](https://res.cloudinary.com/avatour/image/upload/v1794384113/avatour-screenshot-main-menu-analytics-3-of-3.png) *Savings and Device License Usage* 
 
 ## 5. Onsite - How to Use the Avatour Turnkey Kit {#onsite-how-to-use-the-avatour-turnkey-kit}
 
@@ -450,7 +450,7 @@ Follow the guide and instructions to unpack, assemble, and power on your camera.
 
 #### External Battery – Longer Live Meetings & Improved Thermals 
 
-The camera's internal battery lasts ca. 30-45 minutes. There will be an alert when the battery is running low. With an external battery you can extend the operating time and even make it infinite as you can swap batteries during operation.
+The camera's internal battery lasts 30-45 minutes. There will be an alert when the battery is running low. With an external battery you can extend the operating time and even make it infinite as you can swap batteries during operation.
 
 - **If your kit includes a Ulanzi battery:** Attach it between the tripod base and the extendable stick, then connect the battery to the camera via USB-C.  
 
@@ -458,7 +458,7 @@ The camera's internal battery lasts ca. 30-45 minutes. There will be an alert wh
 
 Using the external battery:
 
-1. Extends total battery life from ~40 minutes (camera battery only) to ~3 hours.  
+1. Extends total battery life from 30-45 minutes (camera battery only) to 2-3 hours.  
 2. Adds stability to the camera setup.  
 3. Helps prevent potential overheating.  
 
