@@ -264,7 +264,7 @@ When a live 360° video is streaming into a meeting, this menu shows at the bott
 Here is a description of all the elements shown in the menus above.
 
 - **Video Timeline / Progress Bar** – Shows video progress with notes and key topics extracted from audio. Click a note or topic to jump to that moment and open the note. Includes **Play / Pause** controls.   
-- **Snapshot** – Capture a 360° or 2D image from the asset.  
+- **Snapshot** – Capture a 360° or 2D image from the asset or a live stream. During a live 360° video meeting there is the option to take a "SuperFreeze" 360° snapshot. That is a higher resolution snapshot (6k) for which the live stream is paused to use the camera for a few seconds to take that snapshot. The camera operator also needs to allow a SuperFreeze snapshot.  
 - **Spotlight** – Highlight a specific area for all participants during live sessions.  
 - **Show/Hide Point-of-View (POV)** – Display where each participant is looking in the 360° video.  
 - **Notes** – Create notes anchored to specific moments in an asset or during a live video stream. (N.B.: When in a live stream an asset = snapshot will automatically be created to capture the note). Each note has an author and can be categorized (Observation, Issue, Action, Recommendation), tracked by status (Open → In Progress → Resolved), allocated to an Assignee, and shared via direct links. If the asset has a GPS track notes are also showing the GPS coordinates. Notes can also be moved to another position (drag around to change the position) and moved in the timeline (move forward or backward in the timeline). You can also attach a file to a response in a note.
@@ -410,7 +410,9 @@ You can also generate the HTML code to enable a public embed of an asset, e.g. o
 
 Admin Users have access to this menu to manage **Settings centrally for the entire Avatour platform for ALL workspaces. Changes in those settings will be applied from the time of change (e.g. to newly created workspaces and not to existing workspaces)**. Each setting can be ticked or unticked to become the default setting across the entire platform. Each setting can also be locked, meaning that the default setting can not be changed by other users of the platform. We also offer custom domains and custom branding.
 
-![Avatour Web Console - Main Menu Item Settings](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-settings.png) *Settings Section*
+![Avatour Web Console - Main Menu Item Settings](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-settings-1-of-2.png)
+
+![Avatour Web Console - Main Menu Item Settings](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-settings-2-of-2.png) *Settings Section*
 
 #### 4.2.4 Account
 
@@ -568,7 +570,7 @@ When hosting a Live Capture meeting with your 360 camera, you will have similar 
 
 ![Avatour 360° Camera App - Three Menus](https://res.cloudinary.com/avatour/image/upload/v1792394922/avatour-screenshot-cam-app-5-live-meeting-screens.png) *Avatour 360° Camera App - 5 Screens during Live Meeting*
 
-When you tip on the screen you will have access to some settings during the live meeting. Here is another overview.
+When you tap the screen you will have access to some settings of which most already have been described above. Here is another overview.
 
 ![Avatour 360° Camera App - Settings during Live Meetings](https://res.cloudinary.com/avatour/image/upload/v1792394922/avatour-screenshot-cam-app-5-live-meeting-settings-screens.png) *Avatour 360° Camera App - Settings during Live Meetings*
 

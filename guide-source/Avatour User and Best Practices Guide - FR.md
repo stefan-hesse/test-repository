@@ -121,7 +121,7 @@ Avatour permet aux utilisateurs de collaborer de deux manières principales :
   Vous pouvez recevoir une **invitation via votre agenda** pour rejoindre une réunion Avatour. Pendant la réunion, les participants peuvent effectuer une **visite à distance en direct** ou examiner ensemble des ressources de manière synchrone.
 
 - **Visiter un espace de travail (collaboration asynchrone) :**  
-  Vous pouvez également être invité en tant que **collaborateur d'un espace de travail** pour examiner des éléments **de manière asynchrone** (à votre convenance).
+  Vous pouvez également être invité en tant que **collaborateur d’un espace de travail** pour examiner des ressources **de manière asynchrone** (à votre convenance).
 
 ### 3.1 Comment rejoindre une réunion Avatour et visiter un espace de travail Avatour {#how-to-join-an-avatour-meeting-and-visit-an-avatour-workspace}
 #### 3.1.1 Tout appareil à « écran plat » équipé d’un navigateur Web {#any-flat-screen}
@@ -134,30 +134,30 @@ Vous pouvez rejoindre une réunion Avatour depuis **n’importe quel ordinateur 
 1. **Via une invitation de calendrier (recommandé) :** 
  - Vous recevrez généralement une **invitation de calendrier** contenant un **lien de participation direct** (par exemple : `https://avatour.live/join?s=xxxxx`).  
     - En cliquant sur ce lien, le **code de réunion à 5 caractères** s’affichera automatiquement et vous serez redirigé vers la réunion.
-    - **Authentification requise :** certaines réunions sont réservées aux utilisateurs enregistrés. Dans ce cas, l’invitation indiquera que vous devez **vous connecter pour accéder à la réunion**. 
- - **Réunions protégées par mot de passe :** certaines réunions peuvent nécessiter un mot de passe. Dans ce cas, l’invitation inclura le mot de passe que vous devrez saisir pour rejoindre la réunion.
+    - **Authentification requise :** certaines réunions sont réservées aux utilisateurs enregistrés. Dans ce cas, l’invitation indiquera que vous devez **vous connecter pour accéder à la réunion**.  
+    - **Réunions protégées par mot de passe :** certaines réunions peuvent nécessiter un mot de passe. Dans ce cas, l’invitation inclura le mot de passe que vous devrez saisir pour rejoindre la réunion.
 
 2. **Via le code de réunion :**  
     - Si l’organisateur vous communique séparément un **code de réunion à 5 caractères**, rendez-vous sur [https://avatour.live/join](https://avatour.live/join), saisissez votre **nom** et le **code de réunion**, puis rejoignez la réunion.  
     - Si la réunion est **protégée par un mot de passe**, saisissez le mot de passe fourni par l’organisateur. 
  - Si la réunion nécessite une **authentification**, vous devrez **vous connecter à votre compte Avatour** avant de rejoindre la réunion.
 
-> **Astuce n° 1 :** si votre caméra ou votre micro ne fonctionne pas, il se peut qu’ils soient utilisés par une autre application (par exemple Microsoft Teams ou Zoom). Fermez toutes les applications susceptibles d’utiliser votre caméra ou votre micro, puis quittez la réunion Avatour et rejoignez-la à nouveau.  
+> **Astuce n° 1 :** Si votre caméra ou votre micro ne fonctionne pas, il se peut qu’ils soient utilisés par une autre application (par exemple Microsoft Teams ou Zoom). Fermez toutes les applications susceptibles d’utiliser votre caméra ou votre micro, puis quittez la réunion Avatour et rejoignez-la à nouveau.  
 
-> **Astuce n° 2 :** si vous ne parvenez toujours pas à rejoindre la réunion, effectuez ce test : [https://avatour.live/test](https://avatour.live/test).  
+> **Astuce n° 2 :** Si vous ne parvenez toujours pas à rejoindre la réunion, effectuez ce test : [https://avatour.live/test](https://avatour.live/test).  
 > Ce test permet de déterminer si votre **pare-feu d’entreprise ou votre réseau** bloque l’accès, et vous fournira des informations utiles pour orienter vos échanges avec votre équipe informatique.  
 
-> **Astuce n° 3 :** N’utilisez **pas** les applications Avatour pour iOS ou Android pour rejoindre des réunions. Ces applications ne sont nécessaires que pour **diffuser en direct une réunion à partir d’une caméra Insta360**, car ces caméras ne peuvent pas exécuter directement le logiciel Avatour 360° et nécessitent un smartphone pour fonctionner.
+> **Astuce n° 3 :** N’utilisez **pas** les applications Avatour pour iOS ou Android pour rejoindre les réunions. Ces applications ne sont nécessaires que pour **diffuser en direct une réunion à partir d’une caméra Insta360**, car ces caméras ne peuvent pas exécuter directement le logiciel Avatour 360° et nécessitent l’aide d’un smartphone.
 
-##### Visiter un espace de travail Avatour (sans rejoindre une réunion Avatour)
+##### Accéder à un espace de travail Avatour (sans rejoindre une réunion Avatour)
 
-Vous pouvez accéder à un espace de travail de la manière suivante :
+Vous pouvez accéder à un espace de travail de différentes manières :
 
 - **Espace de travail public :**  
   Si l’espace de travail est public, le lien est accessible directement — aucune connexion n’est requise.
 
 - **Espace de travail restreint :**  
-  Si l’espace de travail est restreint, vous devez être ajouté en tant que **collaborateur** disposant des autorisations **Éditeur** ou **Visiteur**.
+  Si l’espace de travail est restreint, vous devez être ajouté en tant que **collaborateur** disposant des autorisations **Éditeur** ou **Lecteur**.
 
     1. Lorsque vous serez ajouté en tant que collaborateur, vous recevrez une **notification par e-mail** contenant un lien vers l’espace de travail.
     2. Cliquez sur le lien figurant dans l’e-mail pour ouvrir l’espace de travail. Si vous n’êtes pas encore connecté, vous serez invité à **vous connecter ou à vous inscrire**.
@@ -175,8 +175,8 @@ Vous pouvez rejoindre une réunion et visiter un espace de travail à partir d�
 
 Avatour permet la collaboration dans deux contextes principaux :
 
-1. **Réunions (synchrones) :** collaborez en temps réel avec d’autres participants, notamment lors de visites de sites en direct ou en examinant ensemble des contenus enregistrés.  
-2. **Espaces de travail (asynchrones) :** examinez les contenus et interagissez avec eux selon votre propre emploi du temps, 24 h/24 et 7 j/7.
+1. **Réunions (synchrones) :** collaborez en temps réel avec d’autres participants, notamment lors de visites de sites en direct ou pour examiner ensemble des contenus enregistrés.  
+2. **Espaces de travail (asynchrones) :** examinez les ressources et interagissez avec elles selon votre propre emploi du temps, 24 h/24 et 7 j/7.
 
 Les **outils de collaboration sont globalement similaires** entre les réunions et les espaces de travail, avec quelques différences liées au contexte synchrone ou asynchrone.
 
@@ -188,7 +188,7 @@ L’interface d’Avatour s’articule autour de trois zones principales :
 - **Zone centrale** – Zone d’affichage principale pour la vidéo en direct, les ressources et le tableau de bord de l’espace de travail  
 - **Panneau de droite** – Informations contextuelles, telles que les participants, les réunions ou le chat  
 
-La plupart des interactions sont lancées à partir du **menu du bas**.  
+La plupart des interactions sont lancées à partir du **menu inférieur**.  
 Cliquer sur une option du menu ouvre un **panneau latéral** à gauche ou à droite de l’écran, tandis que le **canevas central** reste la zone d’affichage principale.
 
 ---
@@ -196,7 +196,7 @@ Cliquer sur une option du menu ouvre un **panneau latéral** à gauche ou à dro
 
 Voici un exemple d’affichage dans une réunion Avatour :
 
-![Interface utilisateur d’une réunion Avatour avec le panneau des ressources, le canevas vierge et le panneau des participants](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-meeting-assets-blank-participants.png)  
+![Interface utilisateur d’une réunion Avatour avec le panneau des ressources, le canevas vide et le panneau des participants](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-meeting-assets-blank-participants.png)  
 *Réunion Avatour avec le panneau des ressources (à gauche), le canevas (au centre) et le panneau des participants (à droite)*
 
 ---
@@ -225,12 +225,12 @@ Le menu inférieur permet d’accéder aux commandes et aux panneaux principaux 
 - **Microphone** – Activez ou désactivez votre micro.  
 - **Présenter** – Présentez un élément, votre bureau ou le flux de votre webcam (voir la section « Présenter » ci-dessous).  
 - **Outils de l’animateur** (animateurs uniquement) : 
- - **Verrouiller la vue** – Verrouillez la vue pour tous les participants. 
+ - **Verrouiller la vue** – Verrouiller la vue pour tous les participants. 
  - **Couper le son de tous** – Couper le son de tous les participants.  
 - **Passer en plein écran** – Afficher l’onglet de la réunion en plein écran.  
 - **Quitter la réunion** – Quitter la réunion.  
 - **Démarrer l’enregistrement** – Utilisez ce bouton pour démarrer et arrêter manuellement l’enregistrement pendant une réunion. Il est également possible d’enregistrer automatiquement les réunions si l’option **« Démarrer automatiquement l’enregistrement »** est activée dans les paramètres de l’espace de travail. Dans les deux cas, les enregistrements sont sauvegardés dans les ressources de l’espace de travail.
-- **Carte** – Ouvrez ou fermez le panneau de carte pour visualiser le déplacement de la caméra pour les ressources dotées d’un tracé GPS. Cliquer sur un emplacement permet d’accéder directement à ce point précis dans la vidéo. La carte se met à jour en temps réel au fur et à mesure de la lecture de la vidéo. Les notes s’affichent également sur la carte.
+- **Carte** – Ouvrez ou fermez le panneau de carte pour visualiser le déplacement de la caméra pour les ressources dotées d’un tracé GPS. En cliquant sur un emplacement, vous accédez directement au point exact de la vidéo. La carte se met à jour en temps réel au fur et à mesure de la lecture de la vidéo. Les notes s’affichent également sur la carte.
 - **Participants** – Ouvrez ou fermez le panneau des participants.  
 - **Informations sur la réunion** – Affichez le code de la réunion, le lien vers la réunion et accédez aux tutoriels associés.  
 
@@ -253,33 +253,33 @@ L’option **Présenter** dans le menu inférieur de la réunion vous permet de 
 
 ##### Barres d’outils « Ressource » et « Live 360° » lors des réunions
 
-Lorsque vous présentez une ressource lors d’une réunion, la **barre d’outils « Ressource »** apparaît au-dessus du canevas. Voici les outils et les éléments de menu disponibles lors de la <u>présentation d’une ressource lors d’une réunion</u> – expliqués de gauche à droite.
+Lorsque vous présentez une ressource lors d’une réunion, la **barre d’outils « Ressource »** apparaît au-dessus de la zone de travail. Voici les outils et les éléments de menu disponibles lors de la <u>présentation d’une ressource lors d’une réunion</u> – expliqués de gauche à droite.
 
 ![Menu Avatour lors de la présentation d’un élément dans une réunion](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting.png) *Menu Avatour lors de la présentation d’un élément dans une réunion*
 
-Lorsqu'une vidéo 360° en direct est diffusée en streaming lors d'une réunion, ce menu s'affiche au bas de la zone de travail.
+Lorsqu'une vidéo à 360° en direct est diffusée en streaming lors d'une réunion, ce menu s'affiche au bas de la zone de travail.
 
-<img src="https://res.cloudinary.com/avatour/image/upload/c_fill,g_auto,w_600,h_120/avatour-screenshot-live360video-menu-meeting_cguwzb.png" alt="Menu Avatour avec vidéo 360° en direct lors d’une réunion" style="width:50%; display:block; border:1px solid #DDE5EA; border-radius:6px; margin:20px 0 4px;"> *Menu Avatour avec vidéo en direct à 360° lors d’une réunion*
+<img src="https://res.cloudinary.com/avatour/image/upload/c_fill,g_auto,w_600,h_120/avatour-screenshot-live360video-menu-meeting_cguwzb.png" alt="Menu Avatour avec vidéo 360° en direct lors d'une réunion" style="width:50%; display:block; border:1px solid #DDE5EA; border-radius:6px; margin:20px 0 4px;"> *Menu Avatour avec vidéo en direct à 360° lors d’une réunion*
 
 Voici une description de tous les éléments affichés dans les menus ci-dessus.
 
 - **Chronologie vidéo / Barre de progression** – Affiche la progression de la vidéo avec des notes et des thèmes clés extraits de l’audio. Cliquez sur une note ou un thème pour passer à ce moment précis et ouvrir la note. Comprend les commandes **Lecture / Pause**.   
-- **Instantané** – Capture une image à 360° ou en 2D à partir du contenu.  
-- **Pleins feux** – Met en évidence une zone spécifique pour tous les participants pendant les sessions en direct.  
-- **Afficher/Masquer le point de vue (POV)** – Affiche la direction du regard de chaque participant dans la vidéo à 360°.  
-- **Notes** – Créez des notes associées à des moments précis d’un contenu ou pendant un flux vidéo en direct. (N.B. : lors d’un flux en direct, un contenu = un instantané sera automatiquement créé pour capturer la note). Chaque note possède un auteur et peut être classée par catégorie (Observation, Problème, Action, Recommandation), suivie par statut (Ouverte → En cours → Résolue), attribuée à un responsable et partagée via des liens directs. Si le contenu dispose d’un tracé GPS, les notes affichent également les coordonnées GPS. Les notes peuvent également être déplacées vers un autre emplacement (glisser-déposer pour changer la position) et déplacées sur la chronologie (avancer ou reculer sur la chronologie). Vous pouvez également joindre un fichier à une réponse dans une note.
+- **Instantané** – Permet de capturer une image à 360° ou en 2D à partir d’un fichier ou d’un flux en direct. Lors d’une réunion vidéo en direct à 360°, il est possible de prendre un instantané à 360° « SuperFreeze ». Il s’agit d’un instantané à haute résolution (6k) pour lequel le flux en direct est mis en pause afin d’utiliser la caméra pendant quelques secondes pour prendre cet instantané. Le caméraman doit également autoriser la prise d’un instantané SuperFreeze.  
+- **Spotlight** – Met en évidence une zone spécifique pour tous les participants pendant les sessions en direct.  
+- **Afficher/Masquer le point de vue (POV)** – Affichez la direction du regard de chaque participant dans la vidéo à 360°.  
+- **Notes** – Créez des notes associées à des moments précis d’un élément ou pendant un flux vidéo en direct. (N.B. : lors d’un flux en direct, un élément = instantané sera automatiquement créé pour capturer la note). Chaque note possède un auteur et peut être classée par catégorie (Observation, Problème, Action, Recommandation), suivie par statut (Ouverte → En cours → Résolue), attribuée à un responsable et partagée via des liens directs. Si la ressource comporte un tracé GPS, les notes affichent également les coordonnées GPS. Les notes peuvent également être déplacées vers une autre position (glisser pour changer la position) et déplacées sur la timeline (avancer ou reculer dans la chronologie). Vous pouvez également joindre un fichier à une réponse dans une note.
 
   ![Note Avatour et filtre de notes](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-notes-and-filters.png) *Notes Avatour et filtres de notes*
 
 - **Notes générées par commande vocale** – Il s’agit de marqueurs de position générés automatiquement lorsque des expressions telles que « insérer une note », « prendre une note » ou « rédiger une note » sont détectées dans une vidéo enregistrée. Ces notes apparaissent sur la timeline et doivent être **positionnées et finalisées** par l’utilisateur. 
 
-  ![Notes Avatour – Générées par commande vocale](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-notes-voice-command-generated.png) *Notes Avatour – Générées par commande vocale*
+  ![Notes Avatour – générées par commande vocale](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-notes-voice-command-generated.png) *Notes Avatour – générées par commande vocale*
 
-- **Notes générées par l’IA** – Il s’agit de marqueurs de position générés automatiquement lorsque l’enregistrement détecte, dans la piste audio de la vidéo, des mentions qui semblent correspondre à des problèmes devant être consignés pour un suivi. Les notes générées par l’IA doivent d’abord être validées par le propriétaire des notes (voir le tableau de bord de l’espace de travail ci-dessous). Une fois validées, elles s’apparentent aux notes de commande vocale : elles apparaissent sur la timeline et doivent être **positionnées et finalisées** par l’utilisateur. 
+- **Notes générées par l’IA** – Il s’agit de marqueurs de position générés automatiquement lorsque l’enregistrement détecte, dans la piste audio de la vidéo, des mentions qui semblent correspondre à des problèmes devant être consignés pour un suivi ultérieur. Les notes générées par l’IA doivent d’abord être approuvées par le propriétaire de la note (voir le tableau de bord de l’espace de travail ci-dessous). Une fois approuvées, elles s’apparentent aux notes de commande vocale : elles apparaissent sur la timeline et doivent être **positionnées et finalisées** par l’utilisateur. 
 
-- **Panneau des notes et du résumé** – Ouvre un panneau latéral affichant toutes les notes, les thèmes clés et un résumé exécutif de la ressource. Cliquer sur un élément vous amène à ce moment précis de la vidéo. 
+- **Panneau « Notes et résumé »** – Ouvre un panneau latéral affichant toutes les notes, les thèmes clés et un résumé exécutif de la ressource. Cliquer sur un élément vous amène à ce moment précis de la vidéo.  
 
- ![Résumé exécutif d’un élément Avatour](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-exec-summary.png) *Résumé exécutif Avatour lors de la présentation d’un élément au cours d’une réunion*
+  ![Résumé exécutif d’un élément Avatour](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-exec-summary.png) *Résumé exécutif Avatour lors de la présentation d’un élément au cours d’une réunion*
 
   ![Thèmes Avatour](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-topics.png) *Thèmes Avatour lors de la présentation d’un élément lors d’une réunion*
 
@@ -291,8 +291,8 @@ Voici une description de tous les éléments affichés dans les menus ci-dessus.
   ![Sélection des éléments du rapport sur les ressources Avatour](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-asset-report-element-selection.png) 
  *Menu de sélection des éléments du rapport sur les ressources Avatour*
 
-- **Partager un lien** – Partager un lien vers une note ou une scène spécifique de la ressource.  
-- **Sous-titres (CC)** – Afficher la transcription du texte à l’écran pendant la lecture de la vidéo.
+- **Partager le lien** – Partagez un lien vers une note ou une scène spécifique de la ressource.  
+- **Sous-titres (CC)** – Affichez la transcription du texte à l’écran pendant la lecture de la vidéo.
 
 ##### Barre d’outils de la ressource (espace de travail)
 
@@ -300,11 +300,11 @@ Lors de la consultation d’une ressource dans un espace de travail, la barre d�
 
 ![Menu Avatour lors de la présentation d’un élément en dehors d’une réunion, par exemple lors de la consultation d’un espace de travail](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-workspace.png) *Menu Avatour lors de la présentation d’un élément dans un espace de travail*
 
-- **Timeline vidéo / Barre de progression** – Affiche la progression de la vidéo avec des notes et des thèmes clés extraits de la piste audio. Cliquez n’importe où sur la timeline pour parcourir la vidéo. Cliquez sur une note ou un thème pour passer à ce moment précis et ouvrir la note. Comprend les commandes **Lecture / Pause**.  
+- **Timeline vidéo / Barre de progression** – Affiche la progression de la vidéo avec des notes et des thèmes clés extraits de la piste audio. Cliquez n’importe où sur la timeline pour parcourir la vidéo. Cliquez sur une note ou un thème pour accéder à ce moment précis et ouvrir la note. Comprend les commandes **Lecture / Pause**.  
 - **Instantané, Notes, Panneau des notes et du résumé, Lien de partage, Sous-titres**  
 - Non disponible : **Spotlight, POV** (ces fonctionnalités nécessitent la présence de participants en direct)  
 - Commandes supplémentaires :
-    - **Par pas de 10 secondes** – Avance/retour rapide 
+    - **Incréments de 10 secondes** – Avance/retour rapide 
  - **Vitesse de lecture** – Réglage de la vitesse (0,5×–2×) 
  - **Découper la vidéo** – Découper le début ou la fin de la ressource
 
@@ -359,7 +359,7 @@ Dans les menus du bas, vous trouverez :
  - **Lecteur** – Peut consulter les ressources. L’invitation crée un utilisateur « Invité » si nécessaire. 
  - **Éditeur** – Contrôle total de l’espace de travail, mêmes droits que l’Hôte. L’invitation fait passer l’utilisateur au statut d’Hôte si nécessaire.  
 > Plusieurs utilisateurs peuvent accéder simultanément à un espace de travail sans avoir à organiser de réunion. Les espaces de travail publics et les paramètres d’accès aux réunions offrent d’autres possibilités d’accès.  
-- **Rapport** – Générez un rapport à l’aide d’un modèle d’inspection sur les ressources sélectionnées de l’espace de travail. Les réponses sont générées par l’IA à partir de la ou des pistes audio des vidéos sélectionnées et peuvent être modifiées.  
+- **Rapport** – Génère un rapport à l’aide d’un modèle d’inspection sur les ressources sélectionnées de l’espace de travail. Les réponses sont générées par l’IA à partir de la ou des pistes audio des vidéos sélectionnées et peuvent être modifiées.  
 
 ![Rapport d’espace de travail Avatour et sélection des éléments](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-asset-selection-and-workspace-report.png) *Rapport d’espace de travail et sélection des éléments*
 
@@ -388,9 +388,9 @@ Dans les menus du bas, vous trouverez :
 * **Autoriser l’accès en tant qu’invité** – Permet aux utilisateurs non enregistrés de consulter les ressources. 
 * **Démarrage automatique de l’enregistrement / Démarrage manuel** – Choisissez si les réunions sont enregistrées automatiquement ou si l’enregistrement est lancé manuellement. 
 * **Hôte requis** – L’hôte doit admettre les participants ; la réunion prend fin lorsque l’hôte quitte la session.
-* **Autoriser l’accès en tant que spectateur** – Participer sans micro ni caméra ; communiquer via le chat. Lorsque cette option est activée, un lien de réunion pour les spectateurs s’affiche.
+* **Autoriser l’accès en tant qu’observateur** – Participer sans micro ni caméra ; communiquer via le chat. Lorsque cette option est activée, un lien de réunion pour les observateurs s’affiche.
 * **Réunions protégées par mot de passe** – Exiger un mot de passe pour participer.
-* **Afficher la question sur les économies de déplacement** – Demandez aux participants si la réunion a permis de réduire les déplacements.
+* **Afficher la question sur les économies de déplacement** – Demander aux participants si la réunion a permis de réduire les déplacements.
 
 > Les paramètres peuvent être combinés (par exemple, aucun animateur requis mais protection par mot de passe).
 
@@ -404,19 +404,21 @@ Gérez toutes les vidéos à 360°/2D (MP4, MOV), les images (PNG, JPEG / JPG, H
 
 Vous pouvez également générer le code HTML permettant l’intégration publique d’un élément, par exemple sur votre site web. Il suffit de cocher la case « Activer l’intégration publique », puis de cliquer sur « Enregistrer » pour obtenir le code.
 
-![Console Web Avatour - Élément du menu principal « Ressources »](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-assets-embed-code.png) *Élément du menu principal « Ressources »*
+![Console Web Avatour - Élément de menu principal « Ressources »](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-assets-embed-code.png) *Élément de menu principal « Ressources »*
 
 #### 4.2.3 Paramètres
 
 Les utilisateurs administrateurs ont accès à ce menu pour gérer **centralement les paramètres de l’ensemble de la plateforme Avatour pour TOUS les espaces de travail. Les modifications apportées à ces paramètres s’appliqueront à partir du moment où elles sont effectuées (par exemple, aux espaces de travail nouvellement créés et non aux espaces de travail existants)**. Chaque paramètre peut être coché ou décoché pour devenir le paramètre par défaut sur l’ensemble de la plateforme. Chaque paramètre peut également être verrouillé, ce qui signifie que le paramètre par défaut ne peut pas être modifié par les autres utilisateurs de la plateforme. Nous proposons également des domaines personnalisés et une personnalisation de l’image de marque.
 
-![Console Web Avatour - Élément du menu principal « Paramètres »](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-settings.png) *Section « Paramètres »*
+![Console Web Avatour - Élément du menu principal « Paramètres »](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-settings-1-of-2.png)
+
+![Console Web Avatour - Paramètres du menu principal](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-settings-2-of-2.png) *Section Paramètres*
 
 #### 4.2.4 Compte
 
-Vous pouvez ici consulter les détails de votre compte et gérer les comptes d’utilisateurs enregistrés (Hôte, Administrateur, Invité), y compris leurs droits d’accès à l’espace de travail, ainsi que télécharger des modèles d’inspection pour générer des rapports sur l’espace de travail (voir ci-dessus).
+Vous pouvez ici consulter les détails de votre compte et gérer les comptes d’utilisateurs enregistrés (Hôte, Admin, Invité), y compris leurs droits d’accès à l’espace de travail, ainsi que télécharger des modèles d’inspection pour générer des rapports sur l’espace de travail (voir ci-dessus).
 
-![Console Web Avatour - Élément de menu principal « Compte »](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-account-1-of-3.png) *Aperçu du compte - Sections supérieures*
+![Console Web Avatour - Élément du menu principal « Compte »](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-account-1-of-3.png) *Aperçu du compte - Sections supérieures*
 
 ![Console Web Avatour - Rubrique du menu principal « Compte »](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-account-2-of-3.png) *Aperçu du compte - Gestion des accès à l'espace de travail*
 
@@ -428,7 +430,7 @@ Fournit des informations sur les réunions, l'utilisation de l'espace de travail
 
 ![Console Web Avatour - Rubrique du menu principal « Analyses » (1 sur 3)](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-analytics-1-of-3.png) *Aperçu des analyses*
 
-![Console Web Avatour - Rubrique du menu principal « Analyses » (2 sur 3)](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-analytics-2-of-3.png) *Activité des réunions et utilisation de l'espace de travail*
+![Console Web Avatour - Rubrique « Analytics » du menu principal (2 sur 3)](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-analytics-2-of-3.png) *Activité des réunions et utilisation de l'espace de travail*
 
 ![Console Web Avatour - Rubrique « Analytics » du menu principal (3 sur 3)](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-main-menu-analytics-3-of-3.png) *Économies et utilisation des licences d'appareils* 
 
@@ -440,24 +442,24 @@ Vous trouverez ici un guide en ligne très complet pour vous aider à faire vos 
 Voici également l'image accompagnée des instructions que vous trouverez à l'intérieur du couvercle de la mallette du kit 3.1.
 ![Image à l'intérieur du couvercle de la mallette du kit Avatour](https://res.cloudinary.com/avatour/image/upload/avatour-turnkey-kit-3.1-inside-lid-picture.png) *Image à l'intérieur du couvercle de la mallette du kit Avatour* 
 
-Suivez le guide et les instructions pour déballer, assembler et mettre en marche votre caméra.
+Suivez le guide et les instructions pour déballer, assembler et allumer votre caméra.
 
 ---
 
 ### 5.2 Conseils utiles
 
-#### Batterie externe – Des sessions plus longues et une meilleure performance thermique 
+#### Batterie externe – Des réunions en direct plus longues et une meilleure gestion thermique 
 
-La batterie interne de la caméra a une autonomie d’environ 30 à 45 minutes. Une alerte s’affiche lorsque la batterie est faible. Grâce à une batterie externe, vous pouvez prolonger l’autonomie, voire la rendre illimitée, car vous pouvez changer de batterie pendant l’utilisation.
+La batterie interne de la caméra a une autonomie d’environ 30 à 45 minutes. Une alerte s’affiche lorsque la batterie est faible. Avec une batterie externe, vous pouvez prolonger l’autonomie, voire la rendre illimitée, car vous pouvez changer de batterie pendant l’utilisation.
 
 - **Si votre kit comprend une batterie Ulanzi :** fixez-la entre la base du trépied et la perche télescopique, puis connectez la batterie à la caméra via USB-C.  
 
-- **Si votre kit comprend une perche à batterie Telesin :** fixez la caméra directement sur la perche télescopique Telesin et connectez-la via USB-C.  
+- **Si votre kit comprend une perche à batterie Telesin :** fixez la caméra directement sur la perche à batterie télescopique Telesin et connectez-la via USB-C.  
 
 Utilisation de la batterie externe :
 
 1. Prolonge l’autonomie totale de ~40 minutes (batterie de la caméra uniquement) à ~3 heures.  
-2. Apporte plus de stabilité à l’installation de la caméra.  
+2. Renforce la stabilité de l’installation de la caméra.  
 3. Contribue à prévenir tout risque de surchauffe.  
 
 **Remarques importantes :** 
@@ -476,25 +478,25 @@ Utilisation de la batterie externe :
  - **Volume :** utilisez les boutons « + » et « - ».  
 
 - **Environnements calmes / plusieurs participants à proximité de la caméra :** 
-  Utilisez le haut-parleur à clipser NoxGear. Il n’offre pas une qualité sonore aussi haute que les haut-parleurs de conférence (par exemple, le Jabra Speak), mais il est facile à fixer sur votre chemise et capte efficacement les voix à proximité.  
+  Utilisez le haut-parleur à clipser NoxGear. Il n’offre pas la même qualité audio que les haut-parleurs de conférence (par exemple, le Jabra Speak), mais il est facile à fixer sur votre chemise et capte efficacement les voix à proximité.  
     - **Mise en marche/arrêt :** Maintenez le bouton Lecture/Pause enfoncé pendant 2 secondes. 
  - **Mode d’appairage Bluetooth :** Passe automatiquement en mode d’appairage à la mise sous tension (la LED clignote en bleu/rouge ; elle reste allumée en bleu fixe une fois l’appairage effectué).  
     - **Volume :** Utilisez les boutons « + » et « - ».  
 
-- **Utilisation de votre propre appareil :** Si vous préférez une autre solution (par exemple, un haut-parleur de conférence ou un casque personnel), vous pouvez l'appairer via la caméra : Paramètres → Bluetooth.
+- **Utilisation de votre propre appareil :** Si vous préférez une autre solution (par exemple, un haut-parleur de conférence ou un casque personnel), vous pouvez l’appairer via la caméra : Paramètres → Bluetooth.
 
 **Remarques importantes :** 
-> Lorsqu’un appareil audio est connecté avec succès, vous entendrez un message de confirmation et vous verrez s’afficher, dans la partie supérieure de l’écran de la caméra, l’icône d’un casque audio.
+> Lorsqu’un appareil audio est connecté avec succès, vous entendrez un message de confirmation et verrez s’afficher, dans la partie supérieure de l’écran de la caméra, l’icône d’un casque audio.
 > 
 > Restez bien à l’intérieur de la portée de la connexion Bluetooth, sinon vous risquez de perdre la connexion audio. 
 
 #### Connectivité
-**Avant de commencer :** Assurez-vous d’avoir une connexion Internet via :
+**Avant de commencer :** Assurez-vous de disposer d’une connexion Internet via :
 
 - **Wi-Fi local** (de préférence)
 - **Réseau mobile** (si vous êtes hors de portée du Wi-Fi)
 
-**Débit recommandé :** 10 Mbps en débit montant/descendant pour un streaming à 360° complet (~5 Mbps). Un débit inférieur (1 à 2 Mbps) ne fonctionne que lorsque vous restez immobile.
+**Débit recommandé :** 10 Mbps en débit montant/descendant pour un streaming à 360° complet (~5 Mbps). Une bande passante inférieure (1 à 2 Mbps) ne fonctionne que lorsque vous restez immobile.
 
 ##### Tester la vitesse du réseau
 - **Test sur un seul site :** utilisez n’importe quel outil de mesure de vitesse que vous utilisez habituellement (par exemple, [Speedtest](https://www.speedtest.net)) pour vérifier à la fois la bande passante en envoi et en réception.   
@@ -502,7 +504,7 @@ Utilisation de la batterie externe :
 
 ##### Wi-Fi local
 - Fortement recommandé pour des connexions stables.  
-- Si le service informatique exige une liste blanche, retrouvez l’adresse MAC : Paramètres → À propos → Adresse Wi-Fi.
+- Si le service informatique exige une liste blanche, recherchez l’adresse MAC : Paramètres → À propos → Adresse Wi-Fi.
 
 ##### Réseau mobile
 **Option A : point d’accès et carte SIM fournis avec le kit**  
@@ -537,26 +539,26 @@ Utilisation de la batterie externe :
 
 Lorsque plusieurs participants rejoignent une réunion Avatour en direct depuis le même lieu que la caméra à 360°, une gestion rigoureuse de l’**audio et de la bande passante** est essentielle :  
 
-- Chaque smartphone, tablette ou ordinateur portable connecté sur place consomme de la bande passante et peut nuire au flux de la caméra à 360°.  
+- Chaque smartphone, tablette ou ordinateur portable connecté sur place consomme de la bande passante et peut nuire à la qualité du flux vidéo de la caméra à 360°.  
 - La présence de plusieurs microphones et haut-parleurs dans un même espace peut provoquer un **retour audio**, rendant l’expérience de la réunion désagréable pour tous les participants.
 
 Pour relever ces défis, suivez ces **bonnes pratiques** :
 
-- **Utilisez des écouteurs filaires ou sans fil :** de préférence avec réduction de bruit pour éviter l’écho et le retour audio.  
+- **Utilisez des écouteurs filaires ou sans fil :** de préférence avec une fonction de réduction du bruit pour éviter l’écho et le larsen.  
 - **Mode « Sur place » :** rejoignez la réunion en mode « Sur place » lorsque vous êtes physiquement présent à proximité de la caméra à 360°, car ce mode est optimisé pour une utilisation sur site :
-    - Il coupe par défaut le micro et les haut-parleurs du participant.
-    - Il **ne** diffuse **pas** le flux vidéo du participant.
-    - N’affiche **pas** le flux de la caméra à 360° dans le navigateur du participant.
-    - Économise la bande passante du réseau, garantissant ainsi que la caméra à 360° dispose d’un débit de téléchargement maximal pour la diffusion en direct.
+    - Il coupe par défaut le micro et le haut-parleur du participant.
+    - Il **ne** transmet **pas** le flux vidéo de la caméra du participant.
+    - Il **ne** affiche **pas** le flux de la caméra à 360° dans le navigateur du participant.
+    - Économise la bande passante du réseau, garantissant ainsi à la caméra à 360° un débit de transmission maximal pour la diffusion en direct.
     - Utile lorsqu’un utilisateur souhaite partager des détails spécifiques ; vous **pouvez partager à votre tour le flux de votre caméra** pour offrir des vues ciblées.
-- **Coupez le son lorsque vous ne parlez pas :** cela évite les retours audio indésirables et les distractions.
+- **Couper le son lorsque vous ne parlez pas activement :** évite les larsens audio indésirables et les distractions.
 - **Utilisez un réseau distinct si possible :** connectez votre smartphone à un réseau différent de celui de la caméra afin de réduire les interférences.
 
 Le respect de ces consignes garantit une visite en direct fluide et de haute qualité, tant pour les participants sur place que pour ceux à distance.
 
 ### 5.3 Application Avatour Camera
 
-Voici les menus (1) Niveau supérieur, (2) Paramètres et (3) Paramètres réseau.
+Voici (1) le menu principal, (2) les paramètres et (3) les paramètres réseau.
 
 ![Application Avatour 360° Camera - Les trois menus](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-cam-app-3-menu-screens.png) *Application Avatour 360° Camera - 3 menus*
 
@@ -568,43 +570,43 @@ Lorsque vous organisez une réunion Live Capture avec votre caméra à 360°, vo
 
 ![Application Avatour pour caméra 360° - Trois menus](https://res.cloudinary.com/avatour/image/upload/v1792394922/avatour-screenshot-cam-app-5-live-meeting-screens.png) *Application Avatour 360° Camera - 5 écrans pendant une réunion en direct*
 
-En appuyant sur l'écran, vous aurez accès à certains paramètres pendant la réunion en direct. Voici un autre aperçu.
+Lorsque vous appuyez sur l'écran, vous accédez à certains paramètres, dont la plupart ont déjà été décrits ci-dessus. En voici un autre aperçu.
 
 ![Application Avatour 360° Camera - Paramètres pendant les réunions en direct](https://res.cloudinary.com/avatour/image/upload/v1792394922/avatour-screenshot-cam-app-5-live-meeting-settings-screens.png) *Application Avatour 360° Camera - Paramètres pendant les réunions en direct*
 
-L'option « Optimiser le mouvement » est principalement destinée aux spectateurs utilisant des casques de réalité virtuelle afin de réduire le risque potentiel de mal des transports et de tremblements visuels. Le verrouillage de la direction et la modification de l'angle de la vidéo sont décrits ci-dessus.
+L’option « Optimiser le mouvement » est principalement destinée aux spectateurs utilisant un casque de réalité virtuelle afin de réduire le risque potentiel de mal des transports et de tremblements visuels. Le verrouillage de la direction et la modification de l’angle de la vidéo sont décrits ci-dessus.
 
-**Galerie** – Retrouvez ici toutes vos vidéos et photos à 360° prêtes à être mises en ligne sur la console Web Avatour – aucune étape manuelle supplémentaire, telle que l’assemblage ou la conversion de format de fichier, n’est nécessaire. Vous pouvez mettre en ligne et supprimer des ressources en masse – appuyez sur « Sélectionner » en haut de l’écran. Avant le téléchargement, vous pouvez choisir plusieurs étapes de traitement telles que « Flouter les visages », générer un « résumé IA » et optimiser le signal audio avec « Améliorer la parole ». Vous pouvez même choisir un espace de travail auquel affecter le fichier – celui-ci figurera bien sûr également dans la section générale des fichiers de la console Web.
+**Galerie** – Retrouvez ici toutes vos vidéos et photos à 360° prêtes à être mises en ligne sur la console Web Avatour – aucune étape manuelle supplémentaire, telle que l’assemblage ou la conversion de format de fichier, n’est nécessaire. Vous pouvez importer et supprimer des ressources en masse : appuyez sur « Sélectionner » en haut de l’écran. Avant l’importation, vous pouvez choisir plusieurs étapes de traitement telles que « Flouter les visages », générer un « résumé IA » et optimiser le signal audio avec « Améliorer la parole ». Vous pouvez même choisir un espace de travail auquel attribuer le fichier — celui-ci figurera bien sûr également dans la section générale des fichiers de la console Web.
 
-**Paramètres** – Dans les Paramètres, vous disposez des options suivantes :
+**Paramètres** — Dans les paramètres, vous disposez des options suivantes :
 
 - **Réseau** : cette option vous permet de modifier le réseau Wi-Fi auquel la caméra est connectée ou d’effectuer un test de connexion réseau pour vérifier votre débit de streaming
-- **Audio Bluetooth** : connectez ici tout périphérique audio Bluetooth pour les réunions en direct (obligatoire) et la capture rapide (fortement recommandée). Le microphone et le haut-parleur intégrés à la caméra ne sont pas très puissants.
-- **Capture en direct** : Réglez vos paramètres de capture en direct en fonction de la bande passante disponible, de la sensibilité VR de l’invité ou de la présence ou non des lentilles de protection sur votre caméra :
+- **Audio Bluetooth** : connectez ici tout périphérique audio Bluetooth pour les réunions en direct (obligatoire) et la capture rapide (fortement recommandé). Le microphone et le haut-parleur intégrés à la caméra ne sont pas très puissants.
+- **Capture en direct** : ajustez vos paramètres de capture en direct en fonction de la bande passante disponible, de la sensibilité VR de l’invité ou de la présence ou non des lentilles de protection sur votre caméra :
 
- - **Fréquence d’images cible (facultatif)** : réglez la fréquence d’images de votre vidéo de capture en direct entre 15 ips, 24 ips et 30 ips. Des fréquences d’images plus élevées produisent une vidéo plus fluide, mais nécessitent davantage de bande passante en upload. Par défaut : 15 ips
+    - **Fréquence d’images cible (facultatif)** : réglez la fréquence d’images de votre vidéo de capture en direct entre 15 ips, 24 ips et 30 ips. Des fréquences d’images plus élevées produisent une vidéo plus fluide, mais nécessitent davantage de bande passante en upload. Par défaut : 15 ips
     - **Débit binaire cible** : vous permet d’augmenter ou de réduire le débit binaire maximal de diffusion en continu pour votre « Live Capture ». Vous pouvez définir votre débit binaire cible entre 1 Mbps et 10 Mbps. Des débits binaires plus élevés se traduisent par une meilleure résolution vidéo, mais nécessitent davantage de bande passante en upload. Par défaut : 5 Mbps
-    - **Optimiser le mouvement** : cette option réduit la fréquence d’images de la vidéo, ce qui allège la charge sur la bande passante en upload de votre réseau et augmente votre débit binaire de diffusion. De plus, elle contribue à réduire le mal des transports chez les participants en réalité virtuelle. Par défaut : Désactivé
+    - **Optimiser le mouvement** : cette option réduit la fréquence d’images de la vidéo, ce qui allège la charge sur la bande passante de téléchargement de votre réseau et augmente votre débit binaire de diffusion. De plus, cette option contribue à réduire le mal des transports chez les participants en réalité virtuelle. Par défaut : désactivé
     - **Verrouillage de la direction** : cette option « verrouille » la vue à 360°, quel que soit le mouvement que vous effectuez avec la caméra 360°. Si vous souhaitez que la vidéo à 360° suive les mouvements de la caméra, par exemple pour « pointer » l’objectif avant vers un objet, réglez le verrouillage de direction sur Non. La caméra se comportera alors comme une caméra traditionnelle, ce qui peut s’avérer plus utile pour les visites guidées. Par défaut : Oui
-    - **Orientation initiale** : lorsque vous réglez le verrouillage de direction sur « Non », vous pouvez choisir quelle lentille (avant ou arrière) doit constituer l’orientation initiale au démarrage de la vidéo en direct. Par défaut : « Face à l’opérateur », car c’est la manière la plus naturelle de démarrer une réunion en direct (= lentille arrière). La fonction « Capture rapide » fonctionne différemment (l’objectif avant est l’orientation initiale par défaut – voir ci-dessous).
+    - **Orientation initiale** : lorsque vous réglez le verrouillage de direction sur « Non », vous pouvez choisir quelle lentille (avant ou arrière) doit servir d’orientation initiale au démarrage de la vidéo en direct. Par défaut : orientée vers l’opérateur, car c’est la manière la plus naturelle de démarrer une réunion en direct (= objectif arrière). La fonction « Capture rapide » fonctionne différemment (l’orientation initiale est par défaut l’objectif avant – voir ci-dessous).
 
-- **Capture rapide** : ajustez vos paramètres de « Capture rapide » en fonction de la fréquence d’images vidéo souhaitée, de la bande passante disponible pour le téléchargement des vidéos enregistrées et d’autres préférences. Les fonctionnalités liées à la carte, telles qu’expliquées ci-dessus (par exemple, l’affichage de la carte, les notes sur la carte), sont disponibles lorsqu’un signal GPS est reçu et que le paramètre de localisation dans les réglages natifs de l’appareil photo est activé (ce qui devrait être le cas par défaut). L’icône de localisation / GPS dans le coin supérieur droit de l’écran « Quick Capture » doit être verte. La réception du signal GPS et l’établissement de la connexion peuvent prendre quelques instants.
-    - **Résolution** : Vous pouvez modifier la résolution ici. *(Les résolutions 6k sont expérimentales et nécessitent une étape d’assemblage manuel dans la Galerie avant le téléchargement vers la console Web Avatour.)*
- - **4k** - Il s’agit de la résolution standard, qui offre un bon compromis entre qualité vidéo et taille de fichier.
+- **Capture rapide** : ajustez vos paramètres de « Capture rapide » en fonction de la fréquence d’images vidéo souhaitée, de la bande passante disponible pour le téléchargement des vidéos enregistrées et d’autres préférences. Les fonctionnalités liées à la carte, telles qu’expliquées ci-dessus (par exemple, l’affichage de la carte, les notes sur la carte), sont disponibles lorsqu’un signal GPS est reçu et que le paramètre de localisation dans les réglages natifs de l’appareil photo est activé (ce qui devrait être le cas par défaut). L’icône de localisation / GPS dans le coin supérieur droit de l’écran « Capture rapide » doit être verte. La réception du signal GPS et l’établissement de la connexion peuvent prendre quelques instants.
+    - **Résolution** : vous pouvez modifier la résolution ici. *(Les résolutions 6k sont expérimentales et nécessitent une étape d’assemblage manuel dans la Galerie avant le téléchargement vers la console Web Avatour.)*
+ - **4k** - Il s’agit de la résolution standard, qui offre un bon équilibre entre qualité vidéo et taille de fichier.
  - **6k à 30 images par seconde** *(nécessite une étape d’assemblage supplémentaire dans la Galerie)*
  - **6k à 10 images par seconde** *(nécessite une étape d’assemblage supplémentaire dans la Galerie)* - Cette option est utile si vous souhaitez réduire la taille du fichier par rapport à la résolution à 30 images par seconde, lorsque la fluidité du mouvement est moins importante.
         - Pour d’autres résolutions, vous pouvez également utiliser les applications natives de l’appareil photo, y compris sur le PanoX V2. Pour plus de détails, consultez [Comment enregistrer et mettre en ligne des vidéos à 360° avec l’application Avatour ?](https://avatour.com/support/comment-enregistrer-et-publier-des-vidéos-à-360°-avec-l'application-Avatour)
-    - **Fréquence d’images cible** *(disponible uniquement pour la résolution 4K)* - Réglez la fréquence d’images de vos enregistrements vidéo en mode « Quick Capture » entre 15 ip, 24 ip et 30 ip. Des fréquences d’images plus élevées produisent une vidéo plus fluide, mais augmentent la taille du fichier vidéo et le temps de mise en ligne. Recommandé : 30 images par seconde
-    - **Débit binaire cible** *(disponible uniquement pour la résolution 4K)* Définissez le débit binaire cible pour les téléchargements en mode « Quick Capture » entre 5 Mbps et 20 Mbps. Des débits binaires plus faibles augmentent la vitesse de téléchargement, mais réduisent la qualité vidéo. Recommandé : 20 Mbps
+    - **Fréquence d'images cible** *(disponible uniquement pour la résolution 4K)* - Réglez la fréquence d’images de vos enregistrements vidéo en mode « Quick Capture » entre 15 ips, 24 ips et 30 ips. Des fréquences d’images plus élevées produisent une vidéo plus fluide, mais augmentent la taille du fichier vidéo et le temps de mise en ligne. Recommandé : 30 images par seconde
+    - **Débit binaire cible** *(disponible uniquement pour la résolution 4K)* Définissez le débit binaire cible pour les téléchargements en « Quick Capture » entre 5 Mbps et 20 Mbps. Des débits binaires plus faibles augmentent la vitesse de téléchargement, mais réduisent la qualité vidéo. Recommandé : 20 Mbps
     - **Verrouillage de l’orientation** : identique à ce qui précède pour la capture en direct. L’orientation initiale par défaut est toujours l’objectif avant pour la capture rapide.
 
-  > Consultez également notre [Calculateur de taille de fichiers vidéo Avatour 360°](https://avatour.com/support/avatour-360deg-video-file-size-calculator) pour obtenir des conseils supplémentaires sur les paramètres ci-dessus et la taille des fichiers vidéo. Pour éviter d’épuiser l’espace de stockage, une alerte s’affichera afin que vous puissiez arrêter l’enregistrement et libérer de l’espace (par exemple en transférant des vidéos de la Galerie vers la section « Ressources » de la console Web Avatour).
+  > Consultez également notre [Calculateur de taille de fichiers vidéo Avatour 360°](https://avatour.com/support/avatour-360deg-video-file-size-calculator) pour obtenir des conseils supplémentaires sur les paramètres ci-dessus et la taille des fichiers vidéo. Pour éviter d’épuiser l’espace de stockage, une alerte s’affichera afin que vous puissiez arrêter l’enregistrement et libérer de l’espace (par exemple en transférant des vidéos de la Galerie vers les ressources de la console Web Avatour).
 
 - **Tutoriel** : accédez au petit tutoriel destiné aux opérateurs de caméra.
 
 - **À propos** : affichez le numéro de série de l’appareil et la version du logiciel
 
-**Compte** - Pour vous connecter avec votre compte d’hôte ou d’administrateur Avatour. Lorsque vous êtes déconnecté, les éléments de menu « Live Meeting » et « Connexion » sont grisés. Pour vous connecter, vous pouvez scanner le code-barres avec votre smartphone, ce qui vous redirigera vers la section « Appareil » de votre smartphone où vous pourrez saisir le code à 6 chiffres pour vous connecter avec votre compte Avatour (vous devez être connecté sur votre smartphone). Vous pouvez également utiliser la section « Appareil » de votre ordinateur portable et y saisir le code (voir également ci-dessus « Connexion à l'appareil » au point 4.1). Une troisième option consiste à saisir vos identifiants de connexion dans l'application de la caméra, mais ce n'est peut-être pas la méthode la plus pratique, car le clavier affiché à l'écran de la caméra n'est pas très grand.
+**Compte** - Pour vous connecter avec votre compte hôte ou administrateur Avatour. Lorsque vous êtes déconnecté, les éléments de menu « Réunion en direct » et « Connexion » sont grisés. Pour vous connecter, vous pouvez scanner le code-barres avec votre smartphone, ce qui vous redirigera vers la section « Appareil » de votre smartphone où vous pourrez saisir le code à 6 chiffres pour vous connecter à votre compte Avatour (vous devez être connecté sur votre smartphone). Vous pouvez également utiliser la section « Appareil » de votre ordinateur portable et y saisir le code (voir également ci-dessus « Connexion à l’appareil » au point 4.1). Une troisième option consiste à saisir vos identifiants de connexion dans l’application de la caméra, mais ce n’est peut-être pas la méthode la plus pratique, car le clavier affiché à l’écran de la caméra n’est pas très grand.
 
 ![Application Avatour 360° Camera - Connexion au compte](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-cam-app-4-login-screens.png) *Application Avatour 360° Camera - Connexion au compte*
 
