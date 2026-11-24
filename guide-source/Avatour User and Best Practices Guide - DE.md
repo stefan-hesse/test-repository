@@ -138,18 +138,18 @@ Sie können über einen Webbrowser von **jedem Desktop- oder Laptop-Computer, Sm
     - **Passwortgeschützte Besprechungen:** Für manche Besprechungen ist möglicherweise ein Passwort erforderlich. In diesem Fall enthält die Einladung das Passwort, das Sie eingeben müssen, um teilzunehmen.
 
 2. **Über den Besprechungscode:**  
-    - Wenn der Gastgeber einen **5-stelligen Meeting-Code** separat mitteilt, rufen Sie [https://avatour.live/join](https://avatour.live/join) auf, geben Sie Ihren **Namen** und den **Meeting-Code** ein und nehmen Sie am Meeting teil.  
+    - Wenn der Gastgeber einen **5-stelligen Meeting-Code** separat mitteilt, gehen Sie zu [https://avatour.live/join](https://avatour.live/join), geben Sie Ihren **Namen** und den **Meeting-Code** ein und nehmen Sie am Meeting teil.  
     - Wenn die Besprechung **passwortgeschützt** ist, geben Sie das vom Gastgeber bereitgestellte Passwort ein. 
  - Wenn für die Besprechung eine **Authentifizierung** erforderlich ist, müssen Sie sich vor der Teilnahme **mit Ihrem Avatour-Konto anmelden**.
 
-> **Tipp 1:** Wenn Ihre Kamera oder Ihr Mikrofon nicht funktioniert, werden diese möglicherweise von einer anderen Anwendung (z. B. Microsoft Teams oder Zoom) verwendet. Schließen Sie alle Apps, die möglicherweise Ihre Kamera oder Ihr Mikrofon nutzen, verlassen Sie dann die Avatour-Besprechung und treten Sie erneut bei.  
+> **Tipp 1:** Wenn Ihre Kamera oder Ihr Mikrofon nicht funktioniert, werden diese möglicherweise von einer anderen Anwendung (z. B. Microsoft Teams oder Zoom) genutzt. Schließen Sie alle Apps, die möglicherweise Ihre Kamera oder Ihr Mikrofon nutzen, und verlassen Sie das Avatour-Meeting, um anschließend erneut beizutreten.  
 
-> **Tipp 2:** Wenn Sie der Besprechung immer noch nicht beitreten können, führen Sie diesen Test durch: [https://avatour.live/test](https://avatour.live/test).  
+> **Tipp 2:** Wenn Sie dem Meeting immer noch nicht beitreten können, führen Sie diesen Test durch: [https://avatour.live/test](https://avatour.live/test).  
 > Der Test kann feststellen, ob Ihre **Unternehmensfirewall oder Ihr Netzwerk** den Zugriff blockiert, und liefert Informationen, die Ihnen als Grundlage für Gespräche mit Ihrem IT-Team dienen.  
 
 > **Tipp 3:** Verwenden Sie **nicht** die Avatour-Apps für iOS oder Android, um an Meetings teilzunehmen. Diese Apps werden nur benötigt, wenn **ein Live-Meeting von einer Insta360-Kamera gestreamt wird**, da diese Kameras die Avatour-360°-Software nicht direkt ausführen können und ein Smartphone zur Unterstützung benötigen.
 
-##### Einen Avatour-Arbeitsbereich besuchen (ohne an einem Avatour-Meeting teilzunehmen)
+##### Einen Avatour-Workspace besuchen (ohne an einem Avatour-Meeting teilzunehmen)
 
 Sie können auf folgende Weise auf einen Arbeitsbereich zugreifen:
 
@@ -159,44 +159,44 @@ Sie können auf folgende Weise auf einen Arbeitsbereich zugreifen:
 - **Eingeschränkter Arbeitsbereich:**  
   Wenn der Arbeitsbereich eingeschränkt ist, müssen Sie als **Mitarbeiter** mit den Berechtigungen **Editor** oder **Betrachter** hinzugefügt werden.
 
-    1. Wenn Sie als Mitwirkender hinzugefügt wurden, erhalten Sie eine **E-Mail-Benachrichtigung** mit einem Link zum Arbeitsbereich.
+ 1. Wenn Sie als Mitarbeiter hinzugefügt werden, erhalten Sie eine **E-Mail-Benachrichtigung** mit einem Link zum Arbeitsbereich.
     2. Klicken Sie auf den Link in der E-Mail, um den Arbeitsbereich zu öffnen. Falls Sie noch nicht angemeldet sind, werden Sie aufgefordert, sich **anzumelden oder die Registrierung abzuschließen**.
-    3. Sobald Sie angemeldet sind, öffnet sich der Arbeitsbereich automatisch.
+    3. Sobald Sie angemeldet sind, wird der Arbeitsbereich automatisch geöffnet.
 
   Alternativ können Sie sich unter [https://avatour.live/login](https://avatour.live/login) anmelden und über Ihre **Liste der Arbeitsbereiche** auf den Arbeitsbereich zugreifen.
 
 #### 3.1.2 VR-Headset {#vr-headset}
-Sie können mit einer Reihe kompatibler Meta- und Pico-Headsets an einem Meeting teilnehmen und einen Workspace besuchen. Gehen Sie dazu wie folgt vor: 
+Sie können von einer Reihe kompatibler Meta- und Pico-Headsets aus an einem Meeting teilnehmen und einen Workspace besuchen. Gehen Sie dazu wie folgt vor: 
 
 1. Installieren Sie unsere Avatour-App aus Ihrem jeweiligen VR-Store: [So installieren Sie die Avatour-VR-App](https://avatour.com/support/which-vr-headsets-can-i-use-with-avatour)
 2. Starten Sie unsere App und geben Sie den Besprechungscode ein oder wählen Sie einen Arbeitsbereich aus, um an einer Besprechung teilzunehmen. Weitere Informationen zur Nutzung unserer VR-App finden Sie in unserem Knowledge-Base-Artikel [hier](https://avatour.com/support/what-features-are-available-to-vr-guests).
 
-### 3.2 Tools für die Zusammenarbeit in Meetings und Workspaces {#meeting-tools}
+### 3.2 Tools für die Zusammenarbeit in Meetings und Arbeitsbereichen {#meeting-tools}
 
 Avatour ermöglicht die Zusammenarbeit in zwei Hauptkontexten:
 
 1. **Meetings (synchron):** Arbeiten Sie in Echtzeit mit anderen Teilnehmern zusammen, beispielsweise bei Live-Standortbesichtigungen oder der gemeinsamen Sichtung aufgezeichneter Inhalte.  
-2. **Arbeitsbereiche (asynchron):** Sehen Sie sich Inhalte nach Ihrem eigenen Zeitplan rund um die Uhr an und interagieren Sie mit ihnen.
+2. **Arbeitsbereiche (asynchron):** Sehen Sie sich Inhalte an und interagieren Sie mit ihnen nach Ihrem eigenen Zeitplan – rund um die Uhr.
 
-Die **Tools für die Zusammenarbeit sind in Meetings und Arbeitsbereichen weitgehend ähnlich**, wobei es aufgrund des synchronen bzw. asynchronen Kontexts einige Unterschiede gibt.
+Die **Tools für die Zusammenarbeit sind größtenteils ähnlich** in Besprechungen und Arbeitsbereichen, wobei es aufgrund des synchronen bzw. asynchronen Kontexts einige Unterschiede gibt.
 
 #### 3.2.1 Aufbau der Benutzeroberfläche
 
 Die Avatour-Benutzeroberfläche gliedert sich in drei Hauptbereiche:
 
-- **Linkes Fenster** – Arbeitsbereichs-Inhalte und unterstützende Tools  
-- **Mittlerer Arbeitsbereich** – Hauptanzeigebereich für Live-Video, Assets und das Arbeitsbereich-Dashboard  
-- **Rechter Bereich** – Kontextinformationen wie Teilnehmer, Besprechungen oder Chat  
+- **Linkes Fenster** – Arbeitsbereichs-Assets und unterstützende Tools  
+- **Mittlerer Arbeitsbereich** – Hauptanzeigebereich für Live-Video, Assets und das Arbeitsbereichs-Dashboard  
+- **Rechtes Fenster** – Kontextinformationen wie Teilnehmer, Besprechungen oder Chat  
 
 Die meisten Interaktionen werden über das **untere Menü** initiiert.  
-Ein Klick auf eine Menüoption öffnet ein **Seitenpanel** auf der linken oder rechten Seite des Bildschirms, während die **zentrale Arbeitsfläche** der primäre Anzeigebereich bleibt.
+Durch Klicken auf eine Menüoption wird ein **Seitenbereich** auf der linken oder rechten Seite des Bildschirms geöffnet, während die **zentrale Arbeitsfläche** der primäre Anzeigebereich bleibt.
 
 ---
-#### 3.2.2 Beispiel für eine Besprechungsansicht
+#### 3.2.2 Beispiel für die Besprechungsansicht
 
 Hier ist ein Beispiel für eine Ansicht in einem Avatour-Meeting:
 
-![Avatour-Meeting-Benutzeroberfläche mit Medienbereich, leerem Arbeitsbereich und Teilnehmerbereich](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-meeting-assets-blank-participants.png)  
+![Avatour-Meeting-Benutzeroberfläche mit Asset-Panel, leerem Arbeitsbereich und Teilnehmer-Panel](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-meeting-assets-blank-participants.png)  
 *Avatour-Meeting mit Asset-Panel (links), Arbeitsfläche (Mitte) und Teilnehmer-Panel (rechts)*
 
 ---
@@ -212,34 +212,34 @@ Hier ist ein Beispiel für eine Arbeitsbereichsansicht:
 
 #### 3.2.4 Übersicht über das untere Menü
 
-Das untere Menü bietet Zugriff auf die wichtigsten Steuerelemente und Bereiche der Benutzeroberfläche:
+Das untere Menü bietet Zugriff auf die wichtigsten Steuerelemente und Panels der Benutzeroberfläche:
 
-**Unteres Menü des Meetings**  
+**Unteres Menü im Meeting**  
 
-![Unteres Menü eines Avatour-Meetings](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-meeting-bottom-menu.png)  
-*Avatour-Besprechung: Unteres Menü*
+![Unteres Menü im Avatour-Meeting](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-meeting-bottom-menu.png)  
+*Unteres Menü im Avatour-Meeting*
 
 - **Assets** – Zeigen Sie Dateien im Arbeitsbereich an, darunter aufgezeichnete Videos, Bilder, Screenshots und PDFs. 
-- **Chat** – Senden Sie Nachrichten an alle Besprechungsteilnehmer.  
+- **Chat** – Senden Sie Nachrichten an alle Meeting-Teilnehmer.  
 - **Kamera** – Schalten Sie Ihre Webcam ein oder aus.  
-- **Mikrofon** – Stummschalten oder Stummschaltung aufheben.  
-- **Präsentieren** – Ein Dokument, den Desktop oder das Webcam-Bild präsentieren (siehe Abschnitt „Präsentieren“ weiter unten).  
-- **Host-Tools** (nur für Gastgeber): 
- - **Fokus sperren** – Sperren Sie die Ansicht für alle Teilnehmer. 
+- **Mikrofon** – Schalten Sie Ihr Mikrofon stumm oder heben Sie die Stummschaltung auf.  
+- **Präsentieren** – Präsentieren Sie ein Dokument, Ihren Desktop oder das Bild Ihrer Webcam (siehe Abschnitt „Präsentieren“ weiter unten).  
+- **Host-Tools** (nur für Gastgeber):  
+    - **Fokus sperren** – Sperren Sie die Ansicht für alle Teilnehmer. 
  - **Alle stummschalten** – Schalten Sie alle Teilnehmer stumm.  
 - **Vollbild aktivieren** – Schalten Sie die Besprechungsregisterkarte auf Vollbild um.  
 - **Besprechung verlassen** – Verlassen Sie die Besprechung.  
-- **Aufzeichnung starten** – Verwenden Sie diese Schaltfläche, um die Aufzeichnung während einer Besprechung manuell zu starten und zu stoppen. Alternativ können Besprechungen automatisch aufgezeichnet werden, wenn in den Arbeitsbereichseinstellungen die Option **„Aufzeichnung automatisch starten“** aktiviert ist. In beiden Fällen werden die Aufzeichnungen in den Assets des Arbeitsbereichs gespeichert.
-- **Karte** – Öffnen oder schließen Sie das Kartenfenster, um die Kamerabewegung für Assets mit GPS-Tracking anzuzeigen. Durch Klicken auf einen Ort springen Sie zum genauen Punkt im Video. Die Karte wird während der Videowiedergabe in Echtzeit aktualisiert. Auch Notizen werden auf der Karte angezeigt.
+- **Aufzeichnung starten** – Verwenden Sie diese Schaltfläche, um die Aufzeichnung während eines Meetings manuell zu starten und zu stoppen. Alternativ können Meetings automatisch aufgezeichnet werden, wenn in den Arbeitsbereichseinstellungen die Option **„Aufzeichnung automatisch starten“** aktiviert ist. In beiden Fällen werden die Aufzeichnungen in den Assets des Arbeitsbereichs gespeichert.
+- **Karte** – Öffnen oder schließen Sie das Kartenfenster, um die Kamerabewegung für Assets mit GPS-Track anzuzeigen. Durch Klicken auf einen Ort springen Sie zum genauen Punkt im Video. Die Karte wird während der Videowiedergabe in Echtzeit aktualisiert. Auch Notizen werden auf der Karte angezeigt.
 - **Teilnehmer** – Öffnen oder schließen Sie das Teilnehmerfenster.  
 - **Besprechungsinfo** – Zeigen Sie den Besprechungscode und den Besprechungslink an und greifen Sie auf entsprechende Tutorials zu.  
 
-![Avatour-Besprechungsinformationen](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-meeting-info-side-pane.png)  
+![Avatour-Besprechungsinfo](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-meeting-info-side-pane.png)  
 *Seitenbereich „Avatour-Besprechungsinformationen“*
 
 - **Einstellungen** – Passen Sie die Sprach-, Audio- und Videoeinstellungen an. Bei Live-360°-Videobesprechungen können Sie mit **Bitrate anzeigen** die Verbindungsstatistiken überwachen.
 
-> Tipp: Senden Sie den Besprechungslink oder fügen Sie ihn einem Kalendereintrag hinzu, um Teilnehmer einzuladen.
+> Tipp: Senden Sie den Meeting-Link oder fügen Sie ihn einem Kalendereintrag hinzu, um Teilnehmer einzuladen.
 
 ---
 
@@ -247,35 +247,37 @@ Das untere Menü bietet Zugriff auf die wichtigsten Steuerelemente und Bereiche 
 
 Über die Option **Präsentieren** im unteren Menü des Meetings können Sie Inhalte für alle Teilnehmer freigeben.
 
-- **Kamera** – Geben Sie die Kamera Ihres Geräts (Laptop, Smartphone usw.) freigeben. Dies kann auch während eines Live-360°-Videomeetings genutzt werden, um eine zweite Ansicht für Nahaufnahmen oder bestimmte Details einzublenden. Bei der Freigabe einer Smartphone-Kamera (Vorder- oder Rückseite) können die Teilnehmer des Remote-Meetings den Zoom des Smartphones nutzen und die Taschenlampe ein- und ausschalten.
+- **Kamera** – Geben Sie die Kamera Ihres Geräts (Laptop, Smartphone usw.) frei. Diese Funktion kann auch während eines Live-360°-Videomeetings genutzt werden, um eine zweite Ansicht für Nahaufnahmen oder bestimmte Details einzublenden. Wenn Sie die Kamera eines Smartphones (Vorder- oder Rückseite) freigeben, können die Teilnehmer des Remote-Meetings den Zoom des Smartphones nutzen und die Taschenlampe ein- und ausschalten.
 - **Desktop** – Geben Sie Ihren Desktop-Bildschirm für alle Teilnehmer frei.  
 - **Asset** – Präsentieren Sie ein Asset aus dem Arbeitsbereich. Durch die Auswahl eines Assets wird die **Asset-Symbolleiste** geöffnet, die Wiedergabesteuerungen und Kollaborationswerkzeuge speziell für das präsentierte Asset bereitstellt.
 
 ##### Asset- und Live-360°-Symbolleisten in Meetings
 
-Wenn Sie ein Asset in einem Meeting präsentieren, erscheint die **Asset-Symbolleiste** über der Arbeitsfläche. Hier sind die Werkzeuge und Menüpunkte, die bei der <u>Präsentation eines Assets in einem Meeting</u> verfügbar sind – von links nach rechts erklärt.
+Wenn Sie ein Asset in einem Meeting präsentieren, erscheint die **Asset-Symbolleiste** oberhalb der Arbeitsfläche. Hier sind die Werkzeuge und Menüpunkte, die bei der <u>Präsentation eines Assets in einem Meeting</u> verfügbar sind – von links nach rechts erklärt.
 
 ![Avatour-Menü bei der Präsentation eines Assets in einem Meeting](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting.png) *Avatour-Menü bei der Präsentation eines Assets in einem Meeting*
 
 Wenn ein Live-360°-Video in ein Meeting gestreamt wird, wird dieses Menü am unteren Rand der Arbeitsfläche angezeigt.
 
-<img src="https://res.cloudinary.com/avatour/image/upload/c_fill,g_auto,w_600,h_120/avatour-screenshot-live360video-menu-meeting_cguwzb.png" alt="Avatour-Menü mit Live-360°-Video in einem Meeting" style="width:50%; display:block; border:1px solid #DDE5EA; border-radius:6px; margin:20px 0 4px;"> *Avatour-Menü mit Live-360°-Video in einer Besprechung*
+<img src="https://res.cloudinary.com/avatour/image/upload/c_fill,g_auto,w_600,h_120/avatour-screenshot-live360video-menu-meeting_cguwzb.png" alt="Avatour-Menü mit Live-360°-Video in einer Besprechung" style="width:50%; display:block; border:1px solid #DDE5EA; border-radius:6px; margin:20px 0 4px;"> *Avatour-Menü mit Live-360°-Video in einer Besprechung*
 
-Hier finden Sie eine Beschreibung aller Elemente, die in den oben gezeigten Menüs zu sehen sind.
+Hier finden Sie eine Beschreibung aller Elemente, die in den obenstehenden Menüs angezeigt werden.
 
-- **Video-Zeitleiste / Fortschrittsbalken** – Zeigt den Videofortschritt mit Notizen und aus dem Audio extrahierten Schlüsselthemen an. Klicken Sie auf eine Notiz oder ein Thema, um zu diesem Moment zu springen und die Notiz zu öffnen. Enthält **Wiedergabe-/Pause-**-Steuerelemente.   
-- **Schnappschuss** – Erfassen Sie ein 360°- oder 2D-Bild aus dem Asset oder einem Live-Stream. Während eines Live-360°-Videomeetings besteht die Möglichkeit, einen „SuperFreeze“-360°-Schnappschuss aufzunehmen. Dabei handelt es sich um einen Schnappschuss mit höherer Auflösung (6k), für den der Livestream für einige Sekunden angehalten wird, um die Kamera für die Aufnahme dieses Schnappschusses zu nutzen. Der Kameramann muss einem „SuperFreeze“-Schnappschuss ebenfalls zustimmen.  
-- **Spotlight** – Hebt während Live-Sitzungen einen bestimmten Bereich für alle Teilnehmer hervor.  
+- **Video-Zeitleiste / Fortschrittsbalken** – Zeigt den Videofortschritt mit Notizen und aus dem Audio extrahierten Schlüsselthemen an. Klicken Sie auf eine Notiz oder ein Thema, um zu diesem Moment zu springen und die Notiz zu öffnen. Enthält **Wiedergabe-/Pause**-Steuerelemente.   
+- **Schnappschuss** – Erfassen Sie ein 360°- oder 2D-Bild aus dem Asset oder einem Live-Stream. Während eines Live-360°-Videomeetings besteht die Möglichkeit, einen „SuperFreeze“-360°-Schnappschuss aufzunehmen. Dabei handelt es sich um einen Schnappschuss mit höherer Auflösung (6k), bei dem der Livestream für einige Sekunden angehalten wird, um die Kamera für die Aufnahme dieses Schnappschusses zu nutzen. Der Kameramann muss einen „SuperFreeze“-Schnappschuss ebenfalls zulassen.  
+- **Spotlight** – Heben Sie während Live-Sitzungen einen bestimmten Bereich für alle Teilnehmer hervor.  
 - **Blickwinkel (POV) anzeigen/ausblenden** – Zeigen Sie an, wohin jeder Teilnehmer im 360°-Video blickt.  
-- **Notizen** – Erstellen Sie Notizen, die an bestimmte Momente in einem Asset oder während eines Live-Videostreams verankert sind. (Hinweis: Während eines Live-Streams wird automatisch ein Asset = Schnappschuss erstellt, um die Notiz festzuhalten.) Jede Notiz hat einen Verfasser und kann kategorisiert werden (Beobachtung, Problem, Maßnahme, Empfehlung) kategorisiert, nach Status verfolgt (Offen → In Bearbeitung → Gelöst), einem Verantwortlichen zugewiesen und über direkte Links geteilt werden. Verfügt das Asset über einen GPS-Track, zeigen die Notizen zudem die GPS-Koordinaten an. Notizen können außerdem an eine andere Position verschoben (durch Ziehen die Position ändern) und in der Zeitleiste verschoben werden (vorwärts oder rückwärts in der Zeitleiste). Außerdem kannst du einer Antwort in einer Notiz eine Datei anhängen.
+- **Notizen** – Erstellen Sie Notizen, die an bestimmte Momente und Positionen in einem Asset oder während eines Live-Videostreams verankert sind. (Hinweis: In einem Live-Stream wird automatisch ein Asset = Schnappschuss erstellt, um die Notiz festzuhalten) 
+
+>**Notizen** sind im Wesentlichen Dialoge, die eine direkte Zusammenarbeit direkt in einem Asset ermöglichen und dabei den vollständigen visuellen Kontext liefern. Jede Notiz hat einen Verfasser und kann kategorisiert (Beobachtung, Problem, Maßnahme, Empfehlung), nach Status verfolgt (Offen → In Bearbeitung → Gelöst), einem Verantwortlichen zugewiesen und über direkte Links geteilt werden. Verfügt das Asset über einen GPS-Track, zeigen die Notizen auch die GPS-Koordinaten an. Notizen können zudem an eine andere Position verschoben werden (ziehen Sie das Notizsymbol, um die Position zu ändern) und in der Zeitleiste verschoben werden (bewegen Sie sich in der Zeitleiste vorwärts oder rückwärts). Sie können einer Antwort in einer Notiz auch eine Datei anhängen. Notizen können (1) durch Klicken auf das Notizsymbol im Menü am unteren Bildschirmrand erstellt werden (der Cursor ändert sich und Sie können nun die Notiz im Objekt oder im Live-Stream erstellen) und (2) mithilfe von KI auf der Grundlage gesprochener Informationen in einem Objekt.
 
   ![Avatour-Notiz und Notizfilter](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-notes-and-filters.png) *Avatour-Notizen und Notizfilter*
 
-- **Notizen per Sprachbefehl** – Hierbei handelt es sich um automatisch generierte Platzhalter, wenn in einem aufgezeichneten Video Äußerungen wie „Notiz einfügen“, „Notiz machen“ oder „eine Notiz erstellen“ erkannt werden. Diese Notizen erscheinen auf der Zeitachse und müssen vom Benutzer **positioniert und fertiggestellt** werden. 
+>**KI-generierte Notizen: Sprachbefehle** – Diese werden bei der Aufnahme des Assets automatisch durch explizite Sprachbefehle wie „Notiz einfügen“, „Notiz machen“ oder „Notiz erstellen“ generiert. Diese Notizen erscheinen dann auf der Zeitleiste und müssen vom Nutzer **positioniert und fertiggestellt** werden. Die KI hilft auch bei der Positionierung der Notiz, indem sie versucht, die erwähnten Objekte zu finden.
 
-  ![Avatour-Notizen – durch Sprachbefehle generiert](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-notes-voice-command-generated.png) *Avatour-Notizen – durch Sprachbefehle generiert*
+  ![Avatour-Notizen – durch Sprachbefehl generiert](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-notes-voice-command-generated.png) *Avatour-Notizen – durch Sprachbefehl generiert*
 
-- **KI-generierte Notizen** – Hierbei handelt es sich um automatisch generierte Platzhalter, wenn die Aufzeichnung in der Audiospur des Videos Erwähnungen erkennt, die nach Problemen klingen, die zur weiteren Bearbeitung erfasst werden müssen. KI-generierte Notizen müssen zunächst vom Notizbesitzer genehmigt werden (siehe Arbeitsbereich-Dashboard weiter unten). Nach der Freigabe verhalten sie sich wie Sprachbefehlsnotizen, da sie auf der Zeitachse erscheinen und vom Benutzer **positioniert und fertiggestellt** werden müssen. 
+>**Von der KI generierte Notizen: Implizite verbale Hinweise** – Diese werden automatisch generiert, wenn die Aufzeichnung in der Audiospur des Videos Erwähnungen erkennt, die nach Problemen klingen, die zur weiteren Bearbeitung erfasst werden müssen. Von der KI generierte Notizen müssen zunächst vom Notizbesitzer genehmigt werden (siehe Arbeitsbereich-Dashboard unten). Nach der Freigabe verhalten sie sich ähnlich wie Sprachbefehlsnotizen, da sie auf der Zeitachse erscheinen und vom Benutzer **positioniert und fertiggestellt** werden müssen. Die KI hilft zudem bei der Positionierung der Notiz, indem sie versucht, die erwähnten Objekte zu finden.
 
 - **Notizen- und Zusammenfassungsbereich** – Öffnet einen Seitenbereich, in dem alle Notizen, Schlüsselthemen und eine Zusammenfassung für das Asset angezeigt werden. Ein Klick auf einen Eintrag führt Sie zu diesem Moment im Video.  
 
@@ -298,7 +300,7 @@ Hier finden Sie eine Beschreibung aller Elemente, die in den oben gezeigten Men�
 
 Beim Anzeigen eines Assets in einem Arbeitsbereich ist die Symbolleiste ähnlich, jedoch für die individuelle Nutzung optimiert:
 
-![Avatour-Menü bei der Präsentation eines Assets außerhalb einer Besprechung, z. B. beim Besuch eines Arbeitsbereichs](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-workspace.png) *Avatour-Menü bei der Präsentation eines Assets in einem Arbeitsbereich*
+![Avatour-Menü bei der Präsentation eines Assets außerhalb eines Meetings, z. B. beim Besuch eines Arbeitsbereichs](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-workspace.png) *Avatour-Menü bei der Präsentation eines Assets in einem Arbeitsbereich*
 
 - **Video-Zeitleiste / Fortschrittsbalken** – Zeigt den Videofortschritt mit Notizen und Schlüsselthemen an, die aus der Audiospur extrahiert wurden. Klicken Sie an eine beliebige Stelle auf der Zeitleiste, um im Video zu navigieren. Klicken Sie auf eine Notiz oder ein Thema, um zu diesem Moment zu springen und die Notiz zu öffnen. Enthält **Wiedergabe-/Pause-**-Steuerelemente.  
 - **Schnappschuss, Notizen, Notizen- und Zusammenfassungsbereich, Link teilen, Untertitel**  
@@ -454,12 +456,12 @@ Der interne Akku der Kamera hält 30–45 Minuten. Wenn der Akku fast leer ist, 
 
 - **Falls Ihr Set einen Ulanzi-Akku enthält:** Befestigen Sie ihn zwischen dem Stativfuß und dem ausziehbaren Stab und schließen Sie den Akku dann über USB-C an die Kamera an.  
 
-- **Falls Ihr Set einen Telesin-Akku-Stab enthält:** Befestigen Sie die Kamera direkt am ausziehbaren Telesin-Akustab und schließen Sie sie über USB-C an.  
+- **Wenn Ihr Set einen Telesin-Akustab enthält:** Befestigen Sie die Kamera direkt am ausziehbaren Telesin-Akustab und schließen Sie sie über USB-C an.  
 
 Verwendung des externen Akkus:
 
 1. Verlängert die Gesamtlaufzeit von 30–45 Minuten (nur Kamera-Akku) auf 2–3 Stunden.  
-2. Verleiht dem Kamera-Setup zusätzliche Stabilität.  
+2. Verleiht dem Kameraaufbau zusätzliche Stabilität.  
 3. Trägt dazu bei, eine mögliche Überhitzung zu verhindern.  
 
 **Wichtige Hinweise:** 
@@ -469,29 +471,29 @@ Verwendung des externen Akkus:
 > 
 > Sie können die 360°-Kamera auch direkt an das Stromnetz anschließen, was jedoch die Mobilität einschränkt.
 
-#### Audio-Hinweise für Live-Meetings und Aufzeichnungen
+#### Audio-Hinweise für Live-Meetings und Aufnahmen
 
-- **Lautstarke Umgebungen:** 
-  Verwenden Sie die im Lieferumfang enthaltenen Shokz-Kopfhörer für eine klare Tonaufnahme.  
-    - **Ein-/Ausschalten:** Halten Sie die „+“-Taste 3 Sekunden lang gedrückt (blaue LED = eingeschaltet, rote LED = ausgeschaltet). 
- - **Bluetooth-Kopplungsmodus:** Halten Sie bei ausgeschaltetem Headset die „+“-Taste 5 Sekunden lang gedrückt (LED blinkt blau/rot).  
-    - **Lautstärke:** Verwenden Sie die Tasten „+“ und „-“.  
-
-- **Ruhigere Umgebungen / mehrere Teilnehmer in der Nähe der Kamera:** 
-  Verwenden Sie den NoxGear-Clip-Lautsprecher. Er bietet zwar nicht die gleiche Klangqualität wie Konferenzlautsprecher (z. B. Jabra Speak), lässt sich aber leicht an Ihrem Hemd befestigen und nimmt Stimmen in der Nähe effektiv auf. 
- - **Ein-/Ausschalten:** Halten Sie die Wiedergabe-/Pause-Taste 2 Sekunden lang gedrückt.  
-    - **Bluetooth-Kopplungsmodus:** Wechselt beim Einschalten automatisch in den Kopplungsmodus (LED blinkt blau/rot; leuchtet blau, wenn die Kopplung hergestellt ist). 
+- **Lauter Umgebung:** 
+  Verwenden Sie die im Lieferumfang enthaltenen Shokz-Kopfhörer für eine klare Audioaufnahme. 
+ - **Ein-/Ausschalten:** Halten Sie die „+“-Taste 3 Sekunden lang gedrückt (blaue LED = ein, rote LED = aus).  
+    - **Bluetooth-Kopplungsmodus:** Halten Sie bei ausgeschaltetem Headset die Taste „+“ 5 Sekunden lang gedrückt (LED blinkt blau/rot). 
  - **Lautstärke:** Verwenden Sie die Tasten „+“ und „-“.  
 
-- **Verwendung eines eigenen Geräts:** Wenn Sie ein alternatives Gerät bevorzugen (z. B. einen Konferenzlautsprecher oder ein eigenes Headset), können Sie es über die Kamera koppeln: Einstellungen → Bluetooth.
+- **Leise Umgebungen / mehrere Teilnehmer in der Nähe der Kamera:** 
+  Verwenden Sie den NoxGear-Anstecklautsprecher. Er bietet zwar nicht die gleiche Klangqualität wie Konferenzlautsprecher (z. B. Jabra Speak), lässt sich aber einfach an Ihrem Hemd befestigen und nimmt Stimmen in der Nähe effektiv auf.  
+    - **Ein-/Ausschalten:** Halten Sie die Wiedergabe-/Pause-Taste 2 Sekunden lang gedrückt. 
+ - **Bluetooth-Kopplungsmodus:** Wechselt beim Einschalten automatisch in den Kopplungsmodus (LED blinkt blau/rot; leuchtet blau, wenn die Kopplung hergestellt ist).  
+    - **Lautstärke:** Verwenden Sie die Tasten „+“ und „-“.  
+
+- **Verwendung eines eigenen Geräts:** Wenn Sie ein alternatives Gerät bevorzugen (z. B. einen Konferenzlautsprecher oder ein persönliches Headset), können Sie es über die Kamera koppeln: Einstellungen → Bluetooth.
 
 **Wichtige Hinweise:** 
-> Wenn ein Audiogerät erfolgreich verbunden wurde, ertönt eine Bestätigungsmeldung und im oberen Bereich des Kamerabildschirms wird das Symbol für ein Audio-Headset angezeigt.
+> Wenn ein Audiogerät erfolgreich verbunden wurde, hören Sie eine Bestätigungsmeldung und sehen im oberen Bereich des Kamerabildschirms ein Symbol für ein Audio-Headset.
 > 
 > Bleiben Sie unbedingt innerhalb der Reichweite der Bluetooth-Verbindung, da Sie sonst Gefahr laufen, die Audioverbindung zu verlieren. 
 
 #### Konnektivität
-**Bevor Sie beginnen:** Stellen Sie eine Internetverbindung her über:
+**Bevor Sie beginnen:** Stellen Sie eine Internetverbindung sicher über:
 
 - **Lokales WLAN** (bevorzugt)
 - **Mobilfunknetz** (außerhalb der WLAN-Reichweite)
@@ -500,17 +502,17 @@ Verwendung des externen Akkus:
 
 ##### Netzwerkgeschwindigkeit testen
 - **Test an einem Standort:** Verwenden Sie einen beliebigen Geschwindigkeitsmesser, den Sie normalerweise nutzen (z. B. [Speedtest](https://www.speedtest.net)), um sowohl die Upload- als auch die Download-Bandbreite zu überprüfen.   
-- **Test beim Gehen durch den Standort:** Über die Kamera: Einstellungen → Netzwerk → Verbindungstest. Gehen Sie durch den gesamten Raum, um die Abdeckung und die Bandbreite zu überprüfen.
+- **Test beim Gehen durch den Standort:** In der Kamera: Einstellungen → Netzwerk → Verbindungstest. Gehen Sie durch den gesamten Raum, um die Abdeckung und die Bandbreite zu überprüfen.
 
 ##### Lokales WLAN
 - Für stabile Verbindungen dringend empfohlen.  
-- Falls die IT-Abteilung eine Whitelist-Eintragung verlangt, finden Sie die MAC-Adresse unter: Einstellungen → Über → WLAN-Adresse.
+- Falls die IT-Abteilung eine Whitelist-Eintragung verlangt, finden Sie die MAC-Adresse unter: Einstellungen → Info → WLAN-Adresse.
 
 ##### Mobilfunknetz
 **Option A: Im Kit enthaltener Hotspot & SIM-Karte**  
 
 - Befestigen Sie den GlocalMe-Hotspot am Telesin-Akku-Stick (Magnet).  
-- Stellt sicher, dass keine Störungen auftreten und die Verbindung aufrechterhalten bleibt, wenn Sie sich von der Kamera entfernen.  
+- Dies gewährleistet, dass keine Störungen auftreten und die Verbindung aufrechterhalten bleibt, wenn Sie sich von der Kamera entfernen.  
 - Fehlerbehebung:
     - Vergewissern Sie sich, dass die vorinstallierte SIM-Karte (nicht die Cloud-SIM) verwendet wird. 
  - Aktivieren Sie 5G im SIM-Karten-Manager.  
@@ -522,7 +524,7 @@ Verwendung des externen Akkus:
 **Wichtige Hinweise:**  
 > Halten Sie den Hotspot ausgeschaltet, solange eine WLAN-Verbindung besteht; aktivieren Sie ihn nur, wenn Sie sich außerhalb der Reichweite befinden. Das Betriebssystem der Kamera wechselt je nach Signalstärke dynamisch zwischen WLAN-Netzwerken und wechselt möglicherweise versehentlich zum Hotspot, selbst wenn WLAN verfügbar ist.
 
-> Halten Sie den Hotspot immer in direkter Sichtlinie zur 360°-Kamera, legen Sie ihn z. B. nicht in die Gesäßtasche Ihrer Hose, da Ihr eigener Körper sonst im Weg ist.
+> Halten Sie den Hotspot immer in direkter Sichtlinie zur 360°-Kamera, legen Sie ihn z. B. nicht in die Gesäßtasche Ihrer Hose, da Ihr eigener Körper die Sicht behindern würde.
 
 > Mobilfunknetze können die Bandbreite unerwartet drosseln. Erkundigen Sie sich bei Ihrem Mobilfunkanbieter nach den Limits Ihres Datentarifs oder wenden Sie sich an den Avatour-Support, wenn Sie unseren Hotspot und unsere SIM-Karte nutzen.
  
@@ -532,7 +534,7 @@ Verwendung des externen Akkus:
 - Nehmen Sie Standortvideos vorab auf, um sie später abzuspielen ([Anleitung zur Aufnahme](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)).  
 - Geben Sie den Live-Stream einer Smartphone-Kamera weiter, um Bereiche mit geringer Bandbreite (0,1–0,3 Mbit/s Upload) zu ergänzen.
 
-##### Keine Internetverbindung
+##### Keine Verbindung
 - Es können nur vorab aufgezeichnete Videos verwendet werden ([Anleitung zur Aufzeichnung](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)).
 
 #### Weitere Teilnehmer vor Ort – Bewährte Vorgehensweisen
@@ -542,45 +544,43 @@ Wenn mehrere Teilnehmer von demselben Standort aus wie die 360°-Kamera an einem
 - Jedes vor Ort verbundene Smartphone, Tablet oder Laptop beansprucht Netzwerkbandbreite und kann die Übertragung der 360°-Kamera beeinträchtigen.  
 - Mehrere Mikrofone und Lautsprecher im selben Raum können **Audio-Rückkopplungen** verursachen, was das Meeting-Erlebnis für alle Teilnehmer unangenehm macht.
 
-Befolgen Sie zur Bewältigung dieser Herausforderungen die folgenden **Bewährten Vorgehensweisen**:
+Befolgen Sie zur Bewältigung dieser Herausforderungen die folgenden **Best Practices**:
 
 - **Verwenden Sie kabelgebundene oder kabellose Kopfhörer:** Vorzugsweise mit Geräuschunterdrückung, um Echo und Rückkopplungen zu vermeiden.  
-- **Vor-Ort-Modus:** Nehmen Sie im Vor-Ort-Modus am Meeting teil, wenn Sie sich physisch in der Nähe der 360°-Kamera befinden, da dieser Modus für den Einsatz vor Ort optimiert ist:
+- **Vor-Ort-Modus:** Nehmen Sie im Vor-Ort-Modus an der Besprechung teil, wenn Sie sich physisch in der Nähe der 360°-Kamera befinden, da dieser Modus für den Einsatz vor Ort optimiert ist:
     - Schaltet das Mikrofon und den Lautsprecher des Teilnehmers standardmäßig stumm.
-    - Sendet **nicht** das Kamerabild des Teilnehmers.
-    - Zeigt das Bild der 360°-Kamera **nicht** im Browser des Teilnehmers an.
+    - Das Kamerabild des Teilnehmers wird **nicht** übertragen.
+    - Das Bild der 360°-Kamera wird im Browser des Teilnehmers **nicht** angezeigt.
     - Schont die Netzwerkbandbreite und stellt sicher, dass der 360°-Kamera die maximal verfügbare Upload-Bandbreite für den Live-Stream zur Verfügung steht.
     - Nützlich, wenn ein Nutzer bestimmte Details zeigen möchte; Sie **können Ihr Kamerabild zurücksenden**, um gezielte Ansichten zu ermöglichen.
-- **Stummschalten, wenn Sie nicht aktiv sprechen:** Verhindert unerwünschte akustische Rückkopplungen und Ablenkungen.
+- **Stummschalten, wenn Sie nicht aktiv sprechen:** Verhindert unerwünschte Rückkopplungen und Ablenkungen.
 - **Verwenden Sie nach Möglichkeit ein separates Netzwerk:** Verbinden Sie Ihr Smartphone mit einem anderen Netzwerk als dem der Kamera, um Störungen zu reduzieren.
 
 Die Befolgung dieser Richtlinien gewährleistet eine reibungslose, qualitativ hochwertige Live-Tour sowohl für Teilnehmer vor Ort als auch für Fernteilnehmer.
 
 ### 5.3 Avatour-Kamera-App
 
-Hier sind (1) das Hauptmenü, (2) die Einstellungen und (3) die Netzwerkeinstellungen.
+Hier sehen Sie (1) das Hauptmenü, (2) die Einstellungen und (3) die Netzwerkeinstellungen. – Drei Menüs](https://res.cloudinary.com/avatour/image/upload/v1795447938/avatour-screenshot-cam-app-3-menu-screens.png) *Avatour 360°-Kamera-App – 3 Menüs*
 
-![Avatour 360°-Kamera-App – Drei Menüs](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-cam-app-3-menu-screens.png) *Avatour 360°-Kamera-App – 3 Menüs*
+**Schnellaufnahme** – Für die bequeme Offline-Aufnahme von 360°-Videos auf die SD-Speicherkarte in der 360°-Kamera. - Eine ausführliche Beschreibung finden Sie unter [Wie nimmt man mit der Avatour-App 360°-Videos auf und lädt sie hoch?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app). Wir empfehlen die Verwendung eines externen Audiogeräts (verbunden über Bluetooth). Hinweis: Sie können den Aufnahmewinkel auch von 360° auf 270°, 180° sowie auf Standard-2D-Videos und -Bilder ändern, z. B. um den Fokus zu setzen oder vertrauliche Bereiche auszublenden – wechseln Sie dazu einfach im QC-Bildschirm den Modus in der unteren rechten Ecke (*dies ist jedoch nur möglich, wenn in den Einstellungen für „Quick Capture“ eine 4K-Auflösung ausgewählt wurde – siehe unten*)
 
-**Schnellaufnahme** – Für die bequeme Offline-Aufnahme von 360°-Videos auf die SD-Speicherkarte in der 360°-Kamera. – Eine ausführliche Beschreibung finden Sie unter [Wie nimmt man mit der Avatour-App 360°-Videos auf und lädt sie hoch?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app). Wir empfehlen die Verwendung eines externen Audiogeräts (verbunden über Bluetooth). Hinweis: Sie können den Aufnahmewinkel auch von 360° auf 270°, 180° sowie auf Standard-2D-Videos und -Bilder ändern, z. B. um den Fokus zu setzen oder vertrauliche Bereiche auszublenden – wechseln Sie dazu einfach im QC-Bildschirm in der unteren rechten Ecke den Modus (*dies ist jedoch nur möglich, wenn in den Einstellungen für „Quick Capture“ eine 4K-Auflösung ausgewählt wurde – siehe unten*)
+**Live-Meeting** – Für Live-360°-Videokonferenzen. Sie sehen Ihre Arbeitsbereiche; wenn Sie auf einen davon klicken, wird der Live-Videostream von der 360°-Kamera gestartet. Bevor Sie mit Ihrer 360°-Kamera am Meeting teilnehmen können, müssen Sie ein Audiogerät über Bluetooth verbinden. Eine detaillierte Beschreibung finden Sie unter [Wie starte ich ein Live-Capture-Meeting mit Ihrer Pilot-Kamera?](https://avatour.com/support/how-to-start-a-live-capture-meeting-with-your-pilot-camera)
 
-**Live-Meeting** – Für Live-360°-Videokonferenzen. Sie sehen Ihre Arbeitsbereiche; wenn Sie auf einen davon klicken, wird der Live-Videostream von der 360°-Kamera gestartet. Bevor Sie mit Ihrer 360°-Kamera am Meeting teilnehmen können, müssen Sie ein Audiogerät über Bluetooth verbinden. Eine detaillierte Beschreibung finden Sie unter [So starten Sie ein Live-Capture-Meeting mit Ihrer Pilot-Kamera?](https://avatour.com/support/how-to-start-a-live-capture-meeting-with-your-pilot-camera)
-
-Wenn Sie ein Live-Capture-Meeting mit Ihrer 360°-Kamera veranstalten, stehen Ihnen ähnliche Meeting-Tools zur Verfügung wie bei der Teilnahme am Meeting über einen Browser. Hier finden Sie eine Übersicht über die verschiedenen Bildschirme, auf die Sie während eines Live-Meetings zugreifen können. Wischen Sie einfach zur Seite, um die Ansichten zu wechseln.
+Wenn Sie ein Live-Capture-Meeting mit Ihrer 360°-Kamera veranstalten, stehen Ihnen ähnliche Meeting-Tools zur Verfügung wie bei der Teilnahme am Meeting über einen Browser. Hier finden Sie eine Übersicht über die verschiedenen Bildschirme, auf die Sie während eines Live-Meetings Zugriff haben. Wischen Sie einfach zur Seite, um die Ansichten zu wechseln.
 
 ![Avatour 360°-Kamera-App – Drei Menüs](https://res.cloudinary.com/avatour/image/upload/v1792394922/avatour-screenshot-cam-app-5-live-meeting-screens.png) *Avatour 360°-Kamera-App – 5 Bildschirme während eines Live-Meetings*
 
-Wenn Sie auf den Bildschirm tippen, gelangen Sie zu einigen Einstellungen, von denen die meisten bereits oben beschrieben wurden. Hier ist eine weitere Übersicht.
+Wenn du auf den Bildschirm tippst, erhältst du Zugriff auf einige Einstellungen, von denen die meisten bereits oben beschrieben wurden. Hier ist eine weitere Übersicht.
 
 ![Avatour 360°-Kamera-App – Einstellungen während Live-Meetings](https://res.cloudinary.com/avatour/image/upload/v1792394922/avatour-screenshot-cam-app-5-live-meeting-settings-screens.png) *Avatour 360°-Kamera-App – Einstellungen während Live-Meetings*
 
-Die Option „Bewegung optimieren“ ist vor allem für Zuschauer gedacht, die VR-Headsets verwenden, um das potenzielle Risiko von Bewegungsübelkeit und Bildverwacklungen zu verringern. Die Richtungssperre und das Ändern des Videowinkels wurden oben beschrieben.
+Die Option „Bewegung optimieren“ ist vor allem für den Fall gedacht, dass Zuschauer VR-Headsets verwenden, um das potenzielle Risiko von Bewegungsübelkeit und Bildverwacklungen zu verringern. Die Funktionen „Richtungssperre“ und das Ändern des Videowinkels wurden oben beschrieben.
 
-**Galerie** – Hier finden Sie alle Ihre 360°-Videos und -Bilder, die zum Hochladen in die Avatour-Webkonsole bereit sind – es sind keine zusätzlichen manuellen Schritte wie das Zusammenfügen oder die Konvertierung von Dateiformaten erforderlich. Sie können Assets in großen Mengen hochladen und löschen – tippen Sie dazu oben auf dem Bildschirm auf „Auswählen“. Vor dem Hochladen können Sie verschiedene Verarbeitungsschritte auswählen, wie z. B. „Gesichter unscharf machen“, eine „KI-Zusammenfassung“ erstellen und das Audiosignal mit „Sprache verbessern“ optimieren. Sie können sogar einen Arbeitsbereich auswählen, dem das Asset zugeordnet werden soll – es befindet sich natürlich auch im allgemeinen Asset-Bereich der Webkonsole.
+**Galerie** – Hier finden Sie alle Ihre 360°-Videos und -Bilder, die zum Hochladen in die Avatour-Webkonsole bereit sind – es sind keine zusätzlichen manuellen Schritte wie das Zusammenfügen oder die Konvertierung von Dateiformaten erforderlich. Sie können Assets in großen Mengen hochladen und löschen – tippen Sie dazu oben auf dem Bildschirm auf „Auswählen“. Vor dem Hochladen können Sie verschiedene Verarbeitungsschritte auswählen, wie z. B. „Gesichter unscharf machen“, eine „KI-Zusammenfassung“ erstellen und das Audiosignal mit „Sprachverbesserung“ optimieren. Sie können sogar einen Arbeitsbereich auswählen, dem das Asset zugeordnet werden soll – es wird natürlich auch im allgemeinen Asset-Bereich der Webkonsole angezeigt.
 
 **Einstellungen** – In den Einstellungen stehen Ihnen folgende Optionen zur Verfügung:
 
-- **Netzwerk**: Mit dieser Option können Sie ändern, mit welchem WLAN-Netzwerk die Kamera verbunden ist, oder einen Netzwerkverbindungstest durchführen, um Ihren Streaming-Durchsatz anzuzeigen.
+- **Netzwerk**: Mit dieser Option können Sie das WLAN-Netzwerk ändern, mit dem die Kamera verbunden ist, oder einen Netzwerkverbindungstest durchführen, um Ihren Streaming-Durchsatz anzuzeigen
 - **Bluetooth-Audio**: Verbinden Sie hier beliebige Bluetooth-Audiogeräte für Live-Meetings (erforderlich) und Quick Capture (dringend empfohlen). Das integrierte Mikrofon und der Lautsprecher der Kamera sind nicht besonders leistungsstark.
 - **Live-Aufnahme**: Passen Sie Ihre Live-Aufnahme-Einstellungen je nach verfügbarer Bandbreite, der VR-Empfindlichkeit des Gastes oder je nachdem, ob die Schutzlinsen Ihrer Kamera installiert sind, an:
 
@@ -590,25 +590,35 @@ Die Option „Bewegung optimieren“ ist vor allem für Zuschauer gedacht, die V
     - **Richtungssperre**: Hiermit wird die 360°-Aufnahme „gesperrt“, unabhängig davon, wie Sie die 360°-Kamera bewegen. Wenn Sie möchten, dass sich das 360°-Video mit der Kamerabewegung mitbewegt – z. B. wenn Sie mit dem vorderen Objektiv auf etwas „zeigen“ möchten –, stellen Sie die Richtungssperre auf „Nein“ ein. Dann verhält sich die Kamera wie eine herkömmliche Kamera, was für Führungen möglicherweise praktischer ist. Standard: Ja
     - **Anfangsausrichtung**: Wenn Sie die Richtungssperre auf „Nein“ setzen, können Sie wählen, welches Objektiv (vorne oder hinten) die Anfangsausrichtung sein soll, wenn Sie das Live-Video starten. Standard: Auf den Bediener gerichtet, da dies die natürlichste Art ist, ein Live-Meeting zu beginnen (= hinteres Objektiv). Bei „Schnellaufnahme“ ist dies anders (die vordere Linse ist standardmäßig die Anfangsausrichtung – siehe unten).
 
-- **Schnellaufnahme**: Passen Sie Ihre Einstellungen für die Schnellaufnahme entsprechend Ihrer bevorzugten Videobildrate, der verfügbaren Bandbreite für das Hochladen von Videoaufnahmen und anderen Präferenzen an. Kartenbezogene Funktionen wie oben beschrieben (z. B. Kartenansicht, Notizen auf einer Karte) sind möglich, wenn ein GPS-Signal empfangen wird und die Standortfunktion in den nativen Kameraeinstellungen aktiviert ist (sollte standardmäßig aktiviert sein). Das Standort-/GPS-Symbol in der oberen rechten Ecke des „Quick Capture“-Bildschirms sollte grün sein. Es kann einige Augenblicke dauern, bis das GPS-Signal empfangen und die Verbindung hergestellt ist.
-    - **Auflösung**: Hier können Sie die Auflösung ändern. *(Die 6k-Auflösungen sind experimentell und erfordern vor dem Hochladen in die Avatour-Webkonsole einen manuellen Stitching-Schritt in der Galerie.)*
+- **Schnellaufnahme**: Passen Sie Ihre „Quick Capture“-Einstellungen entsprechend Ihrer bevorzugten Videobildrate, der verfügbaren Bandbreite für das Hochladen von Videoaufzeichnungen und anderen Präferenzen an. Kartenbezogene Funktionen wie oben beschrieben (z. B. Kartenansicht, Notizen auf einer Karte) sind möglich, wenn ein GPS-Signal empfangen wird und die Standorteinstellung in den nativen Kameraeinstellungen aktiviert ist (sollte standardmäßig der Fall sein). Das Standort-/GPS-Symbol in der oberen rechten Ecke des „Quick Capture“-Bildschirms sollte grün sein. Es kann einen Moment dauern, bis das GPS-Signal empfangen und die Verbindung hergestellt ist.
+    - **Auflösung**: Hier können Sie die Auflösung ändern. *(Die 6k-Auflösungen sind experimentell und erfordern vor dem Hochladen in die Avatour-Webkonsole einen manuellen Zusammenfügungsschritt in der Galerie.)*
  - **4k** – Dies ist der Standard und bietet ein gutes Gleichgewicht zwischen Videoqualität und Dateigröße.
-        - **6k bei 30 fps** *(erfordert einen zusätzlichen Schritt zum Zusammenfügen in der Galerie)*
- - **6k bei 10 fps** *(erfordert einen zusätzlichen Schritt zum Zusammenfügen in der Galerie)* - Dies ist nützlich, wenn Sie die Dateigröße geringer halten möchten als bei 30 fps, wenn flüssige Bewegungen weniger wichtig sind.
- - Für andere Auflösungen können Sie auch die nativen Kamera-Apps verwenden, auch auf dem PanoX V2. Details finden Sie unter [Wie nimmt man 360°-Videos mit der Avatour-App auf und lädt sie hoch?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app)
-    - **Zielbildrate** *(nur für 4k-Auflösung verfügbar)* - Passen Sie die Bildrate für Ihre „Quick Capture“-Videoaufnahmen zwischen 15 fps, 24 fps und 30 fps an. Höhere Bildraten sorgen für ein flüssigeres Video, erhöhen jedoch die Dateigröße und die Upload-Dauer. Empfohlen: 30 fps
-    - **Zielbitrate** *(nur für 4K-Auflösung verfügbar)* Stellen Sie die Zielbitrate für „Quick Capture“-Uploads zwischen 5 Mbit/s und 20 Mbit/s ein. Niedrigere Bitraten erhöhen die Upload-Geschwindigkeit, verringern jedoch die Videoqualität. Empfohlen: 20 Mbit/s
+ - **6k bei 30 fps** *(erfordert einen zusätzlichen Schritt zum Zusammenfügen in der Galerie)*
+ - **6k bei 10 fps** *(erfordert einen zusätzlichen Schritt zum Zusammenfügen in der Galerie)* – Dies ist nützlich, wenn Sie die Dateigröße geringer halten möchten als bei 30 fps, sofern flüssige Bewegungen weniger wichtig sind.
+        - Für andere Auflösungen können Sie auch die nativen Kamera-Apps verwenden, auch auf dem PanoX V2. Weitere Informationen finden Sie unter [Wie nimmt man 360°-Videos mit der Avatour-App auf und lädt sie hoch?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-Avatour-app)
+    - **Zielbildrate** *(nur für 4K-Auflösung verfügbar)* – Passen Sie die Bildrate für Ihre „Quick Capture“-Videoaufnahmen zwischen 15 fps, 24 fps und 30 fps an. Höhere Bildraten sorgen für ein flüssigeres Video, erhöhen jedoch die Dateigröße und die Upload-Dauer. Empfehlung: 30 fps
+    - **Zielbitrate** *(nur bei 4K-Auflösung verfügbar)* Stellen Sie die Zielbitrate für „Quick Capture“-Uploads zwischen 5 Mbit/s und 20 Mbit/s ein. Niedrigere Bitraten erhöhen die Upload-Geschwindigkeit, verringern jedoch die Videoqualität. Empfohlen: 20 Mbit/s
     - **Ausrichtungssperre**: Wie oben unter „Live Capture“ beschrieben. Die Standard-Ausgangsausrichtung ist bei „Quick Capture“ immer die Frontlinse.
 
-  > Weitere Hinweise zu den oben genannten Einstellungen und Videodateigrößen finden Sie in unserem [Avatour 360°-Videodateigrößenrechner](https://avatour.com/support/avatour-360deg-video-file-size-calculator) für weitere Hinweise zu den oben genannten Einstellungen und Videodateigrößen. Um zu verhindern, dass der Speicherplatz knapp wird, wird eine Warnmeldung angezeigt, damit Sie die Aufnahme beenden und Speicherplatz freigeben können (z. B. durch Hochladen von Videos aus der Galerie in die Avatour-Webkonsole „Assets“).
+  > Weitere Hinweise zu den oben genannten Einstellungen und den Dateigrößen von Videos finden Sie in unserem [Avatour 360°-Videodateigrößenrechner](https://avatour.com/support/avatour-360deg-video-file-size-calculator). Um zu verhindern, dass der Speicherplatz knapp wird, erscheint eine Warnmeldung, damit Sie die Aufnahme beenden und Speicherplatz freigeben können (z. B. durch Hochladen von Videos aus der Galerie in die Avatour-Webkonsole „Assets“).
 
 - **Tutorial**: Rufen Sie das kurze Tutorial für Kameraleute auf.
 
-- **Über**: Zeigt die Seriennummer des Geräts und die Softwareversion an
+- **Startbildschirm**: Hier können Sie Avatour als Standard-Startbildschirm festlegen, der beim Einschalten der Kamera angezeigt wird. (Hinweis: Bitte wählen Sie aus den angezeigten Optionen nur „Avatour“ oder „Launcher2“ aus).
 
-**Konto** – Zum Einloggen mit Ihrem Avatour-Host- oder Admin-Konto. Wenn Sie abgemeldet sind, sind die Menüpunkte „Live-Meeting“ und „Anmelden“ ausgegraut. Um sich anzumelden, können Sie den Barcode mit Ihrem Smartphone scannen. Dadurch gelangen Sie zum Abschnitt „Gerät“ auf dem Smartphone, wo Sie den 6-stelligen Code eingeben können, um sich mit Ihrem Avatour-Konto anzumelden (vorausgesetzt, Sie sind auf Ihrem Smartphone angemeldet). Sie können auch den Bereich „Gerät“ auf Ihrem Laptop nutzen und den Code dort eingeben (siehe auch oben „Geräte-Anmeldung“ in 4.1). Als dritte Möglichkeit können Sie Ihre Anmeldedaten in der Kamera-App eingeben, was jedoch möglicherweise nicht die bequemste Methode ist, da die Tastatur auf dem Kamerabildschirm nicht sehr groß ist.
+![Avatour 360°-Kamera-App – Kontoanmeldung](https://res.cloudinary.com/avatour/image/upload/v1795508708/avatour-screenshot-cam-app-3-startup-screens) *Avatour 360°-Kamera-App – Start / Auswahl des Startbildschirms*
 
-![Avatour 360°-Kamera-App – Kontoanmeldung](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-cam-app-4-login-screens.png) *Avatour 360°-Kamera-App – Kontoanmeldung*
+- **Info**: Seriennummer des Geräts und Softwareversion anzeigen
+
+**Konto / Anmelden** – Zum Anmelden mit Ihrem Avatour-Host- oder Admin-Konto. Wenn Sie abgemeldet sind, sind die Menüpunkte „Live-Meeting“ und „Anmelden“ ausgegraut. Klicken Sie auf „Anmelden“, um den 6-stelligen Code anzuzeigen, wechseln Sie dann in der Webkonsole auf Ihrem Laptop zum Abschnitt „Gerät“ und geben Sie den Code dort ein (siehe auch oben unter „Geräteanmeldung“ in 4.1). Sie können den Barcode auch mit Ihrem Smartphone scannen. Dadurch gelangen Sie zum Abschnitt „Gerät“ auf dem Smartphone, wo Sie den 6-stelligen Code ebenfalls eingeben können (vorausgesetzt, Sie sind auf Ihrem Smartphone angemeldet). *Avatour 360°-Kamera-App – Kontoanmeldung*
+
+**Freisprechfunktion** – Hier kannst du dein Smartphone über Bluetooth mit der 360°-Kamera verbinden, Schnellaufnahmen machen und ein Live-Meeting von deinem Smartphone aus starten bzw. beenden. Derzeit unterstützen wir für die Verbindungsseite (avatour.live/remote...) nur Chrome auf Android-Smartphones. Geben Sie die Kopplungs-PIN auf Ihrem Smartphone ein und klicken Sie auf „Verbinden“. Befolgen Sie die Anweisungen auf Ihrem Smartphone, um die Kamera zu koppeln. 
+
+![Avatour 360°-Kamera-App – Kontoanmeldung](https://res.cloudinary.com/avatour/image/upload/v1795452577/avatour-screenshot-cam-app-1-plus-3-handsfree-screens.png) *Avatour 360°-Kamera-App – Freisprech-Bildschirme auf Kamera und Smartphone*
+
+Nachdem Sie die 360°-Kamera erfolgreich mit Ihrem Smartphone gekoppelt haben, sehen Sie auf Ihrem Smartphone die beiden oben rechts abgebildeten Bildschirme, über die Sie die Schnellaufnahme nutzen und ein Live-Meeting von Ihrem Smartphone aus starten bzw. beenden können.
+
+Dies ist für Anwendungsfälle gedacht, in denen Sie beispielsweise die 360°-Kamera fernsteuern möchten, wenn sie an einem Helm befestigt ist. Informationen zu den verschiedenen Befestigungsmöglichkeiten finden Sie auch unter [Welche Befestigungsmöglichkeiten gibt es für die 360°-Kamera?](https://avatour.com/support/what-are-the-various-mounting-options-for-the-avatour-hardware)
 
 ## 6. Empfehlungen zu bewährten Vorgehensweisen {#best-practice-advice}
 

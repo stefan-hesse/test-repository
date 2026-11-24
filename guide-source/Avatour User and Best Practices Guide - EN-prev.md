@@ -267,15 +267,17 @@ Here is a description of all the elements shown in the menus above.
 - **Snapshot** – Capture a 360° or 2D image from the asset or a live stream. During a live 360° video meeting there is the option to take a "SuperFreeze" 360° snapshot. That is a higher resolution snapshot (6k) for which the live stream is paused to use the camera for a few seconds to take that snapshot. The camera operator also needs to allow a SuperFreeze snapshot.  
 - **Spotlight** – Highlight a specific area for all participants during live sessions.  
 - **Show/Hide Point-of-View (POV)** – Display where each participant is looking in the 360° video.  
-- **Notes** – Create notes anchored to specific moments in an asset or during a live video stream. (N.B.: When in a live stream an asset = snapshot will automatically be created to capture the note). Each note has an author and can be categorized (Observation, Issue, Action, Recommendation), tracked by status (Open → In Progress → Resolved), allocated to an Assignee, and shared via direct links. If the asset has a GPS track notes are also showing the GPS coordinates. Notes can also be moved to another position (drag around to change the position) and moved in the timeline (move forward or backward in the timeline). You can also attach a file to a response in a note.
+- **Notes** – Create notes anchored to specific moments and positions in an asset or during a live video stream. (N.B.: When in a live stream an asset = snapshot will automatically be created to capture the note) 
+
+>**Notes** are in essence conversations enabling collaboration directly in an asset giving the complete visual context. Each note has an author and can be categorized (Observation, Issue, Action, Recommendation), tracked by status (Open → In Progress → Resolved), allocated to an Assignee, and shared via direct links. If the asset has a GPS track notes are also showing the GPS coordinates. Notes can also be moved to another position (drag the note icon around to change the position) and moved in the timeline (move forward or backward in the timeline). You can also attach a file to a response in a note. Notes can be created (1) by clicking on the note icon in the menu at the bottom of the screen (the cursor will change and you can now create the note in the asset or live stream) and (2) with the help of AI based on spoken information in an asset.
 
   ![Avatour Note and Notes Filter](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-present-asset-menu-meeting-showing-notes-and-filters.png) *Avatour Notes and Notes Filters*
 
-- **Voice Command Notes** – These are automatically generated placeholders when in a recorded video mentions like “insert note,” “take a note,” or “make a note” are detected. These notes appear on the timeline and need to be **positioned and finalized** by the user. 
+>**AI generated Notes: Voice Commands** – These are automatically generated with explicit voice commands like “insert note,” “take a note,” or “make a note” when recording the asset. These notes then appear on the timeline and need to be **positioned and finalized** by the user. AI will also help with positioning the note by trying to find the object(s) mentioned.
 
   ![Avatour Notes - Voice Command Generated](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-notes-voice-command-generated.png) *Avatour Notes - Voice Command Generated*
 
-- **AI Generated Notes** – These are automatically generated placeholders when the recording detects mentions in the audio track of the video which sound like issues which need to be captured for follow up. AI Generated Notes first need to be approved by the note owner (see Workspace Dashboard below). Once approved these are like Voice Command Notes as they appear on the timeline and need to be **positioned and finalized** by the user. 
+>**AI Generated Notes: Implicit Verbal Evidence** – These are automatically generated when the recording detects mentions in the audio track of the video which sound like issues which need to be captured for follow up. AI Generated Notes first need to be approved by the note owner (see Workspace Dashboard below). Once approved these are similar to Voice Command Notes as they appear on the timeline and need to be **positioned and finalized** by the user. AI will also help with positioning the note by trying to find the object(s) mentioned.
 
 - **Notes and Summary Panel** – Opens a side panel that displays all notes, key topics, and an executive summary for the asset. Clicking an item brings you to that moment in the video.  
 
@@ -560,7 +562,7 @@ Following these guidelines ensures a smooth, high-quality live tour for both ons
 
 Here are (1) the Top Level, (2) Settings and (3) Network Settings menus.
 
-![Avatour 360° Camera App - Three Menus](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-cam-app-3-menu-screens.png) *Avatour 360° Camera App - 3 Menus*
+![Avatour 360° Camera App - Three Menus](https://res.cloudinary.com/avatour/image/upload/v1795447938/avatour-screenshot-cam-app-3-menu-screens.png) *Avatour 360° Camera App - 3 Menus*
 
 **Quick Capture** - For convenient offline 360° video recording onto the SD storage card in the 360 cam. - For a detailed description see [How do you record and upload 360 videos with the Avatour App?](https://avatour.com/support/how-do-you-record-and-upload-360-videos-with-the-avatour-app). We recommend using an external audio device (connected via bluetooth). N.B. You can also change the video degree from 360° to 270°, 180° and standard 2D videos and pictures, e.g. for focus or blanking out confidential areas - simply change the modes in the bottom right corner once in the QC screen (*only possible however with a 4k resolution chosen in Settings for Quick Capture - see below*)
 
@@ -604,11 +606,23 @@ Optimize Motion is mainly for when viewers are using VR headsets in order to red
 
 - **Tutorial**: Call up the short tutorial for camera operators.
 
+- **Startup / Homescreen**: Here you can set Avatour as your default home screen when you switch on the cam. (N.B.: Please only choose Avatour or Launcher2 from the options shown).
+
+![Avatour 360° Camera App - Account Login](https://res.cloudinary.com/avatour/image/upload/v1795508708/avatour-screenshot-cam-app-3-startup-screens) *Avatour 360° Camera App - Startup / Homescreen Selection*
+
 - **About**: View device serial number and software version
 
-**Account** - For login with your Avatour host or admin account. When you are logged out the menu items Live Meeting and Login will be grayed out. To login you can scan the barcode with your smartphone which takes you to the Device section on the smartphone where you can add the 6-digit code for logging in with your Avatour account (requires that you are logged in on your smartphone). You can also use the Device section on your laptop and enter the code there (see also above Device Login in 4.1). As a third option you can enter your login credentials in the cam app but it might not be the most convenient way as the keyboard in the cam screen is not very big.
+**Account / Login** - For login with your Avatour host or admin account. When you are logged out the menu items Live Meeting and Login will be grayed out. Click on Login to show the 6-digit code, then go to the Device section in the Web Console on your laptop and enter the code there (see also above Device Login in 4.1). You can also scan the barcode with your smartphone which takes you to the Device section on the smartphone where you can then add the 6-digit code as well (requires that you are logged in on your smartphone).
 
-![Avatour 360° Camera App - Account Login](https://res.cloudinary.com/avatour/image/upload/avatour-screenshot-cam-app-4-login-screens.png) *Avatour 360° Camera App - Account Login*
+![Avatour 360° Camera App - Account Login](https://res.cloudinary.com/avatour/image/upload/v1795448535/avatour-screenshot-cam-app-3-login-screens) *Avatour 360° Camera App - Account Login*
+
+**Handsfree** - Here you can connect your smartphone via bluetooth to the 360° cam and do Quick Captures and start/stop a Live Meeting from your smartphone. Currently we only support Chrome on Android phones for the connection page (avatour.live/remote...). Enter the pairing PIN on your smartphone and click Connect. Follow the instructions on your phone to pair the camera. 
+
+![Avatour 360° Camera App - Account Login](https://res.cloudinary.com/avatour/image/upload/v1795452577/avatour-screenshot-cam-app-1-plus-3-handsfree-screens.png) *Avatour 360° Camera App - Handsfree Screens on cam and smartphone*
+
+After successfully having paired the 360° cam with your smartphone you will see the above two screens on the right on your smartphone which allow you to use Quick Capture and start / stop a Live Meeting from your smartphone.
+
+This is for use cases in which e.g. you want to operate the 360° cam remotely when mounted on a helmet. For the different mounting options see also [What are the various mounting options for the 360° camera?](https://avatour.com/support/what-are-the-various-mounting-options-for-the-avatour-hardware)
 
 ## 6. Best Practice Advice {#best-practice-advice}
 
